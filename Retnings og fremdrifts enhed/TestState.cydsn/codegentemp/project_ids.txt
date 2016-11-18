@@ -1,6 +1,6 @@
-E:\Projekt 4. semester\HellYaeh\MyLabrary\StepperState.cylib\StepperState.cyprj|4a7bece0-f0c2-49aa-b391-0420406fe65f
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|6b6b7ce3-e65f-4c2c-b4eb-52eab42cfbff
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|742a7a44-31d6-4677-88b4-89ccfd78ac96
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|743dcd3b-fd60-40bc-baa3-d948eae25649
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|c662b055-7246-4e0f-8797-379adc124da9
-E:\Projekt 4. semester\HellYaeh\TestState.cydsn\TestState.cyprj|d416b277-0a31-4be5-977e-698268111be1
+C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed\MyLabrary\StepperState.cylib\StepperState.cyprj|ff0132bb-4ed9-48de-8bd4-2af839b035ad
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|d07f6ced-c82a-4b1c-8c2a-11453f49d659
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|4cf63134-c26d-4ba3-a8bf-446955c56b85
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|fedf5157-04a9-48a5-b902-1d8d2b926fc2
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|833c1b33-a62b-4c5c-885f-331ac99534c9
+C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed\TestState.cydsn\TestState.cyprj|652c046c-c7ab-42aa-ac70-3d1ec207d0ef

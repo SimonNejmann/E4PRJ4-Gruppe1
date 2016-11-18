@@ -1,6 +1,6 @@
 // ======================================================================
 // TestState.v generated from TopDesign.cysch
-// 11/16/2016 at 12:42
+// 11/18/2016 at 14:34
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -155,6 +155,8 @@ reg Out_B;
 reg Out_C;
 reg Out_D;
 reg  [1:0] StateMachine_2;
+reg forw_cnt;
+reg backw_cnt;
 
 /* ==================== Assignment of Combinatorial Variables ==================== */
 assign A = (Out_A);
@@ -234,10 +236,12 @@ begin : step_1_state_logic
             if (( Forw &&  !zero ) == 1'b1)
             begin
                 StateMachine_2 <= step_2 ;
+                forw_cnt <= (forw_cnt) ;
             end
             else if (( Backw &&  !zero ) == 1'b1)
             begin
                 StateMachine_2 <= step_4 ;
+                backw_cnt <= (backw_cnt) ;
             end
         end
         step_2 : 
@@ -249,10 +253,12 @@ begin : step_1_state_logic
             if (( Forw &&  !zero ) == 1'b1)
             begin
                 StateMachine_2 <= step_3 ;
+                forw_cnt <= (forw_cnt) ;
             end
             else if (( Backw &&  !zero ) == 1'b1)
             begin
                 StateMachine_2 <= step_1 ;
+                backw_cnt <= (backw_cnt) ;
             end
         end
         step_3 : 
@@ -264,10 +270,12 @@ begin : step_1_state_logic
             if (( Forw &&  !zero ) == 1'b1)
             begin
                 StateMachine_2 <= step_4 ;
+                forw_cnt <= (forw_cnt) ;
             end
             else if (( Backw &&  !zero ) == 1'b1)
             begin
                 StateMachine_2 <= step_2 ;
+                backw_cnt <= (backw_cnt) ;
             end
         end
         step_4 : 
@@ -279,10 +287,12 @@ begin : step_1_state_logic
             if (( Forw &&  !zero ) == 1'b1)
             begin
                 StateMachine_2 <= step_1 ;
+                forw_cnt <= (forw_cnt) ;
             end
             else if (( Backw &&  !zero ) == 1'b1)
             begin
                 StateMachine_2 <= step_3 ;
+                backw_cnt <= (backw_cnt) ;
             end
         end
         default :

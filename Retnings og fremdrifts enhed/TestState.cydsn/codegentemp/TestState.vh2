@@ -2,7 +2,7 @@
 --	Conversion of TestState.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Nov 16 12:42:47 2016
+--	Fri Nov 18 14:34:51 2016
 --
 
 USE cypress.cypress.all;
