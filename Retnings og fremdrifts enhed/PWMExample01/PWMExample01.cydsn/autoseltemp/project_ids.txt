@@ -1,0 +1,6 @@
+E:\Projekt 4. semester\HellYaeh\PWMExample01\PWMExample01.cydsn\PWMExample01.cyprj|c8ba50f3-4929-44f0-b72e-f2de838bcd9d
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|08ca905d-afb8-45e7-ba53-2830b1d6ddc9
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|f8bdfda2-5eb1-4733-bd16-411fefed737d
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|4a2195c4-8cde-4055-9f4e-38375b479481
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|d2739211-bd22-49b5-85e4-a35e90b83c10
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|a3854655-22f9-487e-924f-84a4f183bae9

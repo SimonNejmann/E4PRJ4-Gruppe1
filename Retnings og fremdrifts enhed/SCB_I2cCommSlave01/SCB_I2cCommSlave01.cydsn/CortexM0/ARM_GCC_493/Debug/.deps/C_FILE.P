@@ -1,0 +1,72 @@
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/CortexM0/ARM_GCC_493/Debug/main.o : E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/Clock_1.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/CyFlash.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/CyLFClk.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/CyLib.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_BOOT.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_I2C.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_I2C_PVT.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_PINS.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_PVT.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_SCBCLK.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_SCB_IRQ.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_scl.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_scl_aliases.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_sda.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_sda_aliases.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/PWM_2.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/Pin_1.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/Pin_1_aliases.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cmsis_armcc.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cmsis_gcc.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/core_cm0.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/core_cmFunc.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/core_cmInstr.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cyPm.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cydisabledsheets.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cyfitter.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cypins.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cytypes.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/project.h E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/main.c E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/main.h 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/Clock_1.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/CyFlash.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/CyLib.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_BOOT.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_I2C.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_I2C_PVT.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_PINS.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_PVT.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_SCBCLK.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_SCB_IRQ.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_scl.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_scl_aliases.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_sda.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/I2CS_sda_aliases.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/PWM_2.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/Pin_1.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/Pin_1_aliases.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cmsis_armcc.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cmsis_gcc.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/core_cm0.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/core_cmFunc.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/core_cmInstr.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cyPm.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cydisabledsheets.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cyfitter.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cypins.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cytypes.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/project.h : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/main.c : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/main.h : 
+

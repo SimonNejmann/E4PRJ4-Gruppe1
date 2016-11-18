@@ -1,0 +1,414 @@
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoRVAAj.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"run_back.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.run_back,"ax",%progbits
+  18              		.align	2
+  19              		.global	run_back
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	run_back, %function
+  23              	run_back:
+  24              	.LFB34:
+  25              		.file 1 "run_back.c"
+   1:run_back.c    **** #include <main.h>
+   2:run_back.c    **** 
+   3:run_back.c    **** uint8 run_back(uint8 ang, uint8 speed)
+   4:run_back.c    **** {
+  26              		.loc 1 4 0
+  27              		.cfi_startproc
+  28              	.LVL0:
+   5:run_back.c    ****    
+   6:run_back.c    ****  return 0;   
+   7:run_back.c    **** }...
+  29              		.loc 1 7 0
+  30 0000 0020     		mov	r0, #0
+  31              	.LVL1:
+  32              		@ sp needed
+  33 0002 7047     		bx	lr
+  34              		.cfi_endproc
+  35              	.LFE34:
+  36              		.size	run_back, .-run_back
+  37              		.text
+  38              	.Letext0:
+  39              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+  40              		.section	.debug_info,"",%progbits
+  41              	.Ldebug_info0:
+  42 0000 C2000000 		.4byte	0xc2
+  43 0004 0400     		.2byte	0x4
+  44 0006 00000000 		.4byte	.Ldebug_abbrev0
+  45 000a 04       		.byte	0x4
+  46 000b 01       		.uleb128 0x1
+  47 000c AC000000 		.4byte	.LASF14
+  48 0010 01       		.byte	0x1
+  49 0011 1B000000 		.4byte	.LASF15
+  50 0015 44010000 		.4byte	.LASF16
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoRVAAj.s 			page 2
+
+
+  51 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  52 001d 00000000 		.4byte	0
+  53 0021 00000000 		.4byte	.Ldebug_line0
+  54 0025 02       		.uleb128 0x2
+  55 0026 01       		.byte	0x1
+  56 0027 06       		.byte	0x6
+  57 0028 A0000000 		.4byte	.LASF0
+  58 002c 02       		.uleb128 0x2
+  59 002d 01       		.byte	0x1
+  60 002e 08       		.byte	0x8
+  61 002f 5B000000 		.4byte	.LASF1
+  62 0033 02       		.uleb128 0x2
+  63 0034 02       		.byte	0x2
+  64 0035 05       		.byte	0x5
+  65 0036 3A010000 		.4byte	.LASF2
+  66 003a 02       		.uleb128 0x2
+  67 003b 02       		.byte	0x2
+  68 003c 07       		.byte	0x7
+  69 003d 8D000000 		.4byte	.LASF3
+  70 0041 02       		.uleb128 0x2
+  71 0042 04       		.byte	0x4
+  72 0043 05       		.byte	0x5
+  73 0044 74000000 		.4byte	.LASF4
+  74 0048 02       		.uleb128 0x2
+  75 0049 04       		.byte	0x4
+  76 004a 07       		.byte	0x7
+  77 004b 2C000000 		.4byte	.LASF5
+  78 004f 02       		.uleb128 0x2
+  79 0050 08       		.byte	0x8
+  80 0051 05       		.byte	0x5
+  81 0052 00000000 		.4byte	.LASF6
+  82 0056 02       		.uleb128 0x2
+  83 0057 08       		.byte	0x8
+  84 0058 07       		.byte	0x7
+  85 0059 3E000000 		.4byte	.LASF7
+  86 005d 03       		.uleb128 0x3
+  87 005e 04       		.byte	0x4
+  88 005f 05       		.byte	0x5
+  89 0060 696E7400 		.ascii	"int\000"
+  90 0064 02       		.uleb128 0x2
+  91 0065 04       		.byte	0x4
+  92 0066 07       		.byte	0x7
+  93 0067 0E000000 		.4byte	.LASF8
+  94 006b 04       		.uleb128 0x4
+  95 006c 26000000 		.4byte	.LASF17
+  96 0070 02       		.byte	0x2
+  97 0071 9801     		.2byte	0x198
+  98 0073 2C000000 		.4byte	0x2c
+  99 0077 02       		.uleb128 0x2
+ 100 0078 04       		.byte	0x4
+ 101 0079 04       		.byte	0x4
+ 102 007a 55000000 		.4byte	.LASF9
+ 103 007e 02       		.uleb128 0x2
+ 104 007f 08       		.byte	0x8
+ 105 0080 04       		.byte	0x4
+ 106 0081 86000000 		.4byte	.LASF10
+ 107 0085 02       		.uleb128 0x2
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoRVAAj.s 			page 3
+
+
+ 108 0086 01       		.byte	0x1
+ 109 0087 08       		.byte	0x8
+ 110 0088 6F000000 		.4byte	.LASF11
+ 111 008c 02       		.uleb128 0x2
+ 112 008d 04       		.byte	0x4
+ 113 008e 07       		.byte	0x7
+ 114 008f 74010000 		.4byte	.LASF12
+ 115 0093 05       		.uleb128 0x5
+ 116 0094 7D000000 		.4byte	.LASF18
+ 117 0098 01       		.byte	0x1
+ 118 0099 03       		.byte	0x3
+ 119 009a 6B000000 		.4byte	0x6b
+ 120 009e 00000000 		.4byte	.LFB34
+ 121 00a2 04000000 		.4byte	.LFE34-.LFB34
+ 122 00a6 01       		.uleb128 0x1
+ 123 00a7 9C       		.byte	0x9c
+ 124 00a8 06       		.uleb128 0x6
+ 125 00a9 616E6700 		.ascii	"ang\000"
+ 126 00ad 01       		.byte	0x1
+ 127 00ae 03       		.byte	0x3
+ 128 00af 6B000000 		.4byte	0x6b
+ 129 00b3 00000000 		.4byte	.LLST0
+ 130 00b7 07       		.uleb128 0x7
+ 131 00b8 69000000 		.4byte	.LASF13
+ 132 00bc 01       		.byte	0x1
+ 133 00bd 03       		.byte	0x3
+ 134 00be 6B000000 		.4byte	0x6b
+ 135 00c2 01       		.uleb128 0x1
+ 136 00c3 51       		.byte	0x51
+ 137 00c4 00       		.byte	0
+ 138 00c5 00       		.byte	0
+ 139              		.section	.debug_abbrev,"",%progbits
+ 140              	.Ldebug_abbrev0:
+ 141 0000 01       		.uleb128 0x1
+ 142 0001 11       		.uleb128 0x11
+ 143 0002 01       		.byte	0x1
+ 144 0003 25       		.uleb128 0x25
+ 145 0004 0E       		.uleb128 0xe
+ 146 0005 13       		.uleb128 0x13
+ 147 0006 0B       		.uleb128 0xb
+ 148 0007 03       		.uleb128 0x3
+ 149 0008 0E       		.uleb128 0xe
+ 150 0009 1B       		.uleb128 0x1b
+ 151 000a 0E       		.uleb128 0xe
+ 152 000b 55       		.uleb128 0x55
+ 153 000c 17       		.uleb128 0x17
+ 154 000d 11       		.uleb128 0x11
+ 155 000e 01       		.uleb128 0x1
+ 156 000f 10       		.uleb128 0x10
+ 157 0010 17       		.uleb128 0x17
+ 158 0011 00       		.byte	0
+ 159 0012 00       		.byte	0
+ 160 0013 02       		.uleb128 0x2
+ 161 0014 24       		.uleb128 0x24
+ 162 0015 00       		.byte	0
+ 163 0016 0B       		.uleb128 0xb
+ 164 0017 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoRVAAj.s 			page 4
+
+
+ 165 0018 3E       		.uleb128 0x3e
+ 166 0019 0B       		.uleb128 0xb
+ 167 001a 03       		.uleb128 0x3
+ 168 001b 0E       		.uleb128 0xe
+ 169 001c 00       		.byte	0
+ 170 001d 00       		.byte	0
+ 171 001e 03       		.uleb128 0x3
+ 172 001f 24       		.uleb128 0x24
+ 173 0020 00       		.byte	0
+ 174 0021 0B       		.uleb128 0xb
+ 175 0022 0B       		.uleb128 0xb
+ 176 0023 3E       		.uleb128 0x3e
+ 177 0024 0B       		.uleb128 0xb
+ 178 0025 03       		.uleb128 0x3
+ 179 0026 08       		.uleb128 0x8
+ 180 0027 00       		.byte	0
+ 181 0028 00       		.byte	0
+ 182 0029 04       		.uleb128 0x4
+ 183 002a 16       		.uleb128 0x16
+ 184 002b 00       		.byte	0
+ 185 002c 03       		.uleb128 0x3
+ 186 002d 0E       		.uleb128 0xe
+ 187 002e 3A       		.uleb128 0x3a
+ 188 002f 0B       		.uleb128 0xb
+ 189 0030 3B       		.uleb128 0x3b
+ 190 0031 05       		.uleb128 0x5
+ 191 0032 49       		.uleb128 0x49
+ 192 0033 13       		.uleb128 0x13
+ 193 0034 00       		.byte	0
+ 194 0035 00       		.byte	0
+ 195 0036 05       		.uleb128 0x5
+ 196 0037 2E       		.uleb128 0x2e
+ 197 0038 01       		.byte	0x1
+ 198 0039 3F       		.uleb128 0x3f
+ 199 003a 19       		.uleb128 0x19
+ 200 003b 03       		.uleb128 0x3
+ 201 003c 0E       		.uleb128 0xe
+ 202 003d 3A       		.uleb128 0x3a
+ 203 003e 0B       		.uleb128 0xb
+ 204 003f 3B       		.uleb128 0x3b
+ 205 0040 0B       		.uleb128 0xb
+ 206 0041 27       		.uleb128 0x27
+ 207 0042 19       		.uleb128 0x19
+ 208 0043 49       		.uleb128 0x49
+ 209 0044 13       		.uleb128 0x13
+ 210 0045 11       		.uleb128 0x11
+ 211 0046 01       		.uleb128 0x1
+ 212 0047 12       		.uleb128 0x12
+ 213 0048 06       		.uleb128 0x6
+ 214 0049 40       		.uleb128 0x40
+ 215 004a 18       		.uleb128 0x18
+ 216 004b 9742     		.uleb128 0x2117
+ 217 004d 19       		.uleb128 0x19
+ 218 004e 00       		.byte	0
+ 219 004f 00       		.byte	0
+ 220 0050 06       		.uleb128 0x6
+ 221 0051 05       		.uleb128 0x5
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoRVAAj.s 			page 5
+
+
+ 222 0052 00       		.byte	0
+ 223 0053 03       		.uleb128 0x3
+ 224 0054 08       		.uleb128 0x8
+ 225 0055 3A       		.uleb128 0x3a
+ 226 0056 0B       		.uleb128 0xb
+ 227 0057 3B       		.uleb128 0x3b
+ 228 0058 0B       		.uleb128 0xb
+ 229 0059 49       		.uleb128 0x49
+ 230 005a 13       		.uleb128 0x13
+ 231 005b 02       		.uleb128 0x2
+ 232 005c 17       		.uleb128 0x17
+ 233 005d 00       		.byte	0
+ 234 005e 00       		.byte	0
+ 235 005f 07       		.uleb128 0x7
+ 236 0060 05       		.uleb128 0x5
+ 237 0061 00       		.byte	0
+ 238 0062 03       		.uleb128 0x3
+ 239 0063 0E       		.uleb128 0xe
+ 240 0064 3A       		.uleb128 0x3a
+ 241 0065 0B       		.uleb128 0xb
+ 242 0066 3B       		.uleb128 0x3b
+ 243 0067 0B       		.uleb128 0xb
+ 244 0068 49       		.uleb128 0x49
+ 245 0069 13       		.uleb128 0x13
+ 246 006a 02       		.uleb128 0x2
+ 247 006b 18       		.uleb128 0x18
+ 248 006c 00       		.byte	0
+ 249 006d 00       		.byte	0
+ 250 006e 00       		.byte	0
+ 251              		.section	.debug_loc,"",%progbits
+ 252              	.Ldebug_loc0:
+ 253              	.LLST0:
+ 254 0000 00000000 		.4byte	.LVL0
+ 255 0004 02000000 		.4byte	.LVL1
+ 256 0008 0100     		.2byte	0x1
+ 257 000a 50       		.byte	0x50
+ 258 000b 02000000 		.4byte	.LVL1
+ 259 000f 04000000 		.4byte	.LFE34
+ 260 0013 0400     		.2byte	0x4
+ 261 0015 F3       		.byte	0xf3
+ 262 0016 01       		.uleb128 0x1
+ 263 0017 50       		.byte	0x50
+ 264 0018 9F       		.byte	0x9f
+ 265 0019 00000000 		.4byte	0
+ 266 001d 00000000 		.4byte	0
+ 267              		.section	.debug_aranges,"",%progbits
+ 268 0000 1C000000 		.4byte	0x1c
+ 269 0004 0200     		.2byte	0x2
+ 270 0006 00000000 		.4byte	.Ldebug_info0
+ 271 000a 04       		.byte	0x4
+ 272 000b 00       		.byte	0
+ 273 000c 0000     		.2byte	0
+ 274 000e 0000     		.2byte	0
+ 275 0010 00000000 		.4byte	.LFB34
+ 276 0014 04000000 		.4byte	.LFE34-.LFB34
+ 277 0018 00000000 		.4byte	0
+ 278 001c 00000000 		.4byte	0
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoRVAAj.s 			page 6
+
+
+ 279              		.section	.debug_ranges,"",%progbits
+ 280              	.Ldebug_ranges0:
+ 281 0000 00000000 		.4byte	.LFB34
+ 282 0004 04000000 		.4byte	.LFE34
+ 283 0008 00000000 		.4byte	0
+ 284 000c 00000000 		.4byte	0
+ 285              		.section	.debug_line,"",%progbits
+ 286              	.Ldebug_line0:
+ 287 0000 59000000 		.section	.debug_str,"MS",%progbits,1
+ 287      02004500 
+ 287      00000201 
+ 287      FB0E0D00 
+ 287      01010101 
+ 288              	.LASF6:
+ 289 0000 6C6F6E67 		.ascii	"long long int\000"
+ 289      206C6F6E 
+ 289      6720696E 
+ 289      7400
+ 290              	.LASF8:
+ 291 000e 756E7369 		.ascii	"unsigned int\000"
+ 291      676E6564 
+ 291      20696E74 
+ 291      00
+ 292              	.LASF15:
+ 293 001b 72756E5F 		.ascii	"run_back.c\000"
+ 293      6261636B 
+ 293      2E6300
+ 294              	.LASF17:
+ 295 0026 75696E74 		.ascii	"uint8\000"
+ 295      3800
+ 296              	.LASF5:
+ 297 002c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 297      20756E73 
+ 297      69676E65 
+ 297      6420696E 
+ 297      7400
+ 298              	.LASF7:
+ 299 003e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 299      206C6F6E 
+ 299      6720756E 
+ 299      7369676E 
+ 299      65642069 
+ 300              	.LASF9:
+ 301 0055 666C6F61 		.ascii	"float\000"
+ 301      7400
+ 302              	.LASF1:
+ 303 005b 756E7369 		.ascii	"unsigned char\000"
+ 303      676E6564 
+ 303      20636861 
+ 303      7200
+ 304              	.LASF13:
+ 305 0069 73706565 		.ascii	"speed\000"
+ 305      6400
+ 306              	.LASF11:
+ 307 006f 63686172 		.ascii	"char\000"
+ 307      00
+ 308              	.LASF4:
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoRVAAj.s 			page 7
+
+
+ 309 0074 6C6F6E67 		.ascii	"long int\000"
+ 309      20696E74 
+ 309      00
+ 310              	.LASF18:
+ 311 007d 72756E5F 		.ascii	"run_back\000"
+ 311      6261636B 
+ 311      00
+ 312              	.LASF10:
+ 313 0086 646F7562 		.ascii	"double\000"
+ 313      6C6500
+ 314              	.LASF3:
+ 315 008d 73686F72 		.ascii	"short unsigned int\000"
+ 315      7420756E 
+ 315      7369676E 
+ 315      65642069 
+ 315      6E7400
+ 316              	.LASF0:
+ 317 00a0 7369676E 		.ascii	"signed char\000"
+ 317      65642063 
+ 317      68617200 
+ 318              	.LASF14:
+ 319 00ac 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 319      4320342E 
+ 319      392E3320 
+ 319      32303135 
+ 319      30333033 
+ 320 00df 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 320      20726576 
+ 320      6973696F 
+ 320      6E203232 
+ 320      31323230 
+ 321 0112 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 321      66756E63 
+ 321      74696F6E 
+ 321      2D736563 
+ 321      74696F6E 
+ 322              	.LASF2:
+ 323 013a 73686F72 		.ascii	"short int\000"
+ 323      7420696E 
+ 323      7400
+ 324              	.LASF16:
+ 325 0144 453A5C50 		.ascii	"E:\\Projekt 4. semester\\HellYaeh\\TestState.cydsn\000"
+ 325      726F6A65 
+ 325      6B742034 
+ 325      2E207365 
+ 325      6D657374 
+ 326              	.LASF12:
+ 327 0174 73697A65 		.ascii	"sizetype\000"
+ 327      74797065 
+ 327      00
+ 328              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

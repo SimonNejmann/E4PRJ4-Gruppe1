@@ -1,0 +1,3 @@
+--------------- Rebuild Started: 11/14/2016 13:40:01 Project: run_front.c, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/run_front.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c run_front.c -o .\CortexM0\ARM_GCC_493\Debug\run_front.o
+--------------- Rebuild Succeeded: 11/14/2016 13:40:02 ---------------

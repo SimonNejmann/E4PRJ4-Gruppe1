@@ -1,0 +1,55 @@
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccyjQ17M.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"run_front.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              	.Letext0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20              		.section	.debug_str,"MS",%progbits,1
+  21              	.LASF0:
+  22 0000 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+  22      4320342E 
+  22      392E3320 
+  22      32303135 
+  22      30333033 
+  23 0033 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+  23      20726576 
+  23      6973696F 
+  23      6E203232 
+  23      31323230 
+  24 0066 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+  24      66756E63 
+  24      74696F6E 
+  24      2D736563 
+  24      74696F6E 
+  25              	.LASF1:
+  26 008e 433A5C55 		.ascii	"C:\\Users\\Anders\\Documents\\Projekt 4. semester\\"
+  26      73657273 
+  26      5C416E64 
+  26      6572735C 
+  26      446F6375 
+  27 00bc 48656C6C 		.ascii	"HellYaeh\\Retning\\Beast.cydsn\000"
+  27      59616568 
+  27      5C526574 
+  27      6E696E67 
+  27      5C426561 
+  28              	.LASF2:
+  29 00d9 72756E5F 		.ascii	"run_front.c\000"
+  29      66726F6E 
+  29      742E6300 
+  30              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

@@ -1,0 +1,8 @@
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/CortexM0/ARM_GCC_493/Debug/CyBootAsmGnu.o : E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cyfittergnu.inc 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cydevicegnu_trm.inc : 
+
+E:/Projekt\ 4.\ semester/HellYaeh/SCB_I2cCommSlave01/SCB_I2cCommSlave01.cydsn/Generated_Source/PSoC4/cyfittergnu.inc : 
+

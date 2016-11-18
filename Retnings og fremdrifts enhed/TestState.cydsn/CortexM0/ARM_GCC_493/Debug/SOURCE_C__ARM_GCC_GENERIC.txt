@@ -1,0 +1,1 @@
+'E:\Projekt 4. semester\HellYaeh\TestState.cydsn\Generated_Source\PSoC4\cyfitter_cfg.c' -o .o -T SOURCE_C__ARM_GCC_GENERIC -I 'E:\Projekt 4. semester\HellYaeh\TestState.cydsn' -I 'E:\Projekt 4. semester\HellYaeh\TestState.cydsn\Generated_Source\PSoC4' -f 'E:\Projekt 4. semester\HellYaeh\TestState.cydsn\CortexM0\ARM_GCC_493\Debug\.deps\SOURCE_C__ARM_GCC_GENERIC.d'

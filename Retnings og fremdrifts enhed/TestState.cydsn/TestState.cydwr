@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DesignWideResources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://cypress.com/xsd/cydwr">
+  <Group key="Component">
+    <Group key="v1">
+      <Data key="cy_boot" value="cy_boot_v5_50" />
+      <Data key="cy_lfclk" value="cy_lfclk_v1_10" />
+      <Data key="LIN_Dynamic" value="LIN_Dynamic_v3_40" />
+    </Group>
+  </Group>
+  <Data key="DataVersionKey" value="2" />
+  <Group key="DWRInstGuidMapping">
+    <Group key="Pin">
+      <Data key="01d35be0-1af8-420f-a243-78826fe279e4" value="A" />
+      <Data key="3dbba19d-7851-4a83-b204-a0a386fe8d68/5382e105-1382-4a2e-b9f4-3bb2feba71e0" value="I2CS_sda" />
+      <Data key="3dbba19d-7851-4a83-b204-a0a386fe8d68/22863ebe-a37b-476f-b252-6e49a8c00b12" value="I2CS_scl" />
+      <Data key="9a3c7277-a490-4fe3-ac4c-da5d53668359" value="D" />
+      <Data key="59593529-a829-427f-b35a-0566f9961f16" value="B" />
+      <Data key="d811e8d9-b1a9-4b8d-9824-8d673d0d1678" value="P0_0_clk" />
+      <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="C" />
+    </Group>
+  </Group>
+  <Group key="Pin2">
+    <Group key="01d35be0-1af8-420f-a243-78826fe279e4">
+      <Group key="0">
+        <Data key="Port Format" value="2,0" />
+      </Group>
+    </Group>
+    <Group key="3dbba19d-7851-4a83-b204-a0a386fe8d68/5382e105-1382-4a2e-b9f4-3bb2feba71e0">
+      <Group key="0">
+        <Data key="Port Format" value="3,1" />
+      </Group>
+    </Group>
+    <Group key="3dbba19d-7851-4a83-b204-a0a386fe8d68/22863ebe-a37b-476f-b252-6e49a8c00b12">
+      <Group key="0">
+        <Data key="Port Format" value="3,0" />
+      </Group>
+    </Group>
+    <Group key="9a3c7277-a490-4fe3-ac4c-da5d53668359">
+      <Group key="0">
+        <Data key="Port Format" value="2,3" />
+      </Group>
+    </Group>
+    <Group key="59593529-a829-427f-b35a-0566f9961f16">
+      <Group key="0">
+        <Data key="Port Format" value="2,1" />
+      </Group>
+    </Group>
+    <Group key="d811e8d9-b1a9-4b8d-9824-8d673d0d1678">
+      <Group key="0">
+        <Data key="Port Format" value="2,4" />
+      </Group>
+    </Group>
+    <Group key="e851a3b9-efb8-48be-bbb8-b303b216c393">
+      <Group key="0">
+        <Data key="Port Format" value="2,2" />
+      </Group>
+    </Group>
+  </Group>
+  <Group key="System3">
+    <Data key="CYDEV_VARIABLE_VDDA" value="True" />
+  </Group>
+</DesignWideResources>

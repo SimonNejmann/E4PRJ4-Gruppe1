@@ -1,0 +1,7 @@
+E:\Projekt 4. semester\HellYaeh\MyLabrary\StepperState.cylib\StepperState.cyprj|154e8758-e6c0-49c7-9f39-4742ec2635a9
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|4e51cd8d-4f13-4793-9b20-529313c85db5
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|a2456276-1f5e-46bd-9177-aab1d9e75572
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|f7cab1de-b214-497e-ac3a-3af661d9bcf9
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|c35cc57a-df37-4e69-b52d-469a304f05f7
+E:\Projekt 4. semester\HellYaeh\TestState.cydsn\TestState.cyprj|63d36b54-218b-4b44-8b0e-bff1ee48130c
+E:\Projekt 4. semester\HellYaeh\Spade\Design01.cydsn\Design01.cyprj|e2ee6c24-34c0-456c-ad73-9142e71f960c
