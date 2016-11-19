@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSq0RUa.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
   23:main.c        ****     
   24:main.c        **** 
   25:main.c        ****     /* Start I2C slave (SCB mode) */
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 2
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSq0RUa.s 			page 2
 
 
   26:main.c        ****     I2CS_I2CSlaveInitReadBuf (i2cReadBuffer,  BUFFER_SIZE);
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
   66 002e 0ED1     		bne	.L7
   47:main.c        ****                     (i2cWriteBuffer[PACKET_EOP_POS] == PACKET_EOP))
   67              		.loc 1 47 0 discriminator 1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 3
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSq0RUa.s 			page 3
 
 
   68 0030 114B     		ldr	r3, .L9+4
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
   63:main.c        ****         /* Read complete: expose buffer to master */
   64:main.c        ****         if (0u != (I2CS_I2CSlaveStatus() & I2CS_I2C_SSTAT_RD_CMPLT))
  106              		.loc 1 64 0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 4
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSq0RUa.s 			page 4
 
 
  107 0060 FFF7FEFF 		bl	I2CS_I2CSlaveStatus
@@ -231,48 +231,48 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
  150 0006 00000000 		.4byte	.Ldebug_abbrev0
  151 000a 04       		.byte	0x4
  152 000b 01       		.uleb128 0x1
- 153 000c E8010000 		.4byte	.LASF26
+ 153 000c F3010000 		.4byte	.LASF26
  154 0010 01       		.byte	0x1
- 155 0011 C2010000 		.4byte	.LASF27
+ 155 0011 CD010000 		.4byte	.LASF27
  156 0015 2E000000 		.4byte	.LASF28
  157 0019 00000000 		.4byte	.Ldebug_ranges0+0
  158 001d 00000000 		.4byte	0
  159 0021 00000000 		.4byte	.Ldebug_line0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 5
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSq0RUa.s 			page 5
 
 
  160 0025 02       		.uleb128 0x2
  161 0026 01       		.byte	0x1
  162 0027 06       		.byte	0x6
- 163 0028 A4020000 		.4byte	.LASF0
+ 163 0028 AF020000 		.4byte	.LASF0
  164 002c 02       		.uleb128 0x2
  165 002d 01       		.byte	0x1
  166 002e 08       		.byte	0x8
- 167 002f C9000000 		.4byte	.LASF1
+ 167 002f D4000000 		.4byte	.LASF1
  168 0033 02       		.uleb128 0x2
  169 0034 02       		.byte	0x2
  170 0035 05       		.byte	0x5
- 171 0036 76020000 		.4byte	.LASF2
+ 171 0036 81020000 		.4byte	.LASF2
  172 003a 02       		.uleb128 0x2
  173 003b 02       		.byte	0x2
  174 003c 07       		.byte	0x7
- 175 003d 8B000000 		.4byte	.LASF3
+ 175 003d 96000000 		.4byte	.LASF3
  176 0041 02       		.uleb128 0x2
  177 0042 04       		.byte	0x4
  178 0043 05       		.byte	0x5
- 179 0044 9B020000 		.4byte	.LASF4
+ 179 0044 A6020000 		.4byte	.LASF4
  180 0048 02       		.uleb128 0x2
  181 0049 04       		.byte	0x4
  182 004a 07       		.byte	0x7
- 183 004b E5000000 		.4byte	.LASF5
+ 183 004b F0000000 		.4byte	.LASF5
  184 004f 02       		.uleb128 0x2
  185 0050 08       		.byte	0x8
  186 0051 05       		.byte	0x5
- 187 0052 97010000 		.4byte	.LASF6
+ 187 0052 A2010000 		.4byte	.LASF6
  188 0056 02       		.uleb128 0x2
  189 0057 08       		.byte	0x8
  190 0058 07       		.byte	0x7
- 191 0059 68010000 		.4byte	.LASF7
+ 191 0059 73010000 		.4byte	.LASF7
  192 005d 03       		.uleb128 0x3
  193 005e 04       		.byte	0x4
  194 005f 05       		.byte	0x5
@@ -280,38 +280,38 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
  196 0064 02       		.uleb128 0x2
  197 0065 04       		.byte	0x4
  198 0066 07       		.byte	0x7
- 199 0067 5B010000 		.4byte	.LASF8
+ 199 0067 66010000 		.4byte	.LASF8
  200 006b 04       		.uleb128 0x4
- 201 006c F7000000 		.4byte	.LASF9
+ 201 006c 02010000 		.4byte	.LASF9
  202 0070 02       		.byte	0x2
  203 0071 B901     		.2byte	0x1b9
  204 0073 2C000000 		.4byte	0x2c
  205 0077 04       		.uleb128 0x4
- 206 0078 1D010000 		.4byte	.LASF10
+ 206 0078 28010000 		.4byte	.LASF10
  207 007c 02       		.byte	0x2
  208 007d BB01     		.2byte	0x1bb
  209 007f 48000000 		.4byte	0x48
  210 0083 02       		.uleb128 0x2
  211 0084 04       		.byte	0x4
  212 0085 04       		.byte	0x4
- 213 0086 C3000000 		.4byte	.LASF11
+ 213 0086 CE000000 		.4byte	.LASF11
  214 008a 02       		.uleb128 0x2
  215 008b 08       		.byte	0x8
  216 008c 04       		.byte	0x4
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 6
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSq0RUa.s 			page 6
 
 
- 217 008d 11010000 		.4byte	.LASF12
+ 217 008d 1C010000 		.4byte	.LASF12
  218 0091 02       		.uleb128 0x2
  219 0092 01       		.byte	0x1
  220 0093 08       		.byte	0x8
- 221 0094 C9010000 		.4byte	.LASF13
+ 221 0094 D4010000 		.4byte	.LASF13
  222 0098 02       		.uleb128 0x2
  223 0099 04       		.byte	0x4
  224 009a 07       		.byte	0x7
- 225 009b 8E010000 		.4byte	.LASF14
+ 225 009b 99010000 		.4byte	.LASF14
  226 009f 05       		.uleb128 0x5
- 227 00a0 18010000 		.4byte	.LASF29
+ 227 00a0 23010000 		.4byte	.LASF29
  228 00a4 01       		.byte	0x1
  229 00a5 13       		.byte	0x13
  230 00a6 5D000000 		.4byte	0x5d
@@ -321,7 +321,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
  234 00b3 9C       		.byte	0x9c
  235 00b4 51010000 		.4byte	0x151
  236 00b8 06       		.uleb128 0x6
- 237 00b9 9E000000 		.4byte	.LASF30
+ 237 00b9 A9000000 		.4byte	.LASF30
  238 00bd 01       		.byte	0x1
  239 00be 15       		.byte	0x15
  240 00bf 6B000000 		.4byte	0x6b
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
  271 00f9 03       		.byte	0x3
  272 00fa 00000000 		.4byte	i2cWriteBuffer
  273 00fe 00       		.byte	0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 7
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSq0RUa.s 			page 7
 
 
  274 00ff 09       		.uleb128 0x9
@@ -397,7 +397,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
  307 015f 05       		.byte	0x5
  308 0160 00       		.byte	0
  309 0161 0C       		.uleb128 0xc
- 310 0162 D7000000 		.4byte	.LASF15
+ 310 0162 E2000000 		.4byte	.LASF15
  311 0166 01       		.byte	0x1
  312 0167 10       		.byte	0x10
  313 0168 51010000 		.4byte	0x151
@@ -405,7 +405,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
  315 016d 03       		.byte	0x3
  316 016e 00000000 		.4byte	i2cReadBuffer
  317 0172 0C       		.uleb128 0xc
- 318 0173 7F010000 		.4byte	.LASF16
+ 318 0173 8A010000 		.4byte	.LASF16
  319 0177 01       		.byte	0x1
  320 0178 11       		.byte	0x11
  321 0179 51010000 		.4byte	0x151
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
  328 0189 2E01     		.2byte	0x12e
  329 018b 9A010000 		.4byte	0x19a
  330 018f 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 8
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSq0RUa.s 			page 8
 
 
  331 0190 9A010000 		.4byte	0x19a
@@ -429,7 +429,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
  336 019b 04       		.byte	0x4
  337 019c 6B000000 		.4byte	0x6b
  338 01a0 0D       		.uleb128 0xd
- 339 01a1 41010000 		.4byte	.LASF18
+ 339 01a1 4C010000 		.4byte	.LASF18
  340 01a5 03       		.byte	0x3
  341 01a6 2F01     		.2byte	0x12f
  342 01a8 B7010000 		.4byte	0x1b7
@@ -443,12 +443,12 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
  350 01bc 04       		.byte	0x4
  351 01bd 6E       		.byte	0x6e
  352 01be 11       		.uleb128 0x11
- 353 01bf FD000000 		.4byte	.LASF19
+ 353 01bf 08010000 		.4byte	.LASF19
  354 01c3 03       		.byte	0x3
  355 01c4 2501     		.2byte	0x125
  356 01c6 77000000 		.4byte	0x77
  357 01ca 11       		.uleb128 0x11
- 358 01cb 24010000 		.4byte	.LASF20
+ 358 01cb 2F010000 		.4byte	.LASF20
  359 01cf 03       		.byte	0x3
  360 01d0 3101     		.2byte	0x131
  361 01d2 77000000 		.4byte	0x77
@@ -468,23 +468,23 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
  375 01f5 6B000000 		.4byte	0x6b
  376 01f9 00       		.byte	0
  377 01fa 13       		.uleb128 0x13
- 378 01fb 80020000 		.4byte	.LASF22
+ 378 01fb 8B020000 		.4byte	.LASF22
  379 01ff 03       		.byte	0x3
  380 0200 3301     		.2byte	0x133
  381 0202 11       		.uleb128 0x11
- 382 0203 A5000000 		.4byte	.LASF23
+ 382 0203 B0000000 		.4byte	.LASF23
  383 0207 03       		.byte	0x3
  384 0208 2701     		.2byte	0x127
  385 020a 77000000 		.4byte	0x77
  386 020e 13       		.uleb128 0x13
- 387 020f CE010000 		.4byte	.LASF24
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 9
+ 387 020f D9010000 		.4byte	.LASF24
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSq0RUa.s 			page 9
 
 
  388 0213 03       		.byte	0x3
  389 0214 3201     		.2byte	0x132
  390 0216 11       		.uleb128 0x11
- 391 0217 A5010000 		.4byte	.LASF25
+ 391 0217 B0010000 		.4byte	.LASF25
  392 021b 03       		.byte	0x3
  393 021c 2601     		.2byte	0x126
  394 021e 77000000 		.4byte	0x77
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
  442 002c 03       		.uleb128 0x3
  443 002d 0E       		.uleb128 0xe
  444 002e 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 10
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSq0RUa.s 			page 10
 
 
  445 002f 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
  499 0068 01       		.uleb128 0x1
  500 0069 13       		.uleb128 0x13
  501 006a 00       		.byte	0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 11
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSq0RUa.s 			page 11
 
 
  502 006b 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
  556 00a6 0D       		.uleb128 0xd
  557 00a7 2E       		.uleb128 0x2e
  558 00a8 01       		.byte	0x1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 12
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSq0RUa.s 			page 12
 
 
  559 00a9 3F       		.uleb128 0x3f
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
  613 00df 03       		.uleb128 0x3
  614 00e0 0E       		.uleb128 0xe
  615 00e1 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 13
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSq0RUa.s 			page 13
 
 
  616 00e2 0B       		.uleb128 0xb
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
  670 0004 48000000 		.4byte	.LVL7
  671 0008 0300     		.2byte	0x3
  672 000a 09       		.byte	0x9
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 14
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSq0RUa.s 			page 14
 
 
  673 000b FF       		.byte	0xff
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
  721 000b 49324353 		.ascii	"I2CS_I2CSlaveInitReadBuf\000"
  721      5F493243 
  721      536C6176 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 15
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSq0RUa.s 			page 15
 
 
  721      65496E69 
@@ -848,161 +848,164 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 1
  723      66726F6E 
  723      7400
  724              	.LASF28:
- 725 002e 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\HellYaeh\\E4PRJ4-Gruppe"
+ 725 002e 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\Projekt 4. semester\\E4"
  725      73657273 
  725      5C416E64 
  725      6572735C 
  725      4465736B 
- 726 005c 315C5265 		.ascii	"1\\Retnings og fremdrifts enhed\\TestState.cydsn\000"
- 726      746E696E 
- 726      6773206F 
- 726      67206672 
- 726      656D6472 
- 727              	.LASF3:
- 728 008b 73686F72 		.ascii	"short unsigned int\000"
- 728      7420756E 
- 728      7369676E 
- 728      65642069 
- 728      6E7400
- 729              	.LASF30:
- 730 009e 73746174 		.ascii	"status\000"
- 730      757300
- 731              	.LASF23:
- 732 00a5 49324353 		.ascii	"I2CS_I2CSlaveClearWriteStatus\000"
- 732      5F493243 
- 732      536C6176 
- 732      65436C65 
- 732      61725772 
- 733              	.LASF11:
- 734 00c3 666C6F61 		.ascii	"float\000"
- 734      7400
- 735              	.LASF1:
- 736 00c9 756E7369 		.ascii	"unsigned char\000"
- 736      676E6564 
- 736      20636861 
- 736      7200
- 737              	.LASF15:
- 738 00d7 69326352 		.ascii	"i2cReadBuffer\000"
- 738      65616442 
- 738      75666665 
- 738      7200
- 739              	.LASF5:
- 740 00e5 6C6F6E67 		.ascii	"long unsigned int\000"
- 740      20756E73 
- 740      69676E65 
- 740      6420696E 
- 740      7400
- 741              	.LASF9:
- 742 00f7 75696E74 		.ascii	"uint8\000"
- 742      3800
- 743              	.LASF19:
- 744 00fd 49324353 		.ascii	"I2CS_I2CSlaveStatus\000"
- 744      5F493243 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 16
+ 726 005c 50524A34 		.ascii	"PRJ4-Gruppe1\\Retnings og fremdrifts enhed\\TestSta"
+ 726      2D477275 
+ 726      70706531 
+ 726      5C526574 
+ 726      6E696E67 
+ 727 008d 74652E63 		.ascii	"te.cydsn\000"
+ 727      7964736E 
+ 727      00
+ 728              	.LASF3:
+ 729 0096 73686F72 		.ascii	"short unsigned int\000"
+ 729      7420756E 
+ 729      7369676E 
+ 729      65642069 
+ 729      6E7400
+ 730              	.LASF30:
+ 731 00a9 73746174 		.ascii	"status\000"
+ 731      757300
+ 732              	.LASF23:
+ 733 00b0 49324353 		.ascii	"I2CS_I2CSlaveClearWriteStatus\000"
+ 733      5F493243 
+ 733      536C6176 
+ 733      65436C65 
+ 733      61725772 
+ 734              	.LASF11:
+ 735 00ce 666C6F61 		.ascii	"float\000"
+ 735      7400
+ 736              	.LASF1:
+ 737 00d4 756E7369 		.ascii	"unsigned char\000"
+ 737      676E6564 
+ 737      20636861 
+ 737      7200
+ 738              	.LASF15:
+ 739 00e2 69326352 		.ascii	"i2cReadBuffer\000"
+ 739      65616442 
+ 739      75666665 
+ 739      7200
+ 740              	.LASF5:
+ 741 00f0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 741      20756E73 
+ 741      69676E65 
+ 741      6420696E 
+ 741      7400
+ 742              	.LASF9:
+ 743 0102 75696E74 		.ascii	"uint8\000"
+ 743      3800
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSq0RUa.s 			page 16
 
 
- 744      536C6176 
- 744      65537461 
- 744      74757300 
- 745              	.LASF12:
- 746 0111 646F7562 		.ascii	"double\000"
- 746      6C6500
- 747              	.LASF29:
- 748 0118 6D61696E 		.ascii	"main\000"
- 748      00
- 749              	.LASF10:
- 750 011d 75696E74 		.ascii	"uint32\000"
- 750      333200
- 751              	.LASF20:
- 752 0124 49324353 		.ascii	"I2CS_I2CSlaveGetWriteBufSize\000"
- 752      5F493243 
- 752      536C6176 
- 752      65476574 
- 752      57726974 
- 753              	.LASF18:
- 754 0141 49324353 		.ascii	"I2CS_I2CSlaveInitWriteBuf\000"
- 754      5F493243 
- 754      536C6176 
- 754      65496E69 
- 754      74577269 
- 755              	.LASF8:
- 756 015b 756E7369 		.ascii	"unsigned int\000"
- 756      676E6564 
- 756      20696E74 
- 756      00
- 757              	.LASF7:
- 758 0168 6C6F6E67 		.ascii	"long long unsigned int\000"
- 758      206C6F6E 
- 758      6720756E 
- 758      7369676E 
- 758      65642069 
- 759              	.LASF16:
- 760 017f 69326357 		.ascii	"i2cWriteBuffer\000"
- 760      72697465 
- 760      42756666 
- 760      657200
- 761              	.LASF14:
- 762 018e 73697A65 		.ascii	"sizetype\000"
- 762      74797065 
- 762      00
- 763              	.LASF6:
- 764 0197 6C6F6E67 		.ascii	"long long int\000"
- 764      206C6F6E 
- 764      6720696E 
- 764      7400
- 765              	.LASF25:
- 766 01a5 49324353 		.ascii	"I2CS_I2CSlaveClearReadStatus\000"
- 766      5F493243 
- 766      536C6176 
- 766      65436C65 
- 766      61725265 
- 767              	.LASF27:
- 768 01c2 6D61696E 		.ascii	"main.c\000"
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccNClhui.s 			page 17
+ 744              	.LASF19:
+ 745 0108 49324353 		.ascii	"I2CS_I2CSlaveStatus\000"
+ 745      5F493243 
+ 745      536C6176 
+ 745      65537461 
+ 745      74757300 
+ 746              	.LASF12:
+ 747 011c 646F7562 		.ascii	"double\000"
+ 747      6C6500
+ 748              	.LASF29:
+ 749 0123 6D61696E 		.ascii	"main\000"
+ 749      00
+ 750              	.LASF10:
+ 751 0128 75696E74 		.ascii	"uint32\000"
+ 751      333200
+ 752              	.LASF20:
+ 753 012f 49324353 		.ascii	"I2CS_I2CSlaveGetWriteBufSize\000"
+ 753      5F493243 
+ 753      536C6176 
+ 753      65476574 
+ 753      57726974 
+ 754              	.LASF18:
+ 755 014c 49324353 		.ascii	"I2CS_I2CSlaveInitWriteBuf\000"
+ 755      5F493243 
+ 755      536C6176 
+ 755      65496E69 
+ 755      74577269 
+ 756              	.LASF8:
+ 757 0166 756E7369 		.ascii	"unsigned int\000"
+ 757      676E6564 
+ 757      20696E74 
+ 757      00
+ 758              	.LASF7:
+ 759 0173 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 759      206C6F6E 
+ 759      6720756E 
+ 759      7369676E 
+ 759      65642069 
+ 760              	.LASF16:
+ 761 018a 69326357 		.ascii	"i2cWriteBuffer\000"
+ 761      72697465 
+ 761      42756666 
+ 761      657200
+ 762              	.LASF14:
+ 763 0199 73697A65 		.ascii	"sizetype\000"
+ 763      74797065 
+ 763      00
+ 764              	.LASF6:
+ 765 01a2 6C6F6E67 		.ascii	"long long int\000"
+ 765      206C6F6E 
+ 765      6720696E 
+ 765      7400
+ 766              	.LASF25:
+ 767 01b0 49324353 		.ascii	"I2CS_I2CSlaveClearReadStatus\000"
+ 767      5F493243 
+ 767      536C6176 
+ 767      65436C65 
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSq0RUa.s 			page 17
 
 
- 768      2E6300
- 769              	.LASF13:
- 770 01c9 63686172 		.ascii	"char\000"
- 770      00
- 771              	.LASF24:
- 772 01ce 49324353 		.ascii	"I2CS_I2CSlaveClearReadBuf\000"
- 772      5F493243 
- 772      536C6176 
- 772      65436C65 
- 772      61725265 
- 773              	.LASF26:
- 774 01e8 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 774      4320342E 
- 774      392E3320 
- 774      32303135 
- 774      30333033 
- 775 021b 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 775      20726576 
- 775      6973696F 
- 775      6E203232 
- 775      31323230 
- 776 024e 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 776      66756E63 
- 776      74696F6E 
- 776      2D736563 
- 776      74696F6E 
- 777              	.LASF2:
- 778 0276 73686F72 		.ascii	"short int\000"
- 778      7420696E 
- 778      7400
- 779              	.LASF22:
- 780 0280 49324353 		.ascii	"I2CS_I2CSlaveClearWriteBuf\000"
- 780      5F493243 
- 780      536C6176 
- 780      65436C65 
- 780      61725772 
- 781              	.LASF4:
- 782 029b 6C6F6E67 		.ascii	"long int\000"
- 782      20696E74 
- 782      00
- 783              	.LASF0:
- 784 02a4 7369676E 		.ascii	"signed char\000"
- 784      65642063 
- 784      68617200 
- 785              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 767      61725265 
+ 768              	.LASF27:
+ 769 01cd 6D61696E 		.ascii	"main.c\000"
+ 769      2E6300
+ 770              	.LASF13:
+ 771 01d4 63686172 		.ascii	"char\000"
+ 771      00
+ 772              	.LASF24:
+ 773 01d9 49324353 		.ascii	"I2CS_I2CSlaveClearReadBuf\000"
+ 773      5F493243 
+ 773      536C6176 
+ 773      65436C65 
+ 773      61725265 
+ 774              	.LASF26:
+ 775 01f3 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 775      4320342E 
+ 775      392E3320 
+ 775      32303135 
+ 775      30333033 
+ 776 0226 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 776      20726576 
+ 776      6973696F 
+ 776      6E203232 
+ 776      31323230 
+ 777 0259 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 777      66756E63 
+ 777      74696F6E 
+ 777      2D736563 
+ 777      74696F6E 
+ 778              	.LASF2:
+ 779 0281 73686F72 		.ascii	"short int\000"
+ 779      7420696E 
+ 779      7400
+ 780              	.LASF22:
+ 781 028b 49324353 		.ascii	"I2CS_I2CSlaveClearWriteBuf\000"
+ 781      5F493243 
+ 781      536C6176 
+ 781      65436C65 
+ 781      61725772 
+ 782              	.LASF4:
+ 783 02a6 6C6F6E67 		.ascii	"long int\000"
+ 783      20696E74 
+ 783      00
+ 784              	.LASF0:
+ 785 02af 7369676E 		.ascii	"signed char\000"
+ 785      65642063 
+ 785      68617200 
+ 786              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

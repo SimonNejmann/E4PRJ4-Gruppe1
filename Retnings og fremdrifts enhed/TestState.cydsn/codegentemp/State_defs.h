@@ -104,5 +104,82 @@
 
 /* End macros which should be called from within a critical section */
 
+/******************** Pos (Width: 8) Definitions ********************/
+
+#define State_Pos_A0_PTR 	 ((reg8 *) State_Pos_u0__A0_REG)
+#define State_Pos_A0_REG 	 (* State_Pos_A0_PTR)
+#define State_Pos_A1_PTR 	 ((reg8 *) State_Pos_u0__A1_REG)
+#define State_Pos_A1_REG 	 (* State_Pos_A1_PTR)
+#define State_Pos_D0_PTR 	 ((reg8 *) State_Pos_u0__D0_REG)
+#define State_Pos_D0_REG 	 (* State_Pos_D0_PTR)
+#define State_Pos_D1_PTR 	 ((reg8 *) State_Pos_u0__D1_REG)
+#define State_Pos_D1_REG 	 (* State_Pos_D1_PTR)
+#define State_Pos_F0_PTR 	 ((reg8 *) State_Pos_u0__F0_REG)
+#define State_Pos_F0_REG 	 (* State_Pos_F0_PTR)
+#define State_Pos_F1_PTR 	 ((reg8 *) State_Pos_u0__F1_REG)
+#define State_Pos_F1_REG 	 (* State_Pos_F1_PTR)
+
+/* Note: To avoid corruption of a shared register, call the following registers from within
+ * a critical section (See Component Author Guide for details).
+ */
+
+/* Macros to clear DP FIFOs.*/
+#define State_Pos_F0_CLEAR do { \
+    CY_SET_XTND_REG8(\
+        ((reg8 *) State_Pos_u0__DP_AUX_CTL_REG), 0x01u | \
+        CY_GET_XTND_REG8(((reg8 *) State_Pos_u0__DP_AUX_CTL_REG)));\
+    CY_SET_XTND_REG8(\
+        ((reg8 *) State_Pos_u0__DP_AUX_CTL_REG), 0xfeu & \
+        CY_GET_XTND_REG8(((reg8 *) State_Pos_u0__DP_AUX_CTL_REG)));\
+    } while(0)
+#define State_Pos_F1_CLEAR do { \
+    CY_SET_XTND_REG8(\
+        ((reg8 *) State_Pos_u0__DP_AUX_CTL_REG), 0x02u | \
+        CY_GET_XTND_REG8(((reg8 *) State_Pos_u0__DP_AUX_CTL_REG)));\
+    CY_SET_XTND_REG8(\
+        ((reg8 *) State_Pos_u0__DP_AUX_CTL_REG), 0xfdu & \
+        CY_GET_XTND_REG8(((reg8 *) State_Pos_u0__DP_AUX_CTL_REG)));\
+    } while(0)
+
+/* Macros to set FIFO level mode. See the TRM for details */
+#define State_Pos_F0_SET_LEVEL_NORMAL \
+    CY_SET_XTND_REG8(\
+        ((reg8 *) State_Pos_u0__DP_AUX_CTL_REG), 0xfbu & \
+        CY_GET_XTND_REG8(((reg8 *) State_Pos_u0__DP_AUX_CTL_REG)))
+#define State_Pos_F1_SET_LEVEL_NORMAL \
+    CY_SET_XTND_REG8(\
+        ((reg8 *) State_Pos_u0__DP_AUX_CTL_REG), 0xf7u & \
+        CY_GET_XTND_REG8(((reg8 *) State_Pos_u0__DP_AUX_CTL_REG)))
+#define State_Pos_F0_SET_LEVEL_MID \
+    CY_SET_XTND_REG8(\
+        ((reg8 *) State_Pos_u0__DP_AUX_CTL_REG), 0x04u | \
+        CY_GET_XTND_REG8(((reg8 *) State_Pos_u0__DP_AUX_CTL_REG)))
+#define State_Pos_F1_SET_LEVEL_MID \
+    CY_SET_XTND_REG8(\
+        ((reg8 *) State_Pos_u0__DP_AUX_CTL_REG), 0x08u | \
+        CY_GET_XTND_REG8(((reg8 *) State_Pos_u0__DP_AUX_CTL_REG)))
+
+/* Macros to set FIFO to single-buffer mode. */
+#define State_Pos_F0_SINGLE_BUFFER_SET \
+    CY_SET_XTND_REG8(\
+        ((reg8 *) State_Pos_u0__DP_AUX_CTL_REG), 0x01u | \
+        CY_GET_XTND_REG8(((reg8 *) State_Pos_u0__DP_AUX_CTL_REG)))
+#define State_Pos_F1_SINGLE_BUFFER_SET \
+    CY_SET_XTND_REG8(\
+        ((reg8 *) State_Pos_u0__DP_AUX_CTL_REG), 0x02u | \
+        CY_GET_XTND_REG8(((reg8 *) State_Pos_u0__DP_AUX_CTL_REG)))
+
+/* Macros to return the FIFO to normal mode. */
+#define State_Pos_F0_SINGLE_BUFFER_UNSET \
+    CY_SET_XTND_REG8(\
+        ((reg8 *) State_Pos_u0__DP_AUX_CTL_REG), 0xfeu & \
+        CY_GET_XTND_REG8(((reg8 *) State_Pos_u0__DP_AUX_CTL_REG)))
+#define State_Pos_F1_SINGLE_BUFFER_UNSET \
+    CY_SET_XTND_REG8(\
+        ((reg8 *) State_Pos_u0__DP_AUX_CTL_REG), 0xfdu & \
+        CY_GET_XTND_REG8(((reg8 *) State_Pos_u0__DP_AUX_CTL_REG)))
+
+/* End macros which should be called from within a critical section */
+
 
 #endif /* INCLUDED_STATE_DEFS_H */

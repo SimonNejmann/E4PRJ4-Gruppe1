@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 1
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cceTiEOa.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 1
   30:Generated_Source\PSoC4/State_CtrlReg_Run_PM.c **** * Summary:
   31:Generated_Source\PSoC4/State_CtrlReg_Run_PM.c **** *  Saves the control register value.
   32:Generated_Source\PSoC4/State_CtrlReg_Run_PM.c **** *
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 2
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cceTiEOa.s 			page 2
 
 
   33:Generated_Source\PSoC4/State_CtrlReg_Run_PM.c **** * Parameters:
@@ -85,7 +85,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 1
   36              	.L3:
   37 000a C046     		.align	2
   38              	.L2:
-  39 000c 71000F40 		.word	1074724977
+  39 000c 73000F40 		.word	1074724979
   40 0010 00000000 		.word	.LANCHOR0
   41              		.cfi_endproc
   42              	.LFE0:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 1
   61:Generated_Source\PSoC4/State_CtrlReg_Run_PM.c **** void State_CtrlReg_Run_RestoreConfig(void) 
   62:Generated_Source\PSoC4/State_CtrlReg_Run_PM.c **** {
   52              		.loc 1 62 0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 3
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cceTiEOa.s 			page 3
 
 
   53              		.cfi_startproc
@@ -136,7 +136,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 1
   63 000a C046     		.align	2
   64              	.L5:
   65 000c 00000000 		.word	.LANCHOR0
-  66 0010 71000F40 		.word	1074724977
+  66 0010 73000F40 		.word	1074724979
   67              		.cfi_endproc
   68              	.LFE1:
   69              		.size	State_CtrlReg_Run_RestoreConfig, .-State_CtrlReg_Run_RestoreConfig
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 1
   86              	.LVL0:
   84:Generated_Source\PSoC4/State_CtrlReg_Run_PM.c **** }
   87              		.loc 1 84 0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 4
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cceTiEOa.s 			page 4
 
 
   88              		@ sp needed
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 1
  122 0000 00       		.space	1
  123 0001 000000   		.text
  124              	.Letext0:
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 5
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cceTiEOa.s 			page 5
 
 
  125              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
@@ -250,45 +250,45 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 1
  131 0006 00000000 		.4byte	.Ldebug_abbrev0
  132 000a 04       		.byte	0x4
  133 000b 01       		.uleb128 0x1
- 134 000c A2010000 		.4byte	.LASF19
+ 134 000c AD010000 		.4byte	.LASF19
  135 0010 01       		.byte	0x1
- 136 0011 61010000 		.4byte	.LASF20
- 137 0015 00000000 		.4byte	.LASF21
+ 136 0011 6C010000 		.4byte	.LASF20
+ 137 0015 57000000 		.4byte	.LASF21
  138 0019 00000000 		.4byte	.Ldebug_ranges0+0
  139 001d 00000000 		.4byte	0
  140 0021 00000000 		.4byte	.Ldebug_line0
  141 0025 02       		.uleb128 0x2
  142 0026 01       		.byte	0x1
  143 0027 06       		.byte	0x6
- 144 0028 49020000 		.4byte	.LASF0
+ 144 0028 54020000 		.4byte	.LASF0
  145 002c 02       		.uleb128 0x2
  146 002d 01       		.byte	0x1
  147 002e 08       		.byte	0x8
- 148 002f B4000000 		.4byte	.LASF1
+ 148 002f BF000000 		.4byte	.LASF1
  149 0033 02       		.uleb128 0x2
  150 0034 02       		.byte	0x2
  151 0035 05       		.byte	0x5
- 152 0036 30020000 		.4byte	.LASF2
+ 152 0036 3B020000 		.4byte	.LASF2
  153 003a 02       		.uleb128 0x2
  154 003b 02       		.byte	0x2
  155 003c 07       		.byte	0x7
- 156 003d D9000000 		.4byte	.LASF3
+ 156 003d E4000000 		.4byte	.LASF3
  157 0041 02       		.uleb128 0x2
  158 0042 04       		.byte	0x4
  159 0043 05       		.byte	0x5
- 160 0044 40020000 		.4byte	.LASF4
+ 160 0044 4B020000 		.4byte	.LASF4
  161 0048 02       		.uleb128 0x2
  162 0049 04       		.byte	0x4
  163 004a 07       		.byte	0x7
- 164 004b C7000000 		.4byte	.LASF5
+ 164 004b D2000000 		.4byte	.LASF5
  165 004f 02       		.uleb128 0x2
  166 0050 08       		.byte	0x8
  167 0051 05       		.byte	0x5
- 168 0052 8F010000 		.4byte	.LASF6
+ 168 0052 9A010000 		.4byte	.LASF6
  169 0056 02       		.uleb128 0x2
  170 0057 08       		.byte	0x8
  171 0058 07       		.byte	0x7
- 172 0059 4A010000 		.4byte	.LASF7
+ 172 0059 55010000 		.4byte	.LASF7
  173 005d 03       		.uleb128 0x3
  174 005e 04       		.byte	0x4
  175 005f 05       		.byte	0x5
@@ -296,29 +296,29 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 1
  177 0064 02       		.uleb128 0x2
  178 0065 04       		.byte	0x4
  179 0066 07       		.byte	0x7
- 180 0067 3D010000 		.4byte	.LASF8
+ 180 0067 48010000 		.4byte	.LASF8
  181 006b 04       		.uleb128 0x4
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 6
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cceTiEOa.s 			page 6
 
 
- 182 006c 3A020000 		.4byte	.LASF12
+ 182 006c 45020000 		.4byte	.LASF12
  183 0070 02       		.byte	0x2
  184 0071 B901     		.2byte	0x1b9
  185 0073 2C000000 		.4byte	0x2c
  186 0077 02       		.uleb128 0x2
  187 0078 04       		.byte	0x4
  188 0079 04       		.byte	0x4
- 189 007a AE000000 		.4byte	.LASF9
+ 189 007a 18000000 		.4byte	.LASF9
  190 007e 02       		.uleb128 0x2
  191 007f 08       		.byte	0x8
  192 0080 04       		.byte	0x4
- 193 0081 36010000 		.4byte	.LASF10
+ 193 0081 41010000 		.4byte	.LASF10
  194 0085 02       		.uleb128 0x2
  195 0086 01       		.byte	0x1
  196 0087 08       		.byte	0x8
- 197 0088 9D010000 		.4byte	.LASF11
+ 197 0088 A8010000 		.4byte	.LASF11
  198 008c 04       		.uleb128 0x4
- 199 008d C2000000 		.4byte	.LASF13
+ 199 008d CD000000 		.4byte	.LASF13
  200 0091 02       		.byte	0x2
  201 0092 6302     		.2byte	0x263
  202 0094 98000000 		.4byte	0x98
@@ -330,19 +330,19 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 1
  208 00a0 1C       		.byte	0x1c
  209 00a1 B2000000 		.4byte	0xb2
  210 00a5 07       		.uleb128 0x7
- 211 00a6 29010000 		.4byte	.LASF22
+ 211 00a6 34010000 		.4byte	.LASF22
  212 00aa 03       		.byte	0x3
  213 00ab 1E       		.byte	0x1e
  214 00ac 6B000000 		.4byte	0x6b
  215 00b0 00       		.byte	0
  216 00b1 00       		.byte	0
  217 00b2 08       		.uleb128 0x8
- 218 00b3 75000000 		.4byte	.LASF14
+ 218 00b3 1E000000 		.4byte	.LASF14
  219 00b7 03       		.byte	0x3
  220 00b8 20       		.byte	0x20
  221 00b9 9D000000 		.4byte	0x9d
  222 00bd 09       		.uleb128 0x9
- 223 00be 0C010000 		.4byte	.LASF15
+ 223 00be 17010000 		.4byte	.LASF15
  224 00c2 01       		.byte	0x1
  225 00c3 28       		.byte	0x28
  226 00c4 00000000 		.4byte	.LFB0
@@ -350,7 +350,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 1
  228 00cc 01       		.uleb128 0x1
  229 00cd 9C       		.byte	0x9c
  230 00ce 09       		.uleb128 0x9
- 231 00cf EC000000 		.4byte	.LASF16
+ 231 00cf F7000000 		.4byte	.LASF16
  232 00d3 01       		.byte	0x1
  233 00d4 3D       		.byte	0x3d
  234 00d5 00000000 		.4byte	.LFB1
@@ -358,10 +358,10 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 1
  236 00dd 01       		.uleb128 0x1
  237 00de 9C       		.byte	0x9c
  238 00df 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 7
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cceTiEOa.s 			page 7
 
 
- 239 00e0 5D000000 		.4byte	.LASF17
+ 239 00e0 00000000 		.4byte	.LASF17
  240 00e4 01       		.byte	0x1
  241 00e5 51       		.byte	0x51
  242 00e6 00000000 		.4byte	.LFB2
@@ -374,7 +374,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 1
  249 00f9 BD000000 		.4byte	0xbd
  250 00fd 00       		.byte	0
  251 00fe 0A       		.uleb128 0xa
- 252 00ff 55020000 		.4byte	.LASF18
+ 252 00ff 60020000 		.4byte	.LASF18
  253 0103 01       		.byte	0x1
  254 0104 65       		.byte	0x65
  255 0105 00000000 		.4byte	.LFB3
@@ -387,7 +387,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 1
  262 0118 CE000000 		.4byte	0xce
  263 011c 00       		.byte	0
  264 011d 0C       		.uleb128 0xc
- 265 011e 95000000 		.4byte	.LASF23
+ 265 011e 3E000000 		.4byte	.LASF23
  266 0122 01       		.byte	0x1
  267 0123 17       		.byte	0x17
  268 0124 B2000000 		.4byte	0xb2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 1
  293 0012 00       		.byte	0
  294 0013 02       		.uleb128 0x2
  295 0014 24       		.uleb128 0x24
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 8
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cceTiEOa.s 			page 8
 
 
  296 0015 00       		.byte	0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 1
  350 004b 0D       		.uleb128 0xd
  351 004c 00       		.byte	0
  352 004d 03       		.uleb128 0x3
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 9
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cceTiEOa.s 			page 9
 
 
  353 004e 0E       		.uleb128 0xe
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 1
  407 0085 3A       		.uleb128 0x3a
  408 0086 0B       		.uleb128 0xb
  409 0087 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 10
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cceTiEOa.s 			page 10
 
 
  410 0088 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 1
  464 0028 00000000 		.4byte	.LFB3
  465 002c 08000000 		.4byte	.LFE3-.LFB3
  466 0030 00000000 		.4byte	0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 11
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cceTiEOa.s 			page 11
 
 
  467 0034 00000000 		.4byte	0
@@ -621,144 +621,147 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 1
  482      00000201 
  482      FB0E0D00 
  482      01010101 
- 483              	.LASF21:
- 484 0000 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\HellYaeh\\E4PRJ4-Gruppe"
- 484      73657273 
- 484      5C416E64 
- 484      6572735C 
- 484      4465736B 
- 485 002e 315C5265 		.ascii	"1\\Retnings og fremdrifts enhed\\TestState.cydsn\000"
- 485      746E696E 
- 485      6773206F 
- 485      67206672 
- 485      656D6472 
- 486              	.LASF17:
- 487 005d 53746174 		.ascii	"State_CtrlReg_Run_Sleep\000"
- 487      655F4374 
- 487      726C5265 
- 487      675F5275 
- 487      6E5F536C 
- 488              	.LASF14:
- 489 0075 53746174 		.ascii	"State_CtrlReg_Run_BACKUP_STRUCT\000"
- 489      655F4374 
- 489      726C5265 
- 489      675F5275 
- 489      6E5F4241 
- 490              	.LASF23:
- 491 0095 53746174 		.ascii	"State_CtrlReg_Run_backup\000"
- 491      655F4374 
- 491      726C5265 
- 491      675F5275 
- 491      6E5F6261 
- 492              	.LASF9:
- 493 00ae 666C6F61 		.ascii	"float\000"
- 493      7400
- 494              	.LASF1:
- 495 00b4 756E7369 		.ascii	"unsigned char\000"
- 495      676E6564 
- 495      20636861 
- 495      7200
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 12
+ 483              	.LASF17:
+ 484 0000 53746174 		.ascii	"State_CtrlReg_Run_Sleep\000"
+ 484      655F4374 
+ 484      726C5265 
+ 484      675F5275 
+ 484      6E5F536C 
+ 485              	.LASF9:
+ 486 0018 666C6F61 		.ascii	"float\000"
+ 486      7400
+ 487              	.LASF14:
+ 488 001e 53746174 		.ascii	"State_CtrlReg_Run_BACKUP_STRUCT\000"
+ 488      655F4374 
+ 488      726C5265 
+ 488      675F5275 
+ 488      6E5F4241 
+ 489              	.LASF23:
+ 490 003e 53746174 		.ascii	"State_CtrlReg_Run_backup\000"
+ 490      655F4374 
+ 490      726C5265 
+ 490      675F5275 
+ 490      6E5F6261 
+ 491              	.LASF21:
+ 492 0057 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\Projekt 4. semester\\E4"
+ 492      73657273 
+ 492      5C416E64 
+ 492      6572735C 
+ 492      4465736B 
+ 493 0085 50524A34 		.ascii	"PRJ4-Gruppe1\\Retnings og fremdrifts enhed\\TestSta"
+ 493      2D477275 
+ 493      70706531 
+ 493      5C526574 
+ 493      6E696E67 
+ 494 00b6 74652E63 		.ascii	"te.cydsn\000"
+ 494      7964736E 
+ 494      00
+ 495              	.LASF1:
+ 496 00bf 756E7369 		.ascii	"unsigned char\000"
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cceTiEOa.s 			page 12
 
 
- 496              	.LASF13:
- 497 00c2 72656738 		.ascii	"reg8\000"
- 497      00
- 498              	.LASF5:
- 499 00c7 6C6F6E67 		.ascii	"long unsigned int\000"
- 499      20756E73 
- 499      69676E65 
- 499      6420696E 
- 499      7400
- 500              	.LASF3:
- 501 00d9 73686F72 		.ascii	"short unsigned int\000"
- 501      7420756E 
- 501      7369676E 
- 501      65642069 
- 501      6E7400
- 502              	.LASF16:
- 503 00ec 53746174 		.ascii	"State_CtrlReg_Run_RestoreConfig\000"
- 503      655F4374 
- 503      726C5265 
- 503      675F5275 
- 503      6E5F5265 
- 504              	.LASF15:
- 505 010c 53746174 		.ascii	"State_CtrlReg_Run_SaveConfig\000"
- 505      655F4374 
- 505      726C5265 
- 505      675F5275 
- 505      6E5F5361 
- 506              	.LASF22:
- 507 0129 636F6E74 		.ascii	"controlState\000"
- 507      726F6C53 
- 507      74617465 
- 507      00
- 508              	.LASF10:
- 509 0136 646F7562 		.ascii	"double\000"
- 509      6C6500
- 510              	.LASF8:
- 511 013d 756E7369 		.ascii	"unsigned int\000"
- 511      676E6564 
- 511      20696E74 
- 511      00
- 512              	.LASF7:
- 513 014a 6C6F6E67 		.ascii	"long long unsigned int\000"
- 513      206C6F6E 
- 513      6720756E 
- 513      7369676E 
- 513      65642069 
- 514              	.LASF20:
- 515 0161 47656E65 		.ascii	"Generated_Source\\PSoC4\\State_CtrlReg_Run_PM.c\000"
- 515      72617465 
- 515      645F536F 
- 515      75726365 
- 515      5C50536F 
- 516              	.LASF6:
- 517 018f 6C6F6E67 		.ascii	"long long int\000"
- 517      206C6F6E 
- 517      6720696E 
- 517      7400
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN1Qe2w.s 			page 13
+ 496      676E6564 
+ 496      20636861 
+ 496      7200
+ 497              	.LASF13:
+ 498 00cd 72656738 		.ascii	"reg8\000"
+ 498      00
+ 499              	.LASF5:
+ 500 00d2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 500      20756E73 
+ 500      69676E65 
+ 500      6420696E 
+ 500      7400
+ 501              	.LASF3:
+ 502 00e4 73686F72 		.ascii	"short unsigned int\000"
+ 502      7420756E 
+ 502      7369676E 
+ 502      65642069 
+ 502      6E7400
+ 503              	.LASF16:
+ 504 00f7 53746174 		.ascii	"State_CtrlReg_Run_RestoreConfig\000"
+ 504      655F4374 
+ 504      726C5265 
+ 504      675F5275 
+ 504      6E5F5265 
+ 505              	.LASF15:
+ 506 0117 53746174 		.ascii	"State_CtrlReg_Run_SaveConfig\000"
+ 506      655F4374 
+ 506      726C5265 
+ 506      675F5275 
+ 506      6E5F5361 
+ 507              	.LASF22:
+ 508 0134 636F6E74 		.ascii	"controlState\000"
+ 508      726F6C53 
+ 508      74617465 
+ 508      00
+ 509              	.LASF10:
+ 510 0141 646F7562 		.ascii	"double\000"
+ 510      6C6500
+ 511              	.LASF8:
+ 512 0148 756E7369 		.ascii	"unsigned int\000"
+ 512      676E6564 
+ 512      20696E74 
+ 512      00
+ 513              	.LASF7:
+ 514 0155 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 514      206C6F6E 
+ 514      6720756E 
+ 514      7369676E 
+ 514      65642069 
+ 515              	.LASF20:
+ 516 016c 47656E65 		.ascii	"Generated_Source\\PSoC4\\State_CtrlReg_Run_PM.c\000"
+ 516      72617465 
+ 516      645F536F 
+ 516      75726365 
+ 516      5C50536F 
+ 517              	.LASF6:
+ 518 019a 6C6F6E67 		.ascii	"long long int\000"
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cceTiEOa.s 			page 13
 
 
- 518              	.LASF11:
- 519 019d 63686172 		.ascii	"char\000"
- 519      00
- 520              	.LASF19:
- 521 01a2 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 521      4320342E 
- 521      392E3320 
- 521      32303135 
- 521      30333033 
- 522 01d5 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 522      20726576 
- 522      6973696F 
- 522      6E203232 
- 522      31323230 
- 523 0208 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 523      66756E63 
- 523      74696F6E 
- 523      2D736563 
- 523      74696F6E 
- 524              	.LASF2:
- 525 0230 73686F72 		.ascii	"short int\000"
- 525      7420696E 
- 525      7400
- 526              	.LASF12:
- 527 023a 75696E74 		.ascii	"uint8\000"
- 527      3800
- 528              	.LASF4:
- 529 0240 6C6F6E67 		.ascii	"long int\000"
- 529      20696E74 
- 529      00
- 530              	.LASF0:
- 531 0249 7369676E 		.ascii	"signed char\000"
- 531      65642063 
- 531      68617200 
- 532              	.LASF18:
- 533 0255 53746174 		.ascii	"State_CtrlReg_Run_Wakeup\000"
- 533      655F4374 
- 533      726C5265 
- 533      675F5275 
- 533      6E5F5761 
- 534              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 518      206C6F6E 
+ 518      6720696E 
+ 518      7400
+ 519              	.LASF11:
+ 520 01a8 63686172 		.ascii	"char\000"
+ 520      00
+ 521              	.LASF19:
+ 522 01ad 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 522      4320342E 
+ 522      392E3320 
+ 522      32303135 
+ 522      30333033 
+ 523 01e0 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 523      20726576 
+ 523      6973696F 
+ 523      6E203232 
+ 523      31323230 
+ 524 0213 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 524      66756E63 
+ 524      74696F6E 
+ 524      2D736563 
+ 524      74696F6E 
+ 525              	.LASF2:
+ 526 023b 73686F72 		.ascii	"short int\000"
+ 526      7420696E 
+ 526      7400
+ 527              	.LASF12:
+ 528 0245 75696E74 		.ascii	"uint8\000"
+ 528      3800
+ 529              	.LASF4:
+ 530 024b 6C6F6E67 		.ascii	"long int\000"
+ 530      20696E74 
+ 530      00
+ 531              	.LASF0:
+ 532 0254 7369676E 		.ascii	"signed char\000"
+ 532      65642063 
+ 532      68617200 
+ 533              	.LASF18:
+ 534 0260 53746174 		.ascii	"State_CtrlReg_Run_Wakeup\000"
+ 534      655F4374 
+ 534      726C5265 
+ 534      675F5275 
+ 534      6E5F5761 
+ 535              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

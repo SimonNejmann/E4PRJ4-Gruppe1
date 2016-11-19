@@ -1,0 +1,37 @@
+--------------- Build Started: 11/19/2016 13:53:47 Project: I2C_Slave_prog, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+The code generation step is up to date.
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_493\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c main.c -o .\CortexM3\ARM_GCC_493\Debug\main.o
+main.c: In function 'main':
+main.c:26:5: warning: implicit declaration of function 'I2CS_I2CSlaveInitReadBuf' [-Wimplicit-function-declaration]
+     I2CS_I2CSlaveInitReadBuf (i2cReadBuffer,  BUFFER_SIZE);
+     ^
+main.c:27:5: warning: implicit declaration of function 'I2CS_I2CSlaveInitWriteBuf' [-Wimplicit-function-declaration]
+     I2CS_I2CSlaveInitWriteBuf(i2cWriteBuffer, BUFFER_SIZE);
+     ^
+main.c:40:9: warning: implicit declaration of function 'I2CS_I2CSlaveStatus' [-Wimplicit-function-declaration]
+         if (0u != (I2CS_I2CSlaveStatus() & I2CS_I2C_SSTAT_WR_CMPLT))
+         ^
+main.c:40:44: error: 'I2CS_I2C_SSTAT_WR_CMPLT' undeclared (first use in this function)
+         if (0u != (I2CS_I2CSlaveStatus() & I2CS_I2C_SSTAT_WR_CMPLT))
+                                            ^
+main.c:40:44: note: each undeclared identifier is reported only once for each function it appears in
+main.c:43:13: warning: implicit declaration of function 'I2CS_I2CSlaveGetWriteBufSize' [-Wimplicit-function-declaration]
+             if (PACKET_SIZE == I2CS_I2CSlaveGetWriteBufSize())
+             ^
+main.c:55:13: warning: implicit declaration of function 'I2CS_I2CSlaveClearWriteBuf' [-Wimplicit-function-declaration]
+             I2CS_I2CSlaveClearWriteBuf();
+             ^
+main.c:56:13: warning: implicit declaration of function 'I2CS_I2CSlaveClearWriteStatus' [-Wimplicit-function-declaration]
+             (void) I2CS_I2CSlaveClearWriteStatus();
+             ^
+main.c:64:44: error: 'I2CS_I2C_SSTAT_RD_CMPLT' undeclared (first use in this function)
+         if (0u != (I2CS_I2CSlaveStatus() & I2CS_I2C_SSTAT_RD_CMPLT))
+                                            ^
+main.c:67:13: warning: implicit declaration of function 'I2CS_I2CSlaveClearReadBuf' [-Wimplicit-function-declaration]
+             I2CS_I2CSlaveClearReadBuf();
+             ^
+main.c:68:13: warning: implicit declaration of function 'I2CS_I2CSlaveClearReadStatus' [-Wimplicit-function-declaration]
+             (void) I2CS_I2CSlaveClearReadStatus();
+             ^
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Build Failed: 11/19/2016 13:53:47 ---------------

@@ -13,5 +13,5 @@
 
 
 #define State_Forward_cnt State_Forward_A0_REG
-#define State_Backward_cnt State_Forward_A1_REG
+#define State_Pos_cnt State_Pos_A0_REG
 /* [] END OF FILE */
