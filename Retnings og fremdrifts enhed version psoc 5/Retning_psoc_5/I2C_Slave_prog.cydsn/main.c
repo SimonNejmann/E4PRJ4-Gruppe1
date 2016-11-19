@@ -23,8 +23,8 @@ int main()
     
 
     /* Start I2C slave (SCB mode) */
-    I2CS_I2CSlaveInitReadBuf (i2cReadBuffer,  BUFFER_SIZE);
-    I2CS_I2CSlaveInitWriteBuf(i2cWriteBuffer, BUFFER_SIZE);
+    I2CS_SlaveInitReadBuf (i2cReadBuffer,  BUFFER_SIZE);
+    I2CS_SlaveInitWriteBuf(i2cWriteBuffer, BUFFER_SIZE);
     I2CS_Start();
 
     CyGlobalIntEnable;
@@ -37,10 +37,10 @@ int main()
     {
             
         /* Write complete: parse command packet */
-        if (0u != (I2CS_I2CSlaveStatus() & I2CS_I2C_SSTAT_WR_CMPLT))
+        if (0u != (I2CS_SlaveStatus() & I2CS_SSTAT_WR_CMPLT))
         {
             /* Check packet length */
-            if (PACKET_SIZE == I2CS_I2CSlaveGetWriteBufSize())
+            if (PACKET_SIZE == I2CS_SlaveGetWriteBufSize())
             {
                 /* Check start and end of packet markers */
                 if ((i2cWriteBuffer[PACKET_SOP_POS] == PACKET_SOP) &&
@@ -52,8 +52,8 @@ int main()
             }
 
             /* Clear slave write buffer and status */
-            I2CS_I2CSlaveClearWriteBuf();
-            (void) I2CS_I2CSlaveClearWriteStatus();
+            I2CS_SlaveClearWriteBuf();
+            (void) I2CS_SlaveClearWriteStatus();
 
             /*  read buffer */
             i2cReadBuffer[PACKET_STS_1_POS] = status;
@@ -61,11 +61,11 @@ int main()
         }
 
         /* Read complete: expose buffer to master */
-        if (0u != (I2CS_I2CSlaveStatus() & I2CS_I2C_SSTAT_RD_CMPLT))
+        if (0u != (I2CS_SlaveStatus() & I2CS_SSTAT_RD_CMPLT))
         {
             /* Clear slave read buffer and status */
-            I2CS_I2CSlaveClearReadBuf();
-            (void) I2CS_I2CSlaveClearReadStatus();
+            I2CS_SlaveClearReadBuf();
+            (void) I2CS_SlaveClearReadStatus();
         }
     }
     return 0;

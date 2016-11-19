@@ -154,7 +154,6 @@
 <v>MyLabrary\TestState\Generated_Source\PSoC4\C\C.c</v>
 <v>MyLabrary\TestState\Generated_Source\PSoC4\C\C.h</v>
 <v>MyLabrary\TestState\Generated_Source\PSoC4\C\C_aliases.h</v>
-<v>MyLabrary\TestState\Generated_Source\PSoC4\C\C_PM.c</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="MyLabrary\StepperState\State\State.cyudb">
@@ -283,7 +282,6 @@
 <v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\I2CS_I2C_SLAVE.lst</v>
 <v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\I2CS_PM.lst</v>
 <v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\I2CS_SCB_IRQ.lst</v>
-<v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\I2CS_SCBCLK.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>

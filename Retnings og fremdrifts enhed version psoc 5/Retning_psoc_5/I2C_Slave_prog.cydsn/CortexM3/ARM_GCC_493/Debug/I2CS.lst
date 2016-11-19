@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
   29:Generated_Source\PSoC5/I2CS.c **** /*******************************************************************************
   30:Generated_Source\PSoC5/I2CS.c **** * Function Name: I2CS_Init
   31:Generated_Source\PSoC5/I2CS.c **** ********************************************************************************
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 2
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 2
 
 
   32:Generated_Source\PSoC5/I2CS.c **** *
@@ -94,34 +94,33 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
   52:Generated_Source\PSoC5/I2CS.c ****     /* Configure fixed function block */
   53:Generated_Source\PSoC5/I2CS.c ****     I2CS_CFG_REG  = I2CS_DEFAULT_CFG;
   37              		.loc 1 53 0
-  38 0002 0122     		movs	r2, #1
-  39 0004 134B     		ldr	r3, .L3
-  40 0006 1A70     		strb	r2, [r3]
+  38 0002 8123     		movs	r3, #129
+  39 0004 124A     		ldr	r2, .L3
+  40 0006 1370     		strb	r3, [r2]
   54:Generated_Source\PSoC5/I2CS.c ****     I2CS_XCFG_REG = I2CS_DEFAULT_XCFG;
   41              		.loc 1 54 0
-  42 0008 8122     		movs	r2, #129
-  43 000a 0E3B     		subs	r3, r3, #14
-  44 000c 1A70     		strb	r2, [r3]
+  42 0008 0E3A     		subs	r2, r2, #14
+  43 000a 1370     		strb	r3, [r2]
   55:Generated_Source\PSoC5/I2CS.c ****     I2CS_ADDR_REG = I2CS_DEFAULT_ADDR;
-  45              		.loc 1 55 0
-  46 000e 0825     		movs	r5, #8
-  47 0010 0233     		adds	r3, r3, #2
-  48 0012 1D70     		strb	r5, [r3]
+  44              		.loc 1 55 0
+  45 000c 0825     		movs	r5, #8
+  46 000e 114B     		ldr	r3, .L3+4
+  47 0010 1D70     		strb	r5, [r3]
   56:Generated_Source\PSoC5/I2CS.c ****     I2CS_CLKDIV1_REG = LO8(I2CS_DEFAULT_DIVIDE_FACTOR);
-  49              		.loc 1 56 0
-  50 0014 0322     		movs	r2, #3
-  51 0016 1133     		adds	r3, r3, #17
-  52 0018 1A70     		strb	r2, [r3]
+  48              		.loc 1 56 0
+  49 0012 0322     		movs	r2, #3
+  50 0014 1133     		adds	r3, r3, #17
+  51 0016 1A70     		strb	r2, [r3]
   57:Generated_Source\PSoC5/I2CS.c ****     I2CS_CLKDIV2_REG = HI8(I2CS_DEFAULT_DIVIDE_FACTOR);
-  53              		.loc 1 57 0
-  54 001a 0024     		movs	r4, #0
-  55 001c 0133     		adds	r3, r3, #1
-  56 001e 1C70     		strb	r4, [r3]
+  52              		.loc 1 57 0
+  53 0018 0024     		movs	r4, #0
+  54 001a 0133     		adds	r3, r3, #1
+  55 001c 1C70     		strb	r4, [r3]
   58:Generated_Source\PSoC5/I2CS.c **** 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 3
-
-
   59:Generated_Source\PSoC5/I2CS.c **** #else
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 3
+
+
   60:Generated_Source\PSoC5/I2CS.c ****     uint8 intState;
   61:Generated_Source\PSoC5/I2CS.c **** 
   62:Generated_Source\PSoC5/I2CS.c ****     /* Configure control and interrupt sources */
@@ -151,61 +150,62 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
   86:Generated_Source\PSoC5/I2CS.c **** 
   87:Generated_Source\PSoC5/I2CS.c ****     /* Configure internal interrupt */
   88:Generated_Source\PSoC5/I2CS.c ****     CyIntDisable    (I2CS_ISR_NUMBER);
-  57              		.loc 1 88 0
-  58 0020 4FF40042 		mov	r2, #32768
-  59 0024 0C4B     		ldr	r3, .L3+4
-  60 0026 1A60     		str	r2, [r3]
+  56              		.loc 1 88 0
+  57 001e 4FF40042 		mov	r2, #32768
+  58 0022 0D4B     		ldr	r3, .L3+8
+  59 0024 1A60     		str	r2, [r3]
   89:Generated_Source\PSoC5/I2CS.c ****     CyIntSetPriority(I2CS_ISR_NUMBER, I2CS_ISR_PRIORITY);
-  61              		.loc 1 89 0
-  62 0028 0F20     		movs	r0, #15
-  63 002a 0721     		movs	r1, #7
-  64 002c FFF7FEFF 		bl	CyIntSetPriority
-  65              	.LVL0:
+  60              		.loc 1 89 0
+  61 0026 0F20     		movs	r0, #15
+  62 0028 0721     		movs	r1, #7
+  63 002a FFF7FEFF 		bl	CyIntSetPriority
+  64              	.LVL0:
   90:Generated_Source\PSoC5/I2CS.c ****     #if (I2CS_INTERN_I2C_INTR_HANDLER)
   91:Generated_Source\PSoC5/I2CS.c ****         (void) CyIntSetVector(I2CS_ISR_NUMBER, &I2CS_ISR);
-  66              		.loc 1 91 0
-  67 0030 0F20     		movs	r0, #15
-  68 0032 0A49     		ldr	r1, .L3+8
-  69 0034 FFF7FEFF 		bl	CyIntSetVector
-  70              	.LVL1:
+  65              		.loc 1 91 0
+  66 002e 0F20     		movs	r0, #15
+  67 0030 0A49     		ldr	r1, .L3+12
+  68 0032 FFF7FEFF 		bl	CyIntSetVector
+  69              	.LVL1:
   92:Generated_Source\PSoC5/I2CS.c ****     #endif /* (I2CS_INTERN_I2C_INTR_HANDLER) */
   93:Generated_Source\PSoC5/I2CS.c **** 
   94:Generated_Source\PSoC5/I2CS.c ****     /* Set FSM to default state */
   95:Generated_Source\PSoC5/I2CS.c ****     I2CS_state = I2CS_SM_IDLE;
-  71              		.loc 1 95 0
-  72 0038 1022     		movs	r2, #16
-  73 003a 094B     		ldr	r3, .L3+12
-  74 003c 1A70     		strb	r2, [r3]
+  70              		.loc 1 95 0
+  71 0036 1022     		movs	r2, #16
+  72 0038 094B     		ldr	r3, .L3+16
+  73 003a 1A70     		strb	r2, [r3]
   96:Generated_Source\PSoC5/I2CS.c **** 
   97:Generated_Source\PSoC5/I2CS.c **** #if (I2CS_MODE_SLAVE_ENABLED)
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 4
-
-
   98:Generated_Source\PSoC5/I2CS.c ****     /* Clear status and buffers index */
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 4
+
+
   99:Generated_Source\PSoC5/I2CS.c ****     I2CS_slStatus = 0u;
-  75              		.loc 1 99 0
-  76 003e 094B     		ldr	r3, .L3+16
-  77 0040 1C70     		strb	r4, [r3]
+  74              		.loc 1 99 0
+  75 003c 094B     		ldr	r3, .L3+20
+  76 003e 1C70     		strb	r4, [r3]
  100:Generated_Source\PSoC5/I2CS.c ****     I2CS_slRdBufIndex = 0u;
-  78              		.loc 1 100 0
-  79 0042 094B     		ldr	r3, .L3+20
-  80 0044 1C70     		strb	r4, [r3]
+  77              		.loc 1 100 0
+  78 0040 094B     		ldr	r3, .L3+24
+  79 0042 1C70     		strb	r4, [r3]
  101:Generated_Source\PSoC5/I2CS.c ****     I2CS_slWrBufIndex = 0u;
-  81              		.loc 1 101 0
-  82 0046 094B     		ldr	r3, .L3+24
-  83 0048 1C70     		strb	r4, [r3]
+  80              		.loc 1 101 0
+  81 0044 094B     		ldr	r3, .L3+28
+  82 0046 1C70     		strb	r4, [r3]
  102:Generated_Source\PSoC5/I2CS.c **** 
  103:Generated_Source\PSoC5/I2CS.c ****     /* Configure matched address */
  104:Generated_Source\PSoC5/I2CS.c ****     I2CS_SlaveSetAddress(I2CS_DEFAULT_ADDR);
-  84              		.loc 1 104 0
-  85 004a 2846     		mov	r0, r5
-  86 004c FFF7FEFF 		bl	I2CS_SlaveSetAddress
-  87              	.LVL2:
-  88 0050 38BD     		pop	{r3, r4, r5, pc}
-  89              	.L4:
-  90 0052 00BF     		.align	2
-  91              	.L3:
-  92 0054 D6490040 		.word	1073760726
+  83              		.loc 1 104 0
+  84 0048 2846     		mov	r0, r5
+  85 004a FFF7FEFF 		bl	I2CS_SlaveSetAddress
+  86              	.LVL2:
+  87 004e 38BD     		pop	{r3, r4, r5, pc}
+  88              	.L4:
+  89              		.align	2
+  90              	.L3:
+  91 0050 D6490040 		.word	1073760726
+  92 0054 CA490040 		.word	1073760714
   93 0058 80E100E0 		.word	-536813184
   94 005c 00000000 		.word	I2CS_ISR
   95 0060 00000000 		.word	I2CS_state
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  117:Generated_Source\PSoC5/I2CS.c **** * Function Name: I2CS_Enable
  118:Generated_Source\PSoC5/I2CS.c **** ********************************************************************************
  119:Generated_Source\PSoC5/I2CS.c **** *
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 5
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 5
 
 
  120:Generated_Source\PSoC5/I2CS.c **** * Summary:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  141              		.size	I2CS_Enable, .-I2CS_Enable
  142              		.section	.text.I2CS_Start,"ax",%progbits
  143              		.align	2
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 6
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 6
 
 
  144              		.global	I2CS_Start
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  150              		.loc 1 190 0
  151              		.cfi_startproc
  152              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 7
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 7
 
 
  153              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  204:Generated_Source\PSoC5/I2CS.c **** ********************************************************************************
  205:Generated_Source\PSoC5/I2CS.c **** *
  206:Generated_Source\PSoC5/I2CS.c **** * Summary:
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 8
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 8
 
 
  207:Generated_Source\PSoC5/I2CS.c **** *  Disables I2C hardware and disables I2C interrupt. Disables Active mode power
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  233:Generated_Source\PSoC5/I2CS.c ****         I2CS_backup.clkDiv2 = I2CS_CLKDIV2_REG;
  222              		.loc 1 233 0
  223 0020 214E     		ldr	r6, .L16+12
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 9
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 9
 
 
  224 0022 3378     		ldrb	r3, [r6]	@ zero_extendqisi2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  251:Generated_Source\PSoC5/I2CS.c **** 
  252:Generated_Source\PSoC5/I2CS.c ****         /* Restore registers effected by block disable. Ticket ID#198004 */
  253:Generated_Source\PSoC5/I2CS.c ****         I2CS_ADDR_REG    = I2CS_backup.addr;
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 10
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 10
 
 
  261              		.loc 1 253 0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  284:Generated_Source\PSoC5/I2CS.c **** #if (I2CS_MODE_SLAVE_ENABLED)
  285:Generated_Source\PSoC5/I2CS.c ****     I2CS_slStatus &= (uint8) ~(I2CS_SSTAT_RD_BUSY | I2CS_SSTAT_WR_BUSY);
  285              		.loc 1 285 0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 11
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 11
 
 
  286 008c 0B4A     		ldr	r2, .L16+32
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  340 002d 01       		.byte	0x1
  341 002e 08       		.byte	0x8
  342 002f 8B000000 		.4byte	.LASF1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 12
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 12
 
 
  343 0033 02       		.uleb128 0x2
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  397 0099 01010000 		.4byte	.LASF13
  398 009d 02       		.uleb128 0x2
  399 009e 01       		.byte	0x1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 13
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 13
 
 
  400 009f 08       		.byte	0x8
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  454 0111 03       		.byte	0x3
  455 0112 7D       		.byte	0x7d
  456 0113 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 14
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 14
 
 
  457 0117 03       		.byte	0x3
@@ -810,7 +810,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  483 014c 9C       		.byte	0x9c
  484 014d 8D010000 		.4byte	0x18d
  485 0151 0D       		.uleb128 0xd
- 486 0152 30000000 		.4byte	.LVL0
+ 486 0152 2E000000 		.4byte	.LVL0
  487 0156 93020000 		.4byte	0x293
  488 015a 69010000 		.4byte	0x169
  489 015e 0E       		.uleb128 0xe
@@ -825,7 +825,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  498 0167 3F       		.byte	0x3f
  499 0168 00       		.byte	0
  500 0169 0D       		.uleb128 0xd
- 501 016a 38000000 		.4byte	.LVL1
+ 501 016a 36000000 		.4byte	.LVL1
  502 016e A9020000 		.4byte	0x2a9
  503 0172 7C010000 		.4byte	0x17c
  504 0176 0E       		.uleb128 0xe
@@ -835,10 +835,10 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  508 017a 3F       		.byte	0x3f
  509 017b 00       		.byte	0
  510 017c 0F       		.uleb128 0xf
- 511 017d 50000000 		.4byte	.LVL2
+ 511 017d 4E000000 		.4byte	.LVL2
  512 0181 C3020000 		.4byte	0x2c3
  513 0185 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 15
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 15
 
 
  514 0186 01       		.uleb128 0x1
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  568 0201 12       		.uleb128 0x12
  569 0202 0E000000 		.4byte	.LBB2
  570 0206 6A000000 		.4byte	.LBE2-.LBB2
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 16
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 16
 
 
  571 020a 10       		.uleb128 0x10
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  625 0288 14       		.uleb128 0x14
  626 0289 99000000 		.4byte	.LASF36
  627 028d 04       		.byte	0x4
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 17
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 17
 
 
  628 028e 42       		.byte	0x42
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  682 0000 01       		.uleb128 0x1
  683 0001 11       		.uleb128 0x11
  684 0002 01       		.byte	0x1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 18
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 18
 
 
  685 0003 25       		.uleb128 0x25
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  739 0039 49       		.uleb128 0x49
  740 003a 13       		.uleb128 0x13
  741 003b 00       		.byte	0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 19
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 19
 
 
  742 003c 00       		.byte	0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  796 0072 49       		.uleb128 0x49
  797 0073 13       		.uleb128 0x13
  798 0074 38       		.uleb128 0x38
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 20
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 20
 
 
  799 0075 0B       		.uleb128 0xb
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  853 00b0 00       		.byte	0
  854 00b1 02       		.uleb128 0x2
  855 00b2 18       		.uleb128 0x18
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 21
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 21
 
 
  856 00b3 9142     		.uleb128 0x2111
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  910 00ee 0B       		.uleb128 0xb
  911 00ef 49       		.uleb128 0x49
  912 00f0 13       		.uleb128 0x13
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 22
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 22
 
 
  913 00f1 3F       		.uleb128 0x3f
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  967 0127 03       		.uleb128 0x3
  968 0128 0E       		.uleb128 0xe
  969 0129 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 23
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 23
 
 
  970 012a 0B       		.uleb128 0xb
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  1024 0004 1D000000 		.4byte	.LVL4-1
  1025 0008 0100     		.2byte	0x1
  1026 000a 50       		.byte	0x50
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 24
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 24
 
 
  1027 000b 00000000 		.4byte	0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  1077 0000 49324353 		.ascii	"I2CS_slStatus\000"
  1077      5F736C53 
  1077      74617475 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 25
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 25
 
 
  1077      7300
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  1101      72427566 
  1101      496E6465 
  1101      7800
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 26
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 26
 
 
  1102              	.LASF45:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  1123      74696F6E 
  1124              	.LASF29:
  1125 01b0 696E7453 		.ascii	"intState\000"
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 27
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 27
 
 
  1125      74617465 
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 1
  1148              	.LASF20:
  1149 024f 78636667 		.ascii	"xcfg\000"
  1149      00
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOKzFRM.s 			page 28
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4aXQop.s 			page 28
 
 
  1150              	.LASF33:
