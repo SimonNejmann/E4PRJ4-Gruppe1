@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 1
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccGonpkC.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 1
   29:Generated_Source\PSoC5/State_back_engine_CtrlReg_Run_PM.c **** *
   30:Generated_Source\PSoC5/State_back_engine_CtrlReg_Run_PM.c **** * Summary:
   31:Generated_Source\PSoC5/State_back_engine_CtrlReg_Run_PM.c **** *  Saves the control register value.
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 2
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccGonpkC.s 			page 2
 
 
   32:Generated_Source\PSoC5/State_back_engine_CtrlReg_Run_PM.c **** *
@@ -86,7 +86,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 1
   38              	.L3:
   39 000a 00BF     		.align	2
   40              	.L2:
-  41 000c 7F640040 		.word	1073767551
+  41 000c 7E640040 		.word	1073767550
   42 0010 00000000 		.word	.LANCHOR0
   43              		.cfi_endproc
   44              	.LFE0:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 1
   59:Generated_Source\PSoC5/State_back_engine_CtrlReg_Run_PM.c **** *
   60:Generated_Source\PSoC5/State_back_engine_CtrlReg_Run_PM.c **** *******************************************************************************/
   61:Generated_Source\PSoC5/State_back_engine_CtrlReg_Run_PM.c **** void State_back_engine_CtrlReg_Run_RestoreConfig(void) 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 3
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccGonpkC.s 			page 3
 
 
   62:Generated_Source\PSoC5/State_back_engine_CtrlReg_Run_PM.c **** {
@@ -138,7 +138,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 1
   66 000a 00BF     		.align	2
   67              	.L5:
   68 000c 00000000 		.word	.LANCHOR0
-  69 0010 7F640040 		.word	1073767551
+  69 0010 7E640040 		.word	1073767550
   70              		.cfi_endproc
   71              	.LFE1:
   72              		.size	State_back_engine_CtrlReg_Run_RestoreConfig, .-State_back_engine_CtrlReg_Run_RestoreConfig
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 1
   87              		.cfi_offset 3, -8
   88              		.cfi_offset 14, -4
   83:Generated_Source\PSoC5/State_back_engine_CtrlReg_Run_PM.c ****     State_back_engine_CtrlReg_Run_SaveConfig();
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 4
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccGonpkC.s 			page 4
 
 
   89              		.loc 1 83 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 1
  123              		.size	State_back_engine_CtrlReg_Run_backup, 1
  124              	State_back_engine_CtrlReg_Run_backup:
  125 0000 00       		.space	1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 5
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccGonpkC.s 			page 5
 
 
  126 0001 000000   		.text
@@ -252,45 +252,45 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 1
  134 0006 00000000 		.4byte	.Ldebug_abbrev0
  135 000a 04       		.byte	0x4
  136 000b 01       		.uleb128 0x1
- 137 000c B7000000 		.4byte	.LASF19
+ 137 000c A0000000 		.4byte	.LASF19
  138 0010 01       		.byte	0x1
- 139 0011 DD010000 		.4byte	.LASF20
- 140 0015 52010000 		.4byte	.LASF21
+ 139 0011 52010000 		.4byte	.LASF20
+ 140 0015 FF010000 		.4byte	.LASF21
  141 0019 00000000 		.4byte	.Ldebug_ranges0+0
  142 001d 00000000 		.4byte	0
  143 0021 00000000 		.4byte	.Ldebug_line0
  144 0025 02       		.uleb128 0x2
  145 0026 01       		.byte	0x1
  146 0027 06       		.byte	0x6
- 147 0028 B8020000 		.4byte	.LASF0
+ 147 0028 AD020000 		.4byte	.LASF0
  148 002c 02       		.uleb128 0x2
  149 002d 01       		.byte	0x1
  150 002e 08       		.byte	0x8
- 151 002f 6B000000 		.4byte	.LASF1
+ 151 002f 54000000 		.4byte	.LASF1
  152 0033 02       		.uleb128 0x2
  153 0034 02       		.byte	0x2
  154 0035 05       		.byte	0x5
- 155 0036 7A020000 		.4byte	.LASF2
+ 155 0036 EF010000 		.4byte	.LASF2
  156 003a 02       		.uleb128 0x2
  157 003b 02       		.byte	0x2
  158 003c 07       		.byte	0x7
- 159 003d 90000000 		.4byte	.LASF3
+ 159 003d 79000000 		.4byte	.LASF3
  160 0041 02       		.uleb128 0x2
  161 0042 04       		.byte	0x4
  162 0043 05       		.byte	0x5
- 163 0044 8A020000 		.4byte	.LASF4
+ 163 0044 7F020000 		.4byte	.LASF4
  164 0048 02       		.uleb128 0x2
  165 0049 04       		.byte	0x4
  166 004a 07       		.byte	0x7
- 167 004b 7E000000 		.4byte	.LASF5
+ 167 004b 67000000 		.4byte	.LASF5
  168 004f 02       		.uleb128 0x2
  169 0050 08       		.byte	0x8
  170 0051 05       		.byte	0x5
- 171 0052 17020000 		.4byte	.LASF6
+ 171 0052 8C010000 		.4byte	.LASF6
  172 0056 02       		.uleb128 0x2
  173 0057 08       		.byte	0x8
  174 0058 07       		.byte	0x7
- 175 0059 54000000 		.4byte	.LASF7
+ 175 0059 3B010000 		.4byte	.LASF7
  176 005d 03       		.uleb128 0x3
  177 005e 04       		.byte	0x4
  178 005f 05       		.byte	0x5
@@ -298,12 +298,12 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 1
  180 0064 02       		.uleb128 0x2
  181 0065 04       		.byte	0x4
  182 0066 07       		.byte	0x7
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 6
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccGonpkC.s 			page 6
 
 
- 183 0067 45010000 		.4byte	.LASF8
+ 183 0067 2E010000 		.4byte	.LASF8
  184 006b 04       		.uleb128 0x4
- 185 006c 84020000 		.4byte	.LASF12
+ 185 006c F9010000 		.4byte	.LASF12
  186 0070 02       		.byte	0x2
  187 0071 9201     		.2byte	0x192
  188 0073 2C000000 		.4byte	0x2c
@@ -314,13 +314,13 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 1
  193 007e 02       		.uleb128 0x2
  194 007f 08       		.byte	0x8
  195 0080 04       		.byte	0x4
- 196 0081 B0000000 		.4byte	.LASF10
+ 196 0081 99000000 		.4byte	.LASF10
  197 0085 02       		.uleb128 0x2
  198 0086 01       		.byte	0x1
  199 0087 08       		.byte	0x8
- 200 0088 25020000 		.4byte	.LASF11
+ 200 0088 9A010000 		.4byte	.LASF11
  201 008c 04       		.uleb128 0x4
- 202 008d 79000000 		.4byte	.LASF13
+ 202 008d 62000000 		.4byte	.LASF13
  203 0091 02       		.byte	0x2
  204 0092 3C02     		.2byte	0x23c
  205 0094 98000000 		.4byte	0x98
@@ -332,14 +332,14 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 1
  211 00a0 1C       		.byte	0x1c
  212 00a1 B2000000 		.4byte	0xb2
  213 00a5 07       		.uleb128 0x7
- 214 00a6 A3000000 		.4byte	.LASF22
+ 214 00a6 8C000000 		.4byte	.LASF22
  215 00aa 03       		.byte	0x3
  216 00ab 1E       		.byte	0x1e
  217 00ac 6B000000 		.4byte	0x6b
  218 00b0 00       		.byte	0
  219 00b1 00       		.byte	0
  220 00b2 08       		.uleb128 0x8
- 221 00b3 4E020000 		.4byte	.LASF14
+ 221 00b3 C3010000 		.4byte	.LASF14
  222 00b7 03       		.byte	0x3
  223 00b8 20       		.byte	0x20
  224 00b9 9D000000 		.4byte	0x9d
@@ -352,18 +352,18 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 1
  231 00cc 01       		.uleb128 0x1
  232 00cd 9C       		.byte	0x9c
  233 00ce 09       		.uleb128 0x9
- 234 00cf C4020000 		.4byte	.LASF16
+ 234 00cf B9020000 		.4byte	.LASF16
  235 00d3 01       		.byte	0x1
  236 00d4 3D       		.byte	0x3d
  237 00d5 00000000 		.4byte	.LFB1
  238 00d9 14000000 		.4byte	.LFE1-.LFB1
  239 00dd 01       		.uleb128 0x1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 7
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccGonpkC.s 			page 7
 
 
  240 00de 9C       		.byte	0x9c
  241 00df 0A       		.uleb128 0xa
- 242 00e0 2A020000 		.4byte	.LASF17
+ 242 00e0 9F010000 		.4byte	.LASF17
  243 00e4 01       		.byte	0x1
  244 00e5 51       		.byte	0x51
  245 00e6 00000000 		.4byte	.LFB2
@@ -389,7 +389,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 1
  265 0118 CE000000 		.4byte	0xce
  266 011c 00       		.byte	0
  267 011d 0C       		.uleb128 0xc
- 268 011e 93020000 		.4byte	.LASF23
+ 268 011e 88020000 		.4byte	.LASF23
  269 0122 01       		.byte	0x1
  270 0123 17       		.byte	0x17
  271 0124 B2000000 		.4byte	0xb2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 1
  294 0010 17       		.uleb128 0x17
  295 0011 00       		.byte	0
  296 0012 00       		.byte	0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 8
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccGonpkC.s 			page 8
 
 
  297 0013 02       		.uleb128 0x2
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 1
  351 0049 00       		.byte	0
  352 004a 07       		.uleb128 0x7
  353 004b 0D       		.uleb128 0xd
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 9
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccGonpkC.s 			page 9
 
 
  354 004c 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 1
  408 0083 03       		.uleb128 0x3
  409 0084 0E       		.uleb128 0xe
  410 0085 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 10
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccGonpkC.s 			page 10
 
 
  411 0086 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 1
  465 0020 00000000 		.4byte	.LFB2
  466 0024 08000000 		.4byte	.LFE2-.LFB2
  467 0028 00000000 		.4byte	.LFB3
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 11
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccGonpkC.s 			page 11
 
 
  468 002c 08000000 		.4byte	.LFE3-.LFB3
@@ -638,135 +638,135 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 1
  490              	.LASF9:
  491 004e 666C6F61 		.ascii	"float\000"
  491      7400
- 492              	.LASF7:
- 493 0054 6C6F6E67 		.ascii	"long long unsigned int\000"
- 493      206C6F6E 
- 493      6720756E 
- 493      7369676E 
- 493      65642069 
- 494              	.LASF1:
- 495 006b 756E7369 		.ascii	"unsigned char\000"
- 495      676E6564 
- 495      20636861 
- 495      7200
- 496              	.LASF13:
- 497 0079 72656738 		.ascii	"reg8\000"
- 497      00
- 498              	.LASF5:
- 499 007e 6C6F6E67 		.ascii	"long unsigned int\000"
- 499      20756E73 
- 499      69676E65 
- 499      6420696E 
- 499      7400
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 12
+ 492              	.LASF1:
+ 493 0054 756E7369 		.ascii	"unsigned char\000"
+ 493      676E6564 
+ 493      20636861 
+ 493      7200
+ 494              	.LASF13:
+ 495 0062 72656738 		.ascii	"reg8\000"
+ 495      00
+ 496              	.LASF5:
+ 497 0067 6C6F6E67 		.ascii	"long unsigned int\000"
+ 497      20756E73 
+ 497      69676E65 
+ 497      6420696E 
+ 497      7400
+ 498              	.LASF3:
+ 499 0079 73686F72 		.ascii	"short unsigned int\000"
+ 499      7420756E 
+ 499      7369676E 
+ 499      65642069 
+ 499      6E7400
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccGonpkC.s 			page 12
 
 
- 500              	.LASF3:
- 501 0090 73686F72 		.ascii	"short unsigned int\000"
- 501      7420756E 
- 501      7369676E 
- 501      65642069 
- 501      6E7400
- 502              	.LASF22:
- 503 00a3 636F6E74 		.ascii	"controlState\000"
- 503      726F6C53 
- 503      74617465 
- 503      00
- 504              	.LASF10:
- 505 00b0 646F7562 		.ascii	"double\000"
- 505      6C6500
- 506              	.LASF19:
- 507 00b7 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 507      4320342E 
- 507      392E3320 
- 507      32303135 
- 507      30333033 
- 508 00ea 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 508      20726576 
- 508      6973696F 
- 508      6E203232 
- 508      31323230 
- 509 011d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 509      66756E63 
- 509      74696F6E 
- 509      2D736563 
- 509      74696F6E 
- 510              	.LASF8:
- 511 0145 756E7369 		.ascii	"unsigned int\000"
- 511      676E6564 
- 511      20696E74 
- 511      00
- 512              	.LASF21:
- 513 0152 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\Projekt 4. semester\\E4"
- 513      73657273 
- 513      5C416E64 
- 513      6572735C 
- 513      4465736B 
- 514 0180 50524A34 		.ascii	"PRJ4-Gruppe1\\Retnings og fremdrifts enhed version "
- 514      2D477275 
- 514      70706531 
- 514      5C526574 
- 514      6E696E67 
- 515 01b2 70736F63 		.ascii	"psoc 5\\Retning_psoc_5\\I2C_Slave_prog.cydsn\000"
- 515      20355C52 
- 515      65746E69 
- 515      6E675F70 
- 515      736F635F 
- 516              	.LASF20:
- 517 01dd 47656E65 		.ascii	"Generated_Source\\PSoC5\\State_back_engine_CtrlReg_"
- 517      72617465 
- 517      645F536F 
- 517      75726365 
- 517      5C50536F 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccb3tqwc.s 			page 13
-
-
- 518 020e 52756E5F 		.ascii	"Run_PM.c\000"
- 518      504D2E63 
+ 500              	.LASF22:
+ 501 008c 636F6E74 		.ascii	"controlState\000"
+ 501      726F6C53 
+ 501      74617465 
+ 501      00
+ 502              	.LASF10:
+ 503 0099 646F7562 		.ascii	"double\000"
+ 503      6C6500
+ 504              	.LASF19:
+ 505 00a0 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 505      4320342E 
+ 505      392E3320 
+ 505      32303135 
+ 505      30333033 
+ 506 00d3 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 506      20726576 
+ 506      6973696F 
+ 506      6E203232 
+ 506      31323230 
+ 507 0106 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 507      66756E63 
+ 507      74696F6E 
+ 507      2D736563 
+ 507      74696F6E 
+ 508              	.LASF8:
+ 509 012e 756E7369 		.ascii	"unsigned int\000"
+ 509      676E6564 
+ 509      20696E74 
+ 509      00
+ 510              	.LASF7:
+ 511 013b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 511      206C6F6E 
+ 511      6720756E 
+ 511      7369676E 
+ 511      65642069 
+ 512              	.LASF20:
+ 513 0152 47656E65 		.ascii	"Generated_Source\\PSoC5\\State_back_engine_CtrlReg_"
+ 513      72617465 
+ 513      645F536F 
+ 513      75726365 
+ 513      5C50536F 
+ 514 0183 52756E5F 		.ascii	"Run_PM.c\000"
+ 514      504D2E63 
+ 514      00
+ 515              	.LASF6:
+ 516 018c 6C6F6E67 		.ascii	"long long int\000"
+ 516      206C6F6E 
+ 516      6720696E 
+ 516      7400
+ 517              	.LASF11:
+ 518 019a 63686172 		.ascii	"char\000"
  518      00
- 519              	.LASF6:
- 520 0217 6C6F6E67 		.ascii	"long long int\000"
- 520      206C6F6E 
- 520      6720696E 
- 520      7400
- 521              	.LASF11:
- 522 0225 63686172 		.ascii	"char\000"
- 522      00
- 523              	.LASF17:
- 524 022a 53746174 		.ascii	"State_back_engine_CtrlReg_Run_Sleep\000"
- 524      655F6261 
- 524      636B5F65 
- 524      6E67696E 
- 524      655F4374 
- 525              	.LASF14:
- 526 024e 53746174 		.ascii	"State_back_engine_CtrlReg_Run_BACKUP_STRUCT\000"
- 526      655F6261 
- 526      636B5F65 
- 526      6E67696E 
- 526      655F4374 
- 527              	.LASF2:
- 528 027a 73686F72 		.ascii	"short int\000"
- 528      7420696E 
- 528      7400
- 529              	.LASF12:
- 530 0284 75696E74 		.ascii	"uint8\000"
- 530      3800
+ 519              	.LASF17:
+ 520 019f 53746174 		.ascii	"State_back_engine_CtrlReg_Run_Sleep\000"
+ 520      655F6261 
+ 520      636B5F65 
+ 520      6E67696E 
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccGonpkC.s 			page 13
+
+
+ 520      655F4374 
+ 521              	.LASF14:
+ 522 01c3 53746174 		.ascii	"State_back_engine_CtrlReg_Run_BACKUP_STRUCT\000"
+ 522      655F6261 
+ 522      636B5F65 
+ 522      6E67696E 
+ 522      655F4374 
+ 523              	.LASF2:
+ 524 01ef 73686F72 		.ascii	"short int\000"
+ 524      7420696E 
+ 524      7400
+ 525              	.LASF12:
+ 526 01f9 75696E74 		.ascii	"uint8\000"
+ 526      3800
+ 527              	.LASF21:
+ 528 01ff 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\HellYaeh\\E4PRJ4-Gruppe"
+ 528      73657273 
+ 528      5C416E64 
+ 528      6572735C 
+ 528      4465736B 
+ 529 022d 315C5265 		.ascii	"1\\Retnings og fremdrifts enhed version psoc 5\\Ret"
+ 529      746E696E 
+ 529      6773206F 
+ 529      67206672 
+ 529      656D6472 
+ 530 025e 6E696E67 		.ascii	"ning_psoc_5\\I2C_Slave_prog.cydsn\000"
+ 530      5F70736F 
+ 530      635F355C 
+ 530      4932435F 
+ 530      536C6176 
  531              	.LASF4:
- 532 028a 6C6F6E67 		.ascii	"long int\000"
+ 532 027f 6C6F6E67 		.ascii	"long int\000"
  532      20696E74 
  532      00
  533              	.LASF23:
- 534 0293 53746174 		.ascii	"State_back_engine_CtrlReg_Run_backup\000"
+ 534 0288 53746174 		.ascii	"State_back_engine_CtrlReg_Run_backup\000"
  534      655F6261 
  534      636B5F65 
  534      6E67696E 
  534      655F4374 
  535              	.LASF0:
- 536 02b8 7369676E 		.ascii	"signed char\000"
+ 536 02ad 7369676E 		.ascii	"signed char\000"
  536      65642063 
  536      68617200 
  537              	.LASF16:
- 538 02c4 53746174 		.ascii	"State_back_engine_CtrlReg_Run_RestoreConfig\000"
+ 538 02b9 53746174 		.ascii	"State_back_engine_CtrlReg_Run_RestoreConfig\000"
  538      655F6261 
  538      636B5F65 
  538      6E67696E 

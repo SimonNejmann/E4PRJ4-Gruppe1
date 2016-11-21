@@ -56,6 +56,7 @@
 #include "B_back.h"
 #include "A_back_aliases.h"
 #include "A_back.h"
+#include "Clock_2.h"
 #include "core_cm3_psoc5.h"
 #include "CyDmac.h"
 #include "CyFlash.h"

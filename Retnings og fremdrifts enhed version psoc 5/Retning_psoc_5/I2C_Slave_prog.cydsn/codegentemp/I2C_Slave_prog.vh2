@@ -2,7 +2,7 @@
 --	Conversion of I2C_Slave_prog.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sat Nov 19 21:35:37 2016
+--	Mon Nov 21 16:47:16 2016
 --
 
 USE cypress.cypress.all;
@@ -43,7 +43,7 @@ SIGNAL \State_front_engine:Forw\ : bit;
 SIGNAL \State_front_engine:Pos_select_2\ : bit;
 SIGNAL \State_front_engine:Backw\ : bit;
 SIGNAL zero : bit;
-SIGNAL Net_1 : bit;
+SIGNAL Net_1371 : bit;
 SIGNAL \State_front_engine:Forward:ce0\ : bit;
 ATTRIBUTE port_state_att of \State_front_engine:Forward:ce0\:SIGNAL IS 2;
 SIGNAL \State_front_engine:Forward:cl0\ : bit;
@@ -486,6 +486,7 @@ SIGNAL \State_back_engine:CtrlReg_Dir:control_1\ : bit;
 SIGNAL \State_back_engine:CtrlReg_Dir:control_0\ : bit;
 SIGNAL \PWM_front_engine:PWMUDB:km_run\ : bit;
 SIGNAL \PWM_front_engine:PWMUDB:min_kill_reg\ : bit;
+SIGNAL Net_1 : bit;
 SIGNAL \PWM_front_engine:PWMUDB:ClockOutFromEnBlock\ : bit;
 SIGNAL \PWM_front_engine:PWMUDB:control_7\ : bit;
 SIGNAL \PWM_front_engine:PWMUDB:control_6\ : bit;
@@ -1333,7 +1334,7 @@ tmpOE__SDA_1_net_0 <=  ('1') ;
 		f1_bus_sync=>'1',
 		f1_blk_sync=>'1')
 	PORT MAP(reset=>zero,
-		clk=>Net_1,
+		clk=>Net_1371,
 		cs_addr=>(zero, \State_front_engine:Forward_select_1\, \State_front_engine:Forward_select_0\),
 		route_si=>zero,
 		route_ci=>zero,
@@ -1419,7 +1420,7 @@ tmpOE__SDA_1_net_0 <=  ('1') ;
 		f1_bus_sync=>'1',
 		f1_blk_sync=>'1')
 	PORT MAP(reset=>zero,
-		clk=>Net_1,
+		clk=>Net_1371,
 		cs_addr=>(\State_front_engine:Pos_select_2\, \State_front_engine:Pos_select_1\, \State_front_engine:Forward_select_0\),
 		route_si=>zero,
 		route_ci=>zero,
@@ -1489,7 +1490,7 @@ tmpOE__SDA_1_net_0 <=  ('1') ;
 		cy_ctrl_mode_0=>"00000001",
 		cy_ext_reset=>'1')
 	PORT MAP(reset=>zero,
-		clock=>Net_1,
+		clock=>Net_1371,
 		control=>(\State_front_engine:CtrlReg_Run:control_7\, \State_front_engine:CtrlReg_Run:control_6\, \State_front_engine:CtrlReg_Run:control_5\, \State_front_engine:CtrlReg_Run:control_4\,
 			\State_front_engine:CtrlReg_Run:control_3\, \State_front_engine:CtrlReg_Run:control_2\, \State_front_engine:CtrlReg_Run:control_1\, \State_front_engine:Forward_select_0\));
 \State_front_engine:CtrlReg_Dir:Sync:ctrl_reg\:cy_psoc3_control
@@ -1499,7 +1500,7 @@ tmpOE__SDA_1_net_0 <=  ('1') ;
 		cy_ctrl_mode_0=>"00000011",
 		cy_ext_reset=>'1')
 	PORT MAP(reset=>zero,
-		clock=>Net_1,
+		clock=>Net_1371,
 		control=>(\State_front_engine:CtrlReg_Dir:control_7\, \State_front_engine:CtrlReg_Dir:control_6\, \State_front_engine:CtrlReg_Dir:control_5\, \State_front_engine:CtrlReg_Dir:control_4\,
 			\State_front_engine:CtrlReg_Dir:control_3\, \State_front_engine:CtrlReg_Dir:control_2\, \State_front_engine:Pos_select_2\, \State_front_engine:Pos_select_1\));
 Clock_1:cy_clock_v1_0
@@ -1510,7 +1511,7 @@ Clock_1:cy_clock_v1_0
 		period=>"5000000000000",
 		is_direct=>'0',
 		is_digital=>'1')
-	PORT MAP(clock_out=>Net_1,
+	PORT MAP(clock_out=>Net_1371,
 		dig_domain_out=>open);
 SDA_1:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"22863ebe-a37b-476f-b252-6e49a8c00b12",
@@ -1988,7 +1989,7 @@ D_front:cy_psoc3_pins_v1_10
 		f1_bus_sync=>'1',
 		f1_blk_sync=>'1')
 	PORT MAP(reset=>zero,
-		clk=>Net_1,
+		clk=>Net_1371,
 		cs_addr=>(zero, \State_back_engine:Forward_select_1\, \State_back_engine:Forward_select_0\),
 		route_si=>zero,
 		route_ci=>zero,
@@ -2074,7 +2075,7 @@ D_front:cy_psoc3_pins_v1_10
 		f1_bus_sync=>'1',
 		f1_blk_sync=>'1')
 	PORT MAP(reset=>zero,
-		clk=>Net_1,
+		clk=>Net_1371,
 		cs_addr=>(\State_back_engine:Pos_select_2\, \State_back_engine:Pos_select_1\, \State_back_engine:Forward_select_0\),
 		route_si=>zero,
 		route_ci=>zero,
@@ -2144,7 +2145,7 @@ D_front:cy_psoc3_pins_v1_10
 		cy_ctrl_mode_0=>"00000001",
 		cy_ext_reset=>'1')
 	PORT MAP(reset=>zero,
-		clock=>Net_1,
+		clock=>Net_1371,
 		control=>(\State_back_engine:CtrlReg_Run:control_7\, \State_back_engine:CtrlReg_Run:control_6\, \State_back_engine:CtrlReg_Run:control_5\, \State_back_engine:CtrlReg_Run:control_4\,
 			\State_back_engine:CtrlReg_Run:control_3\, \State_back_engine:CtrlReg_Run:control_2\, \State_back_engine:CtrlReg_Run:control_1\, \State_back_engine:Forward_select_0\));
 \State_back_engine:CtrlReg_Dir:Sync:ctrl_reg\:cy_psoc3_control
@@ -2154,7 +2155,7 @@ D_front:cy_psoc3_pins_v1_10
 		cy_ctrl_mode_0=>"00000011",
 		cy_ext_reset=>'1')
 	PORT MAP(reset=>zero,
-		clock=>Net_1,
+		clock=>Net_1371,
 		control=>(\State_back_engine:CtrlReg_Dir:control_7\, \State_back_engine:CtrlReg_Dir:control_6\, \State_back_engine:CtrlReg_Dir:control_5\, \State_back_engine:CtrlReg_Dir:control_4\,
 			\State_back_engine:CtrlReg_Dir:control_3\, \State_back_engine:CtrlReg_Dir:control_2\, \State_back_engine:Pos_select_2\, \State_back_engine:Pos_select_1\));
 \PWM_front_engine:PWMUDB:clock_enable_block\:cy_psoc3_udb_clock_enable_v1_0
@@ -2409,7 +2410,7 @@ Pwm_front:cy_psoc3_pins_v1_10
 		interrupt=>tmpINTERRUPT_0__Pwm_front_net_0);
 \PWM_back_engine:PWMUDB:clock_enable_block\:cy_psoc3_udb_clock_enable_v1_0
 	GENERIC MAP(sync_mode=>'1')
-	PORT MAP(clock_in=>Net_1,
+	PORT MAP(clock_in=>Net_1371,
 		enable=>tmpOE__SDA_1_net_0,
 		clock_out=>\PWM_back_engine:PWMUDB:ClockOutFromEnBlock\);
 \PWM_back_engine:PWMUDB:genblk1:ctrlreg\:cy_psoc3_control
@@ -2806,53 +2807,63 @@ A_back:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__SDA_1_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__A_back_net_0);
+Clock_2:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"e1417622-587c-4b93-9be0-248c93b14fcb",
+		source_clock_id=>"",
+		divisor=>0,
+		period=>"100000000000000",
+		is_direct=>'0',
+		is_digital=>'1')
+	PORT MAP(clock_out=>Net_1,
+		dig_domain_out=>open);
 \State_front_engine:Out_A\:cy_dff
 	PORT MAP(d=>\State_front_engine:Out_A\\D\,
-		clk=>Net_1,
+		clk=>Net_1371,
 		q=>Net_2);
 \State_front_engine:Out_B\:cy_dff
 	PORT MAP(d=>\State_front_engine:Out_B\\D\,
-		clk=>Net_1,
+		clk=>Net_1371,
 		q=>Net_3);
 \State_front_engine:Out_C\:cy_dff
 	PORT MAP(d=>\State_front_engine:Out_C\\D\,
-		clk=>Net_1,
+		clk=>Net_1371,
 		q=>Net_4);
 \State_front_engine:Out_D\:cy_dff
 	PORT MAP(d=>\State_front_engine:Out_D\\D\,
-		clk=>Net_1,
+		clk=>Net_1371,
 		q=>Net_5);
 \State_front_engine:StateMachine_2_1\:cy_dff
 	PORT MAP(d=>\State_front_engine:StateMachine_2_1\\D\,
-		clk=>Net_1,
+		clk=>Net_1371,
 		q=>\State_front_engine:StateMachine_2_1\);
 \State_front_engine:StateMachine_2_0\:cy_dff
 	PORT MAP(d=>\State_front_engine:StateMachine_2_0\\D\,
-		clk=>Net_1,
+		clk=>Net_1371,
 		q=>\State_front_engine:StateMachine_2_0\);
 \State_back_engine:Out_A\:cy_dff
 	PORT MAP(d=>\State_back_engine:Out_A\\D\,
-		clk=>Net_1,
+		clk=>Net_1371,
 		q=>Net_34);
 \State_back_engine:Out_B\:cy_dff
 	PORT MAP(d=>\State_back_engine:Out_B\\D\,
-		clk=>Net_1,
+		clk=>Net_1371,
 		q=>Net_35);
 \State_back_engine:Out_C\:cy_dff
 	PORT MAP(d=>\State_back_engine:Out_C\\D\,
-		clk=>Net_1,
+		clk=>Net_1371,
 		q=>Net_36);
 \State_back_engine:Out_D\:cy_dff
 	PORT MAP(d=>\State_back_engine:Out_D\\D\,
-		clk=>Net_1,
+		clk=>Net_1371,
 		q=>Net_37);
 \State_back_engine:StateMachine_2_1\:cy_dff
 	PORT MAP(d=>\State_back_engine:StateMachine_2_1\\D\,
-		clk=>Net_1,
+		clk=>Net_1371,
 		q=>\State_back_engine:StateMachine_2_1\);
 \State_back_engine:StateMachine_2_0\:cy_dff
 	PORT MAP(d=>\State_back_engine:StateMachine_2_0\\D\,
-		clk=>Net_1,
+		clk=>Net_1371,
 		q=>\State_back_engine:StateMachine_2_0\);
 \PWM_front_engine:PWMUDB:min_kill_reg\:cy_dsrff
 	PORT MAP(d=>tmpOE__SDA_1_net_0,

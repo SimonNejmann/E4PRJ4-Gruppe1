@@ -227,8 +227,8 @@ void PWM_front_engine_RestoreConfig(void) ;
 *         Initialization Values
 **************************************/
 #define PWM_front_engine_INIT_PERIOD_VALUE          (255u)
-#define PWM_front_engine_INIT_COMPARE_VALUE1        (127u)
-#define PWM_front_engine_INIT_COMPARE_VALUE2        (63u)
+#define PWM_front_engine_INIT_COMPARE_VALUE1        (255u)
+#define PWM_front_engine_INIT_COMPARE_VALUE2        (128u)
 #define PWM_front_engine_INIT_INTERRUPTS_MODE       (uint8)(((uint8)(0u <<   \
                                                     PWM_front_engine_STATUS_TC_INT_EN_MASK_SHIFT)) | \
                                                     (uint8)((uint8)(0u <<  \
