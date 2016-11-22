@@ -2,7 +2,7 @@
 --	Conversion of I2C_Slave_prog.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Nov 21 16:47:16 2016
+--	Tue Nov 22 16:39:31 2016
 --
 
 USE cypress.cypress.all;
@@ -27,7 +27,7 @@ SIGNAL \State_front_engine:Forward_f1_load\ : bit;
 SIGNAL \State_front_engine:Forward_route_si\ : bit;
 SIGNAL \State_front_engine:Forward_route_ci\ : bit;
 SIGNAL \State_front_engine:Forward_select_0\ : bit;
-SIGNAL \State_front_engine:Run_cnt\ : bit;
+SIGNAL \State_front_engine:Run\ : bit;
 SIGNAL \State_front_engine:Forward_select_1\ : bit;
 SIGNAL \State_front_engine:zero\ : bit;
 SIGNAL \State_front_engine:Forward_select_2\ : bit;
@@ -38,12 +38,15 @@ SIGNAL \State_front_engine:Pos_f1_load\ : bit;
 SIGNAL \State_front_engine:Pos_route_si\ : bit;
 SIGNAL \State_front_engine:Pos_route_ci\ : bit;
 SIGNAL \State_front_engine:Pos_select_0\ : bit;
+SIGNAL \State_front_engine:Run_cnt\ : bit;
 SIGNAL \State_front_engine:Pos_select_1\ : bit;
 SIGNAL \State_front_engine:Forw\ : bit;
 SIGNAL \State_front_engine:Pos_select_2\ : bit;
 SIGNAL \State_front_engine:Backw\ : bit;
-SIGNAL zero : bit;
 SIGNAL Net_1371 : bit;
+SIGNAL Net_1386 : bit;
+SIGNAL Net_1387 : bit;
+SIGNAL zero : bit;
 SIGNAL \State_front_engine:Forward:ce0\ : bit;
 ATTRIBUTE port_state_att of \State_front_engine:Forward:ce0\:SIGNAL IS 2;
 SIGNAL \State_front_engine:Forward:cl0\ : bit;
@@ -277,216 +280,14 @@ SIGNAL tmpFB_0__D_front_net_0 : bit;
 SIGNAL tmpIO_0__D_front_net_0 : bit;
 TERMINAL tmpSIOVREF__D_front_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__D_front_net_0 : bit;
-SIGNAL Net_34 : bit;
-SIGNAL \State_back_engine:Out_A\ : bit;
-SIGNAL Net_35 : bit;
-SIGNAL \State_back_engine:Out_B\ : bit;
-SIGNAL Net_36 : bit;
-SIGNAL \State_back_engine:Out_C\ : bit;
-SIGNAL Net_37 : bit;
-SIGNAL \State_back_engine:Out_D\ : bit;
-SIGNAL \State_back_engine:Forward_d0_load\ : bit;
-SIGNAL \State_back_engine:Forward_d1_load\ : bit;
-SIGNAL \State_back_engine:Forward_f0_load\ : bit;
-SIGNAL \State_back_engine:Forward_f1_load\ : bit;
-SIGNAL \State_back_engine:Forward_route_si\ : bit;
-SIGNAL \State_back_engine:Forward_route_ci\ : bit;
-SIGNAL \State_back_engine:Forward_select_0\ : bit;
-SIGNAL \State_back_engine:Run_cnt\ : bit;
-SIGNAL \State_back_engine:Forward_select_1\ : bit;
-SIGNAL \State_back_engine:zero\ : bit;
-SIGNAL \State_back_engine:Forward_select_2\ : bit;
-SIGNAL \State_back_engine:Pos_d0_load\ : bit;
-SIGNAL \State_back_engine:Pos_d1_load\ : bit;
-SIGNAL \State_back_engine:Pos_f0_load\ : bit;
-SIGNAL \State_back_engine:Pos_f1_load\ : bit;
-SIGNAL \State_back_engine:Pos_route_si\ : bit;
-SIGNAL \State_back_engine:Pos_route_ci\ : bit;
-SIGNAL \State_back_engine:Pos_select_0\ : bit;
-SIGNAL \State_back_engine:Pos_select_1\ : bit;
-SIGNAL \State_back_engine:Forw\ : bit;
-SIGNAL \State_back_engine:Pos_select_2\ : bit;
-SIGNAL \State_back_engine:Backw\ : bit;
-SIGNAL \State_back_engine:Forward:ce0\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:ce0\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:cl0\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:cl0\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:ff0\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:ff0\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:ce1\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:ce1\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:cl1\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:cl1\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:z1\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:z1\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:ff1\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:ff1\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:ov_msb\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:ov_msb\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:co_msb\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:co_msb\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:cmsb\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:cmsb\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:so\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:so\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:f0_bus_stat\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:f0_bus_stat\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:f0_blk_stat\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:f0_blk_stat\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:f1_bus_stat\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:f1_bus_stat\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:f1_blk_stat\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:f1_blk_stat\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:ce0_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:ce0_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:cl0_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:cl0_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:z0_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:z0_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:ff0_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:ff0_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:ce1_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:ce1_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:cl1_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:cl1_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:z1_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:z1_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:ff1_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:ff1_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:ov_msb_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:ov_msb_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:co_msb_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:co_msb_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:cmsb_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:cmsb_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:so_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:so_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:f0_bus_stat_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:f0_bus_stat_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:f0_blk_stat_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:f0_blk_stat_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:f1_bus_stat_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:f1_bus_stat_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Forward:f1_blk_stat_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Forward:f1_blk_stat_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:ce0\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:ce0\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:cl0\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:cl0\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:z0\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:z0\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:ff0\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:ff0\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:ce1\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:ce1\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:cl1\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:cl1\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:z1\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:z1\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:ff1\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:ff1\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:ov_msb\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:ov_msb\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:co_msb\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:co_msb\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:cmsb\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:cmsb\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:so\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:so\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:f0_bus_stat\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:f0_bus_stat\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:f0_blk_stat\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:f0_blk_stat\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:f1_bus_stat\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:f1_bus_stat\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:f1_blk_stat\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:f1_blk_stat\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:ce0_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:ce0_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:cl0_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:cl0_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:z0_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:z0_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:ff0_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:ff0_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:ce1_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:ce1_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:cl1_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:cl1_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:z1_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:z1_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:ff1_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:ff1_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:ov_msb_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:ov_msb_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:co_msb_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:co_msb_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:cmsb_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:cmsb_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:so_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:so_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:f0_bus_stat_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:f0_bus_stat_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:f0_blk_stat_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:f0_blk_stat_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:f1_bus_stat_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:f1_bus_stat_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:Pos:f1_blk_stat_reg\ : bit;
-ATTRIBUTE port_state_att of \State_back_engine:Pos:f1_blk_stat_reg\:SIGNAL IS 2;
-SIGNAL \State_back_engine:StateMachine_2_1\ : bit;
-SIGNAL \State_back_engine:StateMachine_2_0\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Run:clk\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Run:rst\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Run:control_out_0\ : bit;
-SIGNAL \State_back_engine:Net_1\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Run:control_out_1\ : bit;
-SIGNAL \State_back_engine:Net_2\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Run:control_out_2\ : bit;
-SIGNAL \State_back_engine:Net_3\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Run:control_out_3\ : bit;
-SIGNAL \State_back_engine:Net_4\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Run:control_out_4\ : bit;
-SIGNAL \State_back_engine:Net_5\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Run:control_out_5\ : bit;
-SIGNAL \State_back_engine:Net_6\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Run:control_out_6\ : bit;
-SIGNAL \State_back_engine:Net_7\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Run:control_out_7\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Run:control_7\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Run:control_6\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Run:control_5\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Run:control_4\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Run:control_3\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Run:control_2\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Run:control_1\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Run:control_0\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Dir:clk\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Dir:rst\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Dir:control_out_0\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Dir:control_out_1\ : bit;
-SIGNAL \State_back_engine:Net_9\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Dir:control_out_2\ : bit;
-SIGNAL \State_back_engine:Net_10\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Dir:control_out_3\ : bit;
-SIGNAL \State_back_engine:Net_11\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Dir:control_out_4\ : bit;
-SIGNAL \State_back_engine:Net_12\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Dir:control_out_5\ : bit;
-SIGNAL \State_back_engine:Net_13\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Dir:control_out_6\ : bit;
-SIGNAL \State_back_engine:Net_14\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Dir:control_out_7\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Dir:control_7\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Dir:control_6\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Dir:control_5\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Dir:control_4\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Dir:control_3\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Dir:control_2\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Dir:control_1\ : bit;
-SIGNAL \State_back_engine:CtrlReg_Dir:control_0\ : bit;
+SIGNAL \VDAC8_B:Net_83\ : bit;
+SIGNAL \VDAC8_B:Net_81\ : bit;
+SIGNAL \VDAC8_B:Net_82\ : bit;
+TERMINAL Net_1393 : bit;
+TERMINAL \VDAC8_B:Net_77\ : bit;
 SIGNAL \PWM_front_engine:PWMUDB:km_run\ : bit;
 SIGNAL \PWM_front_engine:PWMUDB:min_kill_reg\ : bit;
-SIGNAL Net_1 : bit;
+SIGNAL Net_1374 : bit;
 SIGNAL \PWM_front_engine:PWMUDB:ClockOutFromEnBlock\ : bit;
 SIGNAL \PWM_front_engine:PWMUDB:control_7\ : bit;
 SIGNAL \PWM_front_engine:PWMUDB:control_6\ : bit;
@@ -1197,18 +998,52 @@ SIGNAL tmpFB_0__A_back_net_0 : bit;
 SIGNAL tmpIO_0__A_back_net_0 : bit;
 TERMINAL tmpSIOVREF__A_back_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__A_back_net_0 : bit;
+SIGNAL \VDAC8_A:Net_83\ : bit;
+SIGNAL \VDAC8_A:Net_81\ : bit;
+SIGNAL \VDAC8_A:Net_82\ : bit;
+TERMINAL Net_1390 : bit;
+TERMINAL \VDAC8_A:Net_77\ : bit;
+TERMINAL \PGA_A:Net_17\ : bit;
+TERMINAL Net_1379 : bit;
+SIGNAL \PGA_A:Net_37\ : bit;
+SIGNAL \PGA_A:Net_40\ : bit;
+SIGNAL \PGA_A:Net_38\ : bit;
+SIGNAL \PGA_A:Net_39\ : bit;
+SIGNAL \PGA_A:Net_41\ : bit;
+TERMINAL Net_1382 : bit;
+TERMINAL \PGA_A:Net_75\ : bit;
+SIGNAL \Comp_A:clock\ : bit;
+SIGNAL \Comp_A:Net_1\ : bit;
+SIGNAL \Comp_A:Net_9\ : bit;
+SIGNAL tmpOE__Sense_A_net_0 : bit;
+SIGNAL tmpFB_0__Sense_A_net_0 : bit;
+SIGNAL tmpIO_0__Sense_A_net_0 : bit;
+TERMINAL tmpSIOVREF__Sense_A_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Sense_A_net_0 : bit;
+TERMINAL \PGA_B:Net_17\ : bit;
+TERMINAL Net_1394 : bit;
+SIGNAL \PGA_B:Net_37\ : bit;
+SIGNAL \PGA_B:Net_40\ : bit;
+SIGNAL \PGA_B:Net_38\ : bit;
+SIGNAL \PGA_B:Net_39\ : bit;
+SIGNAL \PGA_B:Net_41\ : bit;
+TERMINAL Net_1396 : bit;
+TERMINAL \PGA_B:Net_75\ : bit;
+SIGNAL \Comp_B:clock\ : bit;
+SIGNAL \Comp_B:Net_1\ : bit;
+SIGNAL \Comp_B:Net_9\ : bit;
+SIGNAL tmpOE__Sense_B_net_0 : bit;
+SIGNAL tmpFB_0__Sense_B_net_0 : bit;
+SIGNAL tmpIO_0__Sense_B_net_0 : bit;
+TERMINAL tmpSIOVREF__Sense_B_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Sense_B_net_0 : bit;
 SIGNAL \State_front_engine:Out_A\\D\ : bit;
 SIGNAL \State_front_engine:Out_B\\D\ : bit;
 SIGNAL \State_front_engine:Out_C\\D\ : bit;
 SIGNAL \State_front_engine:Out_D\\D\ : bit;
+SIGNAL \State_front_engine:Run\\D\ : bit;
 SIGNAL \State_front_engine:StateMachine_2_1\\D\ : bit;
 SIGNAL \State_front_engine:StateMachine_2_0\\D\ : bit;
-SIGNAL \State_back_engine:Out_A\\D\ : bit;
-SIGNAL \State_back_engine:Out_B\\D\ : bit;
-SIGNAL \State_back_engine:Out_C\\D\ : bit;
-SIGNAL \State_back_engine:Out_D\\D\ : bit;
-SIGNAL \State_back_engine:StateMachine_2_1\\D\ : bit;
-SIGNAL \State_back_engine:StateMachine_2_0\\D\ : bit;
 SIGNAL \PWM_front_engine:PWMUDB:min_kill_reg\\D\ : bit;
 SIGNAL \PWM_front_engine:PWMUDB:prevCapture\\D\ : bit;
 SIGNAL \PWM_front_engine:PWMUDB:trig_last\\D\ : bit;
@@ -1239,6 +1074,8 @@ SIGNAL \PWM_back_engine:PWMUDB:pwm2_i_reg\\D\ : bit;
 SIGNAL \PWM_back_engine:PWMUDB:tc_i_reg\\D\ : bit;
 BEGIN
 
+\State_front_engine:Run\\D\ <= ((\State_front_engine:Pos_select_0\ and Net_1386 and Net_1387));
+
 zero <=  ('0') ;
 
 \State_front_engine:Out_A\\D\ <= ((not \State_front_engine:StateMachine_2_1\ and not \State_front_engine:StateMachine_2_0\));
@@ -1250,38 +1087,22 @@ zero <=  ('0') ;
 \State_front_engine:Out_D\\D\ <= ((\State_front_engine:StateMachine_2_1\ and \State_front_engine:StateMachine_2_0\));
 
 \State_front_engine:StateMachine_2_1\\D\ <= ((not \State_front_engine:Pos_select_2\ and not \State_front_engine:StateMachine_2_0\ and \State_front_engine:StateMachine_2_1\)
-	OR (not \State_front_engine:Forward_select_1\ and not \State_front_engine:Pos_select_1\ and not \State_front_engine:StateMachine_2_1\ and not \State_front_engine:StateMachine_2_0\ and \State_front_engine:Pos_select_2\)
-	OR (not \State_front_engine:Forward_select_1\ and not \State_front_engine:StateMachine_2_1\ and \State_front_engine:Pos_select_1\ and \State_front_engine:StateMachine_2_0\)
+	OR (not \State_front_engine:Forward_select_1\ and not \State_front_engine:Pos_select_1\ and not \State_front_engine:StateMachine_2_1\ and not \State_front_engine:StateMachine_2_0\ and \State_front_engine:Pos_select_2\ and Net_1386 and Net_1387)
+	OR (not \State_front_engine:Forward_select_1\ and not \State_front_engine:StateMachine_2_1\ and \State_front_engine:Pos_select_1\ and Net_1386 and Net_1387 and \State_front_engine:StateMachine_2_0\)
 	OR (not \State_front_engine:StateMachine_2_0\ and \State_front_engine:Pos_select_1\ and \State_front_engine:StateMachine_2_1\)
 	OR (not \State_front_engine:Pos_select_1\ and \State_front_engine:StateMachine_2_1\ and \State_front_engine:StateMachine_2_0\)
+	OR (not Net_1387 and \State_front_engine:StateMachine_2_1\)
+	OR (not Net_1386 and \State_front_engine:StateMachine_2_1\)
 	OR (\State_front_engine:Forward_select_1\ and \State_front_engine:StateMachine_2_1\));
 
-\State_front_engine:StateMachine_2_0\\D\ <= ((not \State_front_engine:Pos_select_1\ and not \State_front_engine:Pos_select_2\ and \State_front_engine:StateMachine_2_0\)
-	OR (not \State_front_engine:Forward_select_1\ and not \State_front_engine:StateMachine_2_0\ and \State_front_engine:Pos_select_2\)
-	OR (not \State_front_engine:Forward_select_1\ and not \State_front_engine:StateMachine_2_0\ and \State_front_engine:Pos_select_1\)
+\State_front_engine:StateMachine_2_0\\D\ <= ((not \State_front_engine:Forward_select_1\ and not \State_front_engine:StateMachine_2_0\ and \State_front_engine:Pos_select_2\ and Net_1386 and Net_1387)
+	OR (not \State_front_engine:Forward_select_1\ and not \State_front_engine:StateMachine_2_0\ and \State_front_engine:Pos_select_1\ and Net_1386 and Net_1387)
+	OR (not \State_front_engine:Pos_select_1\ and not \State_front_engine:Pos_select_2\ and \State_front_engine:StateMachine_2_0\)
+	OR (not Net_1387 and \State_front_engine:StateMachine_2_0\)
+	OR (not Net_1386 and \State_front_engine:StateMachine_2_0\)
 	OR (\State_front_engine:Forward_select_1\ and \State_front_engine:StateMachine_2_0\));
 
 tmpOE__SDA_1_net_0 <=  ('1') ;
-
-\State_back_engine:Out_A\\D\ <= ((not \State_back_engine:StateMachine_2_1\ and not \State_back_engine:StateMachine_2_0\));
-
-\State_back_engine:Out_B\\D\ <= ((not \State_back_engine:StateMachine_2_0\ and \State_back_engine:StateMachine_2_1\));
-
-\State_back_engine:Out_C\\D\ <= ((not \State_back_engine:StateMachine_2_1\ and \State_back_engine:StateMachine_2_0\));
-
-\State_back_engine:Out_D\\D\ <= ((\State_back_engine:StateMachine_2_1\ and \State_back_engine:StateMachine_2_0\));
-
-\State_back_engine:StateMachine_2_1\\D\ <= ((not \State_back_engine:Pos_select_2\ and not \State_back_engine:StateMachine_2_0\ and \State_back_engine:StateMachine_2_1\)
-	OR (not \State_back_engine:Forward_select_1\ and not \State_back_engine:Pos_select_1\ and not \State_back_engine:StateMachine_2_1\ and not \State_back_engine:StateMachine_2_0\ and \State_back_engine:Pos_select_2\)
-	OR (not \State_back_engine:Forward_select_1\ and not \State_back_engine:StateMachine_2_1\ and \State_back_engine:Pos_select_1\ and \State_back_engine:StateMachine_2_0\)
-	OR (not \State_back_engine:StateMachine_2_0\ and \State_back_engine:Pos_select_1\ and \State_back_engine:StateMachine_2_1\)
-	OR (not \State_back_engine:Pos_select_1\ and \State_back_engine:StateMachine_2_1\ and \State_back_engine:StateMachine_2_0\)
-	OR (\State_back_engine:Forward_select_1\ and \State_back_engine:StateMachine_2_1\));
-
-\State_back_engine:StateMachine_2_0\\D\ <= ((not \State_back_engine:Pos_select_1\ and not \State_back_engine:Pos_select_2\ and \State_back_engine:StateMachine_2_0\)
-	OR (not \State_back_engine:Forward_select_1\ and not \State_back_engine:StateMachine_2_0\ and \State_back_engine:Pos_select_2\)
-	OR (not \State_back_engine:Forward_select_1\ and not \State_back_engine:StateMachine_2_0\ and \State_back_engine:Pos_select_1\)
-	OR (\State_back_engine:Forward_select_1\ and \State_back_engine:StateMachine_2_0\));
 
 \PWM_front_engine:PWMUDB:sc_kill_tmp\\D\ <= (not \PWM_front_engine:PWMUDB:tc_i\);
 
@@ -1421,7 +1242,7 @@ tmpOE__SDA_1_net_0 <=  ('1') ;
 		f1_blk_sync=>'1')
 	PORT MAP(reset=>zero,
 		clk=>Net_1371,
-		cs_addr=>(\State_front_engine:Pos_select_2\, \State_front_engine:Pos_select_1\, \State_front_engine:Forward_select_0\),
+		cs_addr=>(\State_front_engine:Pos_select_2\, \State_front_engine:Pos_select_1\, \State_front_engine:Pos_select_0\),
 		route_si=>zero,
 		route_ci=>zero,
 		f0_load=>zero,
@@ -1492,7 +1313,7 @@ tmpOE__SDA_1_net_0 <=  ('1') ;
 	PORT MAP(reset=>zero,
 		clock=>Net_1371,
 		control=>(\State_front_engine:CtrlReg_Run:control_7\, \State_front_engine:CtrlReg_Run:control_6\, \State_front_engine:CtrlReg_Run:control_5\, \State_front_engine:CtrlReg_Run:control_4\,
-			\State_front_engine:CtrlReg_Run:control_3\, \State_front_engine:CtrlReg_Run:control_2\, \State_front_engine:CtrlReg_Run:control_1\, \State_front_engine:Forward_select_0\));
+			\State_front_engine:CtrlReg_Run:control_3\, \State_front_engine:CtrlReg_Run:control_2\, \State_front_engine:CtrlReg_Run:control_1\, \State_front_engine:Pos_select_0\));
 \State_front_engine:CtrlReg_Dir:Sync:ctrl_reg\:cy_psoc3_control
 	GENERIC MAP(cy_init_value=>"00000000",
 		cy_force_order=>'1',
@@ -1966,201 +1787,24 @@ D_front:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__SDA_1_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__D_front_net_0);
-\State_back_engine:Forward:u0\:cy_psoc3_dp
-	GENERIC MAP(cy_dpconfig=>"0000000000000000010000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111111111111001000000000000000010000111100000001000000000000",
-		d0_init=>"00000000",
-		d1_init=>"00000000",
-		a0_init=>"00000000",
-		a1_init=>"00000000",
-		ce0_sync=>'1',
-		cl0_sync=>'1',
-		z0_sync=>'1',
-		ff0_sync=>'1',
-		ce1_sync=>'1',
-		cl1_sync=>'1',
-		z1_sync=>'1',
-		ff1_sync=>'1',
-		ov_msb_sync=>'1',
-		co_msb_sync=>'1',
-		cmsb_sync=>'1',
-		so_sync=>'1',
-		f0_bus_sync=>'1',
-		f0_blk_sync=>'1',
-		f1_bus_sync=>'1',
-		f1_blk_sync=>'1')
+\VDAC8_B:viDAC8\:cy_psoc3_vidac8_v1_0
+	GENERIC MAP(cy_registers=>"",
+		reg_data=>'0',
+		is_all_if_any=>'0')
 	PORT MAP(reset=>zero,
-		clk=>Net_1371,
-		cs_addr=>(zero, \State_back_engine:Forward_select_1\, \State_back_engine:Forward_select_0\),
-		route_si=>zero,
-		route_ci=>zero,
-		f0_load=>zero,
-		f1_load=>zero,
-		d0_load=>zero,
-		d1_load=>zero,
-		ce0=>open,
-		cl0=>open,
-		z0=>\State_back_engine:Forward_select_1\,
-		ff0=>open,
-		ce1=>open,
-		cl1=>open,
-		z1=>open,
-		ff1=>open,
-		ov_msb=>open,
-		co_msb=>open,
-		cmsb=>open,
-		so=>open,
-		f0_bus_stat=>open,
-		f0_blk_stat=>open,
-		f1_bus_stat=>open,
-		f1_blk_stat=>open,
-		ce0_reg=>open,
-		cl0_reg=>open,
-		z0_reg=>open,
-		ff0_reg=>open,
-		ce1_reg=>open,
-		cl1_reg=>open,
-		z1_reg=>open,
-		ff1_reg=>open,
-		ov_msb_reg=>open,
-		co_msb_reg=>open,
-		cmsb_reg=>open,
-		so_reg=>open,
-		f0_bus_stat_reg=>open,
-		f0_blk_stat_reg=>open,
-		f1_bus_stat_reg=>open,
-		f1_blk_stat_reg=>open,
-		ci=>zero,
-		co=>open,
-		sir=>zero,
-		sor=>open,
-		sil=>zero,
-		sol=>open,
-		msbi=>zero,
-		msbo=>open,
-		cei=>(zero, zero),
-		ceo=>open,
-		cli=>(zero, zero),
-		clo=>open,
-		zi=>(zero, zero),
-		zo=>open,
-		fi=>(zero, zero),
-		fo=>open,
-		capi=>(zero, zero),
-		capo=>open,
-		cfbi=>zero,
-		cfbo=>open,
-		pi=>(zero, zero, zero, zero,
+		idir=>zero,
+		ioff=>zero,
+		data=>(zero, zero, zero, zero,
 			zero, zero, zero, zero),
-		po=>open);
-\State_back_engine:Pos:u0\:cy_psoc3_dp
-	GENERIC MAP(cy_dpconfig=>"0000000000000000000000000000000000000000000000000010000001000000000000000000000001000000010000000000000000000000000000000000000011111111000000001111111111111111001000000000000000000000111100000001000000000000",
-		d0_init=>"00000000",
-		d1_init=>"00000000",
-		a0_init=>"01100100",
-		a1_init=>"00000000",
-		ce0_sync=>'1',
-		cl0_sync=>'1',
-		z0_sync=>'1',
-		ff0_sync=>'1',
-		ce1_sync=>'1',
-		cl1_sync=>'1',
-		z1_sync=>'1',
-		ff1_sync=>'1',
-		ov_msb_sync=>'1',
-		co_msb_sync=>'1',
-		cmsb_sync=>'1',
-		so_sync=>'1',
-		f0_bus_sync=>'1',
-		f0_blk_sync=>'1',
-		f1_bus_sync=>'1',
-		f1_blk_sync=>'1')
-	PORT MAP(reset=>zero,
-		clk=>Net_1371,
-		cs_addr=>(\State_back_engine:Pos_select_2\, \State_back_engine:Pos_select_1\, \State_back_engine:Forward_select_0\),
-		route_si=>zero,
-		route_ci=>zero,
-		f0_load=>zero,
-		f1_load=>zero,
-		d0_load=>zero,
-		d1_load=>zero,
-		ce0=>open,
-		cl0=>open,
-		z0=>open,
-		ff0=>open,
-		ce1=>open,
-		cl1=>open,
-		z1=>open,
-		ff1=>open,
-		ov_msb=>open,
-		co_msb=>open,
-		cmsb=>open,
-		so=>open,
-		f0_bus_stat=>open,
-		f0_blk_stat=>open,
-		f1_bus_stat=>open,
-		f1_blk_stat=>open,
-		ce0_reg=>open,
-		cl0_reg=>open,
-		z0_reg=>open,
-		ff0_reg=>open,
-		ce1_reg=>open,
-		cl1_reg=>open,
-		z1_reg=>open,
-		ff1_reg=>open,
-		ov_msb_reg=>open,
-		co_msb_reg=>open,
-		cmsb_reg=>open,
-		so_reg=>open,
-		f0_bus_stat_reg=>open,
-		f0_blk_stat_reg=>open,
-		f1_bus_stat_reg=>open,
-		f1_blk_stat_reg=>open,
-		ci=>zero,
-		co=>open,
-		sir=>zero,
-		sor=>open,
-		sil=>zero,
-		sol=>open,
-		msbi=>zero,
-		msbo=>open,
-		cei=>(zero, zero),
-		ceo=>open,
-		cli=>(zero, zero),
-		clo=>open,
-		zi=>(zero, zero),
-		zo=>open,
-		fi=>(zero, zero),
-		fo=>open,
-		capi=>(zero, zero),
-		capo=>open,
-		cfbi=>zero,
-		cfbo=>open,
-		pi=>(zero, zero, zero, zero,
-			zero, zero, zero, zero),
-		po=>open);
-\State_back_engine:CtrlReg_Run:Sync:ctrl_reg\:cy_psoc3_control
-	GENERIC MAP(cy_init_value=>"00000000",
-		cy_force_order=>'1',
-		cy_ctrl_mode_1=>"00000000",
-		cy_ctrl_mode_0=>"00000001",
-		cy_ext_reset=>'1')
-	PORT MAP(reset=>zero,
-		clock=>Net_1371,
-		control=>(\State_back_engine:CtrlReg_Run:control_7\, \State_back_engine:CtrlReg_Run:control_6\, \State_back_engine:CtrlReg_Run:control_5\, \State_back_engine:CtrlReg_Run:control_4\,
-			\State_back_engine:CtrlReg_Run:control_3\, \State_back_engine:CtrlReg_Run:control_2\, \State_back_engine:CtrlReg_Run:control_1\, \State_back_engine:Forward_select_0\));
-\State_back_engine:CtrlReg_Dir:Sync:ctrl_reg\:cy_psoc3_control
-	GENERIC MAP(cy_init_value=>"00000000",
-		cy_force_order=>'1',
-		cy_ctrl_mode_1=>"00000000",
-		cy_ctrl_mode_0=>"00000011",
-		cy_ext_reset=>'1')
-	PORT MAP(reset=>zero,
-		clock=>Net_1371,
-		control=>(\State_back_engine:CtrlReg_Dir:control_7\, \State_back_engine:CtrlReg_Dir:control_6\, \State_back_engine:CtrlReg_Dir:control_5\, \State_back_engine:CtrlReg_Dir:control_4\,
-			\State_back_engine:CtrlReg_Dir:control_3\, \State_back_engine:CtrlReg_Dir:control_2\, \State_back_engine:Pos_select_2\, \State_back_engine:Pos_select_1\));
+		strobe=>zero,
+		strobe_udb=>zero,
+		vout=>Net_1393,
+		iout=>\VDAC8_B:Net_77\);
+\VDAC8_B:cy_analog_noconnect_1\:cy_analog_noconnect_v1_0
+	PORT MAP(noconnect=>\VDAC8_B:Net_77\);
 \PWM_front_engine:PWMUDB:clock_enable_block\:cy_psoc3_udb_clock_enable_v1_0
 	GENERIC MAP(sync_mode=>'1')
-	PORT MAP(clock_in=>Net_1,
+	PORT MAP(clock_in=>Net_1374,
 		enable=>tmpOE__SDA_1_net_0,
 		clock_out=>\PWM_front_engine:PWMUDB:ClockOutFromEnBlock\);
 \PWM_front_engine:PWMUDB:genblk1:ctrlreg\:cy_psoc3_control
@@ -2544,7 +2188,7 @@ D_back:cy_psoc3_pins_v1_10
 		invert_out_reset=>'0',
 		io_voltage=>"",
 		layout_mode=>"CONTIGUOUS",
-		output_conn=>"1",
+		output_conn=>"0",
 		output_sync=>"0",
 		output_clk_en=>'0',
 		output_mode=>"0",
@@ -2584,7 +2228,7 @@ D_back:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__SDA_1_net_0),
-		y=>Net_37,
+		y=>(zero),
 		fb=>(tmpFB_0__D_back_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__D_back_net_0),
@@ -2614,7 +2258,7 @@ C_back:cy_psoc3_pins_v1_10
 		invert_out_reset=>'0',
 		io_voltage=>"",
 		layout_mode=>"CONTIGUOUS",
-		output_conn=>"1",
+		output_conn=>"0",
 		output_sync=>"0",
 		output_clk_en=>'0',
 		output_mode=>"0",
@@ -2654,7 +2298,7 @@ C_back:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__SDA_1_net_0),
-		y=>Net_36,
+		y=>(zero),
 		fb=>(tmpFB_0__C_back_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__C_back_net_0),
@@ -2684,7 +2328,7 @@ B_back:cy_psoc3_pins_v1_10
 		invert_out_reset=>'0',
 		io_voltage=>"",
 		layout_mode=>"CONTIGUOUS",
-		output_conn=>"1",
+		output_conn=>"0",
 		output_sync=>"0",
 		output_clk_en=>'0',
 		output_mode=>"0",
@@ -2724,7 +2368,7 @@ B_back:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__SDA_1_net_0),
-		y=>Net_35,
+		y=>(zero),
 		fb=>(tmpFB_0__B_back_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__B_back_net_0),
@@ -2754,7 +2398,7 @@ A_back:cy_psoc3_pins_v1_10
 		invert_out_reset=>'0',
 		io_voltage=>"",
 		layout_mode=>"CONTIGUOUS",
-		output_conn=>"1",
+		output_conn=>"0",
 		output_sync=>"0",
 		output_clk_en=>'0',
 		output_mode=>"0",
@@ -2794,7 +2438,7 @@ A_back:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__SDA_1_net_0),
-		y=>Net_34,
+		y=>(zero),
 		fb=>(tmpFB_0__A_back_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__A_back_net_0),
@@ -2812,11 +2456,214 @@ Clock_2:cy_clock_v1_0
 		id=>"e1417622-587c-4b93-9be0-248c93b14fcb",
 		source_clock_id=>"",
 		divisor=>0,
-		period=>"100000000000000",
+		period=>"100000000000",
 		is_direct=>'0',
 		is_digital=>'1')
-	PORT MAP(clock_out=>Net_1,
+	PORT MAP(clock_out=>Net_1374,
 		dig_domain_out=>open);
+\VDAC8_A:viDAC8\:cy_psoc3_vidac8_v1_0
+	GENERIC MAP(cy_registers=>"",
+		reg_data=>'0',
+		is_all_if_any=>'0')
+	PORT MAP(reset=>zero,
+		idir=>zero,
+		ioff=>zero,
+		data=>(zero, zero, zero, zero,
+			zero, zero, zero, zero),
+		strobe=>zero,
+		strobe_udb=>zero,
+		vout=>Net_1390,
+		iout=>\VDAC8_A:Net_77\);
+\VDAC8_A:cy_analog_noconnect_1\:cy_analog_noconnect_v1_0
+	PORT MAP(noconnect=>\VDAC8_A:Net_77\);
+\PGA_A:SC\:cy_psoc3_scblock_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(vref=>\PGA_A:Net_17\,
+		vin=>Net_1379,
+		aclk=>zero,
+		bst_clk=>zero,
+		clk_udb=>zero,
+		dyn_cntl=>zero,
+		modout_sync=>\PGA_A:Net_41\,
+		vout=>Net_1382);
+\PGA_A:cy_analog_virtualmux_1_connect\:cy_connect_v1_0
+	GENERIC MAP(sig_width=>1,
+		is_net_join=>'0')
+	PORT MAP(signal1=>\PGA_A:Net_17\,
+		signal2=>\PGA_A:Net_75\);
+\PGA_A:cy_analog_noconnect_2\:cy_analog_noconnect_v1_0
+	PORT MAP(noconnect=>\PGA_A:Net_75\);
+\Comp_A:ctComp\:cy_psoc3_ctcomp_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(vplus=>Net_1382,
+		vminus=>Net_1390,
+		clock=>zero,
+		clk_udb=>zero,
+		cmpout=>Net_1386);
+Sense_A:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba",
+		drive_mode=>"000",
+		ibuf_enabled=>"0",
+		init_dr_st=>"0",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"A",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"10",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__SDA_1_net_0),
+		y=>(zero),
+		fb=>(tmpFB_0__Sense_A_net_0),
+		analog=>Net_1379,
+		io=>(tmpIO_0__Sense_A_net_0),
+		siovref=>(tmpSIOVREF__Sense_A_net_0),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__SDA_1_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__SDA_1_net_0,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__Sense_A_net_0);
+\PGA_B:SC\:cy_psoc3_scblock_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(vref=>\PGA_B:Net_17\,
+		vin=>Net_1394,
+		aclk=>zero,
+		bst_clk=>zero,
+		clk_udb=>zero,
+		dyn_cntl=>zero,
+		modout_sync=>\PGA_B:Net_41\,
+		vout=>Net_1396);
+\PGA_B:cy_analog_virtualmux_1_connect\:cy_connect_v1_0
+	GENERIC MAP(sig_width=>1,
+		is_net_join=>'0')
+	PORT MAP(signal1=>\PGA_B:Net_17\,
+		signal2=>\PGA_B:Net_75\);
+\PGA_B:cy_analog_noconnect_2\:cy_analog_noconnect_v1_0
+	PORT MAP(noconnect=>\PGA_B:Net_75\);
+\Comp_B:ctComp\:cy_psoc3_ctcomp_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(vplus=>Net_1396,
+		vminus=>Net_1393,
+		clock=>zero,
+		clk_udb=>zero,
+		cmpout=>Net_1387);
+Sense_B:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"7d822d0e-1fd3-4942-91bb-710a47c9ec67",
+		drive_mode=>"000",
+		ibuf_enabled=>"0",
+		init_dr_st=>"0",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"A",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"10",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__SDA_1_net_0),
+		y=>(zero),
+		fb=>(tmpFB_0__Sense_B_net_0),
+		analog=>Net_1394,
+		io=>(tmpIO_0__Sense_B_net_0),
+		siovref=>(tmpSIOVREF__Sense_B_net_0),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__SDA_1_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__SDA_1_net_0,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__Sense_B_net_0);
 \State_front_engine:Out_A\:cy_dff
 	PORT MAP(d=>\State_front_engine:Out_A\\D\,
 		clk=>Net_1371,
@@ -2833,6 +2680,10 @@ Clock_2:cy_clock_v1_0
 	PORT MAP(d=>\State_front_engine:Out_D\\D\,
 		clk=>Net_1371,
 		q=>Net_5);
+\State_front_engine:Run\:cy_dff
+	PORT MAP(d=>\State_front_engine:Run\\D\,
+		clk=>Net_1371,
+		q=>\State_front_engine:Forward_select_0\);
 \State_front_engine:StateMachine_2_1\:cy_dff
 	PORT MAP(d=>\State_front_engine:StateMachine_2_1\\D\,
 		clk=>Net_1371,
@@ -2841,30 +2692,6 @@ Clock_2:cy_clock_v1_0
 	PORT MAP(d=>\State_front_engine:StateMachine_2_0\\D\,
 		clk=>Net_1371,
 		q=>\State_front_engine:StateMachine_2_0\);
-\State_back_engine:Out_A\:cy_dff
-	PORT MAP(d=>\State_back_engine:Out_A\\D\,
-		clk=>Net_1371,
-		q=>Net_34);
-\State_back_engine:Out_B\:cy_dff
-	PORT MAP(d=>\State_back_engine:Out_B\\D\,
-		clk=>Net_1371,
-		q=>Net_35);
-\State_back_engine:Out_C\:cy_dff
-	PORT MAP(d=>\State_back_engine:Out_C\\D\,
-		clk=>Net_1371,
-		q=>Net_36);
-\State_back_engine:Out_D\:cy_dff
-	PORT MAP(d=>\State_back_engine:Out_D\\D\,
-		clk=>Net_1371,
-		q=>Net_37);
-\State_back_engine:StateMachine_2_1\:cy_dff
-	PORT MAP(d=>\State_back_engine:StateMachine_2_1\\D\,
-		clk=>Net_1371,
-		q=>\State_back_engine:StateMachine_2_1\);
-\State_back_engine:StateMachine_2_0\:cy_dff
-	PORT MAP(d=>\State_back_engine:StateMachine_2_0\\D\,
-		clk=>Net_1371,
-		q=>\State_back_engine:StateMachine_2_0\);
 \PWM_front_engine:PWMUDB:min_kill_reg\:cy_dsrff
 	PORT MAP(d=>tmpOE__SDA_1_net_0,
 		s=>zero,

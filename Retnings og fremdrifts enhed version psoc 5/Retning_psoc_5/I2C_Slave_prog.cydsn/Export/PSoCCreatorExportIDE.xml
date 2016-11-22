@@ -127,14 +127,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\D_front_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\D_front.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\D_front.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\State_back_engine_CtrlReg_Run.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\State_back_engine_CtrlReg_Run.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\State_back_engine_CtrlReg_Run_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\State_back_engine_CtrlReg_Dir.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\State_back_engine_CtrlReg_Dir.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\State_back_engine_CtrlReg_Dir_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\State_back_engine_State.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\State_back_engine_defs.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_front_engine.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_front_engine.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_front_engine_PM.c</File>
@@ -161,6 +153,30 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\A_back.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_2.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\VDAC8_B.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\VDAC8_B.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\VDAC8_B_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\VDAC8_A.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\VDAC8_A.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\VDAC8_A_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PGA_A.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PGA_A.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PGA_A_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Comp_A.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Comp_A.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Comp_A_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Sense_A_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Sense_A.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Sense_A.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PGA_B.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PGA_B.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PGA_B_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Comp_B.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Comp_B.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Comp_B_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Sense_B_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Sense_B.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Sense_B.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\Export\ARM_GCC_Generic">

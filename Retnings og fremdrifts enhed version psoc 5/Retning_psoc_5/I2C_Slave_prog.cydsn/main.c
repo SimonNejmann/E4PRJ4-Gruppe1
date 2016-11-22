@@ -26,7 +26,9 @@ int main()
     I2CS_SlaveInitReadBuf (i2cReadBuffer,  BUFFER_SIZE);
     I2CS_SlaveInitWriteBuf(i2cWriteBuffer, BUFFER_SIZE);
     I2CS_Start();
-
+    
+    /* Start current limiter Sense A*/
+   
     CyGlobalIntEnable;
     
 

@@ -1,6 +1,6 @@
 // ======================================================================
 // TestState.v generated from TopDesign.cysch
-// 11/19/2016 at 10:55
+// 11/22/2016 at 16:49
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1264,7 +1264,7 @@ module top ;
 		  .divisor(0),
 		  .period("5000000000000"),
 		  .is_direct(0),
-		  .is_digital(0))
+		  .is_digital(1))
 		Clock_2
 		 (.clock_out(Net_310));
 

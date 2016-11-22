@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
   31:Generated_Source\PSoC4/I2CS.c **** 
   32:Generated_Source\PSoC4/I2CS.c **** 
   33:Generated_Source\PSoC4/I2CS.c **** /***************************************
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 2
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 2
 
 
   34:Generated_Source\PSoC4/I2CS.c **** *    Run Time Configuration Vars
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
   88:Generated_Source\PSoC4/I2CS.c ****     * will be restored on a subsequent I2CS_Enable() call.
   89:Generated_Source\PSoC4/I2CS.c ****     */
   90:Generated_Source\PSoC4/I2CS.c ****     uint16 I2CS_IntrTxMask = 0u;
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 3
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 3
 
 
   91:Generated_Source\PSoC4/I2CS.c **** #endif /* (! (I2CS_SCB_MODE_I2C_CONST_CFG || \
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  145:Generated_Source\PSoC4/I2CS.c ****     I2CS_EzI2CInit();
  146:Generated_Source\PSoC4/I2CS.c **** 
  147:Generated_Source\PSoC4/I2CS.c **** #endif /* (I2CS_SCB_MODE_UNCONFIG_CONST_CFG) */
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 4
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 4
 
 
  148:Generated_Source\PSoC4/I2CS.c **** }
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  202:Generated_Source\PSoC4/I2CS.c **** *  initialized to operate in one of the following configurations: I2C, SPI, UART
  203:Generated_Source\PSoC4/I2CS.c **** *  or EZI2C. Otherwise this function does not enable the component.
  204:Generated_Source\PSoC4/I2CS.c **** *
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 5
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 5
 
 
  205:Generated_Source\PSoC4/I2CS.c **** * \globalvars
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  259:Generated_Source\PSoC4/I2CS.c ****     I2CS_SetTxInterruptMode(I2CS_NO_INTR_SOURCES);
  260:Generated_Source\PSoC4/I2CS.c **** 
  261:Generated_Source\PSoC4/I2CS.c **** #if (I2CS_SCB_IRQ_INTERNAL)
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 6
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 6
 
 
  262:Generated_Source\PSoC4/I2CS.c ****     I2CS_ClearPendingInt();
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  316:Generated_Source\PSoC4/I2CS.c **** 
  317:Generated_Source\PSoC4/I2CS.c **** #if (I2CS_SCB_IRQ_INTERNAL)
  318:Generated_Source\PSoC4/I2CS.c ****     /*******************************************************************************
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 7
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 7
 
 
  319:Generated_Source\PSoC4/I2CS.c ****     * Function Name: I2CS_SetCustomInterruptHandler
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  367:Generated_Source\PSoC4/I2CS.c ****         I2CS_EnableInt();
   31              		.loc 1 367 0
   32 0002 0B20     		mov	r0, #11
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 8
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 8
 
 
   33 0004 FFF7FEFF 		bl	CyIntEnable
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  407:Generated_Source\PSoC4/I2CS.c **** #endif /* (I2CS_SCB_MODE_UNCONFIG_CONST_CFG) */
  408:Generated_Source\PSoC4/I2CS.c **** }
  409:Generated_Source\PSoC4/I2CS.c **** 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 9
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 9
 
 
  410:Generated_Source\PSoC4/I2CS.c **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  455:Generated_Source\PSoC4/I2CS.c **** #else
  456:Generated_Source\PSoC4/I2CS.c ****     /* Unknown mode: do nothing */
  457:Generated_Source\PSoC4/I2CS.c **** #endif /* (I2CS_SCB_MODE_UNCONFIG_CONST_CFG) */
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 10
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 10
 
 
  458:Generated_Source\PSoC4/I2CS.c **** }
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  105 000a 0B43     		orr	r3, r1
  106 000c 1360     		str	r3, [r2]
  187:Generated_Source\PSoC4/I2CS.c **** 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 11
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 11
 
 
  107              		.loc 1 187 0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  154 001a C046     		.align	2
  155              	.L9:
  156 001c 00000000 		.word	.LANCHOR0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 12
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 12
 
 
  157              		.cfi_endproc
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  204              	.LFE3:
  205              		.size	I2CS_Stop, .-I2CS_Stop
  206              		.section	.text.I2CS_SetRxFifoLevel,"ax",%progbits
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 13
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 13
 
 
  207              		.align	2
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  253              		.loc 1 308 0
  254 0000 034A     		ldr	r2, .L18
  255 0002 1368     		ldr	r3, [r2]
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 14
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 14
 
 
  256              	.LVL15:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  303              		.align	2
  304              		.global	I2CS_I2CSlaveNackGeneration
  305              		.code	16
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 15
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 15
 
 
  306              		.thumb_func
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  509:Generated_Source\PSoC4/I2CS.c ****         }
  510:Generated_Source\PSoC4/I2CS.c **** 
  511:Generated_Source\PSoC4/I2CS.c ****         if ((I2CS_SCB_MODE_I2C   == mode) ||
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 16
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 16
 
 
  512:Generated_Source\PSoC4/I2CS.c ****             (I2CS_SCB_MODE_EZI2C == mode))
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  566:Generated_Source\PSoC4/I2CS.c ****                 /* (Master) */
  567:Generated_Source\PSoC4/I2CS.c ****                 pinsDm[I2CS_RX_SCL_MOSI_PIN_INDEX] = I2CS_PIN_DM_STRONG;
  568:Generated_Source\PSoC4/I2CS.c ****                 pinsDm[I2CS_TX_SDA_MISO_PIN_INDEX] = I2CS_PIN_DM_DIG_HIZ;
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 17
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 17
 
 
  569:Generated_Source\PSoC4/I2CS.c ****                 pinsDm[I2CS_SCLK_PIN_INDEX] = I2CS_PIN_DM_STRONG;
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  623:Generated_Source\PSoC4/I2CS.c ****                     hsiomSel[I2CS_RX_SCL_MOSI_PIN_INDEX] = I2CS_RX_SCL_MOSI_HSIOM_SEL_UART;
  624:Generated_Source\PSoC4/I2CS.c ****                     pinsDm  [I2CS_RX_SCL_MOSI_PIN_INDEX] = I2CS_PIN_DM_DIG_HIZ;
  625:Generated_Source\PSoC4/I2CS.c ****                 #elif (I2CS_RX_WAKE_SCL_MOSI_PIN)
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 18
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 18
 
 
  626:Generated_Source\PSoC4/I2CS.c ****                     hsiomSel[I2CS_RX_WAKE_SCL_MOSI_PIN_INDEX] = I2CS_RX_WAKE_SCL_MOSI_HSIOM_SEL_UAR
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  680:Generated_Source\PSoC4/I2CS.c **** 
  681:Generated_Source\PSoC4/I2CS.c ****         I2CS_uart_rx_i2c_scl_spi_mosi_SetDriveMode((uint8) pinsDm[I2CS_RX_SCL_MOSI_PIN_INDEX]);
  682:Generated_Source\PSoC4/I2CS.c **** 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 19
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 19
 
 
  683:Generated_Source\PSoC4/I2CS.c ****         #if (!I2CS_CY_SCBIP_V1)
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  737:Generated_Source\PSoC4/I2CS.c **** 
  738:Generated_Source\PSoC4/I2CS.c ****     #if (I2CS_SS0_PIN)
  739:Generated_Source\PSoC4/I2CS.c ****         I2CS_SET_HSIOM_SEL(I2CS_SS0_HSIOM_REG,
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 20
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 20
 
 
  740:Generated_Source\PSoC4/I2CS.c ****                                        I2CS_SS0_HSIOM_MASK,
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  794:Generated_Source\PSoC4/I2CS.c **** #if (I2CS_CY_SCBIP_V0 || I2CS_CY_SCBIP_V1)
  795:Generated_Source\PSoC4/I2CS.c ****     /*******************************************************************************
  796:Generated_Source\PSoC4/I2CS.c ****     * Function Name: I2CS_I2CSlaveNackGeneration
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 21
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 21
 
 
  797:Generated_Source\PSoC4/I2CS.c ****     ****************************************************************************//**
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  345              	.L25:
  346 002c 00000740 		.word	1074200576
  347 0030 60000740 		.word	1074200672
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 22
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 22
 
 
  348 0034 FFFEFFFF 		.word	-257
@@ -1292,48 +1292,48 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  376 0006 00000000 		.4byte	.Ldebug_abbrev0
  377 000a 04       		.byte	0x4
  378 000b 01       		.uleb128 0x1
- 379 000c 05020000 		.4byte	.LASF35
+ 379 000c FA010000 		.4byte	.LASF35
  380 0010 01       		.byte	0x1
- 381 0011 82010000 		.4byte	.LASF36
- 382 0015 59000000 		.4byte	.LASF37
+ 381 0011 77010000 		.4byte	.LASF36
+ 382 0015 53000000 		.4byte	.LASF37
  383 0019 00000000 		.4byte	.Ldebug_ranges0+0
  384 001d 00000000 		.4byte	0
  385 0021 00000000 		.4byte	.Ldebug_line0
  386 0025 02       		.uleb128 0x2
  387 0026 01       		.byte	0x1
  388 0027 06       		.byte	0x6
- 389 0028 E5020000 		.4byte	.LASF0
+ 389 0028 DA020000 		.4byte	.LASF0
  390 002c 02       		.uleb128 0x2
  391 002d 01       		.byte	0x1
  392 002e 08       		.byte	0x8
- 393 002f F1000000 		.4byte	.LASF1
+ 393 002f E6000000 		.4byte	.LASF1
  394 0033 02       		.uleb128 0x2
  395 0034 02       		.byte	0x2
  396 0035 05       		.byte	0x5
- 397 0036 A0020000 		.4byte	.LASF2
+ 397 0036 95020000 		.4byte	.LASF2
  398 003a 02       		.uleb128 0x2
  399 003b 02       		.byte	0x2
  400 003c 07       		.byte	0x7
- 401 003d C1000000 		.4byte	.LASF3
+ 401 003d B6000000 		.4byte	.LASF3
  402 0041 02       		.uleb128 0x2
  403 0042 04       		.byte	0x4
  404 0043 05       		.byte	0x5
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 23
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 23
 
 
- 405 0044 CC020000 		.4byte	.LASF4
+ 405 0044 C1020000 		.4byte	.LASF4
  406 0048 02       		.uleb128 0x2
  407 0049 04       		.byte	0x4
  408 004a 07       		.byte	0x7
- 409 004b 1E010000 		.4byte	.LASF5
+ 409 004b 13010000 		.4byte	.LASF5
  410 004f 02       		.uleb128 0x2
  411 0050 08       		.byte	0x8
  412 0051 05       		.byte	0x5
- 413 0052 F2010000 		.4byte	.LASF6
+ 413 0052 E7010000 		.4byte	.LASF6
  414 0056 02       		.uleb128 0x2
  415 0057 08       		.byte	0x8
  416 0058 07       		.byte	0x7
- 417 0059 A0010000 		.4byte	.LASF7
+ 417 0059 95010000 		.4byte	.LASF7
  418 005d 03       		.uleb128 0x3
  419 005e 04       		.byte	0x4
  420 005f 05       		.byte	0x5
@@ -1341,31 +1341,31 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  422 0064 02       		.uleb128 0x2
  423 0065 04       		.byte	0x4
  424 0066 07       		.byte	0x7
- 425 0067 75010000 		.4byte	.LASF8
+ 425 0067 6A010000 		.4byte	.LASF8
  426 006b 04       		.uleb128 0x4
- 427 006c 30010000 		.4byte	.LASF9
+ 427 006c 25010000 		.4byte	.LASF9
  428 0070 02       		.byte	0x2
  429 0071 B901     		.2byte	0x1b9
  430 0073 2C000000 		.4byte	0x2c
  431 0077 04       		.uleb128 0x4
- 432 0078 6E010000 		.4byte	.LASF10
+ 432 0078 63010000 		.4byte	.LASF10
  433 007c 02       		.byte	0x2
  434 007d BB01     		.2byte	0x1bb
  435 007f 48000000 		.4byte	0x48
  436 0083 02       		.uleb128 0x2
  437 0084 04       		.byte	0x4
  438 0085 04       		.byte	0x4
- 439 0086 EB000000 		.4byte	.LASF11
+ 439 0086 E0000000 		.4byte	.LASF11
  440 008a 02       		.uleb128 0x2
  441 008b 08       		.byte	0x8
  442 008c 04       		.byte	0x4
- 443 008d 36010000 		.4byte	.LASF12
+ 443 008d 2B010000 		.4byte	.LASF12
  444 0091 02       		.uleb128 0x2
  445 0092 01       		.byte	0x1
  446 0093 08       		.byte	0x8
- 447 0094 00020000 		.4byte	.LASF13
+ 447 0094 F5010000 		.4byte	.LASF13
  448 0098 04       		.uleb128 0x4
- 449 0099 D5020000 		.4byte	.LASF14
+ 449 0099 CA020000 		.4byte	.LASF14
  450 009d 02       		.byte	0x2
  451 009e 6502     		.2byte	0x265
  452 00a0 A4000000 		.4byte	0xa4
@@ -1378,12 +1378,12 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  459 00b0 02       		.uleb128 0x2
  460 00b1 04       		.byte	0x4
  461 00b2 07       		.byte	0x7
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 24
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 24
 
 
- 462 00b3 E9010000 		.4byte	.LASF15
+ 462 00b3 DE010000 		.4byte	.LASF15
  463 00b7 08       		.uleb128 0x8
- 464 00b8 B7010000 		.4byte	.LASF16
+ 464 00b8 AC010000 		.4byte	.LASF16
  465 00bc 01       		.byte	0x1
  466 00bd 6401     		.2byte	0x164
  467 00bf 00000000 		.4byte	.LFB7
@@ -1402,7 +1402,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  480 00db 00       		.byte	0
  481 00dc 00       		.byte	0
  482 00dd 08       		.uleb128 0x8
- 483 00de F1020000 		.4byte	.LASF17
+ 483 00de E6020000 		.4byte	.LASF17
  484 00e2 01       		.byte	0x1
  485 00e3 A201     		.2byte	0x1a2
  486 00e5 00000000 		.4byte	.LFB9
@@ -1415,7 +1415,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  493 00f8 7C020000 		.4byte	0x27c
  494 00fc 00       		.byte	0
  495 00fd 0C       		.uleb128 0xc
- 496 00fe DB020000 		.4byte	.LASF18
+ 496 00fe D0020000 		.4byte	.LASF18
  497 0102 01       		.byte	0x1
  498 0103 7B       		.byte	0x7b
  499 0104 00000000 		.4byte	.LFB0
@@ -1428,7 +1428,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  506 0117 83020000 		.4byte	0x283
  507 011b 00       		.byte	0
  508 011c 0C       		.uleb128 0xc
- 509 011d 62010000 		.4byte	.LASF19
+ 509 011d 57010000 		.4byte	.LASF19
  510 0121 01       		.byte	0x1
  511 0122 AB       		.byte	0xab
  512 0123 00000000 		.4byte	.LFB1
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  516 012d 3B010000 		.4byte	0x13b
  517 0131 0B       		.uleb128 0xb
  518 0132 12000000 		.4byte	.LVL3
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 25
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 25
 
 
  519 0136 B7000000 		.4byte	0xb7
@@ -1460,7 +1460,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  535 015e 1C010000 		.4byte	0x11c
  536 0162 00       		.byte	0
  537 0163 0C       		.uleb128 0xc
- 538 0164 E1000000 		.4byte	.LASF21
+ 538 0164 D6000000 		.4byte	.LASF21
  539 0168 01       		.byte	0x1
  540 0169 EF       		.byte	0xef
  541 016a 00000000 		.4byte	.LFB3
@@ -1498,26 +1498,26 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  573 01ac 00000000 		.4byte	.LFB4
  574 01b0 14000000 		.4byte	.LFE4-.LFB4
  575 01b4 01       		.uleb128 0x1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 26
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 26
 
 
  576 01b5 9C       		.byte	0x9c
  577 01b6 DB010000 		.4byte	0x1db
  578 01ba 0F       		.uleb128 0xf
- 579 01bb 53000000 		.4byte	.LASF24
+ 579 01bb B0000000 		.4byte	.LASF24
  580 01bf 01       		.byte	0x1
  581 01c0 1701     		.2byte	0x117
  582 01c2 77000000 		.4byte	0x77
  583 01c6 00000000 		.4byte	.LLST0
  584 01ca 10       		.uleb128 0x10
- 585 01cb C1020000 		.4byte	.LASF25
+ 585 01cb B6020000 		.4byte	.LASF25
  586 01cf 01       		.byte	0x1
  587 01d0 1901     		.2byte	0x119
  588 01d2 77000000 		.4byte	0x77
  589 01d6 21000000 		.4byte	.LLST1
  590 01da 00       		.byte	0
  591 01db 0E       		.uleb128 0xe
- 592 01dc 4E010000 		.4byte	.LASF23
+ 592 01dc 43010000 		.4byte	.LASF23
  593 01e0 01       		.byte	0x1
  594 01e1 3001     		.2byte	0x130
  595 01e3 00000000 		.4byte	.LFB5
@@ -1526,7 +1526,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  598 01ec 9C       		.byte	0x9c
  599 01ed 12020000 		.4byte	0x212
  600 01f1 0F       		.uleb128 0xf
- 601 01f2 53000000 		.4byte	.LASF24
+ 601 01f2 B0000000 		.4byte	.LASF24
  602 01f6 01       		.byte	0x1
  603 01f7 3001     		.2byte	0x130
  604 01f9 77000000 		.4byte	0x77
@@ -1539,7 +1539,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  611 020d 60000000 		.4byte	.LLST3
  612 0211 00       		.byte	0
  613 0212 0E       		.uleb128 0xe
- 614 0213 FF000000 		.4byte	.LASF27
+ 614 0213 F4000000 		.4byte	.LASF27
  615 0217 01       		.byte	0x1
  616 0218 4F01     		.2byte	0x14f
  617 021a 00000000 		.4byte	.LFB6
@@ -1548,7 +1548,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  620 0223 9C       		.byte	0x9c
  621 0224 37020000 		.4byte	0x237
  622 0228 11       		.uleb128 0x11
- 623 0229 3D010000 		.4byte	.LASF28
+ 623 0229 32010000 		.4byte	.LASF28
  624 022d 01       		.byte	0x1
  625 022e 4F01     		.2byte	0x14f
  626 0230 A9000000 		.4byte	0xa9
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  630 0237 12       		.uleb128 0x12
  631 0238 37000000 		.4byte	.LASF38
  632 023c 01       		.byte	0x1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 27
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 27
 
 
  633 023d 2203     		.2byte	0x322
@@ -1567,7 +1567,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  636 0247 01       		.uleb128 0x1
  637 0248 9C       		.byte	0x9c
  638 0249 13       		.uleb128 0x13
- 639 024a D4000000 		.4byte	.LASF29
+ 639 024a C9000000 		.4byte	.LASF29
  640 024e 01       		.byte	0x1
  641 024f 51       		.byte	0x51
  642 0250 6B000000 		.4byte	0x6b
@@ -1575,7 +1575,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  644 0255 03       		.byte	0x3
  645 0256 00000000 		.4byte	I2CS_initVar
  646 025a 13       		.uleb128 0x13
- 647 025b AA020000 		.4byte	.LASF30
+ 647 025b 9F020000 		.4byte	.LASF30
  648 025f 01       		.byte	0x1
  649 0260 61       		.byte	0x61
  650 0261 A9000000 		.4byte	0xa9
@@ -1583,7 +1583,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  652 0266 03       		.byte	0x3
  653 0267 00000000 		.4byte	I2CS_customIntrHandler
  654 026b 14       		.uleb128 0x14
- 655 026c 42010000 		.4byte	.LASF33
+ 655 026c 37010000 		.4byte	.LASF33
  656 0270 04       		.byte	0x4
  657 0271 C3       		.byte	0xc3
  658 0272 7C020000 		.4byte	0x27c
@@ -1595,11 +1595,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  664 0281 03       		.byte	0x3
  665 0282 4C       		.byte	0x4c
  666 0283 16       		.uleb128 0x16
- 667 0284 DC010000 		.4byte	.LASF32
+ 667 0284 D1010000 		.4byte	.LASF32
  668 0288 03       		.byte	0x3
  669 0289 49       		.byte	0x49
  670 028a 14       		.uleb128 0x14
- 671 028b 93020000 		.4byte	.LASF34
+ 671 028b 88020000 		.4byte	.LASF34
  672 028f 04       		.byte	0x4
  673 0290 C5       		.byte	0xc5
  674 0291 9B020000 		.4byte	0x29b
@@ -1607,7 +1607,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  676 0296 6B000000 		.4byte	0x6b
  677 029a 00       		.byte	0
  678 029b 17       		.uleb128 0x17
- 679 029c CA010000 		.4byte	.LASF39
+ 679 029c BF010000 		.4byte	.LASF39
  680 02a0 04       		.byte	0x4
  681 02a1 C8       		.byte	0xc8
  682 02a2 15       		.uleb128 0x15
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  687              	.Ldebug_abbrev0:
  688 0000 01       		.uleb128 0x1
  689 0001 11       		.uleb128 0x11
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 28
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 28
 
 
  690 0002 01       		.byte	0x1
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  744 0038 00       		.byte	0
  745 0039 49       		.uleb128 0x49
  746 003a 13       		.uleb128 0x13
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 29
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 29
 
 
  747 003b 00       		.byte	0
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  801 0076 18       		.uleb128 0x18
  802 0077 9142     		.uleb128 0x2111
  803 0079 18       		.uleb128 0x18
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 30
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 30
 
 
  804 007a 00       		.byte	0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  858 00b5 3A       		.uleb128 0x3a
  859 00b6 0B       		.uleb128 0xb
  860 00b7 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 31
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 31
 
 
  861 00b8 05       		.uleb128 0x5
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  915 00ef 49       		.uleb128 0x49
  916 00f0 13       		.uleb128 0x13
  917 00f1 02       		.uleb128 0x2
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 32
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 32
 
 
  918 00f2 18       		.uleb128 0x18
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  972 0129 27       		.uleb128 0x27
  973 012a 19       		.uleb128 0x19
  974 012b 3C       		.uleb128 0x3c
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 33
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 33
 
 
  975 012c 19       		.uleb128 0x19
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  1029 000b 0A000000 		.4byte	.LVL12
  1030 000f 14000000 		.4byte	.LFE4
  1031 0013 0400     		.2byte	0x4
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 34
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 34
 
 
  1032 0015 F3       		.byte	0xf3
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  1086 0020 00000000 		.4byte	.LFB0
  1087 0024 08000000 		.4byte	.LFE0-.LFB0
  1088 0028 00000000 		.4byte	.LFB1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 35
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 35
 
 
  1089 002c 18000000 		.4byte	.LFE1-.LFB1
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  1134      00
  1135              	.LASF22:
  1136 0018 49324353 		.ascii	"I2CS_SetRxFifoLevel\000"
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 36
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 36
 
 
  1136      5F536574 
@@ -2115,193 +2115,190 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 1
  1140      536C6176 
  1140      654E6163 
  1140      6B47656E 
- 1141              	.LASF24:
- 1142 0053 6C657665 		.ascii	"level\000"
- 1142      6C00
- 1143              	.LASF37:
- 1144 0059 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\Projekt 4. semester\\E4"
- 1144      73657273 
- 1144      5C416E64 
- 1144      6572735C 
- 1144      4465736B 
- 1145 0087 50524A34 		.ascii	"PRJ4-Gruppe1\\Retnings og fremdrifts enhed\\TestSta"
- 1145      2D477275 
- 1145      70706531 
- 1145      5C526574 
- 1145      6E696E67 
- 1146 00b8 74652E63 		.ascii	"te.cydsn\000"
- 1146      7964736E 
- 1146      00
- 1147              	.LASF3:
- 1148 00c1 73686F72 		.ascii	"short unsigned int\000"
- 1148      7420756E 
- 1148      7369676E 
- 1148      65642069 
- 1148      6E7400
- 1149              	.LASF29:
- 1150 00d4 49324353 		.ascii	"I2CS_initVar\000"
- 1150      5F696E69 
- 1150      74566172 
- 1150      00
- 1151              	.LASF21:
- 1152 00e1 49324353 		.ascii	"I2CS_Stop\000"
- 1152      5F53746F 
- 1152      7000
- 1153              	.LASF11:
- 1154 00eb 666C6F61 		.ascii	"float\000"
- 1154      7400
- 1155              	.LASF1:
- 1156 00f1 756E7369 		.ascii	"unsigned char\000"
- 1156      676E6564 
- 1156      20636861 
- 1156      7200
- 1157              	.LASF27:
- 1158 00ff 49324353 		.ascii	"I2CS_SetCustomInterruptHandler\000"
- 1158      5F536574 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 37
+ 1141              	.LASF37:
+ 1142 0053 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\HellYaeh\\E4PRJ4-Gruppe"
+ 1142      73657273 
+ 1142      5C416E64 
+ 1142      6572735C 
+ 1142      4465736B 
+ 1143 0081 315C5265 		.ascii	"1\\Retnings og fremdrifts enhed\\TestState.cydsn\000"
+ 1143      746E696E 
+ 1143      6773206F 
+ 1143      67206672 
+ 1143      656D6472 
+ 1144              	.LASF24:
+ 1145 00b0 6C657665 		.ascii	"level\000"
+ 1145      6C00
+ 1146              	.LASF3:
+ 1147 00b6 73686F72 		.ascii	"short unsigned int\000"
+ 1147      7420756E 
+ 1147      7369676E 
+ 1147      65642069 
+ 1147      6E7400
+ 1148              	.LASF29:
+ 1149 00c9 49324353 		.ascii	"I2CS_initVar\000"
+ 1149      5F696E69 
+ 1149      74566172 
+ 1149      00
+ 1150              	.LASF21:
+ 1151 00d6 49324353 		.ascii	"I2CS_Stop\000"
+ 1151      5F53746F 
+ 1151      7000
+ 1152              	.LASF11:
+ 1153 00e0 666C6F61 		.ascii	"float\000"
+ 1153      7400
+ 1154              	.LASF1:
+ 1155 00e6 756E7369 		.ascii	"unsigned char\000"
+ 1155      676E6564 
+ 1155      20636861 
+ 1155      7200
+ 1156              	.LASF27:
+ 1157 00f4 49324353 		.ascii	"I2CS_SetCustomInterruptHandler\000"
+ 1157      5F536574 
+ 1157      43757374 
+ 1157      6F6D496E 
+ 1157      74657272 
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 37
 
 
- 1158      43757374 
- 1158      6F6D496E 
- 1158      74657272 
- 1159              	.LASF5:
- 1160 011e 6C6F6E67 		.ascii	"long unsigned int\000"
- 1160      20756E73 
- 1160      69676E65 
- 1160      6420696E 
- 1160      7400
- 1161              	.LASF9:
- 1162 0130 75696E74 		.ascii	"uint8\000"
- 1162      3800
- 1163              	.LASF12:
- 1164 0136 646F7562 		.ascii	"double\000"
- 1164      6C6500
- 1165              	.LASF28:
- 1166 013d 66756E63 		.ascii	"func\000"
- 1166      00
- 1167              	.LASF33:
- 1168 0142 4379496E 		.ascii	"CyIntEnable\000"
- 1168      74456E61 
- 1168      626C6500 
- 1169              	.LASF23:
- 1170 014e 49324353 		.ascii	"I2CS_SetTxFifoLevel\000"
- 1170      5F536574 
- 1170      54784669 
- 1170      666F4C65 
- 1170      76656C00 
- 1171              	.LASF19:
- 1172 0162 49324353 		.ascii	"I2CS_Enable\000"
- 1172      5F456E61 
- 1172      626C6500 
- 1173              	.LASF10:
- 1174 016e 75696E74 		.ascii	"uint32\000"
- 1174      333200
- 1175              	.LASF8:
- 1176 0175 756E7369 		.ascii	"unsigned int\000"
- 1176      676E6564 
- 1176      20696E74 
- 1176      00
- 1177              	.LASF36:
- 1178 0182 47656E65 		.ascii	"Generated_Source\\PSoC4\\I2CS.c\000"
- 1178      72617465 
- 1178      645F536F 
- 1178      75726365 
- 1178      5C50536F 
- 1179              	.LASF7:
- 1180 01a0 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1180      206C6F6E 
- 1180      6720756E 
- 1180      7369676E 
- 1180      65642069 
- 1181              	.LASF16:
- 1182 01b7 49324353 		.ascii	"I2CS_ScbEnableIntr\000"
- 1182      5F536362 
- 1182      456E6162 
- 1182      6C65496E 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 38
+ 1158              	.LASF5:
+ 1159 0113 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1159      20756E73 
+ 1159      69676E65 
+ 1159      6420696E 
+ 1159      7400
+ 1160              	.LASF9:
+ 1161 0125 75696E74 		.ascii	"uint8\000"
+ 1161      3800
+ 1162              	.LASF12:
+ 1163 012b 646F7562 		.ascii	"double\000"
+ 1163      6C6500
+ 1164              	.LASF28:
+ 1165 0132 66756E63 		.ascii	"func\000"
+ 1165      00
+ 1166              	.LASF33:
+ 1167 0137 4379496E 		.ascii	"CyIntEnable\000"
+ 1167      74456E61 
+ 1167      626C6500 
+ 1168              	.LASF23:
+ 1169 0143 49324353 		.ascii	"I2CS_SetTxFifoLevel\000"
+ 1169      5F536574 
+ 1169      54784669 
+ 1169      666F4C65 
+ 1169      76656C00 
+ 1170              	.LASF19:
+ 1171 0157 49324353 		.ascii	"I2CS_Enable\000"
+ 1171      5F456E61 
+ 1171      626C6500 
+ 1172              	.LASF10:
+ 1173 0163 75696E74 		.ascii	"uint32\000"
+ 1173      333200
+ 1174              	.LASF8:
+ 1175 016a 756E7369 		.ascii	"unsigned int\000"
+ 1175      676E6564 
+ 1175      20696E74 
+ 1175      00
+ 1176              	.LASF36:
+ 1177 0177 47656E65 		.ascii	"Generated_Source\\PSoC4\\I2CS.c\000"
+ 1177      72617465 
+ 1177      645F536F 
+ 1177      75726365 
+ 1177      5C50536F 
+ 1178              	.LASF7:
+ 1179 0195 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1179      206C6F6E 
+ 1179      6720756E 
+ 1179      7369676E 
+ 1179      65642069 
+ 1180              	.LASF16:
+ 1181 01ac 49324353 		.ascii	"I2CS_ScbEnableIntr\000"
+ 1181      5F536362 
+ 1181      456E6162 
+ 1181      6C65496E 
+ 1181      747200
+ 1182              	.LASF39:
+ 1183 01bf 4379496E 		.ascii	"CyIntClearPending\000"
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 38
 
 
- 1182      747200
- 1183              	.LASF39:
- 1184 01ca 4379496E 		.ascii	"CyIntClearPending\000"
- 1184      74436C65 
- 1184      61725065 
- 1184      6E64696E 
- 1184      6700
- 1185              	.LASF32:
- 1186 01dc 49324353 		.ascii	"I2CS_I2CInit\000"
- 1186      5F493243 
- 1186      496E6974 
- 1186      00
- 1187              	.LASF15:
- 1188 01e9 73697A65 		.ascii	"sizetype\000"
- 1188      74797065 
- 1188      00
- 1189              	.LASF6:
- 1190 01f2 6C6F6E67 		.ascii	"long long int\000"
- 1190      206C6F6E 
- 1190      6720696E 
- 1190      7400
- 1191              	.LASF13:
- 1192 0200 63686172 		.ascii	"char\000"
- 1192      00
- 1193              	.LASF35:
- 1194 0205 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1194      4320342E 
- 1194      392E3320 
- 1194      32303135 
- 1194      30333033 
- 1195 0238 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 1195      20726576 
- 1195      6973696F 
- 1195      6E203232 
- 1195      31323230 
- 1196 026b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1196      66756E63 
- 1196      74696F6E 
- 1196      2D736563 
- 1196      74696F6E 
- 1197              	.LASF34:
- 1198 0293 4379496E 		.ascii	"CyIntDisable\000"
- 1198      74446973 
- 1198      61626C65 
- 1198      00
- 1199              	.LASF2:
- 1200 02a0 73686F72 		.ascii	"short int\000"
- 1200      7420696E 
- 1200      7400
- 1201              	.LASF30:
- 1202 02aa 49324353 		.ascii	"I2CS_customIntrHandler\000"
- 1202      5F637573 
- 1202      746F6D49 
- 1202      6E747248 
- 1202      616E646C 
- 1203              	.LASF25:
- 1204 02c1 72784669 		.ascii	"rxFifoCtrl\000"
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccLIFLLQ.s 			page 39
+ 1183      74436C65 
+ 1183      61725065 
+ 1183      6E64696E 
+ 1183      6700
+ 1184              	.LASF32:
+ 1185 01d1 49324353 		.ascii	"I2CS_I2CInit\000"
+ 1185      5F493243 
+ 1185      496E6974 
+ 1185      00
+ 1186              	.LASF15:
+ 1187 01de 73697A65 		.ascii	"sizetype\000"
+ 1187      74797065 
+ 1187      00
+ 1188              	.LASF6:
+ 1189 01e7 6C6F6E67 		.ascii	"long long int\000"
+ 1189      206C6F6E 
+ 1189      6720696E 
+ 1189      7400
+ 1190              	.LASF13:
+ 1191 01f5 63686172 		.ascii	"char\000"
+ 1191      00
+ 1192              	.LASF35:
+ 1193 01fa 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1193      4320342E 
+ 1193      392E3320 
+ 1193      32303135 
+ 1193      30333033 
+ 1194 022d 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 1194      20726576 
+ 1194      6973696F 
+ 1194      6E203232 
+ 1194      31323230 
+ 1195 0260 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1195      66756E63 
+ 1195      74696F6E 
+ 1195      2D736563 
+ 1195      74696F6E 
+ 1196              	.LASF34:
+ 1197 0288 4379496E 		.ascii	"CyIntDisable\000"
+ 1197      74446973 
+ 1197      61626C65 
+ 1197      00
+ 1198              	.LASF2:
+ 1199 0295 73686F72 		.ascii	"short int\000"
+ 1199      7420696E 
+ 1199      7400
+ 1200              	.LASF30:
+ 1201 029f 49324353 		.ascii	"I2CS_customIntrHandler\000"
+ 1201      5F637573 
+ 1201      746F6D49 
+ 1201      6E747248 
+ 1201      616E646C 
+ 1202              	.LASF25:
+ 1203 02b6 72784669 		.ascii	"rxFifoCtrl\000"
+ 1203      666F4374 
+ 1203      726C00
+ 1204              	.LASF4:
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc01yRK7.s 			page 39
 
 
- 1204      666F4374 
- 1204      726C00
- 1205              	.LASF4:
- 1206 02cc 6C6F6E67 		.ascii	"long int\000"
- 1206      20696E74 
- 1206      00
- 1207              	.LASF14:
- 1208 02d5 72656733 		.ascii	"reg32\000"
- 1208      3200
- 1209              	.LASF18:
- 1210 02db 49324353 		.ascii	"I2CS_Init\000"
- 1210      5F496E69 
- 1210      7400
- 1211              	.LASF0:
- 1212 02e5 7369676E 		.ascii	"signed char\000"
- 1212      65642063 
- 1212      68617200 
- 1213              	.LASF17:
- 1214 02f1 49324353 		.ascii	"I2CS_ScbModeStop\000"
- 1214      5F536362 
- 1214      4D6F6465 
- 1214      53746F70 
- 1214      00
- 1215              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 1205 02c1 6C6F6E67 		.ascii	"long int\000"
+ 1205      20696E74 
+ 1205      00
+ 1206              	.LASF14:
+ 1207 02ca 72656733 		.ascii	"reg32\000"
+ 1207      3200
+ 1208              	.LASF18:
+ 1209 02d0 49324353 		.ascii	"I2CS_Init\000"
+ 1209      5F496E69 
+ 1209      7400
+ 1210              	.LASF0:
+ 1211 02da 7369676E 		.ascii	"signed char\000"
+ 1211      65642063 
+ 1211      68617200 
+ 1212              	.LASF17:
+ 1213 02e6 49324353 		.ascii	"I2CS_ScbModeStop\000"
+ 1213      5F536362 
+ 1213      4D6F6465 
+ 1213      53746F70 
+ 1213      00
+ 1214              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

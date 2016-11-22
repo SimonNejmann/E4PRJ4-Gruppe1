@@ -2,7 +2,7 @@
 --	Conversion of TestState.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sat Nov 19 10:55:40 2016
+--	Tue Nov 22 16:49:38 2016
 --
 
 USE cypress.cypress.all;
@@ -1188,7 +1188,7 @@ Clock_2:cy_clock_v1_0
 		divisor=>0,
 		period=>"5000000000000",
 		is_direct=>'0',
-		is_digital=>'0')
+		is_digital=>'1')
 	PORT MAP(clock_out=>Net_310,
 		dig_domain_out=>open);
 \I2CS:SCBCLK\:cy_clock_v1_0

@@ -164,7 +164,6 @@
 <v>MyLabrary\TestState\Generated_Source\PSoC4\D\D_aliases.h</v>
 <v>MyLabrary\TestState\Generated_Source\PSoC4\D\D_PM.c</v>
 <v>MyLabrary\TestState\Generated_Source\PSoC4\I2CS</v>
-<v>MyLabrary\TestState\Generated_Source\PSoC4\I2CS_SCB_IRQ</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="MyLabrary\StepperState\State\State.cyudb">
@@ -303,7 +302,6 @@
 <v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\PWM_1_PM.lst</v>
 <v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\run_back.lst</v>
 <v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\run_front.lst</v>
-<v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\State_CtrlReg_Dir.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -360,14 +358,7 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v="..\TestState.cydsn\run_front.c" />
-<name v=".\StepperState.cylib\State\State.cyudb" />
-<name v=".\StepperState.cylib\State\API\State.h" />
-<name v=".\StepperState.cylib\State\State.cysym" />
-<name v="..\TestState.cydsn\TopDesign\TopDesign.cysch" />
 <name v="..\TestState.cydsn\TestState.cydwr" />
-<name v="..\TestState.cydsn\main.c" />
-<name v="..\TestState.cydsn\main.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -375,7 +366,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1659, 678" SelectedTabbedMdiWindow="7bf865ae-7c92-407d-bb82-eb576b6613f4"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="67d15892-cbad-444d-b279-5c91f67ef747" /><DocumentWindow Key="64637212-2304-41fa-83fe-f1678d9ec2dd" Guid="8090d515-a610-4169-b45b-c8e1d69db4b8" /><DocumentWindow Key="248467d4-9c58-43ff-a9ff-fe3054daa70e" Guid="c2f6fc82-be5f-49f9-9812-d7178de9b4d0" /><DocumentWindow Key="16b625e5-516e-4e34-9ca0-1faf9ddf1c95" Guid="ba11e82e-69bc-4d1b-af50-b4383386c988" /><DocumentWindow Key="637afdc2-354e-4025-aed8-30b301d3cec7" Guid="bfca8ad1-2e49-4e0d-92a8-f6c3568e08ff" /><DocumentWindow Key="ef245391-ed65-41ff-bc25-51e0e5a4ae9d" Guid="444520c0-3d2d-4790-8c20-8fa0f197d1e7" /><DocumentWindow Key="6a6ba115-a7af-4558-9c8b-676d86cf67de" Guid="7bf865ae-7c92-407d-bb82-eb576b6613f4" /><DocumentWindow Key="1e23a3dc-37de-4668-bf79-1b36c5cff11e" Guid="383d23e4-b67c-459a-9767-04984873a795" /><DocumentWindow Key="bff0026c-e988-406e-ac8c-53fe138bba85" Guid="ea1d184d-511a-4215-90c8-fafeaadfa15c" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="811, 662" SelectedTabbedMdiWindow="e73de0ba-c6aa-4046-bfe5-214a1157b139"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="67d15892-cbad-444d-b279-5c91f67ef747" /><DocumentWindow Key="47e34a2d-94e7-4bf1-9162-28eb46dc844a" Guid="e73de0ba-c6aa-4046-bfe5-214a1157b139" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

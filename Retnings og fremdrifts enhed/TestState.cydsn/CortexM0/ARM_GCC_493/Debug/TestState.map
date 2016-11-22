@@ -750,7 +750,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x3063
+.debug_info     0x00000000     0x3058
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x223 .\CortexM0\ARM_GCC_493\Debug\main.o
  .debug_info    0x00000223       0xc6 .\CortexM0\ARM_GCC_493\Debug\run_back.o
@@ -765,8 +765,8 @@ END GROUP
  .debug_info    0x000028e6      0x38e .\CortexM0\ARM_GCC_493\Debug\TestState.a(I2CS_I2C_SLAVE.o)
  .debug_info    0x00002c74       0xd6 .\CortexM0\ARM_GCC_493\Debug\TestState.a(State_CtrlReg_Dir.o)
  .debug_info    0x00002d4a       0xd6 .\CortexM0\ARM_GCC_493\Debug\TestState.a(State_CtrlReg_Run.o)
- .debug_info    0x00002e20       0xb6 .\CortexM0\ARM_GCC_493\Debug\TestState.a(CyBootAsmGnu.o)
- .debug_info    0x00002ed6      0x18d .\CortexM0\ARM_GCC_493\Debug\TestState.a(I2CS_I2C_INT.o)
+ .debug_info    0x00002e20       0xab .\CortexM0\ARM_GCC_493\Debug\TestState.a(CyBootAsmGnu.o)
+ .debug_info    0x00002ecb      0x18d .\CortexM0\ARM_GCC_493\Debug\TestState.a(I2CS_I2C_INT.o)
 
 .debug_abbrev   0x00000000     0x102d
  *(.debug_abbrev)
@@ -825,36 +825,36 @@ END GROUP
  .debug_frame   0x00000c68       0x2c c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
  .debug_frame   0x00000c94       0x20 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x12f7
+.debug_str      0x00000000     0x12ec
  *(.debug_str)
- .debug_str     0x00000000      0x27b .\CortexM0\ARM_GCC_493\Debug\main.o
-                                0x2bb (size before relaxing)
- .debug_str     0x0000027b       0x1a .\CortexM0\ARM_GCC_493\Debug\run_back.o
-                                0x1b5 (size before relaxing)
- .debug_str     0x00000295       0x4d .\CortexM0\ARM_GCC_493\Debug\run_front.o
-                                0x1f8 (size before relaxing)
- .debug_str     0x000002e2       0x59 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
-                                0x1f4 (size before relaxing)
- .debug_str     0x0000033b      0x15a .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
-                                0x31b (size before relaxing)
- .debug_str     0x00000495       0xf5 .\CortexM0\ARM_GCC_493\Debug\TestState.a(cyfitter_cfg.o)
-                                0x2ec (size before relaxing)
- .debug_str     0x0000058a      0x4d8 .\CortexM0\ARM_GCC_493\Debug\TestState.a(CyLib.o)
-                                0x6de (size before relaxing)
- .debug_str     0x00000a62      0x530 .\CortexM0\ARM_GCC_493\Debug\TestState.a(CyLFClk.o)
-                                0x757 (size before relaxing)
- .debug_str     0x00000f92      0x124 .\CortexM0\ARM_GCC_493\Debug\TestState.a(I2CS.o)
-                                0x302 (size before relaxing)
- .debug_str     0x000010b6       0x74 .\CortexM0\ARM_GCC_493\Debug\TestState.a(I2CS_I2C.o)
-                                0x270 (size before relaxing)
- .debug_str     0x0000112a       0xf8 .\CortexM0\ARM_GCC_493\Debug\TestState.a(I2CS_I2C_SLAVE.o)
-                                0x3e3 (size before relaxing)
- .debug_str     0x00001222       0x4a .\CortexM0\ARM_GCC_493\Debug\TestState.a(State_CtrlReg_Dir.o)
-                                0x1f9 (size before relaxing)
- .debug_str     0x0000126c       0x42 .\CortexM0\ARM_GCC_493\Debug\TestState.a(State_CtrlReg_Run.o)
-                                0x1f9 (size before relaxing)
- .debug_str     0x000012ae       0x49 .\CortexM0\ARM_GCC_493\Debug\TestState.a(I2CS_I2C_INT.o)
-                                0x2da (size before relaxing)
+ .debug_str     0x00000000      0x270 .\CortexM0\ARM_GCC_493\Debug\main.o
+                                0x2b0 (size before relaxing)
+ .debug_str     0x00000270       0x1a .\CortexM0\ARM_GCC_493\Debug\run_back.o
+                                0x1aa (size before relaxing)
+ .debug_str     0x0000028a       0x4d .\CortexM0\ARM_GCC_493\Debug\run_front.o
+                                0x1ed (size before relaxing)
+ .debug_str     0x000002d7       0x59 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+                                0x1e9 (size before relaxing)
+ .debug_str     0x00000330      0x15a .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                                0x310 (size before relaxing)
+ .debug_str     0x0000048a       0xf5 .\CortexM0\ARM_GCC_493\Debug\TestState.a(cyfitter_cfg.o)
+                                0x2e1 (size before relaxing)
+ .debug_str     0x0000057f      0x4d8 .\CortexM0\ARM_GCC_493\Debug\TestState.a(CyLib.o)
+                                0x6d3 (size before relaxing)
+ .debug_str     0x00000a57      0x530 .\CortexM0\ARM_GCC_493\Debug\TestState.a(CyLFClk.o)
+                                0x74c (size before relaxing)
+ .debug_str     0x00000f87      0x124 .\CortexM0\ARM_GCC_493\Debug\TestState.a(I2CS.o)
+                                0x2f7 (size before relaxing)
+ .debug_str     0x000010ab       0x74 .\CortexM0\ARM_GCC_493\Debug\TestState.a(I2CS_I2C.o)
+                                0x265 (size before relaxing)
+ .debug_str     0x0000111f       0xf8 .\CortexM0\ARM_GCC_493\Debug\TestState.a(I2CS_I2C_SLAVE.o)
+                                0x3d8 (size before relaxing)
+ .debug_str     0x00001217       0x4a .\CortexM0\ARM_GCC_493\Debug\TestState.a(State_CtrlReg_Dir.o)
+                                0x1ee (size before relaxing)
+ .debug_str     0x00001261       0x42 .\CortexM0\ARM_GCC_493\Debug\TestState.a(State_CtrlReg_Run.o)
+                                0x1ee (size before relaxing)
+ .debug_str     0x000012a3       0x49 .\CortexM0\ARM_GCC_493\Debug\TestState.a(I2CS_I2C_INT.o)
+                                0x2cf (size before relaxing)
 
 .debug_loc      0x00000000     0x15e0
  *(.debug_loc)
