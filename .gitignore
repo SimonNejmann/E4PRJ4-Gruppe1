@@ -27,6 +27,15 @@
 *.out
 *.app
 
+#################
+## PSoC Creator
+#################
+
+**/*.cydsn/codegentemp/
+**/*.cydsn/CortexM0/
+**/*.cydsn/Export/
+**/*.cydsn/Generated_Source/
+
 # =========================
 # Operating System Files
 # =========================
