@@ -13,12 +13,11 @@ public:
   virtual void send(unsigned long id, Message* msg = NULL);
   virtual Message* receive(unsigned long& id);
   virtual ~MsgQueuePipe();
-  bool empty();
   int getReceiveFD();
   
 protected:
-  int pipefd[2];
-  pthread_mutex_t pipeMut;
+  int pipefd_[2];
+  pthread_mutex_t pipeMut_;
 };
 
 #endif //_MSGQUEUEPIPE_HPP_

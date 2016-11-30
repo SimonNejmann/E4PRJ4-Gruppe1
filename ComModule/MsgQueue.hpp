@@ -12,17 +12,19 @@ public:
   virtual void send(unsigned long id, Message* msg = NULL);
   virtual Message* receive(unsigned long& id);
   virtual ~MsgQueue();
-protected:
-  pthread_mutex_t mut;
-  pthread_cond_t cond;
-  const unsigned long maxSize;
 
-  struct item 
+private:
+  pthread_mutex_t mut_;
+  pthread_cond_t cond_;
+  const unsigned long maxSize_;
+
+  struct Item 
   {
-    unsigned long id;
-    Message *msg;
+    Item(unsigned long id, Message *msg): id_(id), msg_(msg) {}
+    unsigned long id_;
+    Message *msg_;
   };
-  std::queue<struct item*> list;
+  std::queue<Item> list_;
 };
 
 #endif //_MSGQUEUE_HPP_

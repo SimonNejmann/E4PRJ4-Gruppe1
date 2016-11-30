@@ -1,59 +1,52 @@
 #include "MsgQueue.hpp"
 #include "ScopedLocker.hpp"
 
-MsgQueue::MsgQueue(unsigned long maxSize) : maxSize(maxSize)
+MsgQueue::MsgQueue(unsigned long maxSize) : maxSize_(maxSize)
 {
-  pthread_mutex_init(&mut, NULL);
-  pthread_cond_init(&cond, NULL);
+  pthread_mutex_init(&mut_, NULL);
+  pthread_cond_init(&cond_, NULL);
 }
 
 MsgQueue::~MsgQueue()
 {
-  pthread_mutex_lock(&mut);
-  while (!list.empty()) {
-    struct item *it = list.front();
-    list.pop();
-    if (it->msg)
-      delete it->msg;
-    delete it;
+  pthread_mutex_lock(&mut_);
+  while (!list_.empty()) {
+    if (list_.front().msg_)
+      delete list_.front().msg_;
+    list_.pop();
   }
-  pthread_mutex_unlock(&mut);
-  pthread_mutex_destroy(&mut);
-  pthread_cond_destroy(&cond);
+  pthread_mutex_unlock(&mut_);
+  pthread_mutex_destroy(&mut_);
+  pthread_cond_destroy(&cond_);
 }
 
 void MsgQueue::send(unsigned long id, Message* msg)
 {
-  struct item *it = new struct item;
-  it->id = id;
-  it->msg = msg;
-
-  ScopedLocker lock(&mut);
+  ScopedLocker lock(&mut_);
   // While queue is full: Wait
-  while (list.size() >= maxSize)
-    pthread_cond_wait(&cond, &mut);
+  while (list_.size() >= maxSize_)
+    pthread_cond_wait(&cond_, &mut_);
 
   // Queue got room
-  list.push(it);
+  list_.push(Item(id, msg));
   // Signal new item
-  pthread_cond_broadcast(&cond);
+  pthread_cond_broadcast(&cond_);
   // ScopedLocker will unlock
 }
 
 Message* MsgQueue::receive(unsigned long& id)
 {
-  ScopedLocker lock(&mut);
+  ScopedLocker lock(&mut_);
   // While queue is empty: Wait
-  while (list.empty())
-    pthread_cond_wait(&cond, &mut);
+  while (list_.empty())
+    pthread_cond_wait(&cond_, &mut_);
   // Queue not empty
-  struct item *it = list.front();
-  list.pop();
-  id = it->id;
-  Message *msg = it->msg;
-  delete it;
+  Item it = list_.front();
+  list_.pop();
   // Signal space in queue
-  pthread_cond_signal(&cond);
-  return msg;
+  pthread_cond_signal(&cond_);
+
+  id = it.id_;
+  return it.msg_;
   // ScopedLocker will unlock
 }

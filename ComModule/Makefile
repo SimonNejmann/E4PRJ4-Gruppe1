@@ -1,5 +1,5 @@
 SOURCES=main.cpp MsgQueue.cpp MsgQueuePipe.cpp util.cpp
-EXE=PLCS_v2
+EXE=PipeTest
 CXXFLAGS=-I. -pthread -g
 
 # Making for host
