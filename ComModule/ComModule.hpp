@@ -4,7 +4,6 @@
 #include "SocketHandler.hpp"
 #include "I2CHandler.hpp"
 #include "constants.hpp"
-#include "Sender.hpp"
 
 class ComModule
 {
@@ -27,8 +26,6 @@ private:
   MsgQueue mq_;
   SocketHandler sock_;
   I2CHandler i2c_;
-
-  Sender s_;
   
   static void* staticStarter(void* arg);
   void comModuleThread();
