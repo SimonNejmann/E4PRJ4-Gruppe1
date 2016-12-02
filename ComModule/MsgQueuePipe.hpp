@@ -1,5 +1,5 @@
-#ifndef _MSGQUEUEPIPE_HPP_
-#define _MSGQUEUEPIPE_HPP_
+#ifndef MSGQUEUEPIPE_HPP_
+#define MSGQUEUEPIPE_HPP_
 
 #include <queue>
 #include <pthread.h>
@@ -20,4 +20,4 @@ protected:
   pthread_mutex_t pipeMut_;
 };
 
-#endif //_MSGQUEUEPIPE_HPP_
+#endif // MSGQUEUEPIPE_HPP_

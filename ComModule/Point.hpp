@@ -1,5 +1,5 @@
-#ifndef _POINT_HPP_
-#define _POINT_HPP_
+#ifndef POINT_HPP_
+#define POINT_HPP_
 
 #include "Message.hpp"
 
@@ -10,4 +10,4 @@ struct Point : public Message
   int z;
 };
 
-#endif //_POINT_HPP_
+#endif // POINT_HPP_

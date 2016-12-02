@@ -1,15 +1,15 @@
 #include <iostream>
 #include "Sender.hpp"
-#include "Receiver.hpp"
+#include "SocketHandler.hpp"
 
 int main()
 {
-  Receiver r;
+  SocketHandler r;
   Sender s(&r);
 
   pthread_t rT, sT;
 
-  pthread_create(&rT, NULL, Receiver::run, &r);
+  pthread_create(&rT, NULL, SocketHandler::run, &r);
   pthread_create(&sT, NULL, Sender::run, &s);
 
   void *exitStatus;

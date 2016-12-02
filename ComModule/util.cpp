@@ -7,13 +7,8 @@ namespace util {
 
   void randSleep(int min, int max)
   {
-    if (!started) {
-      started = true;
-      srand (time(NULL));
-    }
-    
     const int ms = 1000*1000; // 1 ms in ns
-    unsigned long wait = (rand() % (max-min)) + min;
+    unsigned long wait = randVal(min, max);
 
     struct timespec t;
     t.tv_sec = wait / 1000;  // whole seconds
@@ -27,7 +22,19 @@ namespace util {
       started = true;
       srand (time(NULL));
     }
+    if (min == max)
+      return min;
     
     return (rand() % (max-min)) + min;
+  }
+
+  int max(int a, int b)
+  {
+    return (a>b)?a:b;
+  }
+
+  int min(int a, int b)
+  {
+    return (a<b)?a:b;
   }
 }

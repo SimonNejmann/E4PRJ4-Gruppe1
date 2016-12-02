@@ -1,15 +1,15 @@
-#ifndef _SENDER_HPP_
-#define _SENDER_HPP_
+#ifndef SENDER_HPP_
+#define SENDER_HPP_
 
 #include <iostream>
 #include "util.hpp"
 #include "Point.hpp"
-#include "Receiver.hpp"
+#include "SocketHandler.hpp"
 
 class Sender
 {
 public:
-  Sender(Receiver *r) : receiver(r) {}
+  Sender(SocketHandler *r) : receiver(r) {}
   ~Sender() {}
   
   static void* run(void* arg)
@@ -21,7 +21,7 @@ public:
   }
   
 private:
-  Receiver *receiver;
+  SocketHandler *receiver;
 
   Point* newPoint()
   {
@@ -37,9 +37,9 @@ private:
     while(true) {
       util::randSleep(1000, 1001);
       p = newPoint();
-      receiver->send(Receiver::POINT_MSG, p);
+      receiver->send(SocketHandler::POINT_MSG, p);
     }
   }
 };
 
-#endif //_SENDER_HPP_
+#endif // SENDER_HPP_

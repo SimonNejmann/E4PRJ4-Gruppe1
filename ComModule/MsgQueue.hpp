@@ -1,5 +1,5 @@
-#ifndef _MSGQUEUE_HPP_
-#define _MSGQUEUE_HPP_
+#ifndef MSGQUEUE_HPP_
+#define MSGQUEUE_HPP_
 
 #include <queue>
 #include <pthread.h>
@@ -27,4 +27,4 @@ private:
   std::queue<Item> list_;
 };
 
-#endif //_MSGQUEUE_HPP_
+#endif // MSGQUEUE_HPP_
