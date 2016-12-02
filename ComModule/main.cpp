@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Sender.hpp"
 #include "SocketHandler.hpp"
+#include "TimerThread.hpp"
 
 int main()
 {
