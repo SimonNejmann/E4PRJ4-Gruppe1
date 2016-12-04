@@ -38,6 +38,7 @@
 #include "C_front.h"
 #include "D_front_aliases.h"
 #include "D_front.h"
+<<<<<<< HEAD
 #include "State_back_engine_CtrlReg_Run.h"
 #include "State_back_engine_CtrlReg_Dir.h"
 #include "State_back_engine_State.h"
@@ -48,6 +49,15 @@
 #include "PWM_Fremdrift_for_aliases.h"
 #include "PWM_Fremdrift_for.h"
 #include "PWM_bagerste_fremdrift.h"
+=======
+#include "VDAC8_B.h"
+#include "PWM_front_engine.h"
+#include "Pwm_back_aliases.h"
+#include "Pwm_back.h"
+#include "Pwm_front_aliases.h"
+#include "Pwm_front.h"
+#include "PWM_back_engine.h"
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 #include "D_back_aliases.h"
 #include "D_back.h"
 #include "C_back_aliases.h"
@@ -56,6 +66,7 @@
 #include "B_back.h"
 #include "A_back_aliases.h"
 #include "A_back.h"
+<<<<<<< HEAD
 #include "test_aliases.h"
 #include "test.h"
 #include "PWM_for_retning_voltreguator.h"
@@ -65,6 +76,18 @@
 #include "PWM_bag_retning_voltreguator.h"
 #include "PWM_Voltreg_bag_aliases.h"
 #include "PWM_Voltreg_bag.h"
+=======
+#include "Clock_2.h"
+#include "VDAC8_A.h"
+#include "PGA_A.h"
+#include "Comp_A.h"
+#include "Sense_A_aliases.h"
+#include "Sense_A.h"
+#include "PGA_B.h"
+#include "Comp_B.h"
+#include "Sense_B_aliases.h"
+#include "Sense_B.h"
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 #include "core_cm3_psoc5.h"
 #include "CyDmac.h"
 #include "CyFlash.h"

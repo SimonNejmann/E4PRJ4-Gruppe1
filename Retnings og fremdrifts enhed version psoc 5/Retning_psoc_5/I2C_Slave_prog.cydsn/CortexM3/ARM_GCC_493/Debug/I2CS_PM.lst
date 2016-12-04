@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 1
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
    1              		.syntax unified
@@ -58,7 +62,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
   29:Generated_Source\PSoC5/I2CS_PM.c **** #endif /* (I2CS_FF_IMPLEMENTED) */
   30:Generated_Source\PSoC5/I2CS_PM.c **** 
   31:Generated_Source\PSoC5/I2CS_PM.c **** #if (I2CS_TIMEOUT_ENABLED)
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 2
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 2
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
   32:Generated_Source\PSoC5/I2CS_PM.c ****     I2CS_DEFAULT_TMOUT_PERIOD,
@@ -118,7 +126,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
   32              		.loc 1 80 0
   33 0000 084B     		ldr	r3, .L2
   34 0002 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 3
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 3
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
   35 0004 084B     		ldr	r3, .L2+4
@@ -178,7 +190,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
   96:Generated_Source\PSoC5/I2CS_PM.c ****     *  2) Wait unti I2C is ready go to Sleep; !!
   97:Generated_Source\PSoC5/I2CS_PM.c ****     *  3) These bits are cleared on wake up.
   98:Generated_Source\PSoC5/I2CS_PM.c ****     */
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 4
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 4
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
   99:Generated_Source\PSoC5/I2CS_PM.c ****     /* Wait when block is ready for sleep */
@@ -238,7 +254,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
   74              		.loc 1 152 0
   75              		.cfi_startproc
   76              		@ args = 0, pretend = 0, frame = 0
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 5
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 5
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
   77              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -298,7 +318,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  112              	I2CS_RestoreConfig:
  113              	.LFB2:
  172:Generated_Source\PSoC5/I2CS_PM.c **** }
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 6
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 6
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
  173:Generated_Source\PSoC5/I2CS_PM.c **** 
@@ -358,7 +382,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  126 000a 0DD0     		beq	.L10
  215:Generated_Source\PSoC5/I2CS_PM.c ****     /* Low power mode was Sleep - backup regulator is enabled */
  216:Generated_Source\PSoC5/I2CS_PM.c ****     {
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 7
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 7
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
  217:Generated_Source\PSoC5/I2CS_PM.c ****         /* Enable backup regulator in active mode */
@@ -418,7 +446,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  155 0036 D978     		ldrb	r1, [r3, #3]	@ zero_extendqisi2
  156 0038 0C3A     		subs	r2, r2, #12
  157 003a 1170     		strb	r1, [r2]
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 8
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 8
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
  243:Generated_Source\PSoC5/I2CS_PM.c ****         I2CS_CLKDIV1_REG = I2CS_backup.clkDiv1;
@@ -478,7 +510,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  269:Generated_Source\PSoC5/I2CS_PM.c **** * Function Name: I2CS_Wakeup
  270:Generated_Source\PSoC5/I2CS_PM.c **** ********************************************************************************
  271:Generated_Source\PSoC5/I2CS_PM.c **** *
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 9
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 9
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
  272:Generated_Source\PSoC5/I2CS_PM.c **** * Summary:
@@ -538,7 +574,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  308:Generated_Source\PSoC5/I2CS_PM.c ****         I2CS_EnableInt();
  204              		.loc 1 308 0
  205 0010 4FF40042 		mov	r2, #32768
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 10
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 10
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
  206 0014 024B     		ldr	r3, .L18+4
@@ -581,14 +621,14 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  243 000c CF000000 		.4byte	.LASF29
  244 0010 01       		.byte	0x1
  245 0011 A0000000 		.4byte	.LASF30
- 246 0015 0B020000 		.4byte	.LASF31
+ 246 0015 FF010000 		.4byte	.LASF31
  247 0019 00000000 		.4byte	.Ldebug_ranges0+0
  248 001d 00000000 		.4byte	0
  249 0021 00000000 		.4byte	.Ldebug_line0
  250 0025 02       		.uleb128 0x2
  251 0026 01       		.byte	0x1
  252 0027 06       		.byte	0x6
- 253 0028 AB020000 		.4byte	.LASF0
+ 253 0028 A0020000 		.4byte	.LASF0
  254 002c 02       		.uleb128 0x2
  255 002d 01       		.byte	0x1
  256 002e 08       		.byte	0x8
@@ -598,7 +638,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  260 0035 05       		.byte	0x5
  261 0036 E4010000 		.4byte	.LASF2
  262 003a 02       		.uleb128 0x2
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 11
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 11
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
  263 003b 02       		.byte	0x2
@@ -607,7 +651,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  266 0041 02       		.uleb128 0x2
  267 0042 04       		.byte	0x4
  268 0043 05       		.byte	0x5
- 269 0044 96020000 		.4byte	.LASF4
+ 269 0044 8B020000 		.4byte	.LASF4
  270 0048 02       		.uleb128 0x2
  271 0049 04       		.byte	0x4
  272 004a 07       		.byte	0x7
@@ -658,7 +702,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  317 00a4 04       		.uleb128 0x4
  318 00a5 5A000000 		.4byte	.LASF15
  319 00a9 02       		.byte	0x2
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 12
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 12
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
  320 00aa 3C02     		.2byte	0x23c
@@ -682,7 +730,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  338 00d0 76       		.byte	0x76
  339 00d1 1E010000 		.4byte	0x11e
  340 00d5 07       		.uleb128 0x7
- 341 00d6 9F020000 		.4byte	.LASF18
+ 341 00d6 94020000 		.4byte	.LASF18
  342 00da 03       		.byte	0x3
  343 00db 78       		.byte	0x78
  344 00dc 6B000000 		.4byte	0x6b
@@ -718,7 +766,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  374 0118 6B000000 		.4byte	0x6b
  375 011c 05       		.byte	0x5
  376 011d 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 13
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 13
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
  377 011e 09       		.uleb128 0x9
@@ -773,12 +825,16 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  426 0194 E5010000 		.4byte	0x1e5
  427 0198 00       		.byte	0
  428 0199 0E       		.uleb128 0xe
- 429 019a B7020000 		.4byte	.LASF26
+ 429 019a AC020000 		.4byte	.LASF26
  430 019e 01       		.byte	0x1
  431 019f 2C01     		.2byte	0x12c
  432 01a1 00000000 		.4byte	.LFB3
  433 01a5 24000000 		.4byte	.LFE3-.LFB3
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 14
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 14
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
  434 01a9 01       		.uleb128 0x1
@@ -792,7 +848,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  442 01bd F6010000 		.4byte	0x1f6
  443 01c1 00       		.byte	0
  444 01c2 0F       		.uleb128 0xf
- 445 01c3 FF010000 		.4byte	.LASF34
+ 445 01c3 7F020000 		.4byte	.LASF34
  446 01c7 01       		.byte	0x1
  447 01c8 11       		.byte	0x11
  448 01c9 1E010000 		.4byte	0x11e
@@ -838,7 +894,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  488 000c 17       		.uleb128 0x17
  489 000d 11       		.uleb128 0x11
  490 000e 01       		.uleb128 0x1
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 15
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 15
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
  491 000f 10       		.uleb128 0x10
@@ -898,7 +958,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  545 0045 0B       		.uleb128 0xb
  546 0046 01       		.uleb128 0x1
  547 0047 13       		.uleb128 0x13
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 16
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 16
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
  548 0048 00       		.byte	0
@@ -958,7 +1022,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  602 007e 3B       		.uleb128 0x3b
  603 007f 0B       		.uleb128 0xb
  604 0080 27       		.uleb128 0x27
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 17
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 17
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
  605 0081 19       		.uleb128 0x19
@@ -1018,7 +1086,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  659 00bb 49       		.uleb128 0x49
  660 00bc 13       		.uleb128 0x13
  661 00bd 02       		.uleb128 0x2
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 18
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 18
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
  662 00be 17       		.uleb128 0x17
@@ -1078,7 +1150,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  716 00f5 3B       		.uleb128 0x3b
  717 00f6 0B       		.uleb128 0xb
  718 00f7 27       		.uleb128 0x27
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 19
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 19
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
  719 00f8 19       		.uleb128 0x19
@@ -1138,7 +1214,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  773 0000 10000000 		.4byte	.LVL2
  774 0004 1D000000 		.4byte	.LVL3-1
  775 0008 0100     		.2byte	0x1
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 20
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 20
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
  776 000a 50       		.byte	0x50
@@ -1198,7 +1278,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  819 0025 49324353 		.ascii	"I2CS_Stop\000"
  819      5F53746F 
  819      7000
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 21
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 21
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
  820              	.LASF12:
@@ -1258,7 +1342,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  845      4320342E 
  845      392E3320 
  845      32303135 
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 22
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 22
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
  845      30333033 
@@ -1318,7 +1406,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  869 01d1 49324353 		.ascii	"I2CS_RestoreConfig\000"
  869      5F526573 
  869      746F7265 
+<<<<<<< HEAD
 ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 23
+=======
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc0nlCUf.s 			page 23
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
 
  869      436F6E66 
@@ -1334,40 +1426,40 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccHWdwTw.s 			page 1
  874              	.LASF9:
  875 01f9 75696E74 		.ascii	"uint8\000"
  875      3800
- 876              	.LASF34:
- 877 01ff 49324353 		.ascii	"I2CS_backup\000"
- 877      5F626163 
- 877      6B757000 
- 878              	.LASF31:
- 879 020b 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\Projekt 4. semester\\E4"
- 879      73657273 
- 879      5C416E64 
- 879      6572735C 
- 879      4465736B 
- 880 0239 50524A34 		.ascii	"PRJ4-Gruppe1\\Retnings og fremdrifts enhed version "
- 880      2D477275 
- 880      70706531 
- 880      5C526574 
- 880      6E696E67 
- 881 026b 70736F63 		.ascii	"psoc 5\\Retning_psoc_5\\I2C_Slave_prog.cydsn\000"
- 881      20355C52 
- 881      65746E69 
- 881      6E675F70 
- 881      736F635F 
+ 876              	.LASF31:
+ 877 01ff 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\HellYaeh\\E4PRJ4-Gruppe"
+ 877      73657273 
+ 877      5C416E64 
+ 877      6572735C 
+ 877      4465736B 
+ 878 022d 315C5265 		.ascii	"1\\Retnings og fremdrifts enhed version psoc 5\\Ret"
+ 878      746E696E 
+ 878      6773206F 
+ 878      67206672 
+ 878      656D6472 
+ 879 025e 6E696E67 		.ascii	"ning_psoc_5\\I2C_Slave_prog.cydsn\000"
+ 879      5F70736F 
+ 879      635F355C 
+ 879      4932435F 
+ 879      536C6176 
+ 880              	.LASF34:
+ 881 027f 49324353 		.ascii	"I2CS_backup\000"
+ 881      5F626163 
+ 881      6B757000 
  882              	.LASF4:
- 883 0296 6C6F6E67 		.ascii	"long int\000"
+ 883 028b 6C6F6E67 		.ascii	"long int\000"
  883      20696E74 
  883      00
  884              	.LASF18:
- 885 029f 656E6162 		.ascii	"enableState\000"
+ 885 0294 656E6162 		.ascii	"enableState\000"
  885      6C655374 
  885      61746500 
  886              	.LASF0:
- 887 02ab 7369676E 		.ascii	"signed char\000"
+ 887 02a0 7369676E 		.ascii	"signed char\000"
  887      65642063 
  887      68617200 
  888              	.LASF26:
- 889 02b7 49324353 		.ascii	"I2CS_Wakeup\000"
+ 889 02ac 49324353 		.ascii	"I2CS_Wakeup\000"
  889      5F57616B 
  889      65757000 
  890              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

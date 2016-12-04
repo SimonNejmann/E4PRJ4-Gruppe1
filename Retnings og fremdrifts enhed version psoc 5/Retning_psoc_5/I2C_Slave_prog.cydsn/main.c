@@ -19,14 +19,21 @@ uint8 i2cWriteBuffer[BUFFER_SIZE];
 int main()
 {
     uint8 status = STS_CMD_FAIL;
+<<<<<<< HEAD
     PWM_foreste_fremdrift_Start();
     //PWM_foreste_fremdrift_Start();
+=======
+    PWM_front_engine_Start();
+    
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 
     /* Start I2C slave (SCB mode) */
     I2CS_SlaveInitReadBuf (i2cReadBuffer,  BUFFER_SIZE);
     I2CS_SlaveInitWriteBuf(i2cWriteBuffer, BUFFER_SIZE);
     I2CS_Start();
-
+    
+    /* Start current limiter Sense A*/
+   
     CyGlobalIntEnable;
     
 

@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Retning_psoc_5\I2C_Slave_prog\Source Files\run_front.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Retning_psoc_5\I2C_Slave_prog\I2C_Slave_prog.cydwr">
 <ExpandedNodeIds>
 <v>Retning_psoc_5</v>
 <v>Retning_psoc_5\I2C_Slave_prog</v>
@@ -66,6 +66,17 @@
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Clock_2</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Clock_2\Clock_2.c</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Clock_2\Clock_2.h</v>
+<<<<<<< HEAD
+=======
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Comp_A</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Comp_A\Comp_A.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Comp_A\Comp_A.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Comp_A\Comp_A_PM.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Comp_B</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Comp_B\Comp_B.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Comp_B\Comp_B.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Comp_B\Comp_B_PM.c</v>
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\cy_boot</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
@@ -110,6 +121,7 @@
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\I2CS\I2CS_PM.c</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\I2CS\I2CS_PVT.h</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\I2CS\I2CS_SLAVE.c</v>
+<<<<<<< HEAD
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\PWM_bag_retning_voltreguator</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\PWM_bag_retning_voltreguator\PWM_bag_retning_voltreguator.c</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\PWM_bag_retning_voltreguator\PWM_bag_retning_voltreguator.h</v>
@@ -161,6 +173,48 @@
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\State_back_engine_CtrlReg_Run\State_back_engine_CtrlReg_Run.c</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\State_back_engine_CtrlReg_Run\State_back_engine_CtrlReg_Run.h</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\State_back_engine_CtrlReg_Run\State_back_engine_CtrlReg_Run_PM.c</v>
+=======
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\PGA_A</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\PGA_A\PGA_A.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\PGA_A\PGA_A.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\PGA_A\PGA_A_PM.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\PGA_B</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\PGA_B\PGA_B.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\PGA_B\PGA_B.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\PGA_B\PGA_B_PM.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Pwm_back</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Pwm_back\Pwm_back.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Pwm_back\Pwm_back.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Pwm_back\Pwm_back_aliases.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\PWM_back_engine</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\PWM_back_engine\PWM_back_engine.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\PWM_back_engine\PWM_back_engine.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\PWM_back_engine\PWM_back_engine_PM.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Pwm_front</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Pwm_front\Pwm_front.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Pwm_front\Pwm_front.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Pwm_front\Pwm_front_aliases.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\PWM_front_engine</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\PWM_front_engine\PWM_front_engine.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\PWM_front_engine\PWM_front_engine.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\PWM_front_engine\PWM_front_engine_PM.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\SCL_1</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\SCL_1\SCL_1.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\SCL_1\SCL_1.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\SCL_1\SCL_1_aliases.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\SDA_1</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\SDA_1\SDA_1.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\SDA_1\SDA_1.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\SDA_1\SDA_1_aliases.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Sense_A</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Sense_A\Sense_A.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Sense_A\Sense_A.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Sense_A\Sense_A_aliases.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Sense_B</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Sense_B\Sense_B.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Sense_B\Sense_B.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Sense_B\Sense_B_aliases.h</v>
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\State_front_engine</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\State_front_engine\State_front_engine_defs.h</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\State_front_engine\State_front_engine_State.h</v>
@@ -172,10 +226,21 @@
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\State_front_engine_CtrlReg_Run\State_front_engine_CtrlReg_Run.c</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\State_front_engine_CtrlReg_Run\State_front_engine_CtrlReg_Run.h</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\State_front_engine_CtrlReg_Run\State_front_engine_CtrlReg_Run_PM.c</v>
+<<<<<<< HEAD
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\test</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\test\test.c</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\test\test.h</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\test\test_aliases.h</v>
+=======
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\VDAC8_A</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\VDAC8_A\VDAC8_A.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\VDAC8_A\VDAC8_A.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\VDAC8_A\VDAC8_A_PM.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\VDAC8_B</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\VDAC8_B\VDAC8_B.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\VDAC8_B\VDAC8_B.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\VDAC8_B\VDAC8_B_PM.c</v>
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\cycodeshareexport.ld</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\cycodeshareimport.ld</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\cycodeshareimport.scat</v>
@@ -238,14 +303,25 @@
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\C_front\C_front.h</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\C_front\C_front_aliases.h</v>
 <v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Clock_1</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Clock_1\Clock_1.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Clock_1\Clock_1.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Clock_2</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Clock_2\Clock_2.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Clock_2\Clock_2.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Comp_A</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Comp_A\Comp_A.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Comp_A\Comp_A.h</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Comp_A\Comp_A_PM.c</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Generated_Source\PSoC5\Comp_B</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Retning_psoc_5\I2C_Slave_prog\TopDesign\TopDesign.cysch">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Retning_psoc_5\State\State\State.cyudb">
 <ExpandedNodeIds>
 <v>Retning_psoc_5</v>
 <v>Retning_psoc_5\I2C_Slave_prog</v>
 <v>Retning_psoc_5\I2C_Slave_prog\TopDesign</v>
 <v>Retning_psoc_5\I2C_Slave_prog\TopDesign\TopDesign.cysch</v>
+<v>Retning_psoc_5\I2C_Slave_prog\TopDesign\TopDesign.cysym</v>
 <v>Retning_psoc_5\State</v>
 <v>Retning_psoc_5\State\State</v>
 <v>Retning_psoc_5\State\State\API</v>
@@ -258,6 +334,7 @@
 <v>Retning_psoc_5\I2C_Slave_prog</v>
 <v>Retning_psoc_5\I2C_Slave_prog\TopDesign</v>
 <v>Retning_psoc_5\I2C_Slave_prog\TopDesign\TopDesign.cysch</v>
+<v>Retning_psoc_5\I2C_Slave_prog\TopDesign\TopDesign.cysym</v>
 <v>Retning_psoc_5\State</v>
 <v>Retning_psoc_5\State\State</v>
 <v>Retning_psoc_5\State\State\API</v>
@@ -283,6 +360,10 @@
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_1.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_2.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Comp_A.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Comp_A_PM.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Comp_B.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Comp_B_PM.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
@@ -301,6 +382,7 @@
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\I2CS_PM.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\I2CS_SLAVE.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<<<<<<< HEAD
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_bag_retning_voltreguator.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_bag_retning_voltreguator_PM.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_bagerste_fremdrift.lst</v>
@@ -321,11 +403,36 @@
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\State_back_engine_CtrlReg_Dir_PM.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\State_back_engine_CtrlReg_Run.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\State_back_engine_CtrlReg_Run_PM.lst</v>
+=======
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PGA_A.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PGA_A_PM.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PGA_B.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PGA_B_PM.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Pwm_back.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_back_engine.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_back_engine_PM.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Pwm_front.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_front_engine.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_front_engine_PM.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\run_back.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\run_front.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\SCL_1.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\SDA_1.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Sense_A.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Sense_B.lst</v>
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\State_front_engine_CtrlReg_Dir.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\State_front_engine_CtrlReg_Dir_PM.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\State_front_engine_CtrlReg_Run.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\State_front_engine_CtrlReg_Run_PM.lst</v>
+<<<<<<< HEAD
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\test.lst</v>
+=======
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\VDAC8_A.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\VDAC8_A_PM.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\VDAC8_B.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\VDAC8_B_PM.lst</v>
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\I2C_Slave_prog.elf</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\I2C_Slave_prog.hex</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\I2C_Slave_prog.map</v>
@@ -354,6 +461,10 @@
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_1.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_2.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Comp_A.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Comp_A_PM.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Comp_B.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Comp_B_PM.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
@@ -372,11 +483,25 @@
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\I2CS_PM.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\I2CS_SLAVE.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<<<<<<< HEAD
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_bag_retning_voltreguator.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_bag_retning_voltreguator_PM.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_bagerste_fremdrift.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_bagerste_fremdrift_PM.lst</v>
 <v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_for_retning_voltreguator.lst</v>
+=======
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PGA_A.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PGA_A_PM.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PGA_B.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PGA_B_PM.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Pwm_back.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_back_engine.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_back_engine_PM.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\Pwm_front.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_front_engine.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_front_engine_PM.lst</v>
+<v>Retning_psoc_5\I2C_Slave_prog\CortexM3\ARM_GCC_493\Debug\Listing Files\run_back.lst</v>
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -392,13 +517,22 @@
 <v>Retning_psoc_5\I2C_Slave_prog\CY8C58LP Family Datasheet</v>
 <v>Retning_psoc_5\I2C_Slave_prog\System Reference Guides</v>
 <v>Retning_psoc_5\I2C_Slave_prog\System Reference Guides\cy_boot_v5_50</v>
+<<<<<<< HEAD
+=======
+<v>Retning_psoc_5\I2C_Slave_prog\Comp_v2_0</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Comp_v2_0\Comp_v2_0.pdf</v>
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 <v>Retning_psoc_5\I2C_Slave_prog\cy_clock_v2_20</v>
 <v>Retning_psoc_5\I2C_Slave_prog\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
 <v>Retning_psoc_5\I2C_Slave_prog\cy_pins_v2_20</v>
 <v>Retning_psoc_5\I2C_Slave_prog\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>Retning_psoc_5\I2C_Slave_prog\I2C_v3_50.pdf</v>
+<v>Retning_psoc_5\I2C_Slave_prog\PGA_v2_0</v>
+<v>Retning_psoc_5\I2C_Slave_prog\PGA_v2_0\PGA_v2_0.pdf</v>
 <v>Retning_psoc_5\I2C_Slave_prog\PWM_v3_30</v>
 <v>Retning_psoc_5\I2C_Slave_prog\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>Retning_psoc_5\I2C_Slave_prog\VDAC8_v1_90</v>
+<v>Retning_psoc_5\I2C_Slave_prog\VDAC8_v1_90\VDAC8_v1_90.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Retning_psoc_5</v>
@@ -407,13 +541,22 @@
 <v>Retning_psoc_5\I2C_Slave_prog\CY8C58LP Family Datasheet</v>
 <v>Retning_psoc_5\I2C_Slave_prog\System Reference Guides</v>
 <v>Retning_psoc_5\I2C_Slave_prog\System Reference Guides\cy_boot_v5_50</v>
+<<<<<<< HEAD
+=======
+<v>Retning_psoc_5\I2C_Slave_prog\Comp_v2_0</v>
+<v>Retning_psoc_5\I2C_Slave_prog\Comp_v2_0\Comp_v2_0.pdf</v>
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 <v>Retning_psoc_5\I2C_Slave_prog\cy_clock_v2_20</v>
 <v>Retning_psoc_5\I2C_Slave_prog\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
 <v>Retning_psoc_5\I2C_Slave_prog\cy_pins_v2_20</v>
 <v>Retning_psoc_5\I2C_Slave_prog\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>Retning_psoc_5\I2C_Slave_prog\I2C_v3_50.pdf</v>
+<v>Retning_psoc_5\I2C_Slave_prog\PGA_v2_0</v>
+<v>Retning_psoc_5\I2C_Slave_prog\PGA_v2_0\PGA_v2_0.pdf</v>
 <v>Retning_psoc_5\I2C_Slave_prog\PWM_v3_30</v>
 <v>Retning_psoc_5\I2C_Slave_prog\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>Retning_psoc_5\I2C_Slave_prog\VDAC8_v1_90</v>
+<v>Retning_psoc_5\I2C_Slave_prog\VDAC8_v1_90\VDAC8_v1_90.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -436,8 +579,17 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\I2C_Slave_prog.cydsn\main.c" />
+<<<<<<< HEAD
 <name v=".\I2C_Slave_prog.cydsn\main.h" />
 <name v=".\I2C_Slave_prog.cydsn\run_front.c" />
+=======
+<name v=".\I2C_Slave_prog.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\State.cylib\State\API\State.h" />
+<name v=".\State.cylib\State\State.cyudb" />
+<name v=".\I2C_Slave_prog.cydsn\codegentemp\I2C_Slave_prog.v" />
+<name v=".\I2C_Slave_prog.cydsn\I2C_Slave_prog.cydwr" />
+<name v=".\State.cylib\State\State.cysym" />
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -445,7 +597,11 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
+<<<<<<< HEAD
 --><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="675, 720" SelectedTabbedMdiWindow="ec7bd688-c90b-4862-87b3-3fbe849c49bf"><DocumentWindow Key="2a466d5d-cfa4-4fb2-826b-9bd6605db938" Guid="8f53eac0-1e59-45ea-85f4-ed5c4da2dc5c" /><DocumentWindow Key="84818600-0a5b-496a-8082-fa2a3be2e6cf" Guid="dcd5bd3e-cf76-423a-8859-5f870a259b74" /><DocumentWindow Key="87c91bd5-021c-4736-af28-cba72a1389f4" Guid="ec7bd688-c90b-4862-87b3-3fbe849c49bf" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+=======
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1659, 678" SelectedTabbedMdiWindow="773b93f8-dc10-4b75-9047-c35c2de66c9a"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="67d15892-cbad-444d-b279-5c91f67ef747" /><DocumentWindow Key="f91ef614-2729-411f-b2dc-d67a48fac75f" Guid="01bc811d-d9e1-4b36-950c-05ed0b800b7f" /><DocumentWindow Key="9bc61c38-e8f5-47c9-a021-5124bd337fc3" Guid="c7889813-57bd-4033-be5a-7727e6f04fb9" /><DocumentWindow Key="d358b3de-b893-41e4-92df-6f88d096d880" Guid="2418ba89-9460-48d9-bd47-29d52d33b894" /><DocumentWindow Key="8bc4ea54-b88b-4c2f-8f34-f35c0f1ad325" Guid="7511b898-03fc-4bf1-8684-1abf3203ef96" /><DocumentWindow Key="342a4d91-3292-4192-98f1-3983efc3b49f" Guid="0b986c1b-28bf-4bbf-b433-aa3148f36758" /><DocumentWindow Key="5dafe01b-31a9-4e25-b728-626429941f77" Guid="773b93f8-dc10-4b75-9047-c35c2de66c9a" /><DocumentWindow Key="4e3fa72d-479d-4147-8fc1-9704db478b7f" Guid="1c633fb4-041c-4657-bf4d-3bc9198f17e4" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

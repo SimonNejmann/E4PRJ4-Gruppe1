@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="us-ascii"?>
 
+<<<<<<< HEAD
 <fileSet version="1" anchorPath="C:\Users\Anders\Desktop\Projekt 4. semester\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp" xsi:schemaLocation="http://cypress.com/xsd/cypathdictionary cypathdictionary.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://cypress.com/xsd/cypathdictionary">
   <file name="C:\Users\Anders\Desktop\Projekt 4. semester\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cyfitter_cfg.h" value="HEADER;;;;;" />
   <file name="C:\Users\Anders\Desktop\Projekt 4. semester\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cyfitter_cfg.c" value="SOURCE_C;CortexM3;;;;" />
@@ -135,4 +136,142 @@
   <file name="C:\Users\Anders\Desktop\Projekt 4. semester\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cycodeshareimport.ld" value="OTHER;;;;;" />
   <file name="C:\Users\Anders\Desktop\Projekt 4. semester\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cycodeshareexport.ld" value="OTHER;;;;;" />
   <file name="C:\Users\Anders\Desktop\Projekt 4. semester\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cycodeshareimport.scat" value="OTHER;;;;;" />
+=======
+<fileSet version="1" anchorPath="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp" xsi:schemaLocation="http://cypress.com/xsd/cypathdictionary cypathdictionary.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://cypress.com/xsd/cypathdictionary">
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cyfitter_cfg.h" value="HEADER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cyfitter_cfg.c" value="SOURCE_C;CortexM3;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\config.hex" value="OTHER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\protect.hex" value="OTHER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\eeprom.hex" value="OTHER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cymetadata.c" value="SOURCE_C;CortexM3;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cydevice.h" value="HEADER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cydevicegnu.inc" value="HEADER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cydevicerv.inc" value="HEADER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cydeviceiar.inc" value="HEADER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cydevice_trm.h" value="HEADER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cydevicegnu_trm.inc" value="HEADER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cydevicerv_trm.inc" value="HEADER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cydeviceiar_trm.inc" value="HEADER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cyfittergnu.inc" value="HEADER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cyfitterrv.inc" value="HEADER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cyfitteriar.inc" value="HEADER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cyfitter.h" value="HEADER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cydisabledsheets.h" value="HEADER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\State_front_engine_CtrlReg_Run.h" value="HEADER;;;;;State_front_engine_CtrlReg_Run" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\State_front_engine_CtrlReg_Run.c" value="SOURCE_C;CortexM3;;;;State_front_engine_CtrlReg_Run" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\State_front_engine_CtrlReg_Run_PM.c" value="SOURCE_C;CortexM3;;;;State_front_engine_CtrlReg_Run" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\State_front_engine_CtrlReg_Dir.h" value="HEADER;;;;;State_front_engine_CtrlReg_Dir" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\State_front_engine_CtrlReg_Dir.c" value="SOURCE_C;CortexM3;;;;State_front_engine_CtrlReg_Dir" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\State_front_engine_CtrlReg_Dir_PM.c" value="SOURCE_C;CortexM3;;;;State_front_engine_CtrlReg_Dir" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\State_front_engine_State.h" value="HEADER;;;;;State_front_engine" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\State_front_engine_defs.h" value="HEADER;;;;;State_front_engine" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Clock_1.c" value="SOURCE_C;CortexM3;;;;Clock_1" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Clock_1.h" value="HEADER;;;;;Clock_1" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\SDA_1_aliases.h" value="HEADER;;;;;SDA_1" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\SDA_1.c" value="SOURCE_C;CortexM3;;;;SDA_1" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\SDA_1.h" value="HEADER;;;;;SDA_1" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\SCL_1_aliases.h" value="HEADER;;;;;SCL_1" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\SCL_1.c" value="SOURCE_C;CortexM3;;;;SCL_1" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\SCL_1.h" value="HEADER;;;;;SCL_1" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\I2CS.c" value="SOURCE_C;CortexM3;;;;I2CS" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\I2CS.h" value="HEADER;;;;;I2CS" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\I2CS_BOOT.c" value="SOURCE_C;CortexM3;;;;I2CS" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\I2CS_INT.c" value="SOURCE_C;CortexM3;;;;I2CS" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\I2CS_PM.c" value="SOURCE_C;CortexM3;;;;I2CS" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\I2CS_SLAVE.c" value="SOURCE_C;CortexM3;;;;I2CS" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\I2CS_MASTER.c" value="SOURCE_C;CortexM3;;;;I2CS" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\I2CS_PVT.h" value="HEADER;;;;;I2CS" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\A_front_aliases.h" value="HEADER;;;;;A_front" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\A_front.c" value="SOURCE_C;CortexM3;;;;A_front" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\A_front.h" value="HEADER;;;;;A_front" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\B_front_aliases.h" value="HEADER;;;;;B_front" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\B_front.c" value="SOURCE_C;CortexM3;;;;B_front" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\B_front.h" value="HEADER;;;;;B_front" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\C_front_aliases.h" value="HEADER;;;;;C_front" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\C_front.c" value="SOURCE_C;CortexM3;;;;C_front" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\C_front.h" value="HEADER;;;;;C_front" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\D_front_aliases.h" value="HEADER;;;;;D_front" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\D_front.c" value="SOURCE_C;CortexM3;;;;D_front" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\D_front.h" value="HEADER;;;;;D_front" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\VDAC8_B.c" value="SOURCE_C;CortexM3;;;;VDAC8_B" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\VDAC8_B.h" value="HEADER;;;;;VDAC8_B" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\VDAC8_B_PM.c" value="SOURCE_C;CortexM3;;;;VDAC8_B" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\PWM_front_engine.c" value="SOURCE_C;CortexM3;;;;PWM_front_engine" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\PWM_front_engine.h" value="HEADER;;;;;PWM_front_engine" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\PWM_front_engine_PM.c" value="SOURCE_C;CortexM3;;;;PWM_front_engine" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Pwm_back_aliases.h" value="HEADER;;;;;Pwm_back" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Pwm_back.c" value="SOURCE_C;CortexM3;;;;Pwm_back" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Pwm_back.h" value="HEADER;;;;;Pwm_back" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Pwm_front_aliases.h" value="HEADER;;;;;Pwm_front" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Pwm_front.c" value="SOURCE_C;CortexM3;;;;Pwm_front" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Pwm_front.h" value="HEADER;;;;;Pwm_front" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\PWM_back_engine.c" value="SOURCE_C;CortexM3;;;;PWM_back_engine" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\PWM_back_engine.h" value="HEADER;;;;;PWM_back_engine" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\PWM_back_engine_PM.c" value="SOURCE_C;CortexM3;;;;PWM_back_engine" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\D_back_aliases.h" value="HEADER;;;;;D_back" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\D_back.c" value="SOURCE_C;CortexM3;;;;D_back" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\D_back.h" value="HEADER;;;;;D_back" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\C_back_aliases.h" value="HEADER;;;;;C_back" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\C_back.c" value="SOURCE_C;CortexM3;;;;C_back" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\C_back.h" value="HEADER;;;;;C_back" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\B_back_aliases.h" value="HEADER;;;;;B_back" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\B_back.c" value="SOURCE_C;CortexM3;;;;B_back" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\B_back.h" value="HEADER;;;;;B_back" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\A_back_aliases.h" value="HEADER;;;;;A_back" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\A_back.c" value="SOURCE_C;CortexM3;;;;A_back" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\A_back.h" value="HEADER;;;;;A_back" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Clock_2.c" value="SOURCE_C;CortexM3;;;;Clock_2" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Clock_2.h" value="HEADER;;;;;Clock_2" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\VDAC8_A.c" value="SOURCE_C;CortexM3;;;;VDAC8_A" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\VDAC8_A.h" value="HEADER;;;;;VDAC8_A" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\VDAC8_A_PM.c" value="SOURCE_C;CortexM3;;;;VDAC8_A" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\PGA_A.c" value="SOURCE_C;CortexM3;;;;PGA_A" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\PGA_A.h" value="HEADER;;;;;PGA_A" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\PGA_A_PM.c" value="SOURCE_C;CortexM3;;;;PGA_A" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Comp_A.c" value="SOURCE_C;CortexM3;;;;Comp_A" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Comp_A.h" value="HEADER;;;;;Comp_A" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Comp_A_PM.c" value="SOURCE_C;CortexM3;;;;Comp_A" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Sense_A_aliases.h" value="HEADER;;;;;Sense_A" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Sense_A.c" value="SOURCE_C;CortexM3;;;;Sense_A" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Sense_A.h" value="HEADER;;;;;Sense_A" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\PGA_B.c" value="SOURCE_C;CortexM3;;;;PGA_B" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\PGA_B.h" value="HEADER;;;;;PGA_B" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\PGA_B_PM.c" value="SOURCE_C;CortexM3;;;;PGA_B" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Comp_B.c" value="SOURCE_C;CortexM3;;;;Comp_B" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Comp_B.h" value="HEADER;;;;;Comp_B" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Comp_B_PM.c" value="SOURCE_C;CortexM3;;;;Comp_B" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Sense_B_aliases.h" value="HEADER;;;;;Sense_B" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Sense_B.c" value="SOURCE_C;CortexM3;;;;Sense_B" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Sense_B.h" value="HEADER;;;;;Sense_B" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cm3gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Cm3RealView.scat" value="LINKER_SCRIPT;;;fdb8e1ae-f83a-46cf-9446-1d703716f38a;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Cm3Start.c" value="SOURCE_C;CortexM3;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\core_cm3.h" value="HEADER;;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\core_cm3_psoc5.h" value="HEADER;;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\CyBootAsmGnu.s" value="SOURCE_ASM;CortexM0,CortexM0p,CortexM3,CortexM4,CortexM7;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\CyBootAsmRv.s" value="SOURCE_ASM;CortexM0,CortexM0p,CortexM3,CortexM4,CortexM7;;fdb8e1ae-f83a-46cf-9446-1d703716f38a;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\CyDmac.c" value="SOURCE_C;CortexM3;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\CyDmac.h" value="HEADER;;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\CyFlash.c" value="SOURCE_C;CortexM3;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\CyFlash.h" value="HEADER;;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\CyLib.c" value="SOURCE_C;CortexM3;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\CyLib.h" value="HEADER;;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cypins.h" value="HEADER;;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cyPm.c" value="SOURCE_C;CortexM3;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cyPm.h" value="HEADER;;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\CySpc.c" value="SOURCE_C;CortexM3;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\CySpc.h" value="HEADER;;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cytypes.h" value="HEADER;;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cyutils.c" value="SOURCE_C;CortexM3;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\core_cmFunc.h" value="HEADER;;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\core_cmInstr.h" value="HEADER;;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\Cm3Iar.icf" value="LINKER_SCRIPT;;;e9305a93-d091-4da5-bdc7-2813049dcdbf;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\CyBootAsmIar.s" value="SOURCE_ASM;CortexM0,CortexM0p,CortexM3,CortexM4,CortexM7;;e9305a93-d091-4da5-bdc7-2813049dcdbf;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cmsis_armcc.h" value="HEADER;;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cmsis_gcc.h" value="HEADER;;;;;cy_boot" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\project.h" value="OTHER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cycodeshareimport.ld" value="OTHER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cycodeshareexport.ld" value="OTHER;;;;;" />
+  <file name="C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\codegentemp\cycodeshareimport.scat" value="OTHER;;;;;" />
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 </fileSet>

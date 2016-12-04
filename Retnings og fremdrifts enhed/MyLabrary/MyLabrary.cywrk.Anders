@@ -13,7 +13,11 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
+<<<<<<< HEAD
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="MyLabrary\TestState\TestState.cydwr\Pins">
+=======
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="MyLabrary\TestState\TestState.cydwr">
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 <ExpandedNodeIds>
 <v>MyLabrary</v>
 <v>MyLabrary\StepperState</v>
@@ -155,6 +159,18 @@
 <v>MyLabrary\TestState\Generated_Source\PSoC4\C\C.h</v>
 <v>MyLabrary\TestState\Generated_Source\PSoC4\C\C_aliases.h</v>
 <v>MyLabrary\TestState\Generated_Source\PSoC4\C\C_PM.c</v>
+<<<<<<< HEAD
+=======
+<v>MyLabrary\TestState\Generated_Source\PSoC4\Clock_2</v>
+<v>MyLabrary\TestState\Generated_Source\PSoC4\cy_boot</v>
+<v>MyLabrary\TestState\Generated_Source\PSoC4\cy_lfclk</v>
+<v>MyLabrary\TestState\Generated_Source\PSoC4\D</v>
+<v>MyLabrary\TestState\Generated_Source\PSoC4\D\D.c</v>
+<v>MyLabrary\TestState\Generated_Source\PSoC4\D\D.h</v>
+<v>MyLabrary\TestState\Generated_Source\PSoC4\D\D_aliases.h</v>
+<v>MyLabrary\TestState\Generated_Source\PSoC4\D\D_PM.c</v>
+<v>MyLabrary\TestState\Generated_Source\PSoC4\I2CS</v>
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="MyLabrary\StepperState\State\State.cyudb">
@@ -284,6 +300,18 @@
 <v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\I2CS_PM.lst</v>
 <v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\I2CS_SCB_IRQ.lst</v>
 <v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\I2CS_SCBCLK.lst</v>
+<<<<<<< HEAD
+=======
+<v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\I2CS_scl.lst</v>
+<v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\I2CS_scl_PM.lst</v>
+<v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\I2CS_sda.lst</v>
+<v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\I2CS_sda_PM.lst</v>
+<v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\PWM_1.lst</v>
+<v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\PWM_1_PM.lst</v>
+<v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\run_back.lst</v>
+<v>MyLabrary\TestState\CortexM0\ARM_GCC_493\Debug\Listing Files\run_front.lst</v>
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -340,14 +368,7 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v="..\TestState.cydsn\run_front.c" />
-<name v=".\StepperState.cylib\State\State.cyudb" />
-<name v=".\StepperState.cylib\State\API\State.h" />
-<name v=".\StepperState.cylib\State\State.cysym" />
-<name v="..\TestState.cydsn\TopDesign\TopDesign.cysch" />
 <name v="..\TestState.cydsn\TestState.cydwr" />
-<name v="..\TestState.cydsn\main.c" />
-<name v="..\TestState.cydsn\main.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -355,7 +376,11 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
+<<<<<<< HEAD
 --><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="714, 720" SelectedTabbedMdiWindow="34f172b6-34d4-43dc-a96c-34a96850b665"><DocumentWindow Key="e1c677da-c980-4681-9f35-cceedeb83588" Guid="ba94c36a-e180-4378-8dab-100ed06f1aa1" /><DocumentWindow Key="3b4486a2-f597-4e05-9515-a8694e4f7299" Guid="86d0aaa9-a7e7-491b-abf4-e3773e1e9fdd" /><DocumentWindow Key="22389bc0-b4fb-4f34-a460-3132d4cef90a" Guid="dc35edeb-3068-46bd-8d88-a56bfa986b74" /><DocumentWindow Key="fb91fc13-649c-40e1-aa90-6c5b40779121" Guid="1b24d847-4b28-4e30-a079-6152ebb1f424" /><DocumentWindow Key="6efb9b73-53a8-490a-ae70-b054cd668335" Guid="3a6cca52-2ba0-4d87-bebe-d8e6223e7d16" /><DocumentWindow Key="d79399b7-2d6c-424b-b93b-0b6d64e66c57" Guid="34f172b6-34d4-43dc-a96c-34a96850b665" /><DocumentWindow Key="91039877-b112-4a7e-b716-57a0b7abd0a5" Guid="043f3464-2667-4111-8bf9-b8b3d7515a05" /><DocumentWindow Key="5f57c7cd-95cd-4be6-ae19-9866b1d8f650" Guid="5e99b1e7-1d50-4a32-ae59-f2efafd51f02" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+=======
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="811, 662" SelectedTabbedMdiWindow="e73de0ba-c6aa-4046-bfe5-214a1157b139"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="67d15892-cbad-444d-b279-5c91f67ef747" /><DocumentWindow Key="47e34a2d-94e7-4bf1-9162-28eb46dc844a" Guid="e73de0ba-c6aa-4046-bfe5-214a1157b139" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+>>>>>>> 40a74277513dcec9fbc43d3e105e642a69e6a52f
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
