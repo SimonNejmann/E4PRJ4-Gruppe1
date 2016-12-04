@@ -19,8 +19,8 @@ uint8 i2cWriteBuffer[BUFFER_SIZE];
 int main()
 {
     uint8 status = STS_CMD_FAIL;
-    
-    
+    PWM_foreste_fremdrift_Start();
+    //PWM_foreste_fremdrift_Start();
 
     /* Start I2C slave (SCB mode) */
     I2CS_SlaveInitReadBuf (i2cReadBuffer,  BUFFER_SIZE);
@@ -35,7 +35,7 @@ int main()
     ***************************************************************************/
     for (;;)
     {
-            
+         test_Write(1);   
         /* Write complete: parse command packet */
         if (0u != (I2CS_SlaveStatus() & I2CS_SSTAT_WR_CMPLT))
         {

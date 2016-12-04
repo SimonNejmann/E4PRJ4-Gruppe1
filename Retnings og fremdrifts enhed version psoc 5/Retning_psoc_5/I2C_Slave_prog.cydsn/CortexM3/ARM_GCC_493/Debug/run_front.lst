@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 1
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOOjB0L.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 1
   48              	.L2:
    8:run_front.c   **** 	}
    9:run_front.c   ****     uint8 ang_forw;
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 2
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOOjB0L.s 			page 2
 
 
   10:run_front.c   **** 	uint8 ang_backw;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 1
   91 0046 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
   92 0048 DBB2     		uxtb	r3, r3
   93 004a 642B     		cmp	r3, #100
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 3
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOOjB0L.s 			page 3
 
 
   94 004c 0BD9     		bls	.L5
@@ -161,7 +161,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 1
  119              	.L9:
  120 006a 00BF     		.align	2
  121              	.L8:
- 122 006c 0A640040 		.word	1073767434
+ 122 006c 0C640040 		.word	1073767436
  123 0070 0B640040 		.word	1073767435
  124              		.cfi_endproc
  125              	.LFE63:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 1
  136              	.Ldebug_info0:
  137 0000 A2010000 		.4byte	0x1a2
  138 0004 0400     		.2byte	0x4
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 4
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOOjB0L.s 			page 4
 
 
  139 0006 00000000 		.4byte	.Ldebug_abbrev0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 1
  193 0072 C4010000 		.4byte	.LASF8
  194 0076 03       		.uleb128 0x3
  195 0077 C9000000 		.4byte	.LASF10
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 5
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOOjB0L.s 			page 5
 
 
  196 007b 03       		.byte	0x3
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 1
  250 00f2 00000000 		.4byte	.LASF18
  251 00f6 01       		.byte	0x1
  252 00f7 03       		.byte	0x3
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 6
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOOjB0L.s 			page 6
 
 
  253 00f8 81000000 		.4byte	0x81
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 1
  307 0170 01       		.uleb128 0x1
  308 0171 50       		.byte	0x50
  309 0172 01       		.uleb128 0x1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 7
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOOjB0L.s 			page 7
 
 
  310 0173 31       		.byte	0x31
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 1
  364 001a 03       		.uleb128 0x3
  365 001b 0E       		.uleb128 0xe
  366 001c 00       		.byte	0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 8
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOOjB0L.s 			page 8
 
 
  367 001d 00       		.byte	0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 1
  421 0053 3B       		.uleb128 0x3b
  422 0054 0B       		.uleb128 0xb
  423 0055 27       		.uleb128 0x27
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 9
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOOjB0L.s 			page 9
 
 
  424 0056 19       		.uleb128 0x19
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 1
  478 008d 49       		.uleb128 0x49
  479 008e 13       		.uleb128 0x13
  480 008f 02       		.uleb128 0x2
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 10
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOOjB0L.s 			page 10
 
 
  481 0090 17       		.uleb128 0x17
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 1
  535 00cd 03       		.uleb128 0x3
  536 00ce 0E       		.uleb128 0xe
  537 00cf 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 11
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOOjB0L.s 			page 11
 
 
  538 00d0 0B       		.uleb128 0xb
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 1
  592 0024 54000000 		.4byte	.LVL9
  593 0028 74000000 		.4byte	.LFE63
  594 002c 0400     		.2byte	0x4
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 12
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOOjB0L.s 			page 12
 
 
  595 002e F3       		.byte	0xf3
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 1
  649 00ab 01       		.uleb128 0x1
  650 00ac 53       		.byte	0x53
  651 00ad 9F       		.byte	0x9f
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 13
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOOjB0L.s 			page 13
 
 
  652 00ae 00000000 		.4byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 1
  701              	.LASF25:
  702 0005 72756E5F 		.ascii	"run_front\000"
  702      66726F6E 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 14
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOOjB0L.s 			page 14
 
 
  702      7400
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 1
  724      7369676E 
  724      65642069 
  724      6E7400
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 15
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOOjB0L.s 			page 15
 
 
  725              	.LASF19:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 1
  747              	.LASF14:
  748 020f 63686172 		.ascii	"char\000"
  748      00
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccKMotHd.s 			page 16
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccOOjB0L.s 			page 16
 
 
  749              	.LASF2:

@@ -63,12 +63,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cydisabledsheets.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDA_1_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDA_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDA_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCL_1_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCL_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCL_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2CS.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2CS.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2CS_BOOT.c</File>
@@ -135,18 +129,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\State_back_engine_CtrlReg_Dir_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\State_back_engine_State.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\State_back_engine_defs.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_front_engine.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_front_engine.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_front_engine_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pwm_back_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pwm_back.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pwm_back.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pwm_front_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pwm_front.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pwm_front.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_back_engine.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_back_engine.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_back_engine_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\D_back_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\D_back.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\D_back.h</File>
@@ -159,6 +141,41 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\A_back_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\A_back.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\A_back.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\test_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\test.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\test.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDA_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDA.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDA.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCL_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCL.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCL.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_foreste_fremdrift.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_foreste_fremdrift.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_foreste_fremdrift_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_bagerste_fremdrift.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_bagerste_fremdrift.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_bagerste_fremdrift_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_for_retning_voltreguator.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_for_retning_voltreguator.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_for_retning_voltreguator_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_bag_retning_voltreguator.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_bag_retning_voltreguator.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_bag_retning_voltreguator_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_Fremdrift_bag_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_Fremdrift_bag.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_Fremdrift_bag.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_Fremdrift_for_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_Fremdrift_for.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_Fremdrift_for.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_Voltreg_for_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_Voltreg_for.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_Voltreg_for.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_Voltreg_bag_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_Voltreg_bag.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_Voltreg_bag.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\Anders\Desktop\Projekt 4. semester\E4PRJ4-Gruppe1\Retnings og fremdrifts enhed version psoc 5\Retning_psoc_5\I2C_Slave_prog.cydsn\Export\ARM_GCC_Generic">
