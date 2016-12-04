@@ -19,7 +19,9 @@ uint8 i2cWriteBuffer[BUFFER_SIZE];
 int main()
 {
     uint8 status = STS_CMD_FAIL;
-    Counter_Start();
+    
+    UpDown_Start();
+    UpDown_SetCounter(0);
     //PWM_foreste_fremdrift_Start();
 
     /* Start I2C slave (SCB mode) */
