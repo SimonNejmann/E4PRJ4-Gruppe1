@@ -1,42 +1,94 @@
 dont_use_io iocell 1 0
 dont_use_io iocell 1 1
 dont_use_io iocell 1 3
-set_location "Net_575" macrocell 1 5 1 0
-set_location "\PWM1:PWMUDB:runmode_enable\" macrocell 0 5 0 3
-set_location "\PWM2:PWMUDB:runmode_enable\" macrocell 0 5 1 2
-set_location "\Counter:CounterUDB:status_0\" macrocell 1 4 1 2
-set_location "\PWM1:PWMUDB:genblk8:stsreg\" statusicell 0 5 4 
-set_location "\PWM2:PWMUDB:genblk8:stsreg\" statusicell 1 5 4 
-set_location "\Counter:CounterUDB:prevCompare\" macrocell 1 4 1 3
-set_location "Net_276" macrocell 1 4 0 2
-set_location "\Counter:CounterUDB:status_2\" macrocell 1 4 1 0
-set_location "\Counter:CounterUDB:overflow_reg_i\" macrocell 1 4 1 1
-set_location "\Counter:CounterUDB:sSTSReg:stsreg\" statusicell 1 4 4 
-set_location "\Counter:CounterUDB:upcnt_stored\" macrocell 1 5 1 2
-set_location "\Counter:CounterUDB:upcnt_det\" macrocell 1 4 0 3
-set_location "\Counter:CounterUDB:underflow_reg_i\" macrocell 1 5 0 1
-set_location "\PWM1:PWMUDB:sP8:pwmdp:u0\" datapathcell 0 5 2 
-set_location "\PWM2:PWMUDB:sP8:pwmdp:u0\" datapathcell 1 5 2 
-set_location "\Counter:CounterUDB:status_3\" macrocell 1 5 1 1
-set_location "\PWM1:PWMUDB:status_2\" macrocell 0 5 0 2
-set_location "\PWM2:PWMUDB:status_2\" macrocell 0 5 0 1
-set_location "\PWM1:PWMUDB:status_0\" macrocell 0 4 0 0
-set_location "\PWM2:PWMUDB:status_0\" macrocell 0 5 1 1
-set_location "\Counter:CounterUDB:count_enable\" macrocell 1 4 0 0
-set_location "Net_530" macrocell 1 4 0 1
-set_location "\PWM1:PWMUDB:prevCompare1\" macrocell 0 4 1 1
-set_location "\PWM2:PWMUDB:prevCompare1\" macrocell 0 4 1 3
-set_location "\Counter:CounterUDB:dwncnt_stored\" macrocell 1 5 0 0
-set_location "\Counter:CounterUDB:sC8:counterdp:u0\" datapathcell 1 4 2 
-set_location "\PWM1:PWMUDB:genblk1:ctrlreg\" controlcell 0 5 6 
-set_location "\PWM2:PWMUDB:genblk1:ctrlreg\" controlcell 1 5 6 
-set_location "ClockBlock" clockblockcell -1 -1 0
+set_location "\CounterB:CounterUDB:status_2\" macrocell 2 5 1 0
+set_location "\CounterF:CounterUDB:status_3\" macrocell 3 3 1 0
+set_location "\PWMSB:PWMUDB:sP8:pwmdp:u0\" datapathcell 2 0 2 
+set_location "\CounterB:CounterUDB:upcnt_det\" macrocell 2 5 0 3
+set_location "\PWMB2:PWMUDB:sP8:pwmdp:u0\" datapathcell 3 4 2 
+set_location "\PWMB1:PWMUDB:sP8:pwmdp:u0\" datapathcell 2 4 2 
+set_location "\PWMSB:PWMUDB:runmode_enable\" macrocell 2 0 0 3
+set_location "\PWMF1:PWMUDB:status_2\" macrocell 3 2 0 0
+set_location "\PWMF2:PWMUDB:status_2\" macrocell 2 3 0 3
+set_location "\PWMB2:PWMUDB:runmode_enable\" macrocell 3 5 0 2
+set_location "\PWMB1:PWMUDB:runmode_enable\" macrocell 2 3 0 1
+set_location "\CounterF:CounterUDB:count_enable\" macrocell 3 3 0 0
+set_location "\PWMF1:PWMUDB:status_0\" macrocell 3 2 0 3
+set_location "\PWMF2:PWMUDB:status_0\" macrocell 3 2 0 2
+set_location "\PWMF1:PWMUDB:genblk8:stsreg\" statusicell 3 2 4 
+set_location "\PWMF2:PWMUDB:genblk8:stsreg\" statusicell 2 2 4 
+set_location "\CounterB:CounterUDB:status_3\" macrocell 2 3 0 2
+set_location "\CounterB:CounterUDB:upcnt_stored\" macrocell 2 4 1 2
+set_location "Net_846" macrocell 2 5 0 2
+set_location "\CounterF:CounterUDB:sSTSReg:stsreg\" statusicell 3 3 4 
+set_location "\PWMSB:PWMUDB:genblk8:stsreg\" statusicell 2 0 4 
+set_location "Net_530" macrocell 2 2 0 2
+set_location "\PWMSF:PWMUDB:runmode_enable\" macrocell 3 0 0 3
+set_location "\CounterB:CounterUDB:count_enable\" macrocell 2 5 0 0
+set_location "\PWMB1:PWMUDB:status_2\" macrocell 2 3 1 3
+set_location "\PWMB2:PWMUDB:status_2\" macrocell 3 5 1 3
+set_location "\PWMF1:PWMUDB:prevCompare1\" macrocell 3 2 1 3
+set_location "\PWMF2:PWMUDB:prevCompare1\" macrocell 3 2 1 2
+set_location "\PWMSF:PWMUDB:genblk8:stsreg\" statusicell 3 0 4 
+set_location "Net_909" macrocell 3 0 1 3
+set_location "Net_828" macrocell 3 0 0 1
+set_location "\CounterB:CounterUDB:prevCompare\" macrocell 2 4 1 0
+set_location "\PWMB1:PWMUDB:status_0\" macrocell 2 4 0 0
+set_location "\PWMB2:PWMUDB:status_0\" macrocell 2 4 0 1
+set_location "Net_575" macrocell 3 4 1 0
+set_location "\PWMSF:PWMUDB:status_0\" macrocell 3 0 0 0
+set_location "\PWMF2:PWMUDB:runmode_enable\" macrocell 2 2 0 1
+set_location "\PWMF1:PWMUDB:runmode_enable\" macrocell 3 2 0 1
+set_location "\CounterF:CounterUDB:status_0\" macrocell 3 4 1 2
+set_location "\PWMSF:PWMUDB:sP8:pwmdp:u0\" datapathcell 3 0 2 
+set_location "\PWMSF:PWMUDB:prevCompare1\" macrocell 2 0 1 2
+set_location "Net_798" macrocell 2 2 0 3
+set_location "\PWMSF:PWMUDB:status_2\" macrocell 3 0 1 0
+set_location "\PWMB1:PWMUDB:prevCompare1\" macrocell 2 5 1 3
+set_location "\PWMB2:PWMUDB:prevCompare1\" macrocell 2 5 0 1
+set_location "\CounterB:CounterUDB:dwncnt_stored\" macrocell 2 4 1 1
+set_location "\PWMF1:PWMUDB:sP8:pwmdp:u0\" datapathcell 3 2 2 
+set_location "\PWMF2:PWMUDB:sP8:pwmdp:u0\" datapathcell 2 2 2 
+set_location "\PWMSB:PWMUDB:prevCompare1\" macrocell 2 0 0 1
+set_location "\CounterF:CounterUDB:prevCompare\" macrocell 3 4 0 0
+set_location "\CounterB:CounterUDB:sSTSReg:stsreg\" statusicell 2 5 4 
+set_location "\PWMB1:PWMUDB:genblk8:stsreg\" statusicell 2 4 4 
+set_location "\PWMB2:PWMUDB:genblk8:stsreg\" statusicell 3 4 4 
+set_location "\CounterF:CounterUDB:status_2\" macrocell 3 3 1 2
+set_location "\CounterB:CounterUDB:underflow_reg_i\" macrocell 2 3 1 0
+set_location "\CounterF:CounterUDB:overflow_reg_i\" macrocell 3 3 0 2
+set_location "Net_837" macrocell 2 4 0 2
+set_location "\CounterB:CounterUDB:overflow_reg_i\" macrocell 3 5 1 0
+set_location "\PWMSB:PWMUDB:status_0\" macrocell 2 0 0 0
+set_location "\CounterF:CounterUDB:upcnt_stored\" macrocell 3 4 0 2
+set_location "\CounterB:CounterUDB:status_0\" macrocell 2 5 1 2
+set_location "\CounterF:CounterUDB:sC8:counterdp:u0\" datapathcell 3 3 2 
+set_location "\CounterF:CounterUDB:upcnt_det\" macrocell 3 3 0 3
+set_location "\PWMSB:PWMUDB:status_2\" macrocell 2 0 1 0
+set_location "\CounterB:CounterUDB:sC8:counterdp:u0\" datapathcell 2 5 2 
+set_location "\CounterF:CounterUDB:dwncnt_stored\" macrocell 3 4 0 1
+set_location "Net_847" macrocell 2 5 1 1
+set_location "\CounterF:CounterUDB:underflow_reg_i\" macrocell 3 4 1 3
+set_io "MicroB(0)" iocell 2 1
+set_io "stepF(0)" iocell 0 0
+set_io "stepB(0)" iocell 2 3
+set_location "\PWMSB:PWMUDB:genblk1:ctrlreg\" controlcell 2 0 6 
+set_location "\CounterB:CounterUDB:sCTRLReg:ctrlreg\" controlcell 2 5 6 
+set_io "MicroF(0)" iocell 2 0
 # Note: port 12 is the logical name for port 7
 set_io "Pin_1(1)" iocell 12 5
 set_location "\I2CS:I2C_Prim\" i2ccell -1 -1 0
+set_location "\PWMSF:PWMUDB:genblk1:ctrlreg\" controlcell 3 0 6 
 # Note: port 12 is the logical name for port 7
 set_io "Pin_1(0)" iocell 12 4
-set_io "step(0)" iocell 2 3
+set_location "ClockBlock" clockblockcell -1 -1 0
+set_io "SpeedForW(0)" iocell 3 6
 set_location "\I2CS:isr\" interrupt -1 -1 15
-set_io "Dir_step(0)" iocell 2 4
-set_location "\Counter:CounterUDB:sCTRLReg:ctrlreg\" controlcell 1 4 6 
+set_location "\PWMF1:PWMUDB:genblk1:ctrlreg\" controlcell 3 2 6 
+set_location "\PWMF2:PWMUDB:genblk1:ctrlreg\" controlcell 2 2 6 
+set_location "\PWMB1:PWMUDB:genblk1:ctrlreg\" controlcell 2 3 6 
+set_location "\PWMB2:PWMUDB:genblk1:ctrlreg\" controlcell 3 5 6 
+set_io "Dir_stepF(0)" iocell 0 1
+set_io "Dir_stepB(0)" iocell 2 2
+set_io "SpeedBackW(0)" iocell 3 7
+set_location "\CounterF:CounterUDB:sCTRLReg:ctrlreg\" controlcell 3 3 6 

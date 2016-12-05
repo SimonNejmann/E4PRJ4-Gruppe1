@@ -1,0 +1,1048 @@
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccjpNoko.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"run_back.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.run_back,"ax",%progbits
+  19              		.align	2
+  20              		.global	run_back
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	run_back, %function
+  24              	run_back:
+  25              	.LFB63:
+  26              		.file 1 "run_back.c"
+   1:run_back.c    **** #include <main.h>
+   2:run_back.c    **** 
+   3:run_back.c    **** extern uint8 i2cbuf[];
+   4:run_back.c    **** extern uint8 oldbuf[];
+   5:run_back.c    **** uint8 run_back(uint8 ang, uint8 speed)
+   6:run_back.c    **** {
+  27              		.loc 1 6 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              	.LVL0:
+  32 0000 38B5     		push	{r3, r4, r5, lr}
+  33              		.cfi_def_cfa_offset 16
+  34              		.cfi_offset 3, -16
+  35              		.cfi_offset 4, -12
+  36              		.cfi_offset 5, -8
+  37              		.cfi_offset 14, -4
+  38 0002 0446     		mov	r4, r0
+  39 0004 0D46     		mov	r5, r1
+  40              	.LVL1:
+   7:run_back.c    ****     
+   8:run_back.c    ****     uint8 newang = 0;
+   9:run_back.c    ****     
+  10:run_back.c    ****     //Opdatere oldbuf 
+  11:run_back.c    ****     oldbuf[ANG_BACK_POS] = i2cbuf[ANG_BACK_POS];
+  41              		.loc 1 11 0
+  42 0006 204B     		ldr	r3, .L11
+  43 0008 9A78     		ldrb	r2, [r3, #2]	@ zero_extendqisi2
+  44 000a 204B     		ldr	r3, .L11+4
+  45 000c 9A70     		strb	r2, [r3, #2]
+  12:run_back.c    ****     
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccjpNoko.s 			page 2
+
+
+  13:run_back.c    ****     //Sætter hastighed på fremdriftsmotor 
+  14:run_back.c    ****     SpeedBackW_Write(HIGH);
+  46              		.loc 1 14 0
+  47 000e 0120     		movs	r0, #1
+  48              	.LVL2:
+  49 0010 FFF7FEFF 		bl	SpeedBackW_Write
+  50              	.LVL3:
+  15:run_back.c    ****     PWMSB_WriteCompare(speed);
+  51              		.loc 1 15 0
+  52 0014 2846     		mov	r0, r5
+  53 0016 FFF7FEFF 		bl	PWMSB_WriteCompare
+  54              	.LVL4:
+  16:run_back.c    ****     
+  17:run_back.c    ****     //tæl counter op og drejer steppermotoren med uret
+  18:run_back.c    **** 	if(ang > CounterB_ReadCounter() && ang < MAX_POS)
+  55              		.loc 1 18 0
+  56 001a FFF7FEFF 		bl	CounterB_ReadCounter
+  57              	.LVL5:
+  58 001e A042     		cmp	r0, r4
+  59 0020 1AD2     		bcs	.L2
+  60              		.loc 1 18 0 is_stmt 0 discriminator 1
+  61 0022 C82C     		cmp	r4, #200
+  62 0024 18D8     		bhi	.L2
+  19:run_back.c    ****     {
+  20:run_back.c    ****         newang = ang - CounterB_ReadCounter();
+  63              		.loc 1 20 0 is_stmt 1
+  64 0026 FFF7FEFF 		bl	CounterB_ReadCounter
+  65              	.LVL6:
+  66 002a 201A     		subs	r0, r4, r0
+  67 002c C5B2     		uxtb	r5, r0
+  68              	.LVL7:
+  21:run_back.c    ****         newang += CounterB_ReadCounter();
+  69              		.loc 1 21 0
+  70 002e FFF7FEFF 		bl	CounterB_ReadCounter
+  71              	.LVL8:
+  72 0032 2844     		add	r0, r0, r5
+  73 0034 C5B2     		uxtb	r5, r0
+  74              	.LVL9:
+  22:run_back.c    ****         
+  23:run_back.c    ****         Dir_stepB_Write(HIGH);  
+  75              		.loc 1 23 0
+  76 0036 0120     		movs	r0, #1
+  77 0038 FFF7FEFF 		bl	Dir_stepB_Write
+  78              	.LVL10:
+  24:run_back.c    ****         PWMB1_Start();
+  79              		.loc 1 24 0
+  80 003c FFF7FEFF 		bl	PWMB1_Start
+  81              	.LVL11:
+  25:run_back.c    ****         while(CounterB_ReadCounter()!=newang)
+  82              		.loc 1 25 0
+  83 0040 03E0     		b	.L3
+  84              	.L5:
+  26:run_back.c    ****         {    
+  27:run_back.c    ****            
+  28:run_back.c    ****             if(ang != i2cbuf[ANG_BACK_POS])
+  85              		.loc 1 28 0
+  86 0042 114B     		ldr	r3, .L11
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccjpNoko.s 			page 3
+
+
+  87 0044 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+  88 0046 A342     		cmp	r3, r4
+  89 0048 03D1     		bne	.L4
+  90              	.L3:
+  25:run_back.c    ****         while(CounterB_ReadCounter()!=newang)
+  91              		.loc 1 25 0
+  92 004a FFF7FEFF 		bl	CounterB_ReadCounter
+  93              	.LVL12:
+  94 004e A842     		cmp	r0, r5
+  95 0050 F7D1     		bne	.L5
+  96              	.L4:
+  29:run_back.c    ****             break;
+  30:run_back.c    ****         }
+  31:run_back.c    ****         PWMB1_Stop(); 
+  97              		.loc 1 31 0
+  98 0052 FFF7FEFF 		bl	PWMB1_Stop
+  99              	.LVL13:
+ 100 0056 14E0     		b	.L6
+ 101              	.LVL14:
+ 102              	.L2:
+  32:run_back.c    ****        
+  33:run_back.c    ****     }
+  34:run_back.c    **** 
+  35:run_back.c    ****     //tæl counter ned og drejer steppermotoren mod uret
+  36:run_back.c    ****     else if(ang < CounterF_ReadCounter() && ang > MIN_POS)
+ 103              		.loc 1 36 0
+ 104 0058 FFF7FEFF 		bl	CounterF_ReadCounter
+ 105              	.LVL15:
+ 106 005c A042     		cmp	r0, r4
+ 107 005e 10D9     		bls	.L6
+ 108              		.loc 1 36 0 is_stmt 0 discriminator 1
+ 109 0060 7CB1     		cbz	r4, .L6
+  37:run_back.c    ****     {
+  38:run_back.c    ****         Dir_stepB_Write(LOW);
+ 110              		.loc 1 38 0 is_stmt 1
+ 111 0062 0020     		movs	r0, #0
+ 112 0064 FFF7FEFF 		bl	Dir_stepB_Write
+ 113              	.LVL16:
+  39:run_back.c    ****         PWMB2_Start();
+ 114              		.loc 1 39 0
+ 115 0068 FFF7FEFF 		bl	PWMB2_Start
+ 116              	.LVL17:
+  40:run_back.c    ****         while(CounterB_ReadCounter()!=ang)
+ 117              		.loc 1 40 0
+ 118 006c 03E0     		b	.L7
+ 119              	.L9:
+  41:run_back.c    ****         {    
+  42:run_back.c    ****             
+  43:run_back.c    ****             if(ang != i2cbuf[ANG_BACK_POS])
+ 120              		.loc 1 43 0
+ 121 006e 064B     		ldr	r3, .L11
+ 122 0070 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+ 123 0072 A342     		cmp	r3, r4
+ 124 0074 03D1     		bne	.L8
+ 125              	.L7:
+  40:run_back.c    ****         while(CounterB_ReadCounter()!=ang)
+ 126              		.loc 1 40 0
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccjpNoko.s 			page 4
+
+
+ 127 0076 FFF7FEFF 		bl	CounterB_ReadCounter
+ 128              	.LVL18:
+ 129 007a A042     		cmp	r0, r4
+ 130 007c F7D1     		bne	.L9
+ 131              	.L8:
+  44:run_back.c    ****             break;
+  45:run_back.c    ****         }
+  46:run_back.c    ****         PWMB2_Stop();
+ 132              		.loc 1 46 0
+ 133 007e FFF7FEFF 		bl	PWMB2_Stop
+ 134              	.LVL19:
+ 135              	.L6:
+  47:run_back.c    ****     }
+  48:run_back.c    ****     return 0;
+  49:run_back.c    **** }
+ 136              		.loc 1 49 0
+ 137 0082 0020     		movs	r0, #0
+ 138 0084 38BD     		pop	{r3, r4, r5, pc}
+ 139              	.L12:
+ 140 0086 00BF     		.align	2
+ 141              	.L11:
+ 142 0088 00000000 		.word	i2cbuf
+ 143 008c 00000000 		.word	oldbuf
+ 144              		.cfi_endproc
+ 145              	.LFE63:
+ 146              		.size	run_back, .-run_back
+ 147              		.text
+ 148              	.Letext0:
+ 149              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 150              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 151              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 152              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 153              		.file 6 "Generated_Source\\PSoC5/SpeedBackW.h"
+ 154              		.file 7 "Generated_Source\\PSoC5/PWMSB.h"
+ 155              		.file 8 "Generated_Source\\PSoC5/Dir_stepB.h"
+ 156              		.file 9 "Generated_Source\\PSoC5/PWMB1.h"
+ 157              		.file 10 "Generated_Source\\PSoC5/CounterB.h"
+ 158              		.file 11 "Generated_Source\\PSoC5/CounterF.h"
+ 159              		.file 12 "Generated_Source\\PSoC5/PWMB2.h"
+ 160              		.section	.debug_info,"",%progbits
+ 161              	.Ldebug_info0:
+ 162 0000 2B020000 		.4byte	0x22b
+ 163 0004 0400     		.2byte	0x4
+ 164 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 165 000a 04       		.byte	0x4
+ 166 000b 01       		.uleb128 0x1
+ 167 000c 0A010000 		.4byte	.LASF29
+ 168 0010 01       		.byte	0x1
+ 169 0011 CD000000 		.4byte	.LASF30
+ 170 0015 3F000000 		.4byte	.LASF31
+ 171 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 172 001d 00000000 		.4byte	0
+ 173 0021 00000000 		.4byte	.Ldebug_line0
+ 174 0025 02       		.uleb128 0x2
+ 175 0026 01       		.byte	0x1
+ 176 0027 06       		.byte	0x6
+ 177 0028 47020000 		.4byte	.LASF0
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccjpNoko.s 			page 5
+
+
+ 178 002c 02       		.uleb128 0x2
+ 179 002d 01       		.byte	0x1
+ 180 002e 08       		.byte	0x8
+ 181 002f AD000000 		.4byte	.LASF1
+ 182 0033 02       		.uleb128 0x2
+ 183 0034 02       		.byte	0x2
+ 184 0035 05       		.byte	0x5
+ 185 0036 0D020000 		.4byte	.LASF2
+ 186 003a 02       		.uleb128 0x2
+ 187 003b 02       		.byte	0x2
+ 188 003c 07       		.byte	0x7
+ 189 003d D8000000 		.4byte	.LASF3
+ 190 0041 03       		.uleb128 0x3
+ 191 0042 35000000 		.4byte	.LASF9
+ 192 0046 02       		.byte	0x2
+ 193 0047 3F       		.byte	0x3f
+ 194 0048 4C000000 		.4byte	0x4c
+ 195 004c 02       		.uleb128 0x2
+ 196 004d 04       		.byte	0x4
+ 197 004e 05       		.byte	0x5
+ 198 004f 32020000 		.4byte	.LASF4
+ 199 0053 02       		.uleb128 0x2
+ 200 0054 04       		.byte	0x4
+ 201 0055 07       		.byte	0x7
+ 202 0056 BB000000 		.4byte	.LASF5
+ 203 005a 02       		.uleb128 0x2
+ 204 005b 08       		.byte	0x8
+ 205 005c 05       		.byte	0x5
+ 206 005d 00000000 		.4byte	.LASF6
+ 207 0061 02       		.uleb128 0x2
+ 208 0062 08       		.byte	0x8
+ 209 0063 07       		.byte	0x7
+ 210 0064 A5010000 		.4byte	.LASF7
+ 211 0068 04       		.uleb128 0x4
+ 212 0069 04       		.byte	0x4
+ 213 006a 05       		.byte	0x5
+ 214 006b 696E7400 		.ascii	"int\000"
+ 215 006f 02       		.uleb128 0x2
+ 216 0070 04       		.byte	0x4
+ 217 0071 07       		.byte	0x7
+ 218 0072 98010000 		.4byte	.LASF8
+ 219 0076 03       		.uleb128 0x3
+ 220 0077 98000000 		.4byte	.LASF10
+ 221 007b 03       		.byte	0x3
+ 222 007c 2C       		.byte	0x2c
+ 223 007d 41000000 		.4byte	0x41
+ 224 0081 05       		.uleb128 0x5
+ 225 0082 2C020000 		.4byte	.LASF11
+ 226 0086 04       		.byte	0x4
+ 227 0087 9201     		.2byte	0x192
+ 228 0089 2C000000 		.4byte	0x2c
+ 229 008d 02       		.uleb128 0x2
+ 230 008e 04       		.byte	0x4
+ 231 008f 04       		.byte	0x4
+ 232 0090 A7000000 		.4byte	.LASF12
+ 233 0094 02       		.uleb128 0x2
+ 234 0095 08       		.byte	0x8
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccjpNoko.s 			page 6
+
+
+ 235 0096 04       		.byte	0x4
+ 236 0097 03010000 		.4byte	.LASF13
+ 237 009b 02       		.uleb128 0x2
+ 238 009c 01       		.byte	0x1
+ 239 009d 08       		.byte	0x8
+ 240 009e F5010000 		.4byte	.LASF14
+ 241 00a2 02       		.uleb128 0x2
+ 242 00a3 04       		.byte	0x4
+ 243 00a4 07       		.byte	0x7
+ 244 00a5 C2010000 		.4byte	.LASF15
+ 245 00a9 06       		.uleb128 0x6
+ 246 00aa CB010000 		.4byte	.LASF32
+ 247 00ae 01       		.byte	0x1
+ 248 00af 05       		.byte	0x5
+ 249 00b0 81000000 		.4byte	0x81
+ 250 00b4 00000000 		.4byte	.LFB63
+ 251 00b8 90000000 		.4byte	.LFE63-.LFB63
+ 252 00bc 01       		.uleb128 0x1
+ 253 00bd 9C       		.byte	0x9c
+ 254 00be 97010000 		.4byte	0x197
+ 255 00c2 07       		.uleb128 0x7
+ 256 00c3 616E6700 		.ascii	"ang\000"
+ 257 00c7 01       		.byte	0x1
+ 258 00c8 05       		.byte	0x5
+ 259 00c9 81000000 		.4byte	0x81
+ 260 00cd 00000000 		.4byte	.LLST0
+ 261 00d1 08       		.uleb128 0x8
+ 262 00d2 BC010000 		.4byte	.LASF16
+ 263 00d6 01       		.byte	0x1
+ 264 00d7 05       		.byte	0x5
+ 265 00d8 81000000 		.4byte	0x81
+ 266 00dc 21000000 		.4byte	.LLST1
+ 267 00e0 09       		.uleb128 0x9
+ 268 00e1 91000000 		.4byte	.LASF33
+ 269 00e5 01       		.byte	0x1
+ 270 00e6 08       		.byte	0x8
+ 271 00e7 81000000 		.4byte	0x81
+ 272 00eb 42000000 		.4byte	.LLST2
+ 273 00ef 0A       		.uleb128 0xa
+ 274 00f0 14000000 		.4byte	.LVL3
+ 275 00f4 C9010000 		.4byte	0x1c9
+ 276 00f8 02010000 		.4byte	0x102
+ 277 00fc 0B       		.uleb128 0xb
+ 278 00fd 01       		.uleb128 0x1
+ 279 00fe 50       		.byte	0x50
+ 280 00ff 01       		.uleb128 0x1
+ 281 0100 31       		.byte	0x31
+ 282 0101 00       		.byte	0
+ 283 0102 0A       		.uleb128 0xa
+ 284 0103 1A000000 		.4byte	.LVL4
+ 285 0107 DA010000 		.4byte	0x1da
+ 286 010b 16010000 		.4byte	0x116
+ 287 010f 0B       		.uleb128 0xb
+ 288 0110 01       		.uleb128 0x1
+ 289 0111 50       		.byte	0x50
+ 290 0112 02       		.uleb128 0x2
+ 291 0113 75       		.byte	0x75
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccjpNoko.s 			page 7
+
+
+ 292 0114 00       		.sleb128 0
+ 293 0115 00       		.byte	0
+ 294 0116 0C       		.uleb128 0xc
+ 295 0117 1E000000 		.4byte	.LVL5
+ 296 011b EB010000 		.4byte	0x1eb
+ 297 011f 0C       		.uleb128 0xc
+ 298 0120 2A000000 		.4byte	.LVL6
+ 299 0124 EB010000 		.4byte	0x1eb
+ 300 0128 0C       		.uleb128 0xc
+ 301 0129 32000000 		.4byte	.LVL8
+ 302 012d EB010000 		.4byte	0x1eb
+ 303 0131 0A       		.uleb128 0xa
+ 304 0132 3C000000 		.4byte	.LVL10
+ 305 0136 F6010000 		.4byte	0x1f6
+ 306 013a 44010000 		.4byte	0x144
+ 307 013e 0B       		.uleb128 0xb
+ 308 013f 01       		.uleb128 0x1
+ 309 0140 50       		.byte	0x50
+ 310 0141 01       		.uleb128 0x1
+ 311 0142 31       		.byte	0x31
+ 312 0143 00       		.byte	0
+ 313 0144 0C       		.uleb128 0xc
+ 314 0145 40000000 		.4byte	.LVL11
+ 315 0149 07020000 		.4byte	0x207
+ 316 014d 0C       		.uleb128 0xc
+ 317 014e 4E000000 		.4byte	.LVL12
+ 318 0152 EB010000 		.4byte	0x1eb
+ 319 0156 0C       		.uleb128 0xc
+ 320 0157 56000000 		.4byte	.LVL13
+ 321 015b 0E020000 		.4byte	0x20e
+ 322 015f 0C       		.uleb128 0xc
+ 323 0160 5C000000 		.4byte	.LVL15
+ 324 0164 15020000 		.4byte	0x215
+ 325 0168 0A       		.uleb128 0xa
+ 326 0169 68000000 		.4byte	.LVL16
+ 327 016d F6010000 		.4byte	0x1f6
+ 328 0171 7B010000 		.4byte	0x17b
+ 329 0175 0B       		.uleb128 0xb
+ 330 0176 01       		.uleb128 0x1
+ 331 0177 50       		.byte	0x50
+ 332 0178 01       		.uleb128 0x1
+ 333 0179 30       		.byte	0x30
+ 334 017a 00       		.byte	0
+ 335 017b 0C       		.uleb128 0xc
+ 336 017c 6C000000 		.4byte	.LVL17
+ 337 0180 20020000 		.4byte	0x220
+ 338 0184 0C       		.uleb128 0xc
+ 339 0185 7A000000 		.4byte	.LVL18
+ 340 0189 EB010000 		.4byte	0x1eb
+ 341 018d 0C       		.uleb128 0xc
+ 342 018e 82000000 		.4byte	.LVL19
+ 343 0192 27020000 		.4byte	0x227
+ 344 0196 00       		.byte	0
+ 345 0197 0D       		.uleb128 0xd
+ 346 0198 F6000000 		.4byte	.LASF17
+ 347 019c 05       		.byte	0x5
+ 348 019d 9606     		.2byte	0x696
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccjpNoko.s 			page 8
+
+
+ 349 019f A3010000 		.4byte	0x1a3
+ 350 01a3 0E       		.uleb128 0xe
+ 351 01a4 76000000 		.4byte	0x76
+ 352 01a8 0F       		.uleb128 0xf
+ 353 01a9 81000000 		.4byte	0x81
+ 354 01ad B3010000 		.4byte	0x1b3
+ 355 01b1 10       		.uleb128 0x10
+ 356 01b2 00       		.byte	0
+ 357 01b3 11       		.uleb128 0x11
+ 358 01b4 0E000000 		.4byte	.LASF18
+ 359 01b8 01       		.byte	0x1
+ 360 01b9 03       		.byte	0x3
+ 361 01ba A8010000 		.4byte	0x1a8
+ 362 01be 11       		.uleb128 0x11
+ 363 01bf A0000000 		.4byte	.LASF19
+ 364 01c3 01       		.byte	0x1
+ 365 01c4 04       		.byte	0x4
+ 366 01c5 A8010000 		.4byte	0x1a8
+ 367 01c9 12       		.uleb128 0x12
+ 368 01ca D4010000 		.4byte	.LASF20
+ 369 01ce 06       		.byte	0x6
+ 370 01cf 26       		.byte	0x26
+ 371 01d0 DA010000 		.4byte	0x1da
+ 372 01d4 13       		.uleb128 0x13
+ 373 01d5 81000000 		.4byte	0x81
+ 374 01d9 00       		.byte	0
+ 375 01da 12       		.uleb128 0x12
+ 376 01db FA010000 		.4byte	.LASF21
+ 377 01df 07       		.byte	0x7
+ 378 01e0 C3       		.byte	0xc3
+ 379 01e1 EB010000 		.4byte	0x1eb
+ 380 01e5 13       		.uleb128 0x13
+ 381 01e6 81000000 		.4byte	0x81
+ 382 01ea 00       		.byte	0
+ 383 01eb 14       		.uleb128 0x14
+ 384 01ec 15000000 		.4byte	.LASF25
+ 385 01f0 0A       		.byte	0xa
+ 386 01f1 5D       		.byte	0x5d
+ 387 01f2 81000000 		.4byte	0x81
+ 388 01f6 12       		.uleb128 0x12
+ 389 01f7 E5010000 		.4byte	.LASF22
+ 390 01fb 08       		.byte	0x8
+ 391 01fc 26       		.byte	0x26
+ 392 01fd 07020000 		.4byte	0x207
+ 393 0201 13       		.uleb128 0x13
+ 394 0202 81000000 		.4byte	0x81
+ 395 0206 00       		.byte	0
+ 396 0207 15       		.uleb128 0x15
+ 397 0208 3B020000 		.4byte	.LASF23
+ 398 020c 09       		.byte	0x9
+ 399 020d 92       		.byte	0x92
+ 400 020e 15       		.uleb128 0x15
+ 401 020f EB000000 		.4byte	.LASF24
+ 402 0213 09       		.byte	0x9
+ 403 0214 93       		.byte	0x93
+ 404 0215 14       		.uleb128 0x14
+ 405 0216 17020000 		.4byte	.LASF26
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccjpNoko.s 			page 9
+
+
+ 406 021a 0B       		.byte	0xb
+ 407 021b 5D       		.byte	0x5d
+ 408 021c 81000000 		.4byte	0x81
+ 409 0220 15       		.uleb128 0x15
+ 410 0221 53020000 		.4byte	.LASF27
+ 411 0225 0C       		.byte	0xc
+ 412 0226 92       		.byte	0x92
+ 413 0227 15       		.uleb128 0x15
+ 414 0228 2A000000 		.4byte	.LASF28
+ 415 022c 0C       		.byte	0xc
+ 416 022d 93       		.byte	0x93
+ 417 022e 00       		.byte	0
+ 418              		.section	.debug_abbrev,"",%progbits
+ 419              	.Ldebug_abbrev0:
+ 420 0000 01       		.uleb128 0x1
+ 421 0001 11       		.uleb128 0x11
+ 422 0002 01       		.byte	0x1
+ 423 0003 25       		.uleb128 0x25
+ 424 0004 0E       		.uleb128 0xe
+ 425 0005 13       		.uleb128 0x13
+ 426 0006 0B       		.uleb128 0xb
+ 427 0007 03       		.uleb128 0x3
+ 428 0008 0E       		.uleb128 0xe
+ 429 0009 1B       		.uleb128 0x1b
+ 430 000a 0E       		.uleb128 0xe
+ 431 000b 55       		.uleb128 0x55
+ 432 000c 17       		.uleb128 0x17
+ 433 000d 11       		.uleb128 0x11
+ 434 000e 01       		.uleb128 0x1
+ 435 000f 10       		.uleb128 0x10
+ 436 0010 17       		.uleb128 0x17
+ 437 0011 00       		.byte	0
+ 438 0012 00       		.byte	0
+ 439 0013 02       		.uleb128 0x2
+ 440 0014 24       		.uleb128 0x24
+ 441 0015 00       		.byte	0
+ 442 0016 0B       		.uleb128 0xb
+ 443 0017 0B       		.uleb128 0xb
+ 444 0018 3E       		.uleb128 0x3e
+ 445 0019 0B       		.uleb128 0xb
+ 446 001a 03       		.uleb128 0x3
+ 447 001b 0E       		.uleb128 0xe
+ 448 001c 00       		.byte	0
+ 449 001d 00       		.byte	0
+ 450 001e 03       		.uleb128 0x3
+ 451 001f 16       		.uleb128 0x16
+ 452 0020 00       		.byte	0
+ 453 0021 03       		.uleb128 0x3
+ 454 0022 0E       		.uleb128 0xe
+ 455 0023 3A       		.uleb128 0x3a
+ 456 0024 0B       		.uleb128 0xb
+ 457 0025 3B       		.uleb128 0x3b
+ 458 0026 0B       		.uleb128 0xb
+ 459 0027 49       		.uleb128 0x49
+ 460 0028 13       		.uleb128 0x13
+ 461 0029 00       		.byte	0
+ 462 002a 00       		.byte	0
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccjpNoko.s 			page 10
+
+
+ 463 002b 04       		.uleb128 0x4
+ 464 002c 24       		.uleb128 0x24
+ 465 002d 00       		.byte	0
+ 466 002e 0B       		.uleb128 0xb
+ 467 002f 0B       		.uleb128 0xb
+ 468 0030 3E       		.uleb128 0x3e
+ 469 0031 0B       		.uleb128 0xb
+ 470 0032 03       		.uleb128 0x3
+ 471 0033 08       		.uleb128 0x8
+ 472 0034 00       		.byte	0
+ 473 0035 00       		.byte	0
+ 474 0036 05       		.uleb128 0x5
+ 475 0037 16       		.uleb128 0x16
+ 476 0038 00       		.byte	0
+ 477 0039 03       		.uleb128 0x3
+ 478 003a 0E       		.uleb128 0xe
+ 479 003b 3A       		.uleb128 0x3a
+ 480 003c 0B       		.uleb128 0xb
+ 481 003d 3B       		.uleb128 0x3b
+ 482 003e 05       		.uleb128 0x5
+ 483 003f 49       		.uleb128 0x49
+ 484 0040 13       		.uleb128 0x13
+ 485 0041 00       		.byte	0
+ 486 0042 00       		.byte	0
+ 487 0043 06       		.uleb128 0x6
+ 488 0044 2E       		.uleb128 0x2e
+ 489 0045 01       		.byte	0x1
+ 490 0046 3F       		.uleb128 0x3f
+ 491 0047 19       		.uleb128 0x19
+ 492 0048 03       		.uleb128 0x3
+ 493 0049 0E       		.uleb128 0xe
+ 494 004a 3A       		.uleb128 0x3a
+ 495 004b 0B       		.uleb128 0xb
+ 496 004c 3B       		.uleb128 0x3b
+ 497 004d 0B       		.uleb128 0xb
+ 498 004e 27       		.uleb128 0x27
+ 499 004f 19       		.uleb128 0x19
+ 500 0050 49       		.uleb128 0x49
+ 501 0051 13       		.uleb128 0x13
+ 502 0052 11       		.uleb128 0x11
+ 503 0053 01       		.uleb128 0x1
+ 504 0054 12       		.uleb128 0x12
+ 505 0055 06       		.uleb128 0x6
+ 506 0056 40       		.uleb128 0x40
+ 507 0057 18       		.uleb128 0x18
+ 508 0058 9742     		.uleb128 0x2117
+ 509 005a 19       		.uleb128 0x19
+ 510 005b 01       		.uleb128 0x1
+ 511 005c 13       		.uleb128 0x13
+ 512 005d 00       		.byte	0
+ 513 005e 00       		.byte	0
+ 514 005f 07       		.uleb128 0x7
+ 515 0060 05       		.uleb128 0x5
+ 516 0061 00       		.byte	0
+ 517 0062 03       		.uleb128 0x3
+ 518 0063 08       		.uleb128 0x8
+ 519 0064 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccjpNoko.s 			page 11
+
+
+ 520 0065 0B       		.uleb128 0xb
+ 521 0066 3B       		.uleb128 0x3b
+ 522 0067 0B       		.uleb128 0xb
+ 523 0068 49       		.uleb128 0x49
+ 524 0069 13       		.uleb128 0x13
+ 525 006a 02       		.uleb128 0x2
+ 526 006b 17       		.uleb128 0x17
+ 527 006c 00       		.byte	0
+ 528 006d 00       		.byte	0
+ 529 006e 08       		.uleb128 0x8
+ 530 006f 05       		.uleb128 0x5
+ 531 0070 00       		.byte	0
+ 532 0071 03       		.uleb128 0x3
+ 533 0072 0E       		.uleb128 0xe
+ 534 0073 3A       		.uleb128 0x3a
+ 535 0074 0B       		.uleb128 0xb
+ 536 0075 3B       		.uleb128 0x3b
+ 537 0076 0B       		.uleb128 0xb
+ 538 0077 49       		.uleb128 0x49
+ 539 0078 13       		.uleb128 0x13
+ 540 0079 02       		.uleb128 0x2
+ 541 007a 17       		.uleb128 0x17
+ 542 007b 00       		.byte	0
+ 543 007c 00       		.byte	0
+ 544 007d 09       		.uleb128 0x9
+ 545 007e 34       		.uleb128 0x34
+ 546 007f 00       		.byte	0
+ 547 0080 03       		.uleb128 0x3
+ 548 0081 0E       		.uleb128 0xe
+ 549 0082 3A       		.uleb128 0x3a
+ 550 0083 0B       		.uleb128 0xb
+ 551 0084 3B       		.uleb128 0x3b
+ 552 0085 0B       		.uleb128 0xb
+ 553 0086 49       		.uleb128 0x49
+ 554 0087 13       		.uleb128 0x13
+ 555 0088 02       		.uleb128 0x2
+ 556 0089 17       		.uleb128 0x17
+ 557 008a 00       		.byte	0
+ 558 008b 00       		.byte	0
+ 559 008c 0A       		.uleb128 0xa
+ 560 008d 898201   		.uleb128 0x4109
+ 561 0090 01       		.byte	0x1
+ 562 0091 11       		.uleb128 0x11
+ 563 0092 01       		.uleb128 0x1
+ 564 0093 31       		.uleb128 0x31
+ 565 0094 13       		.uleb128 0x13
+ 566 0095 01       		.uleb128 0x1
+ 567 0096 13       		.uleb128 0x13
+ 568 0097 00       		.byte	0
+ 569 0098 00       		.byte	0
+ 570 0099 0B       		.uleb128 0xb
+ 571 009a 8A8201   		.uleb128 0x410a
+ 572 009d 00       		.byte	0
+ 573 009e 02       		.uleb128 0x2
+ 574 009f 18       		.uleb128 0x18
+ 575 00a0 9142     		.uleb128 0x2111
+ 576 00a2 18       		.uleb128 0x18
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccjpNoko.s 			page 12
+
+
+ 577 00a3 00       		.byte	0
+ 578 00a4 00       		.byte	0
+ 579 00a5 0C       		.uleb128 0xc
+ 580 00a6 898201   		.uleb128 0x4109
+ 581 00a9 00       		.byte	0
+ 582 00aa 11       		.uleb128 0x11
+ 583 00ab 01       		.uleb128 0x1
+ 584 00ac 31       		.uleb128 0x31
+ 585 00ad 13       		.uleb128 0x13
+ 586 00ae 00       		.byte	0
+ 587 00af 00       		.byte	0
+ 588 00b0 0D       		.uleb128 0xd
+ 589 00b1 34       		.uleb128 0x34
+ 590 00b2 00       		.byte	0
+ 591 00b3 03       		.uleb128 0x3
+ 592 00b4 0E       		.uleb128 0xe
+ 593 00b5 3A       		.uleb128 0x3a
+ 594 00b6 0B       		.uleb128 0xb
+ 595 00b7 3B       		.uleb128 0x3b
+ 596 00b8 05       		.uleb128 0x5
+ 597 00b9 49       		.uleb128 0x49
+ 598 00ba 13       		.uleb128 0x13
+ 599 00bb 3F       		.uleb128 0x3f
+ 600 00bc 19       		.uleb128 0x19
+ 601 00bd 3C       		.uleb128 0x3c
+ 602 00be 19       		.uleb128 0x19
+ 603 00bf 00       		.byte	0
+ 604 00c0 00       		.byte	0
+ 605 00c1 0E       		.uleb128 0xe
+ 606 00c2 35       		.uleb128 0x35
+ 607 00c3 00       		.byte	0
+ 608 00c4 49       		.uleb128 0x49
+ 609 00c5 13       		.uleb128 0x13
+ 610 00c6 00       		.byte	0
+ 611 00c7 00       		.byte	0
+ 612 00c8 0F       		.uleb128 0xf
+ 613 00c9 01       		.uleb128 0x1
+ 614 00ca 01       		.byte	0x1
+ 615 00cb 49       		.uleb128 0x49
+ 616 00cc 13       		.uleb128 0x13
+ 617 00cd 01       		.uleb128 0x1
+ 618 00ce 13       		.uleb128 0x13
+ 619 00cf 00       		.byte	0
+ 620 00d0 00       		.byte	0
+ 621 00d1 10       		.uleb128 0x10
+ 622 00d2 21       		.uleb128 0x21
+ 623 00d3 00       		.byte	0
+ 624 00d4 00       		.byte	0
+ 625 00d5 00       		.byte	0
+ 626 00d6 11       		.uleb128 0x11
+ 627 00d7 34       		.uleb128 0x34
+ 628 00d8 00       		.byte	0
+ 629 00d9 03       		.uleb128 0x3
+ 630 00da 0E       		.uleb128 0xe
+ 631 00db 3A       		.uleb128 0x3a
+ 632 00dc 0B       		.uleb128 0xb
+ 633 00dd 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccjpNoko.s 			page 13
+
+
+ 634 00de 0B       		.uleb128 0xb
+ 635 00df 49       		.uleb128 0x49
+ 636 00e0 13       		.uleb128 0x13
+ 637 00e1 3F       		.uleb128 0x3f
+ 638 00e2 19       		.uleb128 0x19
+ 639 00e3 3C       		.uleb128 0x3c
+ 640 00e4 19       		.uleb128 0x19
+ 641 00e5 00       		.byte	0
+ 642 00e6 00       		.byte	0
+ 643 00e7 12       		.uleb128 0x12
+ 644 00e8 2E       		.uleb128 0x2e
+ 645 00e9 01       		.byte	0x1
+ 646 00ea 3F       		.uleb128 0x3f
+ 647 00eb 19       		.uleb128 0x19
+ 648 00ec 03       		.uleb128 0x3
+ 649 00ed 0E       		.uleb128 0xe
+ 650 00ee 3A       		.uleb128 0x3a
+ 651 00ef 0B       		.uleb128 0xb
+ 652 00f0 3B       		.uleb128 0x3b
+ 653 00f1 0B       		.uleb128 0xb
+ 654 00f2 27       		.uleb128 0x27
+ 655 00f3 19       		.uleb128 0x19
+ 656 00f4 3C       		.uleb128 0x3c
+ 657 00f5 19       		.uleb128 0x19
+ 658 00f6 01       		.uleb128 0x1
+ 659 00f7 13       		.uleb128 0x13
+ 660 00f8 00       		.byte	0
+ 661 00f9 00       		.byte	0
+ 662 00fa 13       		.uleb128 0x13
+ 663 00fb 05       		.uleb128 0x5
+ 664 00fc 00       		.byte	0
+ 665 00fd 49       		.uleb128 0x49
+ 666 00fe 13       		.uleb128 0x13
+ 667 00ff 00       		.byte	0
+ 668 0100 00       		.byte	0
+ 669 0101 14       		.uleb128 0x14
+ 670 0102 2E       		.uleb128 0x2e
+ 671 0103 00       		.byte	0
+ 672 0104 3F       		.uleb128 0x3f
+ 673 0105 19       		.uleb128 0x19
+ 674 0106 03       		.uleb128 0x3
+ 675 0107 0E       		.uleb128 0xe
+ 676 0108 3A       		.uleb128 0x3a
+ 677 0109 0B       		.uleb128 0xb
+ 678 010a 3B       		.uleb128 0x3b
+ 679 010b 0B       		.uleb128 0xb
+ 680 010c 27       		.uleb128 0x27
+ 681 010d 19       		.uleb128 0x19
+ 682 010e 49       		.uleb128 0x49
+ 683 010f 13       		.uleb128 0x13
+ 684 0110 3C       		.uleb128 0x3c
+ 685 0111 19       		.uleb128 0x19
+ 686 0112 00       		.byte	0
+ 687 0113 00       		.byte	0
+ 688 0114 15       		.uleb128 0x15
+ 689 0115 2E       		.uleb128 0x2e
+ 690 0116 00       		.byte	0
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccjpNoko.s 			page 14
+
+
+ 691 0117 3F       		.uleb128 0x3f
+ 692 0118 19       		.uleb128 0x19
+ 693 0119 03       		.uleb128 0x3
+ 694 011a 0E       		.uleb128 0xe
+ 695 011b 3A       		.uleb128 0x3a
+ 696 011c 0B       		.uleb128 0xb
+ 697 011d 3B       		.uleb128 0x3b
+ 698 011e 0B       		.uleb128 0xb
+ 699 011f 27       		.uleb128 0x27
+ 700 0120 19       		.uleb128 0x19
+ 701 0121 3C       		.uleb128 0x3c
+ 702 0122 19       		.uleb128 0x19
+ 703 0123 00       		.byte	0
+ 704 0124 00       		.byte	0
+ 705 0125 00       		.byte	0
+ 706              		.section	.debug_loc,"",%progbits
+ 707              	.Ldebug_loc0:
+ 708              	.LLST0:
+ 709 0000 00000000 		.4byte	.LVL0
+ 710 0004 10000000 		.4byte	.LVL2
+ 711 0008 0100     		.2byte	0x1
+ 712 000a 50       		.byte	0x50
+ 713 000b 10000000 		.4byte	.LVL2
+ 714 000f 90000000 		.4byte	.LFE63
+ 715 0013 0400     		.2byte	0x4
+ 716 0015 F3       		.byte	0xf3
+ 717 0016 01       		.uleb128 0x1
+ 718 0017 50       		.byte	0x50
+ 719 0018 9F       		.byte	0x9f
+ 720 0019 00000000 		.4byte	0
+ 721 001d 00000000 		.4byte	0
+ 722              	.LLST1:
+ 723 0021 00000000 		.4byte	.LVL0
+ 724 0025 13000000 		.4byte	.LVL3-1
+ 725 0029 0100     		.2byte	0x1
+ 726 002b 51       		.byte	0x51
+ 727 002c 13000000 		.4byte	.LVL3-1
+ 728 0030 90000000 		.4byte	.LFE63
+ 729 0034 0400     		.2byte	0x4
+ 730 0036 F3       		.byte	0xf3
+ 731 0037 01       		.uleb128 0x1
+ 732 0038 51       		.byte	0x51
+ 733 0039 9F       		.byte	0x9f
+ 734 003a 00000000 		.4byte	0
+ 735 003e 00000000 		.4byte	0
+ 736              	.LLST2:
+ 737 0042 06000000 		.4byte	.LVL1
+ 738 0046 2E000000 		.4byte	.LVL7
+ 739 004a 0200     		.2byte	0x2
+ 740 004c 30       		.byte	0x30
+ 741 004d 9F       		.byte	0x9f
+ 742 004e 2E000000 		.4byte	.LVL7
+ 743 0052 58000000 		.4byte	.LVL14
+ 744 0056 0100     		.2byte	0x1
+ 745 0058 55       		.byte	0x55
+ 746 0059 58000000 		.4byte	.LVL14
+ 747 005d 82000000 		.4byte	.LVL19
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccjpNoko.s 			page 15
+
+
+ 748 0061 0200     		.2byte	0x2
+ 749 0063 30       		.byte	0x30
+ 750 0064 9F       		.byte	0x9f
+ 751 0065 00000000 		.4byte	0
+ 752 0069 00000000 		.4byte	0
+ 753              		.section	.debug_aranges,"",%progbits
+ 754 0000 1C000000 		.4byte	0x1c
+ 755 0004 0200     		.2byte	0x2
+ 756 0006 00000000 		.4byte	.Ldebug_info0
+ 757 000a 04       		.byte	0x4
+ 758 000b 00       		.byte	0
+ 759 000c 0000     		.2byte	0
+ 760 000e 0000     		.2byte	0
+ 761 0010 00000000 		.4byte	.LFB63
+ 762 0014 90000000 		.4byte	.LFE63-.LFB63
+ 763 0018 00000000 		.4byte	0
+ 764 001c 00000000 		.4byte	0
+ 765              		.section	.debug_ranges,"",%progbits
+ 766              	.Ldebug_ranges0:
+ 767 0000 00000000 		.4byte	.LFB63
+ 768 0004 90000000 		.4byte	.LFE63
+ 769 0008 00000000 		.4byte	0
+ 770 000c 00000000 		.4byte	0
+ 771              		.section	.debug_line,"",%progbits
+ 772              	.Ldebug_line0:
+ 773 0000 DC010000 		.section	.debug_str,"MS",%progbits,1
+ 773      0200A701 
+ 773      00000201 
+ 773      FB0E0D00 
+ 773      01010101 
+ 774              	.LASF6:
+ 775 0000 6C6F6E67 		.ascii	"long long int\000"
+ 775      206C6F6E 
+ 775      6720696E 
+ 775      7400
+ 776              	.LASF18:
+ 777 000e 69326362 		.ascii	"i2cbuf\000"
+ 777      756600
+ 778              	.LASF25:
+ 779 0015 436F756E 		.ascii	"CounterB_ReadCounter\000"
+ 779      74657242 
+ 779      5F526561 
+ 779      64436F75 
+ 779      6E746572 
+ 780              	.LASF28:
+ 781 002a 50574D42 		.ascii	"PWMB2_Stop\000"
+ 781      325F5374 
+ 781      6F7000
+ 782              	.LASF9:
+ 783 0035 5F5F696E 		.ascii	"__int32_t\000"
+ 783      7433325F 
+ 783      7400
+ 784              	.LASF31:
+ 785 003f 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\Projekt 4. semester\\E4"
+ 785      73657273 
+ 785      5C416E64 
+ 785      6572735C 
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccjpNoko.s 			page 16
+
+
+ 785      4465736B 
+ 786 006d 50524A34 		.ascii	"PRJ4-Gruppe1\\Test4\\version_01.cydsn\000"
+ 786      2D477275 
+ 786      70706531 
+ 786      5C546573 
+ 786      74345C76 
+ 787              	.LASF33:
+ 788 0091 6E657761 		.ascii	"newang\000"
+ 788      6E6700
+ 789              	.LASF10:
+ 790 0098 696E7433 		.ascii	"int32_t\000"
+ 790      325F7400 
+ 791              	.LASF19:
+ 792 00a0 6F6C6462 		.ascii	"oldbuf\000"
+ 792      756600
+ 793              	.LASF12:
+ 794 00a7 666C6F61 		.ascii	"float\000"
+ 794      7400
+ 795              	.LASF1:
+ 796 00ad 756E7369 		.ascii	"unsigned char\000"
+ 796      676E6564 
+ 796      20636861 
+ 796      7200
+ 797              	.LASF5:
+ 798 00bb 6C6F6E67 		.ascii	"long unsigned int\000"
+ 798      20756E73 
+ 798      69676E65 
+ 798      6420696E 
+ 798      7400
+ 799              	.LASF30:
+ 800 00cd 72756E5F 		.ascii	"run_back.c\000"
+ 800      6261636B 
+ 800      2E6300
+ 801              	.LASF3:
+ 802 00d8 73686F72 		.ascii	"short unsigned int\000"
+ 802      7420756E 
+ 802      7369676E 
+ 802      65642069 
+ 802      6E7400
+ 803              	.LASF24:
+ 804 00eb 50574D42 		.ascii	"PWMB1_Stop\000"
+ 804      315F5374 
+ 804      6F7000
+ 805              	.LASF17:
+ 806 00f6 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 806      52784275 
+ 806      66666572 
+ 806      00
+ 807              	.LASF13:
+ 808 0103 646F7562 		.ascii	"double\000"
+ 808      6C6500
+ 809              	.LASF29:
+ 810 010a 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 810      4320342E 
+ 810      392E3320 
+ 810      32303135 
+ 810      30333033 
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccjpNoko.s 			page 17
+
+
+ 811 013d 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 811      20726576 
+ 811      6973696F 
+ 811      6E203232 
+ 811      31323230 
+ 812 0170 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 812      66756E63 
+ 812      74696F6E 
+ 812      2D736563 
+ 812      74696F6E 
+ 813              	.LASF8:
+ 814 0198 756E7369 		.ascii	"unsigned int\000"
+ 814      676E6564 
+ 814      20696E74 
+ 814      00
+ 815              	.LASF7:
+ 816 01a5 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 816      206C6F6E 
+ 816      6720756E 
+ 816      7369676E 
+ 816      65642069 
+ 817              	.LASF16:
+ 818 01bc 73706565 		.ascii	"speed\000"
+ 818      6400
+ 819              	.LASF15:
+ 820 01c2 73697A65 		.ascii	"sizetype\000"
+ 820      74797065 
+ 820      00
+ 821              	.LASF32:
+ 822 01cb 72756E5F 		.ascii	"run_back\000"
+ 822      6261636B 
+ 822      00
+ 823              	.LASF20:
+ 824 01d4 53706565 		.ascii	"SpeedBackW_Write\000"
+ 824      64426163 
+ 824      6B575F57 
+ 824      72697465 
+ 824      00
+ 825              	.LASF22:
+ 826 01e5 4469725F 		.ascii	"Dir_stepB_Write\000"
+ 826      73746570 
+ 826      425F5772 
+ 826      69746500 
+ 827              	.LASF14:
+ 828 01f5 63686172 		.ascii	"char\000"
+ 828      00
+ 829              	.LASF21:
+ 830 01fa 50574D53 		.ascii	"PWMSB_WriteCompare\000"
+ 830      425F5772 
+ 830      69746543 
+ 830      6F6D7061 
+ 830      726500
+ 831              	.LASF2:
+ 832 020d 73686F72 		.ascii	"short int\000"
+ 832      7420696E 
+ 832      7400
+ 833              	.LASF26:
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccjpNoko.s 			page 18
+
+
+ 834 0217 436F756E 		.ascii	"CounterF_ReadCounter\000"
+ 834      74657246 
+ 834      5F526561 
+ 834      64436F75 
+ 834      6E746572 
+ 835              	.LASF11:
+ 836 022c 75696E74 		.ascii	"uint8\000"
+ 836      3800
+ 837              	.LASF4:
+ 838 0232 6C6F6E67 		.ascii	"long int\000"
+ 838      20696E74 
+ 838      00
+ 839              	.LASF23:
+ 840 023b 50574D42 		.ascii	"PWMB1_Start\000"
+ 840      315F5374 
+ 840      61727400 
+ 841              	.LASF0:
+ 842 0247 7369676E 		.ascii	"signed char\000"
+ 842      65642063 
+ 842      68617200 
+ 843              	.LASF27:
+ 844 0253 50574D42 		.ascii	"PWMB2_Start\000"
+ 844      325F5374 
+ 844      61727400 
+ 845              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

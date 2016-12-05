@@ -31,7 +31,9 @@
 <v>Test4\version_01\Header Files\cyapicallbacks.h</v>
 <v>Test4\version_01\Header Files\main.h</v>
 <v>Test4\version_01\Source Files</v>
+<v>Test4\version_01\Source Files\init_step.c</v>
 <v>Test4\version_01\Source Files\main.c</v>
+<v>Test4\version_01\Source Files\run_back.c</v>
 <v>Test4\version_01\Source Files\run_front.c</v>
 <v>Test4\version_01\Generated_Source</v>
 <v>Test4\version_01\Generated_Source\PSoC5</v>
@@ -41,10 +43,26 @@
 <v>Test4\version_01\Generated_Source\PSoC5\Clock_2</v>
 <v>Test4\version_01\Generated_Source\PSoC5\Clock_2\Clock_2.c</v>
 <v>Test4\version_01\Generated_Source\PSoC5\Clock_2\Clock_2.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Counter</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Counter\Counter.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Counter\Counter.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Counter\Counter_PM.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_3</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_3\Clock_3.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_3\Clock_3.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_4</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_4\Clock_4.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_4\Clock_4.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_5</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_5\Clock_5.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_5\Clock_5.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_6</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_6\Clock_6.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_6\Clock_6.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\CounterB</v>
+<v>Test4\version_01\Generated_Source\PSoC5\CounterB\CounterB.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\CounterB\CounterB.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\CounterB\CounterB_PM.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\CounterF</v>
+<v>Test4\version_01\Generated_Source\PSoC5\CounterF\CounterF.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\CounterF\CounterF.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\CounterF\CounterF_PM.c</v>
 <v>Test4\version_01\Generated_Source\PSoC5\cy_boot</v>
 <v>Test4\version_01\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
 <v>Test4\version_01\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
@@ -72,32 +90,72 @@
 <v>Test4\version_01\Generated_Source\PSoC5\cy_boot\CySpc.h</v>
 <v>Test4\version_01\Generated_Source\PSoC5\cy_boot\cytypes.h</v>
 <v>Test4\version_01\Generated_Source\PSoC5\cy_boot\cyutils.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\dir_step</v>
-<v>Test4\version_01\Generated_Source\PSoC5\dir_step\Dir_step.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\dir_step\Dir_step.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\dir_step\Dir_step_aliases.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Dir_stepB</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Dir_stepB\Dir_stepB.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Dir_stepB\Dir_stepB.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Dir_stepB\Dir_stepB_aliases.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Dir_stepF</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Dir_stepF\Dir_stepF.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Dir_stepF\Dir_stepF.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Dir_stepF\Dir_stepF_aliases.h</v>
 <v>Test4\version_01\Generated_Source\PSoC5\I2CS</v>
 <v>Test4\version_01\Generated_Source\PSoC5\I2CS\I2CS.c</v>
 <v>Test4\version_01\Generated_Source\PSoC5\I2CS\I2CS.h</v>
 <v>Test4\version_01\Generated_Source\PSoC5\I2CS\I2CS_INT.c</v>
 <v>Test4\version_01\Generated_Source\PSoC5\I2CS\I2CS_PM.c</v>
 <v>Test4\version_01\Generated_Source\PSoC5\I2CS\I2CS_PVT.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\MicroB</v>
+<v>Test4\version_01\Generated_Source\PSoC5\MicroB\MicroB.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\MicroB\MicroB.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\MicroB\MicroB_aliases.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\MicroF</v>
+<v>Test4\version_01\Generated_Source\PSoC5\MicroF\MicroF.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\MicroF\MicroF.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\MicroF\MicroF_aliases.h</v>
 <v>Test4\version_01\Generated_Source\PSoC5\Pin_1</v>
 <v>Test4\version_01\Generated_Source\PSoC5\Pin_1\Pin_1.c</v>
 <v>Test4\version_01\Generated_Source\PSoC5\Pin_1\Pin_1.h</v>
 <v>Test4\version_01\Generated_Source\PSoC5\Pin_1\Pin_1_aliases.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\PWM1</v>
-<v>Test4\version_01\Generated_Source\PSoC5\PWM1\PWM1.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\PWM1\PWM1.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\PWM1\PWM1_PM.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\PWM2</v>
-<v>Test4\version_01\Generated_Source\PSoC5\PWM2\PWM2.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\PWM2\PWM2.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\PWM2\PWM2_PM.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\step</v>
-<v>Test4\version_01\Generated_Source\PSoC5\step\step.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\step\step.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\step\step_aliases.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMB1</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMB1\PWMB1.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMB1\PWMB1.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMB1\PWMB1_PM.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMB2</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMB2\PWMB2.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMB2\PWMB2.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMB2\PWMB2_PM.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMF1</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMF1\PWMF1.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMF1\PWMF1.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMF1\PWMF1_PM.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMF2</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMF2\PWMF2.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMF2\PWMF2.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMF2\PWMF2_PM.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMSB</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMSB\PWMSB.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMSB\PWMSB.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMSB\PWMSB_PM.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMSF</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMSF\PWMSF.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMSF\PWMSF.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\PWMSF\PWMSF_PM.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\SpeedBackW</v>
+<v>Test4\version_01\Generated_Source\PSoC5\SpeedBackW\SpeedBackW.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\SpeedBackW\SpeedBackW.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\SpeedBackW\SpeedBackW_aliases.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\SpeedForW</v>
+<v>Test4\version_01\Generated_Source\PSoC5\SpeedForW\SpeedForW.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\SpeedForW\SpeedForW.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\SpeedForW\SpeedForW_aliases.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\stepB</v>
+<v>Test4\version_01\Generated_Source\PSoC5\stepB\stepB.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\stepB\stepB.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\stepB\stepB_aliases.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\stepF</v>
+<v>Test4\version_01\Generated_Source\PSoC5\stepF\stepF.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\stepF\stepF.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\stepF\stepF_aliases.h</v>
 <v>Test4\version_01\Generated_Source\PSoC5\cycodeshareexport.ld</v>
 <v>Test4\version_01\Generated_Source\PSoC5\cycodeshareimport.ld</v>
 <v>Test4\version_01\Generated_Source\PSoC5\cycodeshareimport.scat</v>
@@ -128,7 +186,9 @@
 <v>Test4\version_01\Header Files\cyapicallbacks.h</v>
 <v>Test4\version_01\Header Files\main.h</v>
 <v>Test4\version_01\Source Files</v>
+<v>Test4\version_01\Source Files\init_step.c</v>
 <v>Test4\version_01\Source Files\main.c</v>
+<v>Test4\version_01\Source Files\run_back.c</v>
 <v>Test4\version_01\Source Files\run_front.c</v>
 <v>Test4\version_01\Generated_Source</v>
 <v>Test4\version_01\Generated_Source\PSoC5</v>
@@ -138,36 +198,24 @@
 <v>Test4\version_01\Generated_Source\PSoC5\Clock_2</v>
 <v>Test4\version_01\Generated_Source\PSoC5\Clock_2\Clock_2.c</v>
 <v>Test4\version_01\Generated_Source\PSoC5\Clock_2\Clock_2.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Counter</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Counter\Counter.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Counter\Counter.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Counter\Counter_PM.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\cmsis_armcc.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\cmsis_gcc.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\CyFlash.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\CyFlash.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\CyLib.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\CyLib.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\cypins.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\cyPm.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\cyPm.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\CySpc.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\CySpc.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\cytypes.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_3</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_3\Clock_3.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_3\Clock_3.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_4</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_4\Clock_4.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_4\Clock_4.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_5</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_5\Clock_5.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_5\Clock_5.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_6</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_6\Clock_6.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\Clock_6\Clock_6.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\CounterB</v>
+<v>Test4\version_01\Generated_Source\PSoC5\CounterB\CounterB.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\CounterB\CounterB.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\CounterB\CounterB_PM.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\CounterF</v>
+<v>Test4\version_01\Generated_Source\PSoC5\CounterF\CounterF.c</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Test4\version_01\TopDesign\TopDesign.cysch">
@@ -194,9 +242,15 @@
 <v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
 <v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_1.lst</v>
 <v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_2.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_3.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_4.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_5.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_6.lst</v>
 <v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Counter.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Counter_PM.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CounterB.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CounterB_PM.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CounterF.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CounterF_PM.lst</v>
 <v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
 <v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
 <v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
@@ -206,17 +260,34 @@
 <v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
 <v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
 <v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Dir_stepB.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Dir_stepF.lst</v>
 <v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\I2CS.lst</v>
 <v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\I2CS_INT.lst</v>
 <v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\I2CS_PM.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\init_step.lst</v>
 <v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\MicroB.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\MicroF.lst</v>
 <v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Pin_1.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM1.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM1_PM.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM2.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM2_PM.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMB1.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMB1_PM.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMB2.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMB2_PM.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMF1.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMF1_PM.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMF2.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMF2_PM.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMSB.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMSB_PM.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMSF.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMSF_PM.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\run_back.lst</v>
 <v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\run_front.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\step.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\SpeedBackW.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\SpeedForW.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\stepB.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\stepF.lst</v>
 <v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\version_01.elf</v>
 <v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\version_01.hex</v>
 <v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\version_01.map</v>
@@ -227,41 +298,6 @@
 <VisibleNodeIds>
 <v>Test4</v>
 <v>Test4\version_01</v>
-<v>Test4\version_01\CortexM3</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_1.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_2.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Counter.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Counter_PM.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\I2CS.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\I2CS_INT.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\I2CS_PM.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Pin_1.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM1.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM1_PM.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM2.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM2_PM.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\run_front.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\step.lst</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\version_01.elf</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\version_01.hex</v>
-<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\version_01.map</v>
-<v>Test4\version_01\version_01.gpdsc</v>
-<v>Test4\version_01\version_01.rpt</v>
-<v>Test4\version_01\version_01_timing.html</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -277,7 +313,8 @@
 <v>Test4\version_01\CY8C58LP Family Datasheet</v>
 <v>Test4\version_01\System Reference Guides</v>
 <v>Test4\version_01\System Reference Guides\cy_boot_v5_50</v>
-<v>Test4\version_01\Counter_v3_0.pdf</v>
+<v>Test4\version_01\Counter_v3_0</v>
+<v>Test4\version_01\Counter_v3_0\Counter_v3_0.pdf</v>
 <v>Test4\version_01\cy_clock_v2_20</v>
 <v>Test4\version_01\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
 <v>Test4\version_01\cy_constant_v1_0</v>
@@ -285,7 +322,8 @@
 <v>Test4\version_01\cy_pins_v2_20</v>
 <v>Test4\version_01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>Test4\version_01\EZI2C_v2_0.pdf</v>
-<v>Test4\version_01\or_v1_0.pdf</v>
+<v>Test4\version_01\or_v1_0</v>
+<v>Test4\version_01\or_v1_0\or_v1_0.pdf</v>
 <v>Test4\version_01\PWM_v3_30</v>
 <v>Test4\version_01\PWM_v3_30\PWM_v3_30.pdf</v>
 </ExpandedNodeIds>
@@ -296,7 +334,8 @@
 <v>Test4\version_01\CY8C58LP Family Datasheet</v>
 <v>Test4\version_01\System Reference Guides</v>
 <v>Test4\version_01\System Reference Guides\cy_boot_v5_50</v>
-<v>Test4\version_01\Counter_v3_0.pdf</v>
+<v>Test4\version_01\Counter_v3_0</v>
+<v>Test4\version_01\Counter_v3_0\Counter_v3_0.pdf</v>
 <v>Test4\version_01\cy_clock_v2_20</v>
 <v>Test4\version_01\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
 <v>Test4\version_01\cy_constant_v1_0</v>
@@ -304,7 +343,8 @@
 <v>Test4\version_01\cy_pins_v2_20</v>
 <v>Test4\version_01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>Test4\version_01\EZI2C_v2_0.pdf</v>
-<v>Test4\version_01\or_v1_0.pdf</v>
+<v>Test4\version_01\or_v1_0</v>
+<v>Test4\version_01\or_v1_0\or_v1_0.pdf</v>
 <v>Test4\version_01\PWM_v3_30</v>
 <v>Test4\version_01\PWM_v3_30\PWM_v3_30.pdf</v>
 </VisibleNodeIds>
@@ -328,14 +368,14 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\version_01.cydsn\run_front.c" />
-<name v=".\version_01.cydsn\main.c" />
-<name v=".\version_01.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\version_01.cydsn\main.h" />
-<name v=".\version_01.cydsn\Generated_Source\PSoC5\I2CS.c" />
+<name v=".\version_01.cydsn\main.c" />
+<name v=".\version_01.cydsn\run_front.c" />
+<name v=".\version_01.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\version_01.cydsn\version_01.cydwr" />
-<name v=".\version_01.cydsn\Generated_Source\PSoC5\I2CS.h" />
-<name v=".\version_01.cydsn\Generated_Source\PSoC5\I2CS_PVT.h" />
+<name v=".\version_01.cydsn\run_back.c" />
+<name v=".\version_01.cydsn\init_step.c" />
+<name v=".\version_01.cydsn\Generated_Source\PSoC5\MicroF.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -343,7 +383,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1582, 605" SelectedTabbedMdiWindow="2e792a24-dd1a-4cb5-b655-af0fdaaef0b6"><DocumentWindow Key="a34952b7-10d4-4af8-8ec8-b239fe96ecd5" Guid="335d314e-bfe2-4ae4-b883-e118287941dc" /><DocumentWindow Key="241de3f3-455d-4b2c-b91e-01df61032843" Guid="2e792a24-dd1a-4cb5-b655-af0fdaaef0b6" /><DocumentWindow Key="16bc5b2e-28bb-4b55-af74-8f3d8a74dee0" Guid="e2e8c655-90ad-4e0a-9aaa-d7ec543690c6" /><DocumentWindow Key="fdd64285-a7f9-4efc-bfd4-8afeb0437cc7" Guid="671df117-18d5-431a-bac8-20435fb87734" /><DocumentWindow Key="a2611af6-3143-4bbb-841b-f36a899ae671" Guid="7ef35ae4-38e3-45a1-ad0a-7de654b3073c" /><DocumentWindow Key="6fe907a5-2046-43b3-8f18-63de5eaf8bdf" Guid="35ca8d27-9027-45b7-aee4-0630c390c2ab" /><DocumentWindow Key="c2b7bd43-379f-4172-828e-a8e936886a29" Guid="bb55b46e-15ab-4ed3-8eb6-67fd906c0073" /><DocumentWindow Key="b3b39a41-0a12-4b33-a812-75a39623aef9" Guid="f7a15760-df83-4d8f-be27-53b4a4dfbd47" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1609, 736" SelectedTabbedMdiWindow="ad894d3a-e350-4e68-a7d4-734b96c4718b"><DocumentWindow Key="a98636a3-1be8-4a0d-9624-a012d6581c65" Guid="cb04e6b6-2eca-4c97-ac75-e151fe1e5e0f" /><DocumentWindow Key="1c659566-10c9-4781-ad31-ffbc7b3683e7" Guid="ad894d3a-e350-4e68-a7d4-734b96c4718b" /><DocumentWindow Key="fe26eddd-d1de-428b-8e48-963d00687ccc" Guid="76a1d347-6664-478d-b34f-131c44fda10a" /><DocumentWindow Key="ebaf7f52-3ae3-4909-9abe-36f68193769d" Guid="f3ec4d8f-4e8d-4307-94f3-7f9d161e6100" /><DocumentWindow Key="a9ddc9c0-5cee-424c-83fd-de6dfbc7501f" Guid="c9872ed4-5311-4060-9b61-6d063ee31580" /><DocumentWindow Key="4c786abb-918c-4768-b3c6-6f54cc30af89" Guid="dd1d5719-5075-4045-810d-e887b266a809" /><DocumentWindow Key="a9068c25-e228-47df-9d10-b992a9e8f486" Guid="b8200044-f0ec-4a47-81be-01af41e0bd93" /><DocumentWindow Key="5022fe89-8be6-4291-a57a-e6a6dd491e58" Guid="63a7fdd2-8d97-46f8-b740-4aa29e6d1a42" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

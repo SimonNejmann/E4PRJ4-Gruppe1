@@ -1,5 +1,5 @@
 # version_01
-# 2016-12-05 16:34:51Z
+# 2016-12-05 21:25:11Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -8,39 +8,91 @@ dont_use_io iocell 1 1
 # IO_3@[IOP=(1)][IoId=(3)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 3
 set_location "ClockBlock" clockblockcell -1 -1 0
-set_io "step(0)" iocell 2 3
+set_io "stepF(0)" iocell 0 0
 set_io "Pin_1(0)" iocell 12 4
 set_io "Pin_1(1)" iocell 12 5
-set_io "Dir_step(0)" iocell 2 4
-set_location "Net_575" 1 5 1 0
-set_location "\PWM1:PWMUDB:status_2\" 0 5 0 2
-set_location "\PWM2:PWMUDB:status_2\" 0 5 0 1
-set_location "\Counter:CounterUDB:status_0\" 1 4 1 2
-set_location "\Counter:CounterUDB:status_2\" 1 4 1 0
-set_location "\Counter:CounterUDB:status_3\" 1 5 1 1
-set_location "\Counter:CounterUDB:upcnt_det\" 1 4 0 3
-set_location "\Counter:CounterUDB:count_enable\" 1 4 0 0
+set_io "Dir_stepF(0)" iocell 0 1
+set_io "SpeedForW(0)" iocell 3 6
+set_io "stepB(0)" iocell 2 3
+set_io "Dir_stepB(0)" iocell 2 2
+set_io "SpeedBackW(0)" iocell 3 7
+set_io "MicroF(0)" iocell 2 0
+set_io "MicroB(0)" iocell 2 1
+set_location "Net_575" 3 4 1 0
+set_location "\PWMF1:PWMUDB:status_2\" 3 2 0 0
+set_location "\PWMF2:PWMUDB:status_2\" 2 3 0 3
+set_location "\CounterF:CounterUDB:status_0\" 3 4 1 2
+set_location "\CounterF:CounterUDB:status_2\" 3 3 1 2
+set_location "\CounterF:CounterUDB:status_3\" 3 3 1 0
+set_location "\CounterF:CounterUDB:upcnt_det\" 3 3 0 3
+set_location "\CounterF:CounterUDB:count_enable\" 3 3 0 0
+set_location "\PWMSF:PWMUDB:status_2\" 3 0 1 0
+set_location "\CounterB:CounterUDB:status_0\" 2 5 1 2
+set_location "\CounterB:CounterUDB:status_2\" 2 5 1 0
+set_location "\CounterB:CounterUDB:status_3\" 2 3 0 2
+set_location "\CounterB:CounterUDB:upcnt_det\" 2 5 0 3
+set_location "\CounterB:CounterUDB:count_enable\" 2 5 0 0
+set_location "\PWMB2:PWMUDB:status_2\" 3 5 1 3
+set_location "Net_837" 2 4 0 2
+set_location "\PWMB1:PWMUDB:status_2\" 2 3 1 3
+set_location "\PWMSB:PWMUDB:status_2\" 2 0 1 0
 set_location "\I2CS:I2C_Prim\" i2ccell -1 -1 0
 set_location "\I2CS:isr\" interrupt -1 -1 15
-set_location "\PWM1:PWMUDB:genblk1:ctrlreg\" 0 5 6
-set_location "\PWM1:PWMUDB:genblk8:stsreg\" 0 5 4
-set_location "\PWM1:PWMUDB:sP8:pwmdp:u0\" 0 5 2
-set_location "\PWM2:PWMUDB:genblk1:ctrlreg\" 1 5 6
-set_location "\PWM2:PWMUDB:genblk8:stsreg\" 1 5 4
-set_location "\PWM2:PWMUDB:sP8:pwmdp:u0\" 1 5 2
-set_location "\Counter:CounterUDB:sCTRLReg:ctrlreg\" 1 4 6
-set_location "\Counter:CounterUDB:sSTSReg:stsreg\" 1 4 4
-set_location "\Counter:CounterUDB:sC8:counterdp:u0\" 1 4 2
-set_location "\PWM1:PWMUDB:runmode_enable\" 0 5 0 3
-set_location "\PWM1:PWMUDB:prevCompare1\" 0 4 1 1
-set_location "\PWM1:PWMUDB:status_0\" 0 4 0 0
-set_location "Net_276" 1 4 0 2
-set_location "\PWM2:PWMUDB:runmode_enable\" 0 5 1 2
-set_location "\PWM2:PWMUDB:prevCompare1\" 0 4 1 3
-set_location "\PWM2:PWMUDB:status_0\" 0 5 1 1
-set_location "Net_530" 1 4 0 1
-set_location "\Counter:CounterUDB:overflow_reg_i\" 1 4 1 1
-set_location "\Counter:CounterUDB:underflow_reg_i\" 1 5 0 1
-set_location "\Counter:CounterUDB:prevCompare\" 1 4 1 3
-set_location "\Counter:CounterUDB:upcnt_stored\" 1 5 1 2
-set_location "\Counter:CounterUDB:dwncnt_stored\" 1 5 0 0
+set_location "\PWMF1:PWMUDB:genblk1:ctrlreg\" 3 2 6
+set_location "\PWMF1:PWMUDB:genblk8:stsreg\" 3 2 4
+set_location "\PWMF1:PWMUDB:sP8:pwmdp:u0\" 3 2 2
+set_location "\PWMF2:PWMUDB:genblk1:ctrlreg\" 2 2 6
+set_location "\PWMF2:PWMUDB:genblk8:stsreg\" 2 2 4
+set_location "\PWMF2:PWMUDB:sP8:pwmdp:u0\" 2 2 2
+set_location "\CounterF:CounterUDB:sCTRLReg:ctrlreg\" 3 3 6
+set_location "\CounterF:CounterUDB:sSTSReg:stsreg\" 3 3 4
+set_location "\CounterF:CounterUDB:sC8:counterdp:u0\" 3 3 2
+set_location "\PWMSF:PWMUDB:genblk1:ctrlreg\" 3 0 6
+set_location "\PWMSF:PWMUDB:genblk8:stsreg\" 3 0 4
+set_location "\PWMSF:PWMUDB:sP8:pwmdp:u0\" 3 0 2
+set_location "\CounterB:CounterUDB:sCTRLReg:ctrlreg\" 2 5 6
+set_location "\CounterB:CounterUDB:sSTSReg:stsreg\" 2 5 4
+set_location "\CounterB:CounterUDB:sC8:counterdp:u0\" 2 5 2
+set_location "\PWMB2:PWMUDB:genblk1:ctrlreg\" 3 5 6
+set_location "\PWMB2:PWMUDB:genblk8:stsreg\" 3 4 4
+set_location "\PWMB2:PWMUDB:sP8:pwmdp:u0\" 3 4 2
+set_location "\PWMB1:PWMUDB:genblk1:ctrlreg\" 2 3 6
+set_location "\PWMB1:PWMUDB:genblk8:stsreg\" 2 4 4
+set_location "\PWMB1:PWMUDB:sP8:pwmdp:u0\" 2 4 2
+set_location "\PWMSB:PWMUDB:genblk1:ctrlreg\" 2 0 6
+set_location "\PWMSB:PWMUDB:genblk8:stsreg\" 2 0 4
+set_location "\PWMSB:PWMUDB:sP8:pwmdp:u0\" 2 0 2
+set_location "\PWMF1:PWMUDB:runmode_enable\" 3 2 0 1
+set_location "\PWMF1:PWMUDB:prevCompare1\" 3 2 1 3
+set_location "\PWMF1:PWMUDB:status_0\" 3 2 0 3
+set_location "Net_530" 2 2 0 2
+set_location "\PWMF2:PWMUDB:runmode_enable\" 2 2 0 1
+set_location "\PWMF2:PWMUDB:prevCompare1\" 3 2 1 2
+set_location "\PWMF2:PWMUDB:status_0\" 3 2 0 2
+set_location "Net_798" 2 2 0 3
+set_location "\CounterF:CounterUDB:overflow_reg_i\" 3 3 0 2
+set_location "\CounterF:CounterUDB:underflow_reg_i\" 3 4 1 3
+set_location "\CounterF:CounterUDB:prevCompare\" 3 4 0 0
+set_location "\CounterF:CounterUDB:upcnt_stored\" 3 4 0 2
+set_location "\CounterF:CounterUDB:dwncnt_stored\" 3 4 0 1
+set_location "\PWMSF:PWMUDB:runmode_enable\" 3 0 0 3
+set_location "\PWMSF:PWMUDB:prevCompare1\" 2 0 1 2
+set_location "\PWMSF:PWMUDB:status_0\" 3 0 0 0
+set_location "Net_828" 3 0 0 1
+set_location "\CounterB:CounterUDB:overflow_reg_i\" 3 5 1 0
+set_location "\CounterB:CounterUDB:underflow_reg_i\" 2 3 1 0
+set_location "\CounterB:CounterUDB:prevCompare\" 2 4 1 0
+set_location "\CounterB:CounterUDB:upcnt_stored\" 2 4 1 2
+set_location "\CounterB:CounterUDB:dwncnt_stored\" 2 4 1 1
+set_location "\PWMB2:PWMUDB:runmode_enable\" 3 5 0 2
+set_location "\PWMB2:PWMUDB:prevCompare1\" 2 5 0 1
+set_location "\PWMB2:PWMUDB:status_0\" 2 4 0 1
+set_location "Net_847" 2 5 1 1
+set_location "\PWMB1:PWMUDB:runmode_enable\" 2 3 0 1
+set_location "\PWMB1:PWMUDB:prevCompare1\" 2 5 1 3
+set_location "\PWMB1:PWMUDB:status_0\" 2 4 0 0
+set_location "Net_846" 2 5 0 2
+set_location "\PWMSB:PWMUDB:runmode_enable\" 2 0 0 3
+set_location "\PWMSB:PWMUDB:prevCompare1\" 2 0 0 1
+set_location "\PWMSB:PWMUDB:status_0\" 2 0 0 0
+set_location "Net_909" 3 0 1 3

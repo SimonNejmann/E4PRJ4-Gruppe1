@@ -22,9 +22,9 @@ int main()
     
     
     
-    Counter_Start();
+    init_step();
     I2CS_Start(); 
-    I2CS_SetBuffer1(6,6,i2cbuf);
+    I2CS_SetBuffer1(BUFFER_SIZE,BUFFER_RW_AREA,i2cbuf);
     
 
     /* Start I2C slave (SCB mode) */
@@ -39,10 +39,13 @@ int main()
     ***************************************************************************/
     for (;;)
     {
-         if(oldbuf[0] != i2cbuf[0])
+         if(oldbuf[ANG_FRONT_POS] != i2cbuf[ANG_FRONT_POS] )
         {
-            run_front(i2cbuf[0]);
-            
+            run_front(i2cbuf[ANG_FRONT_POS],i2cbuf[SPEED_FRONT_POS]);
+        }
+         if(oldbuf[ANG_BACK_POS] != i2cbuf[ANG_BACK_POS] )
+        {
+            run_back(i2cbuf[ANG_BACK_POS],i2cbuf[SPEED_BACK_POS]);
         }
     }
     return 0;
