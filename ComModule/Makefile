@@ -1,4 +1,5 @@
-SOURCES=main.cpp MsgQueue.cpp MsgQueuePipe.cpp util.cpp SocketHandler.cpp
+SOURCES=main.cpp MsgQueue.cpp MsgQueuePipe.cpp util.cpp
+SOURCES+=SocketHandler.cpp ComModule.cpp
 EXE=PipeTest
 CXXFLAGS=-I. -pthread -g
 

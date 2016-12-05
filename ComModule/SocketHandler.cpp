@@ -1,11 +1,13 @@
 #include <iostream>
 #include <sys/select.h>
 #include "SocketHandler.hpp"
-#include "util.hpp"
+#include "ComModule.hpp"
+#include "constants.hpp"
 #include "Point.hpp"
+#include "util.hpp"
 
-SocketHandler::SocketHandler()
-  : mq_(5), sock_(8575)
+SocketHandler::SocketHandler(MsgQueue *comModMq)
+  : mq_(5), sock_(constants::UDP_SOCKET), comModMq_(comModMq)
 {
 }
 
@@ -13,7 +15,18 @@ SocketHandler::~SocketHandler()
 {
 }
 
-void* SocketHandler::run(void* arg)
+void SocketHandler::run()
+{
+  pthread_t pt;
+  pthread_create(&pt, NULL, SocketHandler::staticStarter, this);
+}
+
+void SocketHandler::send(unsigned long id, Message* msg)
+{
+  mq_.send(id, msg);
+}
+
+void* SocketHandler::staticStarter(void* arg)
 {
   SocketHandler *s = static_cast<SocketHandler*>(arg);
   s->sockethandlerThread();
@@ -21,13 +34,10 @@ void* SocketHandler::run(void* arg)
   return NULL;
 }
 
-void SocketHandler::send(unsigned long id, Message* msg)
-{
-  mq_.send(id, msg);
-}
-  
 void SocketHandler::sockethandlerThread()
 {
+  std::cout << "SockHandler running" << std::endl;
+
   unsigned long id;
   fd_set watch_set, result_set;
   int mq_fd = mq_.getReceiveFD();
@@ -45,33 +55,33 @@ void SocketHandler::sockethandlerThread()
       
     if (FD_ISSET(mq_fd, &result_set)) {
       // Message in message queue
+      std::cout << "SH got msg" << std::endl;
+
       Message *msg = mq_.receive(id);
       handleMsg(msg, id);
       delete msg;
         
     } else if(FD_ISSET(sock_fd, &result_set)) {
       // Packet incomming on socket
-      int n = sock_.receive(buf_, BUFFER_SIZE);
-      buf_[n] = '\0';
-      std::cout << "Got packet: " << n << " bytes: " << buf_ << std::endl;
-        
-    } else {
-      std::cout << "Error" << std::endl;
+      std::cout << "SH got packet" << std::endl;
+      
+      ComModule::PacketMessage *pmsg = new ComModule::PacketMessage();
+      pmsg->len_ = sock_.receive(pmsg->buf_, constants::BUFFER_SIZE);
+      comModMq_->send(ComModule::GOT_PACKET, pmsg);
     }
   }
 }
 
 void SocketHandler::handleMsg(Message *msg, unsigned long id)
 {
-  Point *p;
   // no state, only switch on id
   switch(id) {
-    case POINT_MSG:
-      p = dynamic_cast<Point*>(msg);
-      std::cout << "Got point: " << p->x << ", " << p->y << ", "
-                << p->z << std::endl;
-      break;
-          
+    case SEND_PACKET: 
+      {
+        SendMessage *sm = static_cast<SendMessage*>(msg);
+        sock_.send(sm->buf_, sm->len_);
+        break;
+      }
     default:
       // Error!
       return;

@@ -1,10 +1,17 @@
-#include <iostream>
-#include "Sender.hpp"
+#include <pthread.h>
 #include "SocketHandler.hpp"
-#include "TimerThread.hpp"
+#include "RecurringTimer.hpp"
+#include "ComModule.hpp"
 
 int main()
 {
+  ComModule c;
+  c.run();
+  int i = 0;
+  pthread_exit(&i);
+  
+
+  /*
   SocketHandler r;
   Sender s(&r);
 
@@ -16,6 +23,6 @@ int main()
   void *exitStatus;
   pthread_join(rT, &exitStatus);
   pthread_join(sT, &exitStatus);
-
+  */
   return 0;
 }
