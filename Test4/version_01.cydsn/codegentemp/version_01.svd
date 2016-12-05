@@ -7,7 +7,7 @@
   <width>32</width>
   <peripherals>
     <peripheral>
-      <name>PWM2</name>
+      <name>PWM1</name>
       <description>No description available</description>
       <baseAddress>0x0</baseAddress>
       <addressBlock>
@@ -17,27 +17,18 @@
       </addressBlock>
       <registers>
         <register>
-          <name>PWM2__COMPARE1</name>
-          <description>UDB.D0 - Assigned Compare1 Value</description>
-          <addressOffset>0x40006422</addressOffset>
+          <name>PWM1_COMPARE_Reg_</name>
+          <description>UDB.D0 - Assigned Compare Value</description>
+          <addressOffset>0x4000642E</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>PWM2__COMPARE2</name>
-          <description>UDB.D1 - Assigned Compare2 Value</description>
-          <addressOffset>0x40006432</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>PWM2_Control_Reg</name>
+          <name>PWM1_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006470</addressOffset>
+          <addressOffset>0x4000647E</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -67,9 +58,9 @@
           </fields>
         </register>
         <register>
-          <name>PWM2_STATUS_MASK</name>
+          <name>PWM1_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006481</addressOffset>
+          <addressOffset>0x4000648E</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -113,9 +104,9 @@
           </fields>
         </register>
         <register>
-          <name>PWM2_STATUS_AUX_CTRL</name>
+          <name>PWM1_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006492</addressOffset>
+          <addressOffset>0x4000649E</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -240,7 +231,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>UpDown</name>
+      <name>PWM2</name>
       <description>No description available</description>
       <baseAddress>0x0</baseAddress>
       <addressBlock>
@@ -250,57 +241,221 @@
       </addressBlock>
       <registers>
         <register>
-          <name>UpDown_Cnt8_COUNTER</name>
-          <description>Counter value</description>
-          <addressOffset>0x40006404</addressOffset>
+          <name>PWM2_COMPARE_Reg_</name>
+          <description>UDB.D0 - Assigned Compare Value</description>
+          <addressOffset>0x4000642F</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>UpDown_STATUS_REG</name>
-          <description>Quadrature Decoder Status Register</description>
-          <addressOffset>0x40006463</addressOffset>
+          <name>PWM2_Control_Reg</name>
+          <description>UDB Control Register - Assigned Control Register Value</description>
+          <addressOffset>0x4000647F</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
           <fields>
             <field>
-              <name>OVERFLOW</name>
-              <description>Counter overflow</description>
+              <name>CTRL_ENABLE</name>
+              <description>Enable the PWM</description>
+              <lsb>7</lsb>
+              <msb>7</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CTRL_CMPMODE2</name>
+              <description>Compare mode 2</description>
+              <lsb>3</lsb>
+              <msb>5</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CTRL_CMPMODE1</name>
+              <description>Compare mode 1</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PWM2_STATUS_MASK</name>
+          <description>UDB Status bits Interrupt Mask Enable Register</description>
+          <addressOffset>0x4000648F</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>PWM_STS_CMP1</name>
+              <description>Enables the Interrupt on Compare 1</description>
               <lsb>0</lsb>
               <msb>0</msb>
               <access>read-only</access>
             </field>
             <field>
-              <name>UNDERFLOW</name>
-              <description>Counter underflow</description>
+              <name>PWM_STS_CMP2</name>
+              <description>Enables the Interrupt on Compare 2</description>
               <lsb>1</lsb>
               <msb>1</msb>
               <access>read-only</access>
             </field>
             <field>
-              <name>RESET</name>
-              <description>Counter Reset due index</description>
+              <name>PWM_STS_TC</name>
+              <description>Enables the Interrupt on Terminal Count</description>
               <lsb>2</lsb>
               <msb>2</msb>
               <access>read-only</access>
             </field>
             <field>
-              <name>INVALID_IN</name>
-              <description>Invalid state transition on the A and B inputs</description>
+              <name>PWM_STS_FIFO_FULL</name>
+              <description>FIFO Full Status Mask </description>
               <lsb>3</lsb>
               <msb>3</msb>
               <access>read-only</access>
+            </field>
+            <field>
+              <name>PWM_STS_KILL</name>
+              <description>Enables the Interrupt on Kill</description>
+              <lsb>5</lsb>
+              <msb>5</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PWM2_STATUS_AUX_CTRL</name>
+          <description>UDB Auxilliary Control Register</description>
+          <addressOffset>0x4000649F</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>FIFO0_CLR</name>
+              <description>FIFO0 clear</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_FIFO_CLR_0</name>
+                  <description>Normal FIFO operation</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_FIFO_CLR_1</name>
+                  <description>Clear FIFO state</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>FIFO1_CLR</name>
+              <description>FIFO1 clear</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_FIFO_CLR_0</name>
+                  <description>Normal FIFO operation</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_FIFO_CLR_1</name>
+                  <description>Clear FIFO state</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>FIFO0_LVL</name>
+              <description>FIFO level</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_FIFO_LVL_0</name>
+                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_FIFO_LVL_1</name>
+                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>FIFO1_LVL</name>
+              <description>FIFO level</description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_FIFO_LVL_0</name>
+                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_FIFO_LVL_1</name>
+                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>INT_EN</name>
+              <description>No description available</description>
+              <lsb>4</lsb>
+              <msb>4</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_INT_EN0</name>
+                  <description>Interrupt disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_INT_EN1</name>
+                  <description>Interrupt enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>CNT_START</name>
+              <description>FIFO0 clear</description>
+              <lsb>5</lsb>
+              <msb>5</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_CNT_START0</name>
+                  <description>Disable counter</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_CNT_START1</name>
+                  <description>Enable counter</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
       </registers>
     </peripheral>
     <peripheral>
-      <name>UpDown_Cnt8</name>
+      <name>Counter</name>
       <description>No description available</description>
       <baseAddress>0x0</baseAddress>
       <addressBlock>
@@ -310,36 +465,36 @@
       </addressBlock>
       <registers>
         <register>
-          <name>UpDown_Cnt8_COUNTER</name>
+          <name>Counter_COUNTER</name>
           <description>UDB.A0 - Current Counter Value</description>
-          <addressOffset>0x40006404</addressOffset>
+          <addressOffset>0x4000640C</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>UpDown_Cnt8_PERIOD</name>
+          <name>Counter_PERIOD</name>
           <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x40006424</addressOffset>
+          <addressOffset>0x4000642C</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>UpDown_Cnt8_COMPARE</name>
+          <name>Counter_COMPARE</name>
           <description>UDB.D1 - Assigned Compare Value</description>
-          <addressOffset>0x40006434</addressOffset>
+          <addressOffset>0x4000643C</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>UpDown_Cnt8_Control_Reg</name>
+          <name>Counter_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006474</addressOffset>
+          <addressOffset>0x4000647C</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -369,9 +524,9 @@
           </fields>
         </register>
         <register>
-          <name>UpDown_Cnt8_STATUS_MASK</name>
+          <name>Counter_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006484</addressOffset>
+          <addressOffset>0x4000648C</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -429,9 +584,9 @@
           </fields>
         </register>
         <register>
-          <name>UpDown_Cnt8_STATUS_AUX_CTRL</name>
+          <name>Counter_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006494</addressOffset>
+          <addressOffset>0x4000649C</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -566,7 +721,7 @@
       </addressBlock>
       <registers>
         <register>
-          <name>I2CS_FF_XCFG</name>
+          <name>XCFG</name>
           <description>I2C Extended Configuration Register</description>
           <addressOffset>0x400049C8</addressOffset>
           <size>8</size>
@@ -612,7 +767,7 @@
           </fields>
         </register>
         <register>
-          <name>I2CS_FF_ADDR</name>
+          <name>ADDR</name>
           <description>I2C Slave Adddress Register</description>
           <addressOffset>0x400049CA</addressOffset>
           <size>8</size>
@@ -630,7 +785,7 @@
           </fields>
         </register>
         <register>
-          <name>I2CS_FF_CFG</name>
+          <name>CFG</name>
           <description>I2C Configuration Register</description>
           <addressOffset>0x400049D6</addressOffset>
           <size>8</size>
@@ -690,7 +845,7 @@
           </fields>
         </register>
         <register>
-          <name>I2CS_FF_CSR</name>
+          <name>CSR</name>
           <description>I2C Control and Status Register</description>
           <addressOffset>0x400049D7</addressOffset>
           <size>8</size>
@@ -757,7 +912,7 @@
           </fields>
         </register>
         <register>
-          <name>I2CS_FF_DATA</name>
+          <name>DATA</name>
           <description>I2C Data Register</description>
           <addressOffset>0x400049D8</addressOffset>
           <size>8</size>
@@ -775,53 +930,7 @@
           </fields>
         </register>
         <register>
-          <name>I2CS_FF_MCSR</name>
-          <description>Master Control and Status Register: I2C_MCSR</description>
-          <addressOffset>0x400049D9</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>stop_gen</name>
-              <description>This bit is set only for master transmitter and used at the end of byte transfer. After byte complete status is set, if this bit is set followed by the Transmit bit in I2C.CSR register, Stop condition is generated after byte complete. This bit is automatically reset to 0 after the Stop, start or Restart has been generated. During data phase, if Stop Gen bit is set to 0, clearing the Transmit bit in I2C.CSR register will also generate a Stop condition. This bit is held zero if I2C_CFG.en_mstr and I2C_CFG.en_slave are both zero.</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>bus_busy</name>
-              <description>This bit is set to the following. 0 when a Stop condition is detected (from any bus master). 1 when a Start condition is detected (from any bus master). This bit is held zero if I2C_CFG.en_mstr and I2C_CFG.en_slave are both zero.</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>master_mode</name>
-              <description>This bit is set/cleared by hardware when the device is operating as a master. 0 stop condition detected, generated by this device. 1 start condition detected, generated by this device. This bit is held zero if I2C_CFG.en_mstr and I2C_CFG.en_slave are both zero.</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>restart_gen</name>
-              <description>This bit is cleared by hardware when the Restart generation is complete. 0 restart generation complete. 1 generate a Restart condition. This bit is held zero if I2C_CFG.en_mstr and I2C_CFG.en_slave are both zero.</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>start_gen</name>
-              <description>This bit is cleared by hardware when the Start generation is complete. 0 start generation complete. 1 generate a Start condition and send a byte (address) to the I2C bus, if bus is not busy. This bit is held zero if I2C_CFG.en_mstr and I2C_CFG.en_slave are both zero.</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>I2CS_FF_CLK_DIV1</name>
+          <name>CLK_DIV1</name>
           <description>I2C Clock Divide Factor Register-1</description>
           <addressOffset>0x400049DB</addressOffset>
           <size>8</size>
@@ -839,7 +948,7 @@
           </fields>
         </register>
         <register>
-          <name>I2CS_FF_CLK_DIV2</name>
+          <name>CLK_DIV2</name>
           <description>I2C Clock Divide Factor Register-2</description>
           <addressOffset>0x400049DC</addressOffset>
           <size>8</size>
@@ -852,113 +961,6 @@
               <description>The configuration of this register along with that in register CLK_DIV1 defines the factor by whichthe SYSCLK will be divided in the I2C block. These bits are held zero if I2C_CFG.en_mstr and I2C_CFG.en_slave are both zero.</description>
               <lsb>0</lsb>
               <msb>1</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>I2CS_FF__TMOUT_CSR</name>
-          <description>I2C Timerout Control and Status Register</description>
-          <addressOffset>0x400049DD</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>sda_pin_status</name>
-              <description>SDA Line status.</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>scl_pin_status</name>
-              <description>SCL Line status.</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>i2c_timeout_int_enable</name>
-              <description>I2C Timeout interrupt enable.</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>i2c_sda_timeout_enable</name>
-              <description>I2C SDA Timeout enable.</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>i2c_scl_timeout_enable</name>
-              <description>I2C SCL Timeout enable.</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>I2CS_FF__TMOUT_SR</name>
-          <description>I2C Timerout Status Register</description>
-          <addressOffset>0x400049DE</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>sda_tmout_status</name>
-              <description>SDA Timeout status.</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>scl_tmout_status</name>
-              <description>SCL Timeout status.</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>I2CS_FF__TMOUT_CFG0</name>
-          <description>I2C Timerout Period Configuration Register-0</description>
-          <addressOffset>0x400049DF</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>timeout_period_lowbyte</name>
-              <description>The configuration of this register along with that in register TMOUT_CFG1 to define the number units before SCL or SDA stuck low timeout triggers the I2C interrupt. The one unit is equal to SYSCLK/1024. The TMOUT_CFG0 defines lower byte of the period.</description>
-              <lsb>0</lsb>
-              <msb>7</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>I2CS_FF__TMOUT_CFG1</name>
-          <description>Extended Configuration Register: TMOUT_CFG1</description>
-          <addressOffset>0x400049E0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>timeout_period_highnibble</name>
-              <description>The configuration of this register along with that in register TMOUT_CFG1 to define the number units before SCL or SDA stuck low timeout triggers the I2C interrupt. The one unit is equal to SYSCLK/1024. The TMOUT_CFG1 defines higher octet of the period.</description>
-              <lsb>0</lsb>
-              <msb>3</msb>
               <access>read-write</access>
             </field>
           </fields>

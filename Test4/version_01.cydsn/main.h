@@ -8,12 +8,12 @@
      Funktion Prototype
 *****************************/
  
-uint8 run_front(uint8 ang_1, uint8 speed_1, uint8 ang_2, uint8 speed_2);
+uint8 run_front(uint8 ang_1);
 uint8 run_back(uint8 ang_2, uint8 speed_2);
 
 #define SLAVE_ADDRESS   (0x49u)
 /* Buffer and packet size */
-#define BUFFER_SIZE     (6u)
+#define BUFFER_SIZE     (12u)
 #define PACKET_SIZE     (BUFFER_SIZE)
 
 /* Packet positions */

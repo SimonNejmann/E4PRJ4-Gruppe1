@@ -252,8 +252,9 @@
     <Group key="Pin">
       <Data key="2b747fb2-38e7-41a0-bd53-d97c263543f7" value="sda" />
       <Data key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba" value="Dir" />
+      <Data key="34cfed22-c960-4363-8ecf-2f6fc0d15200" value="Pin_1" />
       <Data key="212c2cc9-3a3d-4bee-b340-34a78bde2fa6" value="scl" />
-      <Data key="ac2f6c6a-c23d-4e3f-8357-4fe3019c4de2" value="dir_step" />
+      <Data key="ac2f6c6a-c23d-4e3f-8357-4fe3019c4de2" value="Dir_step" />
       <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="step" />
     </Group>
   </Group>
@@ -3351,6 +3352,14 @@
         <Data key="Port Format" value="0,0" />
       </Group>
     </Group>
+    <Group key="34cfed22-c960-4363-8ecf-2f6fc0d15200">
+      <Group key="0">
+        <Data key="Port Format" value="12,4" />
+      </Group>
+      <Group key="1">
+        <Data key="Port Format" value="12,5" />
+      </Group>
+    </Group>
     <Group key="212c2cc9-3a3d-4bee-b340-34a78bde2fa6">
       <Group key="0">
         <Data key="Port Format" value="12,4" />
@@ -3366,6 +3375,7 @@
         <Data key="Port Format" value="2,3" />
       </Group>
     </Group>
+    <Group key="UnAssigned Pins" />
   </Group>
   <Group key="PlaceDir">
     <Data key="count" value="0" />

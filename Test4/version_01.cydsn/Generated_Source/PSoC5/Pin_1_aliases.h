@@ -28,7 +28,15 @@
 #define Pin_1_0			(Pin_1__0__PC)
 #define Pin_1_0_INTR	((uint16)((uint16)0x0001u << Pin_1__0__SHIFT))
 
-#define Pin_1_INTR_ALL	 ((uint16)(Pin_1_0_INTR))
+#define Pin_1_1			(Pin_1__1__PC)
+#define Pin_1_1_INTR	((uint16)((uint16)0x0001u << Pin_1__1__SHIFT))
+
+#define Pin_1_INTR_ALL	 ((uint16)(Pin_1_0_INTR| Pin_1_1_INTR))
+#define Pin_1_scl			(Pin_1__scl__PC)
+#define Pin_1_scl_INTR	((uint16)((uint16)0x0001u << Pin_1__0__SHIFT))
+
+#define Pin_1_sda			(Pin_1__sda__PC)
+#define Pin_1_sda_INTR	((uint16)((uint16)0x0001u << Pin_1__1__SHIFT))
 
 #endif /* End Pins Pin_1_ALIASES_H */
 

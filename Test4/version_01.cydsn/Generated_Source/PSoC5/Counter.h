@@ -49,7 +49,7 @@ extern uint8 Counter_initVar;
 #define Counter_ControlRegRemoved     0u
 #define Counter_COMPARE_MODE_SOFTWARE 0u
 #define Counter_CAPTURE_MODE_SOFTWARE 0u
-#define Counter_RunModeUsed           1u
+#define Counter_RunModeUsed           0u
 
 
 /***************************************

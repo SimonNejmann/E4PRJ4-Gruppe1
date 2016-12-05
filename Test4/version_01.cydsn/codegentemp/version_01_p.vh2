@@ -1,14 +1,13 @@
 -- Project:   version_01
--- Generated: 12/04/2016 23:45:26
+-- Generated: 12/05/2016 17:34:50
 -- PSoC Creator  4.0
 
 ENTITY version_01 IS
     PORT(
         step(0)_PAD : OUT std_ulogic;
-        sda(0)_PAD : INOUT std_ulogic;
-        scl(0)_PAD : INOUT std_ulogic;
-        Dir_step(0)_PAD : OUT std_ulogic;
-        set_pwm(0)_PAD : IN std_ulogic);
+        Pin_1(0)_PAD : INOUT std_ulogic;
+        Pin_1(1)_PAD : INOUT std_ulogic;
+        Dir_step(0)_PAD : OUT std_ulogic);
     ATTRIBUTE voltage_VDDABUF OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDA OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VUSB OF __DEFAULT__ : ENTITY IS 5e0;
@@ -33,25 +32,65 @@ ARCHITECTURE __DEFAULT__ OF version_01 IS
     SIGNAL ClockBlock_XTAL : bit;
     SIGNAL ClockBlock_XTAL_32KHZ : bit;
     SIGNAL Dir_step(0)__PA : bit;
-    SIGNAL Net_253 : bit;
-    ATTRIBUTE udbclken_assigned OF Net_253 : SIGNAL IS "True";
-    ATTRIBUTE global_signal OF Net_253 : SIGNAL IS true;
-    SIGNAL Net_253_local : bit;
     SIGNAL Net_276 : bit;
-    SIGNAL Net_345 : bit;
-    SIGNAL Net_399 : bit;
     SIGNAL Net_440 : bit;
-    ATTRIBUTE udbclken_assigned OF Net_440 : SIGNAL IS "True";
-    ATTRIBUTE global_signal OF Net_440 : SIGNAL IS true;
-    SIGNAL Net_440_local : bit;
-    SIGNAL Net_466 : bit;
-    SIGNAL \I2CS:Net_1109_0\ : bit;
-    SIGNAL \I2CS:Net_1109_1\ : bit;
-    SIGNAL \I2CS:Net_643_0\ : bit;
-    SIGNAL \I2CS:Net_697\ : bit;
-    SIGNAL \I2CS:sda_x_wire\ : bit;
+    ATTRIBUTE GROUND OF Net_440 : SIGNAL IS true;
+    SIGNAL Net_478 : bit;
+    ATTRIBUTE udbclken_assigned OF Net_478 : SIGNAL IS "True";
+    ATTRIBUTE global_signal OF Net_478 : SIGNAL IS true;
+    SIGNAL Net_478_local : bit;
+    SIGNAL Net_530 : bit;
+    SIGNAL Net_575 : bit;
+    SIGNAL Net_720 : bit;
+    ATTRIBUTE udbclken_assigned OF Net_720 : SIGNAL IS "True";
+    ATTRIBUTE global_signal OF Net_720 : SIGNAL IS true;
+    SIGNAL Net_720_local : bit;
+    SIGNAL Pin_1(0)__PA : bit;
+    SIGNAL Pin_1(1)__PA : bit;
+    SIGNAL \Counter:CounterUDB:cmp_out_i\ : bit;
+    SIGNAL \Counter:CounterUDB:control_0\ : bit;
+    SIGNAL \Counter:CounterUDB:control_1\ : bit;
+    SIGNAL \Counter:CounterUDB:control_2\ : bit;
+    SIGNAL \Counter:CounterUDB:control_3\ : bit;
+    SIGNAL \Counter:CounterUDB:control_4\ : bit;
+    SIGNAL \Counter:CounterUDB:control_5\ : bit;
+    SIGNAL \Counter:CounterUDB:control_6\ : bit;
+    SIGNAL \Counter:CounterUDB:control_7\ : bit;
+    SIGNAL \Counter:CounterUDB:count_enable\ : bit;
+    SIGNAL \Counter:CounterUDB:dwncnt_stored\ : bit;
+    SIGNAL \Counter:CounterUDB:overflow\ : bit;
+    SIGNAL \Counter:CounterUDB:overflow_reg_i\ : bit;
+    SIGNAL \Counter:CounterUDB:prevCompare\ : bit;
+    SIGNAL \Counter:CounterUDB:status_0\ : bit;
+    SIGNAL \Counter:CounterUDB:status_1\ : bit;
+    SIGNAL \Counter:CounterUDB:status_2\ : bit;
+    SIGNAL \Counter:CounterUDB:status_3\ : bit;
+    SIGNAL \Counter:CounterUDB:status_5\ : bit;
+    SIGNAL \Counter:CounterUDB:status_6\ : bit;
+    SIGNAL \Counter:CounterUDB:underflow_reg_i\ : bit;
+    SIGNAL \Counter:CounterUDB:upcnt_det\ : bit;
+    SIGNAL \Counter:CounterUDB:upcnt_stored\ : bit;
+    SIGNAL \I2CS:Net_172\ : bit;
+    SIGNAL \I2CS:Net_173\ : bit;
+    SIGNAL \I2CS:Net_174\ : bit;
+    SIGNAL \I2CS:Net_175\ : bit;
+    SIGNAL \I2CS:Net_181\ : bit;
+    SIGNAL \PWM1:PWMUDB:cmp1_less\ : bit;
+    SIGNAL \PWM1:PWMUDB:control_0\ : bit;
+    SIGNAL \PWM1:PWMUDB:control_1\ : bit;
+    SIGNAL \PWM1:PWMUDB:control_2\ : bit;
+    SIGNAL \PWM1:PWMUDB:control_3\ : bit;
+    SIGNAL \PWM1:PWMUDB:control_4\ : bit;
+    SIGNAL \PWM1:PWMUDB:control_5\ : bit;
+    SIGNAL \PWM1:PWMUDB:control_6\ : bit;
+    SIGNAL \PWM1:PWMUDB:control_7\ : bit;
+    SIGNAL \PWM1:PWMUDB:prevCompare1\ : bit;
+    SIGNAL \PWM1:PWMUDB:runmode_enable\ : bit;
+    SIGNAL \PWM1:PWMUDB:status_0\ : bit;
+    SIGNAL \PWM1:PWMUDB:status_2\ : bit;
+    SIGNAL \PWM1:PWMUDB:status_3\ : bit;
+    SIGNAL \PWM1:PWMUDB:tc_i\ : bit;
     SIGNAL \PWM2:PWMUDB:cmp1_less\ : bit;
-    SIGNAL \PWM2:PWMUDB:cmp2_less\ : bit;
     SIGNAL \PWM2:PWMUDB:control_0\ : bit;
     SIGNAL \PWM2:PWMUDB:control_1\ : bit;
     SIGNAL \PWM2:PWMUDB:control_2\ : bit;
@@ -61,119 +100,56 @@ ARCHITECTURE __DEFAULT__ OF version_01 IS
     SIGNAL \PWM2:PWMUDB:control_6\ : bit;
     SIGNAL \PWM2:PWMUDB:control_7\ : bit;
     SIGNAL \PWM2:PWMUDB:prevCompare1\ : bit;
-    SIGNAL \PWM2:PWMUDB:prevCompare2\ : bit;
     SIGNAL \PWM2:PWMUDB:runmode_enable\ : bit;
     SIGNAL \PWM2:PWMUDB:status_0\ : bit;
-    SIGNAL \PWM2:PWMUDB:status_1\ : bit;
     SIGNAL \PWM2:PWMUDB:status_2\ : bit;
     SIGNAL \PWM2:PWMUDB:status_3\ : bit;
     SIGNAL \PWM2:PWMUDB:tc_i\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:cmp_out_i\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:control_0\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:control_1\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:control_2\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:control_3\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:control_4\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:control_5\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:control_6\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:control_7\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:count_enable\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:count_stored_i\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:overflow\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:overflow_reg_i\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:prevCompare\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:reload\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:status_0\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:status_1\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:status_2\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:status_3\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:status_5\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:status_6\ : bit;
-    SIGNAL \UpDown:Cnt8:CounterUDB:underflow_reg_i\ : bit;
-    SIGNAL \UpDown:Net_1203\ : bit;
-    SIGNAL \UpDown:Net_1251\ : bit;
-    SIGNAL \UpDown:Net_1251_split\ : bit;
-    SIGNAL \UpDown:Net_1260\ : bit;
-    SIGNAL \UpDown:Net_1276\ : bit;
-    SIGNAL \UpDown:Net_530\ : bit;
-    SIGNAL \UpDown:Net_611\ : bit;
-    SIGNAL \UpDown:bQuadDec:error\ : bit;
-    SIGNAL \UpDown:bQuadDec:quad_A_delayed_0\ : bit;
-    SIGNAL \UpDown:bQuadDec:quad_A_delayed_1\ : bit;
-    SIGNAL \UpDown:bQuadDec:quad_A_delayed_2\ : bit;
-    SIGNAL \UpDown:bQuadDec:quad_A_filt\ : bit;
-    SIGNAL \UpDown:bQuadDec:quad_B_delayed_0\ : bit;
-    SIGNAL \UpDown:bQuadDec:quad_B_delayed_1\ : bit;
-    SIGNAL \UpDown:bQuadDec:quad_B_delayed_2\ : bit;
-    SIGNAL \UpDown:bQuadDec:quad_B_filt\ : bit;
-    SIGNAL \UpDown:bQuadDec:state_0\ : bit;
-    SIGNAL \UpDown:bQuadDec:state_1\ : bit;
     SIGNAL __ONE__ : bit;
     ATTRIBUTE POWER OF __ONE__ : SIGNAL IS true;
     SIGNAL __ZERO__ : bit;
     ATTRIBUTE GROUND OF __ZERO__ : SIGNAL IS true;
-    SIGNAL scl(0)__PA : bit;
-    SIGNAL sda(0)__PA : bit;
-    SIGNAL set_pwm(0)__PA : bit;
     SIGNAL step(0)__PA : bit;
     SIGNAL tmpOE__step_net_0 : bit;
     ATTRIBUTE POWER OF tmpOE__step_net_0 : SIGNAL IS true;
-    SIGNAL zero : bit;
-    ATTRIBUTE GROUND OF zero : SIGNAL IS true;
-    SIGNAL \ClockBlock.clk_bus_glb_ff__sig\ : bit;
     ATTRIBUTE lib_model OF step(0) : LABEL IS "iocell1";
     ATTRIBUTE Location OF step(0) : LABEL IS "P2[3]";
-    ATTRIBUTE lib_model OF sda(0) : LABEL IS "iocell2";
-    ATTRIBUTE Location OF sda(0) : LABEL IS "P12[5]";
-    ATTRIBUTE lib_model OF scl(0) : LABEL IS "iocell3";
-    ATTRIBUTE Location OF scl(0) : LABEL IS "P12[4]";
+    ATTRIBUTE lib_model OF Pin_1(0) : LABEL IS "iocell2";
+    ATTRIBUTE Location OF Pin_1(0) : LABEL IS "P12[4]";
+    ATTRIBUTE lib_model OF Pin_1(1) : LABEL IS "iocell3";
+    ATTRIBUTE Location OF Pin_1(1) : LABEL IS "P12[5]";
     ATTRIBUTE lib_model OF Dir_step(0) : LABEL IS "iocell4";
     ATTRIBUTE Location OF Dir_step(0) : LABEL IS "P2[4]";
-    ATTRIBUTE lib_model OF set_pwm(0) : LABEL IS "iocell5";
-    ATTRIBUTE Location OF set_pwm(0) : LABEL IS "P0[0]";
-    ATTRIBUTE lib_model OF Net_345 : LABEL IS "macrocell1";
-    ATTRIBUTE lib_model OF \PWM2:PWMUDB:status_2\ : LABEL IS "macrocell2";
-    ATTRIBUTE lib_model OF \UpDown:Cnt8:CounterUDB:reload\ : LABEL IS "macrocell3";
-    ATTRIBUTE lib_model OF \UpDown:Cnt8:CounterUDB:status_0\ : LABEL IS "macrocell4";
-    ATTRIBUTE lib_model OF \UpDown:Cnt8:CounterUDB:status_2\ : LABEL IS "macrocell5";
-    ATTRIBUTE lib_model OF \UpDown:Cnt8:CounterUDB:status_3\ : LABEL IS "macrocell6";
-    ATTRIBUTE lib_model OF \UpDown:Cnt8:CounterUDB:count_enable\ : LABEL IS "macrocell7";
-    ATTRIBUTE lib_model OF \UpDown:Net_530\ : LABEL IS "macrocell8";
-    ATTRIBUTE lib_model OF \UpDown:Net_611\ : LABEL IS "macrocell9";
-    ATTRIBUTE lib_model OF \PWM2:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell1";
-    ATTRIBUTE lib_model OF \PWM2:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell1";
-    ATTRIBUTE lib_model OF \PWM2:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell1";
-    ATTRIBUTE lib_model OF \UpDown:Cnt8:CounterUDB:sCTRLReg:ctrlreg\ : LABEL IS "controlcell2";
-    ATTRIBUTE lib_model OF \UpDown:Cnt8:CounterUDB:sSTSReg:stsreg\ : LABEL IS "statusicell2";
-    ATTRIBUTE lib_model OF \UpDown:Cnt8:CounterUDB:sC8:counterdp:u0\ : LABEL IS "datapathcell2";
-    ATTRIBUTE lib_model OF \UpDown:bQuadDec:quad_A_delayed_0\ : LABEL IS "macrocell10";
-    ATTRIBUTE lib_model OF \UpDown:bQuadDec:quad_A_delayed_1\ : LABEL IS "macrocell11";
-    ATTRIBUTE lib_model OF \UpDown:bQuadDec:quad_A_delayed_2\ : LABEL IS "macrocell12";
-    ATTRIBUTE lib_model OF \UpDown:bQuadDec:quad_B_delayed_0\ : LABEL IS "macrocell13";
-    ATTRIBUTE lib_model OF \UpDown:bQuadDec:quad_B_delayed_1\ : LABEL IS "macrocell14";
-    ATTRIBUTE lib_model OF \UpDown:bQuadDec:quad_B_delayed_2\ : LABEL IS "macrocell15";
-    ATTRIBUTE lib_model OF \UpDown:bQuadDec:Stsreg\ : LABEL IS "statusicell3";
-    ATTRIBUTE lib_model OF \PWM2:PWMUDB:runmode_enable\ : LABEL IS "macrocell16";
-    ATTRIBUTE lib_model OF \PWM2:PWMUDB:prevCompare1\ : LABEL IS "macrocell17";
-    ATTRIBUTE lib_model OF \PWM2:PWMUDB:prevCompare2\ : LABEL IS "macrocell18";
-    ATTRIBUTE lib_model OF \PWM2:PWMUDB:status_0\ : LABEL IS "macrocell19";
-    ATTRIBUTE lib_model OF \PWM2:PWMUDB:status_1\ : LABEL IS "macrocell20";
-    ATTRIBUTE lib_model OF Net_276 : LABEL IS "macrocell21";
-    ATTRIBUTE lib_model OF Net_399 : LABEL IS "macrocell22";
-    ATTRIBUTE lib_model OF \UpDown:Net_1251\ : LABEL IS "macrocell23";
-    ATTRIBUTE lib_model OF \UpDown:Cnt8:CounterUDB:overflow_reg_i\ : LABEL IS "macrocell24";
-    ATTRIBUTE lib_model OF \UpDown:Cnt8:CounterUDB:underflow_reg_i\ : LABEL IS "macrocell25";
-    ATTRIBUTE lib_model OF \UpDown:Net_1276\ : LABEL IS "macrocell26";
-    ATTRIBUTE lib_model OF \UpDown:Cnt8:CounterUDB:prevCompare\ : LABEL IS "macrocell27";
-    ATTRIBUTE lib_model OF \UpDown:Net_1251_split\ : LABEL IS "macrocell28";
-    ATTRIBUTE lib_model OF \UpDown:Cnt8:CounterUDB:count_stored_i\ : LABEL IS "macrocell29";
-    ATTRIBUTE lib_model OF \UpDown:Net_1203\ : LABEL IS "macrocell30";
-    ATTRIBUTE lib_model OF \UpDown:bQuadDec:quad_A_filt\ : LABEL IS "macrocell31";
-    ATTRIBUTE lib_model OF \UpDown:bQuadDec:quad_B_filt\ : LABEL IS "macrocell32";
-    ATTRIBUTE lib_model OF \UpDown:Net_1260\ : LABEL IS "macrocell33";
-    ATTRIBUTE lib_model OF \UpDown:bQuadDec:error\ : LABEL IS "macrocell34";
-    ATTRIBUTE lib_model OF \UpDown:bQuadDec:state_1\ : LABEL IS "macrocell35";
-    ATTRIBUTE lib_model OF \UpDown:bQuadDec:state_0\ : LABEL IS "macrocell36";
+    ATTRIBUTE lib_model OF Net_575 : LABEL IS "macrocell1";
+    ATTRIBUTE lib_model OF \PWM1:PWMUDB:status_2\ : LABEL IS "macrocell2";
+    ATTRIBUTE lib_model OF \PWM2:PWMUDB:status_2\ : LABEL IS "macrocell3";
+    ATTRIBUTE lib_model OF \Counter:CounterUDB:status_0\ : LABEL IS "macrocell4";
+    ATTRIBUTE lib_model OF \Counter:CounterUDB:status_2\ : LABEL IS "macrocell5";
+    ATTRIBUTE lib_model OF \Counter:CounterUDB:status_3\ : LABEL IS "macrocell6";
+    ATTRIBUTE lib_model OF \Counter:CounterUDB:upcnt_det\ : LABEL IS "macrocell7";
+    ATTRIBUTE lib_model OF \Counter:CounterUDB:count_enable\ : LABEL IS "macrocell8";
+    ATTRIBUTE lib_model OF \PWM1:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell1";
+    ATTRIBUTE lib_model OF \PWM1:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell1";
+    ATTRIBUTE lib_model OF \PWM1:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell1";
+    ATTRIBUTE lib_model OF \PWM2:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell2";
+    ATTRIBUTE lib_model OF \PWM2:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell2";
+    ATTRIBUTE lib_model OF \PWM2:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell2";
+    ATTRIBUTE lib_model OF \Counter:CounterUDB:sCTRLReg:ctrlreg\ : LABEL IS "controlcell3";
+    ATTRIBUTE lib_model OF \Counter:CounterUDB:sSTSReg:stsreg\ : LABEL IS "statusicell3";
+    ATTRIBUTE lib_model OF \Counter:CounterUDB:sC8:counterdp:u0\ : LABEL IS "datapathcell3";
+    ATTRIBUTE lib_model OF \PWM1:PWMUDB:runmode_enable\ : LABEL IS "macrocell9";
+    ATTRIBUTE lib_model OF \PWM1:PWMUDB:prevCompare1\ : LABEL IS "macrocell10";
+    ATTRIBUTE lib_model OF \PWM1:PWMUDB:status_0\ : LABEL IS "macrocell11";
+    ATTRIBUTE lib_model OF Net_276 : LABEL IS "macrocell12";
+    ATTRIBUTE lib_model OF \PWM2:PWMUDB:runmode_enable\ : LABEL IS "macrocell13";
+    ATTRIBUTE lib_model OF \PWM2:PWMUDB:prevCompare1\ : LABEL IS "macrocell14";
+    ATTRIBUTE lib_model OF \PWM2:PWMUDB:status_0\ : LABEL IS "macrocell15";
+    ATTRIBUTE lib_model OF Net_530 : LABEL IS "macrocell16";
+    ATTRIBUTE lib_model OF \Counter:CounterUDB:overflow_reg_i\ : LABEL IS "macrocell17";
+    ATTRIBUTE lib_model OF \Counter:CounterUDB:underflow_reg_i\ : LABEL IS "macrocell18";
+    ATTRIBUTE lib_model OF \Counter:CounterUDB:prevCompare\ : LABEL IS "macrocell19";
+    ATTRIBUTE lib_model OF \Counter:CounterUDB:upcnt_stored\ : LABEL IS "macrocell20";
+    ATTRIBUTE lib_model OF \Counter:CounterUDB:dwncnt_stored\ : LABEL IS "macrocell21";
     COMPONENT clockblockcell
         PORT (
             dclk_0 : OUT std_ulogic;
@@ -502,11 +478,10 @@ BEGIN
             clk_bus => ClockBlock_BUS_CLK_local,
             dsi_clkin_div => open,
             dsi_glb_div => open,
-            dclk_glb_0 => Net_440,
-            dclk_0 => Net_440_local,
-            dclk_glb_1 => Net_253,
-            dclk_1 => Net_253_local,
-            clk_bus_glb_ff => \ClockBlock.clk_bus_glb_ff__sig\);
+            dclk_glb_0 => Net_478,
+            dclk_0 => Net_478_local,
+            dclk_glb_1 => Net_720,
+            dclk_1 => Net_720_local);
 
     step:logicalport
         GENERIC MAP(
@@ -590,7 +565,7 @@ BEGIN
         PORT MAP(
             pa_out => step(0)__PA,
             oe => open,
-            pin_input => Net_345,
+            pin_input => Net_575,
             pad_out => step(0)_PAD,
             pad_in => step(0)_PAD,
             in_clock => open,
@@ -600,63 +575,63 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    sda:logicalport
+    Pin_1:logicalport
         GENERIC MAP(
-            drive_mode => "010",
-            ibuf_enabled => "1",
-            id => "2b747fb2-38e7-41a0-bd53-d97c263543f7",
-            init_dr_st => "0",
-            input_buffer_sel => "00",
+            drive_mode => "100100",
+            ibuf_enabled => "11",
+            id => "34cfed22-c960-4363-8ecf-2f6fc0d15200",
+            init_dr_st => "11",
+            input_buffer_sel => "0000",
             input_clk_en => 0,
-            input_sync => "0",
-            input_sync_mode => "0",
-            intr_mode => "00",
+            input_sync => "11",
+            input_sync_mode => "00",
+            intr_mode => "0000",
             invert_in_clock => 0,
             invert_in_clock_en => 0,
             invert_in_reset => 0,
             invert_out_clock => 0,
             invert_out_clock_en => 0,
             invert_out_reset => 0,
-            io_voltage => "",
+            io_voltage => ",",
             layout_mode => "CONTIGUOUS",
-            oe_conn => "0",
+            oe_conn => "00",
             oe_reset => 0,
-            oe_sync => "0",
+            oe_sync => "00",
             output_clk_en => 0,
-            output_clock_mode => "0",
-            output_conn => "0",
-            output_mode => "0",
+            output_clock_mode => "00",
+            output_conn => "00",
+            output_mode => "00",
             output_reset => 0,
-            output_sync => "0",
-            ovt_hyst_trim => "0",
-            ovt_needed => "0",
-            ovt_slew_control => "00",
+            output_sync => "00",
+            ovt_hyst_trim => "00",
+            ovt_needed => "11",
+            ovt_slew_control => "0000",
             pa_in_clock => -1,
             pa_in_clock_en => -1,
             pa_in_reset => -1,
             pa_out_clock => -1,
             pa_out_clock_en => -1,
             pa_out_reset => -1,
-            pin_aliases => "",
-            pin_mode => "B",
+            pin_aliases => "scl,sda",
+            pin_mode => "BB",
             por_state => 4,
             port_alias_group => "",
             port_alias_required => 0,
-            sio_group_cnt => 0,
-            sio_hifreq => "00000000",
-            sio_hyst => "1",
-            sio_ibuf => "00000000",
-            sio_info => "00",
-            sio_obuf => "00000000",
-            sio_refsel => "00000000",
-            sio_vohsel => "00000000",
-            sio_vtrip => "00000000",
-            slew_rate => "0",
+            sio_group_cnt => 1,
+            sio_hifreq => "1",
+            sio_hyst => "11",
+            sio_ibuf => "0",
+            sio_info => "1011",
+            sio_obuf => "0",
+            sio_refsel => "0",
+            sio_vohsel => "000",
+            sio_vtrip => "1",
+            slew_rate => "00",
             spanning => 0,
             sw_only => 0,
-            use_annotation => "0",
-            vtrip => "00",
-            width => 1,
+            use_annotation => "00",
+            vtrip => "0000",
+            width => 2,
             in_clk_inv => 0,
             in_clken_inv => 0,
             in_clken_mode => 1,
@@ -669,117 +644,47 @@ BEGIN
             in_clock_en => open,
             in_reset => open,
             out_clock_en => open,
-            out_reset => open);
+            out_reset => open,
+            in_clock => open);
 
-    sda(0):iocell
+    Pin_1(0):iocell
         GENERIC MAP(
-            in_sync_mode => 0,
+            in_sync_mode => 2,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "sda",
+            logicalport => "Pin_1",
             logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+            io_capabilities => "0000000000000000000000000010000000000000000000000000000000100101")
         PORT MAP(
-            pa_out => sda(0)__PA,
+            pa_out => Pin_1(0)__PA,
             oe => open,
-            fb => \I2CS:Net_1109_1\,
-            pin_input => \I2CS:sda_x_wire\,
-            pad_out => sda(0)_PAD,
-            pad_in => sda(0)_PAD,
-            in_clock => open,
+            fb => \I2CS:Net_175\,
+            pin_input => \I2CS:Net_174\,
+            pad_out => Pin_1(0)_PAD,
+            pad_in => Pin_1(0)_PAD,
+            in_clock => ClockBlock_BUS_CLK,
             in_clock_en => '1',
             in_reset => '0',
             out_clock => open,
             out_clock_en => '1',
             out_reset => '0');
 
-    scl:logicalport
+    Pin_1(1):iocell
         GENERIC MAP(
-            drive_mode => "010",
-            ibuf_enabled => "1",
-            id => "212c2cc9-3a3d-4bee-b340-34a78bde2fa6",
-            init_dr_st => "0",
-            input_buffer_sel => "00",
-            input_clk_en => 0,
-            input_sync => "0",
-            input_sync_mode => "0",
-            intr_mode => "00",
-            invert_in_clock => 0,
-            invert_in_clock_en => 0,
-            invert_in_reset => 0,
-            invert_out_clock => 0,
-            invert_out_clock_en => 0,
-            invert_out_reset => 0,
-            io_voltage => "",
-            layout_mode => "CONTIGUOUS",
-            oe_conn => "0",
-            oe_reset => 0,
-            oe_sync => "0",
-            output_clk_en => 0,
-            output_clock_mode => "0",
-            output_conn => "0",
-            output_mode => "0",
-            output_reset => 0,
-            output_sync => "0",
-            ovt_hyst_trim => "0",
-            ovt_needed => "0",
-            ovt_slew_control => "00",
-            pa_in_clock => -1,
-            pa_in_clock_en => -1,
-            pa_in_reset => -1,
-            pa_out_clock => -1,
-            pa_out_clock_en => -1,
-            pa_out_reset => -1,
-            pin_aliases => "",
-            pin_mode => "B",
-            por_state => 4,
-            port_alias_group => "",
-            port_alias_required => 0,
-            sio_group_cnt => 0,
-            sio_hifreq => "00000000",
-            sio_hyst => "1",
-            sio_ibuf => "00000000",
-            sio_info => "00",
-            sio_obuf => "00000000",
-            sio_refsel => "00000000",
-            sio_vohsel => "00000000",
-            sio_vtrip => "00000000",
-            slew_rate => "0",
-            spanning => 0,
-            sw_only => 0,
-            use_annotation => "0",
-            vtrip => "00",
-            width => 1,
-            in_clk_inv => 0,
-            in_clken_inv => 0,
-            in_clken_mode => 1,
-            in_rst_inv => 0,
-            out_clk_inv => 0,
-            out_clken_inv => 0,
-            out_clken_mode => 1,
-            out_rst_inv => 0)
-        PORT MAP(
-            in_clock_en => open,
-            in_reset => open,
-            out_clock_en => open,
-            out_reset => open);
-
-    scl(0):iocell
-        GENERIC MAP(
-            in_sync_mode => 0,
+            in_sync_mode => 2,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "scl",
-            logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+            logicalport => "Pin_1",
+            logicalport_pin_id => 1,
+            io_capabilities => "0000000000000000000000000010000000000000000000000000000000100101")
         PORT MAP(
-            pa_out => scl(0)__PA,
+            pa_out => Pin_1(1)__PA,
             oe => open,
-            fb => \I2CS:Net_1109_0\,
-            pin_input => \I2CS:Net_643_0\,
-            pad_out => scl(0)_PAD,
-            pad_in => scl(0)_PAD,
-            in_clock => open,
+            fb => \I2CS:Net_181\,
+            pin_input => \I2CS:Net_173\,
+            pad_out => Pin_1(1)_PAD,
+            pad_in => Pin_1(1)_PAD,
+            in_clock => ClockBlock_BUS_CLK,
             in_clock_en => '1',
             in_reset => '0',
             out_clock => open,
@@ -876,107 +781,25 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    set_pwm:logicalport
+    Net_575:macrocell
         GENERIC MAP(
-            drive_mode => "001",
-            ibuf_enabled => "1",
-            id => "8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba",
-            init_dr_st => "0",
-            input_buffer_sel => "00",
-            input_clk_en => 0,
-            input_sync => "0",
-            input_sync_mode => "0",
-            intr_mode => "00",
-            invert_in_clock => 0,
-            invert_in_clock_en => 0,
-            invert_in_reset => 0,
-            invert_out_clock => 0,
-            invert_out_clock_en => 0,
-            invert_out_reset => 0,
-            io_voltage => "",
-            layout_mode => "CONTIGUOUS",
-            oe_conn => "0",
-            oe_reset => 0,
-            oe_sync => "0",
-            output_clk_en => 0,
-            output_clock_mode => "0",
-            output_conn => "0",
-            output_mode => "0",
-            output_reset => 0,
-            output_sync => "0",
-            ovt_hyst_trim => "0",
-            ovt_needed => "0",
-            ovt_slew_control => "00",
-            pa_in_clock => -1,
-            pa_in_clock_en => -1,
-            pa_in_reset => -1,
-            pa_out_clock => -1,
-            pa_out_clock_en => -1,
-            pa_out_reset => -1,
-            pin_aliases => "",
-            pin_mode => "I",
-            por_state => 4,
-            port_alias_group => "",
-            port_alias_required => 0,
-            sio_group_cnt => 0,
-            sio_hifreq => "00000000",
-            sio_hyst => "1",
-            sio_ibuf => "00000000",
-            sio_info => "00",
-            sio_obuf => "00000000",
-            sio_refsel => "00000000",
-            sio_vohsel => "00000000",
-            sio_vtrip => "00000000",
-            slew_rate => "0",
-            spanning => 0,
-            sw_only => 0,
-            use_annotation => "0",
-            vtrip => "00",
-            width => 1,
-            in_clk_inv => 0,
-            in_clken_inv => 0,
-            in_clken_mode => 1,
-            in_rst_inv => 0,
-            out_clk_inv => 0,
-            out_clken_inv => 0,
-            out_clken_mode => 1,
-            out_rst_inv => 0)
-        PORT MAP(
-            in_clock_en => open,
-            in_reset => open,
-            out_clock_en => open,
-            out_reset => open);
-
-    set_pwm(0):iocell
-        GENERIC MAP(
-            in_sync_mode => 0,
-            out_sync_mode => 0,
-            oe_sync_mode => 0,
-            logicalport => "set_pwm",
-            logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
-        PORT MAP(
-            pa_out => set_pwm(0)__PA,
-            oe => open,
-            fb => Net_466,
-            pad_in => set_pwm(0)_PAD,
-            in_clock => open,
-            in_clock_en => '1',
-            in_reset => '0',
-            out_clock => open,
-            out_clock_en => '1',
-            out_reset => '0');
-
-    Net_345:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * !main_2) + (main_1 * main_2)",
+            eqn_main => "(!main_0 * !main_1)",
             regmode => 0,
             clken_mode => 1)
         PORT MAP(
-            q => Net_345,
-            main_0 => Net_399,
-            main_1 => Net_276,
-            main_2 => Net_466);
+            q => Net_575,
+            main_0 => Net_276,
+            main_1 => Net_530);
+
+    \PWM1:PWMUDB:status_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \PWM1:PWMUDB:status_2\,
+            main_0 => \PWM1:PWMUDB:runmode_enable\,
+            main_1 => \PWM1:PWMUDB:tc_i\);
 
     \PWM2:PWMUDB:status_2\:macrocell
         GENERIC MAP(
@@ -988,99 +811,151 @@ BEGIN
             main_0 => \PWM2:PWMUDB:runmode_enable\,
             main_1 => \PWM2:PWMUDB:tc_i\);
 
-    \UpDown:Cnt8:CounterUDB:reload\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * !main_2)",
-            regmode => 0,
-            clken_mode => 1)
-        PORT MAP(
-            q => \UpDown:Cnt8:CounterUDB:reload\,
-            main_0 => \UpDown:Net_1260\,
-            main_1 => \UpDown:Cnt8:CounterUDB:status_1\,
-            main_2 => \UpDown:Cnt8:CounterUDB:overflow\);
-
-    \UpDown:Cnt8:CounterUDB:status_0\:macrocell
+    \Counter:CounterUDB:status_0\:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1)",
             regmode => 0,
             clken_mode => 1)
         PORT MAP(
-            q => \UpDown:Cnt8:CounterUDB:status_0\,
-            main_0 => \UpDown:Cnt8:CounterUDB:cmp_out_i\,
-            main_1 => \UpDown:Cnt8:CounterUDB:prevCompare\);
+            q => \Counter:CounterUDB:status_0\,
+            main_0 => \Counter:CounterUDB:cmp_out_i\,
+            main_1 => \Counter:CounterUDB:prevCompare\);
 
-    \UpDown:Cnt8:CounterUDB:status_2\:macrocell
+    \Counter:CounterUDB:status_2\:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1)",
             regmode => 0,
             clken_mode => 1)
         PORT MAP(
-            q => \UpDown:Cnt8:CounterUDB:status_2\,
-            main_0 => \UpDown:Cnt8:CounterUDB:overflow\,
-            main_1 => \UpDown:Cnt8:CounterUDB:overflow_reg_i\);
+            q => \Counter:CounterUDB:status_2\,
+            main_0 => \Counter:CounterUDB:overflow\,
+            main_1 => \Counter:CounterUDB:overflow_reg_i\);
 
-    \UpDown:Cnt8:CounterUDB:status_3\:macrocell
+    \Counter:CounterUDB:status_3\:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1)",
             regmode => 0,
             clken_mode => 1)
         PORT MAP(
-            q => \UpDown:Cnt8:CounterUDB:status_3\,
-            main_0 => \UpDown:Cnt8:CounterUDB:status_1\,
-            main_1 => \UpDown:Cnt8:CounterUDB:underflow_reg_i\);
+            q => \Counter:CounterUDB:status_3\,
+            main_0 => \Counter:CounterUDB:status_1\,
+            main_1 => \Counter:CounterUDB:underflow_reg_i\);
 
-    \UpDown:Cnt8:CounterUDB:count_enable\:macrocell
+    \Counter:CounterUDB:upcnt_det\:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * !main_1 * main_2)",
+            eqn_main => "(main_0 * !main_1)",
             regmode => 0,
             clken_mode => 1)
         PORT MAP(
-            q => \UpDown:Cnt8:CounterUDB:count_enable\,
-            main_0 => \UpDown:Cnt8:CounterUDB:control_7\,
-            main_1 => \UpDown:Cnt8:CounterUDB:count_stored_i\,
-            main_2 => \UpDown:Net_1203\);
+            q => \Counter:CounterUDB:upcnt_det\,
+            main_0 => Net_276,
+            main_1 => \Counter:CounterUDB:upcnt_stored\);
 
-    \UpDown:Net_530\:macrocell
+    \Counter:CounterUDB:count_enable\:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * main_1 * !main_2)",
+            eqn_main => "(main_0 * main_2 * !main_3) + (main_1 * main_2 * !main_4)",
             regmode => 0,
             clken_mode => 1)
         PORT MAP(
-            q => \UpDown:Net_530\,
-            main_0 => \UpDown:Net_1276\,
-            main_1 => \UpDown:Net_1251\,
-            main_2 => \UpDown:Cnt8:CounterUDB:prevCompare\);
+            q => \Counter:CounterUDB:count_enable\,
+            main_0 => Net_276,
+            main_1 => Net_530,
+            main_2 => \Counter:CounterUDB:control_7\,
+            main_3 => \Counter:CounterUDB:upcnt_stored\,
+            main_4 => \Counter:CounterUDB:dwncnt_stored\);
 
-    \UpDown:Net_611\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * !main_1 * !main_2)",
-            regmode => 0,
-            clken_mode => 1)
-        PORT MAP(
-            q => \UpDown:Net_611\,
-            main_0 => \UpDown:Net_1276\,
-            main_1 => \UpDown:Net_1251\,
-            main_2 => \UpDown:Cnt8:CounterUDB:prevCompare\);
-
-    \I2CS:I2C_IRQ\:interrupt
-        GENERIC MAP(
-            int_type => "00",
-            is_nmi => 0)
-        PORT MAP(
-            interrupt => \I2CS:Net_697\,
-            clock => ClockBlock_BUS_CLK);
-
-    \I2CS:I2C_FF\:i2ccell
+    \I2CS:I2C_Prim\:i2ccell
         GENERIC MAP(
             cy_registers => "",
             use_wakeup => 0)
         PORT MAP(
-            clock => \ClockBlock.clk_bus_glb_ff__sig\,
-            scl_in => \I2CS:Net_1109_0\,
-            sda_in => \I2CS:Net_1109_1\,
-            scl_out => \I2CS:Net_643_0\,
-            sda_out => \I2CS:sda_x_wire\,
-            interrupt => \I2CS:Net_697\);
+            scl_in => \I2CS:Net_175\,
+            sda_in => \I2CS:Net_181\,
+            scl_out => \I2CS:Net_174\,
+            sda_out => \I2CS:Net_173\,
+            interrupt => \I2CS:Net_172\);
+
+    \I2CS:isr\:interrupt
+        GENERIC MAP(
+            int_type => "00",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => \I2CS:Net_172\,
+            clock => ClockBlock_BUS_CLK);
+
+    \PWM1:PWMUDB:genblk1:ctrlreg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "11111111",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_720,
+            control_7 => \PWM1:PWMUDB:control_7\,
+            control_6 => \PWM1:PWMUDB:control_6\,
+            control_5 => \PWM1:PWMUDB:control_5\,
+            control_4 => \PWM1:PWMUDB:control_4\,
+            control_3 => \PWM1:PWMUDB:control_3\,
+            control_2 => \PWM1:PWMUDB:control_2\,
+            control_1 => \PWM1:PWMUDB:control_1\,
+            control_0 => \PWM1:PWMUDB:control_0\,
+            busclk => ClockBlock_BUS_CLK);
+
+    \PWM1:PWMUDB:genblk8:stsreg\:statusicell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_int_mask => "1111111",
+            cy_md_select => "0100111",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_720,
+            status_6 => open,
+            status_5 => open,
+            status_4 => open,
+            status_3 => \PWM1:PWMUDB:status_3\,
+            status_2 => \PWM1:PWMUDB:status_2\,
+            status_1 => open,
+            status_0 => \PWM1:PWMUDB:status_0\);
+
+    \PWM1:PWMUDB:sP8:pwmdp:u0\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101000000000000000000100000000000000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_720,
+            cs_addr_2 => \PWM1:PWMUDB:tc_i\,
+            cs_addr_1 => \PWM1:PWMUDB:runmode_enable\,
+            cl0_comb => \PWM1:PWMUDB:cmp1_less\,
+            z0_comb => \PWM1:PWMUDB:tc_i\,
+            f1_blk_stat_comb => \PWM1:PWMUDB:status_3\,
+            busclk => ClockBlock_BUS_CLK);
 
     \PWM2:PWMUDB:genblk1:ctrlreg\:controlcell
         GENERIC MAP(
@@ -1092,7 +967,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_253,
+            clock => Net_720,
             control_7 => \PWM2:PWMUDB:control_7\,
             control_6 => \PWM2:PWMUDB:control_6\,
             control_5 => \PWM2:PWMUDB:control_5\,
@@ -1111,13 +986,13 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_253,
+            clock => Net_720,
             status_6 => open,
             status_5 => open,
             status_4 => open,
             status_3 => \PWM2:PWMUDB:status_3\,
             status_2 => \PWM2:PWMUDB:status_2\,
-            status_1 => \PWM2:PWMUDB:status_1\,
+            status_1 => open,
             status_0 => \PWM2:PWMUDB:status_0\);
 
     \PWM2:PWMUDB:sP8:pwmdp:u0\:datapathcell
@@ -1148,16 +1023,15 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_253,
+            clock => Net_720,
             cs_addr_2 => \PWM2:PWMUDB:tc_i\,
             cs_addr_1 => \PWM2:PWMUDB:runmode_enable\,
             cl0_comb => \PWM2:PWMUDB:cmp1_less\,
             z0_comb => \PWM2:PWMUDB:tc_i\,
-            cl1_comb => \PWM2:PWMUDB:cmp2_less\,
             f1_blk_stat_comb => \PWM2:PWMUDB:status_3\,
             busclk => ClockBlock_BUS_CLK);
 
-    \UpDown:Cnt8:CounterUDB:sCTRLReg:ctrlreg\:controlcell
+    \Counter:CounterUDB:sCTRLReg:ctrlreg\:controlcell
         GENERIC MAP(
             cy_ctrl_mode_0 => "11111111",
             cy_ctrl_mode_1 => "00000000",
@@ -1167,37 +1041,35 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_440,
-            control_7 => \UpDown:Cnt8:CounterUDB:control_7\,
-            control_6 => \UpDown:Cnt8:CounterUDB:control_6\,
-            control_5 => \UpDown:Cnt8:CounterUDB:control_5\,
-            control_4 => \UpDown:Cnt8:CounterUDB:control_4\,
-            control_3 => \UpDown:Cnt8:CounterUDB:control_3\,
-            control_2 => \UpDown:Cnt8:CounterUDB:control_2\,
-            control_1 => \UpDown:Cnt8:CounterUDB:control_1\,
-            control_0 => \UpDown:Cnt8:CounterUDB:control_0\,
+            clock => Net_478,
+            control_7 => \Counter:CounterUDB:control_7\,
+            control_6 => \Counter:CounterUDB:control_6\,
+            control_5 => \Counter:CounterUDB:control_5\,
+            control_4 => \Counter:CounterUDB:control_4\,
+            control_3 => \Counter:CounterUDB:control_3\,
+            control_2 => \Counter:CounterUDB:control_2\,
+            control_1 => \Counter:CounterUDB:control_1\,
+            control_0 => \Counter:CounterUDB:control_0\,
             busclk => ClockBlock_BUS_CLK);
 
-    \UpDown:Cnt8:CounterUDB:sSTSReg:stsreg\:statusicell
+    \Counter:CounterUDB:sSTSReg:stsreg\:statusicell
         GENERIC MAP(
             cy_force_order => 1,
             cy_int_mask => "1111111",
             cy_md_select => "0011111",
             clk_inv => '0',
-            clken_mode => 1,
-            reset_inv => '0')
+            clken_mode => 1)
         PORT MAP(
-            reset => \UpDown:Net_1260\,
-            clock => Net_440,
-            status_6 => \UpDown:Cnt8:CounterUDB:status_6\,
-            status_5 => \UpDown:Cnt8:CounterUDB:status_5\,
+            clock => Net_478,
+            status_6 => \Counter:CounterUDB:status_6\,
+            status_5 => \Counter:CounterUDB:status_5\,
             status_4 => open,
-            status_3 => \UpDown:Cnt8:CounterUDB:status_3\,
-            status_2 => \UpDown:Cnt8:CounterUDB:status_2\,
-            status_1 => \UpDown:Cnt8:CounterUDB:status_1\,
-            status_0 => \UpDown:Cnt8:CounterUDB:status_0\);
+            status_3 => \Counter:CounterUDB:status_3\,
+            status_2 => \Counter:CounterUDB:status_2\,
+            status_1 => \Counter:CounterUDB:status_1\,
+            status_0 => \Counter:CounterUDB:status_0\);
 
-    \UpDown:Cnt8:CounterUDB:sC8:counterdp:u0\:datapathcell
+    \Counter:CounterUDB:sC8:counterdp:u0\:datapathcell
         GENERIC MAP(
             a0_init => "00000000",
             a1_init => "00000000",
@@ -1225,99 +1097,61 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => Net_440,
-            cs_addr_2 => \UpDown:Net_1251\,
-            cs_addr_1 => \UpDown:Cnt8:CounterUDB:count_enable\,
-            cs_addr_0 => \UpDown:Cnt8:CounterUDB:reload\,
-            z0_comb => \UpDown:Cnt8:CounterUDB:status_1\,
-            f0_comb => \UpDown:Cnt8:CounterUDB:overflow\,
-            ce1_comb => \UpDown:Cnt8:CounterUDB:cmp_out_i\,
-            f0_bus_stat_comb => \UpDown:Cnt8:CounterUDB:status_6\,
-            f0_blk_stat_comb => \UpDown:Cnt8:CounterUDB:status_5\,
+            clock => Net_478,
+            cs_addr_2 => \Counter:CounterUDB:upcnt_det\,
+            cs_addr_1 => \Counter:CounterUDB:count_enable\,
+            z0_comb => \Counter:CounterUDB:status_1\,
+            f0_comb => \Counter:CounterUDB:overflow\,
+            ce1_comb => \Counter:CounterUDB:cmp_out_i\,
+            f0_bus_stat_comb => \Counter:CounterUDB:status_6\,
+            f0_blk_stat_comb => \Counter:CounterUDB:status_5\,
             busclk => ClockBlock_BUS_CLK);
 
-    \UpDown:bQuadDec:quad_A_delayed_0\:macrocell
+    \PWM1:PWMUDB:runmode_enable\:macrocell
         GENERIC MAP(
             eqn_main => "(main_0)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => \UpDown:bQuadDec:quad_A_delayed_0\,
-            clock_0 => Net_440,
-            main_0 => Net_276);
+            q => \PWM1:PWMUDB:runmode_enable\,
+            clock_0 => Net_720,
+            main_0 => \PWM1:PWMUDB:control_7\);
 
-    \UpDown:bQuadDec:quad_A_delayed_1\:macrocell
+    \PWM1:PWMUDB:prevCompare1\:macrocell
         GENERIC MAP(
             eqn_main => "(main_0)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => \UpDown:bQuadDec:quad_A_delayed_1\,
-            clock_0 => Net_440,
-            main_0 => \UpDown:bQuadDec:quad_A_delayed_0\);
+            q => \PWM1:PWMUDB:prevCompare1\,
+            clock_0 => Net_720,
+            main_0 => \PWM1:PWMUDB:cmp1_less\);
 
-    \UpDown:bQuadDec:quad_A_delayed_2\:macrocell
+    \PWM1:PWMUDB:status_0\:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0)",
+            eqn_main => "(!main_0 * main_1)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => \UpDown:bQuadDec:quad_A_delayed_2\,
-            clock_0 => Net_440,
-            main_0 => \UpDown:bQuadDec:quad_A_delayed_1\);
+            q => \PWM1:PWMUDB:status_0\,
+            clock_0 => Net_720,
+            main_0 => \PWM1:PWMUDB:prevCompare1\,
+            main_1 => \PWM1:PWMUDB:cmp1_less\);
 
-    \UpDown:bQuadDec:quad_B_delayed_0\:macrocell
+    Net_276:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0)",
+            eqn_main => "(main_0 * main_1)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => \UpDown:bQuadDec:quad_B_delayed_0\,
-            clock_0 => Net_440,
-            main_0 => Net_399);
-
-    \UpDown:bQuadDec:quad_B_delayed_1\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => \UpDown:bQuadDec:quad_B_delayed_1\,
-            clock_0 => Net_440,
-            main_0 => \UpDown:bQuadDec:quad_B_delayed_0\);
-
-    \UpDown:bQuadDec:quad_B_delayed_2\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => \UpDown:bQuadDec:quad_B_delayed_2\,
-            clock_0 => Net_440,
-            main_0 => \UpDown:bQuadDec:quad_B_delayed_1\);
-
-    \UpDown:bQuadDec:Stsreg\:statusicell
-        GENERIC MAP(
-            cy_force_order => 1,
-            cy_int_mask => "0001111",
-            cy_md_select => "0001111",
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            clock => Net_440,
-            status_6 => open,
-            status_5 => open,
-            status_4 => open,
-            status_3 => \UpDown:bQuadDec:error\,
-            status_2 => \UpDown:Net_1260\,
-            status_1 => \UpDown:Net_611\,
-            status_0 => \UpDown:Net_530\);
+            q => Net_276,
+            clock_0 => Net_720,
+            main_0 => \PWM1:PWMUDB:runmode_enable\,
+            main_1 => \PWM1:PWMUDB:cmp1_less\);
 
     \PWM2:PWMUDB:runmode_enable\:macrocell
         GENERIC MAP(
@@ -1327,7 +1161,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \PWM2:PWMUDB:runmode_enable\,
-            clock_0 => Net_253,
+            clock_0 => Net_720,
             main_0 => \PWM2:PWMUDB:control_7\);
 
     \PWM2:PWMUDB:prevCompare1\:macrocell
@@ -1338,19 +1172,8 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \PWM2:PWMUDB:prevCompare1\,
-            clock_0 => Net_253,
+            clock_0 => Net_720,
             main_0 => \PWM2:PWMUDB:cmp1_less\);
-
-    \PWM2:PWMUDB:prevCompare2\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => \PWM2:PWMUDB:prevCompare2\,
-            clock_0 => Net_253,
-            main_0 => \PWM2:PWMUDB:cmp2_less\);
 
     \PWM2:PWMUDB:status_0\:macrocell
         GENERIC MAP(
@@ -1360,240 +1183,75 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \PWM2:PWMUDB:status_0\,
-            clock_0 => Net_253,
+            clock_0 => Net_720,
             main_0 => \PWM2:PWMUDB:prevCompare1\,
             main_1 => \PWM2:PWMUDB:cmp1_less\);
 
-    \PWM2:PWMUDB:status_1\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * main_1)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => \PWM2:PWMUDB:status_1\,
-            clock_0 => Net_253,
-            main_0 => \PWM2:PWMUDB:prevCompare2\,
-            main_1 => \PWM2:PWMUDB:cmp2_less\);
-
-    Net_276:macrocell
+    Net_530:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => Net_276,
-            clock_0 => Net_253,
+            q => Net_530,
+            clock_0 => Net_720,
             main_0 => \PWM2:PWMUDB:runmode_enable\,
             main_1 => \PWM2:PWMUDB:cmp1_less\);
 
-    Net_399:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * main_1)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_399,
-            clock_0 => Net_253,
-            main_0 => \PWM2:PWMUDB:runmode_enable\,
-            main_1 => \PWM2:PWMUDB:cmp2_less\);
-
-    \UpDown:Net_1251\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * !main_1 * !main_2 * !main_4 * !main_6) + (main_0 * !main_1 * main_2 * !main_4 * main_6) + (main_0 * !main_1 * !main_3 * !main_4 * main_5) + (main_7)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => \UpDown:Net_1251\,
-            clock_0 => Net_440,
-            main_0 => \UpDown:Net_1251\,
-            main_1 => \UpDown:Net_1260\,
-            main_2 => \UpDown:bQuadDec:quad_A_filt\,
-            main_3 => \UpDown:bQuadDec:quad_B_filt\,
-            main_4 => \UpDown:bQuadDec:error\,
-            main_5 => \UpDown:bQuadDec:state_1\,
-            main_6 => \UpDown:bQuadDec:state_0\,
-            main_7 => \UpDown:Net_1251_split\);
-
-    \UpDown:Cnt8:CounterUDB:overflow_reg_i\:macrocell
+    \Counter:CounterUDB:overflow_reg_i\:macrocell
         GENERIC MAP(
             eqn_main => "(main_0)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => \UpDown:Cnt8:CounterUDB:overflow_reg_i\,
-            clock_0 => Net_440,
-            main_0 => \UpDown:Cnt8:CounterUDB:overflow\);
+            q => \Counter:CounterUDB:overflow_reg_i\,
+            clock_0 => Net_478,
+            main_0 => \Counter:CounterUDB:overflow\);
 
-    \UpDown:Cnt8:CounterUDB:underflow_reg_i\:macrocell
+    \Counter:CounterUDB:underflow_reg_i\:macrocell
         GENERIC MAP(
             eqn_main => "(main_0)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => \UpDown:Cnt8:CounterUDB:underflow_reg_i\,
-            clock_0 => Net_440,
-            main_0 => \UpDown:Cnt8:CounterUDB:status_1\);
+            q => \Counter:CounterUDB:underflow_reg_i\,
+            clock_0 => Net_478,
+            main_0 => \Counter:CounterUDB:status_1\);
 
-    \UpDown:Net_1276\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => \UpDown:Net_1276\,
-            clock_0 => Net_440,
-            main_0 => \UpDown:Cnt8:CounterUDB:status_1\,
-            main_1 => \UpDown:Cnt8:CounterUDB:overflow\);
-
-    \UpDown:Cnt8:CounterUDB:prevCompare\:macrocell
+    \Counter:CounterUDB:prevCompare\:macrocell
         GENERIC MAP(
             eqn_main => "(main_0)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => \UpDown:Cnt8:CounterUDB:prevCompare\,
-            clock_0 => Net_440,
-            main_0 => \UpDown:Cnt8:CounterUDB:cmp_out_i\);
+            q => \Counter:CounterUDB:prevCompare\,
+            clock_0 => Net_478,
+            main_0 => \Counter:CounterUDB:cmp_out_i\);
 
-    \UpDown:Net_1251_split\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * !main_1 * main_3 * !main_4 * !main_5) + (main_0 * !main_1 * main_4 * !main_5 * !main_6) + (main_0 * !main_2 * !main_4 * !main_5 * !main_6) + (main_0 * main_3 * !main_4 * !main_5 * !main_6) + (!main_1 * !main_2 * !main_3 * !main_4 * main_5 * !main_6) + (!main_1 * main_2 * !main_3 * !main_4 * main_5 * main_6) + (!main_1 * main_2 * main_3 * !main_4 * !main_5 * main_6) + (!main_2 * main_3 * !main_4 * !main_5 * !main_6)",
-            regmode => 0,
-            clken_mode => 1)
-        PORT MAP(
-            q => \UpDown:Net_1251_split\,
-            main_0 => \UpDown:Net_1251\,
-            main_1 => \UpDown:Net_1260\,
-            main_2 => \UpDown:bQuadDec:quad_A_filt\,
-            main_3 => \UpDown:bQuadDec:quad_B_filt\,
-            main_4 => \UpDown:bQuadDec:error\,
-            main_5 => \UpDown:bQuadDec:state_1\,
-            main_6 => \UpDown:bQuadDec:state_0\);
-
-    \UpDown:Cnt8:CounterUDB:count_stored_i\:macrocell
+    \Counter:CounterUDB:upcnt_stored\:macrocell
         GENERIC MAP(
             eqn_main => "(main_0)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => \UpDown:Cnt8:CounterUDB:count_stored_i\,
-            clock_0 => Net_440,
-            main_0 => \UpDown:Net_1203\);
+            q => \Counter:CounterUDB:upcnt_stored\,
+            clock_0 => Net_478,
+            main_0 => Net_276);
 
-    \UpDown:Net_1203\:macrocell
+    \Counter:CounterUDB:dwncnt_stored\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * main_1 * main_4 * !main_5 * !main_6) + (!main_0 * !main_2 * !main_3 * !main_4 * !main_5 * main_6) + (!main_2 * main_3 * !main_4 * !main_5 * !main_6)",
+            eqn_main => "(main_0)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => \UpDown:Net_1203\,
-            clock_0 => Net_440,
-            main_0 => \UpDown:Net_1260\,
-            main_1 => \UpDown:Net_1203\,
-            main_2 => \UpDown:bQuadDec:quad_A_filt\,
-            main_3 => \UpDown:bQuadDec:quad_B_filt\,
-            main_4 => \UpDown:bQuadDec:error\,
-            main_5 => \UpDown:bQuadDec:state_1\,
-            main_6 => \UpDown:bQuadDec:state_0\);
-
-    \UpDown:bQuadDec:quad_A_filt\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * !main_2 * main_3) + (main_0 * main_1 * main_2 * !main_3)",
-            regmode => 2,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => \UpDown:bQuadDec:quad_A_filt\,
-            clock_0 => Net_440,
-            main_0 => \UpDown:bQuadDec:quad_A_delayed_0\,
-            main_1 => \UpDown:bQuadDec:quad_A_delayed_1\,
-            main_2 => \UpDown:bQuadDec:quad_A_delayed_2\,
-            main_3 => \UpDown:bQuadDec:quad_A_filt\);
-
-    \UpDown:bQuadDec:quad_B_filt\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * !main_2 * main_3) + (main_0 * main_1 * main_2 * !main_3)",
-            regmode => 2,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => \UpDown:bQuadDec:quad_B_filt\,
-            clock_0 => Net_440,
-            main_0 => \UpDown:bQuadDec:quad_B_delayed_0\,
-            main_1 => \UpDown:bQuadDec:quad_B_delayed_1\,
-            main_2 => \UpDown:bQuadDec:quad_B_delayed_2\,
-            main_3 => \UpDown:bQuadDec:quad_B_filt\);
-
-    \UpDown:Net_1260\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1) + (!main_0 * !main_2 * !main_3) + (!main_1 * !main_2 * !main_3)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => \UpDown:Net_1260\,
-            clock_0 => Net_440,
-            main_0 => \UpDown:Net_1260\,
-            main_1 => \UpDown:bQuadDec:error\,
-            main_2 => \UpDown:bQuadDec:state_1\,
-            main_3 => \UpDown:bQuadDec:state_0\);
-
-    \UpDown:bQuadDec:error\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * main_4 * main_5) + (!main_0 * !main_1 * main_2 * !main_3 * main_4 * !main_5) + (!main_0 * main_1 * !main_2 * !main_3 * !main_4 * main_5) + (main_1 * main_2 * !main_3 * !main_4 * !main_5)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => \UpDown:bQuadDec:error\,
-            clock_0 => Net_440,
-            main_0 => \UpDown:Net_1260\,
-            main_1 => \UpDown:bQuadDec:quad_A_filt\,
-            main_2 => \UpDown:bQuadDec:quad_B_filt\,
-            main_3 => \UpDown:bQuadDec:error\,
-            main_4 => \UpDown:bQuadDec:state_1\,
-            main_5 => \UpDown:bQuadDec:state_0\);
-
-    \UpDown:bQuadDec:state_1\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * main_1 * main_2 * !main_3 * main_5) + (!main_0 * main_1 * !main_3 * main_4) + (!main_0 * main_1 * main_3 * !main_4 * !main_5) + (main_1 * !main_2 * !main_3 * !main_4 * !main_5)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => \UpDown:bQuadDec:state_1\,
-            clock_0 => Net_440,
-            main_0 => \UpDown:Net_1260\,
-            main_1 => \UpDown:bQuadDec:quad_A_filt\,
-            main_2 => \UpDown:bQuadDec:quad_B_filt\,
-            main_3 => \UpDown:bQuadDec:error\,
-            main_4 => \UpDown:bQuadDec:state_1\,
-            main_5 => \UpDown:bQuadDec:state_0\);
-
-    \UpDown:bQuadDec:state_0\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * main_1 * main_2 * !main_3 * main_4) + (!main_0 * main_2 * !main_3 * main_5) + (!main_0 * main_2 * main_3 * !main_4 * !main_5) + (!main_1 * main_2 * !main_3 * !main_4 * !main_5)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => \UpDown:bQuadDec:state_0\,
-            clock_0 => Net_440,
-            main_0 => \UpDown:Net_1260\,
-            main_1 => \UpDown:bQuadDec:quad_A_filt\,
-            main_2 => \UpDown:bQuadDec:quad_B_filt\,
-            main_3 => \UpDown:bQuadDec:error\,
-            main_4 => \UpDown:bQuadDec:state_1\,
-            main_5 => \UpDown:bQuadDec:state_0\);
+            q => \Counter:CounterUDB:dwncnt_stored\,
+            clock_0 => Net_478,
+            main_0 => Net_530);
 
 END __DEFAULT__;

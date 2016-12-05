@@ -1,12 +1,13 @@
 /*******************************************************************************
 * File Name: I2CS_PM.c
-* Version 3.50
+* Version 2.0
 *
 * Description:
-*  This file provides low power mode APIs for the I2C component.
+*  This file contains the API for the proper switching to/from the low power
+*  modes.
 *
 ********************************************************************************
-* Copyright 2008-2015, Cypress Semiconductor Corporation. All rights reserved.
+* Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
 * You may use this file only in accordance with the license, terms, conditions,
 * disclaimers, and limitations in the end user license agreement accompanying
 * the software package with which this file was provided.
@@ -16,27 +17,17 @@
 
 I2CS_BACKUP_STRUCT I2CS_backup =
 {
-    I2CS_DISABLE,
-
-#if (I2CS_FF_IMPLEMENTED)
+    I2CS_DISABLED,
     I2CS_DEFAULT_XCFG,
-    I2CS_DEFAULT_CFG,
     I2CS_DEFAULT_ADDR,
-    LO8(I2CS_DEFAULT_DIVIDE_FACTOR),
-    HI8(I2CS_DEFAULT_DIVIDE_FACTOR),
-#else  /* (I2CS_UDB_IMPLEMENTED) */
     I2CS_DEFAULT_CFG,
-#endif /* (I2CS_FF_IMPLEMENTED) */
-
-#if (I2CS_TIMEOUT_ENABLED)
-    I2CS_DEFAULT_TMOUT_PERIOD,
-    I2CS_DEFAULT_TMOUT_INTR_MASK,
-#endif /* (I2CS_TIMEOUT_ENABLED) */
+    I2CS_DEFAULT_CLKDIV1,
+    I2CS_DEFAULT_CLKDIV2
 };
 
-#if ((I2CS_FF_IMPLEMENTED) && (I2CS_WAKEUP_ENABLED))
+#if (I2CS_WAKEUP_ENABLED)
     volatile uint8 I2CS_wakeupSource;
-#endif /* ((I2CS_FF_IMPLEMENTED) && (I2CS_WAKEUP_ENABLED)) */
+#endif /* (I2CS_WAKEUP_ENABLED) */
 
 
 /*******************************************************************************
@@ -47,12 +38,11 @@ I2CS_BACKUP_STRUCT I2CS_backup =
 *  The Enable wakeup from Sleep Mode selection influences this function
 *  implementation:
 *   Unchecked: Stores the component non-retention configuration registers.
-*   Checked:   Disables the master, if it was enabled before, and enables
-*              backup regulator of the I2C hardware. If a transaction intended
-*              for component executes during this function call, it waits until
-*              the current transaction is completed and I2C hardware is ready
-*              to enter sleep mode. All subsequent I2C traffic is NAKed until
-*              the device is put into sleep mode.
+*   Checked:   Enables backup regulator of the I2C hardware. If a transaction
+*              intended for component executes during this function call,
+*              it waits until the current transaction is completed and
+*              I2C hardware is ready to go to sleep mode. All subsequent
+*              I2C traffic is NAKed until the device is put to sleep mode.
 *
 * Parameters:
 *  None.
@@ -60,10 +50,8 @@ I2CS_BACKUP_STRUCT I2CS_backup =
 * Return:
 *  None.
 *
-* Global Variables:
-*  I2CS_backup - The global variable used to save the component
-*                            configuration and non-retention registers before
-*                            entering the sleep mode.
+* Global variables:
+*  I2CS_backup - The non-retention registers are saved to.
 *
 * Reentrant:
 *  No.
@@ -71,104 +59,38 @@ I2CS_BACKUP_STRUCT I2CS_backup =
 *******************************************************************************/
 void I2CS_SaveConfig(void) 
 {
-#if (I2CS_FF_IMPLEMENTED)
-    #if (I2CS_WAKEUP_ENABLED)
-        uint8 intState;
-    #endif /* (I2CS_WAKEUP_ENABLED) */
+#if (I2CS_WAKEUP_ENABLED)
+    uint8 interruptState;
+#endif /* (I2CS_WAKEUP_ENABLED) */
 
-    /* Store registers before enter low power mode */
+    /* Store component configuration into backup structure */
     I2CS_backup.cfg     = I2CS_CFG_REG;
     I2CS_backup.xcfg    = I2CS_XCFG_REG;
-    I2CS_backup.addr    = I2CS_ADDR_REG;
+    I2CS_backup.adr     = I2CS_ADDR_REG;
     I2CS_backup.clkDiv1 = I2CS_CLKDIV1_REG;
     I2CS_backup.clkDiv2 = I2CS_CLKDIV2_REG;
 
 #if (I2CS_WAKEUP_ENABLED)
-    /* Disable master */
-    I2CS_CFG_REG &= (uint8) ~I2CS_ENABLE_MASTER;
+    /* Enable I2C backup regulator */
+    interruptState = CyEnterCriticalSection();
+    I2CS_PWRSYS_CR1_REG |= I2CS_PWRSYS_CR1_I2C_BACKUP;
+    CyExitCriticalSection(interruptState);
 
-    /* Enable backup regulator to keep block powered in low power mode */
-    intState = CyEnterCriticalSection();
-    I2CS_PWRSYS_CR1_REG |= I2CS_PWRSYS_CR1_I2C_REG_BACKUP;
-    CyExitCriticalSection(intState);
-
-    /* 1) Set force NACK to ignore I2C transactions;
-    *  2) Wait unti I2C is ready go to Sleep; !!
-    *  3) These bits are cleared on wake up.
+    /* Wait for completion of the current transaction. The following
+    * transactions have to be NACKed until the device enters the low power mode.
+    * After a wakeup, the force NACK bit is cleared automatically.
     */
-    /* Wait when block is ready for sleep */
     I2CS_XCFG_REG |= I2CS_XCFG_FORCE_NACK;
-    while (0u == (I2CS_XCFG_REG & I2CS_XCFG_RDY_TO_SLEEP))
+    while (0u == (I2CS_XCFG_REG & I2CS_XCFG_SLEEP_READY))
     {
     }
 
-    /* Setup wakeup interrupt */
+     /* Setup wakeup interrupt */
     I2CS_DisableInt();
+    I2CS_wakeupSource = 0u; /* Clear wakeup event */
     (void) CyIntSetVector(I2CS_ISR_NUMBER, &I2CS_WAKEUP_ISR);
-    I2CS_wakeupSource = 0u;
     I2CS_EnableInt();
 #endif /* (I2CS_WAKEUP_ENABLED) */
-
-#else
-    /* Store only address match bit */
-    I2CS_backup.control = (I2CS_CFG_REG & I2CS_CTRL_ANY_ADDRESS_MASK);
-#endif /* (I2CS_FF_IMPLEMENTED) */
-
-#if (I2CS_TIMEOUT_ENABLED)
-    I2CS_TimeoutSaveConfig();
-#endif /* (I2CS_TIMEOUT_ENABLED) */
-}
-
-
-/*******************************************************************************
-* Function Name: I2CS_Sleep
-********************************************************************************
-*
-* Summary:
-*  This is the preferred method to prepare the component before device enters
-*  sleep mode. The Enable wakeup from Sleep Mode selection influences this
-*  function implementation:
-*   Unchecked: Checks current I2C component state, saves it, and disables the
-*              component by calling I2C_Stop() if it is currently enabled.
-*              I2C_SaveConfig() is then called to save the component
-*              non-retention configuration registers.
-*   Checked:   If a transaction intended for component executes during this
-*              function call, it waits until the current transaction is
-*              completed. All subsequent I2C traffic intended for component
-*              is NAKed until the device is put to sleep mode. The address
-*              match event wakes up the device.
-*
-* Parameters:
-*  None.
-*
-* Return:
-*  None.
-*
-* Reentrant:
-*  No.
-*
-*******************************************************************************/
-void I2CS_Sleep(void) 
-{
-#if (I2CS_WAKEUP_ENABLED)
-    /* Do not enable block after exit low power mode if it is wakeup source */
-    I2CS_backup.enableState = I2CS_DISABLE;
-
-    #if (I2CS_TIMEOUT_ENABLED)
-        I2CS_TimeoutStop();
-    #endif /* (I2CS_TIMEOUT_ENABLED) */
-
-#else
-    /* Store enable state */
-    I2CS_backup.enableState = (uint8) I2CS_IS_ENABLED;
-
-    if (0u != I2CS_backup.enableState)
-    {
-        I2CS_Stop();
-    }
-#endif /* (I2CS_WAKEUP_ENABLED) */
-
-    I2CS_SaveConfig();
 }
 
 
@@ -193,75 +115,118 @@ void I2CS_Sleep(void)
 * Return:
 *  None.
 *
-* Global Variables:
-*  I2CS_backup - The global variable used to save the component
-*                            configuration and non-retention registers before
-*                            exiting the sleep mode.
+* Global variables:
+*  I2CS_backup - the non-retention registers are restored from.
 *
 * Reentrant:
 *  No.
 *
 * Side Effects:
 *  Calling this function before I2CS_SaveConfig() or
-*  I2CS_Sleep() will lead to unpredictable results.
+*  I2CS_Sleep() may produce unexpected behavior.
 *
 *******************************************************************************/
 void I2CS_RestoreConfig(void) 
 {
-#if (I2CS_FF_IMPLEMENTED)
     uint8 intState;
 
-    if (I2CS_CHECK_PWRSYS_I2C_BACKUP)
-    /* Low power mode was Sleep - backup regulator is enabled */
+    if (0u != (I2CS_PWRSYS_CR1_I2C_BACKUP & I2CS_PWRSYS_CR1_REG))
+    /* Exit from Sleep */
     {
-        /* Enable backup regulator in active mode */
+        /* Disable I2C backup regulator */
         intState = CyEnterCriticalSection();
-        I2CS_PWRSYS_CR1_REG &= (uint8) ~I2CS_PWRSYS_CR1_I2C_REG_BACKUP;
+        I2CS_PWRSYS_CR1_REG &= (uint8) ~I2CS_PWRSYS_CR1_I2C_BACKUP;
         CyExitCriticalSection(intState);
-
-        /* Restore master */
-        I2CS_CFG_REG = I2CS_backup.cfg;
     }
-    else
-    /* Low power mode was Hibernate - backup regulator is disabled. All registers are cleared */
+    else /* Exit from Hibernate (bit is cleared) or wakeup disabled */
     {
     #if (I2CS_WAKEUP_ENABLED)
-        /* Disable power to block before register restore */
+        /* Disable power to I2C block before register restore */
         intState = CyEnterCriticalSection();
-        I2CS_ACT_PWRMGR_REG  &= (uint8) ~I2CS_ACT_PWR_EN;
-        I2CS_STBY_PWRMGR_REG &= (uint8) ~I2CS_STBY_PWR_EN;
+        I2CS_PM_ACT_CFG_REG  &= (uint8) ~I2CS_ACT_PWR_EN;
+        I2CS_PM_STBY_CFG_REG &= (uint8) ~I2CS_STBY_PWR_EN;
         CyExitCriticalSection(intState);
 
-        /* Enable component in I2C_Wakeup() after register restore */
-        I2CS_backup.enableState = I2CS_ENABLE;
+        /* Enable component after restore complete */
+        I2CS_backup.enableState = I2CS_ENABLED;
     #endif /* (I2CS_WAKEUP_ENABLED) */
 
-        /* Restore component registers after Hibernate */
-        I2CS_XCFG_REG    = I2CS_backup.xcfg;
+        /* Restore component registers: Hibernate disable power */
         I2CS_CFG_REG     = I2CS_backup.cfg;
-        I2CS_ADDR_REG    = I2CS_backup.addr;
+        I2CS_XCFG_REG    = I2CS_backup.xcfg;
+        I2CS_ADDR_REG    = I2CS_backup.adr;
         I2CS_CLKDIV1_REG = I2CS_backup.clkDiv1;
         I2CS_CLKDIV2_REG = I2CS_backup.clkDiv2;
     }
 
 #if (I2CS_WAKEUP_ENABLED)
+    /* Set I2C interrupt to be pending if component is source of wake up */
     I2CS_DisableInt();
     (void) CyIntSetVector(I2CS_ISR_NUMBER, &I2CS_ISR);
     if (0u != I2CS_wakeupSource)
     {
-        /* Generate interrupt to process incoming transaction */
-        I2CS_SetPendingInt();
+        /* Generate interrupt to release I2C bus */
+        (void) CyIntSetPending(I2CS_ISR_NUMBER);
     }
     I2CS_EnableInt();
 #endif /* (I2CS_WAKEUP_ENABLED) */
+}
 
+
+/*******************************************************************************
+* Function Name: I2CS_Sleep
+********************************************************************************
+*
+* Summary:
+*  This is the preferred method to prepare the component before device enters
+*  sleep mode.
+*  The Enable wakeup from Sleep Mode selection influences this function
+*  implementation:
+*   Unchecked: Checks current EZI2C component state, saves it, and disables the
+*              component by calling EZI2C_Stop() if it is currently enabled.
+*              EZI2C_SaveConfig() is then called to save the component
+*              non-retention configuration registers.
+*   Checked:   If a transaction intended for component is in progress during
+*              this function call, it waits until the current transaction is
+*              completed. All subsequent I2C traffic intended for component is
+*              NAKed until the device is put to sleep mode. The address match
+*              event wakes up the device.
+*
+*  Call the EZI2C_Sleep() function before calling the CyPmSleep() or the
+*  CyPmHibernate() function. Refer to the PSoC Creator System Reference Guide
+*  for more information about power-management functions.
+*
+* Parameters:
+*  None.
+*
+* Return:
+*  None.
+*
+* Global variables:
+*  I2CS_backup - The non retention registers are saved to. Changed
+*  by I2CS_SaveConfig() function call.
+*
+* Reentrant:
+*  No.
+*
+*******************************************************************************/
+void I2CS_Sleep(void) 
+{
+#if (I2CS_WAKEUP_ENABLED)
+    /* Do not re-enable component in I2CS_Wakeup(). It remains enabled as it is wakeup source */
+    I2CS_backup.enableState = I2CS_DISABLED;
 #else
-    I2CS_CFG_REG = I2CS_backup.control;
-#endif /* (I2CS_FF_IMPLEMENTED) */
+    /* Store component state enabled or disable to restore after wakeup */
+    I2CS_backup.enableState = (I2CS_PM_ACT_CFG_REG & I2CS_ACT_PWR_EN);
 
-#if (I2CS_TIMEOUT_ENABLED)
-    I2CS_TimeoutRestoreConfig();
-#endif /* (I2CS_TIMEOUT_ENABLED) */
+    if (0u != I2CS_backup.enableState)
+    {
+        /* Disable component before enter Sleep */
+        I2CS_Stop();
+    }
+#endif /* (I2CS_WAKEUP_ENABLED) */
+
+    I2CS_SaveConfig();
 }
 
 
@@ -271,23 +236,26 @@ void I2CS_RestoreConfig(void)
 *
 * Summary:
 *  This is the preferred method to prepare the component for active mode
-*  operation (when device exits sleep mode). The Enable wakeup from Sleep Mode
-*  selection influences this function implementation:
+*  operation (when device exits sleep mode).
+*  The Enable wakeup from Sleep Mode selection influences this function
+*  implementation:
 *   Unchecked: Restores the component non-retention configuration registers
-*              by calling I2C_RestoreConfig(). If the component was enabled
-*              before the I2C_Sleep() function was called, I2C_Wakeup()
+*              by calling EZI2C_RestoreConfig(). If the component was enabled
+*              before the EZI2C_Sleep() function was called, EZI2C_Wakeup()
 *              re-enables it.
-*   Checked:   Enables  master functionality if it was enabled before sleep,
-*              and disables the backup regulator of the I2C hardware.
-*              The incoming transaction continues as soon as the regular
-*              I2C interrupt handler is set up (global interrupts has to be
-*              enabled to service I2C component interrupt).
+*   Checked:   Disables the backup regulator of I2C hardware. The incoming
+*              transaction continues as soon as the regular EZI2C interrupt
+*              handler is set up (global interrupts has to be  enabled to
+*              service EZI2C component interrupt).
 *
 * Parameters:
 *  None.
 *
 * Return:
 *  None.
+*
+* Global variables:
+*  I2CS_backup - The non retention registers are restored from.
 *
 * Reentrant:
 *  No.
@@ -301,17 +269,10 @@ void I2CS_Wakeup(void)
 {
     I2CS_RestoreConfig();
 
-    /* Restore component enable state */
     if (0u != I2CS_backup.enableState)
     {
+        /* Enable component as it was enabled before Sleep */
         I2CS_Enable();
-        I2CS_EnableInt();
-    }
-    else
-    {
-    #if (I2CS_TIMEOUT_ENABLED)
-        I2CS_TimeoutEnable();
-    #endif /* (I2CS_TIMEOUT_ENABLED) */
     }
 }
 

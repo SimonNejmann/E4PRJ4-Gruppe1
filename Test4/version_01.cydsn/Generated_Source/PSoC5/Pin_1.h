@@ -68,7 +68,7 @@ uint8   Pin_1_ClearInterrupt(void);
 /* Digital Port Constants */
 #define Pin_1_MASK               Pin_1__MASK
 #define Pin_1_SHIFT              Pin_1__SHIFT
-#define Pin_1_WIDTH              1u
+#define Pin_1_WIDTH              2u
 
 /* Interrupt constants */
 #if defined(Pin_1__INTSTAT)
@@ -155,6 +155,7 @@ uint8   Pin_1_ClearInterrupt(void);
     #define Pin_1_SNAP               (* (reg8 *) Pin_1__SNAP)
     
 	#define Pin_1_0_INTTYPE_REG 		(* (reg8 *) Pin_1__0__INTTYPE)
+	#define Pin_1_1_INTTYPE_REG 		(* (reg8 *) Pin_1__1__INTTYPE)
 #endif /* (Pin_1__INTSTAT) */
 
 #endif /* CY_PSOC5A... */

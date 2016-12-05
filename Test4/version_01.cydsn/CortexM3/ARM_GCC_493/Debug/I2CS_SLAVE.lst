@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
   29:Generated_Source\PSoC5/I2CS_SLAVE.c **** volatile uint8   I2CS_slRdBufSize;  /* Slave Transmit buffer size  */
   30:Generated_Source\PSoC5/I2CS_SLAVE.c **** volatile uint8   I2CS_slRdBufIndex; /* Slave Transmit buffer Index */
   31:Generated_Source\PSoC5/I2CS_SLAVE.c **** 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 2
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 2
 
 
   32:Generated_Source\PSoC5/I2CS_SLAVE.c **** /* Receive buffer variables */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
   49              		.type	I2CS_SlaveClearReadStatus, %function
   50              	I2CS_SlaveClearReadStatus:
   51              	.LFB1:
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 3
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 3
 
 
   64:Generated_Source\PSoC5/I2CS_SLAVE.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
   71 0016 1960     		str	r1, [r3]
   99:Generated_Source\PSoC5/I2CS_SLAVE.c **** 
  100:Generated_Source\PSoC5/I2CS_SLAVE.c ****     return (status);
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 4
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 4
 
 
  101:Generated_Source\PSoC5/I2CS_SLAVE.c **** }
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  129:Generated_Source\PSoC5/I2CS_SLAVE.c **** 
  130:Generated_Source\PSoC5/I2CS_SLAVE.c ****     I2CS_DisableInt(); /* Lock from interrupt */
   98              		.loc 1 130 0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 5
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 5
 
 
   99 0000 4FF40041 		mov	r1, #32768
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  150:Generated_Source\PSoC5/I2CS_SLAVE.c **** *  address: I2C slave address for the primary device. This value may be any
  151:Generated_Source\PSoC5/I2CS_SLAVE.c **** *  address between 0 and 127.
  152:Generated_Source\PSoC5/I2CS_SLAVE.c **** *
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 6
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 6
 
 
  153:Generated_Source\PSoC5/I2CS_SLAVE.c **** * Return:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  180:Generated_Source\PSoC5/I2CS_SLAVE.c **** *  Sets the buffer pointer and size of the read buffer. This function also
  181:Generated_Source\PSoC5/I2CS_SLAVE.c **** *  resets the transfer count returned with the I2C_SlaveGetReadBufSize function.
  182:Generated_Source\PSoC5/I2CS_SLAVE.c **** *
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 7
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 7
 
 
  183:Generated_Source\PSoC5/I2CS_SLAVE.c **** * Parameters:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  216:Generated_Source\PSoC5/I2CS_SLAVE.c ****         I2CS_slRdBufIndex = 0u;         /* Clears buffer index */
  182              		.loc 1 216 0
  183 0014 0021     		movs	r1, #0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 8
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 8
 
 
  184              	.LVL9:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  242:Generated_Source\PSoC5/I2CS_SLAVE.c **** *                                  write buffer size.
  243:Generated_Source\PSoC5/I2CS_SLAVE.c **** *  I2CS_slWrBufIndex - The global variable used to store a current
  244:Generated_Source\PSoC5/I2CS_SLAVE.c **** *                                  index within the slave write buffer.
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 9
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 9
 
 
  245:Generated_Source\PSoC5/I2CS_SLAVE.c **** *
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  245 001e 7047     		bx	lr
  246              	.L20:
  247              		.align	2
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 10
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 10
 
 
  248              	.L19:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  274 0004 7047     		bx	lr
  275              	.L23:
  276 0006 00BF     		.align	2
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 11
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 11
 
 
  277              	.L22:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  305              	.LFE7:
  306              		.size	I2CS_SlaveGetWriteBufSize, .-I2CS_SlaveGetWriteBufSize
  307              		.section	.text.I2CS_SlaveClearReadBuf,"ax",%progbits
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 12
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 12
 
 
  308              		.align	2
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  335              		.thumb
  336              		.thumb_func
  337              		.type	I2CS_SlaveClearWriteBuf, %function
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 13
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 13
 
 
  338              	I2CS_SlaveClearWriteBuf:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  364              		.text
  365              	.Letext0:
  366              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 14
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 14
 
 
  367              		.section	.debug_info,"",%progbits
@@ -788,45 +788,45 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  371 0006 00000000 		.4byte	.Ldebug_abbrev0
  372 000a 04       		.byte	0x4
  373 000b 01       		.uleb128 0x1
- 374 000c 74010000 		.4byte	.LASF39
+ 374 000c AE010000 		.4byte	.LASF39
  375 0010 01       		.byte	0x1
- 376 0011 22010000 		.4byte	.LASF40
- 377 0015 34000000 		.4byte	.LASF41
+ 376 0011 D0000000 		.4byte	.LASF40
+ 377 0015 22010000 		.4byte	.LASF41
  378 0019 00000000 		.4byte	.Ldebug_ranges0+0
  379 001d 00000000 		.4byte	0
  380 0021 00000000 		.4byte	.Ldebug_line0
  381 0025 02       		.uleb128 0x2
  382 0026 01       		.byte	0x1
  383 0027 06       		.byte	0x6
- 384 0028 1F030000 		.4byte	.LASF0
+ 384 0028 14030000 		.4byte	.LASF0
  385 002c 02       		.uleb128 0x2
  386 002d 01       		.byte	0x1
  387 002e 08       		.byte	0x8
- 388 002f D4000000 		.4byte	.LASF1
+ 388 002f 82000000 		.4byte	.LASF1
  389 0033 02       		.uleb128 0x2
  390 0034 02       		.byte	0x2
  391 0035 05       		.byte	0x5
- 392 0036 E4020000 		.4byte	.LASF2
+ 392 0036 D9020000 		.4byte	.LASF2
  393 003a 02       		.uleb128 0x2
  394 003b 02       		.byte	0x2
  395 003c 07       		.byte	0x7
- 396 003d 86000000 		.4byte	.LASF3
+ 396 003d 34000000 		.4byte	.LASF3
  397 0041 02       		.uleb128 0x2
  398 0042 04       		.byte	0x4
  399 0043 05       		.byte	0x5
- 400 0044 16030000 		.4byte	.LASF4
+ 400 0044 0B030000 		.4byte	.LASF4
  401 0048 02       		.uleb128 0x2
  402 0049 04       		.byte	0x4
  403 004a 07       		.byte	0x7
- 404 004b F4000000 		.4byte	.LASF5
+ 404 004b A2000000 		.4byte	.LASF5
  405 004f 02       		.uleb128 0x2
  406 0050 08       		.byte	0x8
  407 0051 05       		.byte	0x5
- 408 0052 7C020000 		.4byte	.LASF6
+ 408 0052 71020000 		.4byte	.LASF6
  409 0056 02       		.uleb128 0x2
  410 0057 08       		.byte	0x8
  411 0058 07       		.byte	0x7
- 412 0059 17020000 		.4byte	.LASF7
+ 412 0059 7E010000 		.4byte	.LASF7
  413 005d 03       		.uleb128 0x3
  414 005e 04       		.byte	0x4
  415 005f 05       		.byte	0x5
@@ -834,32 +834,32 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  417 0064 02       		.uleb128 0x2
  418 0065 04       		.byte	0x4
  419 0066 07       		.byte	0x7
- 420 0067 02020000 		.4byte	.LASF8
+ 420 0067 69010000 		.4byte	.LASF8
  421 006b 04       		.uleb128 0x4
- 422 006c F6020000 		.4byte	.LASF9
+ 422 006c EB020000 		.4byte	.LASF9
  423 0070 02       		.byte	0x2
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 15
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 15
 
 
  424 0071 9201     		.2byte	0x192
  425 0073 2C000000 		.4byte	0x2c
  426 0077 04       		.uleb128 0x4
- 427 0078 6D010000 		.4byte	.LASF10
+ 427 0078 1B010000 		.4byte	.LASF10
  428 007c 02       		.byte	0x2
  429 007d 9401     		.2byte	0x194
  430 007f 48000000 		.4byte	0x48
  431 0083 02       		.uleb128 0x2
  432 0084 04       		.byte	0x4
  433 0085 04       		.byte	0x4
- 434 0086 CE000000 		.4byte	.LASF11
+ 434 0086 7C000000 		.4byte	.LASF11
  435 008a 02       		.uleb128 0x2
  436 008b 08       		.byte	0x8
  437 008c 04       		.byte	0x4
- 438 008d 99000000 		.4byte	.LASF12
+ 438 008d 47000000 		.4byte	.LASF12
  439 0091 02       		.uleb128 0x2
  440 0092 01       		.byte	0x1
  441 0093 08       		.byte	0x8
- 442 0094 8A020000 		.4byte	.LASF13
+ 442 0094 7F020000 		.4byte	.LASF13
  443 0098 04       		.uleb128 0x4
  444 0099 2F000000 		.4byte	.LASF14
  445 009d 02       		.byte	0x2
@@ -877,9 +877,9 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  457 00ba 02       		.uleb128 0x2
  458 00bb 04       		.byte	0x4
  459 00bc 07       		.byte	0x7
- 460 00bd 59020000 		.4byte	.LASF16
+ 460 00bd 4E020000 		.4byte	.LASF16
  461 00c1 06       		.uleb128 0x6
- 462 00c2 BD000000 		.4byte	.LASF27
+ 462 00c2 6B000000 		.4byte	.LASF27
  463 00c6 01       		.byte	0x1
  464 00c7 3C       		.byte	0x3c
  465 00c8 6B000000 		.4byte	0x6b
@@ -888,7 +888,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  468 00d4 01       		.uleb128 0x1
  469 00d5 9C       		.byte	0x9c
  470 00d6 07       		.uleb128 0x7
- 471 00d7 FC020000 		.4byte	.LASF17
+ 471 00d7 F1020000 		.4byte	.LASF17
  472 00db 01       		.byte	0x1
  473 00dc 58       		.byte	0x58
  474 00dd 6B000000 		.4byte	0x6b
@@ -898,10 +898,10 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  478 00ea 9C       		.byte	0x9c
  479 00eb FF000000 		.4byte	0xff
  480 00ef 08       		.uleb128 0x8
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 16
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 16
 
 
- 481 00f0 A0000000 		.4byte	.LASF19
+ 481 00f0 4E000000 		.4byte	.LASF19
  482 00f4 01       		.byte	0x1
  483 00f5 5A       		.byte	0x5a
  484 00f6 6B000000 		.4byte	0x6b
@@ -918,14 +918,14 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  495 0113 9C       		.byte	0x9c
  496 0114 28010000 		.4byte	0x128
  497 0118 08       		.uleb128 0x8
- 498 0119 A0000000 		.4byte	.LASF19
+ 498 0119 4E000000 		.4byte	.LASF19
  499 011d 01       		.byte	0x1
  500 011e 80       		.byte	0x80
  501 011f 6B000000 		.4byte	0x6b
  502 0123 17000000 		.4byte	.LLST1
  503 0127 00       		.byte	0
  504 0128 09       		.uleb128 0x9
- 505 0129 B8020000 		.4byte	.LASF20
+ 505 0129 AD020000 		.4byte	.LASF20
  506 012d 01       		.byte	0x1
  507 012e A5       		.byte	0xa5
  508 012f 00000000 		.4byte	.LFB3
@@ -934,14 +934,14 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  511 0138 9C       		.byte	0x9c
  512 0139 4D010000 		.4byte	0x14d
  513 013d 0A       		.uleb128 0xa
- 514 013e 0F020000 		.4byte	.LASF22
+ 514 013e 76010000 		.4byte	.LASF22
  515 0142 01       		.byte	0x1
  516 0143 A5       		.byte	0xa5
  517 0144 6B000000 		.4byte	0x6b
  518 0148 2F000000 		.4byte	.LLST2
  519 014c 00       		.byte	0
  520 014d 09       		.uleb128 0x9
- 521 014e 06010000 		.4byte	.LASF21
+ 521 014e B4000000 		.4byte	.LASF21
  522 0152 01       		.byte	0x1
  523 0153 CE       		.byte	0xce
  524 0154 00000000 		.4byte	.LFB4
@@ -950,15 +950,15 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  527 015d 9C       		.byte	0x9c
  528 015e 81010000 		.4byte	0x181
  529 0162 0A       		.uleb128 0xa
- 530 0163 B7000000 		.4byte	.LASF23
+ 530 0163 65000000 		.4byte	.LASF23
  531 0167 01       		.byte	0x1
  532 0168 CE       		.byte	0xce
  533 0169 81010000 		.4byte	0x181
  534 016d 50000000 		.4byte	.LLST3
  535 0171 0A       		.uleb128 0xa
- 536 0172 EE020000 		.4byte	.LASF24
+ 536 0172 E3020000 		.4byte	.LASF24
  537 0176 01       		.byte	0x1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 17
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 17
 
 
  538 0177 CE       		.byte	0xce
@@ -969,7 +969,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  543 0182 04       		.byte	0x4
  544 0183 6B000000 		.4byte	0x6b
  545 0187 09       		.uleb128 0x9
- 546 0188 46010000 		.4byte	.LASF25
+ 546 0188 F4000000 		.4byte	.LASF25
  547 018c 01       		.byte	0x1
  548 018d FE       		.byte	0xfe
  549 018e 00000000 		.4byte	.LFB5
@@ -978,20 +978,20 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  552 0197 9C       		.byte	0x9c
  553 0198 BB010000 		.4byte	0x1bb
  554 019c 0A       		.uleb128 0xa
- 555 019d 1C010000 		.4byte	.LASF26
+ 555 019d CA000000 		.4byte	.LASF26
  556 01a1 01       		.byte	0x1
  557 01a2 FE       		.byte	0xfe
  558 01a3 81010000 		.4byte	0x181
  559 01a7 BB000000 		.4byte	.LLST5
  560 01ab 0A       		.uleb128 0xa
- 561 01ac EE020000 		.4byte	.LASF24
+ 561 01ac E3020000 		.4byte	.LASF24
  562 01b0 01       		.byte	0x1
  563 01b1 FE       		.byte	0xfe
  564 01b2 6B000000 		.4byte	0x6b
  565 01b6 F6000000 		.4byte	.LLST6
  566 01ba 00       		.byte	0
  567 01bb 0C       		.uleb128 0xc
- 568 01bc 2E020000 		.4byte	.LASF28
+ 568 01bc 95010000 		.4byte	.LASF28
  569 01c0 01       		.byte	0x1
  570 01c1 2301     		.2byte	0x123
  571 01c3 6B000000 		.4byte	0x6b
@@ -1000,7 +1000,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  574 01cf 01       		.uleb128 0x1
  575 01d0 9C       		.byte	0x9c
  576 01d1 0C       		.uleb128 0xc
- 577 01d2 62020000 		.4byte	.LASF29
+ 577 01d2 57020000 		.4byte	.LASF29
  578 01d6 01       		.byte	0x1
  579 01d7 3D01     		.2byte	0x13d
  580 01d9 6B000000 		.4byte	0x6b
@@ -1009,7 +1009,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  583 01e5 01       		.uleb128 0x1
  584 01e6 9C       		.byte	0x9c
  585 01e7 0D       		.uleb128 0xd
- 586 01e8 CD020000 		.4byte	.LASF30
+ 586 01e8 C2020000 		.4byte	.LASF30
  587 01ec 01       		.byte	0x1
  588 01ed 5901     		.2byte	0x159
  589 01ef 00000000 		.4byte	.LFB8
@@ -1017,8 +1017,8 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  591 01f7 01       		.uleb128 0x1
  592 01f8 9C       		.byte	0x9c
  593 01f9 0D       		.uleb128 0xd
- 594 01fa A0020000 		.4byte	.LASF31
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 18
+ 594 01fa 95020000 		.4byte	.LASF31
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 18
 
 
  595 01fe 01       		.byte	0x1
@@ -1036,7 +1036,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  607 0217 03       		.byte	0x3
  608 0218 00000000 		.4byte	I2CS_slStatus
  609 021c 0E       		.uleb128 0xe
- 610 021d 5D010000 		.4byte	.LASF33
+ 610 021d 0B010000 		.4byte	.LASF33
  611 0221 01       		.byte	0x1
  612 0222 1C       		.byte	0x1c
  613 0223 2D020000 		.4byte	0x22d
@@ -1047,7 +1047,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  618 022e 04       		.byte	0x4
  619 022f A4000000 		.4byte	0xa4
  620 0233 0E       		.uleb128 0xe
- 621 0234 2B030000 		.4byte	.LASF34
+ 621 0234 20030000 		.4byte	.LASF34
  622 0238 01       		.byte	0x1
  623 0239 1D       		.byte	0x1d
  624 023a A4000000 		.4byte	0xa4
@@ -1055,7 +1055,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  626 023f 03       		.byte	0x3
  627 0240 00000000 		.4byte	I2CS_slRdBufSize
  628 0244 0E       		.uleb128 0xe
- 629 0245 47020000 		.4byte	.LASF35
+ 629 0245 3C020000 		.4byte	.LASF35
  630 0249 01       		.byte	0x1
  631 024a 1E       		.byte	0x1e
  632 024b A4000000 		.4byte	0xa4
@@ -1063,7 +1063,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  634 0250 03       		.byte	0x3
  635 0251 00000000 		.4byte	I2CS_slRdBufIndex
  636 0255 0E       		.uleb128 0xe
- 637 0256 A7000000 		.4byte	.LASF36
+ 637 0256 55000000 		.4byte	.LASF36
  638 025a 01       		.byte	0x1
  639 025b 21       		.byte	0x21
  640 025c 2D020000 		.4byte	0x22d
@@ -1071,18 +1071,18 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  642 0261 03       		.byte	0x3
  643 0262 00000000 		.4byte	I2CS_slWrBufPtr
  644 0266 0E       		.uleb128 0xe
- 645 0267 8F020000 		.4byte	.LASF37
+ 645 0267 84020000 		.4byte	.LASF37
  646 026b 01       		.byte	0x1
  647 026c 22       		.byte	0x22
  648 026d A4000000 		.4byte	0xa4
  649 0271 05       		.uleb128 0x5
  650 0272 03       		.byte	0x3
  651 0273 00000000 		.4byte	I2CS_slWrBufSize
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 19
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 19
 
 
  652 0277 0E       		.uleb128 0xe
- 653 0278 E2000000 		.4byte	.LASF38
+ 653 0278 90000000 		.4byte	.LASF38
  654 027c 01       		.byte	0x1
  655 027d 23       		.byte	0x23
  656 027e A4000000 		.4byte	0xa4
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  706 002b 00       		.byte	0
  707 002c 03       		.uleb128 0x3
  708 002d 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 20
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 20
 
 
  709 002e 3A       		.uleb128 0x3a
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  763 0065 13       		.uleb128 0x13
  764 0066 11       		.uleb128 0x11
  765 0067 01       		.uleb128 0x1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 21
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 21
 
 
  766 0068 12       		.uleb128 0x12
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  820 00a0 0E       		.uleb128 0xe
  821 00a1 3A       		.uleb128 0x3a
  822 00a2 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 22
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 22
 
 
  823 00a3 3B       		.uleb128 0x3b
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  877 00da 19       		.uleb128 0x19
  878 00db 11       		.uleb128 0x11
  879 00dc 01       		.uleb128 0x1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 23
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 23
 
 
  880 00dd 12       		.uleb128 0x12
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  934 0037 0100     		.2byte	0x1
  935 0039 50       		.byte	0x50
  936 003a 04000000 		.4byte	.LVL5
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 24
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 24
 
 
  937 003e 10000000 		.4byte	.LFE3
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  991 00c5 50       		.byte	0x50
  992 00c6 0A000000 		.4byte	.LVL13
  993 00ca 12000000 		.4byte	.LVL14
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 25
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 25
 
 
  994 00ce 0100     		.2byte	0x1
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  1048 003c 34000000 		.4byte	.LFE5-.LFB5
  1049 0040 00000000 		.4byte	.LFB6
  1050 0044 0C000000 		.4byte	.LFE6-.LFB6
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 26
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 26
 
 
  1051 0048 00000000 		.4byte	.LFB7
@@ -1557,214 +1557,214 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 1
  1092              	.LASF14:
  1093 002f 72656738 		.ascii	"reg8\000"
  1093      00
- 1094              	.LASF41:
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 27
+ 1094              	.LASF3:
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 27
 
 
- 1095 0034 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\Projekt 4. semester\\E4"
- 1095      73657273 
- 1095      5C416E64 
- 1095      6572735C 
- 1095      4465736B 
- 1096 0062 50524A34 		.ascii	"PRJ4-Gruppe1\\Test4\\version_01.cydsn\000"
- 1096      2D477275 
- 1096      70706531 
- 1096      5C546573 
- 1096      74345C76 
- 1097              	.LASF3:
- 1098 0086 73686F72 		.ascii	"short unsigned int\000"
- 1098      7420756E 
- 1098      7369676E 
- 1098      65642069 
- 1098      6E7400
- 1099              	.LASF12:
- 1100 0099 646F7562 		.ascii	"double\000"
- 1100      6C6500
- 1101              	.LASF19:
- 1102 00a0 73746174 		.ascii	"status\000"
- 1102      757300
- 1103              	.LASF36:
- 1104 00a7 49324353 		.ascii	"I2CS_slWrBufPtr\000"
- 1104      5F736C57 
- 1104      72427566 
- 1104      50747200 
- 1105              	.LASF23:
- 1106 00b7 72644275 		.ascii	"rdBuf\000"
- 1106      6600
- 1107              	.LASF27:
- 1108 00bd 49324353 		.ascii	"I2CS_SlaveStatus\000"
- 1108      5F536C61 
- 1108      76655374 
- 1108      61747573 
- 1108      00
- 1109              	.LASF11:
- 1110 00ce 666C6F61 		.ascii	"float\000"
- 1110      7400
- 1111              	.LASF1:
- 1112 00d4 756E7369 		.ascii	"unsigned char\000"
- 1112      676E6564 
- 1112      20636861 
- 1112      7200
- 1113              	.LASF38:
- 1114 00e2 49324353 		.ascii	"I2CS_slWrBufIndex\000"
- 1114      5F736C57 
- 1114      72427566 
- 1114      496E6465 
- 1114      7800
- 1115              	.LASF5:
- 1116 00f4 6C6F6E67 		.ascii	"long unsigned int\000"
- 1116      20756E73 
- 1116      69676E65 
- 1116      6420696E 
- 1116      7400
- 1117              	.LASF21:
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 28
+ 1095 0034 73686F72 		.ascii	"short unsigned int\000"
+ 1095      7420756E 
+ 1095      7369676E 
+ 1095      65642069 
+ 1095      6E7400
+ 1096              	.LASF12:
+ 1097 0047 646F7562 		.ascii	"double\000"
+ 1097      6C6500
+ 1098              	.LASF19:
+ 1099 004e 73746174 		.ascii	"status\000"
+ 1099      757300
+ 1100              	.LASF36:
+ 1101 0055 49324353 		.ascii	"I2CS_slWrBufPtr\000"
+ 1101      5F736C57 
+ 1101      72427566 
+ 1101      50747200 
+ 1102              	.LASF23:
+ 1103 0065 72644275 		.ascii	"rdBuf\000"
+ 1103      6600
+ 1104              	.LASF27:
+ 1105 006b 49324353 		.ascii	"I2CS_SlaveStatus\000"
+ 1105      5F536C61 
+ 1105      76655374 
+ 1105      61747573 
+ 1105      00
+ 1106              	.LASF11:
+ 1107 007c 666C6F61 		.ascii	"float\000"
+ 1107      7400
+ 1108              	.LASF1:
+ 1109 0082 756E7369 		.ascii	"unsigned char\000"
+ 1109      676E6564 
+ 1109      20636861 
+ 1109      7200
+ 1110              	.LASF38:
+ 1111 0090 49324353 		.ascii	"I2CS_slWrBufIndex\000"
+ 1111      5F736C57 
+ 1111      72427566 
+ 1111      496E6465 
+ 1111      7800
+ 1112              	.LASF5:
+ 1113 00a2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1113      20756E73 
+ 1113      69676E65 
+ 1113      6420696E 
+ 1113      7400
+ 1114              	.LASF21:
+ 1115 00b4 49324353 		.ascii	"I2CS_SlaveInitReadBuf\000"
+ 1115      5F536C61 
+ 1115      7665496E 
+ 1115      69745265 
+ 1115      61644275 
+ 1116              	.LASF26:
+ 1117 00ca 77724275 		.ascii	"wrBuf\000"
+ 1117      6600
+ 1118              	.LASF40:
+ 1119 00d0 47656E65 		.ascii	"Generated_Source\\PSoC5\\I2CS_SLAVE.c\000"
+ 1119      72617465 
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 28
 
 
- 1118 0106 49324353 		.ascii	"I2CS_SlaveInitReadBuf\000"
- 1118      5F536C61 
- 1118      7665496E 
- 1118      69745265 
- 1118      61644275 
- 1119              	.LASF26:
- 1120 011c 77724275 		.ascii	"wrBuf\000"
- 1120      6600
- 1121              	.LASF40:
- 1122 0122 47656E65 		.ascii	"Generated_Source\\PSoC5\\I2CS_SLAVE.c\000"
- 1122      72617465 
- 1122      645F536F 
- 1122      75726365 
- 1122      5C50536F 
- 1123              	.LASF25:
- 1124 0146 49324353 		.ascii	"I2CS_SlaveInitWriteBuf\000"
- 1124      5F536C61 
- 1124      7665496E 
- 1124      69745772 
- 1124      69746542 
- 1125              	.LASF33:
- 1126 015d 49324353 		.ascii	"I2CS_slRdBufPtr\000"
- 1126      5F736C52 
- 1126      64427566 
- 1126      50747200 
- 1127              	.LASF10:
- 1128 016d 75696E74 		.ascii	"uint32\000"
- 1128      333200
- 1129              	.LASF39:
- 1130 0174 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1130      4320342E 
- 1130      392E3320 
- 1130      32303135 
- 1130      30333033 
- 1131 01a7 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 1131      20726576 
- 1131      6973696F 
- 1131      6E203232 
- 1131      31323230 
- 1132 01da 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1132      66756E63 
- 1132      74696F6E 
- 1132      2D736563 
- 1132      74696F6E 
- 1133              	.LASF8:
- 1134 0202 756E7369 		.ascii	"unsigned int\000"
- 1134      676E6564 
- 1134      20696E74 
- 1134      00
- 1135              	.LASF22:
- 1136 020f 61646472 		.ascii	"address\000"
- 1136      65737300 
- 1137              	.LASF7:
- 1138 0217 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1138      206C6F6E 
- 1138      6720756E 
- 1138      7369676E 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 29
+ 1119      645F536F 
+ 1119      75726365 
+ 1119      5C50536F 
+ 1120              	.LASF25:
+ 1121 00f4 49324353 		.ascii	"I2CS_SlaveInitWriteBuf\000"
+ 1121      5F536C61 
+ 1121      7665496E 
+ 1121      69745772 
+ 1121      69746542 
+ 1122              	.LASF33:
+ 1123 010b 49324353 		.ascii	"I2CS_slRdBufPtr\000"
+ 1123      5F736C52 
+ 1123      64427566 
+ 1123      50747200 
+ 1124              	.LASF10:
+ 1125 011b 75696E74 		.ascii	"uint32\000"
+ 1125      333200
+ 1126              	.LASF41:
+ 1127 0122 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\HellYaeh\\E4PRJ4-Gruppe"
+ 1127      73657273 
+ 1127      5C416E64 
+ 1127      6572735C 
+ 1127      4465736B 
+ 1128 0150 315C5465 		.ascii	"1\\Test4\\version_01.cydsn\000"
+ 1128      7374345C 
+ 1128      76657273 
+ 1128      696F6E5F 
+ 1128      30312E63 
+ 1129              	.LASF8:
+ 1130 0169 756E7369 		.ascii	"unsigned int\000"
+ 1130      676E6564 
+ 1130      20696E74 
+ 1130      00
+ 1131              	.LASF22:
+ 1132 0176 61646472 		.ascii	"address\000"
+ 1132      65737300 
+ 1133              	.LASF7:
+ 1134 017e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1134      206C6F6E 
+ 1134      6720756E 
+ 1134      7369676E 
+ 1134      65642069 
+ 1135              	.LASF28:
+ 1136 0195 49324353 		.ascii	"I2CS_SlaveGetReadBufSize\000"
+ 1136      5F536C61 
+ 1136      76654765 
+ 1136      74526561 
+ 1136      64427566 
+ 1137              	.LASF39:
+ 1138 01ae 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1138      4320342E 
+ 1138      392E3320 
+ 1138      32303135 
+ 1138      30333033 
+ 1139 01e1 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1139      20726576 
+ 1139      6973696F 
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 29
 
 
- 1138      65642069 
- 1139              	.LASF28:
- 1140 022e 49324353 		.ascii	"I2CS_SlaveGetReadBufSize\000"
- 1140      5F536C61 
- 1140      76654765 
- 1140      74526561 
- 1140      64427566 
+ 1139      6E203232 
+ 1139      31323230 
+ 1140 0214 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1140      66756E63 
+ 1140      74696F6E 
+ 1140      2D736563 
+ 1140      74696F6E 
  1141              	.LASF35:
- 1142 0247 49324353 		.ascii	"I2CS_slRdBufIndex\000"
+ 1142 023c 49324353 		.ascii	"I2CS_slRdBufIndex\000"
  1142      5F736C52 
  1142      64427566 
  1142      496E6465 
  1142      7800
  1143              	.LASF16:
- 1144 0259 73697A65 		.ascii	"sizetype\000"
+ 1144 024e 73697A65 		.ascii	"sizetype\000"
  1144      74797065 
  1144      00
  1145              	.LASF29:
- 1146 0262 49324353 		.ascii	"I2CS_SlaveGetWriteBufSize\000"
+ 1146 0257 49324353 		.ascii	"I2CS_SlaveGetWriteBufSize\000"
  1146      5F536C61 
  1146      76654765 
  1146      74577269 
  1146      74654275 
  1147              	.LASF6:
- 1148 027c 6C6F6E67 		.ascii	"long long int\000"
+ 1148 0271 6C6F6E67 		.ascii	"long long int\000"
  1148      206C6F6E 
  1148      6720696E 
  1148      7400
  1149              	.LASF13:
- 1150 028a 63686172 		.ascii	"char\000"
+ 1150 027f 63686172 		.ascii	"char\000"
  1150      00
  1151              	.LASF37:
- 1152 028f 49324353 		.ascii	"I2CS_slWrBufSize\000"
+ 1152 0284 49324353 		.ascii	"I2CS_slWrBufSize\000"
  1152      5F736C57 
  1152      72427566 
  1152      53697A65 
  1152      00
  1153              	.LASF31:
- 1154 02a0 49324353 		.ascii	"I2CS_SlaveClearWriteBuf\000"
+ 1154 0295 49324353 		.ascii	"I2CS_SlaveClearWriteBuf\000"
  1154      5F536C61 
  1154      7665436C 
  1154      65617257 
  1154      72697465 
  1155              	.LASF20:
- 1156 02b8 49324353 		.ascii	"I2CS_SlaveSetAddress\000"
+ 1156 02ad 49324353 		.ascii	"I2CS_SlaveSetAddress\000"
  1156      5F536C61 
  1156      76655365 
  1156      74416464 
  1156      72657373 
  1157              	.LASF30:
- 1158 02cd 49324353 		.ascii	"I2CS_SlaveClearReadBuf\000"
+ 1158 02c2 49324353 		.ascii	"I2CS_SlaveClearReadBuf\000"
  1158      5F536C61 
  1158      7665436C 
  1158      65617252 
  1158      65616442 
  1159              	.LASF2:
- 1160 02e4 73686F72 		.ascii	"short int\000"
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccPz2ufe.s 			page 30
+ 1160 02d9 73686F72 		.ascii	"short int\000"
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccoKVTbx.s 			page 30
 
 
  1160      7420696E 
  1160      7400
  1161              	.LASF24:
- 1162 02ee 62756653 		.ascii	"bufSize\000"
+ 1162 02e3 62756653 		.ascii	"bufSize\000"
  1162      697A6500 
  1163              	.LASF9:
- 1164 02f6 75696E74 		.ascii	"uint8\000"
+ 1164 02eb 75696E74 		.ascii	"uint8\000"
  1164      3800
  1165              	.LASF17:
- 1166 02fc 49324353 		.ascii	"I2CS_SlaveClearReadStatus\000"
+ 1166 02f1 49324353 		.ascii	"I2CS_SlaveClearReadStatus\000"
  1166      5F536C61 
  1166      7665436C 
  1166      65617252 
  1166      65616453 
  1167              	.LASF4:
- 1168 0316 6C6F6E67 		.ascii	"long int\000"
+ 1168 030b 6C6F6E67 		.ascii	"long int\000"
  1168      20696E74 
  1168      00
  1169              	.LASF0:
- 1170 031f 7369676E 		.ascii	"signed char\000"
+ 1170 0314 7369676E 		.ascii	"signed char\000"
  1170      65642063 
  1170      68617200 
  1171              	.LASF34:
- 1172 032b 49324353 		.ascii	"I2CS_slRdBufSize\000"
+ 1172 0320 49324353 		.ascii	"I2CS_slRdBufSize\000"
  1172      5F736C52 
  1172      64427566 
  1172      53697A65 

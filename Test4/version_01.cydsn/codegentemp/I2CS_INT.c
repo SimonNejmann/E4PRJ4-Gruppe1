@@ -1,13 +1,14 @@
 /*******************************************************************************
-* File Name: I2CS_INT.c
-* Version 3.50
+* File Name: I2CSINT.c
+* Version 2.0
 *
 * Description:
-*  This file provides the source code of Interrupt Service Routine (ISR)
-*  for the I2C component.
+*  This file contains the code that operates during the interrupt service
+*  routine.  For this component, most of the runtime code is located in
+*  the ISR.
 *
-********************************************************************************
-* Copyright 2008-2015, Cypress Semiconductor Corporation. All rights reserved.
+*******************************************************************************
+* Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
 * You may use this file only in accordance with the license, terms, conditions,
 * disclaimers, and limitations in the end user license agreement accompanying
 * the software package with which this file was provided.
@@ -18,513 +19,553 @@
 
 
 /*******************************************************************************
-*  Place your includes, defines and code here.
-********************************************************************************/
-/* `#START I2CS_ISR_intc` */
-
-/* `#END` */
-
-
-/*******************************************************************************
 * Function Name: I2CS_ISR
 ********************************************************************************
 *
 * Summary:
-*  The handler for the I2C interrupt. The slave and master operations are
-*  handled here.
+*  Handle Interrupt Service Routine.
 *
 * Parameters:
-*  None.
+*  I2CS_dataPtrS1 - The global variable which stores the pointer to the
+*  data exposed to an I2C master for the first slave address.
+*
+*  I2CS_rwOffsetS1 - The global variable which stores an offset for read
+*  and write operations, is set at each write sequence of the first slave
+*  address.
+*
+*  I2CS_rwIndexS1: global variable, which stores pointer to the next
+*  value to be read or written for the first slave address.
+*
+* I2CS_wrProtectS1 - The global variable which stores an offset where data
+*  is read only for the first slave address.
+*
+* I2CS_bufSizeS1 - The global variable which stores the size of a data array
+*  exposed to the I2C master for the first slave address.
+*
+*  I2CS_dataPtrS2 - The global variable which stores a pointer to the
+*  data exposed to the I2C master for the second slave address.
+*
+*  I2CS_rwOffsetS2 - The global variable which stores an offset for read
+*  and write operations, is set at each write sequence of the second slave
+*  device.
+*
+*  I2CS_rwIndexS2 - The global variable which stores a pointer to the next
+*  value to be read or written for the second slave address.
+*
+* I2CS_wrProtectS2 - The global variable which stores an offset where data
+*  is "Read only" for the second slave address.  ??
+*
+* I2CS_bufSizeS2 - The global variable which stores the size of a data array
+*  exposed to the I2C master for the second slave address.
+*
+* I2CS_curState - The global variable which stores a current state of an
+*  I2C state machine.
+*
+*  I2CS_curStatus - The global variable which stores the current status of
+*  the component.
 *
 * Return:
-*  None.
+*  I2CS_rwOffsetS1 - The global variable which stores an offset for read
+*  and write operations, is set at each write sequence of the first slave
+*  address and is reset if a received slave address matches the first slave address
+*  and a next operation will be read.
 *
-* Reentrant:
-*  No.
+*  I2CS_rwIndexS1 - The global variable which stores a pointer to the next
+*  value to be read or written for the first slave address. Is set to
+*  I2CS_rwOffsetS1 and than incremented if a received slave address
+*  matches the first slave address and a next operation will be read.
+*
+*  I2CS_rwOffsetS2 - The global variable which stores an offset for read
+*  and write operations, is set at each write sequence of the second slave
+*  address. This variable changes if a new sub-address is passed to the slave.
+*
+*  I2CS_rwIndexS2 - The global variable which stores a pointer to the next
+*  value to be read or written for the second slave address. This variable
+*  changes if a new sub-address is passed to the slave.
 *
 *******************************************************************************/
 CY_ISR(I2CS_ISR)
 {
-#if (I2CS_MODE_SLAVE_ENABLED)
-   uint8  tmp8;
-#endif  /* (I2CS_MODE_SLAVE_ENABLED) */
+    static uint8  tmp8;
+    static uint8  tmpCsr;
 
-    uint8  tmpCsr;
-    
+#if (I2CS_SUBADDR_WIDTH == I2CS_SUBADDR_16BIT)
+    static uint16 tmp16;
+#endif /* (I2CS_SUBADDR_WIDTH == I2CS_SUBADDR_16BIT) */
+
 #ifdef I2CS_ISR_ENTRY_CALLBACK
     I2CS_ISR_EntryCallback();
 #endif /* I2CS_ISR_ENTRY_CALLBACK */
     
+    /* Entry from interrupt
+    *  In the hardware address compare mode, we can assume we only get interrupted
+    *  when a valid address is recognized. In the software address compare mode,
+    *  we have to check every address after a start condition.
+    */
 
-#if(I2CS_TIMEOUT_FF_ENABLED)
-    if(0u != I2CS_TimeoutGetStatus())
+    /* Make copy to check Stop condition after bus has been released */
+    tmpCsr = I2CS_CSR_REG;
+
+    /* Check for address phase of the transaction */
+    if (I2CS_IS_BIT_SET(tmpCsr, I2CS_CSR_ADDRESS))
     {
-        I2CS_TimeoutReset();
-        I2CS_state = I2CS_SM_EXIT_IDLE;
-        /* I2CS_CSR_REG should be cleared after reset */
+        #if (I2CS_ADDRESSES == I2CS_TWO_ADDRESSES)
+
+            /* Get slave address from data register */
+            tmp8 = ((I2CS_DATA_REG >> I2CS_ADDRESS_SHIFT) & I2CS_SADDR_MASK);
+
+            if (tmp8 == I2CS_addrS1)   /* Check for address 1  */
+            {
+                if (I2CS_IS_BIT_SET(I2CS_DATA_REG, I2CS_READ_FLAG))
+                {  /* Prepare next read op, get data and place in register */
+
+                    /* Load first data byte  */
+                    I2CS_DATA_REG = I2CS_dataPtrS1[I2CS_rwOffsetS1];
+
+                    /* ACK and transmit */
+                    I2CS_CSR_REG = (I2CS_CSR_ACK | I2CS_CSR_TRANSMIT);
+
+                    /* Set index to offset */
+                    I2CS_rwIndexS1 = I2CS_rwOffsetS1;
+
+                    /* Advance to data location */
+                    ++I2CS_rwIndexS1;
+
+                    /* Set Read busy status */
+                    I2CS_curStatus |= I2CS_STATUS_RD1BUSY;
+
+                    /* Prepare for read transaction */
+                    I2CS_curState = I2CS_SM_DEV1_RD_DATA;
+                }
+                else  /* Start of a Write transaction, reset pointers, first byte is address */
+                {  /* Prepare next operation to write offset */
+
+                    /* ACK and ready to receive sub address */
+                    I2CS_CSR_REG = I2CS_CSR_ACK;
+
+                    /* Set Write busy status */
+                    I2CS_curStatus |= I2CS_STATUS_WR1BUSY;
+
+                    /* Prepare for read transaction */
+                    I2CS_curState = I2CS_SM_DEV1_WR_ADDR;
+
+                    /* Stop Interrupt Enable */
+                    I2CS_CFG_REG  |= I2CS_CFG_STOP_IE;
+
+                }  /* Prepared for next Write transaction */
+            }   /* Slave address #1 is processed */
+            else if (tmp8 == I2CS_addrS2)   /* Check for address 2  */
+            {
+                if (I2CS_IS_BIT_SET(I2CS_DATA_REG, I2CS_READ_FLAG))
+                {  /* Prepare next read op, get data and place in register */
+
+                    /* Load first data byte  */
+                    I2CS_DATA_REG = I2CS_dataPtrS2[I2CS_rwOffsetS2];
+
+                    /* ACK and transmit */
+                    I2CS_CSR_REG = (I2CS_CSR_ACK | I2CS_CSR_TRANSMIT);
+
+                    /* Reset pointer to previous offset */
+                    I2CS_rwIndexS2 = I2CS_rwOffsetS2;
+
+                    /* Advance to data location */
+                    ++I2CS_rwIndexS2;
+
+                    /* Set read busy status */
+                    I2CS_curStatus |= I2CS_STATUS_RD2BUSY;
+
+                    /* Prepare for read transaction */
+                    I2CS_curState = I2CS_SM_DEV2_RD_DATA;
+
+                }  /* Prepared for next Read transaction */
+                else  /* Start of write transfer, reset ptrs, 1st byte is address */
+                {  /* Prepare next operation to write offset */
+
+                    /* ACK and ready to receive address */
+                    I2CS_CSR_REG = I2CS_CSR_ACK;
+
+                    /* Set Write busy status */
+                    I2CS_curStatus |= I2CS_STATUS_WR2BUSY;
+
+                    /* Prepare for read transaction */
+                    I2CS_curState = I2CS_SM_DEV2_WR_ADDR;
+
+                    /* Enable interrupt on Stop */
+                    I2CS_CFG_REG  |= I2CS_CFG_STOP_IE;
+                } /* Prepared for the next Write transaction */
+            }
+            else   /* No address match */
+            {   /* NAK address Match  */
+                I2CS_CSR_REG = I2CS_CSR_NAK;
+            }
+        #else /* One slave address - hardware address matching */
+
+            if (I2CS_IS_BIT_SET(I2CS_DATA_REG, I2CS_READ_FLAG))
+            {   /* Prepare next read op, get data and place in register */
+
+                /* Load first data byte  */
+                I2CS_DATA_REG = I2CS_dataPtrS1[I2CS_rwOffsetS1];
+
+                /* ACK and transmit */
+                I2CS_CSR_REG = (I2CS_CSR_ACK | I2CS_CSR_TRANSMIT);
+
+                /* Reset pointer to previous offset */
+                I2CS_rwIndexS1 = I2CS_rwOffsetS1;
+
+                /* Advance to data location */
+                ++I2CS_rwIndexS1;
+
+                /* Set read busy status */
+                I2CS_curStatus |= I2CS_STATUS_RD1BUSY;
+
+                /* Prepare for read transaction */
+                I2CS_curState = I2CS_SM_DEV1_RD_DATA;
+            }
+            else  /* Start of write transfer, reset ptrs, 1st byte is address */
+            {   /* Prepare next operation to write offset */
+
+                /* ACK and ready to receive address */
+                I2CS_CSR_REG = I2CS_CSR_ACK;
+
+                /* Set Write activity */
+                I2CS_curStatus |= I2CS_STATUS_WR1BUSY;
+
+                /* Prepare for read transaction */
+                I2CS_curState = I2CS_SM_DEV1_WR_ADDR;
+
+                /* Enable interrupt on stop */
+                I2CS_CFG_REG |= I2CS_CFG_STOP_IE;
+            }
+        #endif  /* (I2CS_ADDRESSES == I2CS_TWO_ADDRESSES) */
     }
-#endif /* (I2CS_TIMEOUT_FF_ENABLED) */
+    else if (I2CS_IS_BIT_SET(tmpCsr, I2CS_CSR_BYTE_COMPLETE))
+    {   /* Check for data transfer */
 
-
-    tmpCsr = I2CS_CSR_REG;      /* Make copy as interrupts clear */
-
-#if(I2CS_MODE_MULTI_MASTER_SLAVE_ENABLED)
-    if(I2CS_CHECK_START_GEN(I2CS_MCSR_REG))
-    {
-        I2CS_CLEAR_START_GEN;
-
-        /* Set transfer complete and error flags */
-        I2CS_mstrStatus |= (I2CS_MSTAT_ERR_XFER |
-                                        I2CS_GET_MSTAT_CMPLT);
-
-        /* Slave was addressed */
-        I2CS_state = I2CS_SM_SLAVE;
-    }
-#endif /* (I2CS_MODE_MULTI_MASTER_SLAVE_ENABLED) */
-
-
-#if(I2CS_MODE_MULTI_MASTER_ENABLED)
-    if(I2CS_CHECK_LOST_ARB(tmpCsr))
-    {
-        /* Set errors */
-        I2CS_mstrStatus |= (I2CS_MSTAT_ERR_XFER     |
-                                        I2CS_MSTAT_ERR_ARB_LOST |
-                                        I2CS_GET_MSTAT_CMPLT);
-
-        I2CS_DISABLE_INT_ON_STOP; /* Interrupt on Stop is enabled by write */
-
-        #if(I2CS_MODE_MULTI_MASTER_SLAVE_ENABLED)
-            if(I2CS_CHECK_ADDRESS_STS(tmpCsr))
-            {
-                /* Slave was addressed */
-                I2CS_state = I2CS_SM_SLAVE;
-            }
-            else
-            {
-                I2CS_BUS_RELEASE;
-
-                I2CS_state = I2CS_SM_EXIT_IDLE;
-            }
-        #else
-            I2CS_BUS_RELEASE;
-
-            I2CS_state = I2CS_SM_EXIT_IDLE;
-
-        #endif /* (I2CS_MODE_MULTI_MASTER_SLAVE_ENABLED) */
-    }
-#endif /* (I2CS_MODE_MULTI_MASTER_ENABLED) */
-
-    /* Check for master operation mode */
-    if(I2CS_CHECK_SM_MASTER)
-    {
-    #if(I2CS_MODE_MASTER_ENABLED)
-        if(I2CS_CHECK_BYTE_COMPLETE(tmpCsr))
+        /* Data transfer state machine */
+        switch (I2CS_curState)
         {
-            switch (I2CS_state)
-            {
-            case I2CS_SM_MSTR_WR_ADDR:  /* After address is sent, write data */
-            case I2CS_SM_MSTR_RD_ADDR:  /* After address is sent, read data */
+            /* Address written from Master to Slave. */
+            case I2CS_SM_DEV1_WR_ADDR:
 
-                tmpCsr &= ((uint8) ~I2CS_CSR_STOP_STATUS); /* Clear Stop bit history on address phase */
-
-                if(I2CS_CHECK_ADDR_ACK(tmpCsr))
-                {
-                    /* Setup for transmit or receive of data */
-                    if(I2CS_state == I2CS_SM_MSTR_WR_ADDR)   /* TRANSMIT data */
-                    {
-                        /* Check if at least one byte to transfer */
-                        if(I2CS_mstrWrBufSize > 0u)
-                        {
-                            /* Load the 1st data byte */
-                            I2CS_DATA_REG = I2CS_mstrWrBufPtr[0u];
-                            I2CS_TRANSMIT_DATA;
-                            I2CS_mstrWrBufIndex = 1u;   /* Set index to 2nd element */
-
-                            /* Set transmit state until done */
-                            I2CS_state = I2CS_SM_MSTR_WR_DATA;
-                        }
-                        /* End of buffer: complete writing */
-                        else if(I2CS_CHECK_NO_STOP(I2CS_mstrControl))
-                        {
-                            /* Set write complete and master halted */
-                            I2CS_mstrStatus |= (I2CS_MSTAT_XFER_HALT |
-                                                            I2CS_MSTAT_WR_CMPLT);
-
-                            I2CS_state = I2CS_SM_MSTR_HALT; /* Expect ReStart */
-                            I2CS_DisableInt();
-                        }
-                        else
-                        {
-                            I2CS_ENABLE_INT_ON_STOP; /* Enable interrupt on Stop, to catch it */
-                            I2CS_GENERATE_STOP;
-                        }
-                    }
-                    else  /* Master receive data */
-                    {
-                        I2CS_READY_TO_READ; /* Release bus to read data */
-
-                        I2CS_state  = I2CS_SM_MSTR_RD_DATA;
-                    }
-                }
-                /* Address is NACKed */
-                else if(I2CS_CHECK_ADDR_NAK(tmpCsr))
-                {
-                    /* Set Address NAK error */
-                    I2CS_mstrStatus |= (I2CS_MSTAT_ERR_XFER |
-                                                    I2CS_MSTAT_ERR_ADDR_NAK);
-
-                    if(I2CS_CHECK_NO_STOP(I2CS_mstrControl))
-                    {
-                        I2CS_mstrStatus |= (I2CS_MSTAT_XFER_HALT |
-                                                        I2CS_GET_MSTAT_CMPLT);
-
-                        I2CS_state = I2CS_SM_MSTR_HALT; /* Expect RESTART */
-                        I2CS_DisableInt();
-                    }
-                    else  /* Do normal Stop */
-                    {
-                        I2CS_ENABLE_INT_ON_STOP; /* Enable interrupt on Stop, to catch it */
-                        I2CS_GENERATE_STOP;
-                    }
-                }
-                else
-                {
-                    /* Address phase is not set for some reason: error */
-                    #if(I2CS_TIMEOUT_ENABLED)
-                        /* Exit interrupt to take chance for timeout timer to handle this case */
-                        I2CS_DisableInt();
-                        I2CS_ClearPendingInt();
-                    #else
-                        /* Block execution flow: unexpected condition */
-                        CYASSERT(0u != 0u);
-                    #endif /* (I2CS_TIMEOUT_ENABLED) */
-                }
-                break;
-
-            case I2CS_SM_MSTR_WR_DATA:
-
-                if(I2CS_CHECK_DATA_ACK(tmpCsr))
-                {
-                    /* Check if end of buffer */
-                    if(I2CS_mstrWrBufIndex  < I2CS_mstrWrBufSize)
-                    {
-                        I2CS_DATA_REG =
-                                                 I2CS_mstrWrBufPtr[I2CS_mstrWrBufIndex];
-                        I2CS_TRANSMIT_DATA;
-                        I2CS_mstrWrBufIndex++;
-                    }
-                    /* End of buffer: complete writing */
-                    else if(I2CS_CHECK_NO_STOP(I2CS_mstrControl))
-                    {
-                        /* Set write complete and master halted */
-                        I2CS_mstrStatus |= (I2CS_MSTAT_XFER_HALT |
-                                                        I2CS_MSTAT_WR_CMPLT);
-
-                        I2CS_state = I2CS_SM_MSTR_HALT;    /* Expect restart */
-                        I2CS_DisableInt();
-                    }
-                    else  /* Do normal Stop */
-                    {
-                        I2CS_ENABLE_INT_ON_STOP;    /* Enable interrupt on Stop, to catch it */
-                        I2CS_GENERATE_STOP;
-                    }
-                }
-                /* Last byte NAKed: end writing */
-                else if(I2CS_CHECK_NO_STOP(I2CS_mstrControl))
-                {
-                    /* Set write complete, short transfer and master halted */
-                    I2CS_mstrStatus |= (I2CS_MSTAT_ERR_XFER       |
-                                                    I2CS_MSTAT_ERR_SHORT_XFER |
-                                                    I2CS_MSTAT_XFER_HALT      |
-                                                    I2CS_MSTAT_WR_CMPLT);
-
-                    I2CS_state = I2CS_SM_MSTR_HALT;    /* Expect ReStart */
-                    I2CS_DisableInt();
-                }
-                else  /* Do normal Stop */
-                {
-                    I2CS_ENABLE_INT_ON_STOP;    /* Enable interrupt on Stop, to catch it */
-                    I2CS_GENERATE_STOP;
-
-                    /* Set short transfer and error flag */
-                    I2CS_mstrStatus |= (I2CS_MSTAT_ERR_SHORT_XFER |
-                                                    I2CS_MSTAT_ERR_XFER);
-                }
-
-                break;
-
-            case I2CS_SM_MSTR_RD_DATA:
-
-                I2CS_mstrRdBufPtr[I2CS_mstrRdBufIndex] = I2CS_DATA_REG;
-                I2CS_mstrRdBufIndex++;
-
-                /* Check if end of buffer */
-                if(I2CS_mstrRdBufIndex < I2CS_mstrRdBufSize)
-                {
-                    I2CS_ACK_AND_RECEIVE;       /* ACK and receive byte */
-                }
-                /* End of buffer: complete reading */
-                else if(I2CS_CHECK_NO_STOP(I2CS_mstrControl))
-                {
-                    /* Set read complete and master halted */
-                    I2CS_mstrStatus |= (I2CS_MSTAT_XFER_HALT |
-                                                    I2CS_MSTAT_RD_CMPLT);
-
-                    I2CS_state = I2CS_SM_MSTR_HALT;    /* Expect ReStart */
-                    I2CS_DisableInt();
-                }
-                else
-                {
-                    I2CS_ENABLE_INT_ON_STOP;
-                    I2CS_NAK_AND_RECEIVE;       /* NACK and TRY to generate Stop */
-                }
-                break;
-
-            default: /* This is an invalid state and should not occur */
-
-            #if(I2CS_TIMEOUT_ENABLED)
-                /* Exit interrupt to take chance for timeout timer to handles this case */
-                I2CS_DisableInt();
-                I2CS_ClearPendingInt();
-            #else
-                /* Block execution flow: unexpected condition */
-                CYASSERT(0u != 0u);
-            #endif /* (I2CS_TIMEOUT_ENABLED) */
-
-                break;
-            }
-        }
-
-        /* Catches Stop: end of transaction */
-        if(I2CS_CHECK_STOP_STS(tmpCsr))
-        {
-            I2CS_mstrStatus |= I2CS_GET_MSTAT_CMPLT;
-
-            I2CS_DISABLE_INT_ON_STOP;
-            I2CS_state = I2CS_SM_IDLE;
-        }
-    #endif /* (I2CS_MODE_MASTER_ENABLED) */
-    }
-    else if(I2CS_CHECK_SM_SLAVE)
-    {
-    #if(I2CS_MODE_SLAVE_ENABLED)
-
-        if((I2CS_CHECK_STOP_STS(tmpCsr)) || /* Stop || Restart */
-           (I2CS_CHECK_BYTE_COMPLETE(tmpCsr) && I2CS_CHECK_ADDRESS_STS(tmpCsr)))
-        {
-            /* Catch end of master write transaction: use interrupt on Stop */
-            /* The Stop bit history on address phase does not have correct state */
-            if(I2CS_SM_SL_WR_DATA == I2CS_state)
-            {
-                I2CS_DISABLE_INT_ON_STOP;
-
-                I2CS_slStatus &= ((uint8) ~I2CS_SSTAT_WR_BUSY);
-                I2CS_slStatus |= ((uint8)  I2CS_SSTAT_WR_CMPLT);
-
-                I2CS_state = I2CS_SM_IDLE;
-            }
-        }
-
-        if(I2CS_CHECK_BYTE_COMPLETE(tmpCsr))
-        {
-            /* The address only issued after Start or ReStart: so check the address
-               to catch these events:
-                FF : sets an address phase with a byte_complete interrupt trigger.
-                UDB: sets an address phase immediately after Start or ReStart. */
-            if(I2CS_CHECK_ADDRESS_STS(tmpCsr))
-            {
-            /* Check for software address detection */
-            #if(I2CS_SW_ADRR_DECODE)
-                tmp8 = I2CS_GET_SLAVE_ADDR(I2CS_DATA_REG);
-
-                if(tmp8 == I2CS_slAddress)   /* Check for address match */
-                {
-                    if(0u != (I2CS_DATA_REG & I2CS_READ_FLAG))
-                    {
-                        /* Place code to prepare read buffer here                  */
-                        /* `#START I2CS_SW_PREPARE_READ_BUF_interrupt` */
-
-                        /* `#END` */
-
-                    #ifdef I2CS_SW_PREPARE_READ_BUF_CALLBACK
-                        I2CS_SwPrepareReadBuf_Callback();
-                    #endif /* I2CS_SW_PREPARE_READ_BUF_CALLBACK */
-                        
-                        /* Prepare next operation to read, get data and place in data register */
-                        if(I2CS_slRdBufIndex < I2CS_slRdBufSize)
-                        {
-                            /* Load first data byte from array */
-                            I2CS_DATA_REG = I2CS_slRdBufPtr[I2CS_slRdBufIndex];
-                            I2CS_ACK_AND_TRANSMIT;
-                            I2CS_slRdBufIndex++;
-
-                            I2CS_slStatus |= I2CS_SSTAT_RD_BUSY;
-                        }
-                        else    /* Overflow: provide 0xFF on bus */
-                        {
-                            I2CS_DATA_REG = I2CS_OVERFLOW_RETURN;
-                            I2CS_ACK_AND_TRANSMIT;
-
-                            I2CS_slStatus  |= (I2CS_SSTAT_RD_BUSY |
-                                                           I2CS_SSTAT_RD_ERR_OVFL);
-                        }
-
-                        I2CS_state = I2CS_SM_SL_RD_DATA;
-                    }
-                    else  /* Write transaction: receive 1st byte */
-                    {
-                        I2CS_ACK_AND_RECEIVE;
-                        I2CS_state = I2CS_SM_SL_WR_DATA;
-
-                        I2CS_slStatus |= I2CS_SSTAT_WR_BUSY;
-                        I2CS_ENABLE_INT_ON_STOP;
-                    }
-                }
-                else
-                {
-                    /*     Place code to compare for additional address here    */
-                    /* `#START I2CS_SW_ADDR_COMPARE_interruptStart` */
-
-                    /* `#END` */
-
-                #ifdef I2CS_SW_ADDR_COMPARE_ENTRY_CALLBACK
-                    I2CS_SwAddrCompare_EntryCallback();
-                #endif /* I2CS_SW_ADDR_COMPARE_ENTRY_CALLBACK */
-                    
-                    I2CS_NAK_AND_RECEIVE;   /* NACK address */
-
-                    /* Place code to end of condition for NACK generation here */
-                    /* `#START I2CS_SW_ADDR_COMPARE_interruptEnd`  */
-
-                    /* `#END` */
-
-                #ifdef I2CS_SW_ADDR_COMPARE_EXIT_CALLBACK
-                    I2CS_SwAddrCompare_ExitCallback();
-                #endif /* I2CS_SW_ADDR_COMPARE_EXIT_CALLBACK */
-                }
-
-            #else /* (I2CS_HW_ADRR_DECODE) */
-
-                if(0u != (I2CS_DATA_REG & I2CS_READ_FLAG))
-                {
-                    /* Place code to prepare read buffer here                  */
-                    /* `#START I2CS_HW_PREPARE_READ_BUF_interrupt` */
-
-                    /* `#END` */
-                    
-                #ifdef I2CS_HW_PREPARE_READ_BUF_CALLBACK
-                    I2CS_HwPrepareReadBuf_Callback();
-                #endif /* I2CS_HW_PREPARE_READ_BUF_CALLBACK */
-
-                    /* Prepare next operation to read, get data and place in data register */
-                    if(I2CS_slRdBufIndex < I2CS_slRdBufSize)
-                    {
-                        /* Load first data byte from array */
-                        I2CS_DATA_REG = I2CS_slRdBufPtr[I2CS_slRdBufIndex];
-                        I2CS_ACK_AND_TRANSMIT;
-                        I2CS_slRdBufIndex++;
-
-                        I2CS_slStatus |= I2CS_SSTAT_RD_BUSY;
-                    }
-                    else    /* Overflow: provide 0xFF on bus */
-                    {
-                        I2CS_DATA_REG = I2CS_OVERFLOW_RETURN;
-                        I2CS_ACK_AND_TRANSMIT;
-
-                        I2CS_slStatus  |= (I2CS_SSTAT_RD_BUSY |
-                                                       I2CS_SSTAT_RD_ERR_OVFL);
-                    }
-
-                    I2CS_state = I2CS_SM_SL_RD_DATA;
-                }
-                else  /* Write transaction: receive 1st byte */
-                {
-                    I2CS_ACK_AND_RECEIVE;
-                    I2CS_state = I2CS_SM_SL_WR_DATA;
-
-                    I2CS_slStatus |= I2CS_SSTAT_WR_BUSY;
-                    I2CS_ENABLE_INT_ON_STOP;
-                }
-
-            #endif /* (I2CS_SW_ADRR_DECODE) */
-            }
-            /* Data states */
-            /* Data master writes into slave */
-            else if(I2CS_state == I2CS_SM_SL_WR_DATA)
-            {
-                if(I2CS_slWrBufIndex < I2CS_slWrBufSize)
-                {
+                /* If 8-bit interface, Advance to WR_Data, else to ADDR2 */
+                #if (I2CS_SUBADDR_WIDTH == I2CS_SUBADDR_8BIT)
                     tmp8 = I2CS_DATA_REG;
-                    I2CS_ACK_AND_RECEIVE;
-                    I2CS_slWrBufPtr[I2CS_slWrBufIndex] = tmp8;
-                    I2CS_slWrBufIndex++;
-                }
-                else  /* of array: complete write, send NACK */
-                {
-                    I2CS_NAK_AND_RECEIVE;
-
-                    I2CS_slStatus |= I2CS_SSTAT_WR_ERR_OVFL;
-                }
-            }
-            /* Data master reads from slave */
-            else if(I2CS_state == I2CS_SM_SL_RD_DATA)
-            {
-                if(I2CS_CHECK_DATA_ACK(tmpCsr))
-                {
-                    if(I2CS_slRdBufIndex < I2CS_slRdBufSize)
+                    if (tmp8 < I2CS_bufSizeS1)
                     {
-                         /* Get data from array */
-                        I2CS_DATA_REG = I2CS_slRdBufPtr[I2CS_slRdBufIndex];
-                        I2CS_TRANSMIT_DATA;
-                        I2CS_slRdBufIndex++;
+                        /* ACK and ready to receive data */
+                        I2CS_CSR_REG = I2CS_CSR_ACK;
+
+                        /* Set offset to new value */
+                        I2CS_rwOffsetS1 = tmp8;
+
+                        /* Reset index to offset value */
+                        I2CS_rwIndexS1 = tmp8;
+
+                        /* Prepare for write transaction */
+                        I2CS_curState = I2CS_SM_DEV1_WR_DATA;
                     }
-                    else   /* Overflow: provide 0xFF on bus */
+                    else    /* Out of range, NAK data and don't set offset */
                     {
-                        I2CS_DATA_REG = I2CS_OVERFLOW_RETURN;
-                        I2CS_TRANSMIT_DATA;
+                        /* NAK master */
+                        I2CS_CSR_REG = I2CS_CSR_NAK;
+                    }
 
-                        I2CS_slStatus |= I2CS_SSTAT_RD_ERR_OVFL;
+                #else   /* 16-bit */
+                    /* Save MSB of address */
+                    tmp16 = I2CS_DATA_REG;
+
+                    /* ACK and ready to receive address */
+                    I2CS_CSR_REG = I2CS_CSR_ACK;
+
+                    /* Prepare to get LSB of address */
+                    I2CS_curState = I2CS_SM_DEV1_WR_ADDR_LSB;
+
+                #endif  /* (I2CS_SUBADDR_WIDTH == I2CS_SUBADDR_8BIT) */
+
+            break;  /* case I2CS_SM_DEV1_WR_ADDR */
+
+            #if (I2CS_SUBADDR_WIDTH == I2CS_SUBADDR_16BIT)
+
+                /* Only used with 16-bit interface */
+                case I2CS_SM_DEV1_WR_ADDR_LSB:
+
+                    /* Create offset */
+                    tmp16 = (uint16) (tmp16 << I2CS_ADDRESS_LSB_SHIFT) | I2CS_DATA_REG;
+
+                    /* Check range */
+                    if(tmp16 < I2CS_bufSizeS1)
+                    {
+                        /* ACK and ready to receive address */
+                        I2CS_CSR_REG = I2CS_CSR_ACK;
+
+                        /* Set offset to new value */
+                        I2CS_rwOffsetS1 = tmp16;
+
+                        /* Reset index to offset value */
+                        I2CS_rwIndexS1 = tmp16;
+
+                        /* Prepare for write transaction */
+                        I2CS_curState = I2CS_SM_DEV1_WR_DATA;
+                    }
+                    else    /* Out of range, NAK data and don't set offset */
+                    {
+                        /* NAK master */
+                        I2CS_CSR_REG = I2CS_CSR_NAK;
+                    }
+                break; /* case I2CS_SM_DEV1_WR_ADDR_LSB */
+
+            #endif  /* (I2CS_SUBADDR_WIDTH == I2CS_SUBADDR_16BIT) */
+
+
+            /* Data written from master to slave. */
+            case I2CS_SM_DEV1_WR_DATA:
+
+                /* Check for valid range */
+                if (I2CS_rwIndexS1 < I2CS_wrProtectS1)
+                {
+                    /* Get data, to ACK quickly */
+                    tmp8 = I2CS_DATA_REG;
+
+                    /* ACK and ready to receive sub address */
+                    I2CS_CSR_REG = I2CS_CSR_ACK;
+
+                    /* Write data to array */
+                    I2CS_dataPtrS1[I2CS_rwIndexS1] = tmp8;
+
+                    /* Increment pointer */
+                    I2CS_rwIndexS1++;
+                }
+                else
+                {
+                    /* NAK cause beyond write area */
+                    I2CS_CSR_REG = I2CS_CSR_NAK;
+                }
+            break;  /* I2CS_SM_DEV1_WR_DATA */
+
+
+            /* Data read by master from slave */
+            case I2CS_SM_DEV1_RD_DATA:
+
+                /* Check ACK/NAK */
+                if ((tmpCsr & I2CS_CSR_LRB) == I2CS_CSR_LRB_ACK)
+                {
+                    /* Check for valid range */
+                    if (I2CS_rwIndexS1 < I2CS_bufSizeS1)
+                    {
+                        /* Get data from array */
+                        I2CS_DATA_REG = I2CS_dataPtrS1[I2CS_rwIndexS1];
+
+                        /* Send Data */
+                        I2CS_CSR_REG = I2CS_CSR_TRANSMIT;
+
+                        /* Increment pointer */
+                        ++I2CS_rwIndexS1;
+                    }
+                    else    /* No valid range */
+                    {
+                        /* Out of range send FFs */
+                        I2CS_DATA_REG = I2CS_DUMMY_DATA;
+
+                        /* Send Data */
+                        I2CS_CSR_REG = I2CS_CSR_TRANSMIT;
                     }
                 }
-                else  /* Last byte was NACKed: read complete */
+                else    /* Data was NAKed */
                 {
-                    /* Only NACK appears on bus */
-                    I2CS_DATA_REG = I2CS_OVERFLOW_RETURN;
-                    I2CS_NAK_AND_TRANSMIT;
+                    /* Send dummy data at the end of read transaction */
+                    I2CS_DATA_REG = I2CS_DUMMY_DATA;
 
-                    I2CS_slStatus &= ((uint8) ~I2CS_SSTAT_RD_BUSY);
-                    I2CS_slStatus |= ((uint8)  I2CS_SSTAT_RD_CMPLT);
+                    /* Clear transmit bit at the end of read transaction */
+                    I2CS_CSR_REG = I2CS_CSR_NAK;
 
-                    I2CS_state = I2CS_SM_IDLE;
+                    /* Clear Busy Flag */
+                    I2CS_curStatus &= ((uint8) ~I2CS_STATUS_BUSY);
+
+                    /* Error or Stop, reset state */
+                    I2CS_curState = I2CS_SM_IDLE;
+
                 }
-            }
-            else
-            {
-            #if(I2CS_TIMEOUT_ENABLED)
-                /* Exit interrupt to take chance for timeout timer to handle this case */
-                I2CS_DisableInt();
-                I2CS_ClearPendingInt();
-            #else
-                /* Block execution flow: unexpected condition */
-                CYASSERT(0u != 0u);
-            #endif /* (I2CS_TIMEOUT_ENABLED) */
-            }
-        }
-    #endif /* (I2CS_MODE_SLAVE_ENABLED) */
+            break;  /* I2CS_SM_DEV1_RD_DATA */
+
+            /* Second Device Address */
+            #if (I2CS_ADDRESSES == I2CS_TWO_ADDRESSES)
+
+                case I2CS_SM_DEV2_WR_ADDR:
+
+                    /* If 8-bit interface, Advance to WR_Data, else to ADDR2 */
+                    #if (I2CS_SUBADDR_WIDTH == I2CS_SUBADDR_8BIT)
+
+                        tmp8 = I2CS_DATA_REG;
+                        if (tmp8 < I2CS_bufSizeS2)
+                        {
+                            /* ACK and ready to receive address */
+                            I2CS_CSR_REG = I2CS_CSR_ACK;
+
+                            /* Set offset to new value */
+                            I2CS_rwOffsetS2 = tmp8;
+
+                            /* Reset index to offset value */
+                            I2CS_rwIndexS2 = tmp8;
+
+                            /* Prepare for write transaction */
+                            I2CS_curState = I2CS_SM_DEV2_WR_DATA;
+                        }
+                        else    /* Out of range, NAK data and don't set offset */
+                        {
+                            /* NAK master */
+                            I2CS_CSR_REG = I2CS_CSR_NAK;
+                        }
+                    #else
+                        /* Save LSB of address */
+                        tmp16 = I2CS_DATA_REG;
+
+                        /* ACK and ready to receive address */
+                        I2CS_CSR_REG = I2CS_CSR_ACK;
+
+                        /* Prepare to get LSB of address */
+                        I2CS_curState = I2CS_SM_DEV2_WR_ADDR_LSB;
+                    #endif  /* (I2CS_SUBADDR_WIDTH == I2CS_SUBADDR_8BIT) */
+
+                break;  /* I2CS_SM_DEV2_WR_ADDR */
+
+                #if (I2CS_SUBADDR_WIDTH == I2CS_SUBADDR_16BIT)
+
+                    /* Only used with 16-bit interface */
+                    case I2CS_SM_DEV2_WR_ADDR_LSB:
+                        /* Create offset */
+                        tmp16 = (uint16) (tmp16 << 8u) | I2CS_DATA_REG;
+                        if (tmp16 < I2CS_bufSizeS2)
+                        {
+                            /* ACK and ready to receive address */
+                            I2CS_CSR_REG = I2CS_CSR_ACK;
+
+                            /* Set offset to new value */
+                            I2CS_rwOffsetS2 = tmp16;
+
+                            /* Reset index to offset value */
+                            I2CS_rwIndexS2 = tmp16;
+
+                            /* Prepare for write transaction */
+                            I2CS_curState = I2CS_SM_DEV2_WR_DATA;
+                        }
+                        else    /* Out of range, NAK data and don't set offset */
+                        {
+                            /* NAK master */
+                            I2CS_CSR_REG = I2CS_CSR_NAK;
+                        }
+                        break; /* I2CS_SM_DEV2_WR_ADDR_LSB */
+
+                #endif   /* (I2CS_SUBADDR_WIDTH == I2CS_SUBADDR_16BIT) */
+
+
+                /* Data written from master to slave. */
+                case I2CS_SM_DEV2_WR_DATA:
+
+                    /* Check for valid range */
+                    if (I2CS_rwIndexS2 < I2CS_wrProtectS2)
+                    {
+                        /* Get data, to ACK quickly */
+                        tmp8 = I2CS_DATA_REG;
+
+                        /* ACK and ready to receive sub address */
+                        I2CS_CSR_REG = I2CS_CSR_ACK;
+
+                        /* Write data to array */
+                        I2CS_dataPtrS2[I2CS_rwIndexS2] = tmp8;
+
+                        /* Inc pointer */
+                        ++I2CS_rwIndexS2;
+                    }
+                    else
+                    {
+                        /* NAK cause beyond write area */
+                        I2CS_CSR_REG = I2CS_CSR_NAK;
+                    }
+                    break;  /* I2CS_SM_DEV2_WR_DATA */
+
+                    /* Data read by master from slave */
+                    case I2CS_SM_DEV2_RD_DATA:
+
+                        if ((tmpCsr & I2CS_CSR_LRB) == I2CS_CSR_LRB_ACK)
+                        {   /* ACKed */
+                            /* Check for valid range */
+                            if (I2CS_rwIndexS2 < I2CS_bufSizeS2)
+                            {   /* Check ACK/NAK */
+                                /* Get data from array */
+                                I2CS_DATA_REG = I2CS_dataPtrS2[I2CS_rwIndexS2];
+
+                                /* Send Data */
+                                I2CS_CSR_REG = I2CS_CSR_TRANSMIT;
+
+                                /* Increment pointer */
+                                I2CS_rwIndexS2++;
+                            }
+                            else    /* Not valid range */
+                            {
+                                /* Out of range send FFs */
+                                I2CS_DATA_REG = I2CS_DUMMY_DATA;
+
+                                /* Send Data */
+                                I2CS_CSR_REG = I2CS_CSR_TRANSMIT;
+                            }
+                        }
+                        else    /* NAKed */
+                        {
+                            /* Out of range send FFs */
+                            I2CS_DATA_REG = I2CS_DUMMY_DATA;
+
+                            /* Send Data */
+                            I2CS_CSR_REG = I2CS_CSR_TRANSMIT;
+
+                            /* Clear busy status */
+                            I2CS_curStatus &= ((uint8) ~I2CS_STATUS_BUSY);
+
+                            /* Error or Stop, reset state */
+                            I2CS_curState = I2CS_SM_IDLE;
+                        }   /* End if ACK/NAK */
+
+                        break;  /* I2CS_SM_DEV2_RD_DATA */
+
+            #endif  /* (I2CS_ADDRESSES == I2CS_TWO_ADDRESSES) */
+
+            default:
+                /* Invalid state, reset state to idle */
+                I2CS_curState = I2CS_SM_IDLE;
+
+                /* Reset offsets and index */
+                I2CS_rwOffsetS1 = 0u;
+                I2CS_rwIndexS1  = 0u;
+
+                /* Dummy NAK to release bus */
+                I2CS_CSR_REG = I2CS_CSR_NAK;
+                break;
+
+        }  /* End switch/case I2CS_curState */
     }
     else
     {
-        /* The FSM skips master and slave processing: return to IDLE */
-        I2CS_state = I2CS_SM_IDLE;
+        /* Intentional blank line */
     }
 
+    /* Check if Stop was detected */
+    if (I2CS_IS_BIT_SET(I2CS_CSR_REG, I2CS_CSR_STOP_STATUS))
+    {
+        /* Clear Busy flag */
+        I2CS_curStatus &= ((uint8) ~I2CS_STATUS_BUSY);
+
+        /* error or stop - reset state */
+        I2CS_curState = I2CS_SM_IDLE;
+
+        /* Disable interrupt on Stop */
+        I2CS_CFG_REG &= ((uint8) ~I2CS_CFG_STOP_IE);
+    }
 #ifdef I2CS_ISR_EXIT_CALLBACK
     I2CS_ISR_ExitCallback();
 #endif /* I2CS_ISR_EXIT_CALLBACK */    
 }
 
 
-#if ((I2CS_FF_IMPLEMENTED) && (I2CS_WAKEUP_ENABLED))
+#if (I2CS_WAKEUP_ENABLED)
     /*******************************************************************************
     * Function Name: I2CS_WAKEUP_ISR
     ********************************************************************************
@@ -543,18 +584,17 @@ CY_ISR(I2CS_ISR)
     {
     #ifdef I2CS_WAKEUP_ISR_ENTRY_CALLBACK
         I2CS_WAKEUP_ISR_EntryCallback();
-    #endif /* I2CS_WAKEUP_ISR_ENTRY_CALLBACK */
-         
-        /* Set flag to notify that matched address is received */
-        I2CS_wakeupSource = 1u;
+    #endif /* I2CS_WAKEUP_ISR_ENTRY_CALLBACK */         
+        
+        I2CS_wakeupSource = 1u;  /* I2C was wakeup source */
 
-        /* SCL is stretched until the I2C_Wake() is called */
-
-    #ifdef I2CS_WAKEUP_ISR_EXIT_CALLBACK
-        I2CS_WAKEUP_ISR_ExitCallback();
-    #endif /* I2CS_WAKEUP_ISR_EXIT_CALLBACK */
+        /* SCL is stretched until EZI2C_Wakeup() is called */
+        
+    #ifdef I2CS_ISR_EXIT_CALLBACK
+        I2CS_ISR_ExitCallback();
+    #endif /* I2CS_ISR_EXIT_CALLBACK */         
     }
-#endif /* ((I2CS_FF_IMPLEMENTED) && (I2CS_WAKEUP_ENABLED)) */
+#endif /* (I2CS_WAKEUP_ENABLED) */
 
 
 /* [] END OF FILE */

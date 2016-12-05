@@ -1,33 +1,42 @@
 #include <main.h>
 
-uint8 run_front(uint8 ang, uint8 speed, uint8 ang2, uint8 speed2)
+extern uint8 i2cbuf[];
+extern uint8 oldbuf[];
+uint8 run_front(uint8 ang)
 {
-    int8 newang = ang;
-    
+    oldbuf[0] = i2cbuf[0];
+    uint8 newang = 0;
+    uint8 max_pos = 201;
+    uint8 min_pos = 0;
    
-    
-	if(newang < 0)
+    //tæl counter op
+	if(ang > Counter_ReadCounter() && ang < max_pos)
     {
-        PWM2_WriteCompare1(2);
-        PWM2_WriteCompare2(1);
-        while(UpDown_GetCounter()!=ang)
-        {
-            //Dir_Write(1);
-            Dir_step_Write(1);            
-            PWM2_Start();
+        newang = ang - Counter_ReadCounter();
+        newang += Counter_ReadCounter();
+        
+        Dir_step_Write(1);  
+        PWM1_Start();
+        while(Counter_ReadCounter()!=newang)
+        {    
+           
+            if(ang != i2cbuf[0])
+            break;
         }
-        PWM2_Stop();       
+        PWM1_Stop(); 
+       
     }
 
-    else if(newang >= 0)
+    //tæl counter ned
+    else if(ang < Counter_ReadCounter() && ang > min_pos)
     {
-        PWM2_WriteCompare1(1);
-        PWM2_WriteCompare2(2);
-        while(UpDown_GetCounter()!=ang)
-        {
-            //Dir_Write(0);
-            Dir_step_Write(0);
-            PWM2_Start();
+        Dir_step_Write(0);
+        PWM2_Start();
+        while(Counter_ReadCounter()!=ang)
+        {    
+            
+            if(ang != i2cbuf[0])
+            break;
         }
         PWM2_Stop();
     }
