@@ -33,12 +33,6 @@ int main(int argc, char *argv[])
   server.sin_port = htons(8575);
   length=sizeof(struct sockaddr_in);
 
-  /*
-  printf("Please enter the message: ");
-  bzero(buffer,256);
-  fgets(buffer,255,stdin);
-  n=sendto(sock, buffer, strlen(buffer), 0, (const struct sockaddr *)&server,length);
-  */
   n=sendto(sock, argv[2], strlen(argv[2]), 0, (const struct sockaddr *)&server,length);
   if (n < 0) error("Sendto");
   close(sock);

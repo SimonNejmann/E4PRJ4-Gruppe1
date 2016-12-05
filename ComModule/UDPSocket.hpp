@@ -10,12 +10,12 @@ class UDPSocket
 public:
   UDPSocket(int port)
   {
-    sock_=socket(AF_INET, SOCK_DGRAM, 0);
+    sock_ = socket(AF_INET, SOCK_DGRAM, 0);
 
     struct sockaddr_in server;
-    server.sin_family=AF_INET;
-    server.sin_addr.s_addr=INADDR_ANY;
-    server.sin_port=htons(port);
+    server.sin_family = AF_INET;
+    server.sin_addr.s_addr = INADDR_ANY;
+    server.sin_port = htons(port);
     bind(sock_, reinterpret_cast<struct sockaddr*>(&server), sizeof(server));
 
     fromlen = sizeof(struct sockaddr_in);

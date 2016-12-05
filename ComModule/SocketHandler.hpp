@@ -3,25 +3,32 @@
 
 #include "MsgQueuePipe.hpp"
 #include "UDPSocket.hpp"
+#include "constants.hpp"
 
 class SocketHandler
 {
 public:
-  SocketHandler();
+  SocketHandler(MsgQueue *comModMq);
   ~SocketHandler();
   
-  static void* run(void* arg);
+  void run();
   void send(unsigned long id, Message* msg = NULL);
 
-  enum MsgType { POINT_MSG };
-  
+  enum { SEND_PACKET, POINT_MSG };
+
+  struct SendMessage : public Message {
+    char buf_[constants::BUFFER_SIZE];
+    int len_;
+  };
+
 private:
-  static const int BUFFER_SIZE = 1024;
-  
   MsgQueuePipe mq_;
-  UDPSocket sock_;
-  char buf_[BUFFER_SIZE];
+  MsgQueue *comModMq_;
   
+  UDPSocket sock_;
+  char buf_[constants::BUFFER_SIZE];
+  
+  static void* staticStarter(void* arg);
   void sockethandlerThread();
   void handleMsg(Message *msg, unsigned long id);
 };
