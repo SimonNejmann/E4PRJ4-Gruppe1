@@ -82,6 +82,11 @@ void SocketHandler::handleMsg(Message *msg, unsigned long id)
         sock_.send(sm->buf_, sm->len_);
         break;
       }
+    case POINT_MSG:
+      {
+        std::cout << "SH got point" << std::endl;
+        break;
+      }
     default:
       // Error!
       return;

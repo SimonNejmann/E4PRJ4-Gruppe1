@@ -4,6 +4,7 @@
 #include "SocketHandler.hpp"
 #include "I2CHandler.hpp"
 #include "constants.hpp"
+#include "Sender.hpp"
 
 class ComModule
 {
@@ -12,6 +13,7 @@ public:
   ~ComModule();
   
   void run();
+  void join();
   
   enum { GOT_PACKET };
 
@@ -21,9 +23,12 @@ public:
   };
 
 private:
+  pthread_t pt_;
   MsgQueue mq_;
   SocketHandler sock_;
   I2CHandler i2c_;
+
+  Sender s_;
   
   static void* staticStarter(void* arg);
   void comModuleThread();

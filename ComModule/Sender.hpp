@@ -37,6 +37,7 @@ private:
     while(true) {
       util::randSleep(1000, 1001);
       p = newPoint();
+      std::cout << "Sender sending msg" << std::endl;
       receiver->send(SocketHandler::POINT_MSG, p);
     }
   }

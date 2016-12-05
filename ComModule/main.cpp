@@ -7,9 +7,7 @@ int main()
 {
   ComModule c;
   c.run();
-  int i = 0;
-  pthread_exit(&i);
-  
+  c.join();
 
   /*
   SocketHandler r;

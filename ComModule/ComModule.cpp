@@ -2,18 +2,25 @@
 #include "ComModule.hpp"
 
 ComModule::ComModule()
-  : mq_(10), sock_(&mq_), i2c_(&mq_)
+  : mq_(10), sock_(&mq_), i2c_(&mq_), s_(&sock_)
 {
 }
 
 ComModule::~ComModule()
 {
 }
-  
+
 void ComModule::run()
 {
-  pthread_t pt;
-  pthread_create(&pt, NULL, ComModule::staticStarter, this);
+  pthread_create(&pt_, NULL, ComModule::staticStarter, this);
+  pthread_t st;
+  pthread_create(&st, NULL, Sender::run, &s_);
+}
+
+void ComModule::join()
+{
+  void *exitStatus;
+  pthread_join(pt_, &exitStatus);
 }
 
 void* ComModule::staticStarter(void* arg)

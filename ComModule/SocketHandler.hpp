@@ -14,7 +14,7 @@ public:
   void run();
   void send(unsigned long id, Message* msg = NULL);
 
-  enum { SEND_PACKET };
+  enum { SEND_PACKET, POINT_MSG };
 
   struct SendMessage : public Message {
     char buf_[constants::BUFFER_SIZE];
