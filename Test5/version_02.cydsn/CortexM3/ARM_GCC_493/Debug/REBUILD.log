@@ -1,0 +1,7 @@
+--------------- Rebuild Started: 12/05/2016 17:33:57 Project: main.c, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_493\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c main.c -o .\CortexM3\ARM_GCC_493\Debug\main.o
+main.c: In function 'main':
+main.c:25:5: warning: implicit declaration of function 'I2CS_SetBuffer1' [-Wimplicit-function-declaration]
+     I2CS_SetBuffer1(6,6,i2cbuf);
+     ^
+--------------- Rebuild Succeeded: 12/05/2016 17:33:57 ---------------

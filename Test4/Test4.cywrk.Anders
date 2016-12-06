@@ -216,6 +216,16 @@
 <v>Test4\version_01\Generated_Source\PSoC5\CounterB\CounterB_PM.c</v>
 <v>Test4\version_01\Generated_Source\PSoC5\CounterF</v>
 <v>Test4\version_01\Generated_Source\PSoC5\CounterF\CounterF.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\CounterF\CounterF.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\CounterF\CounterF_PM.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\cy_boot</v>
+<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
+<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
+<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
+<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
+<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\cmsis_armcc.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\cmsis_gcc.h</v>
+<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Test4\version_01\TopDesign\TopDesign.cysch">
@@ -298,6 +308,52 @@
 <VisibleNodeIds>
 <v>Test4</v>
 <v>Test4\version_01</v>
+<v>Test4\version_01\CortexM3</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_1.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_2.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_3.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_4.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_5.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_6.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CounterB.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CounterB_PM.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CounterF.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CounterF_PM.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Dir_stepB.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Dir_stepF.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\I2CS.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\I2CS_INT.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\I2CS_PM.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\init_step.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\MicroB.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\MicroF.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\Pin_1.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMB1.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMB1_PM.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMB2.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMB2_PM.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMF1.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMF1_PM.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMF2.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMF2_PM.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMSB.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMSB_PM.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMSF.lst</v>
+<v>Test4\version_01\CortexM3\ARM_GCC_493\Debug\Listing Files\PWMSF_PM.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -368,14 +424,13 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\version_01.cydsn\main.h" />
 <name v=".\version_01.cydsn\main.c" />
+<name v=".\version_01.cydsn\run_back.c" />
 <name v=".\version_01.cydsn\run_front.c" />
 <name v=".\version_01.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\version_01.cydsn\version_01.cydwr" />
-<name v=".\version_01.cydsn\run_back.c" />
 <name v=".\version_01.cydsn\init_step.c" />
-<name v=".\version_01.cydsn\Generated_Source\PSoC5\MicroF.c" />
+<name v=".\version_01.cydsn\main.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -383,7 +438,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1609, 736" SelectedTabbedMdiWindow="ad894d3a-e350-4e68-a7d4-734b96c4718b"><DocumentWindow Key="a98636a3-1be8-4a0d-9624-a012d6581c65" Guid="cb04e6b6-2eca-4c97-ac75-e151fe1e5e0f" /><DocumentWindow Key="1c659566-10c9-4781-ad31-ffbc7b3683e7" Guid="ad894d3a-e350-4e68-a7d4-734b96c4718b" /><DocumentWindow Key="fe26eddd-d1de-428b-8e48-963d00687ccc" Guid="76a1d347-6664-478d-b34f-131c44fda10a" /><DocumentWindow Key="ebaf7f52-3ae3-4909-9abe-36f68193769d" Guid="f3ec4d8f-4e8d-4307-94f3-7f9d161e6100" /><DocumentWindow Key="a9ddc9c0-5cee-424c-83fd-de6dfbc7501f" Guid="c9872ed4-5311-4060-9b61-6d063ee31580" /><DocumentWindow Key="4c786abb-918c-4768-b3c6-6f54cc30af89" Guid="dd1d5719-5075-4045-810d-e887b266a809" /><DocumentWindow Key="a9068c25-e228-47df-9d10-b992a9e8f486" Guid="b8200044-f0ec-4a47-81be-01af41e0bd93" /><DocumentWindow Key="5022fe89-8be6-4291-a57a-e6a6dd491e58" Guid="63a7fdd2-8d97-46f8-b740-4aa29e6d1a42" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1582, 605" SelectedTabbedMdiWindow="25c7b189-f043-4754-8c36-69ecc9d7ee8c"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="67d15892-cbad-444d-b279-5c91f67ef747" /><DocumentWindow Key="d4c92b24-d9d6-4344-ad1c-5bc1142d4905" Guid="25c7b189-f043-4754-8c36-69ecc9d7ee8c" /><DocumentWindow Key="cd1d2804-d4d5-4fcf-b382-443f81abde40" Guid="e468b4ca-227a-44e0-93fd-51bb6cda3aa3" /><DocumentWindow Key="a1ed50bd-bedb-460b-b5e1-187edf8a91a0" Guid="b0050d1f-e768-4a29-8520-ee3283bf12b6" /><DocumentWindow Key="e1a63940-939b-4897-97e9-c94f51e17832" Guid="f6392aa8-dbc9-4b59-9e4f-2f8c35bcd459" /><DocumentWindow Key="55f83354-a758-404b-97a1-74692ccd9e06" Guid="d6f3695d-c58d-4836-a776-180720c37aa9" /><DocumentWindow Key="6e0f746f-4a5a-42ec-aa29-8101869ef271" Guid="3e640772-1b81-455c-94b3-8acd9b1abe4b" /><DocumentWindow Key="eb68a1ff-8d57-4f88-a04a-293b63ec5fe5" Guid="dc381b88-4d8c-4f11-a41b-5f3b2f3a9ddc" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

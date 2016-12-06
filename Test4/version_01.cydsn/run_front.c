@@ -9,6 +9,7 @@ uint8 run_front(uint8 ang, uint8 speed)
     
     //Opdatere oldbuf 
     oldbuf[ANG_FRONT_POS] = i2cbuf[ANG_FRONT_POS];
+    oldbuf[SPEED_FRONT_POS] = i2cbuf[SPEED_FRONT_POS];
     
     
     //Sætter hastighed på fremdriftsmotor 
