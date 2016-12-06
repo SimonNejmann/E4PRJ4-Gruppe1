@@ -7,7 +7,7 @@
 class I2CHandler
 {
 public:
-  I2CHandler(MsgQueue *partnerMq) : mq_(10), partnerMq_(partnerMq) {}
+  I2CHandler(MsgQueue *partnerMq) : mq_(10), partnerMq_(partnerMq), com_(0) {}
   ~I2CHandler() {}
   
   void run()
