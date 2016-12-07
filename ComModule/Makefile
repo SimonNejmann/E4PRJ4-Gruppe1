@@ -1,7 +1,7 @@
 SOURCES=main.cpp MsgQueue.cpp MsgQueuePipe.cpp util.cpp
 SOURCES+=SocketHandler.cpp ComModule.cpp
 EXE=PipeTest
-CXXFLAGS=-I. -pthread -g
+CXXFLAGS=-I. -pthread -g -O3
 
 # Making for host
 # > make ARCH=host

@@ -3,7 +3,6 @@
 #include "SocketHandler.hpp"
 #include "ComModule.hpp"
 #include "constants.hpp"
-#include "Point.hpp"
 #include "util.hpp"
 
 SocketHandler::SocketHandler(MsgQueue *comModMq)
@@ -36,8 +35,6 @@ void* SocketHandler::staticStarter(void* arg)
 
 void SocketHandler::sockethandlerThread()
 {
-  std::cout << "SockHandler running" << std::endl;
-
   unsigned long id;
   fd_set watch_set, result_set;
   int mq_fd = mq_.getReceiveFD();
@@ -55,16 +52,12 @@ void SocketHandler::sockethandlerThread()
       
     if (FD_ISSET(mq_fd, &result_set)) {
       // Message in message queue
-      std::cout << "SH got msg" << std::endl;
-
       Message *msg = mq_.receive(id);
       handleMsg(msg, id);
       delete msg;
         
     } else if(FD_ISSET(sock_fd, &result_set)) {
       // Packet incomming on socket
-      std::cout << "SH got packet" << std::endl;
-      
       ComModule::PacketMessage *pmsg = new ComModule::PacketMessage();
       pmsg->len_ = sock_.receive(pmsg->buf_, constants::BUFFER_SIZE);
       comModMq_->send(ComModule::GOT_PACKET, pmsg);
@@ -80,11 +73,6 @@ void SocketHandler::handleMsg(Message *msg, unsigned long id)
       {
         SendMessage *sm = static_cast<SendMessage*>(msg);
         sock_.send(sm->buf_, sm->len_);
-        break;
-      }
-    case POINT_MSG:
-      {
-        std::cout << "SH got point" << std::endl;
         break;
       }
     default:
