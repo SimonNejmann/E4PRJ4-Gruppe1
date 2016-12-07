@@ -27,7 +27,7 @@ int main()
     I2CS_SetBuffer1(BUFFER_SIZE,BUFFER_RW_AREA,i2cbuf);
     CounterF_Start();
     CounterB_Start();
-
+    PWMSF_Start();
     /* Start I2C slave (SCB mode) */
    
     
@@ -40,6 +40,7 @@ int main()
     ***************************************************************************/
     for (;;)
     {
+        PWMSF_WriteCompare(i2cbuf[SPEED_FRONT_POS]);
          if(oldbuf[ANG_FRONT_POS] != i2cbuf[ANG_FRONT_POS] || oldbuf[SPEED_FRONT_POS] != i2cbuf[SPEED_FRONT_POS]  )
         {
             run_front(i2cbuf[ANG_FRONT_POS],i2cbuf[SPEED_FRONT_POS]);

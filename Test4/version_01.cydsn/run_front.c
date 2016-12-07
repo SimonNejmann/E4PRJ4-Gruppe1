@@ -13,8 +13,8 @@ uint8 run_front(uint8 ang, uint8 speed)
     
     
     //Sætter hastighed på fremdriftsmotor 
-    SpeedForW_Write(HIGH);
-    PWMSF_WriteCompare(speed);
+    
+    
     
     //tæl counter op og drejer steppermotoren med uret
 	if(ang > CounterF_ReadCounter() && ang < MAX_POS)

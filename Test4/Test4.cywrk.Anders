@@ -35,7 +35,6 @@
 <v>Test4\version_01\Source Files\main.c</v>
 <v>Test4\version_01\Source Files\run_back.c</v>
 <v>Test4\version_01\Source Files\run_front.c</v>
-<v>Test4\version_01\Generated_Source</v>
 <v>Test4\version_01\Generated_Source\PSoC5</v>
 <v>Test4\version_01\Generated_Source\PSoC5\Clock_1</v>
 <v>Test4\version_01\Generated_Source\PSoC5\Clock_1\Clock_1.c</v>
@@ -191,41 +190,6 @@
 <v>Test4\version_01\Source Files\run_back.c</v>
 <v>Test4\version_01\Source Files\run_front.c</v>
 <v>Test4\version_01\Generated_Source</v>
-<v>Test4\version_01\Generated_Source\PSoC5</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Clock_1</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Clock_1\Clock_1.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Clock_1\Clock_1.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Clock_2</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Clock_2\Clock_2.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Clock_2\Clock_2.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Clock_3</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Clock_3\Clock_3.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Clock_3\Clock_3.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Clock_4</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Clock_4\Clock_4.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Clock_4\Clock_4.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Clock_5</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Clock_5\Clock_5.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Clock_5\Clock_5.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Clock_6</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Clock_6\Clock_6.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\Clock_6\Clock_6.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\CounterB</v>
-<v>Test4\version_01\Generated_Source\PSoC5\CounterB\CounterB.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\CounterB\CounterB.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\CounterB\CounterB_PM.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\CounterF</v>
-<v>Test4\version_01\Generated_Source\PSoC5\CounterF\CounterF.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\CounterF\CounterF.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\CounterF\CounterF_PM.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\cmsis_armcc.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\cmsis_gcc.h</v>
-<v>Test4\version_01\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Test4\version_01\TopDesign\TopDesign.cysch">
@@ -425,11 +389,10 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\version_01.cydsn\main.c" />
-<name v=".\version_01.cydsn\run_back.c" />
 <name v=".\version_01.cydsn\run_front.c" />
 <name v=".\version_01.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\version_01.cydsn\version_01.cydwr" />
 <name v=".\version_01.cydsn\init_step.c" />
+<name v=".\version_01.cydsn\version_01.cydwr" />
 <name v=".\version_01.cydsn\main.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
@@ -438,7 +401,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1582, 605" SelectedTabbedMdiWindow="25c7b189-f043-4754-8c36-69ecc9d7ee8c"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="67d15892-cbad-444d-b279-5c91f67ef747" /><DocumentWindow Key="d4c92b24-d9d6-4344-ad1c-5bc1142d4905" Guid="25c7b189-f043-4754-8c36-69ecc9d7ee8c" /><DocumentWindow Key="cd1d2804-d4d5-4fcf-b382-443f81abde40" Guid="e468b4ca-227a-44e0-93fd-51bb6cda3aa3" /><DocumentWindow Key="a1ed50bd-bedb-460b-b5e1-187edf8a91a0" Guid="b0050d1f-e768-4a29-8520-ee3283bf12b6" /><DocumentWindow Key="e1a63940-939b-4897-97e9-c94f51e17832" Guid="f6392aa8-dbc9-4b59-9e4f-2f8c35bcd459" /><DocumentWindow Key="55f83354-a758-404b-97a1-74692ccd9e06" Guid="d6f3695d-c58d-4836-a776-180720c37aa9" /><DocumentWindow Key="6e0f746f-4a5a-42ec-aa29-8101869ef271" Guid="3e640772-1b81-455c-94b3-8acd9b1abe4b" /><DocumentWindow Key="eb68a1ff-8d57-4f88-a04a-293b63ec5fe5" Guid="dc381b88-4d8c-4f11-a41b-5f3b2f3a9ddc" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1582, 605" SelectedTabbedMdiWindow="850572d5-c2e8-453b-ba47-c50e1b9c60a9"><DocumentWindow Key="ba79500a-5310-4758-bab8-7fcbddfd8d05" Guid="d1ae8b5c-5340-432a-a50f-c38619fd8ecb" /><DocumentWindow Key="0b9a1815-8ba2-4795-b834-3cfa63d89d28" Guid="76ad89e1-f504-434a-bad4-4fbf878156bc" /><DocumentWindow Key="bef58b35-8c8f-46fb-9fec-b9263547b285" Guid="60355ac3-3a29-46d1-8565-d0ea59e47421" /><DocumentWindow Key="501dfbda-5a71-4b59-a078-240eed01a684" Guid="9178bc0e-8d07-4792-a037-274fd76312da" /><DocumentWindow Key="cb68b715-b9ca-41b9-a9a1-7d34881fd365" Guid="e2f09c79-9992-4353-83f9-6562d822e7bb" /><DocumentWindow Key="0a51b066-ae0f-486f-9a68-d953754bed40" Guid="850572d5-c2e8-453b-ba47-c50e1b9c60a9" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
