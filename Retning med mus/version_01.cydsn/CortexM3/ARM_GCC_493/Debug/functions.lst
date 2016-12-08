@@ -1,0 +1,2928 @@
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"functions.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.printBinaryData,"ax",%progbits
+  19              		.align	2
+  20              		.global	printBinaryData
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	printBinaryData, %function
+  24              	printBinaryData:
+  25              	.LFB64:
+  26              		.file 1 "functions.c"
+   1:functions.c   **** #include <project.h>
+   2:functions.c   **** #include <functions.h>
+   3:functions.c   **** #include <math.h>
+   4:functions.c   **** #include <stdio.h>
+   5:functions.c   **** #include <main.h>
+   6:functions.c   **** #define THRESHOLD 50
+   7:functions.c   **** 
+   8:functions.c   **** int16 mouseDataX = 0;
+   9:functions.c   **** int16 mouseDataY = 0;
+  10:functions.c   **** int16 *statusData;
+  11:functions.c   **** 
+  12:functions.c   **** 
+  13:functions.c   **** 
+  14:functions.c   **** int16 mouseX_global = 0;
+  15:functions.c   **** 
+  16:functions.c   **** void Init(struct mouse *mouseData) {
+  17:functions.c   ****     //UART_1_Start();
+  18:functions.c   **** 
+  19:functions.c   ****     
+  20:functions.c   ****     /****************************Struct init********************************/
+  21:functions.c   ****     int8 i = 0;
+  22:functions.c   ****     for (i = 0; i < 8; i++) {
+  23:functions.c   ****         mouseData->tmpMouseX[i] = 0;
+  24:functions.c   ****         mouseData->tmpMouseY[i] = 0; 
+  25:functions.c   ****         mouseData->status[i] = 0; 
+  26:functions.c   ****     }
+  27:functions.c   ****     mouseData->finalX = 0;
+  28:functions.c   ****     mouseData->timesInterrupted = 0;
+  29:functions.c   ****     mouseData->angle = 0;
+  30:functions.c   ****     
+  31:functions.c   ****     /*********************Initializing mouse********************************/
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 2
+
+
+  32:functions.c   ****     
+  33:functions.c   ****     
+  34:functions.c   ****     uint8 initData[8] = {1, 1, 1, 1, 0, 1, 0, 0};
+  35:functions.c   ****     initMouse(initData);
+  36:functions.c   **** 
+  37:functions.c   ****     
+  38:functions.c   ****     
+  39:functions.c   ****     /****************************Enabling Interrupts************************/
+  40:functions.c   ****     
+  41:functions.c   **** }
+  42:functions.c   **** 
+  43:functions.c   **** void printBinaryData(uint8 *statusData, uint8 *xData, uint8 *yData) {
+  27              		.loc 1 43 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 24
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              	.LVL0:
+  32 0000 70B5     		push	{r4, r5, r6, lr}
+  33              		.cfi_def_cfa_offset 16
+  34              		.cfi_offset 4, -16
+  35              		.cfi_offset 5, -12
+  36              		.cfi_offset 6, -8
+  37              		.cfi_offset 14, -4
+  38 0002 86B0     		sub	sp, sp, #24
+  39              		.cfi_def_cfa_offset 40
+  40 0004 0646     		mov	r6, r0
+  41 0006 0D46     		mov	r5, r1
+  42              	.LVL1:
+  44:functions.c   ****    char value[20];
+  45:functions.c   ****    int8 i = 0;
+  46:functions.c   ****    for(i = 0; i < 8; i++) {
+  43              		.loc 1 46 0
+  44 0008 0024     		movs	r4, #0
+  45 000a 10E0     		b	.L2
+  46              	.LVL2:
+  47              	.L5:
+  47:functions.c   ****             
+  48:functions.c   ****             if (i == 7) {
+  48              		.loc 1 48 0
+  49 000c 63B2     		sxtb	r3, r4
+  50 000e 072B     		cmp	r3, #7
+  51 0010 05D1     		bne	.L3
+  49:functions.c   ****                 sprintf(value,"%d | ",statusData[i]);
+  52              		.loc 1 49 0
+  53 0012 01A8     		add	r0, sp, #4
+  54 0014 1749     		ldr	r1, .L13
+  55 0016 F25C     		ldrb	r2, [r6, r3]	@ zero_extendqisi2
+  56 0018 FFF7FEFF 		bl	sprintf
+  57              	.LVL3:
+  58 001c 05E0     		b	.L4
+  59              	.L3:
+  50:functions.c   ****                 //UART_1_UartPutString(value);
+  51:functions.c   ****             }
+  52:functions.c   ****             else {
+  53:functions.c   ****                 
+  54:functions.c   ****                 sprintf(value,"%d",statusData[i]);
+  60              		.loc 1 54 0
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 3
+
+
+  61 001e 63B2     		sxtb	r3, r4
+  62 0020 01A8     		add	r0, sp, #4
+  63 0022 1549     		ldr	r1, .L13+4
+  64 0024 F25C     		ldrb	r2, [r6, r3]	@ zero_extendqisi2
+  65 0026 FFF7FEFF 		bl	sprintf
+  66              	.LVL4:
+  67              	.L4:
+  46:functions.c   ****             
+  68              		.loc 1 46 0 discriminator 2
+  69 002a 0134     		adds	r4, r4, #1
+  70              	.LVL5:
+  71 002c E4B2     		uxtb	r4, r4
+  72              	.LVL6:
+  73              	.L2:
+  46:functions.c   ****             
+  74              		.loc 1 46 0 is_stmt 0 discriminator 1
+  75 002e 63B2     		sxtb	r3, r4
+  76 0030 072B     		cmp	r3, #7
+  77 0032 EBDD     		ble	.L5
+  78 0034 0024     		movs	r4, #0
+  79              	.LVL7:
+  80 0036 10E0     		b	.L6
+  81              	.LVL8:
+  82              	.L9:
+  55:functions.c   ****                 //UART_1_UartPutString(value);
+  56:functions.c   ****             }
+  57:functions.c   ****             
+  58:functions.c   ****         }
+  59:functions.c   ****         
+  60:functions.c   ****         for(i = 0; i < 8; i++) {
+  61:functions.c   ****             
+  62:functions.c   ****             if (i == 7) {
+  83              		.loc 1 62 0 is_stmt 1
+  84 0038 63B2     		sxtb	r3, r4
+  85 003a 072B     		cmp	r3, #7
+  86 003c 05D1     		bne	.L7
+  63:functions.c   ****                 sprintf(value,"%d | ",xData[i]);
+  87              		.loc 1 63 0
+  88 003e 01A8     		add	r0, sp, #4
+  89 0040 0C49     		ldr	r1, .L13
+  90 0042 EA5C     		ldrb	r2, [r5, r3]	@ zero_extendqisi2
+  91 0044 FFF7FEFF 		bl	sprintf
+  92              	.LVL9:
+  93 0048 05E0     		b	.L8
+  94              	.L7:
+  64:functions.c   ****                 //UART_1_UartPutString(value);
+  65:functions.c   ****             }
+  66:functions.c   ****             else {
+  67:functions.c   ****                 
+  68:functions.c   ****                 sprintf(value,"%d",xData[i]);
+  95              		.loc 1 68 0
+  96 004a 63B2     		sxtb	r3, r4
+  97 004c 01A8     		add	r0, sp, #4
+  98 004e 0A49     		ldr	r1, .L13+4
+  99 0050 EA5C     		ldrb	r2, [r5, r3]	@ zero_extendqisi2
+ 100 0052 FFF7FEFF 		bl	sprintf
+ 101              	.LVL10:
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 4
+
+
+ 102              	.L8:
+  60:functions.c   ****             
+ 103              		.loc 1 60 0 discriminator 2
+ 104 0056 0134     		adds	r4, r4, #1
+ 105              	.LVL11:
+ 106 0058 E4B2     		uxtb	r4, r4
+ 107              	.LVL12:
+ 108              	.L6:
+  60:functions.c   ****             
+ 109              		.loc 1 60 0 is_stmt 0 discriminator 1
+ 110 005a 63B2     		sxtb	r3, r4
+ 111 005c 072B     		cmp	r3, #7
+ 112 005e EBDD     		ble	.L9
+ 113 0060 0023     		movs	r3, #0
+ 114 0062 01E0     		b	.L10
+ 115              	.LVL13:
+ 116              	.L11:
+  69:functions.c   ****                 //UART_1_UartPutString(value);
+  70:functions.c   ****             }
+  71:functions.c   ****             
+  72:functions.c   ****         }
+  73:functions.c   ****         
+  74:functions.c   ****         for(i = 0; i < 8; i++) {
+ 117              		.loc 1 74 0 is_stmt 1 discriminator 2
+ 118 0064 0133     		adds	r3, r3, #1
+ 119              	.LVL14:
+ 120 0066 DBB2     		uxtb	r3, r3
+ 121              	.LVL15:
+ 122              	.L10:
+ 123              		.loc 1 74 0 is_stmt 0 discriminator 1
+ 124 0068 5AB2     		sxtb	r2, r3
+ 125 006a 072A     		cmp	r2, #7
+ 126 006c FADD     		ble	.L11
+  75:functions.c   ****             
+  76:functions.c   ****             if (i == 7) {
+  77:functions.c   ****                 //sprintf(value,"%d \n\r",yData[i]);
+  78:functions.c   ****                // UART_1_UartPutString(value);
+  79:functions.c   ****             }
+  80:functions.c   ****             else {
+  81:functions.c   ****                 
+  82:functions.c   ****                //sprintf(value,"%d",yData[i]);
+  83:functions.c   ****                // UART_1_UartPutString(value);
+  84:functions.c   ****             }
+  85:functions.c   ****             
+  86:functions.c   ****         }   
+  87:functions.c   **** }
+ 127              		.loc 1 87 0 is_stmt 1
+ 128 006e 06B0     		add	sp, sp, #24
+ 129              		.cfi_def_cfa_offset 16
+ 130              		@ sp needed
+ 131 0070 70BD     		pop	{r4, r5, r6, pc}
+ 132              	.LVL16:
+ 133              	.L14:
+ 134 0072 00BF     		.align	2
+ 135              	.L13:
+ 136 0074 00000000 		.word	.LC1
+ 137 0078 08000000 		.word	.LC2
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 5
+
+
+ 138              		.cfi_endproc
+ 139              	.LFE64:
+ 140              		.size	printBinaryData, .-printBinaryData
+ 141              		.global	__aeabi_i2d
+ 142              		.global	__aeabi_d2iz
+ 143              		.global	__aeabi_i2f
+ 144              		.global	__aeabi_fdiv
+ 145              		.global	__aeabi_f2d
+ 146              		.global	__aeabi_dmul
+ 147              		.global	__aeabi_ddiv
+ 148              		.global	__aeabi_d2uiz
+ 149              		.global	__aeabi_dadd
+ 150              		.section	.text.ISR_getMouseData,"ax",%progbits
+ 151              		.align	2
+ 152              		.global	ISR_getMouseData
+ 153              		.thumb
+ 154              		.thumb_func
+ 155              		.type	ISR_getMouseData, %function
+ 156              	ISR_getMouseData:
+ 157              	.LFB65:
+  88:functions.c   **** 
+  89:functions.c   **** void ISR_getMouseData(struct mouse *mouseData) {
+ 158              		.loc 1 89 0
+ 159              		.cfi_startproc
+ 160              		@ args = 0, pretend = 0, frame = 0
+ 161              		@ frame_needed = 0, uses_anonymous_args = 0
+ 162              	.LVL17:
+ 163 0000 70B5     		push	{r4, r5, r6, lr}
+ 164              		.cfi_def_cfa_offset 16
+ 165              		.cfi_offset 4, -16
+ 166              		.cfi_offset 5, -12
+ 167              		.cfi_offset 6, -8
+ 168              		.cfi_offset 14, -4
+ 169 0002 0546     		mov	r5, r0
+ 170              	.LVL18:
+  90:functions.c   **** 
+  91:functions.c   ****     int deg = 180/3.14*10;
+  92:functions.c   ****     uint8 i = 0;
+ 171              		.loc 1 92 0
+ 172 0004 0024     		movs	r4, #0
+  93:functions.c   ****     char value[20];
+  94:functions.c   ****     int16 multiplier = 1;
+  95:functions.c   ****     uint8 tempData = 0;
+  96:functions.c   ****     int8 j = 7;
+  97:functions.c   ****     
+  98:functions.c   ****     int distance = 0;
+  99:functions.c   ****     int angle;
+ 100:functions.c   **** 
+ 101:functions.c   ****     
+ 102:functions.c   ****     int16 tmpX = 0;
+ 103:functions.c   ****     int16 tmpY = 0;
+ 104:functions.c   ****     while (i < PACKETSIZE) {
+ 173              		.loc 1 104 0
+ 174 0006 34E0     		b	.L16
+ 175              	.LVL19:
+ 176              	.L26:
+ 105:functions.c   ****         if (i == 0 && PS2_Data_Read() == 1) {
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 6
+
+
+ 177              		.loc 1 105 0
+ 178 0008 24B9     		cbnz	r4, .L17
+ 179              		.loc 1 105 0 is_stmt 0 discriminator 1
+ 180 000a FFF7FEFF 		bl	PS2_Data_Read
+ 181              	.LVL20:
+ 182 000e 0128     		cmp	r0, #1
+ 183 0010 00F03681 		beq	.L15
+ 184              	.L17:
+ 106:functions.c   ****             return;
+ 107:functions.c   ****         }
+ 108:functions.c   ****         
+ 109:functions.c   ****         else {
+ 110:functions.c   ****             if (i != 0) {
+ 185              		.loc 1 110 0 is_stmt 1
+ 186 0014 1CB1     		cbz	r4, .L19
+ 187              	.L20:
+ 111:functions.c   ****                 while(PS2_Clock_Read());
+ 188              		.loc 1 111 0 discriminator 1
+ 189 0016 FFF7FEFF 		bl	PS2_Clock_Read
+ 190              	.LVL21:
+ 191 001a 0028     		cmp	r0, #0
+ 192 001c FBD1     		bne	.L20
+ 193              	.L19:
+ 112:functions.c   ****             }
+ 113:functions.c   ****             
+ 114:functions.c   ****             if(i > 0 && i < 9) {
+ 194              		.loc 1 114 0
+ 195 001e 631E     		subs	r3, r4, #1
+ 196 0020 DBB2     		uxtb	r3, r3
+ 197 0022 072B     		cmp	r3, #7
+ 198 0024 06D8     		bhi	.L21
+ 115:functions.c   ****                 mouseData->status[i-1] = PS2_Data_Read();
+ 199              		.loc 1 115 0
+ 200 0026 661E     		subs	r6, r4, #1
+ 201 0028 FFF7FEFF 		bl	PS2_Data_Read
+ 202              	.LVL22:
+ 203 002c 3346     		mov	r3, r6
+ 204 002e 2B44     		add	r3, r3, r5
+ 205 0030 1874     		strb	r0, [r3, #16]
+ 206 0032 16E0     		b	.L22
+ 207              	.L21:
+ 116:functions.c   ****             }
+ 117:functions.c   ****             else if(i > 11 && i < 20) {
+ 208              		.loc 1 117 0
+ 209 0034 A4F10C03 		sub	r3, r4, #12
+ 210 0038 DBB2     		uxtb	r3, r3
+ 211 003a 072B     		cmp	r3, #7
+ 212 003c 05D8     		bhi	.L23
+ 118:functions.c   ****                 mouseData->tmpMouseX[i-12] = PS2_Data_Read();
+ 213              		.loc 1 118 0
+ 214 003e A4F10C06 		sub	r6, r4, #12
+ 215 0042 FFF7FEFF 		bl	PS2_Data_Read
+ 216              	.LVL23:
+ 217 0046 A855     		strb	r0, [r5, r6]
+ 218 0048 0BE0     		b	.L22
+ 219              	.L23:
+ 119:functions.c   ****             }
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 7
+
+
+ 120:functions.c   ****             
+ 121:functions.c   ****             else if(i > 22 && i < 31) {
+ 220              		.loc 1 121 0
+ 221 004a A4F11703 		sub	r3, r4, #23
+ 222 004e DBB2     		uxtb	r3, r3
+ 223 0050 072B     		cmp	r3, #7
+ 224 0052 06D8     		bhi	.L22
+ 122:functions.c   ****                 mouseData->tmpMouseY[i-23] = PS2_Data_Read();
+ 225              		.loc 1 122 0
+ 226 0054 A4F11706 		sub	r6, r4, #23
+ 227 0058 FFF7FEFF 		bl	PS2_Data_Read
+ 228              	.LVL24:
+ 229 005c 3346     		mov	r3, r6
+ 230 005e 2B44     		add	r3, r3, r5
+ 231 0060 1872     		strb	r0, [r3, #8]
+ 232              	.L22:
+ 123:functions.c   ****             }
+ 124:functions.c   ****             if(i == 32) {
+ 233              		.loc 1 124 0
+ 234 0062 202C     		cmp	r4, #32
+ 235 0064 03D0     		beq	.L24
+ 236              	.L25:
+ 125:functions.c   ****                 
+ 126:functions.c   ****             }
+ 127:functions.c   ****             else {
+ 128:functions.c   ****                 while(!PS2_Clock_Read());
+ 237              		.loc 1 128 0 discriminator 1
+ 238 0066 FFF7FEFF 		bl	PS2_Clock_Read
+ 239              	.LVL25:
+ 240 006a 0028     		cmp	r0, #0
+ 241 006c FBD0     		beq	.L25
+ 242              	.L24:
+ 129:functions.c   ****             }
+ 130:functions.c   ****         
+ 131:functions.c   ****         }
+ 132:functions.c   ****         i++;
+ 243              		.loc 1 132 0
+ 244 006e 0134     		adds	r4, r4, #1
+ 245              	.LVL26:
+ 246 0070 E4B2     		uxtb	r4, r4
+ 247              	.LVL27:
+ 248              	.L16:
+ 104:functions.c   ****         if (i == 0 && PS2_Data_Read() == 1) {
+ 249              		.loc 1 104 0
+ 250 0072 202C     		cmp	r4, #32
+ 251 0074 C8D9     		bls	.L26
+ 133:functions.c   ****     }
+ 134:functions.c   ****     
+ 135:functions.c   ****     //Laver binary om til decimal
+ 136:functions.c   ****     
+ 137:functions.c   ****     if (mouseData->status[4])
+ 252              		.loc 1 137 0
+ 253 0076 2B7D     		ldrb	r3, [r5, #20]	@ zero_extendqisi2
+ 254 0078 0BB9     		cbnz	r3, .L40
+ 102:functions.c   ****     int16 tmpY = 0;
+ 255              		.loc 1 102 0
+ 256 007a 0026     		movs	r6, #0
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 8
+
+
+ 257 007c 01E0     		b	.L27
+ 258              	.L40:
+ 138:functions.c   ****         tmpX = -1;
+ 259              		.loc 1 138 0
+ 260 007e 4FF6FF76 		movw	r6, #65535
+ 261              	.L27:
+ 262              	.LVL28:
+ 139:functions.c   ****     if (mouseData->status[5]) {
+ 263              		.loc 1 139 0
+ 264 0082 6B7D     		ldrb	r3, [r5, #21]	@ zero_extendqisi2
+ 265 0084 0BB9     		cbnz	r3, .L41
+ 103:functions.c   ****     while (i < PACKETSIZE) {
+ 266              		.loc 1 103 0
+ 267 0086 0024     		movs	r4, #0
+ 268              	.LVL29:
+ 269 0088 01E0     		b	.L28
+ 270              	.LVL30:
+ 271              	.L41:
+ 140:functions.c   ****         tmpY = -1;
+ 272              		.loc 1 140 0
+ 273 008a 4FF6FF74 		movw	r4, #65535
+ 274              	.LVL31:
+ 275              	.L28:
+ 103:functions.c   ****     while (i < PACKETSIZE) {
+ 276              		.loc 1 103 0 discriminator 1
+ 277 008e 0023     		movs	r3, #0
+ 278 0090 1DE0     		b	.L29
+ 279              	.LVL32:
+ 280              	.L34:
+ 141:functions.c   ****     }
+ 142:functions.c   ****     for (j = 0; j<7; j++ )
+ 143:functions.c   ****     {
+ 144:functions.c   ****         if (mouseData->tmpMouseX[j]) {
+ 281              		.loc 1 144 0
+ 282 0092 5AB2     		sxtb	r2, r3
+ 283 0094 A95C     		ldrb	r1, [r5, r2]	@ zero_extendqisi2
+ 284 0096 31B1     		cbz	r1, .L30
+ 145:functions.c   ****             tmpX |= 1<<j;
+ 285              		.loc 1 145 0
+ 286 0098 0121     		movs	r1, #1
+ 287 009a 01FA02F0 		lsl	r0, r1, r2
+ 288 009e 40EA0601 		orr	r1, r0, r6
+ 289 00a2 8EB2     		uxth	r6, r1
+ 290              	.LVL33:
+ 291 00a4 03E0     		b	.L31
+ 292              	.L30:
+ 146:functions.c   ****         } 
+ 147:functions.c   ****         else {
+ 148:functions.c   ****             tmpX &= ~(1<<j);
+ 293              		.loc 1 148 0
+ 294 00a6 0121     		movs	r1, #1
+ 295 00a8 9140     		lsls	r1, r1, r2
+ 296 00aa 26EA0106 		bic	r6, r6, r1
+ 297              	.LVL34:
+ 298              	.L31:
+ 149:functions.c   ****         }
+ 150:functions.c   ****         
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 9
+
+
+ 151:functions.c   ****         if (mouseData->tmpMouseY[j]) {
+ 299              		.loc 1 151 0
+ 300 00ae A918     		adds	r1, r5, r2
+ 301 00b0 097A     		ldrb	r1, [r1, #8]	@ zero_extendqisi2
+ 302 00b2 29B1     		cbz	r1, .L32
+ 152:functions.c   ****             tmpY |= 1<<j;
+ 303              		.loc 1 152 0
+ 304 00b4 0121     		movs	r1, #1
+ 305 00b6 9140     		lsls	r1, r1, r2
+ 306 00b8 41EA0402 		orr	r2, r1, r4
+ 307 00bc 94B2     		uxth	r4, r2
+ 308              	.LVL35:
+ 309 00be 04E0     		b	.L33
+ 310              	.L32:
+ 153:functions.c   ****         } 
+ 154:functions.c   ****         else {
+ 155:functions.c   ****             tmpY &= ~(1<<j);
+ 311              		.loc 1 155 0
+ 312 00c0 0121     		movs	r1, #1
+ 313 00c2 01FA02F2 		lsl	r2, r1, r2
+ 314 00c6 24EA0204 		bic	r4, r4, r2
+ 315              	.LVL36:
+ 316              	.L33:
+ 142:functions.c   ****     {
+ 317              		.loc 1 142 0 discriminator 2
+ 318 00ca 0133     		adds	r3, r3, #1
+ 319              	.LVL37:
+ 320 00cc DBB2     		uxtb	r3, r3
+ 321              	.LVL38:
+ 322              	.L29:
+ 142:functions.c   ****     {
+ 323              		.loc 1 142 0 is_stmt 0 discriminator 1
+ 324 00ce 58B2     		sxtb	r0, r3
+ 325 00d0 0628     		cmp	r0, #6
+ 326 00d2 DEDD     		ble	.L34
+ 156:functions.c   ****         }
+ 157:functions.c   ****     }
+ 158:functions.c   ****     mouseData->finalX += tmpX;
+ 327              		.loc 1 158 0 is_stmt 1
+ 328 00d4 AB8B     		ldrh	r3, [r5, #28]
+ 329              	.LVL39:
+ 330 00d6 3344     		add	r3, r3, r6
+ 331 00d8 9BB2     		uxth	r3, r3
+ 332 00da AB83     		strh	r3, [r5, #28]	@ movhi
+ 159:functions.c   ****     mouseData->finalY += tmpY;
+ 333              		.loc 1 159 0
+ 334 00dc EA8B     		ldrh	r2, [r5, #30]
+ 335 00de 2244     		add	r2, r2, r4
+ 336 00e0 92B2     		uxth	r2, r2
+ 337 00e2 EA83     		strh	r2, [r5, #30]	@ movhi
+ 160:functions.c   ****     mouseData->timesInterrupted++;
+ 338              		.loc 1 160 0
+ 339 00e4 298B     		ldrh	r1, [r5, #24]
+ 340 00e6 0131     		adds	r1, r1, #1
+ 341 00e8 2983     		strh	r1, [r5, #24]	@ movhi
+ 161:functions.c   ****     distance = sqrt((mouseData->finalX*mouseData->finalX)+(mouseData->finalY*mouseData->finalY));
+ 342              		.loc 1 161 0
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 10
+
+
+ 343 00ea 1CB2     		sxth	r4, r3
+ 344              	.LVL40:
+ 345 00ec 13B2     		sxth	r3, r2
+ 346 00ee 03FB03F3 		mul	r3, r3, r3
+ 347 00f2 04FB0434 		mla	r4, r4, r4, r3
+ 348 00f6 2046     		mov	r0, r4
+ 349              	.LVL41:
+ 350 00f8 FFF7FEFF 		bl	__aeabi_i2d
+ 351              	.LVL42:
+ 352 00fc FFF7FEFF 		bl	sqrt
+ 353              	.LVL43:
+ 354 0100 FFF7FEFF 		bl	__aeabi_d2iz
+ 355              	.LVL44:
+ 356 0104 0446     		mov	r4, r0
+ 357              	.LVL45:
+ 162:functions.c   ****     
+ 163:functions.c   ****         if (distance > THRESHOLD || distance < -THRESHOLD) {
+ 358              		.loc 1 163 0
+ 359 0106 00F13203 		add	r3, r0, #50
+ 360 010a 642B     		cmp	r3, #100
+ 361 010c 40F2AE80 		bls	.L35
+ 164:functions.c   ****         
+ 165:functions.c   ****             if (mouseData->finalX >= 0 && mouseData->finalY > 0) {
+ 362              		.loc 1 165 0
+ 363 0110 A88B     		ldrh	r0, [r5, #28]
+ 364              	.LVL46:
+ 365 0112 10F4004F 		tst	r0, #32768
+ 366 0116 23D1     		bne	.L36
+ 367              		.loc 1 165 0 is_stmt 0 discriminator 1
+ 368 0118 B5F91E30 		ldrsh	r3, [r5, #30]
+ 369 011c 002B     		cmp	r3, #0
+ 370 011e 1FDD     		ble	.L36
+ 166:functions.c   ****                 mouseData->angle = (asin(((float)mouseData->finalX)/(float)distance)*deg)/10/1.8;  
+ 371              		.loc 1 166 0 is_stmt 1
+ 372 0120 00B2     		sxth	r0, r0
+ 373 0122 FFF7FEFF 		bl	__aeabi_i2f
+ 374              	.LVL47:
+ 375 0126 0646     		mov	r6, r0
+ 376              	.LVL48:
+ 377 0128 2046     		mov	r0, r4
+ 378 012a FFF7FEFF 		bl	__aeabi_i2f
+ 379              	.LVL49:
+ 380 012e 0146     		mov	r1, r0
+ 381 0130 3046     		mov	r0, r6
+ 382 0132 FFF7FEFF 		bl	__aeabi_fdiv
+ 383              	.LVL50:
+ 384 0136 FFF7FEFF 		bl	__aeabi_f2d
+ 385              	.LVL51:
+ 386 013a FFF7FEFF 		bl	asin
+ 387              	.LVL52:
+ 388 013e 0022     		movs	r2, #0
+ 389 0140 554B     		ldr	r3, .L43+16
+ 390 0142 FFF7FEFF 		bl	__aeabi_dmul
+ 391              	.LVL53:
+ 392 0146 0022     		movs	r2, #0
+ 393 0148 544B     		ldr	r3, .L43+20
+ 394 014a FFF7FEFF 		bl	__aeabi_ddiv
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 11
+
+
+ 395              	.LVL54:
+ 396 014e 4EA3     		adr	r3, .L43
+ 397 0150 D3E90023 		ldrd	r2, [r3]
+ 398 0154 FFF7FEFF 		bl	__aeabi_ddiv
+ 399              	.LVL55:
+ 400 0158 FFF7FEFF 		bl	__aeabi_d2uiz
+ 401              	.LVL56:
+ 402 015c A876     		strb	r0, [r5, #26]
+ 403 015e 82E0     		b	.L37
+ 404              	.LVL57:
+ 405              	.L36:
+ 167:functions.c   ****             }
+ 168:functions.c   ****             
+ 169:functions.c   ****             else if (mouseData->finalX > 0 && mouseData->finalY < 0) {
+ 406              		.loc 1 169 0
+ 407 0160 03B2     		sxth	r3, r0
+ 408 0162 002B     		cmp	r3, #0
+ 409 0164 28DD     		ble	.L38
+ 410              		.loc 1 169 0 is_stmt 0 discriminator 1
+ 411 0166 EB8B     		ldrh	r3, [r5, #30]
+ 412 0168 13F4004F 		tst	r3, #32768
+ 413 016c 24D0     		beq	.L38
+ 170:functions.c   ****                 mouseData->angle = ((asin(((float)-mouseData->finalY)/(float)distance)*deg)+900)/10
+ 414              		.loc 1 170 0 is_stmt 1
+ 415 016e 18B2     		sxth	r0, r3
+ 416 0170 4042     		negs	r0, r0
+ 417 0172 FFF7FEFF 		bl	__aeabi_i2f
+ 418              	.LVL58:
+ 419 0176 0646     		mov	r6, r0
+ 420              	.LVL59:
+ 421 0178 2046     		mov	r0, r4
+ 422 017a FFF7FEFF 		bl	__aeabi_i2f
+ 423              	.LVL60:
+ 424 017e 0146     		mov	r1, r0
+ 425 0180 3046     		mov	r0, r6
+ 426 0182 FFF7FEFF 		bl	__aeabi_fdiv
+ 427              	.LVL61:
+ 428 0186 FFF7FEFF 		bl	__aeabi_f2d
+ 429              	.LVL62:
+ 430 018a FFF7FEFF 		bl	asin
+ 431              	.LVL63:
+ 432 018e 0022     		movs	r2, #0
+ 433 0190 414B     		ldr	r3, .L43+16
+ 434 0192 FFF7FEFF 		bl	__aeabi_dmul
+ 435              	.LVL64:
+ 436 0196 0022     		movs	r2, #0
+ 437 0198 414B     		ldr	r3, .L43+24
+ 438 019a FFF7FEFF 		bl	__aeabi_dadd
+ 439              	.LVL65:
+ 440 019e 0022     		movs	r2, #0
+ 441 01a0 3E4B     		ldr	r3, .L43+20
+ 442 01a2 FFF7FEFF 		bl	__aeabi_ddiv
+ 443              	.LVL66:
+ 444 01a6 38A3     		adr	r3, .L43
+ 445 01a8 D3E90023 		ldrd	r2, [r3]
+ 446 01ac FFF7FEFF 		bl	__aeabi_ddiv
+ 447              	.LVL67:
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 12
+
+
+ 448 01b0 FFF7FEFF 		bl	__aeabi_d2uiz
+ 449              	.LVL68:
+ 450 01b4 A876     		strb	r0, [r5, #26]
+ 451 01b6 56E0     		b	.L37
+ 452              	.LVL69:
+ 453              	.L38:
+ 171:functions.c   ****             }
+ 172:functions.c   ****             
+ 173:functions.c   ****             else if (mouseData->finalX <= 0 && mouseData->finalY < 0) {
+ 454              		.loc 1 173 0
+ 455 01b8 03B2     		sxth	r3, r0
+ 456 01ba 002B     		cmp	r3, #0
+ 457 01bc 28DC     		bgt	.L39
+ 458              		.loc 1 173 0 is_stmt 0 discriminator 1
+ 459 01be B5F91E30 		ldrsh	r3, [r5, #30]
+ 460 01c2 002B     		cmp	r3, #0
+ 461 01c4 24DA     		bge	.L39
+ 174:functions.c   ****                 mouseData->angle = ((asin(((float)-mouseData->finalX)/(float)distance)*deg)+1800)/1
+ 462              		.loc 1 174 0 is_stmt 1
+ 463 01c6 00B2     		sxth	r0, r0
+ 464 01c8 4042     		negs	r0, r0
+ 465 01ca FFF7FEFF 		bl	__aeabi_i2f
+ 466              	.LVL70:
+ 467 01ce 0646     		mov	r6, r0
+ 468              	.LVL71:
+ 469 01d0 2046     		mov	r0, r4
+ 470 01d2 FFF7FEFF 		bl	__aeabi_i2f
+ 471              	.LVL72:
+ 472 01d6 0146     		mov	r1, r0
+ 473 01d8 3046     		mov	r0, r6
+ 474 01da FFF7FEFF 		bl	__aeabi_fdiv
+ 475              	.LVL73:
+ 476 01de FFF7FEFF 		bl	__aeabi_f2d
+ 477              	.LVL74:
+ 478 01e2 FFF7FEFF 		bl	asin
+ 479              	.LVL75:
+ 480 01e6 0022     		movs	r2, #0
+ 481 01e8 2B4B     		ldr	r3, .L43+16
+ 482 01ea FFF7FEFF 		bl	__aeabi_dmul
+ 483              	.LVL76:
+ 484 01ee 0022     		movs	r2, #0
+ 485 01f0 2C4B     		ldr	r3, .L43+28
+ 486 01f2 FFF7FEFF 		bl	__aeabi_dadd
+ 487              	.LVL77:
+ 488 01f6 0022     		movs	r2, #0
+ 489 01f8 284B     		ldr	r3, .L43+20
+ 490 01fa FFF7FEFF 		bl	__aeabi_ddiv
+ 491              	.LVL78:
+ 492 01fe 22A3     		adr	r3, .L43
+ 493 0200 D3E90023 		ldrd	r2, [r3]
+ 494 0204 FFF7FEFF 		bl	__aeabi_ddiv
+ 495              	.LVL79:
+ 496 0208 FFF7FEFF 		bl	__aeabi_d2uiz
+ 497              	.LVL80:
+ 498 020c A876     		strb	r0, [r5, #26]
+ 499 020e 2AE0     		b	.L37
+ 500              	.LVL81:
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 13
+
+
+ 501              	.L39:
+ 175:functions.c   ****             }
+ 176:functions.c   ****             
+ 177:functions.c   ****             else if (mouseData->finalX < 0 && mouseData->finalY >=          0) {
+ 502              		.loc 1 177 0
+ 503 0210 10F4004F 		tst	r0, #32768
+ 504 0214 27D0     		beq	.L37
+ 505              		.loc 1 177 0 is_stmt 0 discriminator 1
+ 506 0216 E88B     		ldrh	r0, [r5, #30]
+ 507 0218 10F4004F 		tst	r0, #32768
+ 508 021c 23D1     		bne	.L37
+ 178:functions.c   ****                 mouseData->angle = ((asin(((float)mouseData->finalY)/(float)distance)*deg)+2700)/10
+ 509              		.loc 1 178 0 is_stmt 1
+ 510 021e 00B2     		sxth	r0, r0
+ 511 0220 FFF7FEFF 		bl	__aeabi_i2f
+ 512              	.LVL82:
+ 513 0224 0646     		mov	r6, r0
+ 514              	.LVL83:
+ 515 0226 2046     		mov	r0, r4
+ 516 0228 FFF7FEFF 		bl	__aeabi_i2f
+ 517              	.LVL84:
+ 518 022c 0146     		mov	r1, r0
+ 519 022e 3046     		mov	r0, r6
+ 520 0230 FFF7FEFF 		bl	__aeabi_fdiv
+ 521              	.LVL85:
+ 522 0234 FFF7FEFF 		bl	__aeabi_f2d
+ 523              	.LVL86:
+ 524 0238 FFF7FEFF 		bl	asin
+ 525              	.LVL87:
+ 526 023c 0022     		movs	r2, #0
+ 527 023e 164B     		ldr	r3, .L43+16
+ 528 0240 FFF7FEFF 		bl	__aeabi_dmul
+ 529              	.LVL88:
+ 530 0244 12A3     		adr	r3, .L43+8
+ 531 0246 D3E90023 		ldrd	r2, [r3]
+ 532 024a FFF7FEFF 		bl	__aeabi_dadd
+ 533              	.LVL89:
+ 534 024e 0022     		movs	r2, #0
+ 535 0250 124B     		ldr	r3, .L43+20
+ 536 0252 FFF7FEFF 		bl	__aeabi_ddiv
+ 537              	.LVL90:
+ 538 0256 0CA3     		adr	r3, .L43
+ 539 0258 D3E90023 		ldrd	r2, [r3]
+ 540 025c FFF7FEFF 		bl	__aeabi_ddiv
+ 541              	.LVL91:
+ 542 0260 FFF7FEFF 		bl	__aeabi_d2uiz
+ 543              	.LVL92:
+ 544 0264 A876     		strb	r0, [r5, #26]
+ 545              	.L37:
+ 179:functions.c   ****             }
+ 180:functions.c   ****        
+ 181:functions.c   ****             stabil(mouseData->angle);
+ 546              		.loc 1 181 0
+ 547 0266 A87E     		ldrb	r0, [r5, #26]	@ zero_extendqisi2
+ 548 0268 FFF7FEFF 		bl	stabil
+ 549              	.LVL93:
+ 550              	.L35:
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 14
+
+
+ 182:functions.c   **** 
+ 183:functions.c   ****     }
+ 184:functions.c   ****         
+ 185:functions.c   ****     if (mouseData->timesInterrupted == 250) {
+ 551              		.loc 1 185 0
+ 552 026c 2B8B     		ldrh	r3, [r5, #24]
+ 553 026e FA2B     		cmp	r3, #250
+ 554 0270 06D1     		bne	.L15
+ 186:functions.c   ****         mouseData->finalX = 0;
+ 555              		.loc 1 186 0
+ 556 0272 0023     		movs	r3, #0
+ 557 0274 AB83     		strh	r3, [r5, #28]	@ movhi
+ 187:functions.c   ****         mouseData->finalY = 0;
+ 558              		.loc 1 187 0
+ 559 0276 EB83     		strh	r3, [r5, #30]	@ movhi
+ 188:functions.c   ****         mouseData->timesInterrupted = 0;
+ 560              		.loc 1 188 0
+ 561 0278 2B83     		strh	r3, [r5, #24]	@ movhi
+ 189:functions.c   ****         stabil(200);
+ 562              		.loc 1 189 0
+ 563 027a C820     		movs	r0, #200
+ 564 027c FFF7FEFF 		bl	stabil
+ 565              	.LVL94:
+ 566              	.L15:
+ 567 0280 70BD     		pop	{r4, r5, r6, pc}
+ 568              	.LVL95:
+ 569              	.L44:
+ 570 0282 00BFAFF3 		.align	3
+ 570      0080
+ 571              	.L43:
+ 572 0288 CDCCCCCC 		.word	-858993459
+ 573 028c CCCCFC3F 		.word	1073532108
+ 574 0290 00000000 		.word	0
+ 575 0294 0018A540 		.word	1084561408
+ 576 0298 00E88140 		.word	1082255360
+ 577 029c 00002440 		.word	1076101120
+ 578 02a0 00208C40 		.word	1082925056
+ 579 02a4 00209C40 		.word	1083973632
+ 580              		.cfi_endproc
+ 581              	.LFE65:
+ 582              		.size	ISR_getMouseData, .-ISR_getMouseData
+ 583              		.section	.text.initMouse,"ax",%progbits
+ 584              		.align	2
+ 585              		.global	initMouse
+ 586              		.thumb
+ 587              		.thumb_func
+ 588              		.type	initMouse, %function
+ 589              	initMouse:
+ 590              	.LFB66:
+ 190:functions.c   ****     }
+ 191:functions.c   **** //    sprintf(value,"X = %d | ",mouseData->finalX);
+ 192:functions.c   **** //    //UART_1_UartPutString(value);
+ 193:functions.c   **** //    sprintf(value,"Y = %d \n\r",mouseData->finalY);
+ 194:functions.c   **** //    //UART_1_UartPutString(value);
+ 195:functions.c   **** //    sprintf(value,"Distance = %d | ",distance);
+ 196:functions.c   **** //    //UART_1_UartPutString(value);
+ 197:functions.c   **** //    sprintf(value,"Angle = %d \n\r",angle);
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 15
+
+
+ 198:functions.c   **** //    //UART_1_UartPutString(value);
+ 199:functions.c   ****     
+ 200:functions.c   ****     
+ 201:functions.c   ****     
+ 202:functions.c   ****     
+ 203:functions.c   **** }
+ 204:functions.c   **** 
+ 205:functions.c   **** 
+ 206:functions.c   **** void initMouse(uint8 *Data) {
+ 591              		.loc 1 206 0
+ 592              		.cfi_startproc
+ 593              		@ args = 0, pretend = 0, frame = 0
+ 594              		@ frame_needed = 0, uses_anonymous_args = 0
+ 595              	.LVL96:
+ 596 0000 38B5     		push	{r3, r4, r5, lr}
+ 597              		.cfi_def_cfa_offset 16
+ 598              		.cfi_offset 3, -16
+ 599              		.cfi_offset 4, -12
+ 600              		.cfi_offset 5, -8
+ 601              		.cfi_offset 14, -4
+ 602 0002 0546     		mov	r5, r0
+ 603              	.LVL97:
+ 207:functions.c   ****     uint8 i = 0;
+ 208:functions.c   ****     const uint8 dataSize = 8;
+ 209:functions.c   ****     
+ 210:functions.c   ****     PS2_Clock_Write(0);
+ 604              		.loc 1 210 0
+ 605 0004 0020     		movs	r0, #0
+ 606              	.LVL98:
+ 607 0006 FFF7FEFF 		bl	PS2_Clock_Write
+ 608              	.LVL99:
+ 211:functions.c   ****     
+ 212:functions.c   ****     CyDelayUs(150);
+ 609              		.loc 1 212 0
+ 610 000a 9620     		movs	r0, #150
+ 611 000c FFF7FEFF 		bl	CyDelayUs
+ 612              	.LVL100:
+ 213:functions.c   ****     PS2_Data_Write(0);
+ 613              		.loc 1 213 0
+ 614 0010 0020     		movs	r0, #0
+ 615 0012 FFF7FEFF 		bl	PS2_Data_Write
+ 616              	.LVL101:
+ 214:functions.c   ****     
+ 215:functions.c   ****     PS2_Clock_Write(1);
+ 617              		.loc 1 215 0
+ 618 0016 0120     		movs	r0, #1
+ 619 0018 FFF7FEFF 		bl	PS2_Clock_Write
+ 620              	.LVL102:
+ 216:functions.c   ****     PS2_Clock_Read();
+ 621              		.loc 1 216 0
+ 622 001c FFF7FEFF 		bl	PS2_Clock_Read
+ 623              	.LVL103:
+ 207:functions.c   ****     const uint8 dataSize = 8;
+ 624              		.loc 1 207 0
+ 625 0020 0024     		movs	r4, #0
+ 217:functions.c   ****     while (i < 11){
+ 626              		.loc 1 217 0
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 16
+
+
+ 627 0022 20E0     		b	.L46
+ 628              	.LVL104:
+ 629              	.L47:
+ 218:functions.c   ****         
+ 219:functions.c   ****         while(PS2_Clock_Read());
+ 630              		.loc 1 219 0 discriminator 1
+ 631 0024 FFF7FEFF 		bl	PS2_Clock_Read
+ 632              	.LVL105:
+ 633 0028 0028     		cmp	r0, #0
+ 634 002a FBD1     		bne	.L47
+ 220:functions.c   ****         
+ 221:functions.c   ****         if (i == 0) {
+ 635              		.loc 1 221 0
+ 636 002c 14B9     		cbnz	r4, .L48
+ 222:functions.c   ****            PS2_Data_Write(0);
+ 637              		.loc 1 222 0
+ 638 002e FFF7FEFF 		bl	PS2_Data_Write
+ 639              	.LVL106:
+ 640 0032 10E0     		b	.L49
+ 641              	.L48:
+ 223:functions.c   ****         }
+ 224:functions.c   ****         
+ 225:functions.c   ****         else if (i == 9) {
+ 642              		.loc 1 225 0
+ 643 0034 092C     		cmp	r4, #9
+ 644 0036 03D1     		bne	.L50
+ 226:functions.c   ****            PS2_Data_Write(0);
+ 645              		.loc 1 226 0
+ 646 0038 0020     		movs	r0, #0
+ 647 003a FFF7FEFF 		bl	PS2_Data_Write
+ 648              	.LVL107:
+ 649 003e 0AE0     		b	.L49
+ 650              	.L50:
+ 227:functions.c   ****         }
+ 228:functions.c   ****         
+ 229:functions.c   ****         else if (i == 10) {
+ 651              		.loc 1 229 0
+ 652 0040 0A2C     		cmp	r4, #10
+ 653 0042 03D1     		bne	.L51
+ 230:functions.c   ****            PS2_Data_Write(1);
+ 654              		.loc 1 230 0
+ 655 0044 0120     		movs	r0, #1
+ 656 0046 FFF7FEFF 		bl	PS2_Data_Write
+ 657              	.LVL108:
+ 658 004a 04E0     		b	.L49
+ 659              	.L51:
+ 231:functions.c   ****         }
+ 232:functions.c   ****         
+ 233:functions.c   ****         else {
+ 234:functions.c   ****            PS2_Data_Write(Data[dataSize-i]);
+ 660              		.loc 1 234 0
+ 661 004c C4F10803 		rsb	r3, r4, #8
+ 662 0050 E85C     		ldrb	r0, [r5, r3]	@ zero_extendqisi2
+ 663 0052 FFF7FEFF 		bl	PS2_Data_Write
+ 664              	.LVL109:
+ 665              	.L49:
+ 235:functions.c   ****         }
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 17
+
+
+ 236:functions.c   ****         
+ 237:functions.c   ****         if (i < 10) {
+ 666              		.loc 1 237 0
+ 667 0056 092C     		cmp	r4, #9
+ 668 0058 03D8     		bhi	.L52
+ 669              	.L53:
+ 238:functions.c   ****             while(!PS2_Clock_Read());
+ 670              		.loc 1 238 0 discriminator 1
+ 671 005a FFF7FEFF 		bl	PS2_Clock_Read
+ 672              	.LVL110:
+ 673 005e 0028     		cmp	r0, #0
+ 674 0060 FBD0     		beq	.L53
+ 675              	.L52:
+ 239:functions.c   ****         }
+ 240:functions.c   ****         i++;
+ 676              		.loc 1 240 0
+ 677 0062 0134     		adds	r4, r4, #1
+ 678              	.LVL111:
+ 679 0064 E4B2     		uxtb	r4, r4
+ 680              	.LVL112:
+ 681              	.L46:
+ 217:functions.c   ****         
+ 682              		.loc 1 217 0
+ 683 0066 0A2C     		cmp	r4, #10
+ 684 0068 DCD9     		bls	.L47
+ 241:functions.c   ****     }
+ 242:functions.c   ****     PS2_Data_Read();
+ 685              		.loc 1 242 0
+ 686 006a FFF7FEFF 		bl	PS2_Data_Read
+ 687              	.LVL113:
+ 243:functions.c   ****     PS2_Clock_Read();
+ 688              		.loc 1 243 0
+ 689 006e FFF7FEFF 		bl	PS2_Clock_Read
+ 690              	.LVL114:
+ 691 0072 38BD     		pop	{r3, r4, r5, pc}
+ 692              		.cfi_endproc
+ 693              	.LFE66:
+ 694              		.size	initMouse, .-initMouse
+ 695              		.section	.text.Init,"ax",%progbits
+ 696              		.align	2
+ 697              		.global	Init
+ 698              		.thumb
+ 699              		.thumb_func
+ 700              		.type	Init, %function
+ 701              	Init:
+ 702              	.LFB63:
+  16:functions.c   ****     //UART_1_Start();
+ 703              		.loc 1 16 0
+ 704              		.cfi_startproc
+ 705              		@ args = 0, pretend = 0, frame = 8
+ 706              		@ frame_needed = 0, uses_anonymous_args = 0
+ 707              	.LVL115:
+  22:functions.c   ****         mouseData->tmpMouseX[i] = 0;
+ 708              		.loc 1 22 0
+ 709 0000 0023     		movs	r3, #0
+ 710 0002 07E0     		b	.L56
+ 711              	.LVL116:
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 18
+
+
+ 712              	.L57:
+  23:functions.c   ****         mouseData->tmpMouseY[i] = 0; 
+ 713              		.loc 1 23 0 discriminator 3
+ 714 0004 5AB2     		sxtb	r2, r3
+ 715 0006 0021     		movs	r1, #0
+ 716 0008 8154     		strb	r1, [r0, r2]
+  24:functions.c   ****         mouseData->status[i] = 0; 
+ 717              		.loc 1 24 0 discriminator 3
+ 718 000a 0244     		add	r2, r2, r0
+ 719 000c 1172     		strb	r1, [r2, #8]
+  25:functions.c   ****     }
+ 720              		.loc 1 25 0 discriminator 3
+ 721 000e 1174     		strb	r1, [r2, #16]
+  22:functions.c   ****         mouseData->tmpMouseX[i] = 0;
+ 722              		.loc 1 22 0 discriminator 3
+ 723 0010 0133     		adds	r3, r3, #1
+ 724              	.LVL117:
+ 725 0012 DBB2     		uxtb	r3, r3
+ 726              	.LVL118:
+ 727              	.L56:
+  22:functions.c   ****         mouseData->tmpMouseX[i] = 0;
+ 728              		.loc 1 22 0 is_stmt 0 discriminator 1
+ 729 0014 5AB2     		sxtb	r2, r3
+ 730 0016 072A     		cmp	r2, #7
+ 731 0018 F4DD     		ble	.L57
+  16:functions.c   ****     //UART_1_Start();
+ 732              		.loc 1 16 0 is_stmt 1
+ 733 001a 00B5     		push	{lr}
+ 734              		.cfi_def_cfa_offset 4
+ 735              		.cfi_offset 14, -4
+ 736 001c 83B0     		sub	sp, sp, #12
+ 737              		.cfi_def_cfa_offset 16
+  27:functions.c   ****     mouseData->timesInterrupted = 0;
+ 738              		.loc 1 27 0
+ 739 001e 0023     		movs	r3, #0
+ 740              	.LVL119:
+ 741 0020 8383     		strh	r3, [r0, #28]	@ movhi
+  28:functions.c   ****     mouseData->angle = 0;
+ 742              		.loc 1 28 0
+ 743 0022 0383     		strh	r3, [r0, #24]	@ movhi
+  29:functions.c   ****     
+ 744              		.loc 1 29 0
+ 745 0024 8376     		strb	r3, [r0, #26]
+  34:functions.c   ****     initMouse(initData);
+ 746              		.loc 1 34 0
+ 747 0026 054A     		ldr	r2, .L59
+ 748              	.LVL120:
+ 749 0028 6B46     		mov	r3, sp
+ 750 002a 1068     		ldr	r0, [r2]	@ unaligned
+ 751              	.LVL121:
+ 752 002c 5168     		ldr	r1, [r2, #4]	@ unaligned
+ 753 002e 03C3     		stmia	r3!, {r0, r1}
+  35:functions.c   **** 
+ 754              		.loc 1 35 0
+ 755 0030 6846     		mov	r0, sp
+ 756 0032 FFF7FEFF 		bl	initMouse
+ 757              	.LVL122:
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 19
+
+
+  41:functions.c   **** 
+ 758              		.loc 1 41 0
+ 759 0036 03B0     		add	sp, sp, #12
+ 760              		.cfi_def_cfa_offset 4
+ 761              		@ sp needed
+ 762 0038 5DF804FB 		ldr	pc, [sp], #4
+ 763              	.L60:
+ 764              		.align	2
+ 765              	.L59:
+ 766 003c 00000000 		.word	.LANCHOR0
+ 767              		.cfi_endproc
+ 768              	.LFE63:
+ 769              		.size	Init, .-Init
+ 770              		.global	mouseX_global
+ 771              		.comm	statusData,4,4
+ 772              		.global	mouseDataY
+ 773              		.global	mouseDataX
+ 774              		.section	.rodata
+ 775              		.align	2
+ 776              		.set	.LANCHOR0,. + 0
+ 777              	.LC0:
+ 778 0000 01       		.byte	1
+ 779 0001 01       		.byte	1
+ 780 0002 01       		.byte	1
+ 781 0003 01       		.byte	1
+ 782 0004 00       		.byte	0
+ 783 0005 01       		.byte	1
+ 784 0006 00       		.byte	0
+ 785 0007 00       		.byte	0
+ 786              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 787              		.align	2
+ 788              	.LC1:
+ 789 0000 2564207C 		.ascii	"%d | \000"
+ 789      2000
+ 790 0006 0000     		.space	2
+ 791              	.LC2:
+ 792 0008 256400   		.ascii	"%d\000"
+ 793 000b 00       		.bss
+ 794              		.align	1
+ 795              		.type	mouseX_global, %object
+ 796              		.size	mouseX_global, 2
+ 797              	mouseX_global:
+ 798 0000 0000     		.space	2
+ 799              		.type	mouseDataY, %object
+ 800              		.size	mouseDataY, 2
+ 801              	mouseDataY:
+ 802 0002 0000     		.space	2
+ 803              		.type	mouseDataX, %object
+ 804              		.size	mouseDataX, 2
+ 805              	mouseDataX:
+ 806 0004 0000     		.space	2
+ 807              		.text
+ 808              	.Letext0:
+ 809              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 810              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 811              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 812              		.file 5 "./functions.h"
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 20
+
+
+ 813              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 814              		.file 7 "Generated_Source\\PSoC5/PS2_Data.h"
+ 815              		.file 8 "Generated_Source\\PSoC5/PS2_Clock.h"
+ 816              		.file 9 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 817              		.file 10 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9
+ 818              		.file 11 "./main.h"
+ 819              		.file 12 "Generated_Source\\PSoC5/CyLib.h"
+ 820              		.section	.debug_info,"",%progbits
+ 821              	.Ldebug_info0:
+ 822 0000 9F050000 		.4byte	0x59f
+ 823 0004 0400     		.2byte	0x4
+ 824 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 825 000a 04       		.byte	0x4
+ 826 000b 01       		.uleb128 0x1
+ 827 000c E0010000 		.4byte	.LASF56
+ 828 0010 01       		.byte	0x1
+ 829 0011 A4020000 		.4byte	.LASF57
+ 830 0015 CC000000 		.4byte	.LASF58
+ 831 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 832 001d 00000000 		.4byte	0
+ 833 0021 00000000 		.4byte	.Ldebug_line0
+ 834 0025 02       		.uleb128 0x2
+ 835 0026 01       		.byte	0x1
+ 836 0027 06       		.byte	0x6
+ 837 0028 7A010000 		.4byte	.LASF0
+ 838 002c 02       		.uleb128 0x2
+ 839 002d 01       		.byte	0x1
+ 840 002e 08       		.byte	0x8
+ 841 002f 64010000 		.4byte	.LASF1
+ 842 0033 02       		.uleb128 0x2
+ 843 0034 02       		.byte	0x2
+ 844 0035 05       		.byte	0x5
+ 845 0036 2A000000 		.4byte	.LASF2
+ 846 003a 02       		.uleb128 0x2
+ 847 003b 02       		.byte	0x2
+ 848 003c 07       		.byte	0x7
+ 849 003d B8010000 		.4byte	.LASF3
+ 850 0041 03       		.uleb128 0x3
+ 851 0042 C5020000 		.4byte	.LASF9
+ 852 0046 02       		.byte	0x2
+ 853 0047 3F       		.byte	0x3f
+ 854 0048 4C000000 		.4byte	0x4c
+ 855 004c 02       		.uleb128 0x2
+ 856 004d 04       		.byte	0x4
+ 857 004e 05       		.byte	0x5
+ 858 004f 22010000 		.4byte	.LASF4
+ 859 0053 02       		.uleb128 0x2
+ 860 0054 04       		.byte	0x4
+ 861 0055 07       		.byte	0x7
+ 862 0056 8B020000 		.4byte	.LASF5
+ 863 005a 02       		.uleb128 0x2
+ 864 005b 08       		.byte	0x8
+ 865 005c 05       		.byte	0x5
+ 866 005d B9000000 		.4byte	.LASF6
+ 867 0061 02       		.uleb128 0x2
+ 868 0062 08       		.byte	0x8
+ 869 0063 07       		.byte	0x7
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 21
+
+
+ 870 0064 8E010000 		.4byte	.LASF7
+ 871 0068 04       		.uleb128 0x4
+ 872 0069 04       		.byte	0x4
+ 873 006a 05       		.byte	0x5
+ 874 006b 696E7400 		.ascii	"int\000"
+ 875 006f 02       		.uleb128 0x2
+ 876 0070 04       		.byte	0x4
+ 877 0071 07       		.byte	0x7
+ 878 0072 A5010000 		.4byte	.LASF8
+ 879 0076 03       		.uleb128 0x3
+ 880 0077 86010000 		.4byte	.LASF10
+ 881 007b 03       		.byte	0x3
+ 882 007c 2C       		.byte	0x2c
+ 883 007d 41000000 		.4byte	0x41
+ 884 0081 05       		.uleb128 0x5
+ 885 0082 AD000000 		.4byte	.LASF11
+ 886 0086 04       		.byte	0x4
+ 887 0087 9201     		.2byte	0x192
+ 888 0089 2C000000 		.4byte	0x2c
+ 889 008d 05       		.uleb128 0x5
+ 890 008e 83000000 		.4byte	.LASF12
+ 891 0092 04       		.byte	0x4
+ 892 0093 9301     		.2byte	0x193
+ 893 0095 3A000000 		.4byte	0x3a
+ 894 0099 05       		.uleb128 0x5
+ 895 009a C7000000 		.4byte	.LASF13
+ 896 009e 04       		.byte	0x4
+ 897 009f 9501     		.2byte	0x195
+ 898 00a1 25000000 		.4byte	0x25
+ 899 00a5 05       		.uleb128 0x5
+ 900 00a6 A7000000 		.4byte	.LASF14
+ 901 00aa 04       		.byte	0x4
+ 902 00ab 9601     		.2byte	0x196
+ 903 00ad 33000000 		.4byte	0x33
+ 904 00b1 02       		.uleb128 0x2
+ 905 00b2 04       		.byte	0x4
+ 906 00b3 04       		.byte	0x4
+ 907 00b4 B3000000 		.4byte	.LASF15
+ 908 00b8 02       		.uleb128 0x2
+ 909 00b9 08       		.byte	0x8
+ 910 00ba 04       		.byte	0x4
+ 911 00bb 9D020000 		.4byte	.LASF16
+ 912 00bf 02       		.uleb128 0x2
+ 913 00c0 01       		.byte	0x1
+ 914 00c1 08       		.byte	0x8
+ 915 00c2 D2010000 		.4byte	.LASF17
+ 916 00c6 02       		.uleb128 0x2
+ 917 00c7 04       		.byte	0x4
+ 918 00c8 07       		.byte	0x7
+ 919 00c9 34000000 		.4byte	.LASF18
+ 920 00cd 06       		.uleb128 0x6
+ 921 00ce 04       		.byte	0x4
+ 922 00cf BF000000 		.4byte	0xbf
+ 923 00d3 06       		.uleb128 0x6
+ 924 00d4 04       		.byte	0x4
+ 925 00d5 D9000000 		.4byte	0xd9
+ 926 00d9 07       		.uleb128 0x7
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 22
+
+
+ 927 00da BF000000 		.4byte	0xbf
+ 928 00de 08       		.uleb128 0x8
+ 929 00df B2010000 		.4byte	.LASF59
+ 930 00e3 20       		.byte	0x20
+ 931 00e4 05       		.byte	0x5
+ 932 00e5 08       		.byte	0x8
+ 933 00e6 3F010000 		.4byte	0x13f
+ 934 00ea 09       		.uleb128 0x9
+ 935 00eb 93000000 		.4byte	.LASF19
+ 936 00ef 05       		.byte	0x5
+ 937 00f0 09       		.byte	0x9
+ 938 00f1 3F010000 		.4byte	0x13f
+ 939 00f5 00       		.byte	0
+ 940 00f6 09       		.uleb128 0x9
+ 941 00f7 9D000000 		.4byte	.LASF20
+ 942 00fb 05       		.byte	0x5
+ 943 00fc 0A       		.byte	0xa
+ 944 00fd 3F010000 		.4byte	0x13f
+ 945 0101 08       		.byte	0x8
+ 946 0102 09       		.uleb128 0x9
+ 947 0103 CB010000 		.4byte	.LASF21
+ 948 0107 05       		.byte	0x5
+ 949 0108 0B       		.byte	0xb
+ 950 0109 3F010000 		.4byte	0x13f
+ 951 010d 10       		.byte	0x10
+ 952 010e 09       		.uleb128 0x9
+ 953 010f F8020000 		.4byte	.LASF22
+ 954 0113 05       		.byte	0x5
+ 955 0114 0C       		.byte	0xc
+ 956 0115 8D000000 		.4byte	0x8d
+ 957 0119 18       		.byte	0x18
+ 958 011a 09       		.uleb128 0x9
+ 959 011b 0A000000 		.4byte	.LASF23
+ 960 011f 05       		.byte	0x5
+ 961 0120 0E       		.byte	0xe
+ 962 0121 81000000 		.4byte	0x81
+ 963 0125 1A       		.byte	0x1a
+ 964 0126 09       		.uleb128 0x9
+ 965 0127 31010000 		.4byte	.LASF24
+ 966 012b 05       		.byte	0x5
+ 967 012c 0F       		.byte	0xf
+ 968 012d A5000000 		.4byte	0xa5
+ 969 0131 1C       		.byte	0x1c
+ 970 0132 09       		.uleb128 0x9
+ 971 0133 38010000 		.4byte	.LASF25
+ 972 0137 05       		.byte	0x5
+ 973 0138 10       		.byte	0x10
+ 974 0139 A5000000 		.4byte	0xa5
+ 975 013d 1E       		.byte	0x1e
+ 976 013e 00       		.byte	0
+ 977 013f 0A       		.uleb128 0xa
+ 978 0140 81000000 		.4byte	0x81
+ 979 0144 4F010000 		.4byte	0x14f
+ 980 0148 0B       		.uleb128 0xb
+ 981 0149 C6000000 		.4byte	0xc6
+ 982 014d 07       		.byte	0x7
+ 983 014e 00       		.byte	0
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 23
+
+
+ 984 014f 02       		.uleb128 0x2
+ 985 0150 08       		.byte	0x8
+ 986 0151 04       		.byte	0x4
+ 987 0152 51000000 		.4byte	.LASF26
+ 988 0156 0C       		.uleb128 0xc
+ 989 0157 16030000 		.4byte	.LASF31
+ 990 015b 01       		.byte	0x1
+ 991 015c 2B       		.byte	0x2b
+ 992 015d 00000000 		.4byte	.LFB64
+ 993 0161 7C000000 		.4byte	.LFE64-.LFB64
+ 994 0165 01       		.uleb128 0x1
+ 995 0166 9C       		.byte	0x9c
+ 996 0167 24020000 		.4byte	0x224
+ 997 016b 0D       		.uleb128 0xd
+ 998 016c 46000000 		.4byte	.LASF27
+ 999 0170 01       		.byte	0x1
+ 1000 0171 2B       		.byte	0x2b
+ 1001 0172 24020000 		.4byte	0x224
+ 1002 0176 00000000 		.4byte	.LLST0
+ 1003 017a 0D       		.uleb128 0xd
+ 1004 017b 2B010000 		.4byte	.LASF28
+ 1005 017f 01       		.byte	0x1
+ 1006 0180 2B       		.byte	0x2b
+ 1007 0181 24020000 		.4byte	0x224
+ 1008 0185 2C000000 		.4byte	.LLST1
+ 1009 0189 0D       		.uleb128 0xd
+ 1010 018a 85020000 		.4byte	.LASF29
+ 1011 018e 01       		.byte	0x1
+ 1012 018f 2B       		.byte	0x2b
+ 1013 0190 24020000 		.4byte	0x224
+ 1014 0194 58000000 		.4byte	.LLST2
+ 1015 0198 0E       		.uleb128 0xe
+ 1016 0199 67000000 		.4byte	.LASF30
+ 1017 019d 01       		.byte	0x1
+ 1018 019e 2C       		.byte	0x2c
+ 1019 019f 2A020000 		.4byte	0x22a
+ 1020 01a3 02       		.uleb128 0x2
+ 1021 01a4 91       		.byte	0x91
+ 1022 01a5 5C       		.sleb128 -36
+ 1023 01a6 0F       		.uleb128 0xf
+ 1024 01a7 6900     		.ascii	"i\000"
+ 1025 01a9 01       		.byte	0x1
+ 1026 01aa 2D       		.byte	0x2d
+ 1027 01ab 99000000 		.4byte	0x99
+ 1028 01af 79000000 		.4byte	.LLST3
+ 1029 01b3 10       		.uleb128 0x10
+ 1030 01b4 1C000000 		.4byte	.LVL3
+ 1031 01b8 03050000 		.4byte	0x503
+ 1032 01bc D0010000 		.4byte	0x1d0
+ 1033 01c0 11       		.uleb128 0x11
+ 1034 01c1 01       		.uleb128 0x1
+ 1035 01c2 51       		.byte	0x51
+ 1036 01c3 05       		.uleb128 0x5
+ 1037 01c4 03       		.byte	0x3
+ 1038 01c5 00000000 		.4byte	.LC1
+ 1039 01c9 11       		.uleb128 0x11
+ 1040 01ca 01       		.uleb128 0x1
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 24
+
+
+ 1041 01cb 50       		.byte	0x50
+ 1042 01cc 02       		.uleb128 0x2
+ 1043 01cd 91       		.byte	0x91
+ 1044 01ce 5C       		.sleb128 -36
+ 1045 01cf 00       		.byte	0
+ 1046 01d0 10       		.uleb128 0x10
+ 1047 01d1 2A000000 		.4byte	.LVL4
+ 1048 01d5 03050000 		.4byte	0x503
+ 1049 01d9 ED010000 		.4byte	0x1ed
+ 1050 01dd 11       		.uleb128 0x11
+ 1051 01de 01       		.uleb128 0x1
+ 1052 01df 51       		.byte	0x51
+ 1053 01e0 05       		.uleb128 0x5
+ 1054 01e1 03       		.byte	0x3
+ 1055 01e2 08000000 		.4byte	.LC2
+ 1056 01e6 11       		.uleb128 0x11
+ 1057 01e7 01       		.uleb128 0x1
+ 1058 01e8 50       		.byte	0x50
+ 1059 01e9 02       		.uleb128 0x2
+ 1060 01ea 91       		.byte	0x91
+ 1061 01eb 5C       		.sleb128 -36
+ 1062 01ec 00       		.byte	0
+ 1063 01ed 10       		.uleb128 0x10
+ 1064 01ee 48000000 		.4byte	.LVL9
+ 1065 01f2 03050000 		.4byte	0x503
+ 1066 01f6 0A020000 		.4byte	0x20a
+ 1067 01fa 11       		.uleb128 0x11
+ 1068 01fb 01       		.uleb128 0x1
+ 1069 01fc 51       		.byte	0x51
+ 1070 01fd 05       		.uleb128 0x5
+ 1071 01fe 03       		.byte	0x3
+ 1072 01ff 00000000 		.4byte	.LC1
+ 1073 0203 11       		.uleb128 0x11
+ 1074 0204 01       		.uleb128 0x1
+ 1075 0205 50       		.byte	0x50
+ 1076 0206 02       		.uleb128 0x2
+ 1077 0207 91       		.byte	0x91
+ 1078 0208 5C       		.sleb128 -36
+ 1079 0209 00       		.byte	0
+ 1080 020a 12       		.uleb128 0x12
+ 1081 020b 56000000 		.4byte	.LVL10
+ 1082 020f 03050000 		.4byte	0x503
+ 1083 0213 11       		.uleb128 0x11
+ 1084 0214 01       		.uleb128 0x1
+ 1085 0215 51       		.byte	0x51
+ 1086 0216 05       		.uleb128 0x5
+ 1087 0217 03       		.byte	0x3
+ 1088 0218 08000000 		.4byte	.LC2
+ 1089 021c 11       		.uleb128 0x11
+ 1090 021d 01       		.uleb128 0x1
+ 1091 021e 50       		.byte	0x50
+ 1092 021f 02       		.uleb128 0x2
+ 1093 0220 91       		.byte	0x91
+ 1094 0221 5C       		.sleb128 -36
+ 1095 0222 00       		.byte	0
+ 1096 0223 00       		.byte	0
+ 1097 0224 06       		.uleb128 0x6
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 25
+
+
+ 1098 0225 04       		.byte	0x4
+ 1099 0226 81000000 		.4byte	0x81
+ 1100 022a 0A       		.uleb128 0xa
+ 1101 022b BF000000 		.4byte	0xbf
+ 1102 022f 3A020000 		.4byte	0x23a
+ 1103 0233 0B       		.uleb128 0xb
+ 1104 0234 C6000000 		.4byte	0xc6
+ 1105 0238 13       		.byte	0x13
+ 1106 0239 00       		.byte	0
+ 1107 023a 13       		.uleb128 0x13
+ 1108 023b CF020000 		.4byte	.LASF32
+ 1109 023f 01       		.byte	0x1
+ 1110 0240 59       		.byte	0x59
+ 1111 0241 00000000 		.4byte	.LFB65
+ 1112 0245 A8020000 		.4byte	.LFE65-.LFB65
+ 1113 0249 01       		.uleb128 0x1
+ 1114 024a 9C       		.byte	0x9c
+ 1115 024b 5D030000 		.4byte	0x35d
+ 1116 024f 0D       		.uleb128 0xd
+ 1117 0250 00000000 		.4byte	.LASF33
+ 1118 0254 01       		.byte	0x1
+ 1119 0255 59       		.byte	0x59
+ 1120 0256 5D030000 		.4byte	0x35d
+ 1121 025a E5000000 		.4byte	.LLST4
+ 1122 025e 14       		.uleb128 0x14
+ 1123 025f 64656700 		.ascii	"deg\000"
+ 1124 0263 01       		.byte	0x1
+ 1125 0264 5B       		.byte	0x5b
+ 1126 0265 68000000 		.4byte	0x68
+ 1127 0269 3D02     		.2byte	0x23d
+ 1128 026b 0F       		.uleb128 0xf
+ 1129 026c 6900     		.ascii	"i\000"
+ 1130 026e 01       		.byte	0x1
+ 1131 026f 5C       		.byte	0x5c
+ 1132 0270 81000000 		.4byte	0x81
+ 1133 0274 11010000 		.4byte	.LLST5
+ 1134 0278 15       		.uleb128 0x15
+ 1135 0279 67000000 		.4byte	.LASF30
+ 1136 027d 01       		.byte	0x1
+ 1137 027e 5D       		.byte	0x5d
+ 1138 027f 2A020000 		.4byte	0x22a
+ 1139 0283 16       		.uleb128 0x16
+ 1140 0284 1F000000 		.4byte	.LASF34
+ 1141 0288 01       		.byte	0x1
+ 1142 0289 5E       		.byte	0x5e
+ 1143 028a A5000000 		.4byte	0xa5
+ 1144 028e 01       		.byte	0x1
+ 1145 028f 16       		.uleb128 0x16
+ 1146 0290 3D000000 		.4byte	.LASF35
+ 1147 0294 01       		.byte	0x1
+ 1148 0295 5F       		.byte	0x5f
+ 1149 0296 81000000 		.4byte	0x81
+ 1150 029a 00       		.byte	0
+ 1151 029b 0F       		.uleb128 0xf
+ 1152 029c 6A00     		.ascii	"j\000"
+ 1153 029e 01       		.byte	0x1
+ 1154 029f 60       		.byte	0x60
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 26
+
+
+ 1155 02a0 99000000 		.4byte	0x99
+ 1156 02a4 46010000 		.4byte	.LLST6
+ 1157 02a8 17       		.uleb128 0x17
+ 1158 02a9 D7010000 		.4byte	.LASF36
+ 1159 02ad 01       		.byte	0x1
+ 1160 02ae 62       		.byte	0x62
+ 1161 02af 68000000 		.4byte	0x68
+ 1162 02b3 7B010000 		.4byte	.LLST7
+ 1163 02b7 15       		.uleb128 0x15
+ 1164 02b8 0A000000 		.4byte	.LASF23
+ 1165 02bc 01       		.byte	0x1
+ 1166 02bd 63       		.byte	0x63
+ 1167 02be 68000000 		.4byte	0x68
+ 1168 02c2 17       		.uleb128 0x17
+ 1169 02c3 E0020000 		.4byte	.LASF37
+ 1170 02c7 01       		.byte	0x1
+ 1171 02c8 66       		.byte	0x66
+ 1172 02c9 A5000000 		.4byte	0xa5
+ 1173 02cd A5010000 		.4byte	.LLST8
+ 1174 02d1 17       		.uleb128 0x17
+ 1175 02d2 E5020000 		.4byte	.LASF38
+ 1176 02d6 01       		.byte	0x1
+ 1177 02d7 67       		.byte	0x67
+ 1178 02d8 A5000000 		.4byte	0xa5
+ 1179 02dc E5010000 		.4byte	.LLST9
+ 1180 02e0 18       		.uleb128 0x18
+ 1181 02e1 0E000000 		.4byte	.LVL20
+ 1182 02e5 1E050000 		.4byte	0x51e
+ 1183 02e9 18       		.uleb128 0x18
+ 1184 02ea 1A000000 		.4byte	.LVL21
+ 1185 02ee 29050000 		.4byte	0x529
+ 1186 02f2 18       		.uleb128 0x18
+ 1187 02f3 2C000000 		.4byte	.LVL22
+ 1188 02f7 1E050000 		.4byte	0x51e
+ 1189 02fb 18       		.uleb128 0x18
+ 1190 02fc 46000000 		.4byte	.LVL23
+ 1191 0300 1E050000 		.4byte	0x51e
+ 1192 0304 18       		.uleb128 0x18
+ 1193 0305 5C000000 		.4byte	.LVL24
+ 1194 0309 1E050000 		.4byte	0x51e
+ 1195 030d 18       		.uleb128 0x18
+ 1196 030e 6A000000 		.4byte	.LVL25
+ 1197 0312 29050000 		.4byte	0x529
+ 1198 0316 18       		.uleb128 0x18
+ 1199 0317 00010000 		.4byte	.LVL43
+ 1200 031b 34050000 		.4byte	0x534
+ 1201 031f 18       		.uleb128 0x18
+ 1202 0320 3E010000 		.4byte	.LVL52
+ 1203 0324 49050000 		.4byte	0x549
+ 1204 0328 18       		.uleb128 0x18
+ 1205 0329 8E010000 		.4byte	.LVL63
+ 1206 032d 49050000 		.4byte	0x549
+ 1207 0331 18       		.uleb128 0x18
+ 1208 0332 E6010000 		.4byte	.LVL75
+ 1209 0336 49050000 		.4byte	0x549
+ 1210 033a 18       		.uleb128 0x18
+ 1211 033b 3C020000 		.4byte	.LVL87
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 27
+
+
+ 1212 033f 49050000 		.4byte	0x549
+ 1213 0343 18       		.uleb128 0x18
+ 1214 0344 6C020000 		.4byte	.LVL93
+ 1215 0348 5E050000 		.4byte	0x55e
+ 1216 034c 12       		.uleb128 0x12
+ 1217 034d 80020000 		.4byte	.LVL94
+ 1218 0351 5E050000 		.4byte	0x55e
+ 1219 0355 11       		.uleb128 0x11
+ 1220 0356 01       		.uleb128 0x1
+ 1221 0357 50       		.byte	0x50
+ 1222 0358 02       		.uleb128 0x2
+ 1223 0359 09       		.byte	0x9
+ 1224 035a C8       		.byte	0xc8
+ 1225 035b 00       		.byte	0
+ 1226 035c 00       		.byte	0
+ 1227 035d 06       		.uleb128 0x6
+ 1228 035e 04       		.byte	0x4
+ 1229 035f DE000000 		.4byte	0xde
+ 1230 0363 0C       		.uleb128 0xc
+ 1231 0364 5D000000 		.4byte	.LASF39
+ 1232 0368 01       		.byte	0x1
+ 1233 0369 CE       		.byte	0xce
+ 1234 036a 00000000 		.4byte	.LFB66
+ 1235 036e 74000000 		.4byte	.LFE66-.LFB66
+ 1236 0372 01       		.uleb128 0x1
+ 1237 0373 9C       		.byte	0x9c
+ 1238 0374 53040000 		.4byte	0x453
+ 1239 0378 0D       		.uleb128 0xd
+ 1240 0379 3F010000 		.4byte	.LASF40
+ 1241 037d 01       		.byte	0x1
+ 1242 037e CE       		.byte	0xce
+ 1243 037f 24020000 		.4byte	0x224
+ 1244 0383 04020000 		.4byte	.LLST10
+ 1245 0387 0F       		.uleb128 0xf
+ 1246 0388 6900     		.ascii	"i\000"
+ 1247 038a 01       		.byte	0x1
+ 1248 038b CF       		.byte	0xcf
+ 1249 038c 81000000 		.4byte	0x81
+ 1250 0390 22020000 		.4byte	.LLST11
+ 1251 0394 16       		.uleb128 0x16
+ 1252 0395 8A000000 		.4byte	.LASF41
+ 1253 0399 01       		.byte	0x1
+ 1254 039a D0       		.byte	0xd0
+ 1255 039b 53040000 		.4byte	0x453
+ 1256 039f 08       		.byte	0x8
+ 1257 03a0 10       		.uleb128 0x10
+ 1258 03a1 0A000000 		.4byte	.LVL99
+ 1259 03a5 73050000 		.4byte	0x573
+ 1260 03a9 B3030000 		.4byte	0x3b3
+ 1261 03ad 11       		.uleb128 0x11
+ 1262 03ae 01       		.uleb128 0x1
+ 1263 03af 50       		.byte	0x50
+ 1264 03b0 01       		.uleb128 0x1
+ 1265 03b1 30       		.byte	0x30
+ 1266 03b2 00       		.byte	0
+ 1267 03b3 10       		.uleb128 0x10
+ 1268 03b4 10000000 		.4byte	.LVL100
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 28
+
+
+ 1269 03b8 84050000 		.4byte	0x584
+ 1270 03bc C7030000 		.4byte	0x3c7
+ 1271 03c0 11       		.uleb128 0x11
+ 1272 03c1 01       		.uleb128 0x1
+ 1273 03c2 50       		.byte	0x50
+ 1274 03c3 02       		.uleb128 0x2
+ 1275 03c4 08       		.byte	0x8
+ 1276 03c5 96       		.byte	0x96
+ 1277 03c6 00       		.byte	0
+ 1278 03c7 10       		.uleb128 0x10
+ 1279 03c8 16000000 		.4byte	.LVL101
+ 1280 03cc 95050000 		.4byte	0x595
+ 1281 03d0 DA030000 		.4byte	0x3da
+ 1282 03d4 11       		.uleb128 0x11
+ 1283 03d5 01       		.uleb128 0x1
+ 1284 03d6 50       		.byte	0x50
+ 1285 03d7 01       		.uleb128 0x1
+ 1286 03d8 30       		.byte	0x30
+ 1287 03d9 00       		.byte	0
+ 1288 03da 10       		.uleb128 0x10
+ 1289 03db 1C000000 		.4byte	.LVL102
+ 1290 03df 73050000 		.4byte	0x573
+ 1291 03e3 ED030000 		.4byte	0x3ed
+ 1292 03e7 11       		.uleb128 0x11
+ 1293 03e8 01       		.uleb128 0x1
+ 1294 03e9 50       		.byte	0x50
+ 1295 03ea 01       		.uleb128 0x1
+ 1296 03eb 31       		.byte	0x31
+ 1297 03ec 00       		.byte	0
+ 1298 03ed 18       		.uleb128 0x18
+ 1299 03ee 20000000 		.4byte	.LVL103
+ 1300 03f2 29050000 		.4byte	0x529
+ 1301 03f6 18       		.uleb128 0x18
+ 1302 03f7 28000000 		.4byte	.LVL105
+ 1303 03fb 29050000 		.4byte	0x529
+ 1304 03ff 18       		.uleb128 0x18
+ 1305 0400 32000000 		.4byte	.LVL106
+ 1306 0404 95050000 		.4byte	0x595
+ 1307 0408 10       		.uleb128 0x10
+ 1308 0409 3E000000 		.4byte	.LVL107
+ 1309 040d 95050000 		.4byte	0x595
+ 1310 0411 1B040000 		.4byte	0x41b
+ 1311 0415 11       		.uleb128 0x11
+ 1312 0416 01       		.uleb128 0x1
+ 1313 0417 50       		.byte	0x50
+ 1314 0418 01       		.uleb128 0x1
+ 1315 0419 30       		.byte	0x30
+ 1316 041a 00       		.byte	0
+ 1317 041b 10       		.uleb128 0x10
+ 1318 041c 4A000000 		.4byte	.LVL108
+ 1319 0420 95050000 		.4byte	0x595
+ 1320 0424 2E040000 		.4byte	0x42e
+ 1321 0428 11       		.uleb128 0x11
+ 1322 0429 01       		.uleb128 0x1
+ 1323 042a 50       		.byte	0x50
+ 1324 042b 01       		.uleb128 0x1
+ 1325 042c 31       		.byte	0x31
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 29
+
+
+ 1326 042d 00       		.byte	0
+ 1327 042e 18       		.uleb128 0x18
+ 1328 042f 56000000 		.4byte	.LVL109
+ 1329 0433 95050000 		.4byte	0x595
+ 1330 0437 18       		.uleb128 0x18
+ 1331 0438 5E000000 		.4byte	.LVL110
+ 1332 043c 29050000 		.4byte	0x529
+ 1333 0440 18       		.uleb128 0x18
+ 1334 0441 6E000000 		.4byte	.LVL113
+ 1335 0445 1E050000 		.4byte	0x51e
+ 1336 0449 18       		.uleb128 0x18
+ 1337 044a 72000000 		.4byte	.LVL114
+ 1338 044e 29050000 		.4byte	0x529
+ 1339 0452 00       		.byte	0
+ 1340 0453 07       		.uleb128 0x7
+ 1341 0454 81000000 		.4byte	0x81
+ 1342 0458 0C       		.uleb128 0xc
+ 1343 0459 1D010000 		.4byte	.LASF42
+ 1344 045d 01       		.byte	0x1
+ 1345 045e 10       		.byte	0x10
+ 1346 045f 00000000 		.4byte	.LFB63
+ 1347 0463 40000000 		.4byte	.LFE63-.LFB63
+ 1348 0467 01       		.uleb128 0x1
+ 1349 0468 9C       		.byte	0x9c
+ 1350 0469 A8040000 		.4byte	0x4a8
+ 1351 046d 0D       		.uleb128 0xd
+ 1352 046e 00000000 		.4byte	.LASF33
+ 1353 0472 01       		.byte	0x1
+ 1354 0473 10       		.byte	0x10
+ 1355 0474 5D030000 		.4byte	0x35d
+ 1356 0478 4C020000 		.4byte	.LLST12
+ 1357 047c 0F       		.uleb128 0xf
+ 1358 047d 6900     		.ascii	"i\000"
+ 1359 047f 01       		.byte	0x1
+ 1360 0480 15       		.byte	0x15
+ 1361 0481 99000000 		.4byte	0x99
+ 1362 0485 6D020000 		.4byte	.LLST13
+ 1363 0489 0E       		.uleb128 0xe
+ 1364 048a 6E020000 		.4byte	.LASF43
+ 1365 048e 01       		.byte	0x1
+ 1366 048f 22       		.byte	0x22
+ 1367 0490 3F010000 		.4byte	0x13f
+ 1368 0494 02       		.uleb128 0x2
+ 1369 0495 91       		.byte	0x91
+ 1370 0496 70       		.sleb128 -16
+ 1371 0497 12       		.uleb128 0x12
+ 1372 0498 36000000 		.4byte	.LVL122
+ 1373 049c 63030000 		.4byte	0x363
+ 1374 04a0 11       		.uleb128 0x11
+ 1375 04a1 01       		.uleb128 0x1
+ 1376 04a2 50       		.byte	0x50
+ 1377 04a3 02       		.uleb128 0x2
+ 1378 04a4 7D       		.byte	0x7d
+ 1379 04a5 00       		.sleb128 0
+ 1380 04a6 00       		.byte	0
+ 1381 04a7 00       		.byte	0
+ 1382 04a8 19       		.uleb128 0x19
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 30
+
+
+ 1383 04a9 09030000 		.4byte	.LASF44
+ 1384 04ad 06       		.byte	0x6
+ 1385 04ae 9606     		.2byte	0x696
+ 1386 04b0 B4040000 		.4byte	0x4b4
+ 1387 04b4 1A       		.uleb128 0x1a
+ 1388 04b5 76000000 		.4byte	0x76
+ 1389 04b9 1B       		.uleb128 0x1b
+ 1390 04ba 6D000000 		.4byte	.LASF45
+ 1391 04be 01       		.byte	0x1
+ 1392 04bf 08       		.byte	0x8
+ 1393 04c0 A5000000 		.4byte	0xa5
+ 1394 04c4 05       		.uleb128 0x5
+ 1395 04c5 03       		.byte	0x3
+ 1396 04c6 00000000 		.4byte	mouseDataX
+ 1397 04ca 1B       		.uleb128 0x1b
+ 1398 04cb 78000000 		.4byte	.LASF46
+ 1399 04cf 01       		.byte	0x1
+ 1400 04d0 09       		.byte	0x9
+ 1401 04d1 A5000000 		.4byte	0xa5
+ 1402 04d5 05       		.uleb128 0x5
+ 1403 04d6 03       		.byte	0x3
+ 1404 04d7 00000000 		.4byte	mouseDataY
+ 1405 04db 1B       		.uleb128 0x1b
+ 1406 04dc 46000000 		.4byte	.LASF27
+ 1407 04e0 01       		.byte	0x1
+ 1408 04e1 0A       		.byte	0xa
+ 1409 04e2 EC040000 		.4byte	0x4ec
+ 1410 04e6 05       		.uleb128 0x5
+ 1411 04e7 03       		.byte	0x3
+ 1412 04e8 00000000 		.4byte	statusData
+ 1413 04ec 06       		.uleb128 0x6
+ 1414 04ed 04       		.byte	0x4
+ 1415 04ee A5000000 		.4byte	0xa5
+ 1416 04f2 1B       		.uleb128 0x1b
+ 1417 04f3 77020000 		.4byte	.LASF47
+ 1418 04f7 01       		.byte	0x1
+ 1419 04f8 0E       		.byte	0xe
+ 1420 04f9 A5000000 		.4byte	0xa5
+ 1421 04fd 05       		.uleb128 0x5
+ 1422 04fe 03       		.byte	0x3
+ 1423 04ff 00000000 		.4byte	mouseX_global
+ 1424 0503 1C       		.uleb128 0x1c
+ 1425 0504 72010000 		.4byte	.LASF50
+ 1426 0508 09       		.byte	0x9
+ 1427 0509 DE       		.byte	0xde
+ 1428 050a 68000000 		.4byte	0x68
+ 1429 050e 1E050000 		.4byte	0x51e
+ 1430 0512 1D       		.uleb128 0x1d
+ 1431 0513 CD000000 		.4byte	0xcd
+ 1432 0517 1D       		.uleb128 0x1d
+ 1433 0518 D3000000 		.4byte	0xd3
+ 1434 051c 1E       		.uleb128 0x1e
+ 1435 051d 00       		.byte	0
+ 1436 051e 1F       		.uleb128 0x1f
+ 1437 051f EA020000 		.4byte	.LASF48
+ 1438 0523 07       		.byte	0x7
+ 1439 0524 29       		.byte	0x29
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 31
+
+
+ 1440 0525 81000000 		.4byte	0x81
+ 1441 0529 1F       		.uleb128 0x1f
+ 1442 052a 44010000 		.4byte	.LASF49
+ 1443 052e 08       		.byte	0x8
+ 1444 052f 29       		.byte	0x29
+ 1445 0530 81000000 		.4byte	0x81
+ 1446 0534 1C       		.uleb128 0x1c
+ 1447 0535 C0020000 		.4byte	.LASF51
+ 1448 0539 0A       		.byte	0xa
+ 1449 053a 86       		.byte	0x86
+ 1450 053b B8000000 		.4byte	0xb8
+ 1451 053f 49050000 		.4byte	0x549
+ 1452 0543 1D       		.uleb128 0x1d
+ 1453 0544 B8000000 		.4byte	0xb8
+ 1454 0548 00       		.byte	0
+ 1455 0549 1C       		.uleb128 0x1c
+ 1456 054a 26030000 		.4byte	.LASF52
+ 1457 054e 0A       		.byte	0xa
+ 1458 054f 7D       		.byte	0x7d
+ 1459 0550 B8000000 		.4byte	0xb8
+ 1460 0554 5E050000 		.4byte	0x55e
+ 1461 0558 1D       		.uleb128 0x1d
+ 1462 0559 B8000000 		.4byte	0xb8
+ 1463 055d 00       		.byte	0
+ 1464 055e 1C       		.uleb128 0x1c
+ 1465 055f 53010000 		.4byte	.LASF53
+ 1466 0563 0B       		.byte	0xb
+ 1467 0564 0D       		.byte	0xd
+ 1468 0565 81000000 		.4byte	0x81
+ 1469 0569 73050000 		.4byte	0x573
+ 1470 056d 1D       		.uleb128 0x1d
+ 1471 056e 81000000 		.4byte	0x81
+ 1472 0572 00       		.byte	0
+ 1473 0573 20       		.uleb128 0x20
+ 1474 0574 B0020000 		.4byte	.LASF54
+ 1475 0578 08       		.byte	0x8
+ 1476 0579 26       		.byte	0x26
+ 1477 057a 84050000 		.4byte	0x584
+ 1478 057e 1D       		.uleb128 0x1d
+ 1479 057f 81000000 		.4byte	0x81
+ 1480 0583 00       		.byte	0
+ 1481 0584 20       		.uleb128 0x20
+ 1482 0585 5A010000 		.4byte	.LASF55
+ 1483 0589 0C       		.byte	0xc
+ 1484 058a 77       		.byte	0x77
+ 1485 058b 95050000 		.4byte	0x595
+ 1486 058f 1D       		.uleb128 0x1d
+ 1487 0590 8D000000 		.4byte	0x8d
+ 1488 0594 00       		.byte	0
+ 1489 0595 21       		.uleb128 0x21
+ 1490 0596 10000000 		.4byte	.LASF60
+ 1491 059a 07       		.byte	0x7
+ 1492 059b 26       		.byte	0x26
+ 1493 059c 1D       		.uleb128 0x1d
+ 1494 059d 81000000 		.4byte	0x81
+ 1495 05a1 00       		.byte	0
+ 1496 05a2 00       		.byte	0
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 32
+
+
+ 1497              		.section	.debug_abbrev,"",%progbits
+ 1498              	.Ldebug_abbrev0:
+ 1499 0000 01       		.uleb128 0x1
+ 1500 0001 11       		.uleb128 0x11
+ 1501 0002 01       		.byte	0x1
+ 1502 0003 25       		.uleb128 0x25
+ 1503 0004 0E       		.uleb128 0xe
+ 1504 0005 13       		.uleb128 0x13
+ 1505 0006 0B       		.uleb128 0xb
+ 1506 0007 03       		.uleb128 0x3
+ 1507 0008 0E       		.uleb128 0xe
+ 1508 0009 1B       		.uleb128 0x1b
+ 1509 000a 0E       		.uleb128 0xe
+ 1510 000b 55       		.uleb128 0x55
+ 1511 000c 17       		.uleb128 0x17
+ 1512 000d 11       		.uleb128 0x11
+ 1513 000e 01       		.uleb128 0x1
+ 1514 000f 10       		.uleb128 0x10
+ 1515 0010 17       		.uleb128 0x17
+ 1516 0011 00       		.byte	0
+ 1517 0012 00       		.byte	0
+ 1518 0013 02       		.uleb128 0x2
+ 1519 0014 24       		.uleb128 0x24
+ 1520 0015 00       		.byte	0
+ 1521 0016 0B       		.uleb128 0xb
+ 1522 0017 0B       		.uleb128 0xb
+ 1523 0018 3E       		.uleb128 0x3e
+ 1524 0019 0B       		.uleb128 0xb
+ 1525 001a 03       		.uleb128 0x3
+ 1526 001b 0E       		.uleb128 0xe
+ 1527 001c 00       		.byte	0
+ 1528 001d 00       		.byte	0
+ 1529 001e 03       		.uleb128 0x3
+ 1530 001f 16       		.uleb128 0x16
+ 1531 0020 00       		.byte	0
+ 1532 0021 03       		.uleb128 0x3
+ 1533 0022 0E       		.uleb128 0xe
+ 1534 0023 3A       		.uleb128 0x3a
+ 1535 0024 0B       		.uleb128 0xb
+ 1536 0025 3B       		.uleb128 0x3b
+ 1537 0026 0B       		.uleb128 0xb
+ 1538 0027 49       		.uleb128 0x49
+ 1539 0028 13       		.uleb128 0x13
+ 1540 0029 00       		.byte	0
+ 1541 002a 00       		.byte	0
+ 1542 002b 04       		.uleb128 0x4
+ 1543 002c 24       		.uleb128 0x24
+ 1544 002d 00       		.byte	0
+ 1545 002e 0B       		.uleb128 0xb
+ 1546 002f 0B       		.uleb128 0xb
+ 1547 0030 3E       		.uleb128 0x3e
+ 1548 0031 0B       		.uleb128 0xb
+ 1549 0032 03       		.uleb128 0x3
+ 1550 0033 08       		.uleb128 0x8
+ 1551 0034 00       		.byte	0
+ 1552 0035 00       		.byte	0
+ 1553 0036 05       		.uleb128 0x5
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 33
+
+
+ 1554 0037 16       		.uleb128 0x16
+ 1555 0038 00       		.byte	0
+ 1556 0039 03       		.uleb128 0x3
+ 1557 003a 0E       		.uleb128 0xe
+ 1558 003b 3A       		.uleb128 0x3a
+ 1559 003c 0B       		.uleb128 0xb
+ 1560 003d 3B       		.uleb128 0x3b
+ 1561 003e 05       		.uleb128 0x5
+ 1562 003f 49       		.uleb128 0x49
+ 1563 0040 13       		.uleb128 0x13
+ 1564 0041 00       		.byte	0
+ 1565 0042 00       		.byte	0
+ 1566 0043 06       		.uleb128 0x6
+ 1567 0044 0F       		.uleb128 0xf
+ 1568 0045 00       		.byte	0
+ 1569 0046 0B       		.uleb128 0xb
+ 1570 0047 0B       		.uleb128 0xb
+ 1571 0048 49       		.uleb128 0x49
+ 1572 0049 13       		.uleb128 0x13
+ 1573 004a 00       		.byte	0
+ 1574 004b 00       		.byte	0
+ 1575 004c 07       		.uleb128 0x7
+ 1576 004d 26       		.uleb128 0x26
+ 1577 004e 00       		.byte	0
+ 1578 004f 49       		.uleb128 0x49
+ 1579 0050 13       		.uleb128 0x13
+ 1580 0051 00       		.byte	0
+ 1581 0052 00       		.byte	0
+ 1582 0053 08       		.uleb128 0x8
+ 1583 0054 13       		.uleb128 0x13
+ 1584 0055 01       		.byte	0x1
+ 1585 0056 03       		.uleb128 0x3
+ 1586 0057 0E       		.uleb128 0xe
+ 1587 0058 0B       		.uleb128 0xb
+ 1588 0059 0B       		.uleb128 0xb
+ 1589 005a 3A       		.uleb128 0x3a
+ 1590 005b 0B       		.uleb128 0xb
+ 1591 005c 3B       		.uleb128 0x3b
+ 1592 005d 0B       		.uleb128 0xb
+ 1593 005e 01       		.uleb128 0x1
+ 1594 005f 13       		.uleb128 0x13
+ 1595 0060 00       		.byte	0
+ 1596 0061 00       		.byte	0
+ 1597 0062 09       		.uleb128 0x9
+ 1598 0063 0D       		.uleb128 0xd
+ 1599 0064 00       		.byte	0
+ 1600 0065 03       		.uleb128 0x3
+ 1601 0066 0E       		.uleb128 0xe
+ 1602 0067 3A       		.uleb128 0x3a
+ 1603 0068 0B       		.uleb128 0xb
+ 1604 0069 3B       		.uleb128 0x3b
+ 1605 006a 0B       		.uleb128 0xb
+ 1606 006b 49       		.uleb128 0x49
+ 1607 006c 13       		.uleb128 0x13
+ 1608 006d 38       		.uleb128 0x38
+ 1609 006e 0B       		.uleb128 0xb
+ 1610 006f 00       		.byte	0
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 34
+
+
+ 1611 0070 00       		.byte	0
+ 1612 0071 0A       		.uleb128 0xa
+ 1613 0072 01       		.uleb128 0x1
+ 1614 0073 01       		.byte	0x1
+ 1615 0074 49       		.uleb128 0x49
+ 1616 0075 13       		.uleb128 0x13
+ 1617 0076 01       		.uleb128 0x1
+ 1618 0077 13       		.uleb128 0x13
+ 1619 0078 00       		.byte	0
+ 1620 0079 00       		.byte	0
+ 1621 007a 0B       		.uleb128 0xb
+ 1622 007b 21       		.uleb128 0x21
+ 1623 007c 00       		.byte	0
+ 1624 007d 49       		.uleb128 0x49
+ 1625 007e 13       		.uleb128 0x13
+ 1626 007f 2F       		.uleb128 0x2f
+ 1627 0080 0B       		.uleb128 0xb
+ 1628 0081 00       		.byte	0
+ 1629 0082 00       		.byte	0
+ 1630 0083 0C       		.uleb128 0xc
+ 1631 0084 2E       		.uleb128 0x2e
+ 1632 0085 01       		.byte	0x1
+ 1633 0086 3F       		.uleb128 0x3f
+ 1634 0087 19       		.uleb128 0x19
+ 1635 0088 03       		.uleb128 0x3
+ 1636 0089 0E       		.uleb128 0xe
+ 1637 008a 3A       		.uleb128 0x3a
+ 1638 008b 0B       		.uleb128 0xb
+ 1639 008c 3B       		.uleb128 0x3b
+ 1640 008d 0B       		.uleb128 0xb
+ 1641 008e 27       		.uleb128 0x27
+ 1642 008f 19       		.uleb128 0x19
+ 1643 0090 11       		.uleb128 0x11
+ 1644 0091 01       		.uleb128 0x1
+ 1645 0092 12       		.uleb128 0x12
+ 1646 0093 06       		.uleb128 0x6
+ 1647 0094 40       		.uleb128 0x40
+ 1648 0095 18       		.uleb128 0x18
+ 1649 0096 9742     		.uleb128 0x2117
+ 1650 0098 19       		.uleb128 0x19
+ 1651 0099 01       		.uleb128 0x1
+ 1652 009a 13       		.uleb128 0x13
+ 1653 009b 00       		.byte	0
+ 1654 009c 00       		.byte	0
+ 1655 009d 0D       		.uleb128 0xd
+ 1656 009e 05       		.uleb128 0x5
+ 1657 009f 00       		.byte	0
+ 1658 00a0 03       		.uleb128 0x3
+ 1659 00a1 0E       		.uleb128 0xe
+ 1660 00a2 3A       		.uleb128 0x3a
+ 1661 00a3 0B       		.uleb128 0xb
+ 1662 00a4 3B       		.uleb128 0x3b
+ 1663 00a5 0B       		.uleb128 0xb
+ 1664 00a6 49       		.uleb128 0x49
+ 1665 00a7 13       		.uleb128 0x13
+ 1666 00a8 02       		.uleb128 0x2
+ 1667 00a9 17       		.uleb128 0x17
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 35
+
+
+ 1668 00aa 00       		.byte	0
+ 1669 00ab 00       		.byte	0
+ 1670 00ac 0E       		.uleb128 0xe
+ 1671 00ad 34       		.uleb128 0x34
+ 1672 00ae 00       		.byte	0
+ 1673 00af 03       		.uleb128 0x3
+ 1674 00b0 0E       		.uleb128 0xe
+ 1675 00b1 3A       		.uleb128 0x3a
+ 1676 00b2 0B       		.uleb128 0xb
+ 1677 00b3 3B       		.uleb128 0x3b
+ 1678 00b4 0B       		.uleb128 0xb
+ 1679 00b5 49       		.uleb128 0x49
+ 1680 00b6 13       		.uleb128 0x13
+ 1681 00b7 02       		.uleb128 0x2
+ 1682 00b8 18       		.uleb128 0x18
+ 1683 00b9 00       		.byte	0
+ 1684 00ba 00       		.byte	0
+ 1685 00bb 0F       		.uleb128 0xf
+ 1686 00bc 34       		.uleb128 0x34
+ 1687 00bd 00       		.byte	0
+ 1688 00be 03       		.uleb128 0x3
+ 1689 00bf 08       		.uleb128 0x8
+ 1690 00c0 3A       		.uleb128 0x3a
+ 1691 00c1 0B       		.uleb128 0xb
+ 1692 00c2 3B       		.uleb128 0x3b
+ 1693 00c3 0B       		.uleb128 0xb
+ 1694 00c4 49       		.uleb128 0x49
+ 1695 00c5 13       		.uleb128 0x13
+ 1696 00c6 02       		.uleb128 0x2
+ 1697 00c7 17       		.uleb128 0x17
+ 1698 00c8 00       		.byte	0
+ 1699 00c9 00       		.byte	0
+ 1700 00ca 10       		.uleb128 0x10
+ 1701 00cb 898201   		.uleb128 0x4109
+ 1702 00ce 01       		.byte	0x1
+ 1703 00cf 11       		.uleb128 0x11
+ 1704 00d0 01       		.uleb128 0x1
+ 1705 00d1 31       		.uleb128 0x31
+ 1706 00d2 13       		.uleb128 0x13
+ 1707 00d3 01       		.uleb128 0x1
+ 1708 00d4 13       		.uleb128 0x13
+ 1709 00d5 00       		.byte	0
+ 1710 00d6 00       		.byte	0
+ 1711 00d7 11       		.uleb128 0x11
+ 1712 00d8 8A8201   		.uleb128 0x410a
+ 1713 00db 00       		.byte	0
+ 1714 00dc 02       		.uleb128 0x2
+ 1715 00dd 18       		.uleb128 0x18
+ 1716 00de 9142     		.uleb128 0x2111
+ 1717 00e0 18       		.uleb128 0x18
+ 1718 00e1 00       		.byte	0
+ 1719 00e2 00       		.byte	0
+ 1720 00e3 12       		.uleb128 0x12
+ 1721 00e4 898201   		.uleb128 0x4109
+ 1722 00e7 01       		.byte	0x1
+ 1723 00e8 11       		.uleb128 0x11
+ 1724 00e9 01       		.uleb128 0x1
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 36
+
+
+ 1725 00ea 31       		.uleb128 0x31
+ 1726 00eb 13       		.uleb128 0x13
+ 1727 00ec 00       		.byte	0
+ 1728 00ed 00       		.byte	0
+ 1729 00ee 13       		.uleb128 0x13
+ 1730 00ef 2E       		.uleb128 0x2e
+ 1731 00f0 01       		.byte	0x1
+ 1732 00f1 3F       		.uleb128 0x3f
+ 1733 00f2 19       		.uleb128 0x19
+ 1734 00f3 03       		.uleb128 0x3
+ 1735 00f4 0E       		.uleb128 0xe
+ 1736 00f5 3A       		.uleb128 0x3a
+ 1737 00f6 0B       		.uleb128 0xb
+ 1738 00f7 3B       		.uleb128 0x3b
+ 1739 00f8 0B       		.uleb128 0xb
+ 1740 00f9 27       		.uleb128 0x27
+ 1741 00fa 19       		.uleb128 0x19
+ 1742 00fb 11       		.uleb128 0x11
+ 1743 00fc 01       		.uleb128 0x1
+ 1744 00fd 12       		.uleb128 0x12
+ 1745 00fe 06       		.uleb128 0x6
+ 1746 00ff 40       		.uleb128 0x40
+ 1747 0100 18       		.uleb128 0x18
+ 1748 0101 9642     		.uleb128 0x2116
+ 1749 0103 19       		.uleb128 0x19
+ 1750 0104 01       		.uleb128 0x1
+ 1751 0105 13       		.uleb128 0x13
+ 1752 0106 00       		.byte	0
+ 1753 0107 00       		.byte	0
+ 1754 0108 14       		.uleb128 0x14
+ 1755 0109 34       		.uleb128 0x34
+ 1756 010a 00       		.byte	0
+ 1757 010b 03       		.uleb128 0x3
+ 1758 010c 08       		.uleb128 0x8
+ 1759 010d 3A       		.uleb128 0x3a
+ 1760 010e 0B       		.uleb128 0xb
+ 1761 010f 3B       		.uleb128 0x3b
+ 1762 0110 0B       		.uleb128 0xb
+ 1763 0111 49       		.uleb128 0x49
+ 1764 0112 13       		.uleb128 0x13
+ 1765 0113 1C       		.uleb128 0x1c
+ 1766 0114 05       		.uleb128 0x5
+ 1767 0115 00       		.byte	0
+ 1768 0116 00       		.byte	0
+ 1769 0117 15       		.uleb128 0x15
+ 1770 0118 34       		.uleb128 0x34
+ 1771 0119 00       		.byte	0
+ 1772 011a 03       		.uleb128 0x3
+ 1773 011b 0E       		.uleb128 0xe
+ 1774 011c 3A       		.uleb128 0x3a
+ 1775 011d 0B       		.uleb128 0xb
+ 1776 011e 3B       		.uleb128 0x3b
+ 1777 011f 0B       		.uleb128 0xb
+ 1778 0120 49       		.uleb128 0x49
+ 1779 0121 13       		.uleb128 0x13
+ 1780 0122 00       		.byte	0
+ 1781 0123 00       		.byte	0
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 37
+
+
+ 1782 0124 16       		.uleb128 0x16
+ 1783 0125 34       		.uleb128 0x34
+ 1784 0126 00       		.byte	0
+ 1785 0127 03       		.uleb128 0x3
+ 1786 0128 0E       		.uleb128 0xe
+ 1787 0129 3A       		.uleb128 0x3a
+ 1788 012a 0B       		.uleb128 0xb
+ 1789 012b 3B       		.uleb128 0x3b
+ 1790 012c 0B       		.uleb128 0xb
+ 1791 012d 49       		.uleb128 0x49
+ 1792 012e 13       		.uleb128 0x13
+ 1793 012f 1C       		.uleb128 0x1c
+ 1794 0130 0B       		.uleb128 0xb
+ 1795 0131 00       		.byte	0
+ 1796 0132 00       		.byte	0
+ 1797 0133 17       		.uleb128 0x17
+ 1798 0134 34       		.uleb128 0x34
+ 1799 0135 00       		.byte	0
+ 1800 0136 03       		.uleb128 0x3
+ 1801 0137 0E       		.uleb128 0xe
+ 1802 0138 3A       		.uleb128 0x3a
+ 1803 0139 0B       		.uleb128 0xb
+ 1804 013a 3B       		.uleb128 0x3b
+ 1805 013b 0B       		.uleb128 0xb
+ 1806 013c 49       		.uleb128 0x49
+ 1807 013d 13       		.uleb128 0x13
+ 1808 013e 02       		.uleb128 0x2
+ 1809 013f 17       		.uleb128 0x17
+ 1810 0140 00       		.byte	0
+ 1811 0141 00       		.byte	0
+ 1812 0142 18       		.uleb128 0x18
+ 1813 0143 898201   		.uleb128 0x4109
+ 1814 0146 00       		.byte	0
+ 1815 0147 11       		.uleb128 0x11
+ 1816 0148 01       		.uleb128 0x1
+ 1817 0149 31       		.uleb128 0x31
+ 1818 014a 13       		.uleb128 0x13
+ 1819 014b 00       		.byte	0
+ 1820 014c 00       		.byte	0
+ 1821 014d 19       		.uleb128 0x19
+ 1822 014e 34       		.uleb128 0x34
+ 1823 014f 00       		.byte	0
+ 1824 0150 03       		.uleb128 0x3
+ 1825 0151 0E       		.uleb128 0xe
+ 1826 0152 3A       		.uleb128 0x3a
+ 1827 0153 0B       		.uleb128 0xb
+ 1828 0154 3B       		.uleb128 0x3b
+ 1829 0155 05       		.uleb128 0x5
+ 1830 0156 49       		.uleb128 0x49
+ 1831 0157 13       		.uleb128 0x13
+ 1832 0158 3F       		.uleb128 0x3f
+ 1833 0159 19       		.uleb128 0x19
+ 1834 015a 3C       		.uleb128 0x3c
+ 1835 015b 19       		.uleb128 0x19
+ 1836 015c 00       		.byte	0
+ 1837 015d 00       		.byte	0
+ 1838 015e 1A       		.uleb128 0x1a
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 38
+
+
+ 1839 015f 35       		.uleb128 0x35
+ 1840 0160 00       		.byte	0
+ 1841 0161 49       		.uleb128 0x49
+ 1842 0162 13       		.uleb128 0x13
+ 1843 0163 00       		.byte	0
+ 1844 0164 00       		.byte	0
+ 1845 0165 1B       		.uleb128 0x1b
+ 1846 0166 34       		.uleb128 0x34
+ 1847 0167 00       		.byte	0
+ 1848 0168 03       		.uleb128 0x3
+ 1849 0169 0E       		.uleb128 0xe
+ 1850 016a 3A       		.uleb128 0x3a
+ 1851 016b 0B       		.uleb128 0xb
+ 1852 016c 3B       		.uleb128 0x3b
+ 1853 016d 0B       		.uleb128 0xb
+ 1854 016e 49       		.uleb128 0x49
+ 1855 016f 13       		.uleb128 0x13
+ 1856 0170 3F       		.uleb128 0x3f
+ 1857 0171 19       		.uleb128 0x19
+ 1858 0172 02       		.uleb128 0x2
+ 1859 0173 18       		.uleb128 0x18
+ 1860 0174 00       		.byte	0
+ 1861 0175 00       		.byte	0
+ 1862 0176 1C       		.uleb128 0x1c
+ 1863 0177 2E       		.uleb128 0x2e
+ 1864 0178 01       		.byte	0x1
+ 1865 0179 3F       		.uleb128 0x3f
+ 1866 017a 19       		.uleb128 0x19
+ 1867 017b 03       		.uleb128 0x3
+ 1868 017c 0E       		.uleb128 0xe
+ 1869 017d 3A       		.uleb128 0x3a
+ 1870 017e 0B       		.uleb128 0xb
+ 1871 017f 3B       		.uleb128 0x3b
+ 1872 0180 0B       		.uleb128 0xb
+ 1873 0181 27       		.uleb128 0x27
+ 1874 0182 19       		.uleb128 0x19
+ 1875 0183 49       		.uleb128 0x49
+ 1876 0184 13       		.uleb128 0x13
+ 1877 0185 3C       		.uleb128 0x3c
+ 1878 0186 19       		.uleb128 0x19
+ 1879 0187 01       		.uleb128 0x1
+ 1880 0188 13       		.uleb128 0x13
+ 1881 0189 00       		.byte	0
+ 1882 018a 00       		.byte	0
+ 1883 018b 1D       		.uleb128 0x1d
+ 1884 018c 05       		.uleb128 0x5
+ 1885 018d 00       		.byte	0
+ 1886 018e 49       		.uleb128 0x49
+ 1887 018f 13       		.uleb128 0x13
+ 1888 0190 00       		.byte	0
+ 1889 0191 00       		.byte	0
+ 1890 0192 1E       		.uleb128 0x1e
+ 1891 0193 18       		.uleb128 0x18
+ 1892 0194 00       		.byte	0
+ 1893 0195 00       		.byte	0
+ 1894 0196 00       		.byte	0
+ 1895 0197 1F       		.uleb128 0x1f
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 39
+
+
+ 1896 0198 2E       		.uleb128 0x2e
+ 1897 0199 00       		.byte	0
+ 1898 019a 3F       		.uleb128 0x3f
+ 1899 019b 19       		.uleb128 0x19
+ 1900 019c 03       		.uleb128 0x3
+ 1901 019d 0E       		.uleb128 0xe
+ 1902 019e 3A       		.uleb128 0x3a
+ 1903 019f 0B       		.uleb128 0xb
+ 1904 01a0 3B       		.uleb128 0x3b
+ 1905 01a1 0B       		.uleb128 0xb
+ 1906 01a2 27       		.uleb128 0x27
+ 1907 01a3 19       		.uleb128 0x19
+ 1908 01a4 49       		.uleb128 0x49
+ 1909 01a5 13       		.uleb128 0x13
+ 1910 01a6 3C       		.uleb128 0x3c
+ 1911 01a7 19       		.uleb128 0x19
+ 1912 01a8 00       		.byte	0
+ 1913 01a9 00       		.byte	0
+ 1914 01aa 20       		.uleb128 0x20
+ 1915 01ab 2E       		.uleb128 0x2e
+ 1916 01ac 01       		.byte	0x1
+ 1917 01ad 3F       		.uleb128 0x3f
+ 1918 01ae 19       		.uleb128 0x19
+ 1919 01af 03       		.uleb128 0x3
+ 1920 01b0 0E       		.uleb128 0xe
+ 1921 01b1 3A       		.uleb128 0x3a
+ 1922 01b2 0B       		.uleb128 0xb
+ 1923 01b3 3B       		.uleb128 0x3b
+ 1924 01b4 0B       		.uleb128 0xb
+ 1925 01b5 27       		.uleb128 0x27
+ 1926 01b6 19       		.uleb128 0x19
+ 1927 01b7 3C       		.uleb128 0x3c
+ 1928 01b8 19       		.uleb128 0x19
+ 1929 01b9 01       		.uleb128 0x1
+ 1930 01ba 13       		.uleb128 0x13
+ 1931 01bb 00       		.byte	0
+ 1932 01bc 00       		.byte	0
+ 1933 01bd 21       		.uleb128 0x21
+ 1934 01be 2E       		.uleb128 0x2e
+ 1935 01bf 01       		.byte	0x1
+ 1936 01c0 3F       		.uleb128 0x3f
+ 1937 01c1 19       		.uleb128 0x19
+ 1938 01c2 03       		.uleb128 0x3
+ 1939 01c3 0E       		.uleb128 0xe
+ 1940 01c4 3A       		.uleb128 0x3a
+ 1941 01c5 0B       		.uleb128 0xb
+ 1942 01c6 3B       		.uleb128 0x3b
+ 1943 01c7 0B       		.uleb128 0xb
+ 1944 01c8 27       		.uleb128 0x27
+ 1945 01c9 19       		.uleb128 0x19
+ 1946 01ca 3C       		.uleb128 0x3c
+ 1947 01cb 19       		.uleb128 0x19
+ 1948 01cc 00       		.byte	0
+ 1949 01cd 00       		.byte	0
+ 1950 01ce 00       		.byte	0
+ 1951              		.section	.debug_loc,"",%progbits
+ 1952              	.Ldebug_loc0:
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 40
+
+
+ 1953              	.LLST0:
+ 1954 0000 00000000 		.4byte	.LVL0
+ 1955 0004 0C000000 		.4byte	.LVL2
+ 1956 0008 0100     		.2byte	0x1
+ 1957 000a 50       		.byte	0x50
+ 1958 000b 0C000000 		.4byte	.LVL2
+ 1959 000f 72000000 		.4byte	.LVL16
+ 1960 0013 0100     		.2byte	0x1
+ 1961 0015 56       		.byte	0x56
+ 1962 0016 72000000 		.4byte	.LVL16
+ 1963 001a 7C000000 		.4byte	.LFE64
+ 1964 001e 0400     		.2byte	0x4
+ 1965 0020 F3       		.byte	0xf3
+ 1966 0021 01       		.uleb128 0x1
+ 1967 0022 50       		.byte	0x50
+ 1968 0023 9F       		.byte	0x9f
+ 1969 0024 00000000 		.4byte	0
+ 1970 0028 00000000 		.4byte	0
+ 1971              	.LLST1:
+ 1972 002c 00000000 		.4byte	.LVL0
+ 1973 0030 0C000000 		.4byte	.LVL2
+ 1974 0034 0100     		.2byte	0x1
+ 1975 0036 51       		.byte	0x51
+ 1976 0037 0C000000 		.4byte	.LVL2
+ 1977 003b 72000000 		.4byte	.LVL16
+ 1978 003f 0100     		.2byte	0x1
+ 1979 0041 55       		.byte	0x55
+ 1980 0042 72000000 		.4byte	.LVL16
+ 1981 0046 7C000000 		.4byte	.LFE64
+ 1982 004a 0400     		.2byte	0x4
+ 1983 004c F3       		.byte	0xf3
+ 1984 004d 01       		.uleb128 0x1
+ 1985 004e 51       		.byte	0x51
+ 1986 004f 9F       		.byte	0x9f
+ 1987 0050 00000000 		.4byte	0
+ 1988 0054 00000000 		.4byte	0
+ 1989              	.LLST2:
+ 1990 0058 00000000 		.4byte	.LVL0
+ 1991 005c 0C000000 		.4byte	.LVL2
+ 1992 0060 0100     		.2byte	0x1
+ 1993 0062 52       		.byte	0x52
+ 1994 0063 0C000000 		.4byte	.LVL2
+ 1995 0067 7C000000 		.4byte	.LFE64
+ 1996 006b 0400     		.2byte	0x4
+ 1997 006d F3       		.byte	0xf3
+ 1998 006e 01       		.uleb128 0x1
+ 1999 006f 52       		.byte	0x52
+ 2000 0070 9F       		.byte	0x9f
+ 2001 0071 00000000 		.4byte	0
+ 2002 0075 00000000 		.4byte	0
+ 2003              	.LLST3:
+ 2004 0079 08000000 		.4byte	.LVL1
+ 2005 007d 0C000000 		.4byte	.LVL2
+ 2006 0081 0200     		.2byte	0x2
+ 2007 0083 30       		.byte	0x30
+ 2008 0084 9F       		.byte	0x9f
+ 2009 0085 0C000000 		.4byte	.LVL2
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 41
+
+
+ 2010 0089 2C000000 		.4byte	.LVL5
+ 2011 008d 0100     		.2byte	0x1
+ 2012 008f 54       		.byte	0x54
+ 2013 0090 2E000000 		.4byte	.LVL6
+ 2014 0094 36000000 		.4byte	.LVL7
+ 2015 0098 0100     		.2byte	0x1
+ 2016 009a 54       		.byte	0x54
+ 2017 009b 36000000 		.4byte	.LVL7
+ 2018 009f 38000000 		.4byte	.LVL8
+ 2019 00a3 0100     		.2byte	0x1
+ 2020 00a5 53       		.byte	0x53
+ 2021 00a6 38000000 		.4byte	.LVL8
+ 2022 00aa 58000000 		.4byte	.LVL11
+ 2023 00ae 0100     		.2byte	0x1
+ 2024 00b0 54       		.byte	0x54
+ 2025 00b1 5A000000 		.4byte	.LVL12
+ 2026 00b5 64000000 		.4byte	.LVL13
+ 2027 00b9 0100     		.2byte	0x1
+ 2028 00bb 54       		.byte	0x54
+ 2029 00bc 64000000 		.4byte	.LVL13
+ 2030 00c0 66000000 		.4byte	.LVL14
+ 2031 00c4 0100     		.2byte	0x1
+ 2032 00c6 53       		.byte	0x53
+ 2033 00c7 66000000 		.4byte	.LVL14
+ 2034 00cb 68000000 		.4byte	.LVL15
+ 2035 00cf 0100     		.2byte	0x1
+ 2036 00d1 52       		.byte	0x52
+ 2037 00d2 68000000 		.4byte	.LVL15
+ 2038 00d6 7C000000 		.4byte	.LFE64
+ 2039 00da 0100     		.2byte	0x1
+ 2040 00dc 53       		.byte	0x53
+ 2041 00dd 00000000 		.4byte	0
+ 2042 00e1 00000000 		.4byte	0
+ 2043              	.LLST4:
+ 2044 00e5 00000000 		.4byte	.LVL17
+ 2045 00e9 08000000 		.4byte	.LVL19
+ 2046 00ed 0100     		.2byte	0x1
+ 2047 00ef 50       		.byte	0x50
+ 2048 00f0 08000000 		.4byte	.LVL19
+ 2049 00f4 82020000 		.4byte	.LVL95
+ 2050 00f8 0100     		.2byte	0x1
+ 2051 00fa 55       		.byte	0x55
+ 2052 00fb 82020000 		.4byte	.LVL95
+ 2053 00ff A8020000 		.4byte	.LFE65
+ 2054 0103 0400     		.2byte	0x4
+ 2055 0105 F3       		.byte	0xf3
+ 2056 0106 01       		.uleb128 0x1
+ 2057 0107 50       		.byte	0x50
+ 2058 0108 9F       		.byte	0x9f
+ 2059 0109 00000000 		.4byte	0
+ 2060 010d 00000000 		.4byte	0
+ 2061              	.LLST5:
+ 2062 0111 04000000 		.4byte	.LVL18
+ 2063 0115 08000000 		.4byte	.LVL19
+ 2064 0119 0200     		.2byte	0x2
+ 2065 011b 30       		.byte	0x30
+ 2066 011c 9F       		.byte	0x9f
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 42
+
+
+ 2067 011d 08000000 		.4byte	.LVL19
+ 2068 0121 70000000 		.4byte	.LVL26
+ 2069 0125 0100     		.2byte	0x1
+ 2070 0127 54       		.byte	0x54
+ 2071 0128 72000000 		.4byte	.LVL27
+ 2072 012c 88000000 		.4byte	.LVL29
+ 2073 0130 0100     		.2byte	0x1
+ 2074 0132 54       		.byte	0x54
+ 2075 0133 8A000000 		.4byte	.LVL30
+ 2076 0137 8E000000 		.4byte	.LVL31
+ 2077 013b 0100     		.2byte	0x1
+ 2078 013d 54       		.byte	0x54
+ 2079 013e 00000000 		.4byte	0
+ 2080 0142 00000000 		.4byte	0
+ 2081              	.LLST6:
+ 2082 0146 04000000 		.4byte	.LVL18
+ 2083 014a 92000000 		.4byte	.LVL32
+ 2084 014e 0200     		.2byte	0x2
+ 2085 0150 37       		.byte	0x37
+ 2086 0151 9F       		.byte	0x9f
+ 2087 0152 92000000 		.4byte	.LVL32
+ 2088 0156 CC000000 		.4byte	.LVL37
+ 2089 015a 0100     		.2byte	0x1
+ 2090 015c 53       		.byte	0x53
+ 2091 015d CE000000 		.4byte	.LVL38
+ 2092 0161 D6000000 		.4byte	.LVL39
+ 2093 0165 0100     		.2byte	0x1
+ 2094 0167 53       		.byte	0x53
+ 2095 0168 D6000000 		.4byte	.LVL39
+ 2096 016c F8000000 		.4byte	.LVL41
+ 2097 0170 0100     		.2byte	0x1
+ 2098 0172 50       		.byte	0x50
+ 2099 0173 00000000 		.4byte	0
+ 2100 0177 00000000 		.4byte	0
+ 2101              	.LLST7:
+ 2102 017b 04000000 		.4byte	.LVL18
+ 2103 017f 06010000 		.4byte	.LVL45
+ 2104 0183 0200     		.2byte	0x2
+ 2105 0185 30       		.byte	0x30
+ 2106 0186 9F       		.byte	0x9f
+ 2107 0187 06010000 		.4byte	.LVL45
+ 2108 018b 12010000 		.4byte	.LVL46
+ 2109 018f 0100     		.2byte	0x1
+ 2110 0191 50       		.byte	0x50
+ 2111 0192 12010000 		.4byte	.LVL46
+ 2112 0196 80020000 		.4byte	.LVL94
+ 2113 019a 0100     		.2byte	0x1
+ 2114 019c 54       		.byte	0x54
+ 2115 019d 00000000 		.4byte	0
+ 2116 01a1 00000000 		.4byte	0
+ 2117              	.LLST8:
+ 2118 01a5 04000000 		.4byte	.LVL18
+ 2119 01a9 82000000 		.4byte	.LVL28
+ 2120 01ad 0200     		.2byte	0x2
+ 2121 01af 30       		.byte	0x30
+ 2122 01b0 9F       		.byte	0x9f
+ 2123 01b1 82000000 		.4byte	.LVL28
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 43
+
+
+ 2124 01b5 28010000 		.4byte	.LVL48
+ 2125 01b9 0100     		.2byte	0x1
+ 2126 01bb 56       		.byte	0x56
+ 2127 01bc 60010000 		.4byte	.LVL57
+ 2128 01c0 78010000 		.4byte	.LVL59
+ 2129 01c4 0100     		.2byte	0x1
+ 2130 01c6 56       		.byte	0x56
+ 2131 01c7 B8010000 		.4byte	.LVL69
+ 2132 01cb D0010000 		.4byte	.LVL71
+ 2133 01cf 0100     		.2byte	0x1
+ 2134 01d1 56       		.byte	0x56
+ 2135 01d2 10020000 		.4byte	.LVL81
+ 2136 01d6 26020000 		.4byte	.LVL83
+ 2137 01da 0100     		.2byte	0x1
+ 2138 01dc 56       		.byte	0x56
+ 2139 01dd 00000000 		.4byte	0
+ 2140 01e1 00000000 		.4byte	0
+ 2141              	.LLST9:
+ 2142 01e5 04000000 		.4byte	.LVL18
+ 2143 01e9 92000000 		.4byte	.LVL32
+ 2144 01ed 0200     		.2byte	0x2
+ 2145 01ef 30       		.byte	0x30
+ 2146 01f0 9F       		.byte	0x9f
+ 2147 01f1 92000000 		.4byte	.LVL32
+ 2148 01f5 EC000000 		.4byte	.LVL40
+ 2149 01f9 0100     		.2byte	0x1
+ 2150 01fb 54       		.byte	0x54
+ 2151 01fc 00000000 		.4byte	0
+ 2152 0200 00000000 		.4byte	0
+ 2153              	.LLST10:
+ 2154 0204 00000000 		.4byte	.LVL96
+ 2155 0208 06000000 		.4byte	.LVL98
+ 2156 020c 0100     		.2byte	0x1
+ 2157 020e 50       		.byte	0x50
+ 2158 020f 06000000 		.4byte	.LVL98
+ 2159 0213 74000000 		.4byte	.LFE66
+ 2160 0217 0100     		.2byte	0x1
+ 2161 0219 55       		.byte	0x55
+ 2162 021a 00000000 		.4byte	0
+ 2163 021e 00000000 		.4byte	0
+ 2164              	.LLST11:
+ 2165 0222 04000000 		.4byte	.LVL97
+ 2166 0226 24000000 		.4byte	.LVL104
+ 2167 022a 0200     		.2byte	0x2
+ 2168 022c 30       		.byte	0x30
+ 2169 022d 9F       		.byte	0x9f
+ 2170 022e 24000000 		.4byte	.LVL104
+ 2171 0232 64000000 		.4byte	.LVL111
+ 2172 0236 0100     		.2byte	0x1
+ 2173 0238 54       		.byte	0x54
+ 2174 0239 66000000 		.4byte	.LVL112
+ 2175 023d 74000000 		.4byte	.LFE66
+ 2176 0241 0100     		.2byte	0x1
+ 2177 0243 54       		.byte	0x54
+ 2178 0244 00000000 		.4byte	0
+ 2179 0248 00000000 		.4byte	0
+ 2180              	.LLST12:
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 44
+
+
+ 2181 024c 00000000 		.4byte	.LVL115
+ 2182 0250 2C000000 		.4byte	.LVL121
+ 2183 0254 0100     		.2byte	0x1
+ 2184 0256 50       		.byte	0x50
+ 2185 0257 2C000000 		.4byte	.LVL121
+ 2186 025b 40000000 		.4byte	.LFE63
+ 2187 025f 0400     		.2byte	0x4
+ 2188 0261 F3       		.byte	0xf3
+ 2189 0262 01       		.uleb128 0x1
+ 2190 0263 50       		.byte	0x50
+ 2191 0264 9F       		.byte	0x9f
+ 2192 0265 00000000 		.4byte	0
+ 2193 0269 00000000 		.4byte	0
+ 2194              	.LLST13:
+ 2195 026d 00000000 		.4byte	.LVL115
+ 2196 0271 04000000 		.4byte	.LVL116
+ 2197 0275 0200     		.2byte	0x2
+ 2198 0277 30       		.byte	0x30
+ 2199 0278 9F       		.byte	0x9f
+ 2200 0279 04000000 		.4byte	.LVL116
+ 2201 027d 12000000 		.4byte	.LVL117
+ 2202 0281 0100     		.2byte	0x1
+ 2203 0283 53       		.byte	0x53
+ 2204 0284 14000000 		.4byte	.LVL118
+ 2205 0288 20000000 		.4byte	.LVL119
+ 2206 028c 0100     		.2byte	0x1
+ 2207 028e 53       		.byte	0x53
+ 2208 028f 20000000 		.4byte	.LVL119
+ 2209 0293 28000000 		.4byte	.LVL120
+ 2210 0297 0100     		.2byte	0x1
+ 2211 0299 52       		.byte	0x52
+ 2212 029a 00000000 		.4byte	0
+ 2213 029e 00000000 		.4byte	0
+ 2214              		.section	.debug_aranges,"",%progbits
+ 2215 0000 34000000 		.4byte	0x34
+ 2216 0004 0200     		.2byte	0x2
+ 2217 0006 00000000 		.4byte	.Ldebug_info0
+ 2218 000a 04       		.byte	0x4
+ 2219 000b 00       		.byte	0
+ 2220 000c 0000     		.2byte	0
+ 2221 000e 0000     		.2byte	0
+ 2222 0010 00000000 		.4byte	.LFB64
+ 2223 0014 7C000000 		.4byte	.LFE64-.LFB64
+ 2224 0018 00000000 		.4byte	.LFB65
+ 2225 001c A8020000 		.4byte	.LFE65-.LFB65
+ 2226 0020 00000000 		.4byte	.LFB66
+ 2227 0024 74000000 		.4byte	.LFE66-.LFB66
+ 2228 0028 00000000 		.4byte	.LFB63
+ 2229 002c 40000000 		.4byte	.LFE63-.LFB63
+ 2230 0030 00000000 		.4byte	0
+ 2231 0034 00000000 		.4byte	0
+ 2232              		.section	.debug_ranges,"",%progbits
+ 2233              	.Ldebug_ranges0:
+ 2234 0000 00000000 		.4byte	.LFB64
+ 2235 0004 7C000000 		.4byte	.LFE64
+ 2236 0008 00000000 		.4byte	.LFB65
+ 2237 000c A8020000 		.4byte	.LFE65
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 45
+
+
+ 2238 0010 00000000 		.4byte	.LFB66
+ 2239 0014 74000000 		.4byte	.LFE66
+ 2240 0018 00000000 		.4byte	.LFB63
+ 2241 001c 40000000 		.4byte	.LFE63
+ 2242 0020 00000000 		.4byte	0
+ 2243 0024 00000000 		.4byte	0
+ 2244              		.section	.debug_line,"",%progbits
+ 2245              	.Ldebug_line0:
+ 2246 0000 F3020000 		.section	.debug_str,"MS",%progbits,1
+ 2246      0200A601 
+ 2246      00000201 
+ 2246      FB0E0D00 
+ 2246      01010101 
+ 2247              	.LASF33:
+ 2248 0000 6D6F7573 		.ascii	"mouseData\000"
+ 2248      65446174 
+ 2248      6100
+ 2249              	.LASF23:
+ 2250 000a 616E676C 		.ascii	"angle\000"
+ 2250      6500
+ 2251              	.LASF60:
+ 2252 0010 5053325F 		.ascii	"PS2_Data_Write\000"
+ 2252      44617461 
+ 2252      5F577269 
+ 2252      746500
+ 2253              	.LASF34:
+ 2254 001f 6D756C74 		.ascii	"multiplier\000"
+ 2254      69706C69 
+ 2254      657200
+ 2255              	.LASF2:
+ 2256 002a 73686F72 		.ascii	"short int\000"
+ 2256      7420696E 
+ 2256      7400
+ 2257              	.LASF18:
+ 2258 0034 73697A65 		.ascii	"sizetype\000"
+ 2258      74797065 
+ 2258      00
+ 2259              	.LASF35:
+ 2260 003d 74656D70 		.ascii	"tempData\000"
+ 2260      44617461 
+ 2260      00
+ 2261              	.LASF27:
+ 2262 0046 73746174 		.ascii	"statusData\000"
+ 2262      75734461 
+ 2262      746100
+ 2263              	.LASF26:
+ 2264 0051 6C6F6E67 		.ascii	"long double\000"
+ 2264      20646F75 
+ 2264      626C6500 
+ 2265              	.LASF39:
+ 2266 005d 696E6974 		.ascii	"initMouse\000"
+ 2266      4D6F7573 
+ 2266      6500
+ 2267              	.LASF30:
+ 2268 0067 76616C75 		.ascii	"value\000"
+ 2268      6500
+ 2269              	.LASF45:
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 46
+
+
+ 2270 006d 6D6F7573 		.ascii	"mouseDataX\000"
+ 2270      65446174 
+ 2270      615800
+ 2271              	.LASF46:
+ 2272 0078 6D6F7573 		.ascii	"mouseDataY\000"
+ 2272      65446174 
+ 2272      615900
+ 2273              	.LASF12:
+ 2274 0083 75696E74 		.ascii	"uint16\000"
+ 2274      313600
+ 2275              	.LASF41:
+ 2276 008a 64617461 		.ascii	"dataSize\000"
+ 2276      53697A65 
+ 2276      00
+ 2277              	.LASF19:
+ 2278 0093 746D704D 		.ascii	"tmpMouseX\000"
+ 2278      6F757365 
+ 2278      5800
+ 2279              	.LASF20:
+ 2280 009d 746D704D 		.ascii	"tmpMouseY\000"
+ 2280      6F757365 
+ 2280      5900
+ 2281              	.LASF14:
+ 2282 00a7 696E7431 		.ascii	"int16\000"
+ 2282      3600
+ 2283              	.LASF11:
+ 2284 00ad 75696E74 		.ascii	"uint8\000"
+ 2284      3800
+ 2285              	.LASF15:
+ 2286 00b3 666C6F61 		.ascii	"float\000"
+ 2286      7400
+ 2287              	.LASF6:
+ 2288 00b9 6C6F6E67 		.ascii	"long long int\000"
+ 2288      206C6F6E 
+ 2288      6720696E 
+ 2288      7400
+ 2289              	.LASF13:
+ 2290 00c7 696E7438 		.ascii	"int8\000"
+ 2290      00
+ 2291              	.LASF58:
+ 2292 00cc 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\HellYaeh\\E4PRJ4-Gruppe"
+ 2292      73657273 
+ 2292      5C416E64 
+ 2292      6572735C 
+ 2292      4465736B 
+ 2293 00fa 315C5265 		.ascii	"1\\Retning med mus\\version_01.cydsn\000"
+ 2293      746E696E 
+ 2293      67206D65 
+ 2293      64206D75 
+ 2293      735C7665 
+ 2294              	.LASF42:
+ 2295 011d 496E6974 		.ascii	"Init\000"
+ 2295      00
+ 2296              	.LASF4:
+ 2297 0122 6C6F6E67 		.ascii	"long int\000"
+ 2297      20696E74 
+ 2297      00
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 47
+
+
+ 2298              	.LASF28:
+ 2299 012b 78446174 		.ascii	"xData\000"
+ 2299      6100
+ 2300              	.LASF24:
+ 2301 0131 66696E61 		.ascii	"finalX\000"
+ 2301      6C5800
+ 2302              	.LASF25:
+ 2303 0138 66696E61 		.ascii	"finalY\000"
+ 2303      6C5900
+ 2304              	.LASF40:
+ 2305 013f 44617461 		.ascii	"Data\000"
+ 2305      00
+ 2306              	.LASF49:
+ 2307 0144 5053325F 		.ascii	"PS2_Clock_Read\000"
+ 2307      436C6F63 
+ 2307      6B5F5265 
+ 2307      616400
+ 2308              	.LASF53:
+ 2309 0153 73746162 		.ascii	"stabil\000"
+ 2309      696C00
+ 2310              	.LASF55:
+ 2311 015a 43794465 		.ascii	"CyDelayUs\000"
+ 2311      6C617955 
+ 2311      7300
+ 2312              	.LASF1:
+ 2313 0164 756E7369 		.ascii	"unsigned char\000"
+ 2313      676E6564 
+ 2313      20636861 
+ 2313      7200
+ 2314              	.LASF50:
+ 2315 0172 73707269 		.ascii	"sprintf\000"
+ 2315      6E746600 
+ 2316              	.LASF0:
+ 2317 017a 7369676E 		.ascii	"signed char\000"
+ 2317      65642063 
+ 2317      68617200 
+ 2318              	.LASF10:
+ 2319 0186 696E7433 		.ascii	"int32_t\000"
+ 2319      325F7400 
+ 2320              	.LASF7:
+ 2321 018e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2321      206C6F6E 
+ 2321      6720756E 
+ 2321      7369676E 
+ 2321      65642069 
+ 2322              	.LASF8:
+ 2323 01a5 756E7369 		.ascii	"unsigned int\000"
+ 2323      676E6564 
+ 2323      20696E74 
+ 2323      00
+ 2324              	.LASF59:
+ 2325 01b2 6D6F7573 		.ascii	"mouse\000"
+ 2325      6500
+ 2326              	.LASF3:
+ 2327 01b8 73686F72 		.ascii	"short unsigned int\000"
+ 2327      7420756E 
+ 2327      7369676E 
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 48
+
+
+ 2327      65642069 
+ 2327      6E7400
+ 2328              	.LASF21:
+ 2329 01cb 73746174 		.ascii	"status\000"
+ 2329      757300
+ 2330              	.LASF17:
+ 2331 01d2 63686172 		.ascii	"char\000"
+ 2331      00
+ 2332              	.LASF36:
+ 2333 01d7 64697374 		.ascii	"distance\000"
+ 2333      616E6365 
+ 2333      00
+ 2334              	.LASF56:
+ 2335 01e0 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2335      4320342E 
+ 2335      392E3320 
+ 2335      32303135 
+ 2335      30333033 
+ 2336 0213 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 2336      20726576 
+ 2336      6973696F 
+ 2336      6E203232 
+ 2336      31323230 
+ 2337 0246 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2337      66756E63 
+ 2337      74696F6E 
+ 2337      2D736563 
+ 2337      74696F6E 
+ 2338              	.LASF43:
+ 2339 026e 696E6974 		.ascii	"initData\000"
+ 2339      44617461 
+ 2339      00
+ 2340              	.LASF47:
+ 2341 0277 6D6F7573 		.ascii	"mouseX_global\000"
+ 2341      65585F67 
+ 2341      6C6F6261 
+ 2341      6C00
+ 2342              	.LASF29:
+ 2343 0285 79446174 		.ascii	"yData\000"
+ 2343      6100
+ 2344              	.LASF5:
+ 2345 028b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2345      20756E73 
+ 2345      69676E65 
+ 2345      6420696E 
+ 2345      7400
+ 2346              	.LASF16:
+ 2347 029d 646F7562 		.ascii	"double\000"
+ 2347      6C6500
+ 2348              	.LASF57:
+ 2349 02a4 66756E63 		.ascii	"functions.c\000"
+ 2349      74696F6E 
+ 2349      732E6300 
+ 2350              	.LASF54:
+ 2351 02b0 5053325F 		.ascii	"PS2_Clock_Write\000"
+ 2351      436C6F63 
+ 2351      6B5F5772 
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc2ueJwK.s 			page 49
+
+
+ 2351      69746500 
+ 2352              	.LASF51:
+ 2353 02c0 73717274 		.ascii	"sqrt\000"
+ 2353      00
+ 2354              	.LASF9:
+ 2355 02c5 5F5F696E 		.ascii	"__int32_t\000"
+ 2355      7433325F 
+ 2355      7400
+ 2356              	.LASF32:
+ 2357 02cf 4953525F 		.ascii	"ISR_getMouseData\000"
+ 2357      6765744D 
+ 2357      6F757365 
+ 2357      44617461 
+ 2357      00
+ 2358              	.LASF37:
+ 2359 02e0 746D7058 		.ascii	"tmpX\000"
+ 2359      00
+ 2360              	.LASF38:
+ 2361 02e5 746D7059 		.ascii	"tmpY\000"
+ 2361      00
+ 2362              	.LASF48:
+ 2363 02ea 5053325F 		.ascii	"PS2_Data_Read\000"
+ 2363      44617461 
+ 2363      5F526561 
+ 2363      6400
+ 2364              	.LASF22:
+ 2365 02f8 74696D65 		.ascii	"timesInterrupted\000"
+ 2365      73496E74 
+ 2365      65727275 
+ 2365      70746564 
+ 2365      00
+ 2366              	.LASF44:
+ 2367 0309 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2367      52784275 
+ 2367      66666572 
+ 2367      00
+ 2368              	.LASF31:
+ 2369 0316 7072696E 		.ascii	"printBinaryData\000"
+ 2369      7442696E 
+ 2369      61727944 
+ 2369      61746100 
+ 2370              	.LASF52:
+ 2371 0326 6173696E 		.ascii	"asin\000"
+ 2371      00
+ 2372              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

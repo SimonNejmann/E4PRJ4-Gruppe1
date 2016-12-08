@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 1
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN6Rtur.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 1
   47 0012 FBD1     		bne	.L2
    9:init_step.c   ****         {    
   10:init_step.c   ****         }   
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 2
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN6Rtur.s 			page 2
 
 
   11:init_step.c   ****             
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 1
   89              		.file 12 "Generated_Source\\PSoC5/CounterB.h"
   90              		.file 13 "Generated_Source\\PSoC5/core_cm3.h"
   91              		.section	.debug_info,"",%progbits
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 3
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN6Rtur.s 			page 3
 
 
   92              	.Ldebug_info0:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 1
  146 006f 02       		.uleb128 0x2
  147 0070 04       		.byte	0x4
  148 0071 07       		.byte	0x7
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 4
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN6Rtur.s 			page 4
 
 
  149 0072 F6000000 		.4byte	.LASF8
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 1
  203 00e8 61010000 		.4byte	0x161
  204 00ec 09       		.uleb128 0x9
  205 00ed 1C000000 		.4byte	.LVL4
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 5
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN6Rtur.s 			page 5
 
 
  206 00f1 68010000 		.4byte	0x168
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 1
  260 016d 06       		.byte	0x6
  261 016e 4F       		.byte	0x4f
  262 016f 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 6
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN6Rtur.s 			page 6
 
 
  263 0170 C7010000 		.4byte	.LASF20
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 1
  317 001b 0E       		.uleb128 0xe
  318 001c 00       		.byte	0
  319 001d 00       		.byte	0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 7
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN6Rtur.s 			page 7
 
 
  320 001e 03       		.uleb128 0x3
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 1
  374 0054 9742     		.uleb128 0x2117
  375 0056 19       		.uleb128 0x19
  376 0057 01       		.uleb128 0x1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 8
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN6Rtur.s 			page 8
 
 
  377 0058 13       		.uleb128 0x13
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 1
  431 0095 00       		.byte	0
  432 0096 00       		.byte	0
  433 0097 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 9
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN6Rtur.s 			page 9
 
 
  434 0098 2E       		.uleb128 0x2e
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 1
  488 00ce 19       		.uleb128 0x19
  489 00cf 49       		.uleb128 0x49
  490 00d0 13       		.uleb128 0x13
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 10
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN6Rtur.s 			page 10
 
 
  491 00d1 3C       		.uleb128 0x3c
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 1
  529              	.LASF5:
  530 0042 6C6F6E67 		.ascii	"long unsigned int\000"
  530      20756E73 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 11
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN6Rtur.s 			page 11
 
 
  530      69676E65 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 1
  551      6720756E 
  551      7369676E 
  551      65642069 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 12
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN6Rtur.s 			page 12
 
 
  552              	.LASF26:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 1
  575      00
  576              	.LASF21:
  577 020c 50574D42 		.ascii	"PWMB1_Start\000"
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cckCfT5H.s 			page 13
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccN6Rtur.s 			page 13
 
 
  577      315F5374 

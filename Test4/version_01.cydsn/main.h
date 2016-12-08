@@ -9,7 +9,7 @@
 *****************************/
  
 uint8 run_front(uint8 angF, uint8 speedF);
-uint8 run_back(uint8 angB, uint8 speedB);
+uint8 run_back(uint8 angB);
 void init_step();
 #define SLAVE_ADDRESS       (0x49u)
 /* Buffer and packet size */

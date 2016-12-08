@@ -28,6 +28,7 @@ int main()
     CounterF_Start();
     CounterB_Start();
     PWMSF_Start();
+    PWMSB_Start();
     /* Start I2C slave (SCB mode) */
    
     
@@ -41,14 +42,16 @@ int main()
     for (;;)
     {
         PWMSF_WriteCompare(i2cbuf[SPEED_FRONT_POS]);
-         if(oldbuf[ANG_FRONT_POS] != i2cbuf[ANG_FRONT_POS] || oldbuf[SPEED_FRONT_POS] != i2cbuf[SPEED_FRONT_POS]  )
+        PWMSB_WriteCompare(i2cbuf[SPEED_BACK_POS]);
+        
+        if(oldbuf[ANG_FRONT_POS] != i2cbuf[ANG_FRONT_POS])
         {
-            run_front(i2cbuf[ANG_FRONT_POS],i2cbuf[SPEED_FRONT_POS]);
+            run_front(i2cbuf[ANG_FRONT_POS],i2cbuf[ANG_BACK_POS]);
         }
-         else if(oldbuf[ANG_BACK_POS] != i2cbuf[ANG_BACK_POS] || oldbuf[SPEED_BACK_POS] != i2cbuf[SPEED_BACK_POS] )
-        {
-            run_back(i2cbuf[ANG_BACK_POS],i2cbuf[SPEED_BACK_POS]);
-        }
+//        if(oldbuf[ANG_BACK_POS] != i2cbuf[ANG_BACK_POS])
+//        {
+//            run_back(i2cbuf[ANG_BACK_POS]);
+//        }
     }
     return 0;
 }

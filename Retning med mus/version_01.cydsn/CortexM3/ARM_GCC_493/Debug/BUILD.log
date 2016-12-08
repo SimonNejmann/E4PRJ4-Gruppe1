@@ -1,0 +1,36 @@
+--------------- Build Started: 12/08/2016 19:32:10 Project: version_01, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+The code generation step is up to date.
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_493\Debug/functions.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c functions.c -o .\CortexM3\ARM_GCC_493\Debug\functions.o
+In file included from functions.c:5:0:
+./main.h:17:0: warning: "BUFFER_SIZE" redefined
+ #define BUFFER_SIZE         (8u)
+ ^
+In file included from functions.c:2:0:
+./functions.h:6:0: note: this is the location of the previous definition
+ #define BUFFER_SIZE 4
+ ^
+functions.c: In function 'ISR_getMouseData':
+functions.c:99:9: warning: unused variable 'angle' [-Wunused-variable]
+     int angle;
+         ^
+functions.c:95:11: warning: unused variable 'tempData' [-Wunused-variable]
+     uint8 tempData = 0;
+           ^
+functions.c:94:11: warning: unused variable 'multiplier' [-Wunused-variable]
+     int16 multiplier = 1;
+           ^
+functions.c:93:10: warning: unused variable 'value' [-Wunused-variable]
+     char value[20];
+          ^
+functions.c: At top level:
+functions.c:255:1: warning: multi-line comment [-Wcomment]
+ //    (void) I2C_1_I2CMasterWriteBuf(I2C_SLAVE_ADDR, Data, BUFFER_SIZE, \
+ ^
+arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_493\Debug\version_01.a .\CortexM3\ARM_GCC_493\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_493\Debug\Clock_1.o .\CortexM3\ARM_GCC_493\Debug\Pin_1.o .\CortexM3\ARM_GCC_493\Debug\Clock_2.o .\CortexM3\ARM_GCC_493\Debug\CyDmac.o .\CortexM3\ARM_GCC_493\Debug\CyFlash.o .\CortexM3\ARM_GCC_493\Debug\CyLib.o .\CortexM3\ARM_GCC_493\Debug\cyPm.o .\CortexM3\ARM_GCC_493\Debug\CySpc.o .\CortexM3\ARM_GCC_493\Debug\cyutils.o .\CortexM3\ARM_GCC_493\Debug\I2CS.o .\CortexM3\ARM_GCC_493\Debug\I2CS_INT.o .\CortexM3\ARM_GCC_493\Debug\I2CS_PM.o .\CortexM3\ARM_GCC_493\Debug\Clock_3.o .\CortexM3\ARM_GCC_493\Debug\PWMSF.o .\CortexM3\ARM_GCC_493\Debug\PWMSF_PM.o .\CortexM3\ARM_GCC_493\Debug\SpeedForW.o .\CortexM3\ARM_GCC_493\Debug\stepF.o .\CortexM3\ARM_GCC_493\Debug\Dir_stepF.o .\CortexM3\ARM_GCC_493\Debug\PWMF1.o .\CortexM3\ARM_GCC_493\Debug\PWMF1_PM.o .\CortexM3\ARM_GCC_493\Debug\PWMF2.o .\CortexM3\ARM_GCC_493\Debug\PWMF2_PM.o .\CortexM3\ARM_GCC_493\Debug\CounterF.o .\CortexM3\ARM_GCC_493\Debug\CounterF_PM.o .\CortexM3\ARM_GCC_493\Debug\Clock_4.o .\CortexM3\ARM_GCC_493\Debug\stepB.o .\CortexM3\ARM_GCC_493\Debug\Clock_5.o .\CortexM3\ARM_GCC_493\Debug\Dir_stepB.o .\CortexM3\ARM_GCC_493\Debug\CounterB.o .\CortexM3\ARM_GCC_493\Debug\CounterB_PM.o .\CortexM3\ARM_GCC_493\Debug\PWMB2.o .\CortexM3\ARM_GCC_493\Debug\PWMB2_PM.o .\CortexM3\ARM_GCC_493\Debug\PWMB1.o .\CortexM3\ARM_GCC_493\Debug\PWMB1_PM.o .\CortexM3\ARM_GCC_493\Debug\PWMSB.o .\CortexM3\ARM_GCC_493\Debug\PWMSB_PM.o .\CortexM3\ARM_GCC_493\Debug\Clock_6.o .\CortexM3\ARM_GCC_493\Debug\SpeedBackW.o .\CortexM3\ARM_GCC_493\Debug\MicroF.o .\CortexM3\ARM_GCC_493\Debug\MicroB.o .\CortexM3\ARM_GCC_493\Debug\PS2_Data.o .\CortexM3\ARM_GCC_493\Debug\PS2_Clock.o .\CortexM3\ARM_GCC_493\Debug\isr_PS2_clock.o .\CortexM3\ARM_GCC_493\Debug\CyBootAsmGnu.o
+arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_493\Debug\version_01.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o .\CortexM3\ARM_GCC_493\Debug\version_01.elf .\CortexM3\ARM_GCC_493\Debug\main.o .\CortexM3\ARM_GCC_493\Debug\steer.o .\CortexM3\ARM_GCC_493\Debug\strafe.o .\CortexM3\ARM_GCC_493\Debug\init_step.o .\CortexM3\ARM_GCC_493\Debug\functions.o .\CortexM3\ARM_GCC_493\Debug\PS2_interrupt.o .\CortexM3\ARM_GCC_493\Debug\stabil.o .\CortexM3\ARM_GCC_493\Debug\cymetadata.o .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o .\CortexM3\ARM_GCC_493\Debug\version_01.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_493\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -g -ffunction-sections -Og -ffat-lto-objects -l m -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_493\Debug/version_01.map -T "C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retning med mus\version_01.cydsn\Generated_Source\PSoC5\cm3gcc.ld" -specs=nano.specs -Wl,--gc-sections -Wl,--end-group
+cyelftool.exe -C "C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retning med mus\version_01.cydsn\CortexM3\ARM_GCC_493\Debug\version_01.elf" --flash_row_size 256 --flash_size 262144
+cyelftool.exe -S "C:\Users\Anders\Desktop\HellYaeh\E4PRJ4-Gruppe1\Retning med mus\version_01.cydsn\CortexM3\ARM_GCC_493\Debug\version_01.elf"
+Flash used: 10494 of 262144 bytes (4,0 %).
+SRAM used: 2669 of 65536 bytes (4,1 %). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 12/08/2016 19:32:11 ---------------
