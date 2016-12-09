@@ -31,10 +31,11 @@
 ## PSoC Creator
 #################
 
-**/*.cydsn/codegentemp/
-**/*.cydsn/CortexM0/
-**/*.cydsn/Export/
-**/*.cydsn/Generated_Source/
+**/codegentemp/
+**/CortexM0/
+**/CortexM3/
+**/Export/
+**/Generated_Source/
 
 # =========================
 # Operating System Files
