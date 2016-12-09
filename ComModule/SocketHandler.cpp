@@ -1,4 +1,3 @@
-#include <iostream>
 #include <sys/select.h>
 #include "SocketHandler.hpp"
 #include "ComModule.hpp"

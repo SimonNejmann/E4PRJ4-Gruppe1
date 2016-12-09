@@ -7,6 +7,7 @@
 #include "RadarLogic.hpp"
 #include "OpdriftLogic.hpp"
 #include "RegulatorLogic.hpp"
+#include "RecurringTimer.hpp"
 
 class ComModule
 {
@@ -38,6 +39,10 @@ private:
   SocketHandler sock_;
   I2CHandler i2c_;
 
+  RecurringTimer radarTimer_;
+  RecurringTimer opdriftTimer_;
+  RecurringTimer keepAliveTimer_;
+  
   bool appAlive_;
   RadarLogic radar_;
   OpdriftLogic opdrift_;
@@ -55,7 +60,6 @@ private:
 
   void handleMsgReceiveI2cPacketRadar(Message *msg);
   void handleMsgReceiveI2cPacketOpdrift(Message *msg);
-  void handleMsgReceiveI2cPacketController(Message *msg);
   void handleMsgReceiveI2cPacketTest(Message *msg);
 
   void handleMsgReceiveUdpPacket(Message *msg);

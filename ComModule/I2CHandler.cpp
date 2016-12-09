@@ -46,7 +46,14 @@ void I2CHandler::handleMsg(Message *msg, unsigned long id)
       ComModule::PacketMessage *m = new ComModule::PacketMessage();
       m->len_ = i2c_.receive(constants::I2C_RADAR_ADDR, m->buf_,
 			     constants::I2C_RADAR_LENGTH);
-      partnerMq_->send(ComModule::RECEIVE_I2C_PACKET_RADAR, m);
+      if (m->len_ < 0) {
+	// Read error, discard message
+	std::cout << "I2C_H: Read error from radar" << std::endl;
+	delete m;
+      } else {
+	// Read ok, send
+	partnerMq_->send(ComModule::RECEIVE_I2C_PACKET_RADAR, m);
+      }
       break;
     }
   case I2C_READ_OPDRIFT:
@@ -54,7 +61,14 @@ void I2CHandler::handleMsg(Message *msg, unsigned long id)
       ComModule::PacketMessage *m = new ComModule::PacketMessage();
       m->len_ = i2c_.receive(constants::I2C_OPDRIFT_ADDR, m->buf_,
 			     constants::I2C_OPDRIFT_LENGTH);
-      partnerMq_->send(ComModule::RECEIVE_I2C_PACKET_OPDRIFT, m);
+      if (m->len_ < 0) {
+	// Read error, discard message
+	std::cout << "I2C_H: Read error from opdrift" << std::endl;
+	delete m;
+      } else {
+	// Read ok, send
+	partnerMq_->send(ComModule::RECEIVE_I2C_PACKET_OPDRIFT, m);
+      }
       break;
     }
   case SEND_I2C_PACKET_OPDRIFT:
@@ -63,22 +77,28 @@ void I2CHandler::handleMsg(Message *msg, unsigned long id)
       i2c_.send(constants::I2C_OPDRIFT_ADDR, sm->buf_, sm->len_);
       break;
     }
-  case SEND_I2C_PACKET_CONTROLLER:
+  case SEND_I2C_PACKET_REGULATOR:
     {
       SendI2CMessage *sm = static_cast<SendI2CMessage*>(msg);
-      i2c_.send(constants::I2C_CONTROLLER_ADDR, sm->buf_, sm->len_);
+      i2c_.send(constants::I2C_REGULATOR_ADDR, sm->buf_, sm->len_);
       break;
     }
   case SEND_I2C_PACKET_TEST:
     {
       SendI2CMessage *sm = static_cast<SendI2CMessage*>(msg);
-      std::cout << "I2C got test msg: " << sm->buf_ << std::endl;
       i2c_.send(constants::I2C_TEST_ADDR, sm->buf_, sm->len_);
 
       ComModule::PacketMessage *m = new ComModule::PacketMessage();
       m->len_ = i2c_.receive(constants::I2C_TEST_ADDR, m->buf_,
 			     constants::I2C_TEST_LENGTH);
-      partnerMq_->send(ComModule::RECEIVE_I2C_PACKET_TEST, m);
+      if (m->len_ < 0) {
+	std::cout << "I2C_H: Read error from test" << std::endl;
+	// Read error, discard message
+	delete m;
+      } else {
+	// Read ok, send
+	partnerMq_->send(ComModule::RECEIVE_I2C_PACKET_TEST, m);
+      }
       break;
     }
   default:

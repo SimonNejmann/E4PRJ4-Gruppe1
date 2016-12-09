@@ -3,7 +3,13 @@
 #include "ComModule.hpp"
 
 ComModule::ComModule()
-  : mq_(10), sock_(&mq_), i2c_(&mq_), appAlive_(false)
+  : mq_(100), sock_(&mq_), i2c_(&mq_), appAlive_(false),
+    radarTimer_(&mq_, TIMER_RADAR,
+		constants::TIMER_INTERVAL_RADAR),
+    opdriftTimer_(&mq_, TIMER_OPDRIFT,
+		  constants::TIMER_INTERVAL_OPDRIFT),
+    keepAliveTimer_(&mq_, TIMER_KEEPALIVE,
+		    constants::TIMER_INTERVAL_KEEPALIVE)
 {
 }
 
@@ -14,6 +20,11 @@ ComModule::~ComModule()
 void ComModule::run()
 {
   pthread_create(&pt_, NULL, ComModule::staticStarter, this);
+  sock_.run();
+  i2c_.run();
+  radarTimer_.run();
+  //  opdriftTimer_.run();
+  //  keepAliveTimer_.run();
 }
 
 void ComModule::join()
@@ -32,9 +43,6 @@ void* ComModule::staticStarter(void* arg)
 
 void ComModule::comModuleThread()
 {
-  sock_.run();
-  i2c_.run();
-  
   while(true) {
     unsigned long id;
     Message* msg = mq_.receive(id);
@@ -86,6 +94,7 @@ void ComModule::handleMsg(Message *msg, unsigned long id)
 
   default:
     {
+      std::cout << "ComMod: Error - default" << std::endl;
       break;
     }
   }
@@ -194,21 +203,21 @@ void ComModule::handleMsgReceiveUdpPacket(Message *msg)
     }
   case 'R': // Strafe
     {
-      outId = I2CHandler::SEND_I2C_PACKET_CONTROLLER;
+      outId = I2CHandler::SEND_I2C_PACKET_REGULATOR;
       out->len_ = regulator_.updateAngleStrafe(in->buf_[1], out->buf_);
       i2c_.send(outId, out);
       break;
     }
   case 'S': // Steer
     {
-      outId = I2CHandler::SEND_I2C_PACKET_CONTROLLER;
+      outId = I2CHandler::SEND_I2C_PACKET_REGULATOR;
       out->len_ = regulator_.updateAngleSteer(in->buf_[1], out->buf_);
       i2c_.send(outId, out);
       break;
     }
   case 'P': // Propulsion
     {
-      outId = I2CHandler::SEND_I2C_PACKET_CONTROLLER;
+      outId = I2CHandler::SEND_I2C_PACKET_REGULATOR;
       out->len_ = regulator_.updateSpeed(in->buf_[1], out->buf_);
       i2c_.send(outId, out);
       break;

@@ -15,7 +15,7 @@ public:
   void send(unsigned long id, Message* msg = NULL);
 
   enum { I2C_READ_RADAR, I2C_READ_OPDRIFT,
-	 SEND_I2C_PACKET_OPDRIFT, SEND_I2C_PACKET_CONTROLLER,
+	 SEND_I2C_PACKET_OPDRIFT, SEND_I2C_PACKET_REGULATOR,
 	 SEND_I2C_PACKET_TEST };
 
   struct SendI2CMessage : public Message {
