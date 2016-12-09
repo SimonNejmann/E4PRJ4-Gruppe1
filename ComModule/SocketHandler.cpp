@@ -60,7 +60,7 @@ void SocketHandler::sockethandlerThread()
       // Packet incomming on socket
       ComModule::PacketMessage *pmsg = new ComModule::PacketMessage();
       pmsg->len_ = sock_.receive(pmsg->buf_, constants::BUFFER_SIZE);
-      comModMq_->send(ComModule::GOT_PACKET, pmsg);
+      comModMq_->send(ComModule::RECEIVE_UDP_PACKET, pmsg);
     }
   }
 }
@@ -69,9 +69,9 @@ void SocketHandler::handleMsg(Message *msg, unsigned long id)
 {
   // no state, only switch on id
   switch(id) {
-    case SEND_PACKET: 
+    case SEND_UDP_PACKET:
       {
-        SendMessage *sm = static_cast<SendMessage*>(msg);
+        SendUDPMessage *sm = static_cast<SendUDPMessage*>(msg);
         sock_.send(sm->buf_, sm->len_);
         break;
       }

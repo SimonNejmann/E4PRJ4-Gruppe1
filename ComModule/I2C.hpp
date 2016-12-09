@@ -6,6 +6,7 @@
 #include <sys/ioctl.h>
 #include <stdlib.h>
 #include <fcntl.h>
+#include <unistd.h>
 
 class I2C
 {

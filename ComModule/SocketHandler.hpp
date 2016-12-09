@@ -14,9 +14,9 @@ public:
   void run();
   void send(unsigned long id, Message* msg = NULL);
 
-  enum { SEND_PACKET, POINT_MSG };
+  enum { SEND_UDP_PACKET };
 
-  struct SendMessage : public Message {
+  struct SendUDPMessage : public Message {
     char buf_[constants::BUFFER_SIZE];
     int len_;
   };
