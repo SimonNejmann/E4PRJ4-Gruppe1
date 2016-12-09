@@ -66,7 +66,6 @@ void SocketHandler::sockethandlerThread()
 
 void SocketHandler::handleMsg(Message *msg, unsigned long id)
 {
-  // no state, only switch on id
   switch(id) {
     case SEND_UDP_PACKET:
       {
