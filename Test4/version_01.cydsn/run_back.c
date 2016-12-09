@@ -2,18 +2,14 @@
 
 extern uint8 i2cbuf[];
 extern uint8 oldbuf[];
-uint8 run_back(uint8 ang, uint8 speed)
+uint8 run_back(uint8 ang)
 {
     
     uint8 newang = 0;
     
     //Opdatere oldbuf 
     oldbuf[ANG_BACK_POS] = i2cbuf[ANG_BACK_POS];
-    
-    //Sætter hastighed på fremdriftsmotor 
-    SpeedBackW_Write(HIGH);
-    PWMSB_WriteCompare(speed);
-    
+        
     //tæl counter op og drejer steppermotoren med uret
 	if(ang > CounterB_ReadCounter() && ang < MAX_POS)
     {
@@ -33,7 +29,7 @@ uint8 run_back(uint8 ang, uint8 speed)
     }
 
     //tæl counter ned og drejer steppermotoren mod uret
-    else if(ang < CounterF_ReadCounter() && ang > MIN_POS)
+    else if(ang < CounterB_ReadCounter() && ang > MIN_POS)
     {
         Dir_stepB_Write(LOW);
         PWMB2_Start();

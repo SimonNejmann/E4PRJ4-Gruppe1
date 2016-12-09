@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
   29:Generated_Source\PSoC5/PWMSF.c ****          constant 1 for reset. This will prevent the component from operating.
   30:Generated_Source\PSoC5/PWMSF.c **** #endif /* PWMSF_PWMUDB_genblk1_ctrlreg__REMOVED */
   31:Generated_Source\PSoC5/PWMSF.c **** 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 2
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 2
 
 
   32:Generated_Source\PSoC5/PWMSF.c **** uint8 PWMSF_initVar = 0u;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
   86:Generated_Source\PSoC5/PWMSF.c ****     #if (PWMSF_UsingFixedFunction || PWMSF_UseControl)
   87:Generated_Source\PSoC5/PWMSF.c ****         uint8 ctrl;
   88:Generated_Source\PSoC5/PWMSF.c ****     #endif /* (PWMSF_UsingFixedFunction || PWMSF_UseControl) */
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 3
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 3
 
 
   89:Generated_Source\PSoC5/PWMSF.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  143:Generated_Source\PSoC5/PWMSF.c ****         #endif /* (PWMSF_UseOneCompareMode) */
  144:Generated_Source\PSoC5/PWMSF.c **** 
  145:Generated_Source\PSoC5/PWMSF.c ****         #if (PWMSF_KillModeMinTime)
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 4
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 4
 
 
  146:Generated_Source\PSoC5/PWMSF.c ****             PWMSF_WriteKillTime(PWMSF_MinimumKillTime);
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  200:Generated_Source\PSoC5/PWMSF.c **** {
   27              		.loc 1 200 0
   28              		.cfi_startproc
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 5
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 5
 
 
   29              		@ args = 0, pretend = 0, frame = 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  231:Generated_Source\PSoC5/PWMSF.c **** *
  232:Generated_Source\PSoC5/PWMSF.c **** *******************************************************************************/
  233:Generated_Source\PSoC5/PWMSF.c **** void PWMSF_Stop(void) 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 6
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 6
 
 
  234:Generated_Source\PSoC5/PWMSF.c **** {
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  262:Generated_Source\PSoC5/PWMSF.c ****         * Return:
  263:Generated_Source\PSoC5/PWMSF.c ****         *  None
  264:Generated_Source\PSoC5/PWMSF.c ****         *
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 7
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 7
 
 
  265:Generated_Source\PSoC5/PWMSF.c ****         *******************************************************************************/
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  319:Generated_Source\PSoC5/PWMSF.c ****         *  comparemode:  The new compare mode for the PWM output. Use the compare types
  320:Generated_Source\PSoC5/PWMSF.c ****         *                defined in the H file as input arguments.
  321:Generated_Source\PSoC5/PWMSF.c ****         *
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 8
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 8
 
 
  322:Generated_Source\PSoC5/PWMSF.c ****         * Return:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  376:Generated_Source\PSoC5/PWMSF.c **** 
  377:Generated_Source\PSoC5/PWMSF.c **** #endif /* UseOneCompareMode */
  378:Generated_Source\PSoC5/PWMSF.c **** 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 9
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 9
 
 
  379:Generated_Source\PSoC5/PWMSF.c **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  408:Generated_Source\PSoC5/PWMSF.c **** 
  409:Generated_Source\PSoC5/PWMSF.c **** 
  410:Generated_Source\PSoC5/PWMSF.c ****     /*******************************************************************************
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 10
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 10
 
 
  411:Generated_Source\PSoC5/PWMSF.c ****     * Function Name: PWMSF_ReadCounter
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  436:Generated_Source\PSoC5/PWMSF.c ****     #if (PWMSF_UseStatus)
  437:Generated_Source\PSoC5/PWMSF.c **** 
  438:Generated_Source\PSoC5/PWMSF.c **** 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 11
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 11
 
 
  439:Generated_Source\PSoC5/PWMSF.c ****         /*******************************************************************************
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  487:Generated_Source\PSoC5/PWMSF.c ****         CY_SET_REG8(PWMSF_PERIOD_LSB_PTR, period);
  139              		.loc 1 487 0
  140 0000 014B     		ldr	r3, .L14
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 12
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 12
 
 
  141 0002 1870     		strb	r0, [r3]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  519:Generated_Source\PSoC5/PWMSF.c ****         #if(PWMSF_UsingFixedFunction)
  520:Generated_Source\PSoC5/PWMSF.c ****             CY_SET_REG16(PWMSF_COMPARE1_LSB_PTR, (uint16)compare);
  521:Generated_Source\PSoC5/PWMSF.c ****         #else
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 13
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 13
 
 
  522:Generated_Source\PSoC5/PWMSF.c ****             CY_SET_REG8(PWMSF_COMPARE1_LSB_PTR, compare);
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  557:Generated_Source\PSoC5/PWMSF.c ****     {
  558:Generated_Source\PSoC5/PWMSF.c ****         #if(PWMSF_UsingFixedFunction)
  559:Generated_Source\PSoC5/PWMSF.c ****             CY_SET_REG16(PWMSF_COMPARE1_LSB_PTR, (uint16)compare);
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 14
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 14
 
 
  560:Generated_Source\PSoC5/PWMSF.c ****         #else
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  614:Generated_Source\PSoC5/PWMSF.c ****         /* If using the Dead Band 1-255 mode then just write the register */
  615:Generated_Source\PSoC5/PWMSF.c ****         #if(!PWMSF_DeadBand2_4)
  616:Generated_Source\PSoC5/PWMSF.c ****             CY_SET_REG8(PWMSF_DEADBAND_COUNT_PTR, deadtime);
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 15
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 15
 
 
  617:Generated_Source\PSoC5/PWMSF.c ****         #else
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  671:Generated_Source\PSoC5/PWMSF.c ****     ********************************************************************************
  672:Generated_Source\PSoC5/PWMSF.c ****     *
  673:Generated_Source\PSoC5/PWMSF.c ****     * Summary:
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 16
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 16
 
 
  674:Generated_Source\PSoC5/PWMSF.c ****     *  This function configures the interrupts mask control of theinterrupt
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  703:Generated_Source\PSoC5/PWMSF.c ****     *  [5]   : Kill event output
  704:Generated_Source\PSoC5/PWMSF.c ****     *  [4]   : FIFO not empty
  705:Generated_Source\PSoC5/PWMSF.c ****     *  [3]   : FIFO full
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 17
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 17
 
 
  706:Generated_Source\PSoC5/PWMSF.c ****     *  [2]   : Terminal count
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  735:Generated_Source\PSoC5/PWMSF.c ****     *
  736:Generated_Source\PSoC5/PWMSF.c ****     *******************************************************************************/
  737:Generated_Source\PSoC5/PWMSF.c ****     uint8 PWMSF_ReadControlRegister(void) 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 18
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 18
 
 
  738:Generated_Source\PSoC5/PWMSF.c ****     {
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  766:Generated_Source\PSoC5/PWMSF.c ****     {
  259              		.loc 1 766 0
  260              		.cfi_startproc
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 19
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 19
 
 
  261              		@ args = 0, pretend = 0, frame = 0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  289              		.loc 1 792 0
  290 0000 014B     		ldr	r3, .L32
  291 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 20
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 20
 
 
  793:Generated_Source\PSoC5/PWMSF.c ****     }
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  340              	PWMSF_Init:
  341              	.LFB1:
   85:Generated_Source\PSoC5/PWMSF.c ****     #if (PWMSF_UsingFixedFunction || PWMSF_UseControl)
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 21
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 21
 
 
  342              		.loc 1 85 0
@@ -1228,17 +1228,17 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  363 0018 2370     		strb	r3, [r4]
  133:Generated_Source\PSoC5/PWMSF.c ****     #endif /* (!PWMSF_UsingFixedFunction) */
  364              		.loc 1 133 0
- 365 001a FF20     		movs	r0, #255
+ 365 001a C820     		movs	r0, #200
  366 001c FFF7FEFF 		bl	PWMSF_WriteCounter
  367              	.LVL10:
  136:Generated_Source\PSoC5/PWMSF.c **** 
  368              		.loc 1 136 0
- 369 0020 FF20     		movs	r0, #255
+ 369 0020 C820     		movs	r0, #200
  370 0022 FFF7FEFF 		bl	PWMSF_WritePeriod
  371              	.LVL11:
  139:Generated_Source\PSoC5/PWMSF.c ****         #else
  372              		.loc 1 139 0
- 373 0026 C820     		movs	r0, #200
+ 373 0026 0A20     		movs	r0, #10
  374 0028 FFF7FEFF 		bl	PWMSF_WriteCompare
  375              	.LVL12:
  154:Generated_Source\PSoC5/PWMSF.c ****     #endif /* (PWMSF_UseStatus || PWMSF_UsingFixedFunction) */
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  172:Generated_Source\PSoC5/PWMSF.c **** 
  387              		.loc 1 172 0
  388 003e FFF7FEFF 		bl	CyExitCriticalSection
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 22
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 22
 
 
  389              	.LVL15:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  437 0018 00000000 		.word	.LANCHOR0
  438              		.cfi_endproc
  439              	.LFE0:
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 23
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 23
 
 
  440              		.size	PWMSF_Start, .-PWMSF_Start
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  464              	.LFE14:
  465              		.size	PWMSF_ReadCompare, .-PWMSF_ReadCompare
  466              		.section	.text.PWMSF_ReadPeriod,"ax",%progbits
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 24
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 24
 
 
  467              		.align	2
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  871:Generated_Source\PSoC5/PWMSF.c **** * Function Name: PWMSF_ReadPeriod
  872:Generated_Source\PSoC5/PWMSF.c **** ********************************************************************************
  873:Generated_Source\PSoC5/PWMSF.c **** *
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 25
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 25
 
 
  874:Generated_Source\PSoC5/PWMSF.c **** * Summary:
@@ -1489,16 +1489,16 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  501              		.file 3 "Generated_Source\\PSoC5\\CyLib.h"
  502              		.section	.debug_info,"",%progbits
  503              	.Ldebug_info0:
- 504 0000 2B030000 		.4byte	0x32b
+ 504 0000 2A030000 		.4byte	0x32a
  505 0004 0400     		.2byte	0x4
  506 0006 00000000 		.4byte	.Ldebug_abbrev0
  507 000a 04       		.byte	0x4
  508 000b 01       		.uleb128 0x1
- 509 000c D0010000 		.4byte	.LASF38
+ 509 000c 17020000 		.4byte	.LASF38
  510 0010 01       		.byte	0x1
- 511 0011 C9000000 		.4byte	.LASF39
- 512 0015 DC020000 		.4byte	.LASF40
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 26
+ 511 0011 10010000 		.4byte	.LASF39
+ 512 0015 5F000000 		.4byte	.LASF40
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 26
 
 
  513 0019 00000000 		.4byte	.Ldebug_ranges0+0
@@ -1507,11 +1507,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  516 0025 02       		.uleb128 0x2
  517 0026 01       		.byte	0x1
  518 0027 06       		.byte	0x6
- 519 0028 2E030000 		.4byte	.LASF0
+ 519 0028 23030000 		.4byte	.LASF0
  520 002c 02       		.uleb128 0x2
  521 002d 01       		.byte	0x1
  522 002e 08       		.byte	0x8
- 523 002f A9000000 		.4byte	.LASF1
+ 523 002f F0000000 		.4byte	.LASF1
  524 0033 02       		.uleb128 0x2
  525 0034 02       		.byte	0x2
  526 0035 05       		.byte	0x5
@@ -1523,19 +1523,19 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  532 0041 02       		.uleb128 0x2
  533 0042 04       		.byte	0x4
  534 0043 05       		.byte	0x5
- 535 0044 CE020000 		.4byte	.LASF4
+ 535 0044 15030000 		.4byte	.LASF4
  536 0048 02       		.uleb128 0x2
  537 0049 04       		.byte	0x4
  538 004a 07       		.byte	0x7
- 539 004b ED000000 		.4byte	.LASF5
+ 539 004b 34010000 		.4byte	.LASF5
  540 004f 02       		.uleb128 0x2
  541 0050 08       		.byte	0x8
  542 0051 05       		.byte	0x5
- 543 0052 6C020000 		.4byte	.LASF6
+ 543 0052 B3020000 		.4byte	.LASF6
  544 0056 02       		.uleb128 0x2
  545 0057 08       		.byte	0x8
  546 0058 07       		.byte	0x7
- 547 0059 92000000 		.4byte	.LASF7
+ 547 0059 D9000000 		.4byte	.LASF7
  548 005d 03       		.uleb128 0x3
  549 005e 04       		.byte	0x4
  550 005f 05       		.byte	0x5
@@ -1543,29 +1543,29 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  552 0064 02       		.uleb128 0x2
  553 0065 04       		.byte	0x4
  554 0066 07       		.byte	0x7
- 555 0067 84010000 		.4byte	.LASF8
+ 555 0067 CB010000 		.4byte	.LASF8
  556 006b 04       		.uleb128 0x4
- 557 006c FF000000 		.4byte	.LASF12
+ 557 006c 46010000 		.4byte	.LASF12
  558 0070 02       		.byte	0x2
  559 0071 9201     		.2byte	0x192
  560 0073 2C000000 		.4byte	0x2c
  561 0077 02       		.uleb128 0x2
  562 0078 04       		.byte	0x4
  563 0079 04       		.byte	0x4
- 564 007a 71000000 		.4byte	.LASF9
+ 564 007a B8000000 		.4byte	.LASF9
  565 007e 02       		.uleb128 0x2
  566 007f 08       		.byte	0x8
  567 0080 04       		.byte	0x4
- 568 0081 35010000 		.4byte	.LASF10
+ 568 0081 7C010000 		.4byte	.LASF10
  569 0085 02       		.uleb128 0x2
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 27
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 27
 
 
  570 0086 01       		.byte	0x1
  571 0087 08       		.byte	0x8
- 572 0088 D7020000 		.4byte	.LASF11
+ 572 0088 1E030000 		.4byte	.LASF11
  573 008c 04       		.uleb128 0x4
- 574 008d E8000000 		.4byte	.LASF13
+ 574 008d 2F010000 		.4byte	.LASF13
  575 0091 02       		.byte	0x2
  576 0092 3C02     		.2byte	0x23c
  577 0094 98000000 		.4byte	0x98
@@ -1574,9 +1574,9 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  580 009d 02       		.uleb128 0x2
  581 009e 04       		.byte	0x4
  582 009f 07       		.byte	0x7
- 583 00a0 63020000 		.4byte	.LASF14
+ 583 00a0 AA020000 		.4byte	.LASF14
  584 00a4 06       		.uleb128 0x6
- 585 00a5 3C010000 		.4byte	.LASF15
+ 585 00a5 83010000 		.4byte	.LASF15
  586 00a9 01       		.byte	0x1
  587 00aa C7       		.byte	0xc7
  588 00ab 00000000 		.4byte	.LFB2
@@ -1584,7 +1584,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  590 00b3 01       		.uleb128 0x1
  591 00b4 9C       		.byte	0x9c
  592 00b5 06       		.uleb128 0x6
- 593 00b6 0D010000 		.4byte	.LASF16
+ 593 00b6 54010000 		.4byte	.LASF16
  594 00ba 01       		.byte	0x1
  595 00bb E9       		.byte	0xe9
  596 00bc 00000000 		.4byte	.LFB3
@@ -1592,7 +1592,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  598 00c4 01       		.uleb128 0x1
  599 00c5 9C       		.byte	0x9c
  600 00c6 07       		.uleb128 0x7
- 601 00c7 A2020000 		.4byte	.LASF17
+ 601 00c7 E9020000 		.4byte	.LASF17
  602 00cb 01       		.byte	0x1
  603 00cc 9301     		.2byte	0x193
  604 00ce 00000000 		.4byte	.LFB4
@@ -1601,7 +1601,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  607 00d7 9C       		.byte	0x9c
  608 00d8 EB000000 		.4byte	0xeb
  609 00dc 08       		.uleb128 0x8
- 610 00dd 18010000 		.4byte	.LASF19
+ 610 00dd 5F010000 		.4byte	.LASF19
  611 00e1 01       		.byte	0x1
  612 00e2 9301     		.2byte	0x193
  613 00e4 6B000000 		.4byte	0x6b
@@ -1609,7 +1609,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  615 00e9 50       		.byte	0x50
  616 00ea 00       		.byte	0
  617 00eb 09       		.uleb128 0x9
- 618 00ec BE010000 		.4byte	.LASF25
+ 618 00ec 05020000 		.4byte	.LASF25
  619 00f0 01       		.byte	0x1
  620 00f1 A901     		.2byte	0x1a9
  621 00f3 6B000000 		.4byte	0x6b
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  624 00ff 01       		.uleb128 0x1
  625 0100 9C       		.byte	0x9c
  626 0101 07       		.uleb128 0x7
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 28
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 28
 
 
  627 0102 10000000 		.4byte	.LASF18
@@ -1638,7 +1638,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  641 0124 50       		.byte	0x50
  642 0125 00       		.byte	0
  643 0126 07       		.uleb128 0x7
- 644 0127 42030000 		.4byte	.LASF21
+ 644 0127 37030000 		.4byte	.LASF21
  645 012b 01       		.byte	0x1
  646 012c 0402     		.2byte	0x204
  647 012e 00000000 		.4byte	.LFB8
@@ -1647,7 +1647,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  650 0137 9C       		.byte	0x9c
  651 0138 4B010000 		.4byte	0x14b
  652 013c 08       		.uleb128 0x8
- 653 013d 3A030000 		.4byte	.LASF22
+ 653 013d 2F030000 		.4byte	.LASF22
  654 0141 01       		.byte	0x1
  655 0142 0402     		.2byte	0x204
  656 0144 6B000000 		.4byte	0x6b
@@ -1655,7 +1655,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  658 0149 50       		.byte	0x50
  659 014a 00       		.byte	0
  660 014b 07       		.uleb128 0x7
- 661 014c 91010000 		.4byte	.LASF23
+ 661 014c D8010000 		.4byte	.LASF23
  662 0150 01       		.byte	0x1
  663 0151 AC02     		.2byte	0x2ac
  664 0153 00000000 		.4byte	.LFB9
@@ -1664,7 +1664,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  667 015c 9C       		.byte	0x9c
  668 015d 70010000 		.4byte	0x170
  669 0161 08       		.uleb128 0x8
- 670 0162 7A020000 		.4byte	.LASF24
+ 670 0162 C1020000 		.4byte	.LASF24
  671 0166 01       		.byte	0x1
  672 0167 AC02     		.2byte	0x2ac
  673 0169 6B000000 		.4byte	0x6b
@@ -1672,19 +1672,19 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  675 016e 50       		.byte	0x50
  676 016f 00       		.byte	0
  677 0170 09       		.uleb128 0x9
- 678 0171 B5020000 		.4byte	.LASF26
+ 678 0171 FC020000 		.4byte	.LASF26
  679 0175 01       		.byte	0x1
  680 0176 C702     		.2byte	0x2c7
  681 0178 6B000000 		.4byte	0x6b
  682 017c 00000000 		.4byte	.LFB10
  683 0180 0C000000 		.4byte	.LFE10-.LFB10
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 29
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 29
 
 
  684 0184 01       		.uleb128 0x1
  685 0185 9C       		.byte	0x9c
  686 0186 0A       		.uleb128 0xa
- 687 0187 88020000 		.4byte	.LASF41
+ 687 0187 CF020000 		.4byte	.LASF41
  688 018b 01       		.byte	0x1
  689 018c E102     		.2byte	0x2e1
  690 018e 6B000000 		.4byte	0x6b
@@ -1694,7 +1694,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  694 019b 9C       		.byte	0x9c
  695 019c AF010000 		.4byte	0x1af
  696 01a0 0B       		.uleb128 0xb
- 697 01a1 49010000 		.4byte	.LASF32
+ 697 01a1 90010000 		.4byte	.LASF32
  698 01a5 01       		.byte	0x1
  699 01a6 E302     		.2byte	0x2e3
  700 01a8 6B000000 		.4byte	0x6b
@@ -1702,7 +1702,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  702 01ad 50       		.byte	0x50
  703 01ae 00       		.byte	0
  704 01af 07       		.uleb128 0x7
- 705 01b0 77000000 		.4byte	.LASF27
+ 705 01b0 BE000000 		.4byte	.LASF27
  706 01b4 01       		.byte	0x1
  707 01b5 FD02     		.2byte	0x2fd
  708 01b7 00000000 		.4byte	.LFB12
@@ -1711,7 +1711,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  711 01c0 9C       		.byte	0x9c
  712 01c1 D4010000 		.4byte	0x1d4
  713 01c5 08       		.uleb128 0x8
- 714 01c6 05010000 		.4byte	.LASF28
+ 714 01c6 4C010000 		.4byte	.LASF28
  715 01ca 01       		.byte	0x1
  716 01cb FD02     		.2byte	0x2fd
  717 01cd 6B000000 		.4byte	0x6b
@@ -1719,7 +1719,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  719 01d2 50       		.byte	0x50
  720 01d3 00       		.byte	0
  721 01d4 09       		.uleb128 0x9
- 722 01d5 B7000000 		.4byte	.LASF29
+ 722 01d5 FE000000 		.4byte	.LASF29
  723 01d9 01       		.byte	0x1
  724 01da 1603     		.2byte	0x316
  725 01dc 6B000000 		.4byte	0x6b
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  738 01fc 13020000 		.4byte	0x213
  739 0200 0C       		.uleb128 0xc
  740 0201 08000000 		.4byte	.LVL6
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 30
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 30
 
 
  741 0205 D4010000 		.4byte	0x1d4
@@ -1754,15 +1754,15 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  751 021e 50000000 		.4byte	.LFE1-.LFB1
  752 0222 01       		.uleb128 0x1
  753 0223 9C       		.byte	0x9c
- 754 0224 B1020000 		.4byte	0x2b1
+ 754 0224 B0020000 		.4byte	0x2b0
  755 0228 0E       		.uleb128 0xe
- 756 0229 5E020000 		.4byte	.LASF33
+ 756 0229 A5020000 		.4byte	.LASF33
  757 022d 01       		.byte	0x1
  758 022e 57       		.byte	0x57
  759 022f 6B000000 		.4byte	0x6b
  760 0233 00000000 		.4byte	.LLST0
  761 0237 0E       		.uleb128 0xe
- 762 0238 20010000 		.4byte	.LASF34
+ 762 0238 67010000 		.4byte	.LASF34
  763 023c 01       		.byte	0x1
  764 023d 5D       		.byte	0x5d
  765 023e 6B000000 		.4byte	0x6b
@@ -1776,7 +1776,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  773 0255 50       		.byte	0x50
  774 0256 02       		.uleb128 0x2
  775 0257 09       		.byte	0x9
- 776 0258 FF       		.byte	0xff
+ 776 0258 C8       		.byte	0xc8
  777 0259 00       		.byte	0
  778 025a 0F       		.uleb128 0xf
  779 025b 26000000 		.4byte	.LVL11
@@ -1787,786 +1787,785 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 1
  784 0269 50       		.byte	0x50
  785 026a 02       		.uleb128 0x2
  786 026b 09       		.byte	0x9
- 787 026c FF       		.byte	0xff
+ 787 026c C8       		.byte	0xc8
  788 026d 00       		.byte	0
  789 026e 0F       		.uleb128 0xf
  790 026f 2C000000 		.4byte	.LVL12
  791 0273 26010000 		.4byte	0x126
- 792 0277 82020000 		.4byte	0x282
+ 792 0277 81020000 		.4byte	0x281
  793 027b 10       		.uleb128 0x10
  794 027c 01       		.uleb128 0x1
  795 027d 50       		.byte	0x50
- 796 027e 02       		.uleb128 0x2
- 797 027f 09       		.byte	0x9
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 31
+ 796 027e 01       		.uleb128 0x1
+ 797 027f 3A       		.byte	0x3a
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 31
 
 
- 798 0280 C8       		.byte	0xc8
- 799 0281 00       		.byte	0
- 800 0282 0F       		.uleb128 0xf
- 801 0283 32000000 		.4byte	.LVL13
- 802 0287 4B010000 		.4byte	0x14b
- 803 028b 95020000 		.4byte	0x295
- 804 028f 10       		.uleb128 0x10
- 805 0290 01       		.uleb128 0x1
- 806 0291 50       		.byte	0x50
- 807 0292 01       		.uleb128 0x1
- 808 0293 30       		.byte	0x30
- 809 0294 00       		.byte	0
- 810 0295 0C       		.uleb128 0xc
- 811 0296 36000000 		.4byte	.LVL14
- 812 029a 16030000 		.4byte	0x316
- 813 029e 0C       		.uleb128 0xc
- 814 029f 42000000 		.4byte	.LVL15
- 815 02a3 21030000 		.4byte	0x321
- 816 02a7 0C       		.uleb128 0xc
- 817 02a8 46000000 		.4byte	.LVL16
- 818 02ac EA010000 		.4byte	0x1ea
- 819 02b0 00       		.byte	0
- 820 02b1 0D       		.uleb128 0xd
- 821 02b2 78010000 		.4byte	.LASF35
- 822 02b6 01       		.byte	0x1
- 823 02b7 37       		.byte	0x37
- 824 02b8 00000000 		.4byte	.LFB0
- 825 02bc 1C000000 		.4byte	.LFE0-.LFB0
- 826 02c0 01       		.uleb128 0x1
- 827 02c1 9C       		.byte	0x9c
- 828 02c2 D9020000 		.4byte	0x2d9
- 829 02c6 0C       		.uleb128 0xc
- 830 02c7 0C000000 		.4byte	.LVL17
- 831 02cb 13020000 		.4byte	0x213
- 832 02cf 0C       		.uleb128 0xc
- 833 02d0 16000000 		.4byte	.LVL18
- 834 02d4 A4000000 		.4byte	0xa4
- 835 02d8 00       		.byte	0
- 836 02d9 09       		.uleb128 0x9
- 837 02da 5F000000 		.4byte	.LASF36
- 838 02de 01       		.byte	0x1
- 839 02df 3003     		.2byte	0x330
- 840 02e1 6B000000 		.4byte	0x6b
- 841 02e5 00000000 		.4byte	.LFB14
- 842 02e9 0C000000 		.4byte	.LFE14-.LFB14
- 843 02ed 01       		.uleb128 0x1
- 844 02ee 9C       		.byte	0x9c
- 845 02ef 09       		.uleb128 0x9
- 846 02f0 50010000 		.4byte	.LASF37
- 847 02f4 01       		.byte	0x1
- 848 02f5 7403     		.2byte	0x374
- 849 02f7 6B000000 		.4byte	0x6b
- 850 02fb 00000000 		.4byte	.LFB15
- 851 02ff 0C000000 		.4byte	.LFE15-.LFB15
- 852 0303 01       		.uleb128 0x1
- 853 0304 9C       		.byte	0x9c
- 854 0305 11       		.uleb128 0x11
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 32
+ 798 0280 00       		.byte	0
+ 799 0281 0F       		.uleb128 0xf
+ 800 0282 32000000 		.4byte	.LVL13
+ 801 0286 4B010000 		.4byte	0x14b
+ 802 028a 94020000 		.4byte	0x294
+ 803 028e 10       		.uleb128 0x10
+ 804 028f 01       		.uleb128 0x1
+ 805 0290 50       		.byte	0x50
+ 806 0291 01       		.uleb128 0x1
+ 807 0292 30       		.byte	0x30
+ 808 0293 00       		.byte	0
+ 809 0294 0C       		.uleb128 0xc
+ 810 0295 36000000 		.4byte	.LVL14
+ 811 0299 15030000 		.4byte	0x315
+ 812 029d 0C       		.uleb128 0xc
+ 813 029e 42000000 		.4byte	.LVL15
+ 814 02a2 20030000 		.4byte	0x320
+ 815 02a6 0C       		.uleb128 0xc
+ 816 02a7 46000000 		.4byte	.LVL16
+ 817 02ab EA010000 		.4byte	0x1ea
+ 818 02af 00       		.byte	0
+ 819 02b0 0D       		.uleb128 0xd
+ 820 02b1 BF010000 		.4byte	.LASF35
+ 821 02b5 01       		.byte	0x1
+ 822 02b6 37       		.byte	0x37
+ 823 02b7 00000000 		.4byte	.LFB0
+ 824 02bb 1C000000 		.4byte	.LFE0-.LFB0
+ 825 02bf 01       		.uleb128 0x1
+ 826 02c0 9C       		.byte	0x9c
+ 827 02c1 D8020000 		.4byte	0x2d8
+ 828 02c5 0C       		.uleb128 0xc
+ 829 02c6 0C000000 		.4byte	.LVL17
+ 830 02ca 13020000 		.4byte	0x213
+ 831 02ce 0C       		.uleb128 0xc
+ 832 02cf 16000000 		.4byte	.LVL18
+ 833 02d3 A4000000 		.4byte	0xa4
+ 834 02d7 00       		.byte	0
+ 835 02d8 09       		.uleb128 0x9
+ 836 02d9 A6000000 		.4byte	.LASF36
+ 837 02dd 01       		.byte	0x1
+ 838 02de 3003     		.2byte	0x330
+ 839 02e0 6B000000 		.4byte	0x6b
+ 840 02e4 00000000 		.4byte	.LFB14
+ 841 02e8 0C000000 		.4byte	.LFE14-.LFB14
+ 842 02ec 01       		.uleb128 0x1
+ 843 02ed 9C       		.byte	0x9c
+ 844 02ee 09       		.uleb128 0x9
+ 845 02ef 97010000 		.4byte	.LASF37
+ 846 02f3 01       		.byte	0x1
+ 847 02f4 7403     		.2byte	0x374
+ 848 02f6 6B000000 		.4byte	0x6b
+ 849 02fa 00000000 		.4byte	.LFB15
+ 850 02fe 0C000000 		.4byte	.LFE15-.LFB15
+ 851 0302 01       		.uleb128 0x1
+ 852 0303 9C       		.byte	0x9c
+ 853 0304 11       		.uleb128 0x11
+ 854 0305 34000000 		.4byte	.LASF42
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 32
 
 
- 855 0306 34000000 		.4byte	.LASF42
- 856 030a 01       		.byte	0x1
- 857 030b 20       		.byte	0x20
- 858 030c 6B000000 		.4byte	0x6b
- 859 0310 05       		.uleb128 0x5
- 860 0311 03       		.byte	0x3
- 861 0312 00000000 		.4byte	PWMSF_initVar
- 862 0316 12       		.uleb128 0x12
- 863 0317 61010000 		.4byte	.LASF43
- 864 031b 03       		.byte	0x3
- 865 031c 7D       		.byte	0x7d
- 866 031d 6B000000 		.4byte	0x6b
- 867 0321 13       		.uleb128 0x13
- 868 0322 A8010000 		.4byte	.LASF44
- 869 0326 03       		.byte	0x3
- 870 0327 7E       		.byte	0x7e
- 871 0328 14       		.uleb128 0x14
- 872 0329 6B000000 		.4byte	0x6b
+ 855 0309 01       		.byte	0x1
+ 856 030a 20       		.byte	0x20
+ 857 030b 6B000000 		.4byte	0x6b
+ 858 030f 05       		.uleb128 0x5
+ 859 0310 03       		.byte	0x3
+ 860 0311 00000000 		.4byte	PWMSF_initVar
+ 861 0315 12       		.uleb128 0x12
+ 862 0316 A8010000 		.4byte	.LASF43
+ 863 031a 03       		.byte	0x3
+ 864 031b 7D       		.byte	0x7d
+ 865 031c 6B000000 		.4byte	0x6b
+ 866 0320 13       		.uleb128 0x13
+ 867 0321 EF010000 		.4byte	.LASF44
+ 868 0325 03       		.byte	0x3
+ 869 0326 7E       		.byte	0x7e
+ 870 0327 14       		.uleb128 0x14
+ 871 0328 6B000000 		.4byte	0x6b
+ 872 032c 00       		.byte	0
  873 032d 00       		.byte	0
- 874 032e 00       		.byte	0
- 875              		.section	.debug_abbrev,"",%progbits
- 876              	.Ldebug_abbrev0:
- 877 0000 01       		.uleb128 0x1
- 878 0001 11       		.uleb128 0x11
- 879 0002 01       		.byte	0x1
- 880 0003 25       		.uleb128 0x25
- 881 0004 0E       		.uleb128 0xe
- 882 0005 13       		.uleb128 0x13
- 883 0006 0B       		.uleb128 0xb
- 884 0007 03       		.uleb128 0x3
- 885 0008 0E       		.uleb128 0xe
- 886 0009 1B       		.uleb128 0x1b
- 887 000a 0E       		.uleb128 0xe
- 888 000b 55       		.uleb128 0x55
- 889 000c 17       		.uleb128 0x17
- 890 000d 11       		.uleb128 0x11
- 891 000e 01       		.uleb128 0x1
- 892 000f 10       		.uleb128 0x10
- 893 0010 17       		.uleb128 0x17
- 894 0011 00       		.byte	0
- 895 0012 00       		.byte	0
- 896 0013 02       		.uleb128 0x2
- 897 0014 24       		.uleb128 0x24
- 898 0015 00       		.byte	0
- 899 0016 0B       		.uleb128 0xb
- 900 0017 0B       		.uleb128 0xb
- 901 0018 3E       		.uleb128 0x3e
- 902 0019 0B       		.uleb128 0xb
- 903 001a 03       		.uleb128 0x3
- 904 001b 0E       		.uleb128 0xe
- 905 001c 00       		.byte	0
- 906 001d 00       		.byte	0
- 907 001e 03       		.uleb128 0x3
- 908 001f 24       		.uleb128 0x24
- 909 0020 00       		.byte	0
- 910 0021 0B       		.uleb128 0xb
- 911 0022 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 33
+ 874              		.section	.debug_abbrev,"",%progbits
+ 875              	.Ldebug_abbrev0:
+ 876 0000 01       		.uleb128 0x1
+ 877 0001 11       		.uleb128 0x11
+ 878 0002 01       		.byte	0x1
+ 879 0003 25       		.uleb128 0x25
+ 880 0004 0E       		.uleb128 0xe
+ 881 0005 13       		.uleb128 0x13
+ 882 0006 0B       		.uleb128 0xb
+ 883 0007 03       		.uleb128 0x3
+ 884 0008 0E       		.uleb128 0xe
+ 885 0009 1B       		.uleb128 0x1b
+ 886 000a 0E       		.uleb128 0xe
+ 887 000b 55       		.uleb128 0x55
+ 888 000c 17       		.uleb128 0x17
+ 889 000d 11       		.uleb128 0x11
+ 890 000e 01       		.uleb128 0x1
+ 891 000f 10       		.uleb128 0x10
+ 892 0010 17       		.uleb128 0x17
+ 893 0011 00       		.byte	0
+ 894 0012 00       		.byte	0
+ 895 0013 02       		.uleb128 0x2
+ 896 0014 24       		.uleb128 0x24
+ 897 0015 00       		.byte	0
+ 898 0016 0B       		.uleb128 0xb
+ 899 0017 0B       		.uleb128 0xb
+ 900 0018 3E       		.uleb128 0x3e
+ 901 0019 0B       		.uleb128 0xb
+ 902 001a 03       		.uleb128 0x3
+ 903 001b 0E       		.uleb128 0xe
+ 904 001c 00       		.byte	0
+ 905 001d 00       		.byte	0
+ 906 001e 03       		.uleb128 0x3
+ 907 001f 24       		.uleb128 0x24
+ 908 0020 00       		.byte	0
+ 909 0021 0B       		.uleb128 0xb
+ 910 0022 0B       		.uleb128 0xb
+ 911 0023 3E       		.uleb128 0x3e
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 33
 
 
- 912 0023 3E       		.uleb128 0x3e
- 913 0024 0B       		.uleb128 0xb
- 914 0025 03       		.uleb128 0x3
- 915 0026 08       		.uleb128 0x8
- 916 0027 00       		.byte	0
- 917 0028 00       		.byte	0
- 918 0029 04       		.uleb128 0x4
- 919 002a 16       		.uleb128 0x16
- 920 002b 00       		.byte	0
- 921 002c 03       		.uleb128 0x3
- 922 002d 0E       		.uleb128 0xe
- 923 002e 3A       		.uleb128 0x3a
- 924 002f 0B       		.uleb128 0xb
- 925 0030 3B       		.uleb128 0x3b
- 926 0031 05       		.uleb128 0x5
- 927 0032 49       		.uleb128 0x49
- 928 0033 13       		.uleb128 0x13
- 929 0034 00       		.byte	0
- 930 0035 00       		.byte	0
- 931 0036 05       		.uleb128 0x5
- 932 0037 35       		.uleb128 0x35
- 933 0038 00       		.byte	0
- 934 0039 49       		.uleb128 0x49
- 935 003a 13       		.uleb128 0x13
- 936 003b 00       		.byte	0
- 937 003c 00       		.byte	0
- 938 003d 06       		.uleb128 0x6
- 939 003e 2E       		.uleb128 0x2e
- 940 003f 00       		.byte	0
- 941 0040 3F       		.uleb128 0x3f
- 942 0041 19       		.uleb128 0x19
- 943 0042 03       		.uleb128 0x3
- 944 0043 0E       		.uleb128 0xe
- 945 0044 3A       		.uleb128 0x3a
- 946 0045 0B       		.uleb128 0xb
- 947 0046 3B       		.uleb128 0x3b
- 948 0047 0B       		.uleb128 0xb
- 949 0048 27       		.uleb128 0x27
- 950 0049 19       		.uleb128 0x19
- 951 004a 11       		.uleb128 0x11
- 952 004b 01       		.uleb128 0x1
- 953 004c 12       		.uleb128 0x12
- 954 004d 06       		.uleb128 0x6
- 955 004e 40       		.uleb128 0x40
- 956 004f 18       		.uleb128 0x18
- 957 0050 9742     		.uleb128 0x2117
- 958 0052 19       		.uleb128 0x19
- 959 0053 00       		.byte	0
- 960 0054 00       		.byte	0
- 961 0055 07       		.uleb128 0x7
- 962 0056 2E       		.uleb128 0x2e
- 963 0057 01       		.byte	0x1
- 964 0058 3F       		.uleb128 0x3f
- 965 0059 19       		.uleb128 0x19
- 966 005a 03       		.uleb128 0x3
- 967 005b 0E       		.uleb128 0xe
- 968 005c 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 34
+ 912 0024 0B       		.uleb128 0xb
+ 913 0025 03       		.uleb128 0x3
+ 914 0026 08       		.uleb128 0x8
+ 915 0027 00       		.byte	0
+ 916 0028 00       		.byte	0
+ 917 0029 04       		.uleb128 0x4
+ 918 002a 16       		.uleb128 0x16
+ 919 002b 00       		.byte	0
+ 920 002c 03       		.uleb128 0x3
+ 921 002d 0E       		.uleb128 0xe
+ 922 002e 3A       		.uleb128 0x3a
+ 923 002f 0B       		.uleb128 0xb
+ 924 0030 3B       		.uleb128 0x3b
+ 925 0031 05       		.uleb128 0x5
+ 926 0032 49       		.uleb128 0x49
+ 927 0033 13       		.uleb128 0x13
+ 928 0034 00       		.byte	0
+ 929 0035 00       		.byte	0
+ 930 0036 05       		.uleb128 0x5
+ 931 0037 35       		.uleb128 0x35
+ 932 0038 00       		.byte	0
+ 933 0039 49       		.uleb128 0x49
+ 934 003a 13       		.uleb128 0x13
+ 935 003b 00       		.byte	0
+ 936 003c 00       		.byte	0
+ 937 003d 06       		.uleb128 0x6
+ 938 003e 2E       		.uleb128 0x2e
+ 939 003f 00       		.byte	0
+ 940 0040 3F       		.uleb128 0x3f
+ 941 0041 19       		.uleb128 0x19
+ 942 0042 03       		.uleb128 0x3
+ 943 0043 0E       		.uleb128 0xe
+ 944 0044 3A       		.uleb128 0x3a
+ 945 0045 0B       		.uleb128 0xb
+ 946 0046 3B       		.uleb128 0x3b
+ 947 0047 0B       		.uleb128 0xb
+ 948 0048 27       		.uleb128 0x27
+ 949 0049 19       		.uleb128 0x19
+ 950 004a 11       		.uleb128 0x11
+ 951 004b 01       		.uleb128 0x1
+ 952 004c 12       		.uleb128 0x12
+ 953 004d 06       		.uleb128 0x6
+ 954 004e 40       		.uleb128 0x40
+ 955 004f 18       		.uleb128 0x18
+ 956 0050 9742     		.uleb128 0x2117
+ 957 0052 19       		.uleb128 0x19
+ 958 0053 00       		.byte	0
+ 959 0054 00       		.byte	0
+ 960 0055 07       		.uleb128 0x7
+ 961 0056 2E       		.uleb128 0x2e
+ 962 0057 01       		.byte	0x1
+ 963 0058 3F       		.uleb128 0x3f
+ 964 0059 19       		.uleb128 0x19
+ 965 005a 03       		.uleb128 0x3
+ 966 005b 0E       		.uleb128 0xe
+ 967 005c 3A       		.uleb128 0x3a
+ 968 005d 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 34
 
 
- 969 005d 0B       		.uleb128 0xb
- 970 005e 3B       		.uleb128 0x3b
- 971 005f 05       		.uleb128 0x5
- 972 0060 27       		.uleb128 0x27
- 973 0061 19       		.uleb128 0x19
- 974 0062 11       		.uleb128 0x11
- 975 0063 01       		.uleb128 0x1
- 976 0064 12       		.uleb128 0x12
- 977 0065 06       		.uleb128 0x6
- 978 0066 40       		.uleb128 0x40
- 979 0067 18       		.uleb128 0x18
- 980 0068 9742     		.uleb128 0x2117
- 981 006a 19       		.uleb128 0x19
- 982 006b 01       		.uleb128 0x1
- 983 006c 13       		.uleb128 0x13
- 984 006d 00       		.byte	0
- 985 006e 00       		.byte	0
- 986 006f 08       		.uleb128 0x8
- 987 0070 05       		.uleb128 0x5
- 988 0071 00       		.byte	0
- 989 0072 03       		.uleb128 0x3
- 990 0073 0E       		.uleb128 0xe
- 991 0074 3A       		.uleb128 0x3a
- 992 0075 0B       		.uleb128 0xb
- 993 0076 3B       		.uleb128 0x3b
- 994 0077 05       		.uleb128 0x5
- 995 0078 49       		.uleb128 0x49
- 996 0079 13       		.uleb128 0x13
- 997 007a 02       		.uleb128 0x2
- 998 007b 18       		.uleb128 0x18
- 999 007c 00       		.byte	0
- 1000 007d 00       		.byte	0
- 1001 007e 09       		.uleb128 0x9
- 1002 007f 2E       		.uleb128 0x2e
- 1003 0080 00       		.byte	0
- 1004 0081 3F       		.uleb128 0x3f
- 1005 0082 19       		.uleb128 0x19
- 1006 0083 03       		.uleb128 0x3
- 1007 0084 0E       		.uleb128 0xe
- 1008 0085 3A       		.uleb128 0x3a
- 1009 0086 0B       		.uleb128 0xb
- 1010 0087 3B       		.uleb128 0x3b
- 1011 0088 05       		.uleb128 0x5
- 1012 0089 27       		.uleb128 0x27
- 1013 008a 19       		.uleb128 0x19
- 1014 008b 49       		.uleb128 0x49
- 1015 008c 13       		.uleb128 0x13
- 1016 008d 11       		.uleb128 0x11
- 1017 008e 01       		.uleb128 0x1
- 1018 008f 12       		.uleb128 0x12
- 1019 0090 06       		.uleb128 0x6
- 1020 0091 40       		.uleb128 0x40
- 1021 0092 18       		.uleb128 0x18
- 1022 0093 9742     		.uleb128 0x2117
- 1023 0095 19       		.uleb128 0x19
- 1024 0096 00       		.byte	0
- 1025 0097 00       		.byte	0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 35
+ 969 005e 3B       		.uleb128 0x3b
+ 970 005f 05       		.uleb128 0x5
+ 971 0060 27       		.uleb128 0x27
+ 972 0061 19       		.uleb128 0x19
+ 973 0062 11       		.uleb128 0x11
+ 974 0063 01       		.uleb128 0x1
+ 975 0064 12       		.uleb128 0x12
+ 976 0065 06       		.uleb128 0x6
+ 977 0066 40       		.uleb128 0x40
+ 978 0067 18       		.uleb128 0x18
+ 979 0068 9742     		.uleb128 0x2117
+ 980 006a 19       		.uleb128 0x19
+ 981 006b 01       		.uleb128 0x1
+ 982 006c 13       		.uleb128 0x13
+ 983 006d 00       		.byte	0
+ 984 006e 00       		.byte	0
+ 985 006f 08       		.uleb128 0x8
+ 986 0070 05       		.uleb128 0x5
+ 987 0071 00       		.byte	0
+ 988 0072 03       		.uleb128 0x3
+ 989 0073 0E       		.uleb128 0xe
+ 990 0074 3A       		.uleb128 0x3a
+ 991 0075 0B       		.uleb128 0xb
+ 992 0076 3B       		.uleb128 0x3b
+ 993 0077 05       		.uleb128 0x5
+ 994 0078 49       		.uleb128 0x49
+ 995 0079 13       		.uleb128 0x13
+ 996 007a 02       		.uleb128 0x2
+ 997 007b 18       		.uleb128 0x18
+ 998 007c 00       		.byte	0
+ 999 007d 00       		.byte	0
+ 1000 007e 09       		.uleb128 0x9
+ 1001 007f 2E       		.uleb128 0x2e
+ 1002 0080 00       		.byte	0
+ 1003 0081 3F       		.uleb128 0x3f
+ 1004 0082 19       		.uleb128 0x19
+ 1005 0083 03       		.uleb128 0x3
+ 1006 0084 0E       		.uleb128 0xe
+ 1007 0085 3A       		.uleb128 0x3a
+ 1008 0086 0B       		.uleb128 0xb
+ 1009 0087 3B       		.uleb128 0x3b
+ 1010 0088 05       		.uleb128 0x5
+ 1011 0089 27       		.uleb128 0x27
+ 1012 008a 19       		.uleb128 0x19
+ 1013 008b 49       		.uleb128 0x49
+ 1014 008c 13       		.uleb128 0x13
+ 1015 008d 11       		.uleb128 0x11
+ 1016 008e 01       		.uleb128 0x1
+ 1017 008f 12       		.uleb128 0x12
+ 1018 0090 06       		.uleb128 0x6
+ 1019 0091 40       		.uleb128 0x40
+ 1020 0092 18       		.uleb128 0x18
+ 1021 0093 9742     		.uleb128 0x2117
+ 1022 0095 19       		.uleb128 0x19
+ 1023 0096 00       		.byte	0
+ 1024 0097 00       		.byte	0
+ 1025 0098 0A       		.uleb128 0xa
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 35
 
 
- 1026 0098 0A       		.uleb128 0xa
- 1027 0099 2E       		.uleb128 0x2e
- 1028 009a 01       		.byte	0x1
- 1029 009b 3F       		.uleb128 0x3f
- 1030 009c 19       		.uleb128 0x19
- 1031 009d 03       		.uleb128 0x3
- 1032 009e 0E       		.uleb128 0xe
- 1033 009f 3A       		.uleb128 0x3a
- 1034 00a0 0B       		.uleb128 0xb
- 1035 00a1 3B       		.uleb128 0x3b
- 1036 00a2 05       		.uleb128 0x5
- 1037 00a3 27       		.uleb128 0x27
- 1038 00a4 19       		.uleb128 0x19
- 1039 00a5 49       		.uleb128 0x49
- 1040 00a6 13       		.uleb128 0x13
- 1041 00a7 11       		.uleb128 0x11
- 1042 00a8 01       		.uleb128 0x1
- 1043 00a9 12       		.uleb128 0x12
- 1044 00aa 06       		.uleb128 0x6
- 1045 00ab 40       		.uleb128 0x40
- 1046 00ac 18       		.uleb128 0x18
- 1047 00ad 9742     		.uleb128 0x2117
- 1048 00af 19       		.uleb128 0x19
- 1049 00b0 01       		.uleb128 0x1
- 1050 00b1 13       		.uleb128 0x13
- 1051 00b2 00       		.byte	0
- 1052 00b3 00       		.byte	0
- 1053 00b4 0B       		.uleb128 0xb
- 1054 00b5 34       		.uleb128 0x34
- 1055 00b6 00       		.byte	0
- 1056 00b7 03       		.uleb128 0x3
- 1057 00b8 0E       		.uleb128 0xe
- 1058 00b9 3A       		.uleb128 0x3a
- 1059 00ba 0B       		.uleb128 0xb
- 1060 00bb 3B       		.uleb128 0x3b
- 1061 00bc 05       		.uleb128 0x5
- 1062 00bd 49       		.uleb128 0x49
- 1063 00be 13       		.uleb128 0x13
- 1064 00bf 02       		.uleb128 0x2
- 1065 00c0 18       		.uleb128 0x18
- 1066 00c1 00       		.byte	0
- 1067 00c2 00       		.byte	0
- 1068 00c3 0C       		.uleb128 0xc
- 1069 00c4 898201   		.uleb128 0x4109
- 1070 00c7 00       		.byte	0
- 1071 00c8 11       		.uleb128 0x11
- 1072 00c9 01       		.uleb128 0x1
- 1073 00ca 31       		.uleb128 0x31
- 1074 00cb 13       		.uleb128 0x13
- 1075 00cc 00       		.byte	0
- 1076 00cd 00       		.byte	0
- 1077 00ce 0D       		.uleb128 0xd
- 1078 00cf 2E       		.uleb128 0x2e
- 1079 00d0 01       		.byte	0x1
- 1080 00d1 3F       		.uleb128 0x3f
- 1081 00d2 19       		.uleb128 0x19
- 1082 00d3 03       		.uleb128 0x3
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 36
+ 1026 0099 2E       		.uleb128 0x2e
+ 1027 009a 01       		.byte	0x1
+ 1028 009b 3F       		.uleb128 0x3f
+ 1029 009c 19       		.uleb128 0x19
+ 1030 009d 03       		.uleb128 0x3
+ 1031 009e 0E       		.uleb128 0xe
+ 1032 009f 3A       		.uleb128 0x3a
+ 1033 00a0 0B       		.uleb128 0xb
+ 1034 00a1 3B       		.uleb128 0x3b
+ 1035 00a2 05       		.uleb128 0x5
+ 1036 00a3 27       		.uleb128 0x27
+ 1037 00a4 19       		.uleb128 0x19
+ 1038 00a5 49       		.uleb128 0x49
+ 1039 00a6 13       		.uleb128 0x13
+ 1040 00a7 11       		.uleb128 0x11
+ 1041 00a8 01       		.uleb128 0x1
+ 1042 00a9 12       		.uleb128 0x12
+ 1043 00aa 06       		.uleb128 0x6
+ 1044 00ab 40       		.uleb128 0x40
+ 1045 00ac 18       		.uleb128 0x18
+ 1046 00ad 9742     		.uleb128 0x2117
+ 1047 00af 19       		.uleb128 0x19
+ 1048 00b0 01       		.uleb128 0x1
+ 1049 00b1 13       		.uleb128 0x13
+ 1050 00b2 00       		.byte	0
+ 1051 00b3 00       		.byte	0
+ 1052 00b4 0B       		.uleb128 0xb
+ 1053 00b5 34       		.uleb128 0x34
+ 1054 00b6 00       		.byte	0
+ 1055 00b7 03       		.uleb128 0x3
+ 1056 00b8 0E       		.uleb128 0xe
+ 1057 00b9 3A       		.uleb128 0x3a
+ 1058 00ba 0B       		.uleb128 0xb
+ 1059 00bb 3B       		.uleb128 0x3b
+ 1060 00bc 05       		.uleb128 0x5
+ 1061 00bd 49       		.uleb128 0x49
+ 1062 00be 13       		.uleb128 0x13
+ 1063 00bf 02       		.uleb128 0x2
+ 1064 00c0 18       		.uleb128 0x18
+ 1065 00c1 00       		.byte	0
+ 1066 00c2 00       		.byte	0
+ 1067 00c3 0C       		.uleb128 0xc
+ 1068 00c4 898201   		.uleb128 0x4109
+ 1069 00c7 00       		.byte	0
+ 1070 00c8 11       		.uleb128 0x11
+ 1071 00c9 01       		.uleb128 0x1
+ 1072 00ca 31       		.uleb128 0x31
+ 1073 00cb 13       		.uleb128 0x13
+ 1074 00cc 00       		.byte	0
+ 1075 00cd 00       		.byte	0
+ 1076 00ce 0D       		.uleb128 0xd
+ 1077 00cf 2E       		.uleb128 0x2e
+ 1078 00d0 01       		.byte	0x1
+ 1079 00d1 3F       		.uleb128 0x3f
+ 1080 00d2 19       		.uleb128 0x19
+ 1081 00d3 03       		.uleb128 0x3
+ 1082 00d4 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 36
 
 
- 1083 00d4 0E       		.uleb128 0xe
- 1084 00d5 3A       		.uleb128 0x3a
- 1085 00d6 0B       		.uleb128 0xb
- 1086 00d7 3B       		.uleb128 0x3b
- 1087 00d8 0B       		.uleb128 0xb
- 1088 00d9 27       		.uleb128 0x27
- 1089 00da 19       		.uleb128 0x19
- 1090 00db 11       		.uleb128 0x11
- 1091 00dc 01       		.uleb128 0x1
- 1092 00dd 12       		.uleb128 0x12
- 1093 00de 06       		.uleb128 0x6
- 1094 00df 40       		.uleb128 0x40
- 1095 00e0 18       		.uleb128 0x18
- 1096 00e1 9742     		.uleb128 0x2117
- 1097 00e3 19       		.uleb128 0x19
- 1098 00e4 01       		.uleb128 0x1
- 1099 00e5 13       		.uleb128 0x13
- 1100 00e6 00       		.byte	0
- 1101 00e7 00       		.byte	0
- 1102 00e8 0E       		.uleb128 0xe
- 1103 00e9 34       		.uleb128 0x34
- 1104 00ea 00       		.byte	0
- 1105 00eb 03       		.uleb128 0x3
- 1106 00ec 0E       		.uleb128 0xe
- 1107 00ed 3A       		.uleb128 0x3a
- 1108 00ee 0B       		.uleb128 0xb
- 1109 00ef 3B       		.uleb128 0x3b
- 1110 00f0 0B       		.uleb128 0xb
- 1111 00f1 49       		.uleb128 0x49
- 1112 00f2 13       		.uleb128 0x13
- 1113 00f3 02       		.uleb128 0x2
- 1114 00f4 17       		.uleb128 0x17
- 1115 00f5 00       		.byte	0
- 1116 00f6 00       		.byte	0
- 1117 00f7 0F       		.uleb128 0xf
- 1118 00f8 898201   		.uleb128 0x4109
- 1119 00fb 01       		.byte	0x1
- 1120 00fc 11       		.uleb128 0x11
- 1121 00fd 01       		.uleb128 0x1
- 1122 00fe 31       		.uleb128 0x31
- 1123 00ff 13       		.uleb128 0x13
- 1124 0100 01       		.uleb128 0x1
- 1125 0101 13       		.uleb128 0x13
- 1126 0102 00       		.byte	0
- 1127 0103 00       		.byte	0
- 1128 0104 10       		.uleb128 0x10
- 1129 0105 8A8201   		.uleb128 0x410a
- 1130 0108 00       		.byte	0
- 1131 0109 02       		.uleb128 0x2
- 1132 010a 18       		.uleb128 0x18
- 1133 010b 9142     		.uleb128 0x2111
- 1134 010d 18       		.uleb128 0x18
- 1135 010e 00       		.byte	0
- 1136 010f 00       		.byte	0
- 1137 0110 11       		.uleb128 0x11
- 1138 0111 34       		.uleb128 0x34
- 1139 0112 00       		.byte	0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 37
+ 1083 00d5 3A       		.uleb128 0x3a
+ 1084 00d6 0B       		.uleb128 0xb
+ 1085 00d7 3B       		.uleb128 0x3b
+ 1086 00d8 0B       		.uleb128 0xb
+ 1087 00d9 27       		.uleb128 0x27
+ 1088 00da 19       		.uleb128 0x19
+ 1089 00db 11       		.uleb128 0x11
+ 1090 00dc 01       		.uleb128 0x1
+ 1091 00dd 12       		.uleb128 0x12
+ 1092 00de 06       		.uleb128 0x6
+ 1093 00df 40       		.uleb128 0x40
+ 1094 00e0 18       		.uleb128 0x18
+ 1095 00e1 9742     		.uleb128 0x2117
+ 1096 00e3 19       		.uleb128 0x19
+ 1097 00e4 01       		.uleb128 0x1
+ 1098 00e5 13       		.uleb128 0x13
+ 1099 00e6 00       		.byte	0
+ 1100 00e7 00       		.byte	0
+ 1101 00e8 0E       		.uleb128 0xe
+ 1102 00e9 34       		.uleb128 0x34
+ 1103 00ea 00       		.byte	0
+ 1104 00eb 03       		.uleb128 0x3
+ 1105 00ec 0E       		.uleb128 0xe
+ 1106 00ed 3A       		.uleb128 0x3a
+ 1107 00ee 0B       		.uleb128 0xb
+ 1108 00ef 3B       		.uleb128 0x3b
+ 1109 00f0 0B       		.uleb128 0xb
+ 1110 00f1 49       		.uleb128 0x49
+ 1111 00f2 13       		.uleb128 0x13
+ 1112 00f3 02       		.uleb128 0x2
+ 1113 00f4 17       		.uleb128 0x17
+ 1114 00f5 00       		.byte	0
+ 1115 00f6 00       		.byte	0
+ 1116 00f7 0F       		.uleb128 0xf
+ 1117 00f8 898201   		.uleb128 0x4109
+ 1118 00fb 01       		.byte	0x1
+ 1119 00fc 11       		.uleb128 0x11
+ 1120 00fd 01       		.uleb128 0x1
+ 1121 00fe 31       		.uleb128 0x31
+ 1122 00ff 13       		.uleb128 0x13
+ 1123 0100 01       		.uleb128 0x1
+ 1124 0101 13       		.uleb128 0x13
+ 1125 0102 00       		.byte	0
+ 1126 0103 00       		.byte	0
+ 1127 0104 10       		.uleb128 0x10
+ 1128 0105 8A8201   		.uleb128 0x410a
+ 1129 0108 00       		.byte	0
+ 1130 0109 02       		.uleb128 0x2
+ 1131 010a 18       		.uleb128 0x18
+ 1132 010b 9142     		.uleb128 0x2111
+ 1133 010d 18       		.uleb128 0x18
+ 1134 010e 00       		.byte	0
+ 1135 010f 00       		.byte	0
+ 1136 0110 11       		.uleb128 0x11
+ 1137 0111 34       		.uleb128 0x34
+ 1138 0112 00       		.byte	0
+ 1139 0113 03       		.uleb128 0x3
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 37
 
 
- 1140 0113 03       		.uleb128 0x3
- 1141 0114 0E       		.uleb128 0xe
- 1142 0115 3A       		.uleb128 0x3a
- 1143 0116 0B       		.uleb128 0xb
- 1144 0117 3B       		.uleb128 0x3b
- 1145 0118 0B       		.uleb128 0xb
- 1146 0119 49       		.uleb128 0x49
- 1147 011a 13       		.uleb128 0x13
- 1148 011b 3F       		.uleb128 0x3f
- 1149 011c 19       		.uleb128 0x19
- 1150 011d 02       		.uleb128 0x2
- 1151 011e 18       		.uleb128 0x18
- 1152 011f 00       		.byte	0
- 1153 0120 00       		.byte	0
- 1154 0121 12       		.uleb128 0x12
- 1155 0122 2E       		.uleb128 0x2e
- 1156 0123 00       		.byte	0
- 1157 0124 3F       		.uleb128 0x3f
- 1158 0125 19       		.uleb128 0x19
- 1159 0126 03       		.uleb128 0x3
- 1160 0127 0E       		.uleb128 0xe
- 1161 0128 3A       		.uleb128 0x3a
- 1162 0129 0B       		.uleb128 0xb
- 1163 012a 3B       		.uleb128 0x3b
- 1164 012b 0B       		.uleb128 0xb
- 1165 012c 27       		.uleb128 0x27
- 1166 012d 19       		.uleb128 0x19
- 1167 012e 49       		.uleb128 0x49
- 1168 012f 13       		.uleb128 0x13
- 1169 0130 3C       		.uleb128 0x3c
- 1170 0131 19       		.uleb128 0x19
- 1171 0132 00       		.byte	0
- 1172 0133 00       		.byte	0
- 1173 0134 13       		.uleb128 0x13
- 1174 0135 2E       		.uleb128 0x2e
- 1175 0136 01       		.byte	0x1
- 1176 0137 3F       		.uleb128 0x3f
- 1177 0138 19       		.uleb128 0x19
- 1178 0139 03       		.uleb128 0x3
- 1179 013a 0E       		.uleb128 0xe
- 1180 013b 3A       		.uleb128 0x3a
- 1181 013c 0B       		.uleb128 0xb
- 1182 013d 3B       		.uleb128 0x3b
- 1183 013e 0B       		.uleb128 0xb
- 1184 013f 27       		.uleb128 0x27
- 1185 0140 19       		.uleb128 0x19
- 1186 0141 3C       		.uleb128 0x3c
- 1187 0142 19       		.uleb128 0x19
- 1188 0143 00       		.byte	0
- 1189 0144 00       		.byte	0
- 1190 0145 14       		.uleb128 0x14
- 1191 0146 05       		.uleb128 0x5
- 1192 0147 00       		.byte	0
- 1193 0148 49       		.uleb128 0x49
- 1194 0149 13       		.uleb128 0x13
- 1195 014a 00       		.byte	0
- 1196 014b 00       		.byte	0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 38
+ 1140 0114 0E       		.uleb128 0xe
+ 1141 0115 3A       		.uleb128 0x3a
+ 1142 0116 0B       		.uleb128 0xb
+ 1143 0117 3B       		.uleb128 0x3b
+ 1144 0118 0B       		.uleb128 0xb
+ 1145 0119 49       		.uleb128 0x49
+ 1146 011a 13       		.uleb128 0x13
+ 1147 011b 3F       		.uleb128 0x3f
+ 1148 011c 19       		.uleb128 0x19
+ 1149 011d 02       		.uleb128 0x2
+ 1150 011e 18       		.uleb128 0x18
+ 1151 011f 00       		.byte	0
+ 1152 0120 00       		.byte	0
+ 1153 0121 12       		.uleb128 0x12
+ 1154 0122 2E       		.uleb128 0x2e
+ 1155 0123 00       		.byte	0
+ 1156 0124 3F       		.uleb128 0x3f
+ 1157 0125 19       		.uleb128 0x19
+ 1158 0126 03       		.uleb128 0x3
+ 1159 0127 0E       		.uleb128 0xe
+ 1160 0128 3A       		.uleb128 0x3a
+ 1161 0129 0B       		.uleb128 0xb
+ 1162 012a 3B       		.uleb128 0x3b
+ 1163 012b 0B       		.uleb128 0xb
+ 1164 012c 27       		.uleb128 0x27
+ 1165 012d 19       		.uleb128 0x19
+ 1166 012e 49       		.uleb128 0x49
+ 1167 012f 13       		.uleb128 0x13
+ 1168 0130 3C       		.uleb128 0x3c
+ 1169 0131 19       		.uleb128 0x19
+ 1170 0132 00       		.byte	0
+ 1171 0133 00       		.byte	0
+ 1172 0134 13       		.uleb128 0x13
+ 1173 0135 2E       		.uleb128 0x2e
+ 1174 0136 01       		.byte	0x1
+ 1175 0137 3F       		.uleb128 0x3f
+ 1176 0138 19       		.uleb128 0x19
+ 1177 0139 03       		.uleb128 0x3
+ 1178 013a 0E       		.uleb128 0xe
+ 1179 013b 3A       		.uleb128 0x3a
+ 1180 013c 0B       		.uleb128 0xb
+ 1181 013d 3B       		.uleb128 0x3b
+ 1182 013e 0B       		.uleb128 0xb
+ 1183 013f 27       		.uleb128 0x27
+ 1184 0140 19       		.uleb128 0x19
+ 1185 0141 3C       		.uleb128 0x3c
+ 1186 0142 19       		.uleb128 0x19
+ 1187 0143 00       		.byte	0
+ 1188 0144 00       		.byte	0
+ 1189 0145 14       		.uleb128 0x14
+ 1190 0146 05       		.uleb128 0x5
+ 1191 0147 00       		.byte	0
+ 1192 0148 49       		.uleb128 0x49
+ 1193 0149 13       		.uleb128 0x13
+ 1194 014a 00       		.byte	0
+ 1195 014b 00       		.byte	0
+ 1196 014c 00       		.byte	0
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 38
 
 
- 1197 014c 00       		.byte	0
- 1198              		.section	.debug_loc,"",%progbits
- 1199              	.Ldebug_loc0:
- 1200              	.LLST0:
- 1201 0000 0A000000 		.4byte	.LVL8
- 1202 0004 0E000000 		.4byte	.LVL9
- 1203 0008 0100     		.2byte	0x1
- 1204 000a 53       		.byte	0x53
- 1205 000b 00000000 		.4byte	0
- 1206 000f 00000000 		.4byte	0
- 1207              	.LLST1:
- 1208 0013 36000000 		.4byte	.LVL14
- 1209 0017 41000000 		.4byte	.LVL15-1
- 1210 001b 0100     		.2byte	0x1
- 1211 001d 50       		.byte	0x50
- 1212 001e 00000000 		.4byte	0
- 1213 0022 00000000 		.4byte	0
- 1214              		.section	.debug_aranges,"",%progbits
- 1215 0000 94000000 		.4byte	0x94
- 1216 0004 0200     		.2byte	0x2
- 1217 0006 00000000 		.4byte	.Ldebug_info0
- 1218 000a 04       		.byte	0x4
- 1219 000b 00       		.byte	0
- 1220 000c 0000     		.2byte	0
- 1221 000e 0000     		.2byte	0
- 1222 0010 00000000 		.4byte	.LFB2
- 1223 0014 10000000 		.4byte	.LFE2-.LFB2
- 1224 0018 00000000 		.4byte	.LFB3
- 1225 001c 10000000 		.4byte	.LFE3-.LFB3
- 1226 0020 00000000 		.4byte	.LFB4
- 1227 0024 0C000000 		.4byte	.LFE4-.LFB4
- 1228 0028 00000000 		.4byte	.LFB5
- 1229 002c 14000000 		.4byte	.LFE5-.LFB5
- 1230 0030 00000000 		.4byte	.LFB7
- 1231 0034 0C000000 		.4byte	.LFE7-.LFB7
- 1232 0038 00000000 		.4byte	.LFB8
- 1233 003c 0C000000 		.4byte	.LFE8-.LFB8
- 1234 0040 00000000 		.4byte	.LFB9
- 1235 0044 0C000000 		.4byte	.LFE9-.LFB9
- 1236 0048 00000000 		.4byte	.LFB10
- 1237 004c 0C000000 		.4byte	.LFE10-.LFB10
- 1238 0050 00000000 		.4byte	.LFB11
- 1239 0054 0C000000 		.4byte	.LFE11-.LFB11
- 1240 0058 00000000 		.4byte	.LFB12
- 1241 005c 0C000000 		.4byte	.LFE12-.LFB12
- 1242 0060 00000000 		.4byte	.LFB13
- 1243 0064 0C000000 		.4byte	.LFE13-.LFB13
- 1244 0068 00000000 		.4byte	.LFB6
- 1245 006c 14000000 		.4byte	.LFE6-.LFB6
- 1246 0070 00000000 		.4byte	.LFB1
- 1247 0074 50000000 		.4byte	.LFE1-.LFB1
- 1248 0078 00000000 		.4byte	.LFB0
- 1249 007c 1C000000 		.4byte	.LFE0-.LFB0
- 1250 0080 00000000 		.4byte	.LFB14
- 1251 0084 0C000000 		.4byte	.LFE14-.LFB14
- 1252 0088 00000000 		.4byte	.LFB15
- 1253 008c 0C000000 		.4byte	.LFE15-.LFB15
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 39
+ 1197              		.section	.debug_loc,"",%progbits
+ 1198              	.Ldebug_loc0:
+ 1199              	.LLST0:
+ 1200 0000 0A000000 		.4byte	.LVL8
+ 1201 0004 0E000000 		.4byte	.LVL9
+ 1202 0008 0100     		.2byte	0x1
+ 1203 000a 53       		.byte	0x53
+ 1204 000b 00000000 		.4byte	0
+ 1205 000f 00000000 		.4byte	0
+ 1206              	.LLST1:
+ 1207 0013 36000000 		.4byte	.LVL14
+ 1208 0017 41000000 		.4byte	.LVL15-1
+ 1209 001b 0100     		.2byte	0x1
+ 1210 001d 50       		.byte	0x50
+ 1211 001e 00000000 		.4byte	0
+ 1212 0022 00000000 		.4byte	0
+ 1213              		.section	.debug_aranges,"",%progbits
+ 1214 0000 94000000 		.4byte	0x94
+ 1215 0004 0200     		.2byte	0x2
+ 1216 0006 00000000 		.4byte	.Ldebug_info0
+ 1217 000a 04       		.byte	0x4
+ 1218 000b 00       		.byte	0
+ 1219 000c 0000     		.2byte	0
+ 1220 000e 0000     		.2byte	0
+ 1221 0010 00000000 		.4byte	.LFB2
+ 1222 0014 10000000 		.4byte	.LFE2-.LFB2
+ 1223 0018 00000000 		.4byte	.LFB3
+ 1224 001c 10000000 		.4byte	.LFE3-.LFB3
+ 1225 0020 00000000 		.4byte	.LFB4
+ 1226 0024 0C000000 		.4byte	.LFE4-.LFB4
+ 1227 0028 00000000 		.4byte	.LFB5
+ 1228 002c 14000000 		.4byte	.LFE5-.LFB5
+ 1229 0030 00000000 		.4byte	.LFB7
+ 1230 0034 0C000000 		.4byte	.LFE7-.LFB7
+ 1231 0038 00000000 		.4byte	.LFB8
+ 1232 003c 0C000000 		.4byte	.LFE8-.LFB8
+ 1233 0040 00000000 		.4byte	.LFB9
+ 1234 0044 0C000000 		.4byte	.LFE9-.LFB9
+ 1235 0048 00000000 		.4byte	.LFB10
+ 1236 004c 0C000000 		.4byte	.LFE10-.LFB10
+ 1237 0050 00000000 		.4byte	.LFB11
+ 1238 0054 0C000000 		.4byte	.LFE11-.LFB11
+ 1239 0058 00000000 		.4byte	.LFB12
+ 1240 005c 0C000000 		.4byte	.LFE12-.LFB12
+ 1241 0060 00000000 		.4byte	.LFB13
+ 1242 0064 0C000000 		.4byte	.LFE13-.LFB13
+ 1243 0068 00000000 		.4byte	.LFB6
+ 1244 006c 14000000 		.4byte	.LFE6-.LFB6
+ 1245 0070 00000000 		.4byte	.LFB1
+ 1246 0074 50000000 		.4byte	.LFE1-.LFB1
+ 1247 0078 00000000 		.4byte	.LFB0
+ 1248 007c 1C000000 		.4byte	.LFE0-.LFB0
+ 1249 0080 00000000 		.4byte	.LFB14
+ 1250 0084 0C000000 		.4byte	.LFE14-.LFB14
+ 1251 0088 00000000 		.4byte	.LFB15
+ 1252 008c 0C000000 		.4byte	.LFE15-.LFB15
+ 1253 0090 00000000 		.4byte	0
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 39
 
 
- 1254 0090 00000000 		.4byte	0
- 1255 0094 00000000 		.4byte	0
- 1256              		.section	.debug_ranges,"",%progbits
- 1257              	.Ldebug_ranges0:
- 1258 0000 00000000 		.4byte	.LFB2
- 1259 0004 10000000 		.4byte	.LFE2
- 1260 0008 00000000 		.4byte	.LFB3
- 1261 000c 10000000 		.4byte	.LFE3
- 1262 0010 00000000 		.4byte	.LFB4
- 1263 0014 0C000000 		.4byte	.LFE4
- 1264 0018 00000000 		.4byte	.LFB5
- 1265 001c 14000000 		.4byte	.LFE5
- 1266 0020 00000000 		.4byte	.LFB7
- 1267 0024 0C000000 		.4byte	.LFE7
- 1268 0028 00000000 		.4byte	.LFB8
- 1269 002c 0C000000 		.4byte	.LFE8
- 1270 0030 00000000 		.4byte	.LFB9
- 1271 0034 0C000000 		.4byte	.LFE9
- 1272 0038 00000000 		.4byte	.LFB10
- 1273 003c 0C000000 		.4byte	.LFE10
- 1274 0040 00000000 		.4byte	.LFB11
- 1275 0044 0C000000 		.4byte	.LFE11
- 1276 0048 00000000 		.4byte	.LFB12
- 1277 004c 0C000000 		.4byte	.LFE12
- 1278 0050 00000000 		.4byte	.LFB13
- 1279 0054 0C000000 		.4byte	.LFE13
- 1280 0058 00000000 		.4byte	.LFB6
- 1281 005c 14000000 		.4byte	.LFE6
- 1282 0060 00000000 		.4byte	.LFB1
- 1283 0064 50000000 		.4byte	.LFE1
- 1284 0068 00000000 		.4byte	.LFB0
- 1285 006c 1C000000 		.4byte	.LFE0
- 1286 0070 00000000 		.4byte	.LFB14
- 1287 0074 0C000000 		.4byte	.LFE14
- 1288 0078 00000000 		.4byte	.LFB15
- 1289 007c 0C000000 		.4byte	.LFE15
- 1290 0080 00000000 		.4byte	0
- 1291 0084 00000000 		.4byte	0
- 1292              		.section	.debug_line,"",%progbits
- 1293              	.Ldebug_line0:
- 1294 0000 81010000 		.section	.debug_str,"MS",%progbits,1
- 1294      02004D00 
- 1294      00000201 
- 1294      FB0E0D00 
- 1294      01010101 
- 1295              	.LASF30:
- 1296 0000 50574D53 		.ascii	"PWMSF_ClearFIFO\000"
- 1296      465F436C 
- 1296      65617246 
- 1296      49464F00 
- 1297              	.LASF18:
- 1298 0010 50574D53 		.ascii	"PWMSF_WritePeriod\000"
- 1298      465F5772 
- 1298      69746550 
- 1298      6572696F 
- 1298      6400
- 1299              	.LASF31:
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 40
+ 1254 0094 00000000 		.4byte	0
+ 1255              		.section	.debug_ranges,"",%progbits
+ 1256              	.Ldebug_ranges0:
+ 1257 0000 00000000 		.4byte	.LFB2
+ 1258 0004 10000000 		.4byte	.LFE2
+ 1259 0008 00000000 		.4byte	.LFB3
+ 1260 000c 10000000 		.4byte	.LFE3
+ 1261 0010 00000000 		.4byte	.LFB4
+ 1262 0014 0C000000 		.4byte	.LFE4
+ 1263 0018 00000000 		.4byte	.LFB5
+ 1264 001c 14000000 		.4byte	.LFE5
+ 1265 0020 00000000 		.4byte	.LFB7
+ 1266 0024 0C000000 		.4byte	.LFE7
+ 1267 0028 00000000 		.4byte	.LFB8
+ 1268 002c 0C000000 		.4byte	.LFE8
+ 1269 0030 00000000 		.4byte	.LFB9
+ 1270 0034 0C000000 		.4byte	.LFE9
+ 1271 0038 00000000 		.4byte	.LFB10
+ 1272 003c 0C000000 		.4byte	.LFE10
+ 1273 0040 00000000 		.4byte	.LFB11
+ 1274 0044 0C000000 		.4byte	.LFE11
+ 1275 0048 00000000 		.4byte	.LFB12
+ 1276 004c 0C000000 		.4byte	.LFE12
+ 1277 0050 00000000 		.4byte	.LFB13
+ 1278 0054 0C000000 		.4byte	.LFE13
+ 1279 0058 00000000 		.4byte	.LFB6
+ 1280 005c 14000000 		.4byte	.LFE6
+ 1281 0060 00000000 		.4byte	.LFB1
+ 1282 0064 50000000 		.4byte	.LFE1
+ 1283 0068 00000000 		.4byte	.LFB0
+ 1284 006c 1C000000 		.4byte	.LFE0
+ 1285 0070 00000000 		.4byte	.LFB14
+ 1286 0074 0C000000 		.4byte	.LFE14
+ 1287 0078 00000000 		.4byte	.LFB15
+ 1288 007c 0C000000 		.4byte	.LFE15
+ 1289 0080 00000000 		.4byte	0
+ 1290 0084 00000000 		.4byte	0
+ 1291              		.section	.debug_line,"",%progbits
+ 1292              	.Ldebug_line0:
+ 1293 0000 81010000 		.section	.debug_str,"MS",%progbits,1
+ 1293      02004D00 
+ 1293      00000201 
+ 1293      FB0E0D00 
+ 1293      01010101 
+ 1294              	.LASF30:
+ 1295 0000 50574D53 		.ascii	"PWMSF_ClearFIFO\000"
+ 1295      465F436C 
+ 1295      65617246 
+ 1295      49464F00 
+ 1296              	.LASF18:
+ 1297 0010 50574D53 		.ascii	"PWMSF_WritePeriod\000"
+ 1297      465F5772 
+ 1297      69746550 
+ 1297      6572696F 
+ 1297      6400
+ 1298              	.LASF31:
+ 1299 0022 50574D53 		.ascii	"PWMSF_Init\000"
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 40
 
 
- 1300 0022 50574D53 		.ascii	"PWMSF_Init\000"
- 1300      465F496E 
- 1300      697400
- 1301              	.LASF20:
- 1302 002d 70657269 		.ascii	"period\000"
- 1302      6F6400
- 1303              	.LASF42:
- 1304 0034 50574D53 		.ascii	"PWMSF_initVar\000"
- 1304      465F696E 
- 1304      69745661 
- 1304      7200
- 1305              	.LASF3:
- 1306 0042 73686F72 		.ascii	"short unsigned int\000"
- 1306      7420756E 
- 1306      7369676E 
- 1306      65642069 
- 1306      6E7400
- 1307              	.LASF2:
- 1308 0055 73686F72 		.ascii	"short int\000"
- 1308      7420696E 
- 1308      7400
- 1309              	.LASF36:
- 1310 005f 50574D53 		.ascii	"PWMSF_ReadCompare\000"
- 1310      465F5265 
- 1310      6164436F 
- 1310      6D706172 
- 1310      6500
- 1311              	.LASF9:
- 1312 0071 666C6F61 		.ascii	"float\000"
- 1312      7400
- 1313              	.LASF27:
- 1314 0077 50574D53 		.ascii	"PWMSF_WriteControlRegister\000"
- 1314      465F5772 
- 1314      69746543 
- 1314      6F6E7472 
- 1314      6F6C5265 
- 1315              	.LASF7:
- 1316 0092 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1316      206C6F6E 
- 1316      6720756E 
- 1316      7369676E 
- 1316      65642069 
- 1317              	.LASF1:
- 1318 00a9 756E7369 		.ascii	"unsigned char\000"
- 1318      676E6564 
- 1318      20636861 
- 1318      7200
- 1319              	.LASF29:
- 1320 00b7 50574D53 		.ascii	"PWMSF_ReadCapture\000"
- 1320      465F5265 
- 1320      61644361 
- 1320      70747572 
- 1320      6500
- 1321              	.LASF39:
- 1322 00c9 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWMSF.c\000"
- 1322      72617465 
- 1322      645F536F 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 41
+ 1299      465F496E 
+ 1299      697400
+ 1300              	.LASF20:
+ 1301 002d 70657269 		.ascii	"period\000"
+ 1301      6F6400
+ 1302              	.LASF42:
+ 1303 0034 50574D53 		.ascii	"PWMSF_initVar\000"
+ 1303      465F696E 
+ 1303      69745661 
+ 1303      7200
+ 1304              	.LASF3:
+ 1305 0042 73686F72 		.ascii	"short unsigned int\000"
+ 1305      7420756E 
+ 1305      7369676E 
+ 1305      65642069 
+ 1305      6E7400
+ 1306              	.LASF2:
+ 1307 0055 73686F72 		.ascii	"short int\000"
+ 1307      7420696E 
+ 1307      7400
+ 1308              	.LASF40:
+ 1309 005f 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\HellYaeh\\E4PRJ4-Gruppe"
+ 1309      73657273 
+ 1309      5C416E64 
+ 1309      6572735C 
+ 1309      4465736B 
+ 1310 008d 315C5465 		.ascii	"1\\Test4\\version_01.cydsn\000"
+ 1310      7374345C 
+ 1310      76657273 
+ 1310      696F6E5F 
+ 1310      30312E63 
+ 1311              	.LASF36:
+ 1312 00a6 50574D53 		.ascii	"PWMSF_ReadCompare\000"
+ 1312      465F5265 
+ 1312      6164436F 
+ 1312      6D706172 
+ 1312      6500
+ 1313              	.LASF9:
+ 1314 00b8 666C6F61 		.ascii	"float\000"
+ 1314      7400
+ 1315              	.LASF27:
+ 1316 00be 50574D53 		.ascii	"PWMSF_WriteControlRegister\000"
+ 1316      465F5772 
+ 1316      69746543 
+ 1316      6F6E7472 
+ 1316      6F6C5265 
+ 1317              	.LASF7:
+ 1318 00d9 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1318      206C6F6E 
+ 1318      6720756E 
+ 1318      7369676E 
+ 1318      65642069 
+ 1319              	.LASF1:
+ 1320 00f0 756E7369 		.ascii	"unsigned char\000"
+ 1320      676E6564 
+ 1320      20636861 
+ 1320      7200
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 41
 
 
- 1322      75726365 
- 1322      5C50536F 
- 1323              	.LASF13:
- 1324 00e8 72656738 		.ascii	"reg8\000"
- 1324      00
- 1325              	.LASF5:
- 1326 00ed 6C6F6E67 		.ascii	"long unsigned int\000"
- 1326      20756E73 
- 1326      69676E65 
- 1326      6420696E 
- 1326      7400
- 1327              	.LASF12:
- 1328 00ff 75696E74 		.ascii	"uint8\000"
- 1328      3800
- 1329              	.LASF28:
- 1330 0105 636F6E74 		.ascii	"control\000"
- 1330      726F6C00 
- 1331              	.LASF16:
- 1332 010d 50574D53 		.ascii	"PWMSF_Stop\000"
- 1332      465F5374 
- 1332      6F7000
- 1333              	.LASF19:
- 1334 0118 636F756E 		.ascii	"counter\000"
- 1334      74657200 
- 1335              	.LASF34:
- 1336 0120 50574D53 		.ascii	"PWMSF_interruptState\000"
- 1336      465F696E 
- 1336      74657272 
- 1336      75707453 
- 1336      74617465 
- 1337              	.LASF10:
- 1338 0135 646F7562 		.ascii	"double\000"
- 1338      6C6500
- 1339              	.LASF15:
- 1340 013c 50574D53 		.ascii	"PWMSF_Enable\000"
- 1340      465F456E 
- 1340      61626C65 
- 1340      00
- 1341              	.LASF32:
- 1342 0149 72657375 		.ascii	"result\000"
- 1342      6C7400
- 1343              	.LASF37:
- 1344 0150 50574D53 		.ascii	"PWMSF_ReadPeriod\000"
- 1344      465F5265 
- 1344      61645065 
- 1344      72696F64 
- 1344      00
- 1345              	.LASF43:
- 1346 0161 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 1346      74657243 
- 1346      72697469 
- 1346      63616C53 
- 1346      65637469 
- 1347              	.LASF35:
- 1348 0178 50574D53 		.ascii	"PWMSF_Start\000"
- 1348      465F5374 
- 1348      61727400 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 42
+ 1321              	.LASF29:
+ 1322 00fe 50574D53 		.ascii	"PWMSF_ReadCapture\000"
+ 1322      465F5265 
+ 1322      61644361 
+ 1322      70747572 
+ 1322      6500
+ 1323              	.LASF39:
+ 1324 0110 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWMSF.c\000"
+ 1324      72617465 
+ 1324      645F536F 
+ 1324      75726365 
+ 1324      5C50536F 
+ 1325              	.LASF13:
+ 1326 012f 72656738 		.ascii	"reg8\000"
+ 1326      00
+ 1327              	.LASF5:
+ 1328 0134 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1328      20756E73 
+ 1328      69676E65 
+ 1328      6420696E 
+ 1328      7400
+ 1329              	.LASF12:
+ 1330 0146 75696E74 		.ascii	"uint8\000"
+ 1330      3800
+ 1331              	.LASF28:
+ 1332 014c 636F6E74 		.ascii	"control\000"
+ 1332      726F6C00 
+ 1333              	.LASF16:
+ 1334 0154 50574D53 		.ascii	"PWMSF_Stop\000"
+ 1334      465F5374 
+ 1334      6F7000
+ 1335              	.LASF19:
+ 1336 015f 636F756E 		.ascii	"counter\000"
+ 1336      74657200 
+ 1337              	.LASF34:
+ 1338 0167 50574D53 		.ascii	"PWMSF_interruptState\000"
+ 1338      465F696E 
+ 1338      74657272 
+ 1338      75707453 
+ 1338      74617465 
+ 1339              	.LASF10:
+ 1340 017c 646F7562 		.ascii	"double\000"
+ 1340      6C6500
+ 1341              	.LASF15:
+ 1342 0183 50574D53 		.ascii	"PWMSF_Enable\000"
+ 1342      465F456E 
+ 1342      61626C65 
+ 1342      00
+ 1343              	.LASF32:
+ 1344 0190 72657375 		.ascii	"result\000"
+ 1344      6C7400
+ 1345              	.LASF37:
+ 1346 0197 50574D53 		.ascii	"PWMSF_ReadPeriod\000"
+ 1346      465F5265 
+ 1346      61645065 
+ 1346      72696F64 
+ 1346      00
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 42
 
 
- 1349              	.LASF8:
- 1350 0184 756E7369 		.ascii	"unsigned int\000"
- 1350      676E6564 
- 1350      20696E74 
- 1350      00
- 1351              	.LASF23:
- 1352 0191 50574D53 		.ascii	"PWMSF_SetInterruptMode\000"
- 1352      465F5365 
- 1352      74496E74 
- 1352      65727275 
- 1352      70744D6F 
- 1353              	.LASF44:
- 1354 01a8 43794578 		.ascii	"CyExitCriticalSection\000"
- 1354      69744372 
- 1354      69746963 
- 1354      616C5365 
- 1354      6374696F 
- 1355              	.LASF25:
- 1356 01be 50574D53 		.ascii	"PWMSF_ReadCounter\000"
- 1356      465F5265 
- 1356      6164436F 
- 1356      756E7465 
- 1356      7200
- 1357              	.LASF38:
- 1358 01d0 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1358      4320342E 
- 1358      392E3320 
- 1358      32303135 
- 1358      30333033 
- 1359 0203 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 1359      20726576 
- 1359      6973696F 
- 1359      6E203232 
- 1359      31323230 
- 1360 0236 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1360      66756E63 
- 1360      74696F6E 
- 1360      2D736563 
- 1360      74696F6E 
- 1361              	.LASF33:
- 1362 025e 6374726C 		.ascii	"ctrl\000"
- 1362      00
- 1363              	.LASF14:
- 1364 0263 73697A65 		.ascii	"sizetype\000"
- 1364      74797065 
+ 1347              	.LASF43:
+ 1348 01a8 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1348      74657243 
+ 1348      72697469 
+ 1348      63616C53 
+ 1348      65637469 
+ 1349              	.LASF35:
+ 1350 01bf 50574D53 		.ascii	"PWMSF_Start\000"
+ 1350      465F5374 
+ 1350      61727400 
+ 1351              	.LASF8:
+ 1352 01cb 756E7369 		.ascii	"unsigned int\000"
+ 1352      676E6564 
+ 1352      20696E74 
+ 1352      00
+ 1353              	.LASF23:
+ 1354 01d8 50574D53 		.ascii	"PWMSF_SetInterruptMode\000"
+ 1354      465F5365 
+ 1354      74496E74 
+ 1354      65727275 
+ 1354      70744D6F 
+ 1355              	.LASF44:
+ 1356 01ef 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1356      69744372 
+ 1356      69746963 
+ 1356      616C5365 
+ 1356      6374696F 
+ 1357              	.LASF25:
+ 1358 0205 50574D53 		.ascii	"PWMSF_ReadCounter\000"
+ 1358      465F5265 
+ 1358      6164436F 
+ 1358      756E7465 
+ 1358      7200
+ 1359              	.LASF38:
+ 1360 0217 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1360      4320342E 
+ 1360      392E3320 
+ 1360      32303135 
+ 1360      30333033 
+ 1361 024a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1361      20726576 
+ 1361      6973696F 
+ 1361      6E203232 
+ 1361      31323230 
+ 1362 027d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1362      66756E63 
+ 1362      74696F6E 
+ 1362      2D736563 
+ 1362      74696F6E 
+ 1363              	.LASF33:
+ 1364 02a5 6374726C 		.ascii	"ctrl\000"
  1364      00
- 1365              	.LASF6:
- 1366 026c 6C6F6E67 		.ascii	"long long int\000"
- 1366      206C6F6E 
- 1366      6720696E 
- 1366      7400
- 1367              	.LASF24:
- 1368 027a 696E7465 		.ascii	"interruptMode\000"
- 1368      72727570 
- 1368      744D6F64 
- 1368      6500
- 1369              	.LASF41:
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccdO6nth.s 			page 43
+ 1365              	.LASF14:
+ 1366 02aa 73697A65 		.ascii	"sizetype\000"
+ 1366      74797065 
+ 1366      00
+ 1367              	.LASF6:
+ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccTNWN9A.s 			page 43
 
 
- 1370 0288 50574D53 		.ascii	"PWMSF_ReadControlRegister\000"
- 1370      465F5265 
- 1370      6164436F 
- 1370      6E74726F 
- 1370      6C526567 
- 1371              	.LASF17:
- 1372 02a2 50574D53 		.ascii	"PWMSF_WriteCounter\000"
- 1372      465F5772 
- 1372      69746543 
- 1372      6F756E74 
- 1372      657200
- 1373              	.LASF26:
- 1374 02b5 50574D53 		.ascii	"PWMSF_ReadStatusRegister\000"
- 1374      465F5265 
- 1374      61645374 
- 1374      61747573 
- 1374      52656769 
- 1375              	.LASF4:
- 1376 02ce 6C6F6E67 		.ascii	"long int\000"
- 1376      20696E74 
- 1376      00
- 1377              	.LASF11:
- 1378 02d7 63686172 		.ascii	"char\000"
+ 1368 02b3 6C6F6E67 		.ascii	"long long int\000"
+ 1368      206C6F6E 
+ 1368      6720696E 
+ 1368      7400
+ 1369              	.LASF24:
+ 1370 02c1 696E7465 		.ascii	"interruptMode\000"
+ 1370      72727570 
+ 1370      744D6F64 
+ 1370      6500
+ 1371              	.LASF41:
+ 1372 02cf 50574D53 		.ascii	"PWMSF_ReadControlRegister\000"
+ 1372      465F5265 
+ 1372      6164436F 
+ 1372      6E74726F 
+ 1372      6C526567 
+ 1373              	.LASF17:
+ 1374 02e9 50574D53 		.ascii	"PWMSF_WriteCounter\000"
+ 1374      465F5772 
+ 1374      69746543 
+ 1374      6F756E74 
+ 1374      657200
+ 1375              	.LASF26:
+ 1376 02fc 50574D53 		.ascii	"PWMSF_ReadStatusRegister\000"
+ 1376      465F5265 
+ 1376      61645374 
+ 1376      61747573 
+ 1376      52656769 
+ 1377              	.LASF4:
+ 1378 0315 6C6F6E67 		.ascii	"long int\000"
+ 1378      20696E74 
  1378      00
- 1379              	.LASF40:
- 1380 02dc 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\Projekt 4. semester\\E4"
- 1380      73657273 
- 1380      5C416E64 
- 1380      6572735C 
- 1380      4465736B 
- 1381 030a 50524A34 		.ascii	"PRJ4-Gruppe1\\Test4\\version_01.cydsn\000"
- 1381      2D477275 
- 1381      70706531 
- 1381      5C546573 
- 1381      74345C76 
- 1382              	.LASF0:
- 1383 032e 7369676E 		.ascii	"signed char\000"
- 1383      65642063 
- 1383      68617200 
- 1384              	.LASF22:
- 1385 033a 636F6D70 		.ascii	"compare\000"
- 1385      61726500 
- 1386              	.LASF21:
- 1387 0342 50574D53 		.ascii	"PWMSF_WriteCompare\000"
- 1387      465F5772 
- 1387      69746543 
- 1387      6F6D7061 
- 1387      726500
- 1388              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 1379              	.LASF11:
+ 1380 031e 63686172 		.ascii	"char\000"
+ 1380      00
+ 1381              	.LASF0:
+ 1382 0323 7369676E 		.ascii	"signed char\000"
+ 1382      65642063 
+ 1382      68617200 
+ 1383              	.LASF22:
+ 1384 032f 636F6D70 		.ascii	"compare\000"
+ 1384      61726500 
+ 1385              	.LASF21:
+ 1386 0337 50574D53 		.ascii	"PWMSF_WriteCompare\000"
+ 1386      465F5772 
+ 1386      69746543 
+ 1386      6F6D7061 
+ 1386      726500
+ 1387              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
