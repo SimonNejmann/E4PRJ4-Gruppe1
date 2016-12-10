@@ -39,14 +39,14 @@ private:
   SocketHandler sock_;
   I2CHandler i2c_;
 
-  RecurringTimer radarTimer_;
-  RecurringTimer opdriftTimer_;
-  RecurringTimer keepAliveTimer_;
-  
   bool appAlive_;
   RadarLogic radar_;
   OpdriftLogic opdrift_;
   RegulatorLogic regulator_;
+
+  RecurringTimer radarTimer_;
+  RecurringTimer opdriftTimer_;
+  RecurringTimer keepAliveTimer_;
   
   static void* staticStarter(void* arg);
   void comModuleThread();

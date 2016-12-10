@@ -25,10 +25,10 @@ public:
 
 private:
   MsgQueue mq_;
-  I2C i2c_;
-
   MsgQueue *partnerMq_;
   
+  I2C i2c_;
+
   static void* staticStarter(void* arg);
   void i2cHandlerThread();
   void handleMsg(Message *msg, unsigned long id);

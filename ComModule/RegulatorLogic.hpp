@@ -19,7 +19,7 @@ public:
     buf[1] = angle_;
     buf[2] = speed_;
     if (strafing_) {
-      buf[3] = 0xFF;
+      buf[3] = static_cast<char>(0xFF);
     } else {
       buf[3] = 0x00;
     }

@@ -5,7 +5,7 @@
 #include "util.hpp"
 
 SocketHandler::SocketHandler(MsgQueue *comModMq)
-  : mq_(5), sock_(constants::UDP_SOCKET), comModMq_(comModMq)
+  : mq_(5), comModMq_(comModMq), sock_(constants::UDP_SOCKET)
 {
 }
 
