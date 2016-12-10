@@ -15,15 +15,16 @@ public:
 
   int constructBuffer(char *buf)
   {
-    buf[0] = angle_;
-    buf[1] = speed_;
+    buf[0] = 0x00;
+    buf[1] = angle_;
+    buf[2] = speed_;
     if (strafing_) {
-      buf[2] = 0xFF;
+      buf[3] = 0xFF;
     } else {
-      buf[2] = 0x00;
+      buf[3] = 0x00;
     }
 
-    return 3;
+    return 4;
   }
 
   int updateSpeed(unsigned char speed, char *buf)

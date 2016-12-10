@@ -80,6 +80,11 @@ void I2CHandler::handleMsg(Message *msg, unsigned long id)
   case SEND_I2C_PACKET_REGULATOR:
     {
       SendI2CMessage *sm = static_cast<SendI2CMessage*>(msg);
+      /*
+      std::cout << "I2C_H: Sending to regulator: 0x"
+		<< std::hex << (int) sm->buf_[0] << (int) sm->buf_[1]
+		<< (int) sm->buf_[2] << std::endl;
+      */
       i2c_.send(constants::I2C_REGULATOR_ADDR, sm->buf_, sm->len_);
       break;
     }

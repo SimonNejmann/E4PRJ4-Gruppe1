@@ -22,7 +22,7 @@ void ComModule::run()
   pthread_create(&pt_, NULL, ComModule::staticStarter, this);
   sock_.run();
   i2c_.run();
-  radarTimer_.run();
+  //  radarTimer_.run();
   //  opdriftTimer_.run();
   //  keepAliveTimer_.run();
 }
@@ -149,9 +149,18 @@ void ComModule::handleMsgReceiveI2cPacketOpdrift(Message *msg)
     // Read some new data from the opdrift system: Inform the app
     SocketHandler::SendUDPMessage *m
       = new SocketHandler::SendUDPMessage();
-    m->buf_[0] = 'O'; // capital o
-    m->buf_[1] = p->buf_[0];
-    m->len_ = 2;
+    // Check SOP, EOP
+    if (p->len_ != constants::I2C_OPDRIFT_LENGTH ||
+	p->buf_[0] != constants::I2C_SOP ||
+	p->buf_[2] != constants::I2C_EOP) {
+      // Error
+      delete m;
+    } else {
+      // Data ok
+      m->buf_[0] = 'O'; // capital o
+      m->buf_[1] = p->buf_[1];
+      m->len_ = 2;
+    }
     sock_.send(SocketHandler::SEND_UDP_PACKET, m);
   }
 }
