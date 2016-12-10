@@ -22,9 +22,9 @@ void ComModule::run()
   pthread_create(&pt_, NULL, ComModule::staticStarter, this);
   sock_.run();
   i2c_.run();
-  //  radarTimer_.run();
-  //  opdriftTimer_.run();
-  //  keepAliveTimer_.run();
+  radarTimer_.run();
+  opdriftTimer_.run();
+  keepAliveTimer_.run();
 }
 
 void ComModule::join()
@@ -145,22 +145,17 @@ void ComModule::handleMsgReceiveI2cPacketRadar(Message *msg)
 void ComModule::handleMsgReceiveI2cPacketOpdrift(Message *msg)
 {
   PacketMessage *p = static_cast<PacketMessage*>(msg);
-  if (opdrift_.newData(p->buf_[0])) {
+  // Check length, SOP, EOP and if data is new
+  if (p->len_ == constants::I2C_OPDRIFT_LENGTH &&
+      p->buf_[0] == constants::I2C_SOP &&
+      p->buf_[2] == constants::I2C_EOP &&
+      opdrift_.newData(p->buf_[0])) {
     // Read some new data from the opdrift system: Inform the app
     SocketHandler::SendUDPMessage *m
       = new SocketHandler::SendUDPMessage();
-    // Check SOP, EOP
-    if (p->len_ != constants::I2C_OPDRIFT_LENGTH ||
-	p->buf_[0] != constants::I2C_SOP ||
-	p->buf_[2] != constants::I2C_EOP) {
-      // Error
-      delete m;
-    } else {
-      // Data ok
-      m->buf_[0] = 'O'; // capital o
-      m->buf_[1] = p->buf_[1];
-      m->len_ = 2;
-    }
+    m->buf_[0] = 'O'; // capital o
+    m->buf_[1] = p->buf_[1];
+    m->len_ = 2;
     sock_.send(SocketHandler::SEND_UDP_PACKET, m);
   }
 }
@@ -205,8 +200,10 @@ void ComModule::handleMsgReceiveUdpPacket(Message *msg)
   case 'I': // Inflate
     {
       outId = I2CHandler::SEND_I2C_PACKET_OPDRIFT;
-      out->buf_[0] = in->buf_[1];
-      out->len_ = 1;
+      out->buf_[0] = constants::I2C_SOP;
+      out->buf_[1] = in->buf_[1];
+      out->buf_[2] = constants::I2C_EOP;
+      out->len_ = 3;
       i2c_.send(outId, out);
       break;
     }
