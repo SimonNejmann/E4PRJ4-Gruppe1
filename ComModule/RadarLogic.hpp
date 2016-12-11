@@ -16,6 +16,15 @@ public:
     : dist_()
   {}
 
+  int constructBuffer(char *buf)
+  {
+    buf[0] = 'R';
+    for (int i=0; i<4; ++i) {
+      buf[i+1] = dist_[i];
+    }
+    return 5;
+  }
+
   bool newData(unsigned char dir, unsigned char dist)
   {
     int dirNum = dir / 50;
