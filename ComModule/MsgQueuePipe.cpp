@@ -1,11 +1,15 @@
 #include <unistd.h>
+#include <stdio.h>
 #include "MsgQueuePipe.hpp"
 #include "ScopedLocker.hpp"
 
 MsgQueuePipe::MsgQueuePipe(unsigned long maxSize) : MsgQueue(maxSize)
 {
   pthread_mutex_init(&pipeMut_, NULL);
-  pipe(pipefd_);
+  if (pipe(pipefd_) < 0) {
+    // Error
+    perror(NULL);
+  }
 }
 
 MsgQueuePipe::~MsgQueuePipe()
@@ -20,7 +24,10 @@ void MsgQueuePipe::send(unsigned long id, Message* msg)
   MsgQueue::send(id, msg);
   ScopedLocker lock(&pipeMut_);
   char c = '1';
-  write(pipefd_[1], &c, 1);
+  if (write(pipefd_[1], &c, 1) < 0) {
+    // Error
+    perror(NULL);
+  }
 }
 
 Message* MsgQueuePipe::receive(unsigned long& id)
@@ -28,7 +35,10 @@ Message* MsgQueuePipe::receive(unsigned long& id)
   Message *msg = MsgQueue::receive(id);
   ScopedLocker lock(&pipeMut_);
   char c;
-  read(pipefd_[0], &c, 1);
+  if (read(pipefd_[0], &c, 1) < 0) {
+    // Error
+    perror(NULL);
+  }
   return msg;
 }
 

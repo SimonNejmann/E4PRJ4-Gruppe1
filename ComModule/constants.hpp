@@ -16,15 +16,17 @@ namespace constants
 
   // I2C
   static const int I2C_DEVICE = 1;
+  static const int I2C_SOP = 0x01;
+  static const int I2C_EOP = 0x17;
   // I2C: Radar
-  static const int I2C_RADAR_ADDR = 0x00;  // TODO
+  static const int I2C_RADAR_ADDR = 0x0B;
   static const int I2C_RADAR_LENGTH = 1;  // TODO
   // I2C: Opdrift
-  static const int I2C_OPDRIFT_ADDR = 0x00;  // TODO
-  static const int I2C_OPDRIFT_LENGTH = 1;  // TODO
+  static const int I2C_OPDRIFT_ADDR = 0x0A;
+  static const int I2C_OPDRIFT_LENGTH = 3;
   // I2C: Regulator
-  static const int I2C_REGULATOR_ADDR = 0x00;  // TODO
-  static const int I2C_REGULATOR_LENGTH = 1;  // TODO
+  static const int I2C_REGULATOR_ADDR = 0x09;
+  // static const int I2C_REGULATOR_LENGTH = 1;  // Unused
   // I2C: Test module
   static const int I2C_TEST_ADDR = 0x08;
   static const int I2C_TEST_LENGTH = 3;

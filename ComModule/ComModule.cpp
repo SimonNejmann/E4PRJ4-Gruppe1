@@ -23,8 +23,8 @@ void ComModule::run()
   sock_.run();
   i2c_.run();
   radarTimer_.run();
-  //  opdriftTimer_.run();
-  //  keepAliveTimer_.run();
+  opdriftTimer_.run();
+  keepAliveTimer_.run();
 }
 
 void ComModule::join()
@@ -134,10 +134,7 @@ void ComModule::handleMsgReceiveI2cPacketRadar(Message *msg)
     // We just read some new data from the radar: Inform the app
     SocketHandler::SendUDPMessage *m
       = new SocketHandler::SendUDPMessage();
-    m->buf_[0] = 'R';
-    m->buf_[1] = p->buf_[0];
-    m->buf_[2] = p->buf_[1];
-    m->len_ = 3;
+    m->len_ = radar_.constructBuffer(m->buf_);
     sock_.send(SocketHandler::SEND_UDP_PACKET, m);
   }
 }
@@ -145,13 +142,15 @@ void ComModule::handleMsgReceiveI2cPacketRadar(Message *msg)
 void ComModule::handleMsgReceiveI2cPacketOpdrift(Message *msg)
 {
   PacketMessage *p = static_cast<PacketMessage*>(msg);
-  if (opdrift_.newData(p->buf_[0])) {
+  // Check length, SOP, EOP and if data is new
+  if (p->len_ == constants::I2C_OPDRIFT_LENGTH &&
+      p->buf_[0] == constants::I2C_SOP &&
+      p->buf_[2] == constants::I2C_EOP &&
+      opdrift_.newData(p->buf_[0])) {
     // Read some new data from the opdrift system: Inform the app
     SocketHandler::SendUDPMessage *m
       = new SocketHandler::SendUDPMessage();
-    m->buf_[0] = 'O'; // capital o
-    m->buf_[1] = p->buf_[0];
-    m->len_ = 2;
+    m->len_ = opdrift_.constructBuffer(m->buf_);
     sock_.send(SocketHandler::SEND_UDP_PACKET, m);
   }
 }
@@ -185,9 +184,9 @@ void ComModule::handleMsgReceiveUdpPacket(Message *msg)
   case 'T': // Test
     {
       outId = I2CHandler::SEND_I2C_PACKET_TEST;
-      out->buf_[0] = 0x01;
+      out->buf_[0] = constants::I2C_SOP;
       out->buf_[1] = (in->buf_[1] - '0');
-      out->buf_[2] = 0x17;
+      out->buf_[2] = constants::I2C_EOP;
       out->len_ = 3;
       i2c_.send(outId, out);
       break;
@@ -196,8 +195,10 @@ void ComModule::handleMsgReceiveUdpPacket(Message *msg)
   case 'I': // Inflate
     {
       outId = I2CHandler::SEND_I2C_PACKET_OPDRIFT;
-      out->buf_[0] = in->buf_[1];
-      out->len_ = 1;
+      out->buf_[0] = constants::I2C_SOP;
+      out->buf_[1] = in->buf_[1];
+      out->buf_[2] = constants::I2C_EOP;
+      out->len_ = 3;
       i2c_.send(outId, out);
       break;
     }
