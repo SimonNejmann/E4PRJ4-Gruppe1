@@ -15,6 +15,8 @@ struct mouse {
     int16 finalX;
     int16 finalY;
     
+    
+    
 };
 
 void Init(struct mouse *); 

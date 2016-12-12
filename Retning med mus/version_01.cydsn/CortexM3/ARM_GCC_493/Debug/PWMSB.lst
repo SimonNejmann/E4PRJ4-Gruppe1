@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
   29:Generated_Source\PSoC5/PWMSB.c ****          constant 1 for reset. This will prevent the component from operating.
   30:Generated_Source\PSoC5/PWMSB.c **** #endif /* PWMSB_PWMUDB_genblk1_ctrlreg__REMOVED */
   31:Generated_Source\PSoC5/PWMSB.c **** 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 2
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 2
 
 
   32:Generated_Source\PSoC5/PWMSB.c **** uint8 PWMSB_initVar = 0u;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
   86:Generated_Source\PSoC5/PWMSB.c ****     #if (PWMSB_UsingFixedFunction || PWMSB_UseControl)
   87:Generated_Source\PSoC5/PWMSB.c ****         uint8 ctrl;
   88:Generated_Source\PSoC5/PWMSB.c ****     #endif /* (PWMSB_UsingFixedFunction || PWMSB_UseControl) */
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 3
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 3
 
 
   89:Generated_Source\PSoC5/PWMSB.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  143:Generated_Source\PSoC5/PWMSB.c ****         #endif /* (PWMSB_UseOneCompareMode) */
  144:Generated_Source\PSoC5/PWMSB.c **** 
  145:Generated_Source\PSoC5/PWMSB.c ****         #if (PWMSB_KillModeMinTime)
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 4
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 4
 
 
  146:Generated_Source\PSoC5/PWMSB.c ****             PWMSB_WriteKillTime(PWMSB_MinimumKillTime);
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  200:Generated_Source\PSoC5/PWMSB.c **** {
   27              		.loc 1 200 0
   28              		.cfi_startproc
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 5
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 5
 
 
   29              		@ args = 0, pretend = 0, frame = 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  231:Generated_Source\PSoC5/PWMSB.c **** *
  232:Generated_Source\PSoC5/PWMSB.c **** *******************************************************************************/
  233:Generated_Source\PSoC5/PWMSB.c **** void PWMSB_Stop(void) 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 6
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 6
 
 
  234:Generated_Source\PSoC5/PWMSB.c **** {
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  262:Generated_Source\PSoC5/PWMSB.c ****         * Return:
  263:Generated_Source\PSoC5/PWMSB.c ****         *  None
  264:Generated_Source\PSoC5/PWMSB.c ****         *
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 7
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 7
 
 
  265:Generated_Source\PSoC5/PWMSB.c ****         *******************************************************************************/
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  319:Generated_Source\PSoC5/PWMSB.c ****         *  comparemode:  The new compare mode for the PWM output. Use the compare types
  320:Generated_Source\PSoC5/PWMSB.c ****         *                defined in the H file as input arguments.
  321:Generated_Source\PSoC5/PWMSB.c ****         *
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 8
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 8
 
 
  322:Generated_Source\PSoC5/PWMSB.c ****         * Return:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  376:Generated_Source\PSoC5/PWMSB.c **** 
  377:Generated_Source\PSoC5/PWMSB.c **** #endif /* UseOneCompareMode */
  378:Generated_Source\PSoC5/PWMSB.c **** 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 9
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 9
 
 
  379:Generated_Source\PSoC5/PWMSB.c **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  408:Generated_Source\PSoC5/PWMSB.c **** 
  409:Generated_Source\PSoC5/PWMSB.c **** 
  410:Generated_Source\PSoC5/PWMSB.c ****     /*******************************************************************************
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 10
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 10
 
 
  411:Generated_Source\PSoC5/PWMSB.c ****     * Function Name: PWMSB_ReadCounter
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  436:Generated_Source\PSoC5/PWMSB.c ****     #if (PWMSB_UseStatus)
  437:Generated_Source\PSoC5/PWMSB.c **** 
  438:Generated_Source\PSoC5/PWMSB.c **** 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 11
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 11
 
 
  439:Generated_Source\PSoC5/PWMSB.c ****         /*******************************************************************************
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  487:Generated_Source\PSoC5/PWMSB.c ****         CY_SET_REG8(PWMSB_PERIOD_LSB_PTR, period);
  139              		.loc 1 487 0
  140 0000 014B     		ldr	r3, .L14
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 12
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 12
 
 
  141 0002 1870     		strb	r0, [r3]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  519:Generated_Source\PSoC5/PWMSB.c ****         #if(PWMSB_UsingFixedFunction)
  520:Generated_Source\PSoC5/PWMSB.c ****             CY_SET_REG16(PWMSB_COMPARE1_LSB_PTR, (uint16)compare);
  521:Generated_Source\PSoC5/PWMSB.c ****         #else
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 13
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 13
 
 
  522:Generated_Source\PSoC5/PWMSB.c ****             CY_SET_REG8(PWMSB_COMPARE1_LSB_PTR, compare);
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  557:Generated_Source\PSoC5/PWMSB.c ****     {
  558:Generated_Source\PSoC5/PWMSB.c ****         #if(PWMSB_UsingFixedFunction)
  559:Generated_Source\PSoC5/PWMSB.c ****             CY_SET_REG16(PWMSB_COMPARE1_LSB_PTR, (uint16)compare);
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 14
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 14
 
 
  560:Generated_Source\PSoC5/PWMSB.c ****         #else
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  614:Generated_Source\PSoC5/PWMSB.c ****         /* If using the Dead Band 1-255 mode then just write the register */
  615:Generated_Source\PSoC5/PWMSB.c ****         #if(!PWMSB_DeadBand2_4)
  616:Generated_Source\PSoC5/PWMSB.c ****             CY_SET_REG8(PWMSB_DEADBAND_COUNT_PTR, deadtime);
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 15
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 15
 
 
  617:Generated_Source\PSoC5/PWMSB.c ****         #else
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  671:Generated_Source\PSoC5/PWMSB.c ****     ********************************************************************************
  672:Generated_Source\PSoC5/PWMSB.c ****     *
  673:Generated_Source\PSoC5/PWMSB.c ****     * Summary:
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 16
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 16
 
 
  674:Generated_Source\PSoC5/PWMSB.c ****     *  This function configures the interrupts mask control of theinterrupt
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  703:Generated_Source\PSoC5/PWMSB.c ****     *  [5]   : Kill event output
  704:Generated_Source\PSoC5/PWMSB.c ****     *  [4]   : FIFO not empty
  705:Generated_Source\PSoC5/PWMSB.c ****     *  [3]   : FIFO full
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 17
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 17
 
 
  706:Generated_Source\PSoC5/PWMSB.c ****     *  [2]   : Terminal count
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  735:Generated_Source\PSoC5/PWMSB.c ****     *
  736:Generated_Source\PSoC5/PWMSB.c ****     *******************************************************************************/
  737:Generated_Source\PSoC5/PWMSB.c ****     uint8 PWMSB_ReadControlRegister(void) 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 18
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 18
 
 
  738:Generated_Source\PSoC5/PWMSB.c ****     {
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  766:Generated_Source\PSoC5/PWMSB.c ****     {
  259              		.loc 1 766 0
  260              		.cfi_startproc
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 19
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 19
 
 
  261              		@ args = 0, pretend = 0, frame = 0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  289              		.loc 1 792 0
  290 0000 014B     		ldr	r3, .L32
  291 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 20
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 20
 
 
  793:Generated_Source\PSoC5/PWMSB.c ****     }
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  340              	PWMSB_Init:
  341              	.LFB1:
   85:Generated_Source\PSoC5/PWMSB.c ****     #if (PWMSB_UsingFixedFunction || PWMSB_UseControl)
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 21
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 21
 
 
  342              		.loc 1 85 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  387 003e 1370     		strb	r3, [r2]
  172:Generated_Source\PSoC5/PWMSB.c **** 
  388              		.loc 1 172 0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 22
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 22
 
 
  389 0040 FFF7FEFF 		bl	CyExitCriticalSection
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  437              	.L45:
  438 0018 00000000 		.word	.LANCHOR0
  439              		.cfi_endproc
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 23
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 23
 
 
  440              	.LFE0:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  464              		.cfi_endproc
  465              	.LFE14:
  466              		.size	PWMSB_ReadCompare, .-PWMSB_ReadCompare
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 24
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 24
 
 
  467              		.section	.text.PWMSB_ReadPeriod,"ax",%progbits
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  870:Generated_Source\PSoC5/PWMSB.c **** /*******************************************************************************
  871:Generated_Source\PSoC5/PWMSB.c **** * Function Name: PWMSB_ReadPeriod
  872:Generated_Source\PSoC5/PWMSB.c **** ********************************************************************************
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 25
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 25
 
 
  873:Generated_Source\PSoC5/PWMSB.c **** *
@@ -1495,20 +1495,20 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  507 0006 00000000 		.4byte	.Ldebug_abbrev0
  508 000a 04       		.byte	0x4
  509 000b 01       		.uleb128 0x1
- 510 000c 85010000 		.4byte	.LASF38
+ 510 000c 34010000 		.4byte	.LASF38
  511 0010 01       		.byte	0x1
- 512 0011 35030000 		.4byte	.LASF39
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 26
+ 512 0011 2B030000 		.4byte	.LASF39
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 26
 
 
- 513 0015 B0000000 		.4byte	.LASF40
+ 513 0015 03020000 		.4byte	.LASF40
  514 0019 00000000 		.4byte	.Ldebug_ranges0+0
  515 001d 00000000 		.4byte	0
  516 0021 00000000 		.4byte	.Ldebug_line0
  517 0025 02       		.uleb128 0x2
  518 0026 01       		.byte	0x1
  519 0027 06       		.byte	0x6
- 520 0028 21030000 		.4byte	.LASF0
+ 520 0028 17030000 		.4byte	.LASF0
  521 002c 02       		.uleb128 0x2
  522 002d 01       		.byte	0x1
  523 002e 08       		.byte	0x8
@@ -1516,7 +1516,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  525 0033 02       		.uleb128 0x2
  526 0034 02       		.byte	0x2
  527 0035 05       		.byte	0x5
- 528 0036 CF020000 		.4byte	.LASF2
+ 528 0036 C5020000 		.4byte	.LASF2
  529 003a 02       		.uleb128 0x2
  530 003b 02       		.byte	0x2
  531 003c 07       		.byte	0x7
@@ -1524,15 +1524,15 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  533 0041 02       		.uleb128 0x2
  534 0042 04       		.byte	0x4
  535 0043 05       		.byte	0x5
- 536 0044 13030000 		.4byte	.LASF4
+ 536 0044 09030000 		.4byte	.LASF4
  537 0048 02       		.uleb128 0x2
  538 0049 04       		.byte	0x4
  539 004a 07       		.byte	0x7
- 540 004b 01010000 		.4byte	.LASF5
+ 540 004b B0000000 		.4byte	.LASF5
  541 004f 02       		.uleb128 0x2
  542 0050 08       		.byte	0x8
  543 0051 05       		.byte	0x5
- 544 0052 7F020000 		.4byte	.LASF6
+ 544 0052 75020000 		.4byte	.LASF6
  545 0056 02       		.uleb128 0x2
  546 0057 08       		.byte	0x8
  547 0058 07       		.byte	0x7
@@ -1544,9 +1544,9 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  553 0064 02       		.uleb128 0x2
  554 0065 04       		.byte	0x4
  555 0066 07       		.byte	0x7
- 556 0067 2A020000 		.4byte	.LASF8
+ 556 0067 D9010000 		.4byte	.LASF8
  557 006b 04       		.uleb128 0x4
- 558 006c 2C010000 		.4byte	.LASF12
+ 558 006c DB000000 		.4byte	.LASF12
  559 0070 02       		.byte	0x2
  560 0071 9201     		.2byte	0x192
  561 0073 2C000000 		.4byte	0x2c
@@ -1557,14 +1557,14 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  566 007e 02       		.uleb128 0x2
  567 007f 08       		.byte	0x8
  568 0080 04       		.byte	0x4
- 569 0081 3A010000 		.4byte	.LASF10
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 27
+ 569 0081 E9000000 		.4byte	.LASF10
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 27
 
 
  570 0085 02       		.uleb128 0x2
  571 0086 01       		.byte	0x1
  572 0087 08       		.byte	0x8
- 573 0088 1C030000 		.4byte	.LASF11
+ 573 0088 12030000 		.4byte	.LASF11
  574 008c 04       		.uleb128 0x4
  575 008d AB000000 		.4byte	.LASF13
  576 0091 02       		.byte	0x2
@@ -1575,7 +1575,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  581 009d 02       		.uleb128 0x2
  582 009e 04       		.byte	0x4
  583 009f 07       		.byte	0x7
- 584 00a0 76020000 		.4byte	.LASF14
+ 584 00a0 6C020000 		.4byte	.LASF14
  585 00a4 06       		.uleb128 0x6
  586 00a5 54000000 		.4byte	.LASF15
  587 00a9 01       		.byte	0x1
@@ -1610,7 +1610,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  616 00e9 50       		.byte	0x50
  617 00ea 00       		.byte	0
  618 00eb 09       		.uleb128 0x9
- 619 00ec 01030000 		.4byte	.LASF25
+ 619 00ec F7020000 		.4byte	.LASF25
  620 00f0 01       		.byte	0x1
  621 00f1 A901     		.2byte	0x1a9
  622 00f3 6B000000 		.4byte	0x6b
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  624 00fb 14000000 		.4byte	.LFE5-.LFB5
  625 00ff 01       		.uleb128 0x1
  626 0100 9C       		.byte	0x9c
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 28
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 28
 
 
  627 0101 07       		.uleb128 0x7
@@ -1639,7 +1639,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  642 0124 50       		.byte	0x50
  643 0125 00       		.byte	0
  644 0126 07       		.uleb128 0x7
- 645 0127 AC020000 		.4byte	.LASF21
+ 645 0127 A2020000 		.4byte	.LASF21
  646 012b 01       		.byte	0x1
  647 012c 0402     		.2byte	0x204
  648 012e 00000000 		.4byte	.LFB8
@@ -1648,7 +1648,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  651 0137 9C       		.byte	0x9c
  652 0138 4B010000 		.4byte	0x14b
  653 013c 08       		.uleb128 0x8
- 654 013d 2D030000 		.4byte	.LASF22
+ 654 013d 23030000 		.4byte	.LASF22
  655 0141 01       		.byte	0x1
  656 0142 0402     		.2byte	0x204
  657 0144 6B000000 		.4byte	0x6b
@@ -1656,7 +1656,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  659 0149 50       		.byte	0x50
  660 014a 00       		.byte	0
  661 014b 07       		.uleb128 0x7
- 662 014c 41010000 		.4byte	.LASF23
+ 662 014c F0000000 		.4byte	.LASF23
  663 0150 01       		.byte	0x1
  664 0151 AC02     		.2byte	0x2ac
  665 0153 00000000 		.4byte	.LFB9
@@ -1665,7 +1665,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  668 015c 9C       		.byte	0x9c
  669 015d 70010000 		.4byte	0x170
  670 0161 08       		.uleb128 0x8
- 671 0162 8D020000 		.4byte	.LASF24
+ 671 0162 83020000 		.4byte	.LASF24
  672 0166 01       		.byte	0x1
  673 0167 AC02     		.2byte	0x2ac
  674 0169 6B000000 		.4byte	0x6b
@@ -1673,19 +1673,19 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  676 016e 50       		.byte	0x50
  677 016f 00       		.byte	0
  678 0170 09       		.uleb128 0x9
- 679 0171 13010000 		.4byte	.LASF26
+ 679 0171 C2000000 		.4byte	.LASF26
  680 0175 01       		.byte	0x1
  681 0176 C702     		.2byte	0x2c7
  682 0178 6B000000 		.4byte	0x6b
  683 017c 00000000 		.4byte	.LFB10
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 29
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 29
 
 
  684 0180 0C000000 		.4byte	.LFE10-.LFB10
  685 0184 01       		.uleb128 0x1
  686 0185 9C       		.byte	0x9c
  687 0186 0A       		.uleb128 0xa
- 688 0187 E7020000 		.4byte	.LASF41
+ 688 0187 DD020000 		.4byte	.LASF41
  689 018b 01       		.byte	0x1
  690 018c E102     		.2byte	0x2e1
  691 018e 6B000000 		.4byte	0x6b
@@ -1695,7 +1695,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  695 019b 9C       		.byte	0x9c
  696 019c AF010000 		.4byte	0x1af
  697 01a0 0B       		.uleb128 0xb
- 698 01a1 4D020000 		.4byte	.LASF32
+ 698 01a1 FC010000 		.4byte	.LASF32
  699 01a5 01       		.byte	0x1
  700 01a6 E302     		.2byte	0x2e3
  701 01a8 6B000000 		.4byte	0x6b
@@ -1703,7 +1703,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  703 01ad 50       		.byte	0x50
  704 01ae 00       		.byte	0
  705 01af 07       		.uleb128 0x7
- 706 01b0 6A010000 		.4byte	.LASF27
+ 706 01b0 19010000 		.4byte	.LASF27
  707 01b4 01       		.byte	0x1
  708 01b5 FD02     		.2byte	0x2fd
  709 01b7 00000000 		.4byte	.LFB12
@@ -1712,7 +1712,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  712 01c0 9C       		.byte	0x9c
  713 01c1 D4010000 		.4byte	0x1d4
  714 01c5 08       		.uleb128 0x8
- 715 01c6 32010000 		.4byte	.LASF28
+ 715 01c6 E1000000 		.4byte	.LASF28
  716 01ca 01       		.byte	0x1
  717 01cb FD02     		.2byte	0x2fd
  718 01cd 6B000000 		.4byte	0x6b
@@ -1720,7 +1720,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  720 01d2 50       		.byte	0x50
  721 01d3 00       		.byte	0
  722 01d4 09       		.uleb128 0x9
- 723 01d5 5F020000 		.4byte	.LASF29
+ 723 01d5 55020000 		.4byte	.LASF29
  724 01d9 01       		.byte	0x1
  725 01da 1603     		.2byte	0x316
  726 01dc 6B000000 		.4byte	0x6b
@@ -1729,7 +1729,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  729 01e8 01       		.uleb128 0x1
  730 01e9 9C       		.byte	0x9c
  731 01ea 07       		.uleb128 0x7
- 732 01eb BF020000 		.4byte	.LASF30
+ 732 01eb B5020000 		.4byte	.LASF30
  733 01ef 01       		.byte	0x1
  734 01f0 C501     		.2byte	0x1c5
  735 01f2 00000000 		.4byte	.LFB6
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  738 01fb 9C       		.byte	0x9c
  739 01fc 13020000 		.4byte	0x213
  740 0200 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 30
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 30
 
 
  741 0201 08000000 		.4byte	.LVL6
@@ -1748,7 +1748,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  745 020e 70010000 		.4byte	0x170
  746 0212 00       		.byte	0
  747 0213 0D       		.uleb128 0xd
- 748 0214 54020000 		.4byte	.LASF31
+ 748 0214 4A020000 		.4byte	.LASF31
  749 0218 01       		.byte	0x1
  750 0219 54       		.byte	0x54
  751 021a 00000000 		.4byte	.LFB1
@@ -1757,7 +1757,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  754 0223 9C       		.byte	0x9c
  755 0224 B1020000 		.4byte	0x2b1
  756 0228 0E       		.uleb128 0xe
- 757 0229 71020000 		.4byte	.LASF33
+ 757 0229 67020000 		.4byte	.LASF33
  758 022d 01       		.byte	0x1
  759 022e 57       		.byte	0x57
  760 022f 6B000000 		.4byte	0x6b
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  795 027c 01       		.uleb128 0x1
  796 027d 50       		.byte	0x50
  797 027e 02       		.uleb128 0x2
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 31
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 31
 
 
  798 027f 09       		.byte	0x9
@@ -1841,7 +1841,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  835 02d4 A4000000 		.4byte	0xa4
  836 02d8 00       		.byte	0
  837 02d9 09       		.uleb128 0x9
- 838 02da 58010000 		.4byte	.LASF36
+ 838 02da 07010000 		.4byte	.LASF36
  839 02de 01       		.byte	0x1
  840 02df 3003     		.2byte	0x330
  841 02e1 6B000000 		.4byte	0x6b
@@ -1850,7 +1850,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  844 02ed 01       		.uleb128 0x1
  845 02ee 9C       		.byte	0x9c
  846 02ef 09       		.uleb128 0x9
- 847 02f0 9B020000 		.4byte	.LASF37
+ 847 02f0 91020000 		.4byte	.LASF37
  848 02f4 01       		.byte	0x1
  849 02f5 7403     		.2byte	0x374
  850 02f7 6B000000 		.4byte	0x6b
@@ -1858,11 +1858,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  852 02ff 0C000000 		.4byte	.LFE15-.LFB15
  853 0303 01       		.uleb128 0x1
  854 0304 9C       		.byte	0x9c
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 32
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 32
 
 
  855 0305 11       		.uleb128 0x11
- 856 0306 D9020000 		.4byte	.LASF42
+ 856 0306 CF020000 		.4byte	.LASF42
  857 030a 01       		.byte	0x1
  858 030b 20       		.byte	0x20
  859 030c 6B000000 		.4byte	0x6b
@@ -1870,12 +1870,12 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  861 0311 03       		.byte	0x3
  862 0312 00000000 		.4byte	PWMSB_initVar
  863 0316 12       		.uleb128 0x12
- 864 0317 13020000 		.4byte	.LASF43
+ 864 0317 C2010000 		.4byte	.LASF43
  865 031b 03       		.byte	0x3
  866 031c 7D       		.byte	0x7d
  867 031d 6B000000 		.4byte	0x6b
  868 0321 13       		.uleb128 0x13
- 869 0322 37020000 		.4byte	.LASF44
+ 869 0322 E6010000 		.4byte	.LASF44
  870 0326 03       		.byte	0x3
  871 0327 7E       		.byte	0x7e
  872 0328 14       		.uleb128 0x14
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  909 001f 24       		.uleb128 0x24
  910 0020 00       		.byte	0
  911 0021 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 33
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 33
 
 
  912 0022 0B       		.uleb128 0xb
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  966 0059 19       		.uleb128 0x19
  967 005a 03       		.uleb128 0x3
  968 005b 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 34
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 34
 
 
  969 005c 3A       		.uleb128 0x3a
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  1023 0093 9742     		.uleb128 0x2117
  1024 0095 19       		.uleb128 0x19
  1025 0096 00       		.byte	0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 35
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 35
 
 
  1026 0097 00       		.byte	0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  1080 00d0 01       		.byte	0x1
  1081 00d1 3F       		.uleb128 0x3f
  1082 00d2 19       		.uleb128 0x19
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 36
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 36
 
 
  1083 00d3 03       		.uleb128 0x3
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  1137 010f 00       		.byte	0
  1138 0110 11       		.uleb128 0x11
  1139 0111 34       		.uleb128 0x34
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 37
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 37
 
 
  1140 0112 00       		.byte	0
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  1194 0148 49       		.uleb128 0x49
  1195 0149 13       		.uleb128 0x13
  1196 014a 00       		.byte	0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 38
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 38
 
 
  1197 014b 00       		.byte	0
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  1251 0080 00000000 		.4byte	.LFB14
  1252 0084 0C000000 		.4byte	.LFE14-.LFB14
  1253 0088 00000000 		.4byte	.LFB15
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 39
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 39
 
 
  1254 008c 0C000000 		.4byte	.LFE15-.LFB15
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  1299      425F5772 
  1299      69746543 
  1299      6F756E74 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 40
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 40
 
 
  1299      657200
@@ -2390,182 +2390,182 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 1
  1320              	.LASF13:
  1321 00ab 72656738 		.ascii	"reg8\000"
  1321      00
- 1322              	.LASF40:
- 1323 00b0 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\HellYaeh\\E4PRJ4-Gruppe"
- 1323      73657273 
- 1323      5C416E64 
- 1323      6572735C 
- 1323      4465736B 
- 1324 00de 315C5265 		.ascii	"1\\Retning med mus\\version_01.cydsn\000"
- 1324      746E696E 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 41
+ 1322              	.LASF5:
+ 1323 00b0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1323      20756E73 
+ 1323      69676E65 
+ 1323      6420696E 
+ 1323      7400
+ 1324              	.LASF26:
+ 1325 00c2 50574D53 		.ascii	"PWMSB_ReadStatusRegister\000"
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 41
 
 
- 1324      67206D65 
- 1324      64206D75 
- 1324      735C7665 
- 1325              	.LASF5:
- 1326 0101 6C6F6E67 		.ascii	"long unsigned int\000"
- 1326      20756E73 
- 1326      69676E65 
- 1326      6420696E 
- 1326      7400
- 1327              	.LASF26:
- 1328 0113 50574D53 		.ascii	"PWMSB_ReadStatusRegister\000"
- 1328      425F5265 
- 1328      61645374 
- 1328      61747573 
- 1328      52656769 
- 1329              	.LASF12:
- 1330 012c 75696E74 		.ascii	"uint8\000"
- 1330      3800
- 1331              	.LASF28:
- 1332 0132 636F6E74 		.ascii	"control\000"
- 1332      726F6C00 
- 1333              	.LASF10:
- 1334 013a 646F7562 		.ascii	"double\000"
- 1334      6C6500
- 1335              	.LASF23:
- 1336 0141 50574D53 		.ascii	"PWMSB_SetInterruptMode\000"
- 1336      425F5365 
- 1336      74496E74 
- 1336      65727275 
- 1336      70744D6F 
- 1337              	.LASF36:
- 1338 0158 50574D53 		.ascii	"PWMSB_ReadCompare\000"
- 1338      425F5265 
- 1338      6164436F 
- 1338      6D706172 
- 1338      6500
- 1339              	.LASF27:
- 1340 016a 50574D53 		.ascii	"PWMSB_WriteControlRegister\000"
- 1340      425F5772 
- 1340      69746543 
- 1340      6F6E7472 
- 1340      6F6C5265 
- 1341              	.LASF38:
- 1342 0185 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1342      4320342E 
- 1342      392E3320 
- 1342      32303135 
- 1342      30333033 
- 1343 01b8 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 1343      20726576 
- 1343      6973696F 
- 1343      6E203232 
- 1343      31323230 
- 1344 01eb 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1344      66756E63 
- 1344      74696F6E 
- 1344      2D736563 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 42
+ 1325      425F5265 
+ 1325      61645374 
+ 1325      61747573 
+ 1325      52656769 
+ 1326              	.LASF12:
+ 1327 00db 75696E74 		.ascii	"uint8\000"
+ 1327      3800
+ 1328              	.LASF28:
+ 1329 00e1 636F6E74 		.ascii	"control\000"
+ 1329      726F6C00 
+ 1330              	.LASF10:
+ 1331 00e9 646F7562 		.ascii	"double\000"
+ 1331      6C6500
+ 1332              	.LASF23:
+ 1333 00f0 50574D53 		.ascii	"PWMSB_SetInterruptMode\000"
+ 1333      425F5365 
+ 1333      74496E74 
+ 1333      65727275 
+ 1333      70744D6F 
+ 1334              	.LASF36:
+ 1335 0107 50574D53 		.ascii	"PWMSB_ReadCompare\000"
+ 1335      425F5265 
+ 1335      6164436F 
+ 1335      6D706172 
+ 1335      6500
+ 1336              	.LASF27:
+ 1337 0119 50574D53 		.ascii	"PWMSB_WriteControlRegister\000"
+ 1337      425F5772 
+ 1337      69746543 
+ 1337      6F6E7472 
+ 1337      6F6C5265 
+ 1338              	.LASF38:
+ 1339 0134 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1339      4320342E 
+ 1339      392E3320 
+ 1339      32303135 
+ 1339      30333033 
+ 1340 0167 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1340      20726576 
+ 1340      6973696F 
+ 1340      6E203232 
+ 1340      31323230 
+ 1341 019a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1341      66756E63 
+ 1341      74696F6E 
+ 1341      2D736563 
+ 1341      74696F6E 
+ 1342              	.LASF43:
+ 1343 01c2 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1343      74657243 
+ 1343      72697469 
+ 1343      63616C53 
+ 1343      65637469 
+ 1344              	.LASF8:
+ 1345 01d9 756E7369 		.ascii	"unsigned int\000"
+ 1345      676E6564 
+ 1345      20696E74 
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 42
 
 
- 1344      74696F6E 
- 1345              	.LASF43:
- 1346 0213 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 1346      74657243 
- 1346      72697469 
- 1346      63616C53 
- 1346      65637469 
- 1347              	.LASF8:
- 1348 022a 756E7369 		.ascii	"unsigned int\000"
- 1348      676E6564 
- 1348      20696E74 
- 1348      00
- 1349              	.LASF44:
- 1350 0237 43794578 		.ascii	"CyExitCriticalSection\000"
- 1350      69744372 
- 1350      69746963 
- 1350      616C5365 
- 1350      6374696F 
- 1351              	.LASF32:
- 1352 024d 72657375 		.ascii	"result\000"
- 1352      6C7400
+ 1345      00
+ 1346              	.LASF44:
+ 1347 01e6 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1347      69744372 
+ 1347      69746963 
+ 1347      616C5365 
+ 1347      6374696F 
+ 1348              	.LASF32:
+ 1349 01fc 72657375 		.ascii	"result\000"
+ 1349      6C7400
+ 1350              	.LASF40:
+ 1351 0203 433A5C55 		.ascii	"C:\\Users\\EmilR\\Desktop\\E4PRJ4-Gruppe1\\Retning "
+ 1351      73657273 
+ 1351      5C456D69 
+ 1351      6C525C44 
+ 1351      65736B74 
+ 1352 0231 6D656420 		.ascii	"med mus\\version_01.cydsn\000"
+ 1352      6D75735C 
+ 1352      76657273 
+ 1352      696F6E5F 
+ 1352      30312E63 
  1353              	.LASF31:
- 1354 0254 50574D53 		.ascii	"PWMSB_Init\000"
+ 1354 024a 50574D53 		.ascii	"PWMSB_Init\000"
  1354      425F496E 
  1354      697400
  1355              	.LASF29:
- 1356 025f 50574D53 		.ascii	"PWMSB_ReadCapture\000"
+ 1356 0255 50574D53 		.ascii	"PWMSB_ReadCapture\000"
  1356      425F5265 
  1356      61644361 
  1356      70747572 
  1356      6500
  1357              	.LASF33:
- 1358 0271 6374726C 		.ascii	"ctrl\000"
+ 1358 0267 6374726C 		.ascii	"ctrl\000"
  1358      00
  1359              	.LASF14:
- 1360 0276 73697A65 		.ascii	"sizetype\000"
+ 1360 026c 73697A65 		.ascii	"sizetype\000"
  1360      74797065 
  1360      00
  1361              	.LASF6:
- 1362 027f 6C6F6E67 		.ascii	"long long int\000"
+ 1362 0275 6C6F6E67 		.ascii	"long long int\000"
  1362      206C6F6E 
  1362      6720696E 
  1362      7400
  1363              	.LASF24:
- 1364 028d 696E7465 		.ascii	"interruptMode\000"
+ 1364 0283 696E7465 		.ascii	"interruptMode\000"
  1364      72727570 
  1364      744D6F64 
  1364      6500
  1365              	.LASF37:
- 1366 029b 50574D53 		.ascii	"PWMSB_ReadPeriod\000"
+ 1366 0291 50574D53 		.ascii	"PWMSB_ReadPeriod\000"
  1366      425F5265 
  1366      61645065 
  1366      72696F64 
  1366      00
  1367              	.LASF21:
- 1368 02ac 50574D53 		.ascii	"PWMSB_WriteCompare\000"
+ 1368 02a2 50574D53 		.ascii	"PWMSB_WriteCompare\000"
  1368      425F5772 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\cc4rHNDB.s 			page 43
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccIDfgnF.s 			page 43
 
 
  1368      69746543 
  1368      6F6D7061 
  1368      726500
  1369              	.LASF30:
- 1370 02bf 50574D53 		.ascii	"PWMSB_ClearFIFO\000"
+ 1370 02b5 50574D53 		.ascii	"PWMSB_ClearFIFO\000"
  1370      425F436C 
  1370      65617246 
  1370      49464F00 
  1371              	.LASF2:
- 1372 02cf 73686F72 		.ascii	"short int\000"
+ 1372 02c5 73686F72 		.ascii	"short int\000"
  1372      7420696E 
  1372      7400
  1373              	.LASF42:
- 1374 02d9 50574D53 		.ascii	"PWMSB_initVar\000"
+ 1374 02cf 50574D53 		.ascii	"PWMSB_initVar\000"
  1374      425F696E 
  1374      69745661 
  1374      7200
  1375              	.LASF41:
- 1376 02e7 50574D53 		.ascii	"PWMSB_ReadControlRegister\000"
+ 1376 02dd 50574D53 		.ascii	"PWMSB_ReadControlRegister\000"
  1376      425F5265 
  1376      6164436F 
  1376      6E74726F 
  1376      6C526567 
  1377              	.LASF25:
- 1378 0301 50574D53 		.ascii	"PWMSB_ReadCounter\000"
+ 1378 02f7 50574D53 		.ascii	"PWMSB_ReadCounter\000"
  1378      425F5265 
  1378      6164436F 
  1378      756E7465 
  1378      7200
  1379              	.LASF4:
- 1380 0313 6C6F6E67 		.ascii	"long int\000"
+ 1380 0309 6C6F6E67 		.ascii	"long int\000"
  1380      20696E74 
  1380      00
  1381              	.LASF11:
- 1382 031c 63686172 		.ascii	"char\000"
+ 1382 0312 63686172 		.ascii	"char\000"
  1382      00
  1383              	.LASF0:
- 1384 0321 7369676E 		.ascii	"signed char\000"
+ 1384 0317 7369676E 		.ascii	"signed char\000"
  1384      65642063 
  1384      68617200 
  1385              	.LASF22:
- 1386 032d 636F6D70 		.ascii	"compare\000"
+ 1386 0323 636F6D70 		.ascii	"compare\000"
  1386      61726500 
  1387              	.LASF39:
- 1388 0335 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWMSB.c\000"
+ 1388 032b 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWMSB.c\000"
  1388      72617465 
  1388      645F536F 
  1388      75726365 

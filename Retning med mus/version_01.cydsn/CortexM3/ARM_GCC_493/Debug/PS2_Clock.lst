@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccvgKI8w.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
   29:Generated_Source\PSoC5/PS2_Clock.c **** * \brief Writes the value to the physical port (data output register), masking
   30:Generated_Source\PSoC5/PS2_Clock.c **** *  and shifting the bits appropriately. 
   31:Generated_Source\PSoC5/PS2_Clock.c **** *
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 2
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccvgKI8w.s 			page 2
 
 
   32:Generated_Source\PSoC5/PS2_Clock.c **** * The data output register controls the signal applied to the physical pin in 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
   52              		.section	.text.PS2_Clock_SetDriveMode,"ax",%progbits
   53              		.align	2
   54              		.global	PS2_Clock_SetDriveMode
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 3
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccvgKI8w.s 			page 3
 
 
   55              		.thumb
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
   77              	.L5:
   78 0014 1C500040 		.word	1073762332
   79              		.cfi_endproc
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 4
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccvgKI8w.s 			page 4
 
 
   80              	.LFE1:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
  110              		.global	PS2_Clock_ReadDataReg
  111              		.thumb
  112              		.thumb_func
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 5
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccvgKI8w.s 			page 5
 
 
  113              		.type	PS2_Clock_ReadDataReg, %function
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
  139              		.type	PS2_Clock_SetInterruptMode, %function
  140              	PS2_Clock_SetInterruptMode:
  141              	.LFB4:
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 6
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccvgKI8w.s 			page 6
 
 
  145:Generated_Source\PSoC5/PS2_Clock.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
  151 0004 80B2     		uxth	r0, r0
  152 0006 10B1     		cbz	r0, .L13
  190:Generated_Source\PSoC5/PS2_Clock.c **** 		{ 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 7
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccvgKI8w.s 			page 7
 
 
  191:Generated_Source\PSoC5/PS2_Clock.c **** 			 PS2_Clock_0_INTTYPE_REG = (uint8)mode; 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
  218:Generated_Source\PSoC5/PS2_Clock.c ****         return (PS2_Clock_INTSTAT & PS2_Clock_MASK) >> PS2_Clock_SHIFT;
  180              		.loc 1 218 0
  181 0000 024B     		ldr	r3, .L18
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 8
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccvgKI8w.s 			page 8
 
 
  182 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
@@ -443,17 +443,17 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
  200 0006 00000000 		.4byte	.Ldebug_abbrev0
  201 000a 04       		.byte	0x4
  202 000b 01       		.uleb128 0x1
- 203 000c 1C010000 		.4byte	.LASF24
+ 203 000c CB000000 		.4byte	.LASF24
  204 0010 01       		.byte	0x1
- 205 0011 F6010000 		.4byte	.LASF25
- 206 0015 68000000 		.4byte	.LASF26
+ 205 0011 EC010000 		.4byte	.LASF25
+ 206 0015 7D010000 		.4byte	.LASF26
  207 0019 00000000 		.4byte	.Ldebug_ranges0+0
  208 001d 00000000 		.4byte	0
  209 0021 00000000 		.4byte	.Ldebug_line0
  210 0025 02       		.uleb128 0x2
  211 0026 01       		.byte	0x1
  212 0027 06       		.byte	0x6
- 213 0028 22020000 		.4byte	.LASF0
+ 213 0028 18020000 		.4byte	.LASF0
  214 002c 02       		.uleb128 0x2
  215 002d 01       		.byte	0x1
  216 002e 08       		.byte	0x8
@@ -461,30 +461,30 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
  218 0033 02       		.uleb128 0x2
  219 0034 02       		.byte	0x2
  220 0035 05       		.byte	0x5
- 221 0036 E6010000 		.4byte	.LASF2
+ 221 0036 DC010000 		.4byte	.LASF2
  222 003a 02       		.uleb128 0x2
  223 003b 02       		.byte	0x2
  224 003c 07       		.byte	0x7
- 225 003d CB000000 		.4byte	.LASF3
+ 225 003d 7A000000 		.4byte	.LASF3
  226 0041 02       		.uleb128 0x2
  227 0042 04       		.byte	0x4
  228 0043 05       		.byte	0x5
- 229 0044 19020000 		.4byte	.LASF4
+ 229 0044 0F020000 		.4byte	.LASF4
  230 0048 02       		.uleb128 0x2
  231 0049 04       		.byte	0x4
  232 004a 07       		.byte	0x7
- 233 004b B9000000 		.4byte	.LASF5
+ 233 004b 68000000 		.4byte	.LASF5
  234 004f 02       		.uleb128 0x2
  235 0050 08       		.byte	0x8
  236 0051 05       		.byte	0x5
- 237 0052 D3010000 		.4byte	.LASF6
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 9
+ 237 0052 C9010000 		.4byte	.LASF6
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccvgKI8w.s 			page 9
 
 
  238 0056 02       		.uleb128 0x2
  239 0057 08       		.byte	0x8
  240 0058 07       		.byte	0x7
- 241 0059 B7010000 		.4byte	.LASF7
+ 241 0059 66010000 		.4byte	.LASF7
  242 005d 03       		.uleb128 0x3
  243 005e 04       		.byte	0x4
  244 005f 05       		.byte	0x5
@@ -492,14 +492,14 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
  246 0064 02       		.uleb128 0x2
  247 0065 04       		.byte	0x4
  248 0066 07       		.byte	0x7
- 249 0067 AA010000 		.4byte	.LASF8
+ 249 0067 59010000 		.4byte	.LASF8
  250 006b 04       		.uleb128 0x4
- 251 006c F0010000 		.4byte	.LASF9
+ 251 006c E6010000 		.4byte	.LASF9
  252 0070 02       		.byte	0x2
  253 0071 9201     		.2byte	0x192
  254 0073 2C000000 		.4byte	0x2c
  255 0077 04       		.uleb128 0x4
- 256 0078 FE000000 		.4byte	.LASF10
+ 256 0078 AD000000 		.4byte	.LASF10
  257 007c 02       		.byte	0x2
  258 007d 9301     		.2byte	0x193
  259 007f 3A000000 		.4byte	0x3a
@@ -510,11 +510,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
  264 008a 02       		.uleb128 0x2
  265 008b 08       		.byte	0x8
  266 008c 04       		.byte	0x4
- 267 008d F7000000 		.4byte	.LASF12
+ 267 008d A6000000 		.4byte	.LASF12
  268 0091 02       		.uleb128 0x2
  269 0092 01       		.byte	0x1
  270 0093 08       		.byte	0x8
- 271 0094 E1010000 		.4byte	.LASF13
+ 271 0094 D7010000 		.4byte	.LASF13
  272 0098 04       		.uleb128 0x4
  273 0099 63000000 		.4byte	.LASF14
  274 009d 02       		.byte	0x2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
  292 00c5 6B000000 		.4byte	0x6b
  293 00c9 00000000 		.4byte	.LLST0
  294 00cd 08       		.uleb128 0x8
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 10
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccvgKI8w.s 			page 10
 
 
  295 00ce 25000000 		.4byte	.LASF27
@@ -549,7 +549,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
  300 00d9 53       		.byte	0x53
  301 00da 00       		.byte	0
  302 00db 06       		.uleb128 0x6
- 303 00dc 05010000 		.4byte	.LASF16
+ 303 00dc B4000000 		.4byte	.LASF16
  304 00e0 01       		.byte	0x1
  305 00e1 5A       		.byte	0x5a
  306 00e2 00000000 		.4byte	.LFB1
@@ -558,7 +558,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
  309 00eb 9C       		.byte	0x9c
  310 00ec 00010000 		.4byte	0x100
  311 00f0 07       		.uleb128 0x7
- 312 00f1 CE010000 		.4byte	.LASF18
+ 312 00f1 C4010000 		.4byte	.LASF18
  313 00f5 01       		.byte	0x1
  314 00f6 5A       		.byte	0x5a
  315 00f7 6B000000 		.4byte	0x6b
@@ -583,7 +583,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
  334 0128 01       		.uleb128 0x1
  335 0129 9C       		.byte	0x9c
  336 012a 06       		.uleb128 0x6
- 337 012b 2E020000 		.4byte	.LASF21
+ 337 012b 24020000 		.4byte	.LASF21
  338 012f 01       		.byte	0x1
  339 0130 BB       		.byte	0xbb
  340 0131 00000000 		.4byte	.LFB4
@@ -598,17 +598,17 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
  349 0146 77000000 		.4byte	0x77
  350 014a 42000000 		.4byte	.LLST2
  351 014e 07       		.uleb128 0x7
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 11
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccvgKI8w.s 			page 11
 
 
- 352 014f CE010000 		.4byte	.LASF18
+ 352 014f C4010000 		.4byte	.LASF18
  353 0153 01       		.byte	0x1
  354 0154 BB       		.byte	0xbb
  355 0155 77000000 		.4byte	0x77
  356 0159 63000000 		.4byte	.LLST3
  357 015d 00       		.byte	0
  358 015e 09       		.uleb128 0x9
- 359 015f DE000000 		.4byte	.LASF23
+ 359 015f 8D000000 		.4byte	.LASF23
  360 0163 01       		.byte	0x1
  361 0164 D8       		.byte	0xd8
  362 0165 6B000000 		.4byte	0x6b
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
  406 0024 0B       		.uleb128 0xb
  407 0025 03       		.uleb128 0x3
  408 0026 08       		.uleb128 0x8
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 12
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccvgKI8w.s 			page 12
 
 
  409 0027 00       		.byte	0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
  463 005e 3B       		.uleb128 0x3b
  464 005f 0B       		.uleb128 0xb
  465 0060 49       		.uleb128 0x49
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 13
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccvgKI8w.s 			page 13
 
 
  466 0061 13       		.uleb128 0x13
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
  520 000f 18000000 		.4byte	.LFE0
  521 0013 0400     		.2byte	0x4
  522 0015 F3       		.byte	0xf3
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 14
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccvgKI8w.s 			page 14
 
 
  523 0016 01       		.uleb128 0x1
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
  577 000e 0000     		.2byte	0
  578 0010 00000000 		.4byte	.LFB0
  579 0014 18000000 		.4byte	.LFE0-.LFB0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 15
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccvgKI8w.s 			page 15
 
 
  580 0018 00000000 		.4byte	.LFB1
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
  620      74696F6E 
  620      00
  621              	.LASF11:
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 16
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccvgKI8w.s 			page 16
 
 
  622 0039 666C6F61 		.ascii	"float\000"
@@ -917,114 +917,114 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 1
  627              	.LASF14:
  628 0063 72656738 		.ascii	"reg8\000"
  628      00
- 629              	.LASF26:
- 630 0068 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\HellYaeh\\E4PRJ4-Gruppe"
- 630      73657273 
- 630      5C416E64 
- 630      6572735C 
- 630      4465736B 
- 631 0096 315C5265 		.ascii	"1\\Retning med mus\\version_01.cydsn\000"
- 631      746E696E 
- 631      67206D65 
- 631      64206D75 
- 631      735C7665 
- 632              	.LASF5:
- 633 00b9 6C6F6E67 		.ascii	"long unsigned int\000"
- 633      20756E73 
- 633      69676E65 
- 633      6420696E 
- 633      7400
- 634              	.LASF3:
- 635 00cb 73686F72 		.ascii	"short unsigned int\000"
- 635      7420756E 
- 635      7369676E 
- 635      65642069 
- 635      6E7400
- 636              	.LASF23:
- 637 00de 5053325F 		.ascii	"PS2_Clock_ClearInterrupt\000"
- 637      436C6F63 
- 637      6B5F436C 
- 637      65617249 
- 637      6E746572 
- 638              	.LASF12:
- 639 00f7 646F7562 		.ascii	"double\000"
- 639      6C6500
- 640              	.LASF10:
- 641 00fe 75696E74 		.ascii	"uint16\000"
- 641      313600
- 642              	.LASF16:
- 643 0105 5053325F 		.ascii	"PS2_Clock_SetDriveMode\000"
- 643      436C6F63 
- 643      6B5F5365 
- 643      74447269 
- 643      76654D6F 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 17
+ 629              	.LASF5:
+ 630 0068 6C6F6E67 		.ascii	"long unsigned int\000"
+ 630      20756E73 
+ 630      69676E65 
+ 630      6420696E 
+ 630      7400
+ 631              	.LASF3:
+ 632 007a 73686F72 		.ascii	"short unsigned int\000"
+ 632      7420756E 
+ 632      7369676E 
+ 632      65642069 
+ 632      6E7400
+ 633              	.LASF23:
+ 634 008d 5053325F 		.ascii	"PS2_Clock_ClearInterrupt\000"
+ 634      436C6F63 
+ 634      6B5F436C 
+ 634      65617249 
+ 634      6E746572 
+ 635              	.LASF12:
+ 636 00a6 646F7562 		.ascii	"double\000"
+ 636      6C6500
+ 637              	.LASF10:
+ 638 00ad 75696E74 		.ascii	"uint16\000"
+ 638      313600
+ 639              	.LASF16:
+ 640 00b4 5053325F 		.ascii	"PS2_Clock_SetDriveMode\000"
+ 640      436C6F63 
+ 640      6B5F5365 
+ 640      74447269 
+ 640      76654D6F 
+ 641              	.LASF24:
+ 642 00cb 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 642      4320342E 
+ 642      392E3320 
+ 642      32303135 
+ 642      30333033 
+ 643 00fe 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 643      20726576 
+ 643      6973696F 
+ 643      6E203232 
+ 643      31323230 
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccvgKI8w.s 			page 17
 
 
- 644              	.LASF24:
- 645 011c 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 645      4320342E 
- 645      392E3320 
- 645      32303135 
- 645      30333033 
- 646 014f 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 646      20726576 
- 646      6973696F 
- 646      6E203232 
- 646      31323230 
- 647 0182 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 647      66756E63 
- 647      74696F6E 
- 647      2D736563 
- 647      74696F6E 
- 648              	.LASF8:
- 649 01aa 756E7369 		.ascii	"unsigned int\000"
- 649      676E6564 
- 649      20696E74 
- 649      00
- 650              	.LASF7:
- 651 01b7 6C6F6E67 		.ascii	"long long unsigned int\000"
- 651      206C6F6E 
- 651      6720756E 
- 651      7369676E 
- 651      65642069 
+ 644 0131 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 644      66756E63 
+ 644      74696F6E 
+ 644      2D736563 
+ 644      74696F6E 
+ 645              	.LASF8:
+ 646 0159 756E7369 		.ascii	"unsigned int\000"
+ 646      676E6564 
+ 646      20696E74 
+ 646      00
+ 647              	.LASF7:
+ 648 0166 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 648      206C6F6E 
+ 648      6720756E 
+ 648      7369676E 
+ 648      65642069 
+ 649              	.LASF26:
+ 650 017d 433A5C55 		.ascii	"C:\\Users\\EmilR\\Desktop\\E4PRJ4-Gruppe1\\Retning "
+ 650      73657273 
+ 650      5C456D69 
+ 650      6C525C44 
+ 650      65736B74 
+ 651 01ab 6D656420 		.ascii	"med mus\\version_01.cydsn\000"
+ 651      6D75735C 
+ 651      76657273 
+ 651      696F6E5F 
+ 651      30312E63 
  652              	.LASF18:
- 653 01ce 6D6F6465 		.ascii	"mode\000"
+ 653 01c4 6D6F6465 		.ascii	"mode\000"
  653      00
  654              	.LASF6:
- 655 01d3 6C6F6E67 		.ascii	"long long int\000"
+ 655 01c9 6C6F6E67 		.ascii	"long long int\000"
  655      206C6F6E 
  655      6720696E 
  655      7400
  656              	.LASF13:
- 657 01e1 63686172 		.ascii	"char\000"
+ 657 01d7 63686172 		.ascii	"char\000"
  657      00
  658              	.LASF2:
- 659 01e6 73686F72 		.ascii	"short int\000"
+ 659 01dc 73686F72 		.ascii	"short int\000"
  659      7420696E 
  659      7400
  660              	.LASF9:
- 661 01f0 75696E74 		.ascii	"uint8\000"
+ 661 01e6 75696E74 		.ascii	"uint8\000"
  661      3800
  662              	.LASF25:
- 663 01f6 47656E65 		.ascii	"Generated_Source\\PSoC5\\PS2_Clock.c\000"
+ 663 01ec 47656E65 		.ascii	"Generated_Source\\PSoC5\\PS2_Clock.c\000"
  663      72617465 
  663      645F536F 
  663      75726365 
  663      5C50536F 
  664              	.LASF4:
- 665 0219 6C6F6E67 		.ascii	"long int\000"
+ 665 020f 6C6F6E67 		.ascii	"long int\000"
  665      20696E74 
  665      00
  666              	.LASF0:
- 667 0222 7369676E 		.ascii	"signed char\000"
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccf5N6YJ.s 			page 18
+ 667 0218 7369676E 		.ascii	"signed char\000"
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\ccvgKI8w.s 			page 18
 
 
  667      65642063 
  667      68617200 
  668              	.LASF21:
- 669 022e 5053325F 		.ascii	"PS2_Clock_SetInterruptMode\000"
+ 669 0224 5053325F 		.ascii	"PS2_Clock_SetInterruptMode\000"
  669      436C6F63 
  669      6B5F5365 
  669      74496E74 

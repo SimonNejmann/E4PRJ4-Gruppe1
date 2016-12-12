@@ -59,10 +59,10 @@ int main()
     ***************************************************************************/
     for (;;)
     {
-        CyDelay(100);
-         CyGlobalIntEnable;
-        CyDelay(100);
-         CyGlobalIntDisable;
+//        CyDelay(100);
+//         CyGlobalIntEnable;
+//        CyDelay(100);
+//         CyGlobalIntDisable;
 //        PWMSF_WriteCompare(i2cbuf[SPEED_FRONT_POS]);
 //        PWMSB_WriteCompare(i2cbuf[SPEED_BACK_POS]);
 //        

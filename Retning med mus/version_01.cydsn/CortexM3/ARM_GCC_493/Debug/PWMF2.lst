@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
   29:Generated_Source\PSoC5/PWMF2.c ****          constant 1 for reset. This will prevent the component from operating.
   30:Generated_Source\PSoC5/PWMF2.c **** #endif /* PWMF2_PWMUDB_genblk1_ctrlreg__REMOVED */
   31:Generated_Source\PSoC5/PWMF2.c **** 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 2
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 2
 
 
   32:Generated_Source\PSoC5/PWMF2.c **** uint8 PWMF2_initVar = 0u;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
   86:Generated_Source\PSoC5/PWMF2.c ****     #if (PWMF2_UsingFixedFunction || PWMF2_UseControl)
   87:Generated_Source\PSoC5/PWMF2.c ****         uint8 ctrl;
   88:Generated_Source\PSoC5/PWMF2.c ****     #endif /* (PWMF2_UsingFixedFunction || PWMF2_UseControl) */
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 3
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 3
 
 
   89:Generated_Source\PSoC5/PWMF2.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  143:Generated_Source\PSoC5/PWMF2.c ****         #endif /* (PWMF2_UseOneCompareMode) */
  144:Generated_Source\PSoC5/PWMF2.c **** 
  145:Generated_Source\PSoC5/PWMF2.c ****         #if (PWMF2_KillModeMinTime)
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 4
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 4
 
 
  146:Generated_Source\PSoC5/PWMF2.c ****             PWMF2_WriteKillTime(PWMF2_MinimumKillTime);
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  200:Generated_Source\PSoC5/PWMF2.c **** {
   27              		.loc 1 200 0
   28              		.cfi_startproc
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 5
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 5
 
 
   29              		@ args = 0, pretend = 0, frame = 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  231:Generated_Source\PSoC5/PWMF2.c **** *
  232:Generated_Source\PSoC5/PWMF2.c **** *******************************************************************************/
  233:Generated_Source\PSoC5/PWMF2.c **** void PWMF2_Stop(void) 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 6
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 6
 
 
  234:Generated_Source\PSoC5/PWMF2.c **** {
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  262:Generated_Source\PSoC5/PWMF2.c ****         * Return:
  263:Generated_Source\PSoC5/PWMF2.c ****         *  None
  264:Generated_Source\PSoC5/PWMF2.c ****         *
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 7
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 7
 
 
  265:Generated_Source\PSoC5/PWMF2.c ****         *******************************************************************************/
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  319:Generated_Source\PSoC5/PWMF2.c ****         *  comparemode:  The new compare mode for the PWM output. Use the compare types
  320:Generated_Source\PSoC5/PWMF2.c ****         *                defined in the H file as input arguments.
  321:Generated_Source\PSoC5/PWMF2.c ****         *
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 8
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 8
 
 
  322:Generated_Source\PSoC5/PWMF2.c ****         * Return:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  376:Generated_Source\PSoC5/PWMF2.c **** 
  377:Generated_Source\PSoC5/PWMF2.c **** #endif /* UseOneCompareMode */
  378:Generated_Source\PSoC5/PWMF2.c **** 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 9
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 9
 
 
  379:Generated_Source\PSoC5/PWMF2.c **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  408:Generated_Source\PSoC5/PWMF2.c **** 
  409:Generated_Source\PSoC5/PWMF2.c **** 
  410:Generated_Source\PSoC5/PWMF2.c ****     /*******************************************************************************
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 10
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 10
 
 
  411:Generated_Source\PSoC5/PWMF2.c ****     * Function Name: PWMF2_ReadCounter
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  436:Generated_Source\PSoC5/PWMF2.c ****     #if (PWMF2_UseStatus)
  437:Generated_Source\PSoC5/PWMF2.c **** 
  438:Generated_Source\PSoC5/PWMF2.c **** 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 11
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 11
 
 
  439:Generated_Source\PSoC5/PWMF2.c ****         /*******************************************************************************
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  487:Generated_Source\PSoC5/PWMF2.c ****         CY_SET_REG8(PWMF2_PERIOD_LSB_PTR, period);
  139              		.loc 1 487 0
  140 0000 014B     		ldr	r3, .L14
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 12
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 12
 
 
  141 0002 1870     		strb	r0, [r3]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  519:Generated_Source\PSoC5/PWMF2.c ****         #if(PWMF2_UsingFixedFunction)
  520:Generated_Source\PSoC5/PWMF2.c ****             CY_SET_REG16(PWMF2_COMPARE1_LSB_PTR, (uint16)compare);
  521:Generated_Source\PSoC5/PWMF2.c ****         #else
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 13
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 13
 
 
  522:Generated_Source\PSoC5/PWMF2.c ****             CY_SET_REG8(PWMF2_COMPARE1_LSB_PTR, compare);
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  557:Generated_Source\PSoC5/PWMF2.c ****     {
  558:Generated_Source\PSoC5/PWMF2.c ****         #if(PWMF2_UsingFixedFunction)
  559:Generated_Source\PSoC5/PWMF2.c ****             CY_SET_REG16(PWMF2_COMPARE1_LSB_PTR, (uint16)compare);
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 14
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 14
 
 
  560:Generated_Source\PSoC5/PWMF2.c ****         #else
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  614:Generated_Source\PSoC5/PWMF2.c ****         /* If using the Dead Band 1-255 mode then just write the register */
  615:Generated_Source\PSoC5/PWMF2.c ****         #if(!PWMF2_DeadBand2_4)
  616:Generated_Source\PSoC5/PWMF2.c ****             CY_SET_REG8(PWMF2_DEADBAND_COUNT_PTR, deadtime);
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 15
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 15
 
 
  617:Generated_Source\PSoC5/PWMF2.c ****         #else
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  671:Generated_Source\PSoC5/PWMF2.c ****     ********************************************************************************
  672:Generated_Source\PSoC5/PWMF2.c ****     *
  673:Generated_Source\PSoC5/PWMF2.c ****     * Summary:
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 16
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 16
 
 
  674:Generated_Source\PSoC5/PWMF2.c ****     *  This function configures the interrupts mask control of theinterrupt
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  703:Generated_Source\PSoC5/PWMF2.c ****     *  [5]   : Kill event output
  704:Generated_Source\PSoC5/PWMF2.c ****     *  [4]   : FIFO not empty
  705:Generated_Source\PSoC5/PWMF2.c ****     *  [3]   : FIFO full
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 17
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 17
 
 
  706:Generated_Source\PSoC5/PWMF2.c ****     *  [2]   : Terminal count
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  735:Generated_Source\PSoC5/PWMF2.c ****     *
  736:Generated_Source\PSoC5/PWMF2.c ****     *******************************************************************************/
  737:Generated_Source\PSoC5/PWMF2.c ****     uint8 PWMF2_ReadControlRegister(void) 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 18
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 18
 
 
  738:Generated_Source\PSoC5/PWMF2.c ****     {
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  766:Generated_Source\PSoC5/PWMF2.c ****     {
  259              		.loc 1 766 0
  260              		.cfi_startproc
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 19
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 19
 
 
  261              		@ args = 0, pretend = 0, frame = 0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  289              		.loc 1 792 0
  290 0000 014B     		ldr	r3, .L32
  291 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 20
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 20
 
 
  793:Generated_Source\PSoC5/PWMF2.c ****     }
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  340              	PWMF2_Init:
  341              	.LFB1:
   85:Generated_Source\PSoC5/PWMF2.c ****     #if (PWMF2_UsingFixedFunction || PWMF2_UseControl)
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 21
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 21
 
 
  342              		.loc 1 85 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  172:Generated_Source\PSoC5/PWMF2.c **** 
  387              		.loc 1 172 0
  388 003e FFF7FEFF 		bl	CyExitCriticalSection
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 22
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 22
 
 
  389              	.LVL15:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  437 0018 00000000 		.word	.LANCHOR0
  438              		.cfi_endproc
  439              	.LFE0:
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 23
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 23
 
 
  440              		.size	PWMF2_Start, .-PWMF2_Start
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  464              	.LFE14:
  465              		.size	PWMF2_ReadCompare, .-PWMF2_ReadCompare
  466              		.section	.text.PWMF2_ReadPeriod,"ax",%progbits
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 24
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 24
 
 
  467              		.align	2
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  871:Generated_Source\PSoC5/PWMF2.c **** * Function Name: PWMF2_ReadPeriod
  872:Generated_Source\PSoC5/PWMF2.c **** ********************************************************************************
  873:Generated_Source\PSoC5/PWMF2.c **** *
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 25
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 25
 
 
  874:Generated_Source\PSoC5/PWMF2.c **** * Summary:
@@ -1494,11 +1494,11 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  506 0006 00000000 		.4byte	.Ldebug_abbrev0
  507 000a 04       		.byte	0x4
  508 000b 01       		.uleb128 0x1
- 509 000c 88010000 		.4byte	.LASF38
+ 509 000c 37010000 		.4byte	.LASF38
  510 0010 01       		.byte	0x1
- 511 0011 72020000 		.4byte	.LASF39
- 512 0015 E1000000 		.4byte	.LASF40
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 26
+ 511 0011 F5020000 		.4byte	.LASF39
+ 512 0015 21020000 		.4byte	.LASF40
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 26
 
 
  513 0019 00000000 		.4byte	.Ldebug_ranges0+0
@@ -1507,7 +1507,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  516 0025 02       		.uleb128 0x2
  517 0026 01       		.byte	0x1
  518 0027 06       		.byte	0x6
- 519 0028 0A030000 		.4byte	.LASF0
+ 519 0028 E1020000 		.4byte	.LASF0
  520 002c 02       		.uleb128 0x2
  521 002d 01       		.byte	0x1
  522 002e 08       		.byte	0x8
@@ -1515,7 +1515,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  524 0033 02       		.uleb128 0x2
  525 0034 02       		.byte	0x2
  526 0035 05       		.byte	0x5
- 527 0036 67010000 		.4byte	.LASF2
+ 527 0036 16010000 		.4byte	.LASF2
  528 003a 02       		.uleb128 0x2
  529 003b 02       		.byte	0x2
  530 003c 07       		.byte	0x7
@@ -1523,15 +1523,15 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  532 0041 02       		.uleb128 0x2
  533 0042 04       		.byte	0x4
  534 0043 05       		.byte	0x5
- 535 0044 FC020000 		.4byte	.LASF4
+ 535 0044 D3020000 		.4byte	.LASF4
  536 0048 02       		.uleb128 0x2
  537 0049 04       		.byte	0x4
  538 004a 07       		.byte	0x7
- 539 004b 32010000 		.4byte	.LASF5
+ 539 004b E1000000 		.4byte	.LASF5
  540 004f 02       		.uleb128 0x2
  541 0050 08       		.byte	0x8
  542 0051 05       		.byte	0x5
- 543 0052 BD020000 		.4byte	.LASF6
+ 543 0052 94020000 		.4byte	.LASF6
  544 0056 02       		.uleb128 0x2
  545 0057 08       		.byte	0x8
  546 0058 07       		.byte	0x7
@@ -1543,9 +1543,9 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  552 0064 02       		.uleb128 0x2
  553 0065 04       		.byte	0x4
  554 0066 07       		.byte	0x7
- 555 0067 2D020000 		.4byte	.LASF8
+ 555 0067 DC010000 		.4byte	.LASF8
  556 006b 04       		.uleb128 0x4
- 557 006c 44010000 		.4byte	.LASF12
+ 557 006c F3000000 		.4byte	.LASF12
  558 0070 02       		.byte	0x2
  559 0071 9201     		.2byte	0x192
  560 0073 2C000000 		.4byte	0x2c
@@ -1556,14 +1556,14 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  565 007e 02       		.uleb128 0x2
  566 007f 08       		.byte	0x8
  567 0080 04       		.byte	0x4
- 568 0081 52010000 		.4byte	.LASF10
+ 568 0081 01010000 		.4byte	.LASF10
  569 0085 02       		.uleb128 0x2
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 27
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 27
 
 
  570 0086 01       		.byte	0x1
  571 0087 08       		.byte	0x8
- 572 0088 05030000 		.4byte	.LASF11
+ 572 0088 DC020000 		.4byte	.LASF11
  573 008c 04       		.uleb128 0x4
  574 008d DC000000 		.4byte	.LASF13
  575 0091 02       		.byte	0x2
@@ -1574,7 +1574,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  580 009d 02       		.uleb128 0x2
  581 009e 04       		.byte	0x4
  582 009f 07       		.byte	0x7
- 583 00a0 B4020000 		.4byte	.LASF14
+ 583 00a0 8B020000 		.4byte	.LASF14
  584 00a4 06       		.uleb128 0x6
  585 00a5 70000000 		.4byte	.LASF15
  586 00a9 01       		.byte	0x1
@@ -1584,7 +1584,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  590 00b3 01       		.uleb128 0x1
  591 00b4 9C       		.byte	0x9c
  592 00b5 06       		.uleb128 0x6
- 593 00b6 49030000 		.4byte	.LASF16
+ 593 00b6 3F030000 		.4byte	.LASF16
  594 00ba 01       		.byte	0x1
  595 00bb E9       		.byte	0xe9
  596 00bc 00000000 		.4byte	.LFB3
@@ -1592,7 +1592,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  598 00c4 01       		.uleb128 0x1
  599 00c5 9C       		.byte	0x9c
  600 00c6 07       		.uleb128 0x7
- 601 00c7 9C020000 		.4byte	.LASF17
+ 601 00c7 73020000 		.4byte	.LASF17
  602 00cb 01       		.byte	0x1
  603 00cc 9301     		.2byte	0x193
  604 00ce 00000000 		.4byte	.LFB4
@@ -1609,7 +1609,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  615 00e9 50       		.byte	0x50
  616 00ea 00       		.byte	0
  617 00eb 09       		.uleb128 0x9
- 618 00ec 37030000 		.4byte	.LASF25
+ 618 00ec 2D030000 		.4byte	.LASF25
  619 00f0 01       		.byte	0x1
  620 00f1 A901     		.2byte	0x1a9
  621 00f3 6B000000 		.4byte	0x6b
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  624 00ff 01       		.uleb128 0x1
  625 0100 9C       		.byte	0x9c
  626 0101 07       		.uleb128 0x7
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 28
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 28
 
 
  627 0102 BC000000 		.4byte	.LASF18
@@ -1647,7 +1647,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  650 0137 9C       		.byte	0x9c
  651 0138 4B010000 		.4byte	0x14b
  652 013c 08       		.uleb128 0x8
- 653 013d 16030000 		.4byte	.LASF22
+ 653 013d ED020000 		.4byte	.LASF22
  654 0141 01       		.byte	0x1
  655 0142 0402     		.2byte	0x204
  656 0144 6B000000 		.4byte	0x6b
@@ -1655,7 +1655,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  658 0149 50       		.byte	0x50
  659 014a 00       		.byte	0
  660 014b 07       		.uleb128 0x7
- 661 014c 71010000 		.4byte	.LASF23
+ 661 014c 20010000 		.4byte	.LASF23
  662 0150 01       		.byte	0x1
  663 0151 AC02     		.2byte	0x2ac
  664 0153 00000000 		.4byte	.LFB9
@@ -1664,7 +1664,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  667 015c 9C       		.byte	0x9c
  668 015d 70010000 		.4byte	0x170
  669 0161 08       		.uleb128 0x8
- 670 0162 CB020000 		.4byte	.LASF24
+ 670 0162 A2020000 		.4byte	.LASF24
  671 0166 01       		.byte	0x1
  672 0167 AC02     		.2byte	0x2ac
  673 0169 6B000000 		.4byte	0x6b
@@ -1672,13 +1672,13 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  675 016e 50       		.byte	0x50
  676 016f 00       		.byte	0
  677 0170 09       		.uleb128 0x9
- 678 0171 1E030000 		.4byte	.LASF26
+ 678 0171 14030000 		.4byte	.LASF26
  679 0175 01       		.byte	0x1
  680 0176 C702     		.2byte	0x2c7
  681 0178 6B000000 		.4byte	0x6b
  682 017c 00000000 		.4byte	.LFB10
  683 0180 0C000000 		.4byte	.LFE10-.LFB10
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 29
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 29
 
 
  684 0184 01       		.uleb128 0x1
@@ -1711,7 +1711,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  711 01c0 9C       		.byte	0x9c
  712 01c1 D4010000 		.4byte	0x1d4
  713 01c5 08       		.uleb128 0x8
- 714 01c6 4A010000 		.4byte	.LASF28
+ 714 01c6 F9000000 		.4byte	.LASF28
  715 01ca 01       		.byte	0x1
  716 01cb FD02     		.2byte	0x2fd
  717 01cd 6B000000 		.4byte	0x6b
@@ -1719,7 +1719,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  719 01d2 50       		.byte	0x50
  720 01d3 00       		.byte	0
  721 01d4 09       		.uleb128 0x9
- 722 01d5 EA020000 		.4byte	.LASF29
+ 722 01d5 C1020000 		.4byte	.LASF29
  723 01d9 01       		.byte	0x1
  724 01da 1603     		.2byte	0x316
  725 01dc 6B000000 		.4byte	0x6b
@@ -1728,7 +1728,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  728 01e8 01       		.uleb128 0x1
  729 01e9 9C       		.byte	0x9c
  730 01ea 07       		.uleb128 0x7
- 731 01eb 3A020000 		.4byte	.LASF30
+ 731 01eb E9010000 		.4byte	.LASF30
  732 01ef 01       		.byte	0x1
  733 01f0 C501     		.2byte	0x1c5
  734 01f2 00000000 		.4byte	.LFB6
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  738 01fc 13020000 		.4byte	0x213
  739 0200 0C       		.uleb128 0xc
  740 0201 08000000 		.4byte	.LVL6
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 30
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 30
 
 
  741 0205 D4010000 		.4byte	0x1d4
@@ -1747,7 +1747,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  744 020e 70010000 		.4byte	0x170
  745 0212 00       		.byte	0
  746 0213 0D       		.uleb128 0xd
- 747 0214 91020000 		.4byte	.LASF31
+ 747 0214 68020000 		.4byte	.LASF31
  748 0218 01       		.byte	0x1
  749 0219 54       		.byte	0x54
  750 021a 00000000 		.4byte	.LFB1
@@ -1756,7 +1756,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  753 0223 9C       		.byte	0x9c
  754 0224 AE020000 		.4byte	0x2ae
  755 0228 0E       		.uleb128 0xe
- 756 0229 AF020000 		.4byte	.LASF33
+ 756 0229 86020000 		.4byte	.LASF33
  757 022d 01       		.byte	0x1
  758 022e 57       		.byte	0x57
  759 022f 6B000000 		.4byte	0x6b
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  795 027d 31       		.byte	0x31
  796 027e 00       		.byte	0
  797 027f 0F       		.uleb128 0xf
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 31
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 31
 
 
  798 0280 32000000 		.4byte	.LVL13
@@ -1837,7 +1837,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  831 02d1 A4000000 		.4byte	0xa4
  832 02d5 00       		.byte	0
  833 02d6 09       		.uleb128 0x9
- 834 02d7 60020000 		.4byte	.LASF36
+ 834 02d7 0F020000 		.4byte	.LASF36
  835 02db 01       		.byte	0x1
  836 02dc 3003     		.2byte	0x330
  837 02de 6B000000 		.4byte	0x6b
@@ -1846,7 +1846,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  840 02ea 01       		.uleb128 0x1
  841 02eb 9C       		.byte	0x9c
  842 02ec 09       		.uleb128 0x9
- 843 02ed D9020000 		.4byte	.LASF37
+ 843 02ed B0020000 		.4byte	.LASF37
  844 02f1 01       		.byte	0x1
  845 02f2 7403     		.2byte	0x374
  846 02f4 6B000000 		.4byte	0x6b
@@ -1855,10 +1855,10 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  849 0300 01       		.uleb128 0x1
  850 0301 9C       		.byte	0x9c
  851 0302 11       		.uleb128 0x11
- 852 0303 59010000 		.4byte	.LASF42
+ 852 0303 08010000 		.4byte	.LASF42
  853 0307 01       		.byte	0x1
  854 0308 20       		.byte	0x20
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 32
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 32
 
 
  855 0309 6B000000 		.4byte	0x6b
@@ -1866,12 +1866,12 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  857 030e 03       		.byte	0x3
  858 030f 00000000 		.4byte	PWMF2_initVar
  859 0313 12       		.uleb128 0x12
- 860 0314 16020000 		.4byte	.LASF43
+ 860 0314 C5010000 		.4byte	.LASF43
  861 0318 03       		.byte	0x3
  862 0319 7D       		.byte	0x7d
  863 031a 6B000000 		.4byte	0x6b
  864 031e 13       		.uleb128 0x13
- 865 031f 4A020000 		.4byte	.LASF44
+ 865 031f F9010000 		.4byte	.LASF44
  866 0323 03       		.byte	0x3
  867 0324 7E       		.byte	0x7e
  868 0325 14       		.uleb128 0x14
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  909 0023 3E       		.uleb128 0x3e
  910 0024 0B       		.uleb128 0xb
  911 0025 03       		.uleb128 0x3
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 33
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 33
 
 
  912 0026 08       		.uleb128 0x8
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  966 005d 0B       		.uleb128 0xb
  967 005e 3B       		.uleb128 0x3b
  968 005f 05       		.uleb128 0x5
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 34
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 34
 
 
  969 0060 27       		.uleb128 0x27
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  1023 0098 0A       		.uleb128 0xa
  1024 0099 2E       		.uleb128 0x2e
  1025 009a 01       		.byte	0x1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 35
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 35
 
 
  1026 009b 3F       		.uleb128 0x3f
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  1080 00d4 0E       		.uleb128 0xe
  1081 00d5 3A       		.uleb128 0x3a
  1082 00d6 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 36
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 36
 
 
  1083 00d7 3B       		.uleb128 0x3b
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  1137 0113 03       		.uleb128 0x3
  1138 0114 0E       		.uleb128 0xe
  1139 0115 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 37
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 37
 
 
  1140 0116 0B       		.uleb128 0xb
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  1194 014c 00       		.byte	0
  1195              		.section	.debug_loc,"",%progbits
  1196              	.Ldebug_loc0:
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 38
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 38
 
 
  1197              	.LLST0:
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  1251 0090 00000000 		.4byte	0
  1252 0094 00000000 		.4byte	0
  1253              		.section	.debug_ranges,"",%progbits
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 39
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 39
 
 
  1254              	.Ldebug_ranges0:
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  1297      69746543 
  1297      6F6D7061 
  1297      726500
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 40
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 40
 
 
  1298              	.LASF20:
@@ -2397,173 +2397,173 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 1
  1320              	.LASF13:
  1321 00dc 72656738 		.ascii	"reg8\000"
  1321      00
- 1322              	.LASF40:
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 41
+ 1322              	.LASF5:
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 41
 
 
- 1323 00e1 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\HellYaeh\\E4PRJ4-Gruppe"
- 1323      73657273 
- 1323      5C416E64 
- 1323      6572735C 
- 1323      4465736B 
- 1324 010f 315C5265 		.ascii	"1\\Retning med mus\\version_01.cydsn\000"
- 1324      746E696E 
- 1324      67206D65 
- 1324      64206D75 
- 1324      735C7665 
- 1325              	.LASF5:
- 1326 0132 6C6F6E67 		.ascii	"long unsigned int\000"
- 1326      20756E73 
- 1326      69676E65 
- 1326      6420696E 
- 1326      7400
- 1327              	.LASF12:
- 1328 0144 75696E74 		.ascii	"uint8\000"
- 1328      3800
- 1329              	.LASF28:
- 1330 014a 636F6E74 		.ascii	"control\000"
- 1330      726F6C00 
- 1331              	.LASF10:
- 1332 0152 646F7562 		.ascii	"double\000"
- 1332      6C6500
- 1333              	.LASF42:
- 1334 0159 50574D46 		.ascii	"PWMF2_initVar\000"
- 1334      325F696E 
- 1334      69745661 
- 1334      7200
- 1335              	.LASF2:
- 1336 0167 73686F72 		.ascii	"short int\000"
- 1336      7420696E 
- 1336      7400
- 1337              	.LASF23:
- 1338 0171 50574D46 		.ascii	"PWMF2_SetInterruptMode\000"
- 1338      325F5365 
- 1338      74496E74 
- 1338      65727275 
- 1338      70744D6F 
- 1339              	.LASF38:
- 1340 0188 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1340      4320342E 
- 1340      392E3320 
- 1340      32303135 
- 1340      30333033 
- 1341 01bb 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 1341      20726576 
- 1341      6973696F 
- 1341      6E203232 
- 1341      31323230 
- 1342 01ee 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1342      66756E63 
- 1342      74696F6E 
- 1342      2D736563 
- 1342      74696F6E 
- 1343              	.LASF43:
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 42
+ 1323 00e1 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1323      20756E73 
+ 1323      69676E65 
+ 1323      6420696E 
+ 1323      7400
+ 1324              	.LASF12:
+ 1325 00f3 75696E74 		.ascii	"uint8\000"
+ 1325      3800
+ 1326              	.LASF28:
+ 1327 00f9 636F6E74 		.ascii	"control\000"
+ 1327      726F6C00 
+ 1328              	.LASF10:
+ 1329 0101 646F7562 		.ascii	"double\000"
+ 1329      6C6500
+ 1330              	.LASF42:
+ 1331 0108 50574D46 		.ascii	"PWMF2_initVar\000"
+ 1331      325F696E 
+ 1331      69745661 
+ 1331      7200
+ 1332              	.LASF2:
+ 1333 0116 73686F72 		.ascii	"short int\000"
+ 1333      7420696E 
+ 1333      7400
+ 1334              	.LASF23:
+ 1335 0120 50574D46 		.ascii	"PWMF2_SetInterruptMode\000"
+ 1335      325F5365 
+ 1335      74496E74 
+ 1335      65727275 
+ 1335      70744D6F 
+ 1336              	.LASF38:
+ 1337 0137 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1337      4320342E 
+ 1337      392E3320 
+ 1337      32303135 
+ 1337      30333033 
+ 1338 016a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1338      20726576 
+ 1338      6973696F 
+ 1338      6E203232 
+ 1338      31323230 
+ 1339 019d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1339      66756E63 
+ 1339      74696F6E 
+ 1339      2D736563 
+ 1339      74696F6E 
+ 1340              	.LASF43:
+ 1341 01c5 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1341      74657243 
+ 1341      72697469 
+ 1341      63616C53 
+ 1341      65637469 
+ 1342              	.LASF8:
+ 1343 01dc 756E7369 		.ascii	"unsigned int\000"
+ 1343      676E6564 
+ 1343      20696E74 
+ 1343      00
+ 1344              	.LASF30:
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 42
 
 
- 1344 0216 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 1344      74657243 
- 1344      72697469 
- 1344      63616C53 
- 1344      65637469 
- 1345              	.LASF8:
- 1346 022d 756E7369 		.ascii	"unsigned int\000"
- 1346      676E6564 
- 1346      20696E74 
- 1346      00
- 1347              	.LASF30:
- 1348 023a 50574D46 		.ascii	"PWMF2_ClearFIFO\000"
- 1348      325F436C 
- 1348      65617246 
- 1348      49464F00 
- 1349              	.LASF44:
- 1350 024a 43794578 		.ascii	"CyExitCriticalSection\000"
- 1350      69744372 
- 1350      69746963 
- 1350      616C5365 
- 1350      6374696F 
- 1351              	.LASF36:
- 1352 0260 50574D46 		.ascii	"PWMF2_ReadCompare\000"
- 1352      325F5265 
- 1352      6164436F 
- 1352      6D706172 
- 1352      6500
- 1353              	.LASF39:
- 1354 0272 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWMF2.c\000"
- 1354      72617465 
- 1354      645F536F 
- 1354      75726365 
- 1354      5C50536F 
- 1355              	.LASF31:
- 1356 0291 50574D46 		.ascii	"PWMF2_Init\000"
- 1356      325F496E 
- 1356      697400
- 1357              	.LASF17:
- 1358 029c 50574D46 		.ascii	"PWMF2_WriteCounter\000"
- 1358      325F5772 
- 1358      69746543 
- 1358      6F756E74 
- 1358      657200
- 1359              	.LASF33:
- 1360 02af 6374726C 		.ascii	"ctrl\000"
+ 1345 01e9 50574D46 		.ascii	"PWMF2_ClearFIFO\000"
+ 1345      325F436C 
+ 1345      65617246 
+ 1345      49464F00 
+ 1346              	.LASF44:
+ 1347 01f9 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1347      69744372 
+ 1347      69746963 
+ 1347      616C5365 
+ 1347      6374696F 
+ 1348              	.LASF36:
+ 1349 020f 50574D46 		.ascii	"PWMF2_ReadCompare\000"
+ 1349      325F5265 
+ 1349      6164436F 
+ 1349      6D706172 
+ 1349      6500
+ 1350              	.LASF40:
+ 1351 0221 433A5C55 		.ascii	"C:\\Users\\EmilR\\Desktop\\E4PRJ4-Gruppe1\\Retning "
+ 1351      73657273 
+ 1351      5C456D69 
+ 1351      6C525C44 
+ 1351      65736B74 
+ 1352 024f 6D656420 		.ascii	"med mus\\version_01.cydsn\000"
+ 1352      6D75735C 
+ 1352      76657273 
+ 1352      696F6E5F 
+ 1352      30312E63 
+ 1353              	.LASF31:
+ 1354 0268 50574D46 		.ascii	"PWMF2_Init\000"
+ 1354      325F496E 
+ 1354      697400
+ 1355              	.LASF17:
+ 1356 0273 50574D46 		.ascii	"PWMF2_WriteCounter\000"
+ 1356      325F5772 
+ 1356      69746543 
+ 1356      6F756E74 
+ 1356      657200
+ 1357              	.LASF33:
+ 1358 0286 6374726C 		.ascii	"ctrl\000"
+ 1358      00
+ 1359              	.LASF14:
+ 1360 028b 73697A65 		.ascii	"sizetype\000"
+ 1360      74797065 
  1360      00
- 1361              	.LASF14:
- 1362 02b4 73697A65 		.ascii	"sizetype\000"
- 1362      74797065 
- 1362      00
- 1363              	.LASF6:
- 1364 02bd 6C6F6E67 		.ascii	"long long int\000"
- 1364      206C6F6E 
- 1364      6720696E 
- 1364      7400
- 1365              	.LASF24:
- 1366 02cb 696E7465 		.ascii	"interruptMode\000"
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccU1AUAQ.s 			page 43
+ 1361              	.LASF6:
+ 1362 0294 6C6F6E67 		.ascii	"long long int\000"
+ 1362      206C6F6E 
+ 1362      6720696E 
+ 1362      7400
+ 1363              	.LASF24:
+ 1364 02a2 696E7465 		.ascii	"interruptMode\000"
+ 1364      72727570 
+ 1364      744D6F64 
+ 1364      6500
+ 1365              	.LASF37:
+ 1366 02b0 50574D46 		.ascii	"PWMF2_ReadPeriod\000"
+ 1366      325F5265 
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cceL5JKb.s 			page 43
 
 
- 1366      72727570 
- 1366      744D6F64 
- 1366      6500
- 1367              	.LASF37:
- 1368 02d9 50574D46 		.ascii	"PWMF2_ReadPeriod\000"
+ 1366      61645065 
+ 1366      72696F64 
+ 1366      00
+ 1367              	.LASF29:
+ 1368 02c1 50574D46 		.ascii	"PWMF2_ReadCapture\000"
  1368      325F5265 
- 1368      61645065 
- 1368      72696F64 
- 1368      00
- 1369              	.LASF29:
- 1370 02ea 50574D46 		.ascii	"PWMF2_ReadCapture\000"
- 1370      325F5265 
- 1370      61644361 
- 1370      70747572 
- 1370      6500
- 1371              	.LASF4:
- 1372 02fc 6C6F6E67 		.ascii	"long int\000"
- 1372      20696E74 
+ 1368      61644361 
+ 1368      70747572 
+ 1368      6500
+ 1369              	.LASF4:
+ 1370 02d3 6C6F6E67 		.ascii	"long int\000"
+ 1370      20696E74 
+ 1370      00
+ 1371              	.LASF11:
+ 1372 02dc 63686172 		.ascii	"char\000"
  1372      00
- 1373              	.LASF11:
- 1374 0305 63686172 		.ascii	"char\000"
- 1374      00
- 1375              	.LASF0:
- 1376 030a 7369676E 		.ascii	"signed char\000"
- 1376      65642063 
- 1376      68617200 
- 1377              	.LASF22:
- 1378 0316 636F6D70 		.ascii	"compare\000"
- 1378      61726500 
+ 1373              	.LASF0:
+ 1374 02e1 7369676E 		.ascii	"signed char\000"
+ 1374      65642063 
+ 1374      68617200 
+ 1375              	.LASF22:
+ 1376 02ed 636F6D70 		.ascii	"compare\000"
+ 1376      61726500 
+ 1377              	.LASF39:
+ 1378 02f5 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWMF2.c\000"
+ 1378      72617465 
+ 1378      645F536F 
+ 1378      75726365 
+ 1378      5C50536F 
  1379              	.LASF26:
- 1380 031e 50574D46 		.ascii	"PWMF2_ReadStatusRegister\000"
+ 1380 0314 50574D46 		.ascii	"PWMF2_ReadStatusRegister\000"
  1380      325F5265 
  1380      61645374 
  1380      61747573 
  1380      52656769 
  1381              	.LASF25:
- 1382 0337 50574D46 		.ascii	"PWMF2_ReadCounter\000"
+ 1382 032d 50574D46 		.ascii	"PWMF2_ReadCounter\000"
  1382      325F5265 
  1382      6164436F 
  1382      756E7465 
  1382      7200
  1383              	.LASF16:
- 1384 0349 50574D46 		.ascii	"PWMF2_Stop\000"
+ 1384 033f 50574D46 		.ascii	"PWMF2_Stop\000"
  1384      325F5374 
  1384      6F7000
  1385              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

@@ -159,8 +159,6 @@ void ISR_getMouseData(struct mouse *mouseData) {
     mouseData->finalY += tmpY;
     mouseData->timesInterrupted++;
     distance = sqrt((mouseData->finalX*mouseData->finalX)+(mouseData->finalY*mouseData->finalY));
-    
-        if (distance > THRESHOLD || distance < -THRESHOLD) {
         
             if (mouseData->finalX >= 0 && mouseData->finalY > 0) {
                 mouseData->angle = (asin(((float)mouseData->finalX)/(float)distance)*deg)/10/1.8;  
@@ -180,7 +178,7 @@ void ISR_getMouseData(struct mouse *mouseData) {
        
             stabil(mouseData->angle);
 
-    }
+    
         
     if (mouseData->timesInterrupted == 250) {
         mouseData->finalX = 0;

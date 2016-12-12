@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cck4EkJA.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
   29:Generated_Source\PSoC5/CounterF_PM.c **** *
   30:Generated_Source\PSoC5/CounterF_PM.c **** * Parameters:  
   31:Generated_Source\PSoC5/CounterF_PM.c **** *  void
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 2
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cck4EkJA.s 			page 2
 
 
   32:Generated_Source\PSoC5/CounterF_PM.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
   53:Generated_Source\PSoC5/CounterF_PM.c **** }
   54:Generated_Source\PSoC5/CounterF_PM.c **** 
   55:Generated_Source\PSoC5/CounterF_PM.c **** 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 3
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cck4EkJA.s 			page 3
 
 
   56:Generated_Source\PSoC5/CounterF_PM.c **** /*******************************************************************************
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
   88              		.thumb
   89              		.thumb_func
   90              		.type	CounterF_Sleep, %function
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 4
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cck4EkJA.s 			page 4
 
 
   91              	CounterF_Sleep:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  115:Generated_Source\PSoC5/CounterF_PM.c ****         {
  116:Generated_Source\PSoC5/CounterF_PM.c ****             /* Counter is disabled */
  117:Generated_Source\PSoC5/CounterF_PM.c ****             CounterF_backup.CounterEnableState = 0u;
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 5
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cck4EkJA.s 			page 5
 
 
  112              		.loc 1 117 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  144:Generated_Source\PSoC5/CounterF_PM.c **** *
  145:Generated_Source\PSoC5/CounterF_PM.c **** * Global variables:
  146:Generated_Source\PSoC5/CounterF_PM.c **** *  CounterF_backup.enableState:  Is used to restore the enable state of 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 6
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cck4EkJA.s 			page 6
 
 
  147:Generated_Source\PSoC5/CounterF_PM.c **** *  block on wakeup from sleep mode.
@@ -358,20 +358,20 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  183 0006 00000000 		.4byte	.Ldebug_abbrev0
  184 000a 04       		.byte	0x4
  185 000b 01       		.uleb128 0x1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 7
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cck4EkJA.s 			page 7
 
 
- 186 000c 44010000 		.4byte	.LASF29
+ 186 000c F3000000 		.4byte	.LASF29
  187 0010 01       		.byte	0x1
- 188 0011 A2020000 		.4byte	.LASF30
- 189 0015 C4000000 		.4byte	.LASF31
+ 188 0011 98020000 		.4byte	.LASF30
+ 189 0015 A5010000 		.4byte	.LASF31
  190 0019 00000000 		.4byte	.Ldebug_ranges0+0
  191 001d 00000000 		.4byte	0
  192 0021 00000000 		.4byte	.Ldebug_line0
  193 0025 02       		.uleb128 0x2
  194 0026 01       		.byte	0x1
  195 0027 06       		.byte	0x6
- 196 0028 96020000 		.4byte	.LASF0
+ 196 0028 8C020000 		.4byte	.LASF0
  197 002c 02       		.uleb128 0x2
  198 002d 01       		.byte	0x1
  199 002e 08       		.byte	0x8
@@ -379,7 +379,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  201 0033 02       		.uleb128 0x2
  202 0034 02       		.byte	0x2
  203 0035 05       		.byte	0x5
- 204 0036 51020000 		.4byte	.LASF2
+ 204 0036 47020000 		.4byte	.LASF2
  205 003a 02       		.uleb128 0x2
  206 003b 02       		.byte	0x2
  207 003c 07       		.byte	0x7
@@ -387,19 +387,19 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  209 0041 02       		.uleb128 0x2
  210 0042 04       		.byte	0x4
  211 0043 05       		.byte	0x5
- 212 0044 8D020000 		.4byte	.LASF4
+ 212 0044 83020000 		.4byte	.LASF4
  213 0048 02       		.uleb128 0x2
  214 0049 04       		.byte	0x4
  215 004a 07       		.byte	0x7
- 216 004b 15010000 		.4byte	.LASF5
+ 216 004b C4000000 		.4byte	.LASF5
  217 004f 02       		.uleb128 0x2
  218 0050 08       		.byte	0x8
  219 0051 05       		.byte	0x5
- 220 0052 28020000 		.4byte	.LASF6
+ 220 0052 1E020000 		.4byte	.LASF6
  221 0056 02       		.uleb128 0x2
  222 0057 08       		.byte	0x8
  223 0058 07       		.byte	0x7
- 224 0059 DF010000 		.4byte	.LASF7
+ 224 0059 8E010000 		.4byte	.LASF7
  225 005d 03       		.uleb128 0x3
  226 005e 04       		.byte	0x4
  227 005f 05       		.byte	0x5
@@ -407,9 +407,9 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  229 0064 02       		.uleb128 0x2
  230 0065 04       		.byte	0x4
  231 0066 07       		.byte	0x7
- 232 0067 D2010000 		.4byte	.LASF8
+ 232 0067 81010000 		.4byte	.LASF8
  233 006b 04       		.uleb128 0x4
- 234 006c 27010000 		.4byte	.LASF12
+ 234 006c D6000000 		.4byte	.LASF12
  235 0070 02       		.byte	0x2
  236 0071 9201     		.2byte	0x192
  237 0073 2C000000 		.4byte	0x2c
@@ -418,16 +418,16 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  240 0079 04       		.byte	0x4
  241 007a 76000000 		.4byte	.LASF9
  242 007e 02       		.uleb128 0x2
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 8
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cck4EkJA.s 			page 8
 
 
  243 007f 08       		.byte	0x8
  244 0080 04       		.byte	0x4
- 245 0081 3D010000 		.4byte	.LASF10
+ 245 0081 EC000000 		.4byte	.LASF10
  246 0085 02       		.uleb128 0x2
  247 0086 01       		.byte	0x1
  248 0087 08       		.byte	0x8
- 249 0088 4C020000 		.4byte	.LASF11
+ 249 0088 42020000 		.4byte	.LASF11
  250 008c 04       		.uleb128 0x4
  251 008d BF000000 		.4byte	.LASF13
  252 0091 02       		.byte	0x2
@@ -438,14 +438,14 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  257 009d 02       		.uleb128 0x2
  258 009e 04       		.byte	0x4
  259 009f 07       		.byte	0x7
- 260 00a0 0C020000 		.4byte	.LASF14
+ 260 00a0 02020000 		.4byte	.LASF14
  261 00a4 06       		.uleb128 0x6
  262 00a5 03       		.byte	0x3
  263 00a6 03       		.byte	0x3
  264 00a7 40       		.byte	0x40
  265 00a8 D1000000 		.4byte	0xd1
  266 00ac 07       		.uleb128 0x7
- 267 00ad 15020000 		.4byte	.LASF15
+ 267 00ad 0B020000 		.4byte	.LASF15
  268 00b1 03       		.byte	0x3
  269 00b2 42       		.byte	0x42
  270 00b3 6B000000 		.4byte	0x6b
@@ -464,7 +464,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  283 00cf 02       		.byte	0x2
  284 00d0 00       		.byte	0
  285 00d1 08       		.uleb128 0x8
- 286 00d2 F6010000 		.4byte	.LASF18
+ 286 00d2 EC010000 		.4byte	.LASF18
  287 00d6 03       		.byte	0x3
  288 00d7 49       		.byte	0x49
  289 00d8 A4000000 		.4byte	0xa4
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  297 00ec 9C       		.byte	0x9c
  298 00ed 04010000 		.4byte	0x104
  299 00f1 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 9
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cck4EkJA.s 			page 9
 
 
  300 00f2 06000000 		.4byte	.LVL0
@@ -520,7 +520,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  336 014f DC000000 		.4byte	0xdc
  337 0153 00       		.byte	0
  338 0154 09       		.uleb128 0x9
- 339 0155 2D010000 		.4byte	.LASF22
+ 339 0155 DC000000 		.4byte	.LASF22
  340 0159 01       		.byte	0x1
  341 015a 96       		.byte	0x96
  342 015b 00000000 		.4byte	.LFB3
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  354 017c 0B       		.uleb128 0xb
  355 017d 7C000000 		.4byte	.LASF32
  356 0181 01       		.byte	0x1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 10
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cck4EkJA.s 			page 10
 
 
  357 0182 15       		.byte	0x15
@@ -547,17 +547,17 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  360 0188 03       		.byte	0x3
  361 0189 00000000 		.4byte	CounterF_backup
  362 018d 0C       		.uleb128 0xc
- 363 018e 5B020000 		.4byte	.LASF23
+ 363 018e 51020000 		.4byte	.LASF23
  364 0192 03       		.byte	0x3
  365 0193 5D       		.byte	0x5d
  366 0194 6B000000 		.4byte	0x6b
  367 0198 0C       		.uleb128 0xc
- 368 0199 70020000 		.4byte	.LASF24
+ 368 0199 66020000 		.4byte	.LASF24
  369 019d 03       		.byte	0x3
  370 019e 55       		.byte	0x55
  371 019f 6B000000 		.4byte	0x6b
  372 01a3 0D       		.uleb128 0xd
- 373 01a4 36020000 		.4byte	.LASF25
+ 373 01a4 2C020000 		.4byte	.LASF25
  374 01a8 03       		.byte	0x3
  375 01a9 5A       		.byte	0x5a
  376 01aa B4010000 		.4byte	0x1b4
@@ -577,7 +577,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  390 01ca 03       		.byte	0x3
  391 01cb 50       		.byte	0x50
  392 01cc 0F       		.uleb128 0xf
- 393 01cd C7020000 		.4byte	.LASF28
+ 393 01cd BD020000 		.4byte	.LASF28
  394 01d1 03       		.byte	0x3
  395 01d2 71       		.byte	0x71
  396 01d3 00       		.byte	0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  411 000c 17       		.uleb128 0x17
  412 000d 11       		.uleb128 0x11
  413 000e 01       		.uleb128 0x1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 11
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cck4EkJA.s 			page 11
 
 
  414 000f 10       		.uleb128 0x10
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  468 0045 0B       		.uleb128 0xb
  469 0046 01       		.uleb128 0x1
  470 0047 13       		.uleb128 0x13
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 12
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cck4EkJA.s 			page 12
 
 
  471 0048 00       		.byte	0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  525 007f 00       		.byte	0
  526 0080 0A       		.uleb128 0xa
  527 0081 898201   		.uleb128 0x4109
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 13
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cck4EkJA.s 			page 13
 
 
  528 0084 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  582 00ba 3C       		.uleb128 0x3c
  583 00bb 19       		.uleb128 0x19
  584 00bc 01       		.uleb128 0x1
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 14
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cck4EkJA.s 			page 14
 
 
  585 00bd 13       		.uleb128 0x13
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  639 0018 00000000 		.4byte	.LFB3
  640 001c 18000000 		.4byte	.LFE3
  641 0020 00000000 		.4byte	0
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 15
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cck4EkJA.s 			page 15
 
 
  642 0024 00000000 		.4byte	0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  664              	.LASF1:
  665 009a 756E7369 		.ascii	"unsigned char\000"
  665      676E6564 
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 16
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cck4EkJA.s 			page 16
 
 
  665      20636861 
@@ -912,129 +912,129 @@ ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 1
  668              	.LASF13:
  669 00bf 72656738 		.ascii	"reg8\000"
  669      00
- 670              	.LASF31:
- 671 00c4 433A5C55 		.ascii	"C:\\Users\\Anders\\Desktop\\HellYaeh\\E4PRJ4-Gruppe"
- 671      73657273 
- 671      5C416E64 
- 671      6572735C 
- 671      4465736B 
- 672 00f2 315C5265 		.ascii	"1\\Retning med mus\\version_01.cydsn\000"
- 672      746E696E 
- 672      67206D65 
- 672      64206D75 
- 672      735C7665 
- 673              	.LASF5:
- 674 0115 6C6F6E67 		.ascii	"long unsigned int\000"
- 674      20756E73 
- 674      69676E65 
- 674      6420696E 
- 674      7400
- 675              	.LASF12:
- 676 0127 75696E74 		.ascii	"uint8\000"
- 676      3800
- 677              	.LASF22:
- 678 012d 436F756E 		.ascii	"CounterF_Wakeup\000"
- 678      74657246 
- 678      5F57616B 
- 678      65757000 
- 679              	.LASF10:
- 680 013d 646F7562 		.ascii	"double\000"
- 680      6C6500
- 681              	.LASF29:
- 682 0144 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 682      4320342E 
- 682      392E3320 
- 682      32303135 
- 682      30333033 
- 683 0177 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 683      20726576 
- 683      6973696F 
- 683      6E203232 
- 683      31323230 
- 684 01aa 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 684      66756E63 
- 684      74696F6E 
- 684      2D736563 
- 684      74696F6E 
- 685              	.LASF8:
- 686 01d2 756E7369 		.ascii	"unsigned int\000"
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 17
+ 670              	.LASF5:
+ 671 00c4 6C6F6E67 		.ascii	"long unsigned int\000"
+ 671      20756E73 
+ 671      69676E65 
+ 671      6420696E 
+ 671      7400
+ 672              	.LASF12:
+ 673 00d6 75696E74 		.ascii	"uint8\000"
+ 673      3800
+ 674              	.LASF22:
+ 675 00dc 436F756E 		.ascii	"CounterF_Wakeup\000"
+ 675      74657246 
+ 675      5F57616B 
+ 675      65757000 
+ 676              	.LASF10:
+ 677 00ec 646F7562 		.ascii	"double\000"
+ 677      6C6500
+ 678              	.LASF29:
+ 679 00f3 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 679      4320342E 
+ 679      392E3320 
+ 679      32303135 
+ 679      30333033 
+ 680 0126 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 680      20726576 
+ 680      6973696F 
+ 680      6E203232 
+ 680      31323230 
+ 681 0159 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 681      66756E63 
+ 681      74696F6E 
+ 681      2D736563 
+ 681      74696F6E 
+ 682              	.LASF8:
+ 683 0181 756E7369 		.ascii	"unsigned int\000"
+ 683      676E6564 
+ 683      20696E74 
+ 683      00
+ 684              	.LASF7:
+ 685 018e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 685      206C6F6E 
+ 685      6720756E 
+ 685      7369676E 
+ 685      65642069 
+ 686              	.LASF31:
+ 687 01a5 433A5C55 		.ascii	"C:\\Users\\EmilR\\Desktop\\E4PRJ4-Gruppe1\\Retning "
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cck4EkJA.s 			page 17
 
 
- 686      676E6564 
- 686      20696E74 
- 686      00
- 687              	.LASF7:
- 688 01df 6C6F6E67 		.ascii	"long long unsigned int\000"
- 688      206C6F6E 
- 688      6720756E 
- 688      7369676E 
- 688      65642069 
+ 687      73657273 
+ 687      5C456D69 
+ 687      6C525C44 
+ 687      65736B74 
+ 688 01d3 6D656420 		.ascii	"med mus\\version_01.cydsn\000"
+ 688      6D75735C 
+ 688      76657273 
+ 688      696F6E5F 
+ 688      30312E63 
  689              	.LASF18:
- 690 01f6 436F756E 		.ascii	"CounterF_backupStruct\000"
+ 690 01ec 436F756E 		.ascii	"CounterF_backupStruct\000"
  690      74657246 
  690      5F626163 
  690      6B757053 
  690      74727563 
  691              	.LASF14:
- 692 020c 73697A65 		.ascii	"sizetype\000"
+ 692 0202 73697A65 		.ascii	"sizetype\000"
  692      74797065 
  692      00
  693              	.LASF15:
- 694 0215 436F756E 		.ascii	"CounterEnableState\000"
+ 694 020b 436F756E 		.ascii	"CounterEnableState\000"
  694      74657245 
  694      6E61626C 
  694      65537461 
  694      746500
  695              	.LASF6:
- 696 0228 6C6F6E67 		.ascii	"long long int\000"
+ 696 021e 6C6F6E67 		.ascii	"long long int\000"
  696      206C6F6E 
  696      6720696E 
  696      7400
  697              	.LASF25:
- 698 0236 436F756E 		.ascii	"CounterF_WriteCounter\000"
+ 698 022c 436F756E 		.ascii	"CounterF_WriteCounter\000"
  698      74657246 
  698      5F577269 
  698      7465436F 
  698      756E7465 
  699              	.LASF11:
- 700 024c 63686172 		.ascii	"char\000"
+ 700 0242 63686172 		.ascii	"char\000"
  700      00
  701              	.LASF2:
- 702 0251 73686F72 		.ascii	"short int\000"
+ 702 0247 73686F72 		.ascii	"short int\000"
  702      7420696E 
  702      7400
  703              	.LASF23:
- 704 025b 436F756E 		.ascii	"CounterF_ReadCounter\000"
+ 704 0251 436F756E 		.ascii	"CounterF_ReadCounter\000"
  704      74657246 
  704      5F526561 
  704      64436F75 
  704      6E746572 
  705              	.LASF24:
- 706 0270 436F756E 		.ascii	"CounterF_ReadControlRegister\000"
+ 706 0266 436F756E 		.ascii	"CounterF_ReadControlRegister\000"
  706      74657246 
  706      5F526561 
  706      64436F6E 
  706      74726F6C 
  707              	.LASF4:
- 708 028d 6C6F6E67 		.ascii	"long int\000"
-ARM GAS  C:\Users\Anders\AppData\Local\Temp\ccSOlgLj.s 			page 18
+ 708 0283 6C6F6E67 		.ascii	"long int\000"
+ARM GAS  C:\Users\EmilR\AppData\Local\Temp\cck4EkJA.s 			page 18
 
 
  708      20696E74 
  708      00
  709              	.LASF0:
- 710 0296 7369676E 		.ascii	"signed char\000"
+ 710 028c 7369676E 		.ascii	"signed char\000"
  710      65642063 
  710      68617200 
  711              	.LASF30:
- 712 02a2 47656E65 		.ascii	"Generated_Source\\PSoC5\\CounterF_PM.c\000"
+ 712 0298 47656E65 		.ascii	"Generated_Source\\PSoC5\\CounterF_PM.c\000"
  712      72617465 
  712      645F536F 
  712      75726365 
  712      5C50536F 
  713              	.LASF28:
- 714 02c7 436F756E 		.ascii	"CounterF_Enable\000"
+ 714 02bd 436F756E 		.ascii	"CounterF_Enable\000"
  714      74657246 
  714      5F456E61 
  714      626C6500 

@@ -8,7 +8,6 @@ uint8 stabil(uint8 ang)
     uint8 newang2 = 0;
     //Opdatere oldbuf 
     
-    if(ang != newang2){
         //Stabil mode
      //  ang = ang/1.8;
             //tæl counter op og drejer steppermotoren med uret
@@ -40,10 +39,7 @@ uint8 stabil(uint8 ang)
                 PWMF2_Stop();
             }
       
-        
-       
-    }
-    newang2 = ang;
+
     return 0;
 }
 
