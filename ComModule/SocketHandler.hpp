@@ -4,14 +4,14 @@
 #include "MsgQueuePipe.hpp"
 #include "UDPSocket.hpp"
 #include "constants.hpp"
+#include "Thread.hpp"
 
-class SocketHandler
+class SocketHandler : public Thread
 {
 public:
   SocketHandler(MsgQueue *comModMq);
   ~SocketHandler();
   
-  void run();
   void send(unsigned long id, Message* msg = NULL);
 
   enum { SEND_UDP_PACKET };
@@ -26,10 +26,8 @@ private:
   MsgQueue *comModMq_;
   
   UDPSocket sock_;
-  char buf_[constants::BUFFER_SIZE];
   
-  static void* staticStarter(void* arg);
-  void sockethandlerThread();
+  void runThread();
   void handleMsg(Message *msg, unsigned long id);
 };
 

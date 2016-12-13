@@ -18,7 +18,7 @@ public:
     server.sin_port = htons(port);
     bind(sock_, reinterpret_cast<struct sockaddr*>(&server), sizeof(server));
 
-    fromlen = sizeof(struct sockaddr_in);
+    fromlen_ = sizeof(struct sockaddr_in);
   }
 
   ~UDPSocket()
@@ -29,13 +29,13 @@ public:
   int receive(char *buf, int length)
   {
     return recvfrom(sock_, buf, length, 0,
-                    reinterpret_cast<struct sockaddr*>(&from), &fromlen);
+                    reinterpret_cast<struct sockaddr*>(&from_), &fromlen_);
   }
 
   int send(char *buf, int length)
   {
     return sendto(sock_, buf, length, 0,
-                  reinterpret_cast<struct sockaddr*>(&from), fromlen);
+                  reinterpret_cast<struct sockaddr*>(&from_), fromlen_);
   }
 
   int getFD()
@@ -45,8 +45,8 @@ public:
   
 private:
   int sock_;
-  struct sockaddr_in from;
-  socklen_t fromlen;
+  struct sockaddr_in from_;
+  socklen_t fromlen_;
   
 };
 

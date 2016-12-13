@@ -8,15 +8,13 @@
 #include "OpdriftLogic.hpp"
 #include "RegulatorLogic.hpp"
 #include "RecurringTimer.hpp"
+#include "Thread.hpp"
 
-class ComModule
+class ComModule : public Thread
 {
 public:
   ComModule();
   ~ComModule();
-  
-  void run();
-  void join();
   
   enum {
     TIMER_RADAR,
@@ -34,7 +32,6 @@ public:
   };
 
 private:
-  pthread_t pt_;
   MsgQueue mq_;
   SocketHandler sock_;
   I2CHandler i2c_;
@@ -48,8 +45,7 @@ private:
   RecurringTimer opdriftTimer_;
   RecurringTimer keepAliveTimer_;
   
-  static void* staticStarter(void* arg);
-  void comModuleThread();
+  void runThread();
 
   // Message handlers
   void handleMsg(Message *msg, unsigned long id);

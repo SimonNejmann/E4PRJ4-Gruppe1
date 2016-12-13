@@ -4,14 +4,14 @@
 #include "constants.hpp"
 #include "MsgQueue.hpp"
 #include "I2C.hpp"
+#include "Thread.hpp"
 
-class I2CHandler
+class I2CHandler : public Thread
 {
 public:
   I2CHandler(MsgQueue *partnerMq);
   ~I2CHandler();
   
-  void run();
   void send(unsigned long id, Message* msg = NULL);
 
   enum { I2C_READ_RADAR, I2C_READ_OPDRIFT,
@@ -29,8 +29,7 @@ private:
   
   I2C i2c_;
 
-  static void* staticStarter(void* arg);
-  void i2cHandlerThread();
+  void runThread();
   void handleMsg(Message *msg, unsigned long id);
 };
 

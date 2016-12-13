@@ -13,26 +13,12 @@ SocketHandler::~SocketHandler()
 {
 }
 
-void SocketHandler::run()
-{
-  pthread_t pt;
-  pthread_create(&pt, NULL, SocketHandler::staticStarter, this);
-}
-
 void SocketHandler::send(unsigned long id, Message* msg)
 {
   mq_.send(id, msg);
 }
 
-void* SocketHandler::staticStarter(void* arg)
-{
-  SocketHandler *s = static_cast<SocketHandler*>(arg);
-  s->sockethandlerThread();
-
-  return NULL;
-}
-
-void SocketHandler::sockethandlerThread()
+void SocketHandler::runThread()
 {
   unsigned long id;
   fd_set watch_set, result_set;

@@ -17,32 +17,14 @@ ComModule::~ComModule()
 {
 }
 
-void ComModule::run()
+void ComModule::runThread()
 {
-  pthread_create(&pt_, NULL, ComModule::staticStarter, this);
   sock_.run();
   i2c_.run();
   radarTimer_.run();
   opdriftTimer_.run();
   keepAliveTimer_.run();
-}
 
-void ComModule::join()
-{
-  void *exitStatus;
-  pthread_join(pt_, &exitStatus);
-}
-
-void* ComModule::staticStarter(void* arg)
-{
-  ComModule *t = static_cast<ComModule*>(arg);
-  t->comModuleThread();
-
-  return NULL;
-}
-
-void ComModule::comModuleThread()
-{
   while(true) {
     unsigned long id;
     Message* msg = mq_.receive(id);
@@ -205,21 +187,24 @@ void ComModule::handleMsgReceiveUdpPacket(Message *msg)
   case 'R': // Strafe
     {
       outId = I2CHandler::SEND_I2C_PACKET_REGULATOR;
-      out->len_ = regulator_.updateAngleStrafe(in->buf_[1], out->buf_);
+      out->len_ = regulator_.updateAngleStrafe(in->buf_[1], out->buf_,
+					       opdrift_.getInflated());
       i2c_.send(outId, out);
       break;
     }
   case 'S': // Steer
     {
       outId = I2CHandler::SEND_I2C_PACKET_REGULATOR;
-      out->len_ = regulator_.updateAngleSteer(in->buf_[1], out->buf_);
+      out->len_ = regulator_.updateAngleSteer(in->buf_[1], out->buf_,
+					      opdrift_.getInflated());
       i2c_.send(outId, out);
       break;
     }
   case 'P': // Propulsion
     {
       outId = I2CHandler::SEND_I2C_PACKET_REGULATOR;
-      out->len_ = regulator_.updateSpeed(in->buf_[1], out->buf_);
+      out->len_ = regulator_.updateSpeed(in->buf_[1], out->buf_,
+					 opdrift_.getInflated());
       i2c_.send(outId, out);
       break;
     }

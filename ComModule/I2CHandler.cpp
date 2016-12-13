@@ -8,27 +8,13 @@ I2CHandler::I2CHandler(MsgQueue *partnerMq)
 
 I2CHandler::~I2CHandler()
 {}
-  
-void I2CHandler::run()
-{
-  pthread_t pt;
-  pthread_create(&pt, NULL, I2CHandler::staticStarter, this);
-}
 
 void I2CHandler::send(unsigned long id, Message* msg)
 {
   mq_.send(id, msg);
 }
   
-void* I2CHandler::staticStarter(void* arg)
-{
-  I2CHandler *t = static_cast<I2CHandler*>(arg);
-  t->i2cHandlerThread();
-
-  return NULL;
-}
-
-void I2CHandler::i2cHandlerThread()
+void I2CHandler::runThread()
 {
   while(true) {
     unsigned long id;

@@ -41,6 +41,9 @@ public:
   
   int receive(int addr, char *buf, int len)
   {
+    if (ioctl(fd_, I2C_SLAVE, addr) < 0) {
+      return -1;
+    }
     if (read(fd_, buf, len) != len) {
       return -1;
     }

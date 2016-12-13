@@ -27,6 +27,11 @@ public:
     return tmp;
   }
 
+  bool getInflated()
+  {
+    return inflated_;
+  }
+
 private:
   unsigned char inflated_;
 };
