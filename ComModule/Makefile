@@ -1,7 +1,7 @@
 SOURCES=main.cpp MsgQueue.cpp MsgQueuePipe.cpp util.cpp
 SOURCES+=SocketHandler.cpp ComModule.cpp I2CHandler.cpp
 SOURCES+=
-EXE=CommandModule
+EXE=CommunicationModule
 CXXFLAGS=-I. -pthread -O3 -Wall -pedantic
 # -g
 
