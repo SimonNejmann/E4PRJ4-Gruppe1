@@ -5,21 +5,9 @@ EXE=CommunicationModule
 CXXFLAGS=-I. -pthread -O3 -Wall -pedantic
 # -g
 
-# Making for host
-# > make ARCH=host
-ifeq (${ARCH},host)
 CXX=g++
 BUILD_DIR=build/host
 EXE_DIR=bin/host
-endif
-
-# Making for target
-# > make ARCH=target
-ifeq (${ARCH},target)
-CXX=arm-devkit-g++
-BUILD_DIR=build/target
-EXE_DIR=bin/target
-endif
 
 OBJECTS=$(addprefix $(BUILD_DIR)/,$(SOURCES:.cpp=.o))
 DEPS=$(addprefix $(BUILD_DIR)/,$(SOURCES:.cpp=.d))

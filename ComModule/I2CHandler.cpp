@@ -16,8 +16,8 @@ void I2CHandler::send(unsigned long id, Message* msg)
   
 void I2CHandler::runThread()
 {
+  unsigned long id;
   while(true) {
-    unsigned long id;
     Message *msg = mq_.receive(id);
     handleMsg(msg, id);
     delete msg;

@@ -25,8 +25,8 @@ void ComModule::runThread()
   opdriftTimer_.run();
   keepAliveTimer_.run();
 
+  unsigned long id;
   while(true) {
-    unsigned long id;
     Message* msg = mq_.receive(id);
     handleMsg(msg, id);
     delete msg;
