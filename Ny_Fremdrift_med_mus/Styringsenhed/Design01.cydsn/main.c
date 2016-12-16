@@ -71,9 +71,9 @@ int main(void)
             
             //Strafe
             else if (i2c_buffer[2] == 255) {
-                strafeMode = 1;
                 PWMSF_WriteCompare(i2c_buffer[1]);
                 PWMSB_WriteCompare(i2c_buffer[1]);
+                strafeMode = 1;
                 if (steerMode == 1) {
                     if (oldSteer_i2c_buffer[0] == 100) {
                         oldSteer_i2c_buffer[0]--;

@@ -3,18 +3,11 @@
 
 uint8 strafe(uint8 ang)
 {
-    uint8 realAng = ang;
-    
-    
     uint8 newang = 0;
-    
-    //Opdatere oldbuf 
-    
-    
-     // Straff mode
+    // Straff mode
  
-      //Front engine
-        //tæl counter op og drejer steppermotoren med uret
+    //Front engine
+    //tæl counter op og drejer steppermotoren med uret
 	if(ang > CounterF_ReadCounter() && ang < MAX_POS)
     {
         newang = ang - CounterF_ReadCounter();
@@ -22,8 +15,6 @@ uint8 strafe(uint8 ang)
         CounterF_WriteCompare(newang);
         Dir_stepF_Write(HIGH);  
         PWMF1_Start();
-         
-       
     }
 
     //tæl counter ned og drejer steppermotoren mod uret
@@ -31,11 +22,8 @@ uint8 strafe(uint8 ang)
     {
         CounterF_WriteCompare(ang);
         Dir_stepF_Write(LOW);
-        PWMF2_Start();
-        
+        PWMF2_Start();    
     }
-    
-    
     
     // Back engine  
     //tæl counter op og drejer steppermotoren med uret
@@ -45,9 +33,7 @@ uint8 strafe(uint8 ang)
         newang += CounterB_ReadCounter();
         CounterB_WriteCompare(newang);
         Dir_stepB_Write(HIGH);  
-        PWMB1_Start();
-         
-       
+        PWMB1_Start();   
     }
 
     //tæl counter ned og drejer steppermotoren mod uret
@@ -55,8 +41,7 @@ uint8 strafe(uint8 ang)
     {
         CounterB_WriteCompare(ang);
         Dir_stepB_Write(LOW);
-        PWMB2_Start();
-        
+        PWMB2_Start();    
     }
     return 0;
 }
