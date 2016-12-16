@@ -25,7 +25,7 @@ uint8 oldStrafe_i2c_buffer[BUFFER_SIZE] = {0};
 uint8 oldSteer_i2c_buffer[BUFFER_SIZE] = {0};
 int main(void)
 {
-    
+    Init_step();
     Init(&mouseData);
     
     I2C_Slave_SetBuffer1(BUFFER_SIZE,BUFFER_SIZE,i2c_buffer);

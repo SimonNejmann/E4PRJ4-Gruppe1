@@ -1,8 +1,8 @@
 #include <main.h>
 
 void init_step()
-{
-    isr_PS2_clock_Disable();
+{   
+    // Retningsmotor init
     Dir_stepF_Write(HIGH);  
     PWMF1_Start();
     
@@ -21,12 +21,21 @@ void init_step()
         }
     
     PWMB1_Stop();
-    CounterB_Start();
+    CounterB_S
     
     strafe(100); 
     while (CounterF_ReadCounter() != 100 && CounterB_ReadCounter() != 100) {
         
     }
-    isr_PS2_clock_Enable();
-   
+    
+    // Interrupt init
+    isr_cntF_compare_StartEx(cntF_interrupt);
+    isr_cntB_compare_StartEx(cntB_interrupt);
+    isr_cntF_compare_ClearPending();
+    isr_cntB_compare_ClearPending();
+    
+    //PWM og I2C init//
+    PWMSF_Start();
+    PWMSB_Start();
+    I2C_Slave_Start();
 }
