@@ -3,15 +3,16 @@
     
 #include <project.h>
     
-    
+CY_ISR_PROTO(PS2_interrupt);
+CY_ISR_PROTO(cntF_interrupt);
+CY_ISR_PROTO(cntB_interrupt);
 /*****************************
      Funktion Prototype
 *****************************/
  
 uint8 steer(uint8 ang);
 uint8 strafe(uint8 ang);
-
-void init_step();
+void Init_step();
 
 
 

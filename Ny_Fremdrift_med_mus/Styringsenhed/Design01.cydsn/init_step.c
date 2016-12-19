@@ -1,6 +1,6 @@
 #include <main.h>
 
-void init_step()
+void Init_step()
 {   
     // Retningsmotor init
     Dir_stepF_Write(HIGH);  
@@ -21,13 +21,13 @@ void init_step()
         }
     
     PWMB1_Stop();
-    CounterB_S
+    CounterB_Start();
     
     strafe(100); 
     while (CounterF_ReadCounter() != 100 && CounterB_ReadCounter() != 100) {
         
     }
-    
+    CyGlobalIntEnable;
     // Interrupt init
     isr_cntF_compare_StartEx(cntF_interrupt);
     isr_cntB_compare_StartEx(cntB_interrupt);

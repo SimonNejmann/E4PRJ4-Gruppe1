@@ -2,8 +2,7 @@
 #include <stdio.h>
 
 #define PACKETSIZE 33
-#define BUFFER_SIZE 3
-
+#define BUFFER_SIZE 9
 struct mouse {
     uint8 tmpMouseX[8];
     uint8 tmpMouseY[8];
@@ -27,6 +26,9 @@ void initMouse(uint8 *Data);
 void ISR_getMouseData(struct mouse *);
 void printData(struct mouse *);
 void resetMouseData(struct mouse *);
+void calcDistance(struct mouse *);
+void calcAngle(struct mouse *);
+void controlVehicle(struct mouse*);
 int8 WriteI2CData(uint8_t *Data);
 uint8 stabil(uint8 ang);
 

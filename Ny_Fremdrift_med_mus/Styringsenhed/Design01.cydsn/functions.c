@@ -40,7 +40,7 @@ void Init(struct mouse *mouseData) {
 
 void ISR_getMouseData(struct mouse *mouseData) {
 
-    int deg = 180/3.14*10;
+    
     uint8 i = 0;
     char value[20];
     int16 multiplier = 1;
@@ -110,30 +110,45 @@ void ISR_getMouseData(struct mouse *mouseData) {
     mouseData->finalX += tmpX;
     mouseData->finalY += tmpY;
     
-    mouseData->distance = sqrt((mouseData->finalX*mouseData->finalX)+(mouseData->finalY*mouseData->finalY));
     
-        if (mouseData->finalX > 0 && mouseData->finalY > 0) {
-            mouseData->angle = (asin(((float)mouseData->finalX)/(float)mouseData->distance)*deg)/10/1.8;  
-        }
+    
         
-        else if (mouseData->finalX > 0 && mouseData->finalY < 0) {
-            mouseData->angle = ((asin(((float)-mouseData->finalY)/(float)mouseData->distance)*deg)+900)/10/1.8;
-        }
         
-        else if (mouseData->finalX < 0 && mouseData->finalY < 0) {
-            mouseData->angle = ((asin(((float)-mouseData->finalX)/(float)mouseData->distance)*deg)+1800)/10/1.8;
-        }
         
-        else if (mouseData->finalX < 0 && mouseData->finalY > 0) {
-            mouseData->angle = ((asin(((float)mouseData->finalY)/(float)mouseData->distance)*deg)+2700)/10/1.8;
-        }
+
         
-        if (mouseData->angle != mouseData->oldAngle) {      
+}
+
+void calcDistance(struct mouse *mouseData) {
+    mouseData->distance = sqrt((mouseData->finalX*mouseData->finalX)+(mouseData->finalY*mouseData->finalY));
+}
+
+void calcAngle(struct mouse *mouseData) {
+    int deg = 180/3.14*10;
+    if (mouseData->finalX > 0 && mouseData->finalY > 0) {
+        mouseData->angle = (asin(((float)mouseData->finalX)/(float)mouseData->distance)*deg)/10/1.8;  
+    }
+    
+    else if (mouseData->finalX > 0 && mouseData->finalY < 0) {
+        mouseData->angle = ((asin(((float)-mouseData->finalY)/(float)mouseData->distance)*deg)+900)/10/1.8;
+    }
+    
+    else if (mouseData->finalX < 0 && mouseData->finalY < 0) {
+        mouseData->angle = ((asin(((float)-mouseData->finalX)/(float)mouseData->distance)*deg)+1800)/10/1.8;
+    }
+    
+    else if (mouseData->finalX < 0 && mouseData->finalY > 0) {
+        mouseData->angle = ((asin(((float)mouseData->finalY)/(float)mouseData->distance)*deg)+2700)/10/1.8;
+    }
+}
+
+void controlVehicle(struct mouse *mouseData) {
+    if (mouseData->angle != mouseData->oldAngle) {      
             stabil(mouseData->angle);
             mouseData->oldAngle = mouseData->angle;
         }
         if (mouseData->distance > THRESHOLD) {
-//            PWMSF_WriteCompare(mouseData->distance/40);
+            PWMSF_WriteCompare(mouseData->distance/40);
         }
         else {
             PWMSF_WriteCompare(0);
@@ -143,8 +158,6 @@ void ISR_getMouseData(struct mouse *mouseData) {
             PWMSF_WriteCompare(0);
         }
         CyDelay(50);
-
-        
 }
 
 void resetMouseData(struct mouse *mouseData) {

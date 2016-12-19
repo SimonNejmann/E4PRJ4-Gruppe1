@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Styringsenhed\Design01\Source Files\functions.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Styringsenhed\Design01\Source Files\main.c">
 <ExpandedNodeIds>
 <v>Styringsenhed</v>
 <v>Styringsenhed\Design01</v>
@@ -36,7 +36,6 @@
 <v>Styringsenhed\Design01\Source Files\cntB_interrupt.c</v>
 <v>Styringsenhed\Design01\Source Files\cntF_interrupt.c</v>
 <v>Styringsenhed\Design01\Source Files\functions.c</v>
-<v>Styringsenhed\Design01\Source Files\init_step.c</v>
 <v>Styringsenhed\Design01\Source Files\isr_PS2_clock.c</v>
 <v>Styringsenhed\Design01\Source Files\main.c</v>
 <v>Styringsenhed\Design01\Source Files\PS2_interrupt.c</v>
@@ -201,6 +200,80 @@
 <v>Styringsenhed\Design01\Generated_Source\PSoC5\cyfitterrv.inc</v>
 <v>Styringsenhed\Design01\Generated_Source\PSoC5\cymetadata.c</v>
 <v>Styringsenhed\Design01\Generated_Source\PSoC5\project.h</v>
+<v>Styringsenhed\Design02</v>
+<v>Styringsenhed\Design02\TopDesign</v>
+<v>Styringsenhed\Design02\Design02.cydwr</v>
+<v>Styringsenhed\Design02\Design02.cydwr\Pins</v>
+<v>Styringsenhed\Design02\Design02.cydwr\Analog</v>
+<v>Styringsenhed\Design02\Design02.cydwr\Clocks</v>
+<v>Styringsenhed\Design02\Design02.cydwr\Interrupts</v>
+<v>Styringsenhed\Design02\Design02.cydwr\DMA</v>
+<v>Styringsenhed\Design02\Design02.cydwr\System</v>
+<v>Styringsenhed\Design02\Design02.cydwr\Directives</v>
+<v>Styringsenhed\Design02\Design02.cydwr\Flash Security</v>
+<v>Styringsenhed\Design02\Design02.cydwr\EEPROM</v>
+<v>Styringsenhed\Design02\Header Files</v>
+<v>Styringsenhed\Design02\Header Files\cyapicallbacks.h</v>
+<v>Styringsenhed\Design02\Source Files</v>
+<v>Styringsenhed\Design02\Source Files\main.c</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\cmsis_armcc.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\cmsis_gcc.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\CyFlash.c</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\CyFlash.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\CyLib.c</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\CyLib.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\cypins.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\cyPm.c</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\cyPm.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\CySpc.c</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\CySpc.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\cytypes.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cy_boot\cyutils.c</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\EZI2C_1</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\EZI2C_1\EZI2C_1.c</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\EZI2C_1\EZI2C_1.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\EZI2C_1\EZI2C_1_INT.c</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\EZI2C_1\EZI2C_1_PM.c</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\EZI2C_1\EZI2C_1_PVT.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\Pin_1</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\Pin_1\Pin_1.c</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\Pin_1\Pin_1.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\Pin_1\Pin_1_aliases.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cydevice.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cyfitter.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\cymetadata.c</v>
+<v>Styringsenhed\Design02\Generated_Source\PSoC5\project.h</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Styringsenhed</v>
@@ -224,7 +297,7 @@
 <v>Styringsenhed\Design01\Source Files\cntB_interrupt.c</v>
 <v>Styringsenhed\Design01\Source Files\cntF_interrupt.c</v>
 <v>Styringsenhed\Design01\Source Files\functions.c</v>
-<v>Styringsenhed\Design01\Source Files\init_step.c</v>
+<v>Styringsenhed\Design01\Source Files\Init_step.c</v>
 <v>Styringsenhed\Design01\Source Files\isr_PS2_clock.c</v>
 <v>Styringsenhed\Design01\Source Files\main.c</v>
 <v>Styringsenhed\Design01\Source Files\PS2_interrupt.c</v>
@@ -252,12 +325,18 @@
 <v>Styringsenhed\Design01</v>
 <v>Styringsenhed\Design01\TopDesign</v>
 <v>Styringsenhed\Design01\TopDesign\TopDesign.cysch</v>
+<v>Styringsenhed\Design02</v>
+<v>Styringsenhed\Design02\TopDesign</v>
+<v>Styringsenhed\Design02\TopDesign\TopDesign.cysch</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Styringsenhed</v>
 <v>Styringsenhed\Design01</v>
 <v>Styringsenhed\Design01\TopDesign</v>
 <v>Styringsenhed\Design01\TopDesign\TopDesign.cysch</v>
+<v>Styringsenhed\Design02</v>
+<v>Styringsenhed\Design02\TopDesign</v>
+<v>Styringsenhed\Design02\TopDesign\TopDesign.cysch</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -296,7 +375,6 @@
 <v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_Slave.lst</v>
 <v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_Slave_INT.lst</v>
 <v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_Slave_PM.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\init_step.lst</v>
 <v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\isr_cntB_compare.lst</v>
 <v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\isr_cntF_compare.lst</v>
 <v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\isr_PS2_clock.lst</v>
@@ -333,49 +411,36 @@
 <v>Styringsenhed\Design01\Design01.gpdsc</v>
 <v>Styringsenhed\Design01\Design01.rpt</v>
 <v>Styringsenhed\Design01\Design01_timing.html</v>
+<v>Styringsenhed\Design02</v>
+<v>Styringsenhed\Design02\CortexM3</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug\Listing Files\EZI2C_1.lst</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug\Listing Files\EZI2C_1_INT.lst</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug\Listing Files\EZI2C_1_PM.lst</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug\Listing Files\Pin_1.lst</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug\Design02.elf</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug\Design02.hex</v>
+<v>Styringsenhed\Design02\CortexM3\ARM_GCC_493\Debug\Design02.map</v>
+<v>Styringsenhed\Design02\Design02.gpdsc</v>
+<v>Styringsenhed\Design02\Design02.rpt</v>
+<v>Styringsenhed\Design02\Design02_timing.html</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Styringsenhed</v>
 <v>Styringsenhed\Design01</v>
-<v>Styringsenhed\Design01\CortexM3</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_1.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_2.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_3.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_4.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_5.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_6.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\cntB_interrupt.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\cntF_interrupt.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\CounterB.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\CounterB_PM.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\CounterF.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\CounterF_PM.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Dir_stepB.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\Dir_stepF.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\functions.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_Slave.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_Slave_INT.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_Slave_PM.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\init_step.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\isr_cntB_compare.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\isr_cntF_compare.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\isr_PS2_clock.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\isr_PS2_clock.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
-<v>Styringsenhed\Design01\CortexM3\ARM_GCC_493\Debug\Listing Files\MicroB.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -406,6 +471,13 @@
 <v>Styringsenhed\Design01\or_v1_0\or_v1_0.pdf</v>
 <v>Styringsenhed\Design01\PWM_v3_30</v>
 <v>Styringsenhed\Design01\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>Styringsenhed\Design02</v>
+<v>Styringsenhed\Design02\PSoC 5LP Architecture TRM</v>
+<v>Styringsenhed\Design02\CY8C58LP Family Datasheet</v>
+<v>Styringsenhed\Design02\System Reference Guides</v>
+<v>Styringsenhed\Design02\System Reference Guides\cy_boot_v5_50</v>
+<v>Styringsenhed\Design02\cy_pins_v2_20.pdf</v>
+<v>Styringsenhed\Design02\EZI2C_v2_0.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Styringsenhed</v>
@@ -429,10 +501,22 @@
 <v>Styringsenhed\Design01\or_v1_0\or_v1_0.pdf</v>
 <v>Styringsenhed\Design01\PWM_v3_30</v>
 <v>Styringsenhed\Design01\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>Styringsenhed\Design02</v>
+<v>Styringsenhed\Design02\PSoC 5LP Architecture TRM</v>
+<v>Styringsenhed\Design02\CY8C58LP Family Datasheet</v>
+<v>Styringsenhed\Design02\System Reference Guides</v>
+<v>Styringsenhed\Design02\System Reference Guides\cy_boot_v5_50</v>
+<v>Styringsenhed\Design02\cy_pins_v2_20.pdf</v>
+<v>Styringsenhed\Design02\EZI2C_v2_0.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
 </CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
 </dataGuid>
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
@@ -448,6 +532,8 @@
 <name v=".\Design01.cydsn\Generated_Source\PSoC5\MicroF.c" />
 <name v=".\Design01.cydsn\functions.h" />
 <name v=".\Design01.cydsn\stabil.c" />
+<name v=".\Design01.cydsn\main.h" />
+<name v=".\Design01.cydsn\PS2_interrupt.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -455,7 +541,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1076, 574" SelectedTabbedMdiWindow="e8e858cf-1d90-4c69-99ba-a9beb49f622a"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="5f267788-2078-4b36-97fc-6914f305d8b8" /><DocumentWindow Key="4b6c3db4-a90b-411d-a59d-c24a55785973" Guid="4ed48c8e-0fc1-45b8-bd71-d31d475fb7ea" /><DocumentWindow Key="a8a08e3d-cb78-4991-9ed1-6d0146c63de3" Guid="a6e5b638-a75b-4fa2-aec5-1dd617118495" /><DocumentWindow Key="bb56c162-4b31-4cba-a2c1-8105f54e9a61" Guid="e8e858cf-1d90-4c69-99ba-a9beb49f622a" /><DocumentWindow Key="057e2424-98e2-420a-bf22-5479b24db8b3" Guid="9dcf7eca-0830-4394-9ad2-87766652f62c" /><DocumentWindow Key="4e8933bd-c23b-4148-98cb-51335f20060a" Guid="2c3b2960-dd56-4bc4-9382-bea7fca93125" /><DocumentWindow Key="c06efce0-89e3-4d94-abb1-29a237412eff" Guid="98979c38-2002-4cd4-a452-8dee6dee67aa" /><DocumentWindow Key="0c7f30e4-488b-4763-a1e2-8e0e744af432" Guid="d5ef2c95-166a-4a6e-9412-0e0ff33aa223" /><DocumentWindow Key="5ad6308a-69aa-4916-89b0-ed1ec64064cd" Guid="b12c9743-93de-47d8-ae30-9bcfecc39575" /><DocumentWindow Key="cf838ecd-2c0c-466b-8379-650e8f7172e3" Guid="d9b8da8f-e925-4d50-a957-f855310055d2" /><DocumentWindow Key="2a8c45f5-9cec-4577-9cd5-2a17d6b1764a" Guid="bd6890d3-f308-412d-a9ed-8c6cc73d32ff" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1186, 591" SelectedTabbedMdiWindow="488c570a-f6f6-437c-b953-696f87371faa"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="5f267788-2078-4b36-97fc-6914f305d8b8" /><DocumentWindow Key="df646ffa-20b6-4bce-8e92-7fc21af11a8d" Guid="01097b3c-903c-44f1-9546-9f80ddf1b66f" /><DocumentWindow Key="6a115614-45c9-439b-8d57-ccc97cf7ad92" Guid="eed14aa4-f852-4398-a50c-0433f20e6d5a" /><DocumentWindow Key="de7f3581-870b-484a-8ea1-997a94728784" Guid="f96cc4b6-c948-4633-b87c-f2793dd8d063" /><DocumentWindow Key="1723bf8f-e071-49a2-ab80-edd77b2c0857" Guid="bd81ce84-30dc-4ada-a257-14dbf2b97b0e" /><DocumentWindow Key="612c2e26-0751-41eb-aede-2f67f0e9b86a" Guid="8ff715b1-0933-4165-a1b8-2414878297fa" /><DocumentWindow Key="163f90d4-4308-4354-8fed-ce84748d25db" Guid="fabebb02-0b51-4f88-b7d3-e29c613077c5" /><DocumentWindow Key="2cfe4c68-0ec5-4599-b60b-f1e1666e6ec5" Guid="7eaae047-6a89-4ece-90ac-bc8d5d1b6b44" /><DocumentWindow Key="989f66b0-f97b-4fd9-b075-a30a7cd7cdb1" Guid="ef34f1b2-7ce5-4842-b86d-a7e5d1b9b51b" /><DocumentWindow Key="060bd463-d824-4490-b2e3-3bbe37a752d9" Guid="bff12fe0-a32d-4718-b8f7-e0e9182c28c0" /><DocumentWindow Key="fef15996-074a-44e4-85ad-1d091f9524fa" Guid="5162da57-141a-4574-a648-11eec6165673" /><DocumentWindow Key="58c3f550-87c0-4095-8499-5136ae88f606" Guid="1214b814-77f6-4b7b-bab9-d80cb35b31db" /><DocumentWindow Key="49302622-ad60-45cd-bc2c-bee27f95bcf4" Guid="488c570a-f6f6-437c-b953-696f87371faa" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
